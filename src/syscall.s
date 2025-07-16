@@ -34,7 +34,13 @@ _syscall_insert_lr:
     bic r0, r0, #0xff000000
     orr r0, r0, #0xef000000
 
-    @ sysno a1 a2 a3? | (svc sysno) lr a0 ...
+    @ sysno a1 a2 a3? | [(svc sysno) nop nop] lr a0 ...
+    str r0, [sp, #-12]
+    ldr r0, =_nop
+    str r0, [sp, #-8]
     str r0, [sp, #-4]
-    sub r0, sp, #4
+    sub r0, sp, #12
     bx r0
+
+_nop:
+    mov r0, r0
