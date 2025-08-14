@@ -18,6 +18,9 @@ extern "C" {
  * (SYSCALL_HAS_STACK_ARGS) signals the function to take account of arguments allocated on the stack. That is,
  * that bit should be set whenever there's more than 3 syscall arguments passed to this function.
  *
+ * @warning Due to limitation of the Besta syscall scheme, this function is not thread-safe. Therefore to call it
+ * across multiple threads, a lock must be created and used across all threads that use this function.
+ *
  * @param number The syscall number.
  * @param ... Syscall arguments.
  * @return Return value of the syscall. Can be casted to recover values of different type. Note that 64-bit values
