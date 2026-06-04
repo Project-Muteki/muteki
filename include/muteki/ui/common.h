@@ -575,6 +575,21 @@ enum keycode_e {
 };
 
 /**
+ * @brief Scroll wheel direction.
+ * @details Only confirmed on BA802.
+ */
+enum scroll_wheel_e {
+    /**
+     * @brief Scroll down (clockwise direction).
+     */
+    SCROLL_DOWN,
+    /**
+     * @brief Scroll up (counter-clockwise direction).
+     */
+    SCROLL_UP,
+};
+
+/**
  * @brief UI event types.
  */
 enum ui_event_type_e {
@@ -857,9 +872,9 @@ struct lcd_lock_s {
     /** @brief A critical section descriptor. It's unclear where it is used. */
     critical_section_t *cs; // 0x4:0x8 (lcd_thread_safe_t[0x98:0x9c])
     /** @brief Shortcut to lock the descriptor. */
-    void (*lock)(); // 0x8:0xc (lcd_thread_safe_t[0x9c:0xa0])
+    void (*lock)(void); // 0x8:0xc (lcd_thread_safe_t[0x9c:0xa0])
      /** @brief Shortcut to unlock the descriptor. */
-    void (*unlock)(); // 0xc:0x10 (lcd_thread_safe_t[0xa0:0xa4])
+    void (*unlock)(void); // 0xc:0x10 (lcd_thread_safe_t[0xa0:0xa4])
     /** @brief Unknown. */
     int unk_0xa4[23]; // 0x10:0x6c (lcd_thread_safe_t[0xa4:0x100])
 }; // 0x6c bytes
@@ -990,9 +1005,9 @@ struct lcd_thread_safe_s {
     /** @brief A critical section descriptor. It's unclear where it is used. */
     critical_section_t *cs; // 0x98:0x9c
     /** @brief Shortcut to lock the descriptor. */
-    void (*lock)(); // 0x9c:0xa0
+    void (*lock)(void); // 0x9c:0xa0
      /** @brief Shortcut to unlock the descriptor. */
-    void (*unlock)(); // 0xa0:0xa4
+    void (*unlock)(void); // 0xa0:0xa4
     /** @brief Unknown. */
     int unk_0xa4[23]; // 0xa4:0x100
 };
@@ -1090,11 +1105,19 @@ struct ui_event_base_s {
             unsigned short touch_y;
         };
     };
-    /**
-     * @brief Unknown.
-     * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
-     */
-    void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+    union {
+        /**
+        * @brief Unknown.
+        * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+        */
+        void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+        /**
+         * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
+         * @see scroll_wheel_e
+         */
+        unsigned int scroll_wheel;
+    };
+
     /**
      * @brief Unknown.
      * @details Maybe used on event types other than touch and key press.
@@ -1154,11 +1177,18 @@ struct ui_event_prime_s {
             unsigned short touch_y;
         };
     };
-    /**
-     * @brief Unknown.
-     * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
-     */
-    void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+    union {
+        /**
+        * @brief Unknown.
+        * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+        */
+        void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+        /**
+         * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
+         * @see scroll_wheel_e
+         */
+        unsigned int scroll_wheel;
+    };
     /**
      * @brief Unknown.
      * @details Maybe used on event types other than touch and key press.
