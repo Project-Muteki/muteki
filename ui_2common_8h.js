@@ -233,6 +233,10 @@ var ui_2common_8h =
       [ "ROTATION_QUERY", "ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607", null ],
       [ "ROTATION_APPLY", "ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493", null ]
     ] ],
+    [ "scroll_wheel_e", "ui_2common_8h.html#a1be4f211929ba28d21f38530d28e263d", [
+      [ "SCROLL_DOWN", "ui_2common_8h.html#a1be4f211929ba28d21f38530d28e263da9d522bb191bf21bcaace5569ec49475d", null ],
+      [ "SCROLL_UP", "ui_2common_8h.html#a1be4f211929ba28d21f38530d28e263dadc276c852fdda273d5091ee8e2ceb4ec", null ]
+    ] ],
     [ "str_align_e", "ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650", [
       [ "STR_ALIGN_LEFT", "ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a", null ],
       [ "STR_ALIGN_RIGHT", "ui_2common_8h.html#af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821", null ],

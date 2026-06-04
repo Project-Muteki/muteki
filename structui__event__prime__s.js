@@ -6,6 +6,7 @@ var structui__event__prime__s =
     [ "key_code1", "structui__event__prime__s.html#aed78accc3c1a2a0017ed541a6fa09255", null ],
     [ "multipress_events", "structui__event__prime__s.html#a6eaabdd633230c8ab3ba306a575e015e", null ],
     [ "recipient", "structui__event__prime__s.html#a05ddf0f048d9e588293b8a41e882084b", null ],
+    [ "scroll_wheel", "structui__event__prime__s.html#af1c72489f4ef7365b55805d07637ae66", null ],
     [ "touch_x", "structui__event__prime__s.html#a6b49eec74f534fd9464bcf0f4207c4e5", null ],
     [ "touch_y", "structui__event__prime__s.html#a759f1d9da211e06fed96dc9ca4e94aa0", null ],
     [ "unk16", "structui__event__prime__s.html#a9b425884886d0de4ead6f9ed0976cf9f", null ],

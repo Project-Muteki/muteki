@@ -49,7 +49,7 @@ var searchData=
   ['loadhfileprogramw_46',['LoadHFileProgramW',['../loader_8h.html#a947000033a438ff67c586db375742782',1,'loader.h']]],
   ['loadprograma_47',['LoadProgramA',['../loader_8h.html#a5ca6aba1421aa133bad77031f74987b6',1,'loader.h']]],
   ['loadprogramw_48',['LoadProgramW',['../loader_8h.html#af006a59018b5d7ff716527e1e236a68b',1,'loader.h']]],
-  ['lock_49',['lock',['../structlcd__thread__safe__s.html#a4baaba6fe00c1a84391a6c0c2f95dea0',1,'lcd_thread_safe_s::lock'],['../structlcd__lock__s.html#ad6b4fc786071d611233eaf63cb2b07a0',1,'lcd_lock_s::lock']]],
+  ['lock_49',['lock',['../structlcd__thread__safe__s.html#a77e644287b1e6870b667d88085883083',1,'lcd_thread_safe_s::lock'],['../structlcd__lock__s.html#a68749935832646086330ff900b6e4987',1,'lcd_lock_s::lock']]],
   ['long_5fpress_5fdelay_50',['long_press_delay',['../structkey__press__event__config__t.html#a2eaa31a1db305cec816920c58a371f5b',1,'key_press_event_config_t']]],
   ['long_5fpress_5frepeat_5frate_51',['long_press_repeat_rate',['../structkey__press__event__config__t.html#af6cb0955d9bb6dd20cb35831c829f94f',1,'key_press_event_config_t']]],
   ['lrealloc_52',['lrealloc',['../memory_8h.html#aa0d26131a5b76ad8d2e34fcb8d526ee8',1,'memory.h']]]

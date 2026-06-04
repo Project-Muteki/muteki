@@ -48,7 +48,7 @@ var searchData=
   ['unk_5f0xe_45',['unk_0xe',['../structlcd__cursor__s.html#a312e79d11d0e088161030f727a3906ed',1,'lcd_cursor_s']]],
   ['unk_5fcallback_5f0x34_46',['unk_callback_0x34',['../structui__widget__button__s.html#a48de62ede98016dd197063eb56e4c838',1,'ui_widget_button_s']]],
   ['unk_5fcallback_5f0x38_47',['unk_callback_0x38',['../structui__widget__button__s.html#a242ed0f7a00250c75bff6d6f4acfcf09',1,'ui_widget_button_s']]],
-  ['unlock_48',['unlock',['../structlcd__lock__s.html#a0f578f753fd3fa87f29992a377f4d711',1,'lcd_lock_s::unlock'],['../structlcd__thread__safe__s.html#a1b72a5740d9238358e8a330eda1d3d4f',1,'lcd_thread_safe_s::unlock']]],
+  ['unlock_48',['unlock',['../structlcd__lock__s.html#ab9e836a0c552c4c83722a0c52c144541',1,'lcd_lock_s::unlock'],['../structlcd__thread__safe__s.html#a12cc4047690e64499eee33f1f4bde8e3',1,'lcd_thread_safe_s::unlock']]],
   ['unused_5f0x10_49',['unused_0x10',['../structloader__applet__info__s.html#a46af32063b9ede40c1ccda9a461fbea7',1,'loader_applet_info_s']]],
   ['unused_5f0x2_50',['unused_0x2',['../structloader__applet__info__s.html#a278fde66b01b8b7abae741c4b179d251',1,'loader_applet_info_s']]],
   ['unused_5f0x4_51',['unused_0x4',['../structloader__applet__info__s.html#a2003ae96a89a80b7cec6c5e3751ba492',1,'loader_applet_info_s']]],
