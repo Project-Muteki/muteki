@@ -85,6 +85,6 @@ var searchData=
   ['sys_5fseek_5fwhence_5fe_82',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
   ['sys_5fstorage_5fdevice_5fnot_5ffound_83',['SYS_STORAGE_DEVICE_NOT_FOUND',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73acc7bb37ad474c044cf297cd9065347b1',1,'errno.h']]],
   ['syscall_20definitions_20into_20ghidra_84',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['syspoweroff_85',['SysPowerOff',['../system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797',1,'system.h']]],
+  ['syspoweroff_85',['SysPowerOff',['../system_8h.html#a1242f094041fc8b774ce94f3790d6c84',1,'system.h']]],
   ['system_2eh_86',['system.h',['../system_8h.html',1,'']]]
 ];

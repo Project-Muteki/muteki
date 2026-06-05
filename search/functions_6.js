@@ -9,7 +9,7 @@ var searchData=
   ['freeprogram_6',['FreeProgram',['../loader_8h.html#ab3102d5e62efa83e012747716c6185fd',1,'loader.h']]],
   ['fsgetdiskroomstate_7',['FSGetDiskRoomState',['../fs_8h.html#addc301eb3ca382ad5dc5de8e0dca892c',1,'fs.h']]],
   ['ftl_5fcreateramdisk_8',['FTL_CreateRamDisk',['../ftl_8h.html#af641b186facc7ee474d06ddda52bfefc',1,'ftl.h']]],
-  ['ftl_5fdestroyramdisk_9',['FTL_DestroyRamDisk',['../ftl_8h.html#aac9f27ca1c858abe49d42e9ac008ce91',1,'ftl.h']]],
+  ['ftl_5fdestroyramdisk_9',['FTL_DestroyRamDisk',['../ftl_8h.html#aca3db020013704b9e927e07e1e59d4b4',1,'ftl.h']]],
   ['ftl_5fgetcurdisksize_10',['FTL_GetCurDiskSize',['../ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615',1,'ftl.h']]],
   ['ftl_5freadsector_11',['FTL_ReadSector',['../ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90',1,'ftl.h']]]
 ];

@@ -116,12 +116,12 @@ $(document).ready(function(){initNavTree('utils_8h.html',''); initResizable(); }
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7ca12229db87d9d2a5431f9059e304d0" id="r_a7ca12229db87d9d2a5431f9059e304d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a> ()</td></tr>
-<tr class="memdesc:a7ca12229db87d9d2a5431f9059e304d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor of the currently active LCD surface.  <br /></td></tr>
-<tr class="separator:a7ca12229db87d9d2a5431f9059e304d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a212a842a05302253aae6192eaa1ec53f" id="r_a212a842a05302253aae6192eaa1ec53f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a212a842a05302253aae6192eaa1ec53f">WarningBeep</a> ()</td></tr>
-<tr class="memdesc:a212a842a05302253aae6192eaa1ec53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <br /></td></tr>
-<tr class="separator:a212a842a05302253aae6192eaa1ec53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8e4f8b8a49b1621a4ab287076b859de" id="r_ad8e4f8b8a49b1621a4ab287076b859de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#ad8e4f8b8a49b1621a4ab287076b859de">GetActiveVRamAddress</a> (void)</td></tr>
+<tr class="memdesc:ad8e4f8b8a49b1621a4ab287076b859de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the descriptor of the currently active LCD surface.  <br /></td></tr>
+<tr class="separator:ad8e4f8b8a49b1621a4ab287076b859de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3f00a1e9f90565f8469c8a96048d1c5" id="r_aa3f00a1e9f90565f8469c8a96048d1c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aa3f00a1e9f90565f8469c8a96048d1c5">WarningBeep</a> (void)</td></tr>
+<tr class="memdesc:aa3f00a1e9f90565f8469c8a96048d1c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Play a beep using the built in piezo speaker.  <br /></td></tr>
+<tr class="separator:aa3f00a1e9f90565f8469c8a96048d1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a5b205f6db107bad75c2b66dc4ec088" id="r_a5a5b205f6db107bad75c2b66dc4ec088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a5a5b205f6db107bad75c2b66dc4ec088">WriteComDebugMsg</a> (char *format,...) <a class="el" href="common_8h.html#aad78f1ddd0830141e8ad38443423b42a">SYS_IS_PRINTF</a>(1</td></tr>
 <tr class="memdesc:a5a5b205f6db107bad75c2b66dc4ec088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and send a message to debug UART port.  <br /></td></tr>
 <tr class="separator:a5a5b205f6db107bad75c2b66dc4ec088"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,8 +130,8 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Miscellaneous utility syscalls. </p>
 <p>Contains syscalls that cannot be easily grouped with other syscalls. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a7ca12229db87d9d2a5431f9059e304d0" name="a7ca12229db87d9d2a5431f9059e304d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ca12229db87d9d2a5431f9059e304d0">&#9670;&#160;</a></span>GetActiveVRamAddress()</h2>
+<a id="ad8e4f8b8a49b1621a4ab287076b859de" name="ad8e4f8b8a49b1621a4ab287076b859de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8e4f8b8a49b1621a4ab287076b859de">&#9670;&#160;</a></span>GetActiveVRamAddress()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,6 +142,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> * GetActiveVRamAddress </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -154,21 +155,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get the descriptor of the currently active LCD surface. </p>
-<p>This is functionally equivalent to the following: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structlcd__surface__s.html">lcd_surface_t</a> *<a class="code hl_function" href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a>() {</div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a>()-&gt;<a class="code hl_variable" href="structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a">surface</a>;</div>
+<p>This is functionally equivalent to the following: </p><div class="fragment"><div class="line"><a class="code hl_struct" href="structlcd__surface__s.html">lcd_surface_t</a> *<a class="code hl_function" href="utils_8h.html#ad8e4f8b8a49b1621a4ab287076b859de">GetActiveVRamAddress</a>() {</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="canvas_8h.html#adfc2c8cc6a6608027a65f969e93aa110">GetActiveLCD</a>()-&gt;<a class="code hl_variable" href="structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a">surface</a>;</div>
 <div class="line">}</div>
-<div class="ttc" id="acanvas_8h_html_a38aa2abfb190ac0a0a12249df8020ed7"><div class="ttname"><a href="canvas_8h.html#a38aa2abfb190ac0a0a12249df8020ed7">GetActiveLCD</a></div><div class="ttdeci">lcd_t * GetActiveLCD()</div><div class="ttdoc">Get the current active LCD descriptor.</div></div>
+<div class="ttc" id="acanvas_8h_html_adfc2c8cc6a6608027a65f969e93aa110"><div class="ttname"><a href="canvas_8h.html#adfc2c8cc6a6608027a65f969e93aa110">GetActiveLCD</a></div><div class="ttdeci">lcd_t * GetActiveLCD(void)</div><div class="ttdoc">Get the current active LCD descriptor.</div></div>
 <div class="ttc" id="astructlcd__base__s_html_aeb44786ce39347b44fa9f4fa6bdb270a"><div class="ttname"><a href="structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a">lcd_base_s::surface</a></div><div class="ttdeci">lcd_surface_t * surface</div><div class="ttdoc">Surface linked to the LCD.</div><div class="ttdef"><b>Definition</b> common.h:903</div></div>
 <div class="ttc" id="astructlcd__surface__s_html"><div class="ttname"><a href="structlcd__surface__s.html">lcd_surface_s</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> common.h:728</div></div>
-<div class="ttc" id="autils_8h_html_a7ca12229db87d9d2a5431f9059e304d0"><div class="ttname"><a href="utils_8h.html#a7ca12229db87d9d2a5431f9059e304d0">GetActiveVRamAddress</a></div><div class="ttdeci">lcd_surface_t * GetActiveVRamAddress()</div><div class="ttdoc">Get the descriptor of the currently active LCD surface.</div></div>
+<div class="ttc" id="autils_8h_html_ad8e4f8b8a49b1621a4ab287076b859de"><div class="ttname"><a href="utils_8h.html#ad8e4f8b8a49b1621a4ab287076b859de">GetActiveVRamAddress</a></div><div class="ttdeci">lcd_surface_t * GetActiveVRamAddress(void)</div><div class="ttdoc">Get the descriptor of the currently active LCD surface.</div></div>
 </div><!-- fragment --><p> Requires <code>-lkrnllib</code> when dynamically linking with the shims.  </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x20022</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  </p><dl class="section return"><dt>Returns</dt><dd>The LCD surface descriptor. </dd></dl>
 
 </div>
 </div>
-<a id="a212a842a05302253aae6192eaa1ec53f" name="a212a842a05302253aae6192eaa1ec53f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a212a842a05302253aae6192eaa1ec53f">&#9670;&#160;</a></span>WarningBeep()</h2>
+<a id="aa3f00a1e9f90565f8469c8a96048d1c5" name="aa3f00a1e9f90565f8469c8a96048d1c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f00a1e9f90565f8469c8a96048d1c5">&#9670;&#160;</a></span>WarningBeep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,6 +180,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool WarningBeep </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

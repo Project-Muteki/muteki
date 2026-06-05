@@ -6,7 +6,7 @@ var searchData=
   ['channels_3',['channels',['../structpcm__decoder__buffer__s.html#a7cd04e0204afe5b3b1f5b19ff38500fe',1,'pcm_decoder_buffer_s']]],
   ['checkprogramisstayresident_4',['CheckProgramIsStayResident',['../loader_8h.html#ac9a6a038d9485febd3cce82181dcafc4',1,'loader.h']]],
   ['clangd_5',['Developing muteki using clangd',['../index.html#autotoc_md3',1,'']]],
-  ['clearallevents_6',['ClearAllEvents',['../event_8h.html#a2ffd8f47dae072b34d94f6ec43dde598',1,'event.h']]],
+  ['clearallevents_6',['ClearAllEvents',['../event_8h.html#a5b6acd1a254e75d168cd906e5cefa542',1,'event.h']]],
   ['clearevent_7',['ClearEvent',['../event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7',1,'event.h']]],
   ['clearscreen_8',['ClearScreen',['../canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692',1,'canvas.h']]],
   ['closehandle_9',['CloseHandle',['../devio_8h.html#ae9b47953c6d83661123973faad449370',1,'devio.h']]],
@@ -29,6 +29,6 @@ var searchData=
   ['current_5fdirection_26',['current_direction',['../structpcm__config__s.html#a36e9fe4580be48d47caafcf3afa2313e',1,'pcm_config_s']]],
   ['current_5fpath_5fidx_27',['current_path_idx',['../structfilepicker__context__s.html#a34e900ec24de31ded28ab38de48976fd',1,'filepicker_context_s']]],
   ['cursor_28',['cursor',['../structlcd__base__s.html#a3c4d1649ea7f939a797a1ffe81c44b6b',1,'lcd_base_s::cursor'],['../structlcd__thread__safe__s.html#a72f9c20ab87115656833f63ca15a4d86',1,'lcd_thread_safe_s::cursor']]],
-  ['cursorlock_29',['CursorLock',['../canvas_8h.html#a6b82197758044bd6b4f728adadb1e481',1,'canvas.h']]],
-  ['cursorunock_30',['CursorUnock',['../canvas_8h.html#a83fb9bd1df11fb75ad36fd154c76dcaa',1,'canvas.h']]]
+  ['cursorlock_29',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
+  ['cursorunock_30',['CursorUnock',['../canvas_8h.html#a6419391410fafcb413f24a5d90a17c5b',1,'canvas.h']]]
 ];

@@ -24,5 +24,5 @@ var searchData=
   ['sizeofimage_21',['SizeofImage',['../surface_8h.html#afaee65f5adc0182e5b96e35bcb222e3f',1,'surface.h']]],
   ['stayresidentprograma_22',['StayResidentProgramA',['../loader_8h.html#a6f2dc7db8597901ee254841406a2bb7b',1,'loader.h']]],
   ['stayresidentprogramw_23',['StayResidentProgramW',['../loader_8h.html#a3331c2eaef9c8ce6c893e6b512348609',1,'loader.h']]],
-  ['syspoweroff_24',['SysPowerOff',['../system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797',1,'system.h']]]
+  ['syspoweroff_24',['SysPowerOff',['../system_8h.html#a1242f094041fc8b774ce94f3790d6c84',1,'system.h']]]
 ];

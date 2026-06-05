@@ -84,7 +84,7 @@ var searchData=
   ['ftl_2eh_81',['ftl.h',['../ftl_8h.html',1,'']]],
   ['ftl_5fcreateramdisk_82',['FTL_CreateRamDisk',['../ftl_8h.html#af641b186facc7ee474d06ddda52bfefc',1,'ftl.h']]],
   ['ftl_5fdata_5fcorrupted_83',['FTL_DATA_CORRUPTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4216fadfb49f3a73f0e33b2785d59f7e',1,'errno.h']]],
-  ['ftl_5fdestroyramdisk_84',['FTL_DestroyRamDisk',['../ftl_8h.html#aac9f27ca1c858abe49d42e9ac008ce91',1,'ftl.h']]],
+  ['ftl_5fdestroyramdisk_84',['FTL_DestroyRamDisk',['../ftl_8h.html#aca3db020013704b9e927e07e1e59d4b4',1,'ftl.h']]],
   ['ftl_5fecc_5ffailed_85',['FTL_ECC_FAILED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aa38c1fb061edc52a44e085f21ce3b564',1,'errno.h']]],
   ['ftl_5fecc_5ftriggered_86',['FTL_ECC_TRIGGERED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73ad38c3244c24ae07136a008a3cc3581ce',1,'errno.h']]],
   ['ftl_5fgetcurdisksize_87',['FTL_GetCurDiskSize',['../ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615',1,'ftl.h']]],

@@ -8,9 +8,9 @@ var system_8h =
     ] ],
     [ "_GetSystemDirectory", "system_8h.html#a73d61f72896d4508d5264ce173f7a745", null ],
     [ "Buzzer", "system_8h.html#aef1cc89349e8bbf4146fdf74097c882f", null ],
-    [ "GetBatteryType", "system_8h.html#a969fe31c7b2c59119466e82bb428ec54", null ],
+    [ "GetBatteryType", "system_8h.html#a3af0a543cd8f60adde46a8d2d7e9f46c", null ],
     [ "GetBatteryValue", "system_8h.html#af427422e4eaf7960a9348d0491fa47f4", null ],
     [ "GetTimer1IntHandler", "system_8h.html#a77c18dab7a63ff188e452878d5907582", null ],
     [ "SetTimer1IntHandler", "system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30", null ],
-    [ "SysPowerOff", "system_8h.html#ae78b6cf2d7a0a6aef82d74b43caf1797", null ]
+    [ "SysPowerOff", "system_8h.html#a1242f094041fc8b774ce94f3790d6c84", null ]
 ];

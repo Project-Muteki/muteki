@@ -10,6 +10,6 @@ var structui__widget__button__s =
     [ "unk_0x54", "structui__widget__button__s.html#ae27cc893775409dfd851f5766b8b13f7", null ],
     [ "unk_0x58", "structui__widget__button__s.html#a3930f0c35c768cfd759b218a24a8c8c9", null ],
     [ "unk_0x5c", "structui__widget__button__s.html#a227a246efa4465f67b78d0173d3798dc", null ],
-    [ "unk_callback_0x34", "structui__widget__button__s.html#a48de62ede98016dd197063eb56e4c838", null ],
-    [ "unk_callback_0x38", "structui__widget__button__s.html#a242ed0f7a00250c75bff6d6f4acfcf09", null ]
+    [ "unk_callback_0x34", "structui__widget__button__s.html#ad7c38a9c93ceb1afe8e5ae060b563fbf", null ],
+    [ "unk_callback_0x38", "structui__widget__button__s.html#afdb8e122db6b4d5fe5f86311884bce2f", null ]
 ];

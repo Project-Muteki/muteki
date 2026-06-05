@@ -15,7 +15,7 @@ var searchData=
   ['wait_5fresult_5ftimeout_12',['WAIT_RESULT_TIMEOUT',['../muteki_2threading_8h.html#a9272387198be11dfc77e13b4b65854b4a04538de14f6be13101cc38f87a39f07d',1,'threading.h']]],
   ['wait_5fstate_13',['wait_state',['../structsemaphore__s.html#a97cb5a2da761eed482ebcd28b8fadf54',1,'semaphore_s::wait_state'],['../structmessage__queue__s.html#a5194fc5f00d5f972c861f8149661e7cf',1,'message_queue_s::wait_state'],['../structcritical__section__s.html#a7f5372482763b84d38dcf5298a894446',1,'critical_section_s::wait_state'],['../structevent__s.html#a55d268f3d1ddaa8226c06d54f4193bdb',1,'event_s::wait_state']]],
   ['waiting_5fby_14',['waiting_by',['../structthreading__waitable__t.html#a224dc7dc25c5440ed48e54d2183926b8',1,'threading_waitable_t']]],
-  ['warningbeep_15',['WarningBeep',['../utils_8h.html#a212a842a05302253aae6192eaa1ec53f',1,'utils.h']]],
+  ['warningbeep_15',['WarningBeep',['../utils_8h.html#aa3f00a1e9f90565f8469c8a96048d1c5',1,'utils.h']]],
   ['weekday_16',['weekday',['../structdatetime__t.html#a65486e7763660a3e2787b334f941c1ae',1,'datetime_t']]],
   ['width_17',['width',['../structlcd__thread__safe__s.html#ad26b5c69bfa15f2c72f4ea2a544a61c8',1,'lcd_thread_safe_s::width'],['../structlcd__base__s.html#aa6a49914dece316f4bdabae44badc83c',1,'lcd_base_s::width'],['../structlcd__surface__s.html#aa2b52d5992d38ee3ea4d8a2e97549159',1,'lcd_surface_s::width']]],
   ['writealignstring_18',['WriteAlignString',['../canvas_8h.html#aa411d0bb895097a6f63e5b897f7637a8',1,'canvas.h']]],
