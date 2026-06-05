@@ -109,7 +109,7 @@ extern timer1_callback_t GetTimer1IntHandler(short *interval);
  * @x_void_param
  * @x_void_return
  */
-extern void SysPowerOff();
+extern void SysPowerOff(void);
 
 /**
  * @brief Get the system power source type.
@@ -118,7 +118,7 @@ extern void SysPowerOff();
  * @return The system power source type.
  * @see ::power_source_type_e
  */
-extern int GetBatteryType();
+extern int GetBatteryType(void);
 
 /**
  * @brief Get the DOS 8.3 path to the system configuration directory on user data partition.

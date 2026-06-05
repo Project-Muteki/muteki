@@ -90,7 +90,7 @@ void SetSysKeyState(const key_press_event_config_t *config);
  * @x_syscall_num `0x1004a`
  * @x_void
  */
-extern void ClearAllEvents();
+extern void ClearAllEvents(void);
 
 /**
  * @brief Process pending events.
@@ -161,7 +161,7 @@ unsigned short SetCapsState(unsigned short new_state);
  * @return The current state.
  * @see toggle_key_state_e Valid toggle key states.
  */
-unsigned short GetShiftState();
+unsigned short GetShiftState(void);
 
 /**
  * @brief Get the state of the SHIFT toggle key.
@@ -170,7 +170,7 @@ unsigned short GetShiftState();
  * @return The current state.
  * @see toggle_key_state_e Valid toggle key states.
  */
-unsigned short GetCapsState();
+unsigned short GetCapsState(void);
 
 #ifdef __cplusplus
 } // extern "C"

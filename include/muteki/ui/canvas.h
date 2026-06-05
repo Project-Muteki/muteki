@@ -26,7 +26,7 @@ extern "C" {
  * @return The current font type.
  * @see font_type_e Valid values for `font_type`.
  */
-extern short GetFontType();
+extern short GetFontType(void);
 
 /**
  * @brief Set the current font type to `font_type`.
@@ -134,7 +134,7 @@ extern unsigned int SetCursorSize(unsigned int new_size);
  * @x_void_param
  * @return The cursor size.
  */
-extern unsigned int GetCursorSize();
+extern unsigned int GetCursorSize(void);
 
 /**
  * @brief Move the cursor position on the current canvas to the specified coordinate.
@@ -170,21 +170,21 @@ extern short SetCursorType(short new_type);
  * @x_void_param
  * @return The cursor type.
  */
-extern short GetCursorType();
+extern short GetCursorType(void);
 
 /**
  * @brief Lock the cursor on the current canvas.
  * @x_syscall_num `0x10063`
  * @x_void
  */
-extern void CursorLock();
+extern void CursorLock(void);
 
 /**
  * @brief Unlock the cursor on the current canvas.
  * @x_syscall_num `0x10064`
  * @x_void
  */
-extern void CursorUnock();
+extern void CursorUnock(void);
 
 /**
  * @brief Set display canvas transparent color.
@@ -240,7 +240,7 @@ short GetPenStyle(unsigned int *dash_pattern);
  * @x_void_param
  * @return Current stroke width in pixels.
  */
-short GetPenSize();
+short GetPenSize(void);
 
 /**
  * @brief Set the stroke width.
@@ -526,7 +526,7 @@ extern lcd_t *SetActiveLCD(lcd_t *new_lcd);
  * @x_void_param
  * @return The current active LCD descriptor.
  */
-extern lcd_t *GetActiveLCD();
+extern lcd_t *GetActiveLCD(void);
 
 /**
  * @brief Copy an LCD descriptor (excluding surface).
@@ -566,7 +566,7 @@ extern lcd_surface_t *SetDCObject(lcd_t *lcd, lcd_surface_t *new_surface);
  * @return The X coordinate of the rightmost visible pixels.
  * @see GetMaxScrY Returns the Y boundary instead.
  */
-extern short GetMaxScrX();
+extern short GetMaxScrX(void);
 
 /**
  * @brief Get Y coordinate of the bottom-most visible pixels on the current canvas.
@@ -577,7 +577,7 @@ extern short GetMaxScrX();
  * @return The Y coordinate of the bottom-most visible pixels.
  * @see GetMaxScrX Returns the X boundary instead.
  */
-extern short GetMaxScrY();
+extern short GetMaxScrY(void);
 
 #ifdef __cplusplus
 } // extern "C"

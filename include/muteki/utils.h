@@ -32,7 +32,7 @@ extern "C" {
  * @x_void_param
  * @return The LCD surface descriptor.
  */ 
-extern lcd_surface_t *GetActiveVRamAddress();
+extern lcd_surface_t *GetActiveVRamAddress(void);
 
 /**
  * @brief Play a beep using the built in piezo speaker.
@@ -41,7 +41,7 @@ extern lcd_surface_t *GetActiveVRamAddress();
  * @x_void_param
  * @retval true @x_term ok
  */
-extern bool WarningBeep();
+extern bool WarningBeep(void);
 
 /**
  * @brief Format and send a message to debug UART port.

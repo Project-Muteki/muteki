@@ -25,11 +25,11 @@ struct ui_widget_button_s {
     /**
      * @brief Unknown.
      */
-    void (*unk_callback_0x34)(); // 0x34:0x38
+    void (*unk_callback_0x34)(void); // 0x34:0x38
     /**
      * @brief Unknown.
      */
-    void (*unk_callback_0x38)(); // 0x38:0x3c
+    void (*unk_callback_0x38)(void); // 0x38:0x3c
     /**
      * @brief Key binding.
      * @details Setting this to 0 disables key binding.

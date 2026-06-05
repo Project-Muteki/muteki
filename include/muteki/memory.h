@@ -94,7 +94,7 @@ extern void FreeBlock(void *ptr);
  * @x_void_param
  * @return Size of available memory.
  */
-extern size_t GetFreeMemory();
+extern size_t GetFreeMemory(void);
 
 #ifdef __cplusplus
 } // extern "C"

@@ -453,7 +453,7 @@ extern int ExecuteProgram(loader_loaded_t *applet, int subroutine, const void *a
  * @x_void_param
  * @return The DOS 8.3 path to the current running executable.
  */
-extern const char *GetCurrentPathA();
+extern const char *GetCurrentPathA(void);
 
 /**
  * @brief Return the instance of a running applet by its DOS 8.3 path name.
@@ -502,7 +502,7 @@ extern loader_loaded_t *LoadProgramW(const UTF16 *pathname);
  * @x_void_param
  * @return The UTF-16 LFN path to the current running executable.
  */
-extern const UTF16 *GetCurrentPathW();
+extern const UTF16 *GetCurrentPathW(void);
 
 /**
  * @brief Return the instance of a running applet by its LFN.

@@ -81,7 +81,7 @@ extern short FTL_CreateRamDisk(size_t size);
  * @brief Close the previously allocated RAM disk.
  * @x_void
  */
-extern void FTL_DestroyRamDisk();
+extern void FTL_DestroyRamDisk(void);
 
 /**
  * @brief Get NAND flash parameters.
