@@ -7,12 +7,12 @@
  * @file heap.h
  * @brief Heap memory management function hooks.
  *
- * Since Besta RTOS does not have virtual memory support, sbrk()-based heap
- * management in newlib will not work great. Spoofing a heap space with a huge
- * malloc() on the OS heap wastes memory and can potentially cause the OS to
- * become unstable. Therefore the solution here is to simply redirect basic
- * heap management functions (i.e. malloc(), calloc(), realloc() and free()) to
- * their Besta RTOS native counterpart so we don't need a custom newlib.
+ * The default allocator Besta RTOS provides aligns the memory it allocates to
+ * 4-bytes boundary, however the AAPCS requires memory to be aligned to 8-bytes
+ * boundary. This header file provides hooked version of allocator functions
+ * like `malloc` and `free`, which align the memory to 8-bytes boundary by
+ * inserting spaces conditionally, and also optionally traces the allocation
+ * done by the hooked functions.
  */
 
 #ifndef __OSDEP_HEAP_H__
