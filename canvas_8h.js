@@ -4,7 +4,7 @@ var canvas_8h =
     [ "CreateCompatibleLCD", "canvas_8h.html#ae8d53e141ab966cba778a9b9be545331", null ],
     [ "CreateVirtualLCD", "canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011", null ],
     [ "CursorLock", "canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8", null ],
-    [ "CursorUnock", "canvas_8h.html#a6419391410fafcb413f24a5d90a17c5b", null ],
+    [ "CursorUnlock", "canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481", null ],
     [ "DeleteVirtualLCD", "canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2", null ],
     [ "DrawCircle", "canvas_8h.html#a304f2cf51abd5b22b3bddeb75d3bd389", null ],
     [ "DrawEllipse", "canvas_8h.html#af20d9fea67e5a3884449e37b32fe84d7", null ],

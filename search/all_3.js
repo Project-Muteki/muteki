@@ -30,5 +30,5 @@ var searchData=
   ['current_5fpath_5fidx_27',['current_path_idx',['../structfilepicker__context__s.html#a34e900ec24de31ded28ab38de48976fd',1,'filepicker_context_s']]],
   ['cursor_28',['cursor',['../structlcd__base__s.html#a3c4d1649ea7f939a797a1ffe81c44b6b',1,'lcd_base_s::cursor'],['../structlcd__thread__safe__s.html#a72f9c20ab87115656833f63ca15a4d86',1,'lcd_thread_safe_s::cursor']]],
   ['cursorlock_29',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
-  ['cursorunock_30',['CursorUnock',['../canvas_8h.html#a6419391410fafcb413f24a5d90a17c5b',1,'canvas.h']]]
+  ['cursorunlock_30',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
 ];

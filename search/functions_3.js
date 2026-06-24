@@ -13,5 +13,5 @@ var searchData=
   ['createfile_10',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
   ['createvirtuallcd_11',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
   ['cursorlock_12',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
-  ['cursorunock_13',['CursorUnock',['../canvas_8h.html#a6419391410fafcb413f24a5d90a17c5b',1,'canvas.h']]]
+  ['cursorunlock_13',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
 ];
