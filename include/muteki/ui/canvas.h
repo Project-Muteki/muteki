@@ -184,7 +184,7 @@ extern void CursorLock(void);
  * @x_syscall_num `0x10064`
  * @x_void
  */
-extern void CursorUnock(void);
+extern void CursorUnlock(void);
 
 /**
  * @brief Set display canvas transparent color.
