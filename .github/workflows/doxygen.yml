@@ -30,7 +30,7 @@ jobs:
           submodules: recursive
       - name: Cache Doxygen package
         id: cache-doxygen-package
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ${{ runner.temp }}/doxygen-${{ env.DOXYGEN_VER }}.linux.bin.tar.gz
           key: ${{ runner.os }}-doxygen-package-${{ env.DOXYGEN_VER }}
