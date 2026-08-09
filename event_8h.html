@@ -138,7 +138,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aadb561bb43ac9ff3ee25fa3751ae9c83" id="r_aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83">SetSysKeyState</a> (const <a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a> *config)</td></tr>
 <tr class="memdesc:aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure key event generator.  <br /></td></tr>
 <tr class="separator:aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f671948bb71c03dd670e3a25a96cdb2" id="r_a1f671948bb71c03dd670e3a25a96cdb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a1f671948bb71c03dd670e3a25a96cdb2">GetPenEvent</a> (<a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *event)</td></tr>
+<tr class="memitem:a1f671948bb71c03dd670e3a25a96cdb2" id="r_a1f671948bb71c03dd670e3a25a96cdb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a1f671948bb71c03dd670e3a25a96cdb2">GetPenEvent</a> (<a class="el" href="structui__event__sys__s.html">ui_event_sys_t</a> *event)</td></tr>
 <tr class="memdesc:a1f671948bb71c03dd670e3a25a96cdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consume event from the system UI event queue (mostly for touch).  <br /></td></tr>
 <tr class="separator:a1f671948bb71c03dd670e3a25a96cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fc297693741ae1de21b339600c90f1f" id="r_a0fc297693741ae1de21b339600c90f1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a0fc297693741ae1de21b339600c90f1f">CheckPenEvent</a> (void)</td></tr>
@@ -147,7 +147,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab0e9bd668e65c35f472baa11927611e7" id="r_ab0e9bd668e65c35f472baa11927611e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ab0e9bd668e65c35f472baa11927611e7">ClearPenEvent</a> (void)</td></tr>
 <tr class="memdesc:ab0e9bd668e65c35f472baa11927611e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all unconsumed system UI events.  <br /></td></tr>
 <tr class="separator:ab0e9bd668e65c35f472baa11927611e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a429a689cf8a4d534f491775f454b3cb8" id="r_a429a689cf8a4d534f491775f454b3cb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a429a689cf8a4d534f491775f454b3cb8">PutSystemEvent</a> (<a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *event)</td></tr>
+<tr class="memitem:a429a689cf8a4d534f491775f454b3cb8" id="r_a429a689cf8a4d534f491775f454b3cb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a429a689cf8a4d534f491775f454b3cb8">PutSystemEvent</a> (<a class="el" href="structui__event__sys__s.html">ui_event_sys_t</a> *event)</td></tr>
 <tr class="memdesc:a429a689cf8a4d534f491775f454b3cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce a system UI event.  <br /></td></tr>
 <tr class="separator:a429a689cf8a4d534f491775f454b3cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a41667de6a37b2a6b2c6fa1020197de" id="r_a9a41667de6a37b2a6b2c6fa1020197de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de">GetEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
@@ -594,7 +594,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int GetPenEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structui__event__sys__s.html">ui_event_sys_t</a> *&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -803,7 +803,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int PutSystemEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structui__event__sys__s.html">ui_event_sys_t</a> *&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>

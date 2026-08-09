@@ -55,5 +55,5 @@ var searchData=
   ['usb_5fdata_52',['usb_data',['../structui__event__base__s.html#af812bdcd50769ca5b7c09ec4e3ad58d8',1,'ui_event_base_s::usb_data'],['../structui__event__prime__s.html#aa440213d307e0789aec1522142cd7308',1,'ui_event_prime_s::usb_data']]],
   ['used_53',['used',['../structfs__stat__t.html#a96946b8114ed6bc26aed76733b82b703',1,'fs_stat_t']]],
   ['used_5fkb_54',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]],
-  ['user_5fdata_55',['user_data',['../structui__event__input__s.html#abda6b51d1d6726e5824e5b242484e40b',1,'ui_event_input_s']]]
+  ['user_5fdata_55',['user_data',['../structui__event__sys__s.html#a04b43398e87f18cb34263b1c36773003',1,'ui_event_sys_s']]]
 ];

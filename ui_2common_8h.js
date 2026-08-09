@@ -11,7 +11,7 @@ var ui_2common_8h =
     [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
     [ "ui_event_base_s", "structui__event__base__s.html", "structui__event__base__s" ],
     [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
-    [ "ui_event_input_s", "structui__event__input__s.html", "structui__event__input__s" ],
+    [ "ui_event_sys_s", "structui__event__sys__s.html", "structui__event__sys__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "RGB_FROM_U8", "ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf", null ],
