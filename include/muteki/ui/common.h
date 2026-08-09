@@ -632,7 +632,7 @@ enum ui_event_type_e {
 /**
  * @brief Internal system UI event types.
  * @details
- * These values may go into the ui_event_base_s::value field when ui_event_base_s::event_type is ::UI_EVENT_TYPE_INTERNAL.
+ * These values may go into the ui_event_t::value field when ui_event_t::event_type is ::UI_EVENT_TYPE_INTERNAL.
  *
  * Unlisted values behave similarly to ::UI_EVENT_INTERNAL_FLAG.
  */

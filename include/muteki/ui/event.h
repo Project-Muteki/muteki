@@ -232,7 +232,7 @@ extern void ClearEvent(ui_event_t *event);
  * @details This drains both the main and the system event queues, the ::UI_EVENT_TYPE_SPECIAL flag, and resets the
  * touch state tracker.
  * @note This does not clear flags related to ::UI_EVENT_TYPE_INTERNAL. However a ::UI_EVENT_TYPE_INTERNAL event with
- * value ::EVENT_INTERNAL_BYPASS will be cleared during the clearing of the system event queue.
+ * value ::UI_EVENT_INTERNAL_BYPASS will be cleared during the clearing of the system event queue.
  * @x_syscall_num `0x1004a`
  * @x_void
  */
