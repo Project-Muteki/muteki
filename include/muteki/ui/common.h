@@ -739,7 +739,7 @@ struct lcd_base_s;
 struct lcd_thread_safe_s;
 struct ui_event_base_s;
 struct ui_event_prime_s;
-struct ui_event_input_s;
+struct ui_event_sys_s;
 struct ui_message_s;
 struct ui_component_s;
 struct ui_multipress_event_s;
@@ -754,7 +754,7 @@ typedef struct lcd_base_s lcd_base_t;
 typedef struct lcd_thread_safe_s lcd_thread_safe_t;
 typedef struct ui_event_base_s ui_event_base_t;
 typedef struct ui_event_prime_s ui_event_prime_t;
-typedef struct ui_event_input_s ui_event_sys_t;
+typedef struct ui_event_sys_s ui_event_sys_t;
 typedef struct ui_message_s ui_message_t;
 typedef struct ui_component_s ui_component_t;
 typedef struct ui_multipress_event_s ui_multipress_event_t;
@@ -1286,7 +1286,7 @@ struct ui_event_prime_s {
     ui_multipress_event_t multipress_events[8]; // 28-124
 };
 
-struct ui_event_input_s {
+struct ui_event_sys_s {
     unsigned int unk_0x0;
     /**
      * @brief The type of event (0x10 being key event)
