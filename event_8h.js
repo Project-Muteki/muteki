@@ -22,6 +22,8 @@ var event_8h =
     [ "PutEvent", "event_8h.html#a0dfa96c341f7f5141934baa765b00e25", null ],
     [ "PutEventExt", "event_8h.html#a3a0a70f0744bc1fc712cea4050d40893", null ],
     [ "PutSystemEvent", "event_8h.html#a429a689cf8a4d534f491775f454b3cb8", null ],
+    [ "SendMessage", "event_8h.html#a81e92618904579d8d96b9edf4939baef", null ],
+    [ "SendMessageExt", "event_8h.html#ad2211b8602963b72784d7585a3d28337", null ],
     [ "SetCapsState", "event_8h.html#a7c2d68be19f405ee8291eeb67703ff5d", null ],
     [ "SetEventType", "event_8h.html#a85be1711e5aa15f610525a9cd34552b3", null ],
     [ "SetShiftState", "event_8h.html#aefcce9b4e5bdb05a2cef5089686823df", null ],

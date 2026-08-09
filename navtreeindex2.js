@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"loader_8h.html#afae9a784ebd91a6770b181af26581d95":[5,0,0,0,10,10],
+"loader_8h.html#afe3adf7250c5473d7333a6fce13ba605":[5,0,0,0,10,20],
 "loader_8h_source.html":[5,0,0,0,10],
 "memory_8h.html":[5,0,0,0,11],
 "memory_8h.html#a2902ddabae243afba311b771c36a483c":[5,0,0,0,11,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "structlcd__surface__s.html":[4,0,17],
 "structlcd__surface__s.html#a19c0ab393a6283ab9d143536a4a2ad51":[4,0,17,5],
 "structlcd__surface__s.html#a264e253c76cbbdf0da1dbf1fcb3e5781":[4,0,17,7],
-"structlcd__surface__s.html#a2f96dc50466bc9202ca976c204f589bc":[4,0,17,4],
-"structlcd__surface__s.html#a556c8787def54e4d2844adbf1ee21f5f":[4,0,17,3],
-"structlcd__surface__s.html#a5995a993993324a55e50625e50476e4d":[4,0,17,1]
+"structlcd__surface__s.html#a2f96dc50466bc9202ca976c204f589bc":[4,0,17,4]
 };

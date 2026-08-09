@@ -155,7 +155,7 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__sys__s.html">ui_event_sys_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__message__s.html">ui_message_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event struct used by SendMessage().  <a href="structui__message__s.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event struct used by <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a>.  <a href="structui__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html">ui_component_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common part of all widgets and views.  <a href="structui__component__s.html#details">More...</a><br /></td></tr>
@@ -1117,7 +1117,7 @@ Enumerations</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9a9a5271172de52af51e8f74fc596f9b48" name="a7ac7cfdad39bdbb473237794863b19b9a9a5271172de52af51e8f74fc596f9b48"></a>UI_EVENT_SOURCE_SYSTEM&#160;</td><td class="fielddoc"><p>Event is a system event (from the system event queue). </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729" name="a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729"></a>UI_EVENT_SOURCE_SEND_MESSAGE&#160;</td><td class="fielddoc"><p>Event is a message (produced via SendMessage()). </p>
+<tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729" name="a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729"></a>UI_EVENT_SOURCE_SEND_MESSAGE&#160;</td><td class="fielddoc"><p>Event is a message (produced via <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a>). </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9adc2e74feb80038125b0ea6a6a8e6da83" name="a7ac7cfdad39bdbb473237794863b19b9adc2e74feb80038125b0ea6a6a8e6da83"></a>UI_EVENT_SOURCE_PUT_EVENT&#160;</td><td class="fielddoc"><p>Event is a regular event and not a <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a> or <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477" title="Special event. Bypasses the queues and sets a flag instead. Exact purpose is unclear.">UI_EVENT_TYPE_SPECIAL</a> (from the main event queue). </p>
 </td></tr>

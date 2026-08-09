@@ -198,6 +198,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0af6de53f178860af7a81b8a02effd63" id="r_a0af6de53f178860af7a81b8a02effd63"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a0af6de53f178860af7a81b8a02effd63">GetCapsState</a> (void)</td></tr>
 <tr class="memdesc:a0af6de53f178860af7a81b8a02effd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the state of the SHIFT toggle key.  <br /></td></tr>
 <tr class="separator:a0af6de53f178860af7a81b8a02effd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e92618904579d8d96b9edf4939baef" id="r_a81e92618904579d8d96b9edf4939baef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef">SendMessage</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:a81e92618904579d8d96b9edf4939baef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronously send an event to a recipient, bypassing the event queuing mechanism.  <br /></td></tr>
+<tr class="separator:a81e92618904579d8d96b9edf4939baef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2211b8602963b72784d7585a3d28337" id="r_ad2211b8602963b72784d7585a3d28337"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ad2211b8602963b72784d7585a3d28337">SendMessageExt</a> (<a class="el" href="structui__component__s.html">ui_component_t</a> *recipient, int event_type, unsigned int value, void *user_data)</td></tr>
+<tr class="memdesc:ad2211b8602963b72784d7585a3d28337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronously send an event to a recipient (by values)  <br /></td></tr>
+<tr class="separator:ad2211b8602963b72784d7585a3d28337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level UI event handing API. </p>
@@ -830,6 +836,107 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a81e92618904579d8d96b9edf4939baef" name="a81e92618904579d8d96b9edf4939baef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e92618904579d8d96b9edf4939baef">&#9670;&#160;</a></span>SendMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SendMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__event__base__s.html">ui_event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Synchronously send an event to a recipient, bypassing the event queuing mechanism. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10188</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">event</td><td>The event. Must contain a valid <a class="el" href="structui__event__base__s.html#af59ae22188d83376bc07bb6f77202115" title="Event recipient.">ui_event_t::recipient</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Event is consumed by the recipient. </dd>
+<dd>
+false Event is not consumed by the recipient or recipient is <code>NULL</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ad2211b8602963b72784d7585a3d28337" name="ad2211b8602963b72784d7585a3d28337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2211b8602963b72784d7585a3d28337">&#9670;&#160;</a></span>SendMessageExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SendMessageExt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__component__s.html">ui_component_t</a> *&#160;</td>
+          <td class="paramname"><em>recipient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Synchronously send an event to a recipient (by values) </p>
+<p>This allocates a temporary event struct on the stack, sets the user-specified fields and then calls <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a> to send the generated event. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10189</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">recipient</td><td>The UI component receiving the event. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">event_type</td><td>Event type. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">value</td><td>Raw 32-bit event value. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">user_data</td><td>User data pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Event is consumed by the recipient. </dd>
+<dd>
+false Event is not consumed by the recipient or recipient is <code>NULL</code>. </dd></dl>
 
 </div>
 </div>
