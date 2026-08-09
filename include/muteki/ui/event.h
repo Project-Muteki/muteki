@@ -74,7 +74,7 @@ typedef struct {
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
  */
-void GetSysKeyState(key_press_event_config_t *config);
+extern void GetSysKeyState(key_press_event_config_t *config);
 
 /**
  * @brief Configure key event generator.
@@ -83,58 +83,170 @@ void GetSysKeyState(key_press_event_config_t *config);
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
  */
-void SetSysKeyState(const key_press_event_config_t *config);
+extern void SetSysKeyState(const key_press_event_config_t *config);
 
 /**
- * @brief Discard all unprocessed UI events.
+ * @brief Consume event from the system UI event queue (mostly for touch).
+ * @details
+ * If touch is active, this will generate a touch hold event on the fly. Similarly, a touch release event will be
+ * generated if touch is not active. Due to this behavior, this function never blocks.
+ * @note The name suggests that it is only for touch/pen event but it can also consume a key event, or anything
+ * that is in the system event queue.
+ * @x_syscall_num `0x1003b`
+ * @param[out] event A simplified event struct that contains only the fields related to input.
+ * @retval 0 No event was consumed.
+ * @retval 1 Event is consumed.
+ */
+extern int GetPenEvent(ui_event_sys_t *event);
+
+/**
+ * @brief Check whether or not there are any pending system UI events.
+ * @x_syscall_num `0x1003c`
+ * @x_void_param
+ * @retval 0 No event available, and touch is not active.
+ * @retval 1 Some event is available, or touch is active.
+ */
+extern int CheckPenEvent(void);
+
+/**
+ * @brief Discard all unconsumed system UI events.
+ * @x_syscall_num `0x1003d`
+ * @x_void
+ */
+extern void ClearPenEvent(void);
+
+/**
+ * @brief Produce a system UI event.
+ * @x_syscall_num `0x1003e`
+ * @param event New system UI event.
+ * @retval true Successfully signaled the subscribers.
+ * @retval false Error occurred when signaling the subscribers.
+ */
+extern int PutSystemEvent(ui_event_sys_t *event);
+
+/**
+ * @brief Consume an event.
+ * @details
+ * This will try to consume the next event from firstly the main event queue, and when the main event queue is empty,
+ * the system event queue.
+ * @note This function will subscribe to the OS event of the UI event subsystem and will block when there is currently
+ * no event to be processed.
+ * @x_syscall_num `0x1003f`
+ * @param[out] event Pointer to a ::ui_event_t struct.
+ * @retval true Some events were consumed and returned.
+ * @retval false No event was consumed and returned.
+ */
+extern bool GetEvent(ui_event_t *event);
+
+/**
+ * @brief Consume an event from the main event queue.
+ * @details
+ * This pops an event from the main event queue only without blocking.
+ *
+ * This is mostly used as a pass in GetEvent() internally.
+ * @x_syscall_num `0x10040`
+ * @param[out] event Event.
+ * @retval true An event has been consumed.
+ * @retval false No event has been consumed.
+ */
+extern bool GetPendEvent(ui_event_t *event);
+
+/**
+ * @brief Set the event type bit mask.
+ * @details
+ * The default is to allow all event types (`0xffffffff`).
+ * If the corresponding bit is 0, the event processing with GetEvent() will stall until the bit is set back to 1.
+ * @x_syscall_num `0x10041`
+ * @param mask New event type bit mask of allowed event types.
+ * @return The old event type bit mask.
+ * @see ui_event_type_e List of event types.
+ */
+extern unsigned int SetEventType(unsigned int mask);
+
+/**
+ * @brief Get the current event type bit mask.
+ * @x_syscall_num `0x10042`
+ * @x_void_param
+ * @return The current event type bit mask.
+ */
+extern unsigned int GetEventType(void);
+
+/**
+ * @brief Produce an event in the main event queue.
+ * @x_syscall_num `0x10043`
+ * @param[in, out] event The event.
+ * @retval true Successfully signaled the subscribers.
+ * @retval false Attempt to produce an invalidated event, or failed to signal the subscribers.
+ */
+extern bool PutEvent(ui_event_t *event);
+
+/**
+ * @brief Produce an event in the main event queue (by values).
+ * @details This zero-allocates a temporary event struct on the stack, sets the user-specified fields and then calls
+ * PutEvent() to produce an event.
+ * @x_syscall_num `0x10045`
+ * @param type Event type.
+ * @param value Raw 32-bit event value.
+ * @param user_data User data pointer.
+ * @x_void_return
+ * @see ui_event_type_e
+ */
+extern void PutEventExt(int type, unsigned int value, void *user_data);
+
+/**
+ * @brief Peek pending events in the main event queue, and also special events.
+ * @x_syscall_num `0x10046`
+ * @param[out] event pointer to a ::ui_event_t struct.
+ * @retval true Some events need to be consumed. This may be a special event that has no data. In that case
+ * event.event_type is cleared.
+ * @retval false No event needs to be consumed.
+ * @see TestKeyEvent Related function that peeks the system events.
+ */
+extern bool TestPendEvent(ui_event_t *event);
+
+/**
+ * @brief Empty all unconsumed events in the main event queue.
+ * @x_syscall_num `0x10047`
+ * @x_void
+ */
+extern void ClearPendEvent(void);
+
+/**
+ * @brief Reset the touch state tracker only.
+ * @x_syscall_num `0x10048`
+ * @x_void
+ */
+extern void ClearPenState(void);
+
+/**
+ * @brief Invalidate an event struct.
+ * @details This function zeros out ui_event_t::event_type and ui_event_t::event_source.
+ * @x_syscall_num `0x10049`
+ * @param[in, out] event Pointer to a ::ui_event_t struct.
+ * @x_void_return
+ */
+extern void ClearEvent(ui_event_t *event);
+
+/**
+ * @brief Discard unprocessed UI events.
+ * @details This drains both the main and the system event queues, the ::UI_EVENT_TYPE_SPECIAL flag, and resets the
+ * touch state tracker.
+ * @note This does not clear flags related to ::UI_EVENT_TYPE_INTERNAL. However a ::UI_EVENT_TYPE_INTERNAL event with
+ * value ::EVENT_INTERNAL_BYPASS will be cleared during the clearing of the system event queue.
  * @x_syscall_num `0x1004a`
  * @x_void
  */
 extern void ClearAllEvents(void);
 
 /**
- * @brief Process pending events.
- * @details Exact purpose of this function is currently unclear.
- * @x_syscall_num `0x10046`
- * @param event pointer to a ::ui_event_t struct.
- * @retval true Some events were processed.
- * @retval false No event was processed.
- * @see TestKeyEvent Related function that specifically processes key events.
- */
-extern bool TestPendEvent(ui_event_t *event);
-
-/**
- * @brief Process pending key events.
- * @details Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses,
- * etc.
+ * @brief Peek pending events in the system event queue.
  * @x_syscall_num `0x1004b`
- * @param event pointer to a ::ui_event_t struct.
+ * @param[out] event pointer to a ::ui_event_t struct.
  * @retval true Some events were processed.
  * @retval false No event was processed.
  * @see TestPendEvent
  */
 extern bool TestKeyEvent(ui_event_t *event);
-
-/**
- * @brief Get event.
- * @details Exact purpose of this function is currently unclear. It may be responsible for setting some fields in
- * the ::ui_event_t struct.
- * @note This function will block when there is currently no event to be processed.
- * @x_syscall_num `0x1003f`
- * @param[out] event Pointer to a ::ui_event_t struct.
- * @retval true Some events were returned.
- * @retval false No event was returned.
- */
-extern bool GetEvent(ui_event_t *event);
-
-/**
- * @brief Invalidate an event struct
- * @details This function zeros out ui_event_t::event_type and ui_event_t::unk20.
- * @x_syscall_num `0x10049`
- * @param[out] event Pointer to a ::ui_event_t struct.
- * @x_void_return
- */
-void ClearEvent(ui_event_t *event);
 
 /**
  * @brief Manually set the state of the SHIFT toggle key.
@@ -143,7 +255,7 @@ void ClearEvent(ui_event_t *event);
  * @return The previous state.
  * @see toggle_key_state_e Valid toggle key states.
  */
-unsigned short SetShiftState(unsigned short new_state);
+extern unsigned short SetShiftState(unsigned short new_state);
 
 /**
  * @brief Manually set the state of the CAPS toggle key.
@@ -152,7 +264,7 @@ unsigned short SetShiftState(unsigned short new_state);
  * @return The previous state.
  * @see toggle_key_state_e Valid toggle key states.
  */
-unsigned short SetCapsState(unsigned short new_state);
+extern unsigned short SetCapsState(unsigned short new_state);
 
 /**
  * @brief Get the state of the SHIFT toggle key.
@@ -161,7 +273,7 @@ unsigned short SetCapsState(unsigned short new_state);
  * @return The current state.
  * @see toggle_key_state_e Valid toggle key states.
  */
-unsigned short GetShiftState(void);
+extern unsigned short GetShiftState(void);
 
 /**
  * @brief Get the state of the SHIFT toggle key.
@@ -170,7 +282,7 @@ unsigned short GetShiftState(void);
  * @return The current state.
  * @see toggle_key_state_e Valid toggle key states.
  */
-unsigned short GetCapsState(void);
+extern unsigned short GetCapsState(void);
 
 #ifdef __cplusplus
 } // extern "C"

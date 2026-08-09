@@ -614,10 +614,62 @@ enum ui_event_type_e {
      */
     UI_EVENT_TYPE_KEY = 16,
     /**
+     * @brief Special event. Bypasses the queues and sets a flag instead. Exact purpose is unclear.
+     */
+    UI_EVENT_TYPE_SPECIAL = 32,
+    /**
+     * @brief Internal system event. Exact purpose is unclear.
+     * @see ui_event_internal_e
+     */
+    UI_EVENT_TYPE_INTERNAL = 0x4000,
+    /**
      * @brief Key(s) released.
      * @details Available on S3C and TCC boards.
      */
     UI_EVENT_TYPE_KEY_UP = 0x100000,
+};
+
+/**
+ * @brief Internal system UI event types.
+ * @details
+ * These values may go into the ui_event_base_s::value field when ui_event_base_s::event_type is ::UI_EVENT_TYPE_INTERNAL.
+ *
+ * Unlisted values behave similarly to ::UI_EVENT_INTERNAL_FLAG.
+ */
+enum ui_event_internal_e {
+    /**
+     * @brief Set a flag but do not queue the event.
+     */
+    UI_EVENT_INTERNAL_FLAG = 0,
+    /**
+     * @brief Request GetEvent() to do a low battery check.
+     */
+    UI_EVENT_INTERNAL_BATTERY_CHECK_REQUEST = 1,
+    /**
+     * @brief Queue this event normally into the system event queue. Exact purpose is unclear.
+     */
+    UI_EVENT_INTERNAL_BYPASS = 2,
+};
+
+/**
+ * @brief Event source.
+ * @details Describes how the event is produced and where it is being produced.
+ * @note This can be unreliable sometimes as certain functions like PutEvent() have rules that bypass this value.
+ */
+enum ui_event_source_e {
+    /**
+     * @brief Event is a system event (from the system event queue).
+     */
+    UI_EVENT_SOURCE_SYSTEM = 0,
+    /**
+     * @brief Event is a message (produced via SendMessage()).
+     */
+    UI_EVENT_SOURCE_SEND_MESSAGE = 1,
+    /**
+     * @brief Event is a regular event and not a ::UI_EVENT_TYPE_KEY or ::UI_EVENT_TYPE_SPECIAL (from the main event
+     * queue).
+     */
+    UI_EVENT_SOURCE_PUT_EVENT = 2,
 };
 
 /**
@@ -687,6 +739,7 @@ struct lcd_base_s;
 struct lcd_thread_safe_s;
 struct ui_event_base_s;
 struct ui_event_prime_s;
+struct ui_event_input_s;
 struct ui_message_s;
 struct ui_component_s;
 struct ui_multipress_event_s;
@@ -701,6 +754,7 @@ typedef struct lcd_base_s lcd_base_t;
 typedef struct lcd_thread_safe_s lcd_thread_safe_t;
 typedef struct ui_event_base_s ui_event_base_t;
 typedef struct ui_event_prime_s ui_event_prime_t;
+typedef struct ui_event_input_s ui_event_sys_t;
 typedef struct ui_message_s ui_message_t;
 typedef struct ui_component_s ui_component_t;
 typedef struct ui_multipress_event_s ui_multipress_event_t;
@@ -1076,8 +1130,12 @@ struct ui_event_base_s {
      */
     int event_type; // 4-8 16: key (?).
     union {
+        /**
+         * @brief Raw value of the event.
+         */
+        unsigned int value;
         struct {
-            /** 
+            /**
              * @brief Keycode for the first pressed key.
              * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
              */
@@ -1124,11 +1182,16 @@ struct ui_event_base_s {
      */
     void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
     /**
-     * @brief Unknown.
-     * @details Seems to be always 0, although ClearEvent() explicitly sets this to 0. Maybe used on event types other
-     * than touch and key press.
+     * @brief Seems to be tied to where the event comes from.
+     * @details Set to 1 in SendMessage() events, 2 in PutEvent() events that is of neither the ::UI_EVENT_TYPE_KEY
+     * type or the `0x20` type. Otherwise it would usually be 0.
+     * @see ui_event_source_e
      */
-    void *unk20; // 20-24 seems to be always 0. Unused?
+    unsigned short event_source; // 20-22
+    /**
+     * @brief Unknown. Seems unused.
+     */
+    unsigned short unk22; // 22-24
 };
 
 /**
@@ -1148,8 +1211,12 @@ struct ui_event_prime_s {
      */
     int event_type; // 4-8 16: key (?).
     union {
+        /**
+         * @brief Raw value of the event.
+         */
+        unsigned int value;
         struct {
-            /** 
+            /**
              * @brief Keycode for the first pressed key.
              * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
              */
@@ -1195,11 +1262,16 @@ struct ui_event_prime_s {
      */
     void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
     /**
-     * @brief Unknown.
-     * @details Seems to be always 0, although ClearEvent() explicitly sets this to 0. Maybe used on event types other
-     * than touch and key press.
+     * @brief Seems to be tied to where the event comes from.
+     * @details Set to 1 in SendMessage() events, 2 in PutEvent() events that is of neither the ::UI_EVENT_TYPE_KEY
+     * type or the `0x20` type. Otherwise it would usually be 0.
+     * @see ui_event_source_e
      */
-    void *unk20; // 20-24 seems to be always 0. Unused?
+    unsigned short event_source; // 20-22
+    /**
+     * @brief Unknown. Seems unused.
+     */
+    unsigned short unk22; // 22-24
     /**
      * @brief Number of valid multipress events available for processing.
      */
@@ -1212,6 +1284,53 @@ struct ui_event_prime_s {
      * @brief The multipress events.
      */
     ui_multipress_event_t multipress_events[8]; // 28-124
+};
+
+struct ui_event_input_s {
+    unsigned int unk_0x0;
+    /**
+     * @brief The type of event (0x10 being key event)
+     * @see ui_event_type_e List of event types.
+     */
+    int event_type;
+    union {
+        /**
+         * @brief Raw value of the event.
+         */
+        unsigned int value;
+        struct {
+            /**
+             * @brief Keycode for the first pressed key.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
+             */
+            unsigned short key_code0;
+            /**
+             * @brief Keycode for the second pressed key.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
+             * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
+             * some devices may lack support of simultaneous key presses.
+             */
+            unsigned short key_code1;
+        };
+        struct {
+            /**
+             * @brief The X coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            unsigned short touch_x;
+            /**
+             * @brief The Y coordinate of where the touch event is located, in pixels.
+             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
+             */
+            unsigned short touch_y;
+        };
+    };
+    /**
+     * @brief User data. Exact content vary depending on the event type.
+     */
+    void *user_data;
 };
 
 /**
