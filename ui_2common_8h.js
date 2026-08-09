@@ -11,6 +11,7 @@ var ui_2common_8h =
     [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
     [ "ui_event_base_s", "structui__event__base__s.html", "structui__event__base__s" ],
     [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
+    [ "ui_event_input_s", "structui__event__input__s.html", "structui__event__input__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "RGB_FROM_U8", "ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf", null ],
@@ -262,12 +263,24 @@ var ui_2common_8h =
       [ "DASH_24_8", "ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cba2886105d82f41b62325f1553fd7e34ca", null ],
       [ "DASH_CUSTOM", "ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9", null ]
     ] ],
+    [ "ui_event_internal_e", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c", [
+      [ "UI_EVENT_INTERNAL_FLAG", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98", null ],
+      [ "UI_EVENT_INTERNAL_BATTERY_CHECK_REQUEST", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67ca57be2af4f02f321d5917eb1f9e22e697", null ],
+      [ "UI_EVENT_INTERNAL_BYPASS", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67ca8b139402eeedd18b88d44991f1993ba2", null ]
+    ] ],
+    [ "ui_event_source_e", "ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9", [
+      [ "UI_EVENT_SOURCE_SYSTEM", "ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9a9a5271172de52af51e8f74fc596f9b48", null ],
+      [ "UI_EVENT_SOURCE_SEND_MESSAGE", "ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729", null ],
+      [ "UI_EVENT_SOURCE_PUT_EVENT", "ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9adc2e74feb80038125b0ea6a6a8e6da83", null ]
+    ] ],
     [ "ui_event_type_e", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f", [
       [ "UI_EVENT_TYPE_INVALID", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5548da93ad18a3bf7e02470f3f0c12b9", null ],
       [ "UI_EVENT_TYPE_TOUCH_BEGIN", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf", null ],
       [ "UI_EVENT_TYPE_TOUCH_MOVE", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741", null ],
       [ "UI_EVENT_TYPE_TOUCH_END", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748", null ],
       [ "UI_EVENT_TYPE_KEY", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86", null ],
+      [ "UI_EVENT_TYPE_SPECIAL", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477", null ],
+      [ "UI_EVENT_TYPE_INTERNAL", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e", null ],
       [ "UI_EVENT_TYPE_KEY_UP", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48", null ]
     ] ]
 ];

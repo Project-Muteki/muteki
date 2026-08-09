@@ -123,6 +123,10 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a7b143b7a54081fda65c893362e7d6e54" id="r_a7b143b7a54081fda65c893362e7d6e54"><td class="memItemLeft" ><a id="a7b143b7a54081fda65c893362e7d6e54" name="a7b143b7a54081fda65c893362e7d6e54"></a>
 union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cb79cf24c98ac3a8956774beb2fea1" id="r_a26cb79cf24c98ac3a8956774beb2fea1"><td class="memItemLeft" >
+&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>value</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a26cb79cf24c98ac3a8956774beb2fea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw value of the event. <br /></td></tr>
+<tr class="separator:a26cb79cf24c98ac3a8956774beb2fea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeafb2b1c0ae846b82c66bb667086203" id="r_aaeafb2b1c0ae846b82c66bb667086203"><td class="memItemLeft" ><a id="aaeafb2b1c0ae846b82c66bb667086203" name="aaeafb2b1c0ae846b82c66bb667086203"></a>
 &#160;&#160;&#160;struct {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,14 +165,35 @@ union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memitem:af5f520b1307958f7d6f904787372049f" id="r_af5f520b1307958f7d6f904787372049f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__base__s.html#af5f520b1307958f7d6f904787372049f">unk16</a></td></tr>
 <tr class="memdesc:af5f520b1307958f7d6f904787372049f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown.  <br /></td></tr>
 <tr class="separator:af5f520b1307958f7d6f904787372049f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6369ea883a5228a5b67c2ca75721d3bc" id="r_a6369ea883a5228a5b67c2ca75721d3bc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__base__s.html#a6369ea883a5228a5b67c2ca75721d3bc">unk20</a></td></tr>
-<tr class="memdesc:a6369ea883a5228a5b67c2ca75721d3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown.  <br /></td></tr>
-<tr class="separator:a6369ea883a5228a5b67c2ca75721d3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d75100ff0228e977f9ff911428a56e" id="r_a20d75100ff0228e977f9ff911428a56e"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__base__s.html#a20d75100ff0228e977f9ff911428a56e">event_source</a></td></tr>
+<tr class="memdesc:a20d75100ff0228e977f9ff911428a56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seems to be tied to where the event comes from.  <br /></td></tr>
+<tr class="separator:a20d75100ff0228e977f9ff911428a56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53869d0e4916c6836f98c76b20f9cadd" id="r_a53869d0e4916c6836f98c76b20f9cadd"><td class="memItemLeft" align="right" valign="top"><a id="a53869d0e4916c6836f98c76b20f9cadd" name="a53869d0e4916c6836f98c76b20f9cadd"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk22</b></td></tr>
+<tr class="memdesc:a53869d0e4916c6836f98c76b20f9cadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Seems unused. <br /></td></tr>
+<tr class="separator:a53869d0e4916c6836f98c76b20f9cadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure for low level UI events. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structui__event__prime__s.html" title="Structure for low level UI events (Prime G1 extension).">ui_event_prime_s</a> HP Prime G1's extension of this struct. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a20d75100ff0228e977f9ff911428a56e" name="a20d75100ff0228e977f9ff911428a56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d75100ff0228e977f9ff911428a56e">&#9670;&#160;</a></span>event_source</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short ui_event_base_s::event_source</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seems to be tied to where the event comes from. </p>
+<p>Set to 1 in SendMessage() events, 2 in <a class="el" href="event_8h.html#a0dfa96c341f7f5141934baa765b00e25" title="Produce an event in the main event queue.">PutEvent()</a> events that is of neither the <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a> type or the <code>0x20</code> type. Otherwise it would usually be 0. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9" title="Event source.">ui_event_source_e</a> </dd></dl>
+
+</div>
+</div>
 <a id="af4cabc2f81242d43a634af04ceb13829" name="af4cabc2f81242d43a634af04ceb13829"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4cabc2f81242d43a634af04ceb13829">&#9670;&#160;</a></span>event_type</h2>
 
@@ -302,23 +327,6 @@ union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 
 <p>Unknown. </p>
 <p>Maybe used on event types other than touch and key press. </p>
-
-</div>
-</div>
-<a id="a6369ea883a5228a5b67c2ca75721d3bc" name="a6369ea883a5228a5b67c2ca75721d3bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6369ea883a5228a5b67c2ca75721d3bc">&#9670;&#160;</a></span>unk20</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* ui_event_base_s::unk20</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unknown. </p>
-<p>Seems to be always 0, although <a class="el" href="event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7" title="Invalidate an event struct.">ClearEvent()</a> explicitly sets this to 0. Maybe used on event types other than touch and key press. </p>
 
 </div>
 </div>

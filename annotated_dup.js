@@ -42,6 +42,7 @@ var annotated_dup =
     [ "threading_waitable_t", "structthreading__waitable__t.html", "structthreading__waitable__t" ],
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "ui_event_base_s", "structui__event__base__s.html", "structui__event__base__s" ],
+    [ "ui_event_input_s", "structui__event__input__s.html", "structui__event__input__s" ],
     [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],

@@ -138,21 +138,54 @@ Functions</h2></td></tr>
 <tr class="memitem:aadb561bb43ac9ff3ee25fa3751ae9c83" id="r_aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#aadb561bb43ac9ff3ee25fa3751ae9c83">SetSysKeyState</a> (const <a class="el" href="structkey__press__event__config__t.html">key_press_event_config_t</a> *config)</td></tr>
 <tr class="memdesc:aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure key event generator.  <br /></td></tr>
 <tr class="separator:aadb561bb43ac9ff3ee25fa3751ae9c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b6acd1a254e75d168cd906e5cefa542" id="r_a5b6acd1a254e75d168cd906e5cefa542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a5b6acd1a254e75d168cd906e5cefa542">ClearAllEvents</a> (void)</td></tr>
-<tr class="memdesc:a5b6acd1a254e75d168cd906e5cefa542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all unprocessed UI events.  <br /></td></tr>
-<tr class="separator:a5b6acd1a254e75d168cd906e5cefa542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcc9c2898ac3580bcdc8e4557b794f9c" id="r_adcc9c2898ac3580bcdc8e4557b794f9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c">TestPendEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
-<tr class="memdesc:adcc9c2898ac3580bcdc8e4557b794f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process pending events.  <br /></td></tr>
-<tr class="separator:adcc9c2898ac3580bcdc8e4557b794f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03c5ca44c93c14b5360bab9555abe754" id="r_a03c5ca44c93c14b5360bab9555abe754"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a03c5ca44c93c14b5360bab9555abe754">TestKeyEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
-<tr class="memdesc:a03c5ca44c93c14b5360bab9555abe754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process pending key events.  <br /></td></tr>
-<tr class="separator:a03c5ca44c93c14b5360bab9555abe754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f671948bb71c03dd670e3a25a96cdb2" id="r_a1f671948bb71c03dd670e3a25a96cdb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a1f671948bb71c03dd670e3a25a96cdb2">GetPenEvent</a> (<a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *event)</td></tr>
+<tr class="memdesc:a1f671948bb71c03dd670e3a25a96cdb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consume event from the system UI event queue (mostly for touch).  <br /></td></tr>
+<tr class="separator:a1f671948bb71c03dd670e3a25a96cdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc297693741ae1de21b339600c90f1f" id="r_a0fc297693741ae1de21b339600c90f1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a0fc297693741ae1de21b339600c90f1f">CheckPenEvent</a> (void)</td></tr>
+<tr class="memdesc:a0fc297693741ae1de21b339600c90f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether or not there are any pending system UI events.  <br /></td></tr>
+<tr class="separator:a0fc297693741ae1de21b339600c90f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e9bd668e65c35f472baa11927611e7" id="r_ab0e9bd668e65c35f472baa11927611e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ab0e9bd668e65c35f472baa11927611e7">ClearPenEvent</a> (void)</td></tr>
+<tr class="memdesc:ab0e9bd668e65c35f472baa11927611e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard all unconsumed system UI events.  <br /></td></tr>
+<tr class="separator:ab0e9bd668e65c35f472baa11927611e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429a689cf8a4d534f491775f454b3cb8" id="r_a429a689cf8a4d534f491775f454b3cb8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a429a689cf8a4d534f491775f454b3cb8">PutSystemEvent</a> (<a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *event)</td></tr>
+<tr class="memdesc:a429a689cf8a4d534f491775f454b3cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce a system UI event.  <br /></td></tr>
+<tr class="separator:a429a689cf8a4d534f491775f454b3cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a41667de6a37b2a6b2c6fa1020197de" id="r_a9a41667de6a37b2a6b2c6fa1020197de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de">GetEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
-<tr class="memdesc:a9a41667de6a37b2a6b2c6fa1020197de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get event.  <br /></td></tr>
+<tr class="memdesc:a9a41667de6a37b2a6b2c6fa1020197de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consume an event.  <br /></td></tr>
 <tr class="separator:a9a41667de6a37b2a6b2c6fa1020197de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0dfb104ea3883580f511b4b4d1eb8bf" id="r_ac0dfb104ea3883580f511b4b4d1eb8bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ac0dfb104ea3883580f511b4b4d1eb8bf">GetPendEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:ac0dfb104ea3883580f511b4b4d1eb8bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consume an event from the main event queue.  <br /></td></tr>
+<tr class="separator:ac0dfb104ea3883580f511b4b4d1eb8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85be1711e5aa15f610525a9cd34552b3" id="r_a85be1711e5aa15f610525a9cd34552b3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a85be1711e5aa15f610525a9cd34552b3">SetEventType</a> (unsigned int mask)</td></tr>
+<tr class="memdesc:a85be1711e5aa15f610525a9cd34552b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the event type bit mask.  <br /></td></tr>
+<tr class="separator:a85be1711e5aa15f610525a9cd34552b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f1232f560ddd62e320726955b2ae79" id="r_a41f1232f560ddd62e320726955b2ae79"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a41f1232f560ddd62e320726955b2ae79">GetEventType</a> (void)</td></tr>
+<tr class="memdesc:a41f1232f560ddd62e320726955b2ae79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current event type bit mask.  <br /></td></tr>
+<tr class="separator:a41f1232f560ddd62e320726955b2ae79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfa96c341f7f5141934baa765b00e25" id="r_a0dfa96c341f7f5141934baa765b00e25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a0dfa96c341f7f5141934baa765b00e25">PutEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:a0dfa96c341f7f5141934baa765b00e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce an event in the main event queue.  <br /></td></tr>
+<tr class="separator:a0dfa96c341f7f5141934baa765b00e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0a70f0744bc1fc712cea4050d40893" id="r_a3a0a70f0744bc1fc712cea4050d40893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a3a0a70f0744bc1fc712cea4050d40893">PutEventExt</a> (int type, unsigned int value, void *user_data)</td></tr>
+<tr class="memdesc:a3a0a70f0744bc1fc712cea4050d40893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce an event in the main event queue (by values).  <br /></td></tr>
+<tr class="separator:a3a0a70f0744bc1fc712cea4050d40893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc9c2898ac3580bcdc8e4557b794f9c" id="r_adcc9c2898ac3580bcdc8e4557b794f9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c">TestPendEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:adcc9c2898ac3580bcdc8e4557b794f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peek pending events in the main event queue, and also special events.  <br /></td></tr>
+<tr class="separator:adcc9c2898ac3580bcdc8e4557b794f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa88e0517182235e0e2d35d07c750d7" id="r_aefa88e0517182235e0e2d35d07c750d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#aefa88e0517182235e0e2d35d07c750d7">ClearPendEvent</a> (void)</td></tr>
+<tr class="memdesc:aefa88e0517182235e0e2d35d07c750d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty all unconsumed events in the main event queue.  <br /></td></tr>
+<tr class="separator:aefa88e0517182235e0e2d35d07c750d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d1907726762030f89d18dfb703c288b" id="r_a3d1907726762030f89d18dfb703c288b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a3d1907726762030f89d18dfb703c288b">ClearPenState</a> (void)</td></tr>
+<tr class="memdesc:a3d1907726762030f89d18dfb703c288b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the touch state tracker only.  <br /></td></tr>
+<tr class="separator:a3d1907726762030f89d18dfb703c288b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a136666b9c0c1ba3629a1e511764ee2a7" id="r_a136666b9c0c1ba3629a1e511764ee2a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a136666b9c0c1ba3629a1e511764ee2a7">ClearEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
 <tr class="memdesc:a136666b9c0c1ba3629a1e511764ee2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate an event struct.  <br /></td></tr>
 <tr class="separator:a136666b9c0c1ba3629a1e511764ee2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b6acd1a254e75d168cd906e5cefa542" id="r_a5b6acd1a254e75d168cd906e5cefa542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a5b6acd1a254e75d168cd906e5cefa542">ClearAllEvents</a> (void)</td></tr>
+<tr class="memdesc:a5b6acd1a254e75d168cd906e5cefa542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard unprocessed UI events.  <br /></td></tr>
+<tr class="separator:a5b6acd1a254e75d168cd906e5cefa542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c5ca44c93c14b5360bab9555abe754" id="r_a03c5ca44c93c14b5360bab9555abe754"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#a03c5ca44c93c14b5360bab9555abe754">TestKeyEvent</a> (<a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:a03c5ca44c93c14b5360bab9555abe754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peek pending events in the system event queue.  <br /></td></tr>
+<tr class="separator:a03c5ca44c93c14b5360bab9555abe754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefcce9b4e5bdb05a2cef5089686823df" id="r_aefcce9b4e5bdb05a2cef5089686823df"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#aefcce9b4e5bdb05a2cef5089686823df">SetShiftState</a> (unsigned short new_state)</td></tr>
 <tr class="memdesc:aefcce9b4e5bdb05a2cef5089686823df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manually set the state of the SHIFT toggle key.  <br /></td></tr>
 <tr class="separator:aefcce9b4e5bdb05a2cef5089686823df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +230,43 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a0fc297693741ae1de21b339600c90f1f" name="a0fc297693741ae1de21b339600c90f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc297693741ae1de21b339600c90f1f">&#9670;&#160;</a></span>CheckPenEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CheckPenEvent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check whether or not there are any pending system UI events. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003c</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>No event available, and touch is not active. </td></tr>
+    <tr><td class="paramname">1</td><td>Some event is available, or touch is active. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a5b6acd1a254e75d168cd906e5cefa542" name="a5b6acd1a254e75d168cd906e5cefa542"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b6acd1a254e75d168cd906e5cefa542">&#9670;&#160;</a></span>ClearAllEvents()</h2>
 
@@ -221,7 +291,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Discard all unprocessed UI events. </p>
+<p>Discard unprocessed UI events. </p>
+<p>This drains both the main and the system event queues, the <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477" title="Special event. Bypasses the queues and sets a flag instead. Exact purpose is unclear.">UI_EVENT_TYPE_SPECIAL</a> flag, and resets the touch state tracker. </p><dl class="section note"><dt>Note</dt><dd>This does not clear flags related to <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e" title="Internal system event. Exact purpose is unclear.">UI_EVENT_TYPE_INTERNAL</a>. However a <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e" title="Internal system event. Exact purpose is unclear.">UI_EVENT_TYPE_INTERNAL</a> event with value ::EVENT_INTERNAL_BYPASS will be cleared during the clearing of the system event queue. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1004a</code></dd></dl>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
@@ -234,6 +305,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ClearEvent </td>
@@ -243,17 +317,118 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Invalidate an event struct. </p>
-<p>This function zeros out <a class="el" href="structui__event__base__s.html#af4cabc2f81242d43a634af04ceb13829" title="The type of event (0x10 being key event)">ui_event_t::event_type</a> and <a class="el" href="structui__event__base__s.html#a6369ea883a5228a5b67c2ca75721d3bc" title="Unknown.">ui_event_t::unk20</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10049</code> </dd></dl>
+<p>This function zeros out <a class="el" href="structui__event__base__s.html#af4cabc2f81242d43a634af04ceb13829" title="The type of event (0x10 being key event)">ui_event_t::event_type</a> and <a class="el" href="structui__event__base__s.html#a20d75100ff0228e977f9ff911428a56e" title="Seems to be tied to where the event comes from.">ui_event_t::event_source</a>. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10049</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>Pointer to a ui_event_t struct.</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">event</td><td>Pointer to a ui_event_t struct.</td></tr>
   </table>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="aefa88e0517182235e0e2d35d07c750d7" name="aefa88e0517182235e0e2d35d07c750d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa88e0517182235e0e2d35d07c750d7">&#9670;&#160;</a></span>ClearPendEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearPendEvent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Empty all unconsumed events in the main event queue. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10047</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="ab0e9bd668e65c35f472baa11927611e7" name="ab0e9bd668e65c35f472baa11927611e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e9bd668e65c35f472baa11927611e7">&#9670;&#160;</a></span>ClearPenEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearPenEvent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Discard all unconsumed system UI events. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003d</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="a3d1907726762030f89d18dfb703c288b" name="a3d1907726762030f89d18dfb703c288b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d1907726762030f89d18dfb703c288b">&#9670;&#160;</a></span>ClearPenState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearPenState </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the touch state tracker only. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10048</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
 
 </div>
@@ -263,6 +438,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned short GetCapsState </td>
@@ -272,6 +450,11 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the state of the SHIFT toggle key. </p>
@@ -306,8 +489,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get event. </p>
-<p>Exact purpose of this function is currently unclear. It may be responsible for setting some fields in the ui_event_t struct. </p><dl class="section note"><dt>Note</dt><dd>This function will block when there is currently no event to be processed. </dd></dl>
+<p>Consume an event. </p>
+<p>This will try to consume the next event from firstly the main event queue, and when the main event queue is empty, the system event queue. </p><dl class="section note"><dt>Note</dt><dd>This function will subscribe to the OS event of the UI event subsystem and will block when there is currently no event to be processed. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003f</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -317,8 +500,125 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>Some events were returned. </td></tr>
-    <tr><td class="paramname">false</td><td>No event was returned. </td></tr>
+    <tr><td class="paramname">true</td><td>Some events were consumed and returned. </td></tr>
+    <tr><td class="paramname">false</td><td>No event was consumed and returned. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a41f1232f560ddd62e320726955b2ae79" name="a41f1232f560ddd62e320726955b2ae79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f1232f560ddd62e320726955b2ae79">&#9670;&#160;</a></span>GetEventType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int GetEventType </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current event type bit mask. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10042</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The current event type bit mask. </dd></dl>
+
+</div>
+</div>
+<a id="ac0dfb104ea3883580f511b4b4d1eb8bf" name="ac0dfb104ea3883580f511b4b4d1eb8bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0dfb104ea3883580f511b4b4d1eb8bf">&#9670;&#160;</a></span>GetPendEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetPendEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__event__base__s.html">ui_event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consume an event from the main event queue. </p>
+<p>This pops an event from the main event queue only without blocking.</p>
+<p>This is mostly used as a pass in <a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de" title="Consume an event.">GetEvent()</a> internally. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10040</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>Event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>An event has been consumed. </td></tr>
+    <tr><td class="paramname">false</td><td>No event has been consumed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1f671948bb71c03dd670e3a25a96cdb2" name="a1f671948bb71c03dd670e3a25a96cdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f671948bb71c03dd670e3a25a96cdb2">&#9670;&#160;</a></span>GetPenEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPenEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consume event from the system UI event queue (mostly for touch). </p>
+<p>If touch is active, this will generate a touch hold event on the fly. Similarly, a touch release event will be generated if touch is not active. Due to this behavior, this function never blocks. </p><dl class="section note"><dt>Note</dt><dd>The name suggests that it is only for touch/pen event but it can also consume a key event, or anything that is in the system event queue. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>A simplified event struct that contains only the fields related to input. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>No event was consumed. </td></tr>
+    <tr><td class="paramname">1</td><td>Event is consumed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -330,6 +630,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned short GetShiftState </td>
@@ -339,6 +642,11 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the state of the SHIFT toggle key. </p>
@@ -354,6 +662,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GetSysKeyState </td>
@@ -363,6 +674,11 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Read current configuration of key event generator. </p>
@@ -378,11 +694,153 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0dfa96c341f7f5141934baa765b00e25" name="a0dfa96c341f7f5141934baa765b00e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dfa96c341f7f5141934baa765b00e25">&#9670;&#160;</a></span>PutEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PutEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__event__base__s.html">ui_event_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produce an event in the main event queue. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10043</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">event</td><td>The event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Successfully signaled the subscribers. </td></tr>
+    <tr><td class="paramname">false</td><td>Attempt to produce an invalidated event, or failed to signal the subscribers. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a0a70f0744bc1fc712cea4050d40893" name="a3a0a70f0744bc1fc712cea4050d40893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0a70f0744bc1fc712cea4050d40893">&#9670;&#160;</a></span>PutEventExt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PutEventExt </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produce an event in the main event queue (by values). </p>
+<p>This zero-allocates a temporary event struct on the stack, sets the user-specified fields and then calls <a class="el" href="event_8h.html#a0dfa96c341f7f5141934baa765b00e25" title="Produce an event in the main event queue.">PutEvent()</a> to produce an event. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10045</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Event type. </td></tr>
+    <tr><td class="paramname">value</td><td>Raw 32-bit event value. </td></tr>
+    <tr><td class="paramname">user_data</td><td>User data pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f" title="UI event types.">ui_event_type_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="a429a689cf8a4d534f491775f454b3cb8" name="a429a689cf8a4d534f491775f454b3cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a429a689cf8a4d534f491775f454b3cb8">&#9670;&#160;</a></span>PutSystemEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PutSystemEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__event__input__s.html">ui_event_sys_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Produce a system UI event. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1003e</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>New system UI event. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Successfully signaled the subscribers. </td></tr>
+    <tr><td class="paramname">false</td><td>Error occurred when signaling the subscribers. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a7c2d68be19f405ee8291eeb67703ff5d" name="a7c2d68be19f405ee8291eeb67703ff5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c2d68be19f405ee8291eeb67703ff5d">&#9670;&#160;</a></span>SetCapsState()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned short SetCapsState </td>
@@ -392,6 +850,11 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Manually set the state of the CAPS toggle key. </p>
@@ -407,11 +870,51 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a85be1711e5aa15f610525a9cd34552b3" name="a85be1711e5aa15f610525a9cd34552b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85be1711e5aa15f610525a9cd34552b3">&#9670;&#160;</a></span>SetEventType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int SetEventType </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the event type bit mask. </p>
+<p>The default is to allow all event types (<code>0xffffffff</code>). If the corresponding bit is 0, the event processing with <a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de" title="Consume an event.">GetEvent()</a> will stall until the bit is set back to 1. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10041</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>New event type bit mask of allowed event types. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The old event type bit mask. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f" title="UI event types.">ui_event_type_e</a> List of event types. </dd></dl>
+
+</div>
+</div>
 <a id="aefcce9b4e5bdb05a2cef5089686823df" name="aefcce9b4e5bdb05a2cef5089686823df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefcce9b4e5bdb05a2cef5089686823df">&#9670;&#160;</a></span>SetShiftState()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">unsigned short SetShiftState </td>
@@ -421,6 +924,11 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Manually set the state of the SHIFT toggle key. </p>
@@ -441,6 +949,9 @@ Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SetSysKeyState </td>
@@ -450,6 +961,11 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Configure key event generator. </p>
@@ -489,11 +1005,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Process pending key events. </p>
-<p>Exact purpose of this function is currently unclear. It is at least responsible for beeping on key presses, etc. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1004b</code> </dd></dl>
+<p>Peek pending events in the system event queue. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1004b</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>pointer to a ui_event_t struct. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>pointer to a ui_event_t struct. </td></tr>
   </table>
   </dd>
 </dl>
@@ -504,7 +1020,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c" title="Process pending events.">TestPendEvent</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#adcc9c2898ac3580bcdc8e4557b794f9c" title="Peek pending events in the main event queue, and also special events.">TestPendEvent</a> </dd></dl>
 
 </div>
 </div>
@@ -532,22 +1048,22 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Process pending events. </p>
-<p>Exact purpose of this function is currently unclear. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10046</code> </dd></dl>
+<p>Peek pending events in the main event queue, and also special events. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10046</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>pointer to a ui_event_t struct. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">event</td><td>pointer to a ui_event_t struct. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>Some events were processed. </td></tr>
-    <tr><td class="paramname">false</td><td>No event was processed. </td></tr>
+    <tr><td class="paramname">true</td><td>Some events need to be consumed. This may be a special event that has no data. In that case event.event_type is cleared. </td></tr>
+    <tr><td class="paramname">false</td><td>No event needs to be consumed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a03c5ca44c93c14b5360bab9555abe754" title="Process pending key events.">TestKeyEvent</a> Related function that specifically processes key events. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="event_8h.html#a03c5ca44c93c14b5360bab9555abe754" title="Peek pending events in the system event queue.">TestKeyEvent</a> Related function that peeks the system events. </dd></dl>
 
 </div>
 </div>

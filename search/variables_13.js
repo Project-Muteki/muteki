@@ -2,7 +2,7 @@ var searchData=
 [
   ['unk0_0',['unk0',['../structfind__context__t.html#a8b2f85001489e5d26a3815c2795e75cf',1,'find_context_t']]],
   ['unk16_1',['unk16',['../structui__event__base__s.html#af5f520b1307958f7d6f904787372049f',1,'ui_event_base_s::unk16'],['../structui__event__prime__s.html#a9b425884886d0de4ead6f9ed0976cf9f',1,'ui_event_prime_s::unk16']]],
-  ['unk20_2',['unk20',['../structui__event__base__s.html#a6369ea883a5228a5b67c2ca75721d3bc',1,'ui_event_base_s::unk20'],['../structui__event__prime__s.html#ada38d94f827c920a1915c7e88c32231d',1,'ui_event_prime_s::unk20']]],
+  ['unk22_2',['unk22',['../structui__event__base__s.html#a53869d0e4916c6836f98c76b20f9cadd',1,'ui_event_base_s::unk22'],['../structui__event__prime__s.html#af6a04ae2ca6611a106a1c86ecac1c604',1,'ui_event_prime_s::unk22']]],
   ['unk4_3',['unk4',['../structfind__context__t.html#a5449aedbdf508068e50bf806216ede0b',1,'find_context_t']]],
   ['unk_5f0x0_4',['unk_0x0',['../structpcm__config__s.html#a6d5eb6de47d268f820d2f889dfe45073',1,'pcm_config_s::unk_0x0'],['../structloader__cart__descriptor__s.html#aa347f7d7f067bafa84418b8cbc061a6d',1,'loader_cart_descriptor_s::unk_0x0'],['../structlcd__draw__s.html#a4118dfb3e3a69e107a2444bfadd58e3c',1,'lcd_draw_s::unk_0x0'],['../structlcd__lock__s.html#a39243c6395324c6ae299b86125547cf5',1,'lcd_lock_s::unk_0x0']]],
   ['unk_5f0x10_5',['unk_0x10',['../structloader__cart__descriptor__s.html#a55923917575a50d202c2832ff8a9b610',1,'loader_cart_descriptor_s::unk_0x10'],['../structlcd__draw__s.html#aa6fcdc6c482ea7e85a676619ec488f90',1,'lcd_draw_s::unk_0x10']]],
@@ -54,5 +54,6 @@ var searchData=
   ['unused_5f0x4_51',['unused_0x4',['../structloader__applet__info__s.html#a2003ae96a89a80b7cec6c5e3751ba492',1,'loader_applet_info_s']]],
   ['usb_5fdata_52',['usb_data',['../structui__event__base__s.html#af812bdcd50769ca5b7c09ec4e3ad58d8',1,'ui_event_base_s::usb_data'],['../structui__event__prime__s.html#aa440213d307e0789aec1522142cd7308',1,'ui_event_prime_s::usb_data']]],
   ['used_53',['used',['../structfs__stat__t.html#a96946b8114ed6bc26aed76733b82b703',1,'fs_stat_t']]],
-  ['used_5fkb_54',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]]
+  ['used_5fkb_54',['used_kb',['../structfs__stat__t.html#abb1cfe3d6ce071d624477adde47a223a',1,'fs_stat_t']]],
+  ['user_5fdata_55',['user_data',['../structui__event__input__s.html#abda6b51d1d6726e5824e5b242484e40b',1,'ui_event_input_s']]]
 ];

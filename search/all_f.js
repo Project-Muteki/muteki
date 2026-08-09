@@ -41,5 +41,8 @@ var searchData=
   ['programisrunninga_38',['ProgramIsRunningA',['../loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5',1,'loader.h']]],
   ['programisrunningw_39',['ProgramIsRunningW',['../loader_8h.html#acef8c80267888eadf86ee52e625e6534',1,'loader.h']]],
   ['push_5fidx_40',['push_idx',['../structmessage__queue__nonatomic__t.html#a3b18561837a40feb2770f4652ad8fe28',1,'message_queue_nonatomic_t']]],
-  ['putimage_41',['PutImage',['../canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'canvas.h']]]
+  ['putevent_41',['PutEvent',['../event_8h.html#a0dfa96c341f7f5141934baa765b00e25',1,'event.h']]],
+  ['puteventext_42',['PutEventExt',['../event_8h.html#a3a0a70f0744bc1fc712cea4050d40893',1,'event.h']]],
+  ['putimage_43',['PutImage',['../canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'canvas.h']]],
+  ['putsystemevent_44',['PutSystemEvent',['../event_8h.html#a429a689cf8a4d534f491775f454b3cb8',1,'event.h']]]
 ];

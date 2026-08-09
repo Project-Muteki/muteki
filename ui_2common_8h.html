@@ -152,6 +152,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__prime__s.html">ui_event_prime_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events (Prime G1 extension).  <a href="structui__event__prime__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__input__s.html">ui_event_input_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__message__s.html">ui_message_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event struct used by SendMessage().  <a href="structui__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +205,9 @@ typedef struct <a class="el" href="structui__event__base__s.html">ui_event_base_
 <tr class="memitem:a1f39d7d5fe5d04f76f76544c1260aa23" id="r_a1f39d7d5fe5d04f76f76544c1260aa23"><td class="memItemLeft" align="right" valign="top"><a id="a1f39d7d5fe5d04f76f76544c1260aa23" name="a1f39d7d5fe5d04f76f76544c1260aa23"></a>
 typedef struct <a class="el" href="structui__event__prime__s.html">ui_event_prime_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_prime_t</b></td></tr>
 <tr class="separator:a1f39d7d5fe5d04f76f76544c1260aa23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52aa4b59195eedc38b510cc2d086f6ef" id="r_a52aa4b59195eedc38b510cc2d086f6ef"><td class="memItemLeft" align="right" valign="top"><a id="a52aa4b59195eedc38b510cc2d086f6ef" name="a52aa4b59195eedc38b510cc2d086f6ef"></a>
+typedef struct <a class="el" href="structui__event__input__s.html">ui_event_input_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_sys_t</b></td></tr>
+<tr class="separator:a52aa4b59195eedc38b510cc2d086f6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a129e7efc3eed2c7224aa8836902ec20a" id="r_a129e7efc3eed2c7224aa8836902ec20a"><td class="memItemLeft" align="right" valign="top"><a id="a129e7efc3eed2c7224aa8836902ec20a" name="a129e7efc3eed2c7224aa8836902ec20a"></a>
 typedef struct <a class="el" href="structui__message__s.html">ui_message_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_message_t</b></td></tr>
 <tr class="separator:a129e7efc3eed2c7224aa8836902ec20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -499,11 +504,25 @@ Enumerations</h2></td></tr>
 , <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748">UI_EVENT_TYPE_TOUCH_END</a> = 8
 , <br />
 &#160;&#160;<a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86">UI_EVENT_TYPE_KEY</a> = 16
+, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477">UI_EVENT_TYPE_SPECIAL</a> = 32
+, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e">UI_EVENT_TYPE_INTERNAL</a> = 0x4000
 , <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48">UI_EVENT_TYPE_KEY_UP</a> = 0x100000
 <br />
  }</td></tr>
 <tr class="memdesc:ad23e002626a9b8e5b06b32178419966f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI event types.  <a href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f">More...</a><br /></td></tr>
 <tr class="separator:ad23e002626a9b8e5b06b32178419966f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6edd1204219bf9674aa3bf2d1212c67c" id="r_a6edd1204219bf9674aa3bf2d1212c67c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c">ui_event_internal_e</a> { <a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98">UI_EVENT_INTERNAL_FLAG</a> = 0
+, <a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67ca57be2af4f02f321d5917eb1f9e22e697">UI_EVENT_INTERNAL_BATTERY_CHECK_REQUEST</a> = 1
+, <a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67ca8b139402eeedd18b88d44991f1993ba2">UI_EVENT_INTERNAL_BYPASS</a> = 2
+ }</td></tr>
+<tr class="memdesc:a6edd1204219bf9674aa3bf2d1212c67c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal system UI event types.  <a href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c">More...</a><br /></td></tr>
+<tr class="separator:a6edd1204219bf9674aa3bf2d1212c67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac7cfdad39bdbb473237794863b19b9" id="r_a7ac7cfdad39bdbb473237794863b19b9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9">ui_event_source_e</a> { <a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9a9a5271172de52af51e8f74fc596f9b48">UI_EVENT_SOURCE_SYSTEM</a> = 0
+, <a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729">UI_EVENT_SOURCE_SEND_MESSAGE</a> = 1
+, <a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9adc2e74feb80038125b0ea6a6a8e6da83">UI_EVENT_SOURCE_PUT_EVENT</a> = 2
+ }</td></tr>
+<tr class="memdesc:a7ac7cfdad39bdbb473237794863b19b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event source.  <a href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9">More...</a><br /></td></tr>
+<tr class="separator:a7ac7cfdad39bdbb473237794863b19b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -1055,6 +1074,57 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a6edd1204219bf9674aa3bf2d1212c67c" name="a6edd1204219bf9674aa3bf2d1212c67c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6edd1204219bf9674aa3bf2d1212c67c">&#9670;&#160;</a></span>ui_event_internal_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c">ui_event_internal_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Internal system UI event types. </p>
+<p>These values may go into the <a class="el" href="structui__event__base__s.html#a0525ca83af1fc75c535263bd023eedf1" title="Raw value of the event.">ui_event_base_s::value</a> field when <a class="el" href="structui__event__base__s.html#af4cabc2f81242d43a634af04ceb13829" title="The type of event (0x10 being key event)">ui_event_base_s::event_type</a> is <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e" title="Internal system event. Exact purpose is unclear.">UI_EVENT_TYPE_INTERNAL</a>.</p>
+<p>Unlisted values behave similarly to <a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98" title="Set a flag but do not queue the event.">UI_EVENT_INTERNAL_FLAG</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98" name="a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98"></a>UI_EVENT_INTERNAL_FLAG&#160;</td><td class="fielddoc"><p>Set a flag but do not queue the event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6edd1204219bf9674aa3bf2d1212c67ca57be2af4f02f321d5917eb1f9e22e697" name="a6edd1204219bf9674aa3bf2d1212c67ca57be2af4f02f321d5917eb1f9e22e697"></a>UI_EVENT_INTERNAL_BATTERY_CHECK_REQUEST&#160;</td><td class="fielddoc"><p>Request <a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de" title="Consume an event.">GetEvent()</a> to do a low battery check. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6edd1204219bf9674aa3bf2d1212c67ca8b139402eeedd18b88d44991f1993ba2" name="a6edd1204219bf9674aa3bf2d1212c67ca8b139402eeedd18b88d44991f1993ba2"></a>UI_EVENT_INTERNAL_BYPASS&#160;</td><td class="fielddoc"><p>Queue this event normally into the system event queue. Exact purpose is unclear. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a7ac7cfdad39bdbb473237794863b19b9" name="a7ac7cfdad39bdbb473237794863b19b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac7cfdad39bdbb473237794863b19b9">&#9670;&#160;</a></span>ui_event_source_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9">ui_event_source_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event source. </p>
+<p>Describes how the event is produced and where it is being produced. </p><dl class="section note"><dt>Note</dt><dd>This can be unreliable sometimes as certain functions like <a class="el" href="event_8h.html#a0dfa96c341f7f5141934baa765b00e25" title="Produce an event in the main event queue.">PutEvent()</a> have rules that bypass this value. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9a9a5271172de52af51e8f74fc596f9b48" name="a7ac7cfdad39bdbb473237794863b19b9a9a5271172de52af51e8f74fc596f9b48"></a>UI_EVENT_SOURCE_SYSTEM&#160;</td><td class="fielddoc"><p>Event is a system event (from the system event queue). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729" name="a7ac7cfdad39bdbb473237794863b19b9a13fc7f3380dabbefacce622fdf508729"></a>UI_EVENT_SOURCE_SEND_MESSAGE&#160;</td><td class="fielddoc"><p>Event is a message (produced via SendMessage()). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7ac7cfdad39bdbb473237794863b19b9adc2e74feb80038125b0ea6a6a8e6da83" name="a7ac7cfdad39bdbb473237794863b19b9adc2e74feb80038125b0ea6a6a8e6da83"></a>UI_EVENT_SOURCE_PUT_EVENT&#160;</td><td class="fielddoc"><p>Event is a regular event and not a <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a> or <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477" title="Special event. Bypasses the queues and sets a flag instead. Exact purpose is unclear.">UI_EVENT_TYPE_SPECIAL</a> (from the main event queue). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ad23e002626a9b8e5b06b32178419966f" name="ad23e002626a9b8e5b06b32178419966f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad23e002626a9b8e5b06b32178419966f">&#9670;&#160;</a></span>ui_event_type_e</h2>
 
@@ -1078,6 +1148,11 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" name="ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748"></a>UI_EVENT_TYPE_TOUCH_END&#160;</td><td class="fielddoc"><p>End of touch/pen up event. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" name="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86"></a>UI_EVENT_TYPE_KEY&#160;</td><td class="fielddoc"><p>Key(s) pressed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477" name="ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477"></a>UI_EVENT_TYPE_SPECIAL&#160;</td><td class="fielddoc"><p>Special event. Bypasses the queues and sets a flag instead. Exact purpose is unclear. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e" name="ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e"></a>UI_EVENT_TYPE_INTERNAL&#160;</td><td class="fielddoc"><p>Internal system event. Exact purpose is unclear. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c" title="Internal system UI event types.">ui_event_internal_e</a> </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48" name="ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48"></a>UI_EVENT_TYPE_KEY_UP&#160;</td><td class="fielddoc"><p>Key(s) released. </p>
 <p>Available on S3C and TCC boards. </p>
