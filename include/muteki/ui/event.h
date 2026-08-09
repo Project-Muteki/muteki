@@ -287,7 +287,7 @@ extern unsigned short GetCapsState(void);
 /**
  * @brief Synchronously send an event to a recipient, bypassing the event queuing mechanism.
  * @x_syscall_num `0x10188`
- * @param event The event. Must contain a valid ui_event_t::recipient.
+ * @param[in, out] event The event. Must contain a valid ui_event_t::recipient.
  * @return true Event is consumed by the recipient.
  * @return false Event is not consumed by the recipient or recipient is `NULL`.
  */
@@ -298,10 +298,10 @@ extern bool SendMessage(ui_event_t *event);
  * @details This allocates a temporary event struct on the stack, sets the user-specified fields and then calls
  * SendMessage() to send the generated event.
  * @x_syscall_num `0x10189`
- * @param recipient The UI component receiving the event.
+ * @param[in, out] recipient The UI component receiving the event.
  * @param event_type Event type.
  * @param value Raw 32-bit event value.
- * @param user_data User data pointer.
+ * @param[in, out] user_data User data pointer.
  * @return true Event is consumed by the recipient.
  * @return false Event is not consumed by the recipient or recipient is `NULL`.
  */
