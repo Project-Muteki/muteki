@@ -47,7 +47,7 @@ Y coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the 
 //! [y1-auto]
 
 //! [tag]
-Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component). Does not need to be unique. Usually will be set by AllocBlock() after the memory was allocated.
+Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by AllocBlock() after the memory was allocated.
 //! [tag]
 
 //! [void-param]

@@ -8,8 +8,8 @@
  * @brief Functions related to the message box view.
  */
 
-#ifndef __MUTEKI_UI_VIEWS_MESSAGEBOX_H__
-#define __MUTEKI_UI_VIEWS_MESSAGEBOX_H__
+#ifndef __MUTEKI_UI_MODALS_MESSAGEBOX_H__
+#define __MUTEKI_UI_MODALS_MESSAGEBOX_H__
 
 #include <muteki/common.h>
 
@@ -131,4 +131,4 @@ extern int MessageBox(const UTF16 *text, unsigned short type);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_VIEWS_MESSAGEBOX_H__
+#endif // __MUTEKI_UI_MODALS_MESSAGEBOX_H__

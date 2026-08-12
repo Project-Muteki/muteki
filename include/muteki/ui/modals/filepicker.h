@@ -8,8 +8,8 @@
  * @brief Functions related to the file picker view.
  */
 
-#ifndef __MUTEKI_UI_VIEWS_FILEPICKER_H__
-#define __MUTEKI_UI_VIEWS_FILEPICKER_H__
+#ifndef __MUTEKI_UI_MODALS_FILEPICKER_H__
+#define __MUTEKI_UI_MODALS_FILEPICKER_H__
 
 #include <muteki/ui/common.h>
 
@@ -231,4 +231,4 @@ extern int _GetNextFileName(filepicker_context_t *ctx, UTF16 *out);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_VIEWS_FILEPICKER_H__
+#endif // __MUTEKI_UI_MODALS_FILEPICKER_H__

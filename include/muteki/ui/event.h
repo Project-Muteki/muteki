@@ -6,6 +6,15 @@
 /**
  * @file event.h
  * @brief Low-level UI event handing API.
+ * @details
+ * There are 2 event queues:
+ * - The main event queue, which is primarily used for broadcasting events to components.
+ * - The system event queue, which is primarily used for input events like key presses and touch.
+ *
+ * GetEvent() consolidates events from both event queues into a single handler.
+ *
+ * As a part of inter-component communication, the event subsystem also includes a way to send an event directly to a
+ * UI component. See SendMessage() and SendMessageExt().
  */
 
 #ifndef __MUTEKI_UI_EVENT_H__
@@ -294,7 +303,7 @@ extern unsigned short GetCapsState(void);
 extern bool SendMessage(ui_event_t *event);
 
 /**
- * @brief Synchronously send an event to a recipient (by values)
+ * @brief Synchronously send an event to a recipient (by values).
  * @details This allocates a temporary event struct on the stack, sets the user-specified fields and then calls
  * SendMessage() to send the generated event.
  * @x_syscall_num `0x10189`
