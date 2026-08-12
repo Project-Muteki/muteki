@@ -17,6 +17,7 @@
 #include <muteki/ini.h>
 #include <muteki/loader.h>
 #include <muteki/memory.h>
+#include <muteki/syscall.h>
 #include <muteki/system.h>
 #include <muteki/threading.h>
 #include <muteki/ui.h>

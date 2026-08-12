@@ -46,7 +46,8 @@ syscalls_split = custom_target('syscalls_split',
 # Static library that bundles both sdk and krnl shims.
 static_library(
     'muteki-shims',
-    syscalls_split,
+    [syscalls_split, 'src/shims/syscall.c'],
+    include_directories: ['include/'],
     install : true,
     c_args : c_flags,
     link_args : ld_flags,
