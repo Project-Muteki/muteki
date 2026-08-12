@@ -6,8 +6,9 @@
 /**
  * @file common.h
  * @brief Common data structures and definitions for the UI subsystem.
- * @warning Unstable. The definitions here and in the other UI headers are work-in-progress and may change in
- * incompatible ways at any time without notice. Do not depend on it.
+ * @warning Unstable. The definitions here and in the other UI headers (except low-level interfaces like surfaces and
+ * basic LCD/canvas functions) are work-in-progress and may change in incompatible ways at any time without notice. Do
+ * not depend on them, yet.
  */
 
 #ifndef __MUTEKI_UI_COMMON_H__
