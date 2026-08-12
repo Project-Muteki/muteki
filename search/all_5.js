@@ -12,7 +12,7 @@ var searchData=
   ['errno_5fns_5fuser_9',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]],
   ['errno_5fuser_5fe_10',['errno_user_e',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455',1,'errno.h']]],
   ['error_5ftext_11',['error_text',['../structfilepicker__context__s.html#aa92a3c64f754fbea6d4d0dfd514443a8',1,'filepicker_context_s']]],
-  ['event_12',['event',['../structui__widget__button__s.html#ac4d0cceb9ba8eb2e2524f0dcf39b57c5',1,'ui_widget_button_s::event'],['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s::event'],['../structui__message__s.html#a536d210016f0ed33f5598827e423ef43',1,'ui_message_s::event']]],
+  ['event_12',['event',['../structui__message__s.html#a536d210016f0ed33f5598827e423ef43',1,'ui_message_s::event'],['../structui__widget__button__s.html#ac4d0cceb9ba8eb2e2524f0dcf39b57c5',1,'ui_widget_button_s::event'],['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s::event']]],
   ['event_2eh_13',['event.h',['../event_8h.html',1,'']]],
   ['event_5fs_14',['event_s',['../structevent__s.html',1,'']]],
   ['event_5fsource_15',['event_source',['../structui__event__prime__s.html#ac09475750d01972f246b9fd8395fb800',1,'ui_event_prime_s::event_source'],['../structui__event__base__s.html#a20d75100ff0228e977f9ff911428a56e',1,'ui_event_base_s::event_source']]],
@@ -34,5 +34,6 @@ var searchData=
   ['exec_5fopen_5ffailed_31',['EXEC_OPEN_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a6209483baa6c26dac7e22bc7db5d3dd8',1,'errno.h']]],
   ['exec_5funsupported_32',['EXEC_UNSUPPORTED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1',1,'errno.h']]],
   ['executeprogram_33',['ExecuteProgram',['../loader_8h.html#ac9b5297597c2b56e8bd4002dafd53f05',1,'loader.h']]],
-  ['exit_5fcode_34',['exit_code',['../structthread__s.html#af5c345bd409d4270b3d5544ac819d816',1,'thread_s']]]
+  ['execution_5fresult_34',['execution_result',['../structui__group__s.html#a228a0fa3c62c4857edd7921db0193f6e',1,'ui_group_s']]],
+  ['exit_5fcode_35',['exit_code',['../structthread__s.html#af5c345bd409d4270b3d5544ac819d816',1,'thread_s']]]
 ];

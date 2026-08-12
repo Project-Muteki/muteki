@@ -10,7 +10,7 @@ var searchData=
   ['rom_5fspec_5foffset_5f0xc_7',['rom_spec_offset_0xc',['../structloader__loaded__s.html#a519bc33945c32f4b3a3872bc258f215d',1,'loader_loaded_s']]],
   ['rom_5ftype_8',['rom_type',['../structloader__applet__info__s.html#a090f8fe7a7e52ebf2cb851df7c6482ea',1,'loader_applet_info_s']]],
   ['rotate_9',['rotate',['../structlcd__base__s.html#a466b8361da90dc49d956ea84fa3e0c50',1,'lcd_base_s::rotate'],['../structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22',1,'lcd_thread_safe_s::rotate']]],
-  ['rotation_10',['rotation',['../structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0',1,'lcd_base_s::rotation'],['../structlcd__thread__safe__s.html#a2ac14d9831a87a4af2556c379b7ad5e5',1,'lcd_thread_safe_s::rotation']]],
+  ['rotation_10',['rotation',['../structlcd__thread__safe__s.html#a2ac14d9831a87a4af2556c379b7ad5e5',1,'lcd_thread_safe_s::rotation'],['../structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0',1,'lcd_base_s::rotation']]],
   ['rotation_5fapply_11',['ROTATION_APPLY',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493',1,'common.h']]],
   ['rotation_5fquery_12',['ROTATION_QUERY',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607',1,'common.h']]],
   ['rotation_5ftop_5fside_5ffacing_5fdown_13',['ROTATION_TOP_SIDE_FACING_DOWN',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03',1,'common.h']]],
@@ -19,5 +19,6 @@ var searchData=
   ['rotation_5ftop_5fside_5ffacing_5fup_16',['ROTATION_TOP_SIDE_FACING_UP',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa',1,'common.h']]],
   ['rotation_5fvalue_5fe_17',['rotation_value_e',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345',1,'common.h']]],
   ['runapplicationa_18',['RunApplicationA',['../loader_8h.html#aef3be04b023364a3ea972c21ce96bebb',1,'loader.h']]],
-  ['runapplicationw_19',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]]
+  ['runapplicationw_19',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]],
+  ['runtime_5ftype_20',['runtime_type',['../structui__component__s.html#a640e234a12ade3562e7493f5b509d45d',1,'ui_component_s']]]
 ];

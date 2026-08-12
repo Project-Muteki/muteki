@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('structui__component__s.html',''); init
 </div><!--header-->
 <div class="contents">
 
-<p>Common part of all widgets and views.  
+<p>Common part of all widgets and modals.  
  <a href="structui__component__s.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ui_2common_8h_source.html">common.h</a>&gt;</code></p>
@@ -123,55 +123,68 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ae891fa49afd249d98a675e6f5f4320b5" id="r_ae891fa49afd249d98a675e6f5f4320b5"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#ae891fa49afd249d98a675e6f5f4320b5">state</a></td></tr>
 <tr class="memdesc:ae891fa49afd249d98a675e6f5f4320b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component state bit field.  <br /></td></tr>
 <tr class="separator:ae891fa49afd249d98a675e6f5f4320b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa88324a9bccc3a5d8c79e0fe900e9342" id="r_aa88324a9bccc3a5d8c79e0fe900e9342"><td class="memItemLeft" align="right" valign="top"><a id="aa88324a9bccc3a5d8c79e0fe900e9342" name="aa88324a9bccc3a5d8c79e0fe900e9342"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0xa</b></td></tr>
-<tr class="memdesc:aa88324a9bccc3a5d8c79e0fe900e9342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Set to 1 on buttons and 0xfd01 on deskbox views. <br /></td></tr>
-<tr class="separator:aa88324a9bccc3a5d8c79e0fe900e9342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d4083f78cb820481a88c55152f207d" id="r_a49d4083f78cb820481a88c55152f207d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a49d4083f78cb820481a88c55152f207d">flags</a></td></tr>
+<tr class="memdesc:a49d4083f78cb820481a88c55152f207d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component behavior bit field.  <br /></td></tr>
+<tr class="separator:a49d4083f78cb820481a88c55152f207d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f533fb3c00c1a7251565e4cfbd027c3" id="r_a7f533fb3c00c1a7251565e4cfbd027c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui__rect__s.html">ui_rect_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a7f533fb3c00c1a7251565e4cfbd027c3">footprint</a></td></tr>
 <tr class="memdesc:a7f533fb3c00c1a7251565e4cfbd027c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component visual footprint.  <br /></td></tr>
 <tr class="separator:a7f533fb3c00c1a7251565e4cfbd027c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2e78f7777457b2290f8232c0b337b5d" id="r_aa2e78f7777457b2290f8232c0b337b5d"><td class="memItemLeft" align="right" valign="top"><a id="aa2e78f7777457b2290f8232c0b337b5d" name="aa2e78f7777457b2290f8232c0b337b5d"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>on_change_state</b> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self, unsigned short mask, bool value)</td></tr>
-<tr class="memdesc:aa2e78f7777457b2290f8232c0b337b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component state change callback. <br /></td></tr>
-<tr class="separator:aa2e78f7777457b2290f8232c0b337b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb06d5df117e2ec49284ff3ff3012232" id="r_adb06d5df117e2ec49284ff3ff3012232"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#adb06d5df117e2ec49284ff3ff3012232">on_set_state</a> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self, unsigned short mask, bool value)</td></tr>
+<tr class="memdesc:adb06d5df117e2ec49284ff3ff3012232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component state change callback.  <br /></td></tr>
+<tr class="separator:adb06d5df117e2ec49284ff3ff3012232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7027c6ea7459136c54cba0ab6ed83811" id="r_a7027c6ea7459136c54cba0ab6ed83811"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811">on_erase_bg</a> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self)</td></tr>
 <tr class="memdesc:a7027c6ea7459136c54cba0ab6ed83811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component callback for erasing background.  <br /></td></tr>
 <tr class="separator:a7027c6ea7459136c54cba0ab6ed83811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae7e87991174116e83bb255db0c31cb6" id="r_aae7e87991174116e83bb255db0c31cb6"><td class="memItemLeft" align="right" valign="top"><a id="aae7e87991174116e83bb255db0c31cb6" name="aae7e87991174116e83bb255db0c31cb6"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>on_draw</b> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self)</td></tr>
-<tr class="memdesc:aae7e87991174116e83bb255db0c31cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component draw callback. <br /></td></tr>
+<tr class="memitem:aae7e87991174116e83bb255db0c31cb6" id="r_aae7e87991174116e83bb255db0c31cb6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#aae7e87991174116e83bb255db0c31cb6">on_draw</a> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self)</td></tr>
+<tr class="memdesc:aae7e87991174116e83bb255db0c31cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component draw callback.  <br /></td></tr>
 <tr class="separator:aae7e87991174116e83bb255db0c31cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab73249ff71fabef7bc2d13a6d56e67a" id="r_aab73249ff71fabef7bc2d13a6d56e67a"><td class="memItemLeft" align="right" valign="top"><a id="aab73249ff71fabef7bc2d13a6d56e67a" name="aab73249ff71fabef7bc2d13a6d56e67a"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>on_event</b> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self, <a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
-<tr class="memdesc:aab73249ff71fabef7bc2d13a6d56e67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component event callback. <br /></td></tr>
+<tr class="memitem:aab73249ff71fabef7bc2d13a6d56e67a" id="r_aab73249ff71fabef7bc2d13a6d56e67a"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#aab73249ff71fabef7bc2d13a6d56e67a">on_event</a> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self, <a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td></tr>
+<tr class="memdesc:aab73249ff71fabef7bc2d13a6d56e67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component event callback.  <br /></td></tr>
 <tr class="separator:aab73249ff71fabef7bc2d13a6d56e67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8931dcb5b914428260eea987aefb60a" id="r_ab8931dcb5b914428260eea987aefb60a"><td class="memItemLeft" align="right" valign="top"><a id="ab8931dcb5b914428260eea987aefb60a" name="ab8931dcb5b914428260eea987aefb60a"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x24</b></td></tr>
-<tr class="memdesc:ab8931dcb5b914428260eea987aefb60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Used in <a class="el" href="messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee" title="High level message box function.">MessageBox()</a>. <br /></td></tr>
-<tr class="separator:ab8931dcb5b914428260eea987aefb60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a08526b6d287d5a93629794676f6c17" id="r_a5a08526b6d287d5a93629794676f6c17"><td class="memItemLeft" align="right" valign="top"><a id="a5a08526b6d287d5a93629794676f6c17" name="a5a08526b6d287d5a93629794676f6c17"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x28</b></td></tr>
-<tr class="memdesc:a5a08526b6d287d5a93629794676f6c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
-<tr class="separator:a5a08526b6d287d5a93629794676f6c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92fe911ad326054baa433a6b3e951665" id="r_a92fe911ad326054baa433a6b3e951665"><td class="memItemLeft" align="right" valign="top"><a id="a92fe911ad326054baa433a6b3e951665" name="a92fe911ad326054baa433a6b3e951665"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x2a</b></td></tr>
-<tr class="memdesc:a92fe911ad326054baa433a6b3e951665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Set to 0x65 on buttons. <br /></td></tr>
-<tr class="separator:a92fe911ad326054baa433a6b3e951665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1c7f870630648915d5bde12577e9d8e" id="r_ad1c7f870630648915d5bde12577e9d8e"><td class="memItemLeft" align="right" valign="top"><a id="ad1c7f870630648915d5bde12577e9d8e" name="ad1c7f870630648915d5bde12577e9d8e"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>user_data</b></td></tr>
+<tr class="memdesc:ad1c7f870630648915d5bde12577e9d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">User data pointer. Content is component-specific. <br /></td></tr>
+<tr class="separator:ad1c7f870630648915d5bde12577e9d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7549a5508dd75eea64956844d3b5d84d" id="r_a7549a5508dd75eea64956844d3b5d84d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a7549a5508dd75eea64956844d3b5d84d">tag</a></td></tr>
+<tr class="separator:a7549a5508dd75eea64956844d3b5d84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640e234a12ade3562e7493f5b509d45d" id="r_a640e234a12ade3562e7493f5b509d45d"><td class="memItemLeft" align="right" valign="top"><a id="a640e234a12ade3562e7493f5b509d45d" name="a640e234a12ade3562e7493f5b509d45d"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>runtime_type</b></td></tr>
+<tr class="memdesc:a640e234a12ade3562e7493f5b509d45d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Set to 0x65 on buttons. <br /></td></tr>
+<tr class="separator:a640e234a12ade3562e7493f5b509d45d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e781f428580d4269d8a1bbede42e6d8" id="r_a1e781f428580d4269d8a1bbede42e6d8"><td class="memItemLeft" align="right" valign="top"><a id="a1e781f428580d4269d8a1bbede42e6d8" name="a1e781f428580d4269d8a1bbede42e6d8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x2c</b></td></tr>
 <tr class="memdesc:a1e781f428580d4269d8a1bbede42e6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
 <tr class="separator:a1e781f428580d4269d8a1bbede42e6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7549a5508dd75eea64956844d3b5d84d" id="r_a7549a5508dd75eea64956844d3b5d84d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a7549a5508dd75eea64956844d3b5d84d">tag</a></td></tr>
-<tr class="separator:a7549a5508dd75eea64956844d3b5d84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b34b38e0bdab71df80df7b70a26958" id="r_a73b34b38e0bdab71df80df7b70a26958"><td class="memItemLeft" align="right" valign="top"><a id="a73b34b38e0bdab71df80df7b70a26958" name="a73b34b38e0bdab71df80df7b70a26958"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x30</b></td></tr>
+<tr class="memdesc:a73b34b38e0bdab71df80df7b70a26958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
+<tr class="separator:a73b34b38e0bdab71df80df7b70a26958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95d6a6b74475cb7a1fd88721d85db7fc" id="r_a95d6a6b74475cb7a1fd88721d85db7fc"><td class="memItemLeft" align="right" valign="top"><a id="a95d6a6b74475cb7a1fd88721d85db7fc" name="a95d6a6b74475cb7a1fd88721d85db7fc"></a>
 short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></tr>
 <tr class="memdesc:a95d6a6b74475cb7a1fd88721d85db7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Probably padding. <br /></td></tr>
 <tr class="separator:a95d6a6b74475cb7a1fd88721d85db7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Common part of all widgets and views. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal. </dd></dl>
+<div class="textblock"><p>Common part of all widgets and modals. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a49d4083f78cb820481a88c55152f207d" name="a49d4083f78cb820481a88c55152f207d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49d4083f78cb820481a88c55152f207d">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short ui_component_s::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Component behavior bit field. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea" title="Component behavior flag. Usually set by the component constructors but can sometimes change over time...">ui_component_flag_e</a> </dd></dl>
+
+</div>
+</div>
 <a id="a7f533fb3c00c1a7251565e4cfbd027c3" name="a7f533fb3c00c1a7251565e4cfbd027c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f533fb3c00c1a7251565e4cfbd027c3">&#9670;&#160;</a></span>footprint</h2>
 
@@ -206,6 +219,23 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
 
 </div>
 </div>
+<a id="aae7e87991174116e83bb255db0c31cb6" name="aae7e87991174116e83bb255db0c31cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7e87991174116e83bb255db0c31cb6">&#9670;&#160;</a></span>on_draw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* ui_component_s::on_draw) (<a class="el" href="structui__component__s.html">ui_component_t</a> *self)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Component draw callback. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="component_8h.html#a22f0feec9098d47a63052e75bb26abf4" title="Draw a component.">PVIEW_draw</a> </dd></dl>
+
+</div>
+</div>
 <a id="a7027c6ea7459136c54cba0ab6ed83811" name="a7027c6ea7459136c54cba0ab6ed83811"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7027c6ea7459136c54cba0ab6ed83811">&#9670;&#160;</a></span>on_erase_bg</h2>
 
@@ -219,7 +249,42 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
 </div><div class="memdoc">
 
 <p>Component callback for erasing background. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd>Figure out exactly what this does. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd>Figure out exactly what this does. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="component_8h.html#a6c9f51175af33cebdd37fa9255189d5d" title="Signal the parent container to restore pixels that were obstructed by this component.">PVIEW_EraseBackGround</a> </dd></dl>
+
+</div>
+</div>
+<a id="aab73249ff71fabef7bc2d13a6d56e67a" name="aab73249ff71fabef7bc2d13a6d56e67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab73249ff71fabef7bc2d13a6d56e67a">&#9670;&#160;</a></span>on_event</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* ui_component_s::on_event) (<a class="el" href="structui__component__s.html">ui_component_t</a> *self, <a class="el" href="structui__event__base__s.html">ui_event_t</a> *event)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Component event callback. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="component_8h.html#ac85bd7426bac94ce46f80d82df373215" title="Handle incoming events.">PVIEW_handleEvent</a> </dd></dl>
+
+</div>
+</div>
+<a id="adb06d5df117e2ec49284ff3ff3012232" name="adb06d5df117e2ec49284ff3ff3012232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb06d5df117e2ec49284ff3ff3012232">&#9670;&#160;</a></span>on_set_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* ui_component_s::on_set_state) (<a class="el" href="structui__component__s.html">ui_component_t</a> *self, unsigned short mask, bool value)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Component state change callback. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="component_8h.html#a53c0497b77c76d36f8dfa134b1198783" title="Change the object state bitmask.">PVIEW_setState</a> </dd></dl>
 
 </div>
 </div>
@@ -268,7 +333,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component). Does not need to be unique. Usually will be set by <a class="el" href="memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </p>
+<p>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </p>
 
 </div>
 </div>

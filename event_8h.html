@@ -202,11 +202,17 @@ Functions</h2></td></tr>
 <tr class="memdesc:a81e92618904579d8d96b9edf4939baef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronously send an event to a recipient, bypassing the event queuing mechanism.  <br /></td></tr>
 <tr class="separator:a81e92618904579d8d96b9edf4939baef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2211b8602963b72784d7585a3d28337" id="r_ad2211b8602963b72784d7585a3d28337"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="event_8h.html#ad2211b8602963b72784d7585a3d28337">SendMessageExt</a> (<a class="el" href="structui__component__s.html">ui_component_t</a> *recipient, int event_type, unsigned int value, void *user_data)</td></tr>
-<tr class="memdesc:ad2211b8602963b72784d7585a3d28337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronously send an event to a recipient (by values)  <br /></td></tr>
+<tr class="memdesc:ad2211b8602963b72784d7585a3d28337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronously send an event to a recipient (by values).  <br /></td></tr>
 <tr class="separator:ad2211b8602963b72784d7585a3d28337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level UI event handing API. </p>
+<p>There are 2 event queues:</p><ul>
+<li>The main event queue, which is primarily used for broadcasting events to components.</li>
+<li>The system event queue, which is primarily used for input events like key presses and touch.</li>
+</ul>
+<p><a class="el" href="event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de" title="Consume an event.">GetEvent()</a> consolidates events from both event queues into a single handler.</p>
+<p>As a part of inter-component communication, the event subsystem also includes a way to send an event directly to a UI component. See <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a> and <a class="el" href="event_8h.html#ad2211b8602963b72784d7585a3d28337" title="Synchronously send an event to a recipient (by values).">SendMessageExt()</a>. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a41db433e298d3572044a6b89993a5541" name="a41db433e298d3572044a6b89993a5541"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a41db433e298d3572044a6b89993a5541">&#9670;&#160;</a></span>toggle_key_state_e</h2>
@@ -923,7 +929,7 @@ false Event is not consumed by the recipient or recipient is <code>NULL</code>. 
 </table>
 </div><div class="memdoc">
 
-<p>Synchronously send an event to a recipient (by values) </p>
+<p>Synchronously send an event to a recipient (by values). </p>
 <p>This allocates a temporary event struct on the stack, sets the user-specified fields and then calls <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a> to send the generated event. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10189</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

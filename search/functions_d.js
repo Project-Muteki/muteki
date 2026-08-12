@@ -1,11 +1,23 @@
 var searchData=
 [
-  ['printf_0',['Printf',['../canvas_8h.html#a2a6f9f393e5e4765c4dda1837a6a69af',1,'canvas.h']]],
-  ['printfxy_1',['PrintfXY',['../canvas_8h.html#a7c41a12f427a08332e20a9b5c201544e',1,'canvas.h']]],
-  ['programisrunninga_2',['ProgramIsRunningA',['../loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5',1,'loader.h']]],
-  ['programisrunningw_3',['ProgramIsRunningW',['../loader_8h.html#acef8c80267888eadf86ee52e625e6534',1,'loader.h']]],
-  ['putevent_4',['PutEvent',['../event_8h.html#a0dfa96c341f7f5141934baa765b00e25',1,'event.h']]],
-  ['puteventext_5',['PutEventExt',['../event_8h.html#a3a0a70f0744bc1fc712cea4050d40893',1,'event.h']]],
-  ['putimage_6',['PutImage',['../canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'canvas.h']]],
-  ['putsystemevent_7',['PutSystemEvent',['../event_8h.html#a429a689cf8a4d534f491775f454b3cb8',1,'event.h']]]
+  ['pgroup_5fdraw_0',['PGROUP_draw',['../group_8h.html#a4b715c4a56d8cb20d12268805954e9b9',1,'group.h']]],
+  ['pgroup_5fexecute_1',['PGROUP_execute',['../group_8h.html#a56d331855c9b49f0cb8bb84cd7f786b6',1,'group.h']]],
+  ['pgroup_5fhandleevent_2',['PGROUP_handleEvent',['../group_8h.html#a227c73252a7ac5cb41cff2918166017c',1,'group.h']]],
+  ['pgroup_5finsert_3',['PGROUP_insert',['../group_8h.html#adc95990032b50e2c166fd77173915395',1,'group.h']]],
+  ['pgroup_5fpreview_4',['PGROUP_preView',['../group_8h.html#add3363d6b708d4c621b4b01278b71746',1,'group.h']]],
+  ['pgroup_5fredraw_5',['PGROUP_redraw',['../group_8h.html#afb7b3c722459c45b9bf653bb40bdf0f0',1,'group.h']]],
+  ['pgroup_5fsetcurrent_6',['PGROUP_setCurrent',['../group_8h.html#adc4808c682b8e99a70264537a6881460',1,'group.h']]],
+  ['pgroup_5fsetstate_7',['PGROUP_setState',['../group_8h.html#a2483c6dac1d86a5ef082ea075c0e61cc',1,'group.h']]],
+  ['printf_8',['Printf',['../canvas_8h.html#a2a6f9f393e5e4765c4dda1837a6a69af',1,'canvas.h']]],
+  ['printfxy_9',['PrintfXY',['../canvas_8h.html#a7c41a12f427a08332e20a9b5c201544e',1,'canvas.h']]],
+  ['programisrunninga_10',['ProgramIsRunningA',['../loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5',1,'loader.h']]],
+  ['programisrunningw_11',['ProgramIsRunningW',['../loader_8h.html#acef8c80267888eadf86ee52e625e6534',1,'loader.h']]],
+  ['putevent_12',['PutEvent',['../event_8h.html#a0dfa96c341f7f5141934baa765b00e25',1,'event.h']]],
+  ['puteventext_13',['PutEventExt',['../event_8h.html#a3a0a70f0744bc1fc712cea4050d40893',1,'event.h']]],
+  ['putimage_14',['PutImage',['../canvas_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'canvas.h']]],
+  ['putsystemevent_15',['PutSystemEvent',['../event_8h.html#a429a689cf8a4d534f491775f454b3cb8',1,'event.h']]],
+  ['pview_5fdraw_16',['PVIEW_draw',['../component_8h.html#a22f0feec9098d47a63052e75bb26abf4',1,'component.h']]],
+  ['pview_5ferasebackground_17',['PVIEW_EraseBackGround',['../component_8h.html#a6c9f51175af33cebdd37fa9255189d5d',1,'component.h']]],
+  ['pview_5fhandleevent_18',['PVIEW_handleEvent',['../component_8h.html#ac85bd7426bac94ce46f80d82df373215',1,'component.h']]],
+  ['pview_5fsetstate_19',['PVIEW_setState',['../component_8h.html#a53c0497b77c76d36f8dfa134b1198783',1,'component.h']]]
 ];

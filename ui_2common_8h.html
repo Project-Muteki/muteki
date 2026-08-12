@@ -158,7 +158,10 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event struct used by <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a>.  <a href="structui__message__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html">ui_component_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common part of all widgets and views.  <a href="structui__component__s.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common part of all widgets and modals.  <a href="structui__component__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__group__s.html">ui_group_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI component group/container struct.  <a href="structui__group__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -214,6 +217,9 @@ typedef struct <a class="el" href="structui__message__s.html">ui_message_s</a>&#
 <tr class="memitem:a8d6d9f1cc52acef63b2bcb922d9f312a" id="r_a8d6d9f1cc52acef63b2bcb922d9f312a"><td class="memItemLeft" align="right" valign="top"><a id="a8d6d9f1cc52acef63b2bcb922d9f312a" name="a8d6d9f1cc52acef63b2bcb922d9f312a"></a>
 typedef struct <a class="el" href="structui__component__s.html">ui_component_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_component_t</b></td></tr>
 <tr class="separator:a8d6d9f1cc52acef63b2bcb922d9f312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e4df71234a29f422d7efaff27e4bbb" id="r_a03e4df71234a29f422d7efaff27e4bbb"><td class="memItemLeft" align="right" valign="top"><a id="a03e4df71234a29f422d7efaff27e4bbb" name="a03e4df71234a29f422d7efaff27e4bbb"></a>
+typedef struct <a class="el" href="structui__group__s.html">ui_group_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_group_t</b></td></tr>
+<tr class="separator:a03e4df71234a29f422d7efaff27e4bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab319ff33cb05ce60cb3e35af842e80b7" id="r_ab319ff33cb05ce60cb3e35af842e80b7"><td class="memItemLeft" align="right" valign="top"><a id="ab319ff33cb05ce60cb3e35af842e80b7" name="ab319ff33cb05ce60cb3e35af842e80b7"></a>
 typedef struct <a class="el" href="structui__multipress__event__s.html">ui_multipress_event_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_multipress_event_t</b></td></tr>
 <tr class="separator:ab319ff33cb05ce60cb3e35af842e80b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -505,8 +511,10 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86">UI_EVENT_TYPE_KEY</a> = 16
 , <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477">UI_EVENT_TYPE_SPECIAL</a> = 32
+, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa7bff103c505cbd6c3ed04e9c9aa278f1">UI_EVENT_TYPE_COMPONENT_CMD</a> = 0x0100
 , <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e">UI_EVENT_TYPE_INTERNAL</a> = 0x4000
-, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48">UI_EVENT_TYPE_KEY_UP</a> = 0x100000
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48">UI_EVENT_TYPE_KEY_UP</a> = 0x100000
 <br />
  }</td></tr>
 <tr class="memdesc:ad23e002626a9b8e5b06b32178419966f"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI event types.  <a href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f">More...</a><br /></td></tr>
@@ -523,6 +531,23 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a7ac7cfdad39bdbb473237794863b19b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event source.  <a href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9">More...</a><br /></td></tr>
 <tr class="separator:a7ac7cfdad39bdbb473237794863b19b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c0abfc010b6de14277b0838a0adfea" id="r_a98c0abfc010b6de14277b0838a0adfea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea">ui_component_flag_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaaff0dcac4f2ee444a881ae7405f2603a4">UI_COMPONENT_FLAG_SELECTABLE</a> = 0x0001
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa142481754928f011e61898219db9a902">UI_COMPONENT_FLAG_FOCUS_TERMINAL</a> = 0x0002
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c">UI_COMPONENT_FLAG_FOCUS_SKIP</a> = 0x0004
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105">UI_DESKBOX_FLAG_ALLOW_HOME_KEY</a> = 0x0100
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331">UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS</a> = 0x0400
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd">UI_GROUP_FLAG_ALLOW_EXIT_WORD</a> = 0x0400
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1">UI_DESKBOX_FLAG_ALLOW_SEARCH_KEYS</a> = 0x0800
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64">UI_DESKBOX_FLAG_ALLOW_INLINE_SEARCH</a> = 0x2000
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49">UI_GROUP_FLAG_NO_AUTO_DRAW</a> = 0x8000
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d">UI_DESKBOX_FLAG_ALLOW_APP_KEYS</a> = 0x8000
+<br />
+ }</td></tr>
+<tr class="memdesc:a98c0abfc010b6de14277b0838a0adfea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component behavior flag. Usually set by the component constructors but can sometimes change over time.  <a href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea">More...</a><br /></td></tr>
+<tr class="separator:a98c0abfc010b6de14277b0838a0adfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -577,6 +602,7 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common data structures and definitions for the UI subsystem. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Unstable. The definitions here and in the other UI headers are work-in-progress and may change in incompatible ways at any time without notice. Do not depend on it. </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1d12e70227ae6a8e9e465d42a4de14bf" name="a1d12e70227ae6a8e9e465d42a4de14bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d12e70227ae6a8e9e465d42a4de14bf">&#9670;&#160;</a></span>RGB_FROM_U8</h2>
@@ -943,7 +969,7 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224" name="a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224"></a>PRINT_INVERT_ALT&#160;</td><td class="fielddoc"><p>Seems to be an alternative version of <code>PRINT_INVERT</code>. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c" name="a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c"></a>PRINT_UNDERSCORE_ONLY&#160;</td><td class="fielddoc"><p>Draw underscores only. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd>Speculation based on behavior. Seems to be very broken with &gt;16px fonts. </dd></dl>
 </td></tr>
 </table>
 
@@ -964,7 +990,7 @@ Enumerations</h2></td></tr>
 <p>Process flags for string printing only. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752" name="a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752"></a>PRINT_STR_ENCODING_BIG5&#160;</td><td class="fielddoc"><p>Assume text encoding to be BIG5 instead of UTF-16. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6" name="a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6"></a>PRINT_STR_ENCODING_GB18030&#160;</td><td class="fielddoc"><p>Assume text encoding to be GB18030 instead of UTF-16. </p>
 </td></tr>
@@ -1074,6 +1100,48 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="a98c0abfc010b6de14277b0838a0adfea" name="a98c0abfc010b6de14277b0838a0adfea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c0abfc010b6de14277b0838a0adfea">&#9670;&#160;</a></span>ui_component_flag_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea">ui_component_flag_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Component behavior flag. Usually set by the component constructors but can sometimes change over time. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo:</a></b></dt><dd>Still need to verify these on the real machine. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaaff0dcac4f2ee444a881ae7405f2603a4" name="a98c0abfc010b6de14277b0838a0adfeaaff0dcac4f2ee444a881ae7405f2603a4"></a>UI_COMPONENT_FLAG_SELECTABLE&#160;</td><td class="fielddoc"><p>Component is selectable. </p>
+<p>Affects the group child selection through <a class="el" href="group_8h.html#adc4808c682b8e99a70264537a6881460" title="Set the current component ring head to child.">PGROUP_setCurrent()</a> and input event processing. Setting this bit to 0 blocks the above 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa142481754928f011e61898219db9a902" name="a98c0abfc010b6de14277b0838a0adfeaa142481754928f011e61898219db9a902"></a>UI_COMPONENT_FLAG_FOCUS_TERMINAL&#160;</td><td class="fielddoc"><p>Component is a terminal node when resolving focusable items in a container. </p>
+<p>When a container is finding a component that will gain focus, stop the search immediately and select this component. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c" name="a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c"></a>UI_COMPONENT_FLAG_FOCUS_SKIP&#160;</td><td class="fielddoc"><p>Skip this component when searching for the next component to gain focus. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105" name="a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105"></a>UI_DESKBOX_FLAG_ALLOW_HOME_KEY&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920ad5b83418c285e43af5d3a87b4d4049d7" title="Return to home menu.">KEY_HOME</a> presses to system. </p>
+<p>Requires <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331" title="Deskbox-specific: Handle system events and exit word.">UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS</a> to properly work. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331" name="a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331"></a>UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Handle system events and exit word. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd" name="a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd"></a>UI_GROUP_FLAG_ALLOW_EXIT_WORD&#160;</td><td class="fielddoc"><p>Group-specific: Handle exit word. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1" name="a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1"></a>UI_DESKBOX_FLAG_ALLOW_SEARCH_KEYS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble translator and search key presses to system. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64" name="a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64"></a>UI_DESKBOX_FLAG_ALLOW_INLINE_SEARCH&#160;</td><td class="fielddoc"><p>Deskbox-specific: Invoke the inline search modal with the selected text instead of the normal search modal on <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920a6754ac630f586113c555d224c98a3351" title="Launch the unified search app.">KEY_SEARCH</a> key presses. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49" name="a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49"></a>UI_GROUP_FLAG_NO_AUTO_DRAW&#160;</td><td class="fielddoc"><p>Group-specific: Do not periodically draw this group. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d" name="a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d"></a>UI_DESKBOX_FLAG_ALLOW_APP_KEYS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble app key presses to system. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a6edd1204219bf9674aa3bf2d1212c67c" name="a6edd1204219bf9674aa3bf2d1212c67c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6edd1204219bf9674aa3bf2d1212c67c">&#9670;&#160;</a></span>ui_event_internal_e</h2>
 
@@ -1150,6 +1218,8 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" name="ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86"></a>UI_EVENT_TYPE_KEY&#160;</td><td class="fielddoc"><p>Key(s) pressed. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477" name="ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477"></a>UI_EVENT_TYPE_SPECIAL&#160;</td><td class="fielddoc"><p>Special event. Bypasses the queues and sets a flag instead. Exact purpose is unclear. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa7bff103c505cbd6c3ed04e9c9aa278f1" name="ad23e002626a9b8e5b06b32178419966fa7bff103c505cbd6c3ed04e9c9aa278f1"></a>UI_EVENT_TYPE_COMPONENT_CMD&#160;</td><td class="fielddoc"><p>Inter-component communication. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e" name="ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e"></a>UI_EVENT_TYPE_INTERNAL&#160;</td><td class="fielddoc"><p>Internal system event. Exact purpose is unclear. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c" title="Internal system UI event types.">ui_event_internal_e</a> </dd></dl>

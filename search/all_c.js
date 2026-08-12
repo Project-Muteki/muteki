@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['magic_0',['magic',['../structdevio__descriptor__t.html#a910e2b021acaf414cde76acb18e4a0b0',1,'devio_descriptor_t::magic'],['../structnand__params__t.html#ad8bd4407970629b300858e9ac6b38083',1,'nand_params_t::magic'],['../structthread__s.html#a76fa0c7a73730f6448a8510709e47ca7',1,'thread_s::magic'],['../structsemaphore__s.html#af38b5696860a0d47d6e0afcfd80092dd',1,'semaphore_s::magic'],['../structevent__s.html#a8f852906872e66494a69f688c1bee050',1,'event_s::magic'],['../structcritical__section__s.html#a80b61cc3eb1efc9d6e0cd064a7d3b286',1,'critical_section_s::magic'],['../structmessage__queue__s.html#af3bca8e265fb74ad8f4f7cff6d774bc2',1,'message_queue_s::magic'],['../structlcd__surface__s.html#a2f96dc50466bc9202ca976c204f589bc',1,'lcd_surface_s::magic']]],
+  ['magic_0',['magic',['../structlcd__surface__s.html#a2f96dc50466bc9202ca976c204f589bc',1,'lcd_surface_s::magic'],['../structdevio__descriptor__t.html#a910e2b021acaf414cde76acb18e4a0b0',1,'devio_descriptor_t::magic'],['../structnand__params__t.html#ad8bd4407970629b300858e9ac6b38083',1,'nand_params_t::magic'],['../structthread__s.html#a76fa0c7a73730f6448a8510709e47ca7',1,'thread_s::magic'],['../structsemaphore__s.html#af38b5696860a0d47d6e0afcfd80092dd',1,'semaphore_s::magic'],['../structevent__s.html#a8f852906872e66494a69f688c1bee050',1,'event_s::magic'],['../structcritical__section__s.html#a80b61cc3eb1efc9d6e0cd064a7d3b286',1,'critical_section_s::magic'],['../structmessage__queue__s.html#af3bca8e265fb74ad8f4f7cff6d774bc2',1,'message_queue_s::magic']]],
   ['mapped_5fexecutable_1',['mapped_executable',['../structloader__loaded__s.html#a036142b6a161eff0b5a30e0fcb259376',1,'loader_loaded_s']]],
   ['mb_5fbutton_5fcancel_2',['MB_BUTTON_CANCEL',['../messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a297851b94671c90ad1e8fa22fca718c8',1,'messagebox.h']]],
   ['mb_5fbutton_5fno_3',['MB_BUTTON_NO',['../messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a6cb123b721b6d4fee9b67a4c0d4b322e',1,'messagebox.h']]],
@@ -48,12 +48,13 @@ var searchData=
   ['mkfs_5fno_5fspace_5fleft_45',['MKFS_NO_SPACE_LEFT',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a60be8f32c7aaa175053bde79072ab9c8',1,'errno.h']]],
   ['mkfs_5fprompt_46',['MKFS_PROMPT',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a5bd85d72489c426e763e0bef0aab4d1f',1,'errno.h']]],
   ['mkfs_5funsupported_47',['MKFS_UNSUPPORTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a1351c2e286691222603122d92288fcc4',1,'errno.h']]],
-  ['month_48',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
-  ['mtime_49',['mtime',['../structfind__context__t.html#a8db4ad446253092c6ca188481f352b51',1,'find_context_t']]],
-  ['multipress_5fevents_50',['multipress_events',['../structui__event__prime__s.html#a6eaabdd633230c8ab3ba306a575e015e',1,'ui_event_prime_s']]],
-  ['muteki_51',['muteki',['../index.html',1,'']]],
-  ['muteki_20into_20a_20c_20compiler_52',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['muteki_20syscall_20definitions_20into_20ghidra_53',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['muteki_20using_20clangd_54',['Developing muteki using clangd',['../index.html#autotoc_md3',1,'']]],
-  ['muteki_2eh_55',['muteki.h',['../muteki_8h.html',1,'']]]
+  ['modals_2eh_48',['modals.h',['../modals_8h.html',1,'']]],
+  ['month_49',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
+  ['mtime_50',['mtime',['../structfind__context__t.html#a8db4ad446253092c6ca188481f352b51',1,'find_context_t']]],
+  ['multipress_5fevents_51',['multipress_events',['../structui__event__prime__s.html#a6eaabdd633230c8ab3ba306a575e015e',1,'ui_event_prime_s']]],
+  ['muteki_52',['muteki',['../index.html',1,'']]],
+  ['muteki_20into_20a_20c_20compiler_53',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
+  ['muteki_20syscall_20definitions_20into_20ghidra_54',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
+  ['muteki_20using_20clangd_55',['Developing muteki using clangd',['../index.html#autotoc_md3',1,'']]],
+  ['muteki_2eh_56',['muteki.h',['../muteki_8h.html',1,'']]]
 ];
