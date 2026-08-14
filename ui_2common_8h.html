@@ -112,8 +112,7 @@ $(document).ready(function(){initNavTree('ui_2common_8h.html',''); initResizable
 
 <p>Common data structures and definitions for the UI subsystem.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="loader_8h_source.html">muteki/loader.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="muteki_2threading_8h_source.html">muteki/threading.h</a>&gt;</code><br />
 </div>
@@ -167,6 +166,12 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__deskbox__s.html">ui_deskbox_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deskbox container struct.  <a href="structui__deskbox__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__imageclip__s.html">ui_imageclip_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image clip subwidget struct.  <a href="structui__imageclip__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__menu__entry__s.html">ui_menu_entry_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu entry struct used by various menu widgets.  <a href="structui__menu__entry__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__button__s.html">ui_button_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button widget struct.  <a href="structui__button__s.html#details">More...</a><br /></td></tr>
@@ -232,10 +237,10 @@ typedef struct <a class="el" href="structui__group__s.html">ui_group_s</a>&#160;
 typedef struct <a class="el" href="structui__deskbox__s.html">ui_deskbox_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_deskbox_t</b></td></tr>
 <tr class="separator:a10c95ad98170201fcc24e64a8d5603fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70d380631833dccc06e5f46405369c51" id="r_a70d380631833dccc06e5f46405369c51"><td class="memItemLeft" align="right" valign="top"><a id="a70d380631833dccc06e5f46405369c51" name="a70d380631833dccc06e5f46405369c51"></a>
-typedef struct ui_imageclip_s&#160;</td><td class="memItemRight" valign="bottom"><b>ui_imageclip_t</b></td></tr>
+typedef struct <a class="el" href="structui__imageclip__s.html">ui_imageclip_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_imageclip_t</b></td></tr>
 <tr class="separator:a70d380631833dccc06e5f46405369c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed84caafdc452f8ac25c68d1db0854dc" id="r_aed84caafdc452f8ac25c68d1db0854dc"><td class="memItemLeft" align="right" valign="top"><a id="aed84caafdc452f8ac25c68d1db0854dc" name="aed84caafdc452f8ac25c68d1db0854dc"></a>
-typedef struct ui_menu_entry_s&#160;</td><td class="memItemRight" valign="bottom"><b>ui_menu_entry_t</b></td></tr>
+typedef struct <a class="el" href="structui__menu__entry__s.html">ui_menu_entry_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_menu_entry_t</b></td></tr>
 <tr class="separator:aed84caafdc452f8ac25c68d1db0854dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6205daaaac059331281406d9a5b89099" id="r_a6205daaaac059331281406d9a5b89099"><td class="memItemLeft" align="right" valign="top"><a id="a6205daaaac059331281406d9a5b89099" name="a6205daaaac059331281406d9a5b89099"></a>
 typedef struct <a class="el" href="structui__button__s.html">ui_button_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_button_t</b></td></tr>
@@ -568,7 +573,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a98c0abfc010b6de14277b0838a0adfea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component behavior flag. Usually set by the component constructors but can sometimes change over time.  <a href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea">More...</a><br /></td></tr>
 <tr class="separator:a98c0abfc010b6de14277b0838a0adfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb26d7b87229534c893fcc1fc9bd9c5b" id="r_adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memItemLeft" align="right" valign="top"><a id="adb26d7b87229534c893fcc1fc9bd9c5b" name="adb26d7b87229534c893fcc1fc9bd9c5b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ui_deskbox_flag_e</b> { <br />
+<tr class="memitem:adb26d7b87229534c893fcc1fc9bd9c5b" id="r_adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memItemLeft" align="right" valign="top"><a id="adb26d7b87229534c893fcc1fc9bd9c5b" name="adb26d7b87229534c893fcc1fc9bd9c5b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b">ui_deskbox_flag_e</a> { <br />
 &#160;&#160;<b>UI_DESKBOX_FLAG_NONE</b> = 0x0000
 , <b>UI_DESKBOX_FLAG_CLOSE_BUTTON</b> = 0x0001
 , <b>UI_DESKBOX_FLAG_DONE_BUTTON</b> = 0x0002
@@ -585,12 +590,28 @@ Enumerations</h2></td></tr>
 , <b>UI_DESKBOX_FLAG_NO_CLOSE_BUTTON</b> = 0x80000
 <br />
  }</td></tr>
+<tr class="memdesc:adb26d7b87229534c893fcc1fc9bd9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deskbox style flags. <br /></td></tr>
 <tr class="separator:adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8004bfe5c13384578c2557715250ff9" id="r_ae8004bfe5c13384578c2557715250ff9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9">ui_button_visual_state_e</a> { <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b">UI_BUTTON_VS_RELEASED</a> = 0
 , <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a76463a4e90f6ed5c97a7b0051a761ca1">UI_BUTTON_VS_PRESSED</a> = 1
 , <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf">UI_BUTTON_VS_UNCHANGED</a> = 10
  }</td></tr>
+<tr class="memdesc:ae8004bfe5c13384578c2557715250ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid button visual states.  <a href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9">More...</a><br /></td></tr>
 <tr class="separator:ae8004bfe5c13384578c2557715250ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4f94b1f5f25b6851bed8ddc11881f6" id="r_a9b4f94b1f5f25b6851bed8ddc11881f6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6">ui_menu_entry_attribute_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970">UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER</a> = 0x0001
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb">UI_MENU_ENTRY_ATTR_BOLD_FONT</a> = 0x0002
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7">UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE</a> = 0x0004
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b">UI_MENU_ENTRY_ATTR_VALUE_ITEM</a> = 0x0080
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec">UI_MENU_ENTRY_ATTR_ENCODING_CP950</a> = 0x0100
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a3e9c972bf77b4054b5517cd083af1401">UI_MENU_ENTRY_ATTR_ENCODING_CP936</a> = 0x0200
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ad6b3105a9b27076f99ff8406aec1ffcd">UI_MENU_ENTRY_ATTR_ENCODING_CP949</a> = 0x0400
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e">UI_MENU_ENTRY_ATTR_DEFAULT</a> = 0x1000
+<br />
+ }</td></tr>
+<tr class="memdesc:a9b4f94b1f5f25b6851bed8ddc11881f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu entry attribute flags.  <a href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6">More...</a><br /></td></tr>
+<tr class="separator:a9b4f94b1f5f25b6851bed8ddc11881f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -1154,6 +1175,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Valid button visual states. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b" name="ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b"></a>UI_BUTTON_VS_RELEASED&#160;</td><td class="fielddoc"><p>Redraw the button as released/not pressed down. </p>
 </td></tr>
@@ -1291,6 +1314,41 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48" name="ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48"></a>UI_EVENT_TYPE_KEY_UP&#160;</td><td class="fielddoc"><p>Key(s) released. </p>
 <p>Available on S3C and TCC boards. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a9b4f94b1f5f25b6851bed8ddc11881f6" name="a9b4f94b1f5f25b6851bed8ddc11881f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4f94b1f5f25b6851bed8ddc11881f6">&#9670;&#160;</a></span>ui_menu_entry_attribute_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6">ui_menu_entry_attribute_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Menu entry attribute flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970" name="a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970"></a>UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER&#160;</td><td class="fielddoc"><p>Put separator after current item. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb" name="a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb"></a>UI_MENU_ENTRY_ATTR_BOLD_FONT&#160;</td><td class="fielddoc"><p>Use bold font for label. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7" name="a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7"></a>UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE&#160;</td><td class="fielddoc"><p>Put separator before current item. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b" name="a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b"></a>UI_MENU_ENTRY_ATTR_VALUE_ITEM&#160;</td><td class="fielddoc"><p>Set the index of this item as the selection value by default (?). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec" name="a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec"></a>UI_MENU_ENTRY_ATTR_ENCODING_CP950&#160;</td><td class="fielddoc"><p>Label uses 8-bit encoding with codepage CP950. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a3e9c972bf77b4054b5517cd083af1401" name="a9b4f94b1f5f25b6851bed8ddc11881f6a3e9c972bf77b4054b5517cd083af1401"></a>UI_MENU_ENTRY_ATTR_ENCODING_CP936&#160;</td><td class="fielddoc"><p>Label uses 8-bit encoding with codepage CP936. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ad6b3105a9b27076f99ff8406aec1ffcd" name="a9b4f94b1f5f25b6851bed8ddc11881f6ad6b3105a9b27076f99ff8406aec1ffcd"></a>UI_MENU_ENTRY_ATTR_ENCODING_CP949&#160;</td><td class="fielddoc"><p>Label uses 8-bit encoding with codepage CP949. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e" name="a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e"></a>UI_MENU_ENTRY_ATTR_DEFAULT&#160;</td><td class="fielddoc"><p>Default selection. </p>
+<p>Make this item (or the last item that had this bit set) the default selection. Prioritized over the default item selected by PopUpList(). </p>
 </td></tr>
 </table>
 

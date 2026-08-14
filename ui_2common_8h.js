@@ -16,6 +16,8 @@ var ui_2common_8h =
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "ui_group_s", "structui__group__s.html", "structui__group__s" ],
     [ "ui_deskbox_s", "structui__deskbox__s.html", "structui__deskbox__s" ],
+    [ "ui_imageclip_s", "structui__imageclip__s.html", "structui__imageclip__s" ],
+    [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
     [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
     [ "RGB_FROM_U8", "ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf", null ],
     [ "lcd_rotate_callback_t", "ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5", null ],
@@ -283,6 +285,20 @@ var ui_2common_8h =
       [ "UI_COMPONENT_FLAG_GROUP_NO_AUTO_DRAW", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa653ed570a24b61678c2c376d74e8a0cf", null ],
       [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaacb70d8c18b2809812b6337dae1c6c0e5", null ]
     ] ],
+    [ "ui_deskbox_flag_e", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b", [
+      [ "UI_DESKBOX_FLAG_NONE", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bab277d1ca42c031a5c5263cf1b537cdd8", null ],
+      [ "UI_DESKBOX_FLAG_CLOSE_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12", null ],
+      [ "UI_DESKBOX_FLAG_DONE_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba49e0083904415a4c450f4c51f8ef508f", null ],
+      [ "UI_DESKBOX_FLAG_SAVE_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bad181fe33471d86e053214f8aa5907fdc", null ],
+      [ "UI_DESKBOX_FLAG_HELP_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bacf86a72eab163f8947f110630b877a5b", null ],
+      [ "UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bae3c179b13848baa0471b832c4838b1c9", null ],
+      [ "UI_DESKBOX_FLAG_STYLE_NORMAL", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5baf1d189f8c1084165e2eb2108777986b9", null ],
+      [ "UI_DESKBOX_FLAG_STYLE_NONE", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5babb32daabc9e41c7e17600148777443b2", null ],
+      [ "UI_DESKBOX_FLAG_STYLE_SIMPLE", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba8b6a19eef87a3d1d88dc8e432a2c331c", null ],
+      [ "UI_DESKBOX_FLAG_STYLE_FLOAT", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5baa847a4e6f5087b0b1a57ba252b9e0545", null ],
+      [ "UI_DESKBOX_FLAG_STYLE_POPUP", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bafa4ff3f87fad00d35d36f911b69082b6", null ],
+      [ "UI_DESKBOX_FLAG_NO_CLOSE_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bae62bdaed1c97d94965a25b95df61777c", null ]
+    ] ],
     [ "ui_event_internal_e", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c", [
       [ "UI_EVENT_INTERNAL_FLAG", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98", null ],
       [ "UI_EVENT_INTERNAL_BATTERY_CHECK_REQUEST", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67ca57be2af4f02f321d5917eb1f9e22e697", null ],
@@ -303,5 +319,15 @@ var ui_2common_8h =
       [ "UI_EVENT_TYPE_COMPONENT_CMD", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa7bff103c505cbd6c3ed04e9c9aa278f1", null ],
       [ "UI_EVENT_TYPE_INTERNAL", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e", null ],
       [ "UI_EVENT_TYPE_KEY_UP", "ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48", null ]
+    ] ],
+    [ "ui_menu_entry_attribute_e", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6", [
+      [ "UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970", null ],
+      [ "UI_MENU_ENTRY_ATTR_BOLD_FONT", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb", null ],
+      [ "UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7", null ],
+      [ "UI_MENU_ENTRY_ATTR_VALUE_ITEM", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b", null ],
+      [ "UI_MENU_ENTRY_ATTR_ENCODING_CP950", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec", null ],
+      [ "UI_MENU_ENTRY_ATTR_ENCODING_CP936", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a3e9c972bf77b4054b5517cd083af1401", null ],
+      [ "UI_MENU_ENTRY_ATTR_ENCODING_CP949", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ad6b3105a9b27076f99ff8406aec1ffcd", null ],
+      [ "UI_MENU_ENTRY_ATTR_DEFAULT", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e", null ]
     ] ]
 ];

@@ -22,7 +22,7 @@ var searchData=
   ['codec_19',['codec',['../structpcm__config__s.html#a57af4653f44f20892481886dcc74669e',1,'pcm_config_s']]],
   ['common_2eh_20',['common.h',['../common_8h.html',1,'(Global Namespace)'],['../ui_2common_8h.html',1,'(Global Namespace)']]],
   ['compiler_21',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['component_22',['component',['../structui__group__s.html#ac5fa201c0fe65cadf1f9072ad12c5c53',1,'ui_group_s']]],
+  ['component_22',['component',['../structui__group__s.html#ac5fa201c0fe65cadf1f9072ad12c5c53',1,'ui_group_s::component'],['../structui__imageclip__s.html#a32fa1d77aa515f98882ee1d91de1d70b',1,'ui_imageclip_s::component']]],
   ['component_2eh_23',['component.h',['../component_8h.html',1,'']]],
   ['config_24',['config',['../structpcm__codec__context__s.html#ab1cd9b4f3f517195ce12312bad58e414',1,'pcm_codec_context_s']]],
   ['content_5flayout_25',['content_layout',['../structui__button__s.html#ace17945fd66d41a326c8ae332686c94f',1,'ui_button_s']]],
@@ -41,7 +41,7 @@ var searchData=
   ['current_38',['current',['../structui__group__s.html#a90b1cef2888abfe5c1a288b80a4ba4e5',1,'ui_group_s']]],
   ['current_5fdirection_39',['current_direction',['../structpcm__config__s.html#a36e9fe4580be48d47caafcf3afa2313e',1,'pcm_config_s']]],
   ['current_5fpath_5fidx_40',['current_path_idx',['../structfilepicker__context__s.html#a34e900ec24de31ded28ab38de48976fd',1,'filepicker_context_s']]],
-  ['cursor_41',['cursor',['../structlcd__thread__safe__s.html#a72f9c20ab87115656833f63ca15a4d86',1,'lcd_thread_safe_s::cursor'],['../structlcd__base__s.html#a3c4d1649ea7f939a797a1ffe81c44b6b',1,'lcd_base_s::cursor']]],
+  ['cursor_41',['cursor',['../structlcd__base__s.html#a3c4d1649ea7f939a797a1ffe81c44b6b',1,'lcd_base_s::cursor'],['../structlcd__thread__safe__s.html#a72f9c20ab87115656833f63ca15a4d86',1,'lcd_thread_safe_s::cursor']]],
   ['cursorlock_42',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
   ['cursorunlock_43',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
 ];

@@ -47,6 +47,8 @@ var annotated_dup =
     [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
     [ "ui_event_sys_s", "structui__event__sys__s.html", "structui__event__sys__s" ],
     [ "ui_group_s", "structui__group__s.html", "structui__group__s" ],
+    [ "ui_imageclip_s", "structui__imageclip__s.html", "structui__imageclip__s" ],
+    [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
     [ "ui_rect_s", "structui__rect__s.html", "structui__rect__s" ]

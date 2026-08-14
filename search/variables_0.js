@@ -9,5 +9,6 @@ var searchData=
   ['atime_6',['atime',['../structfind__context__t.html#a9c229b360aea9e0a18486814133b5700',1,'find_context_t']]],
   ['attrib_7',['attrib',['../structfind__context__t.html#aaf9ef2d837fe910e1689598cf233633e',1,'find_context_t']]],
   ['attrib_5fmask_8',['attrib_mask',['../structfind__context__t.html#aac9e4050319bcc44aa33e99cf7e24b5c',1,'find_context_t']]],
-  ['available_5fmultipress_5fevents_9',['available_multipress_events',['../structui__event__prime__s.html#ae7fd9495aa212efdc49db13682ffa88f',1,'ui_event_prime_s']]]
+  ['attributes_9',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
+  ['available_5fmultipress_5fevents_10',['available_multipress_events',['../structui__event__prime__s.html#ae7fd9495aa212efdc49db13682ffa88f',1,'ui_event_prime_s']]]
 ];

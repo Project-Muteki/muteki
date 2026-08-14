@@ -38,6 +38,6 @@ var searchData=
   ['subfile_5foffset_35',['subfile_offset',['../structloader__file__descriptor__s.html#a773bb3cac196ae6f283c6aed4ae39cef',1,'loader_file_descriptor_s']]],
   ['subroutine_36',['subroutine',['../structapplet__args__v4__s.html#aed89902e32144107f2c110e9c4d9ef07',1,'applet_args_v4_s']]],
   ['suffix_37',['suffix',['../structfn__parts__lfn__s.html#a14cbf03a5596fddc0d7a8e824fb8630d',1,'fn_parts_lfn_s::suffix'],['../structfn__parts__dos__s.html#a3f6d118360724840bb7898f87b0b4fa9',1,'fn_parts_dos_s::suffix']]],
-  ['surface_38',['surface',['../structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a',1,'lcd_base_s::surface'],['../structlcd__thread__safe__s.html#a13044bc39c21be2f0e91c788826363ac',1,'lcd_thread_safe_s::surface']]],
+  ['surface_38',['surface',['../structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a',1,'lcd_base_s::surface'],['../structlcd__thread__safe__s.html#a13044bc39c21be2f0e91c788826363ac',1,'lcd_thread_safe_s::surface'],['../structui__imageclip__s.html#a54641ce19ed28d98955d5bf135ac7498',1,'ui_imageclip_s::surface']]],
   ['surface_5fcolor_39',['surface_color',['../structui__deskbox__s.html#a757e119d212448deea4735a2a047c6de',1,'ui_deskbox_s']]]
 ];

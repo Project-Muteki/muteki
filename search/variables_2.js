@@ -6,7 +6,7 @@ var searchData=
   ['cmdmenu_5fentries_3',['cmdmenu_entries',['../structui__deskbox__s.html#ae56f2ce155564717182b4727d76bd131',1,'ui_deskbox_s']]],
   ['cmdmenu_5ftitle_4',['cmdmenu_title',['../structui__deskbox__s.html#ac470fcbbc322a254d109018b2773f50b',1,'ui_deskbox_s']]],
   ['codec_5',['codec',['../structpcm__config__s.html#a57af4653f44f20892481886dcc74669e',1,'pcm_config_s']]],
-  ['component_6',['component',['../structui__group__s.html#ac5fa201c0fe65cadf1f9072ad12c5c53',1,'ui_group_s']]],
+  ['component_6',['component',['../structui__group__s.html#ac5fa201c0fe65cadf1f9072ad12c5c53',1,'ui_group_s::component'],['../structui__imageclip__s.html#a32fa1d77aa515f98882ee1d91de1d70b',1,'ui_imageclip_s::component']]],
   ['config_7',['config',['../structpcm__codec__context__s.html#ab1cd9b4f3f517195ce12312bad58e414',1,'pcm_codec_context_s']]],
   ['content_5flayout_8',['content_layout',['../structui__button__s.html#ace17945fd66d41a326c8ae332686c94f',1,'ui_button_s']]],
   ['cs_9',['cs',['../structlcd__lock__s.html#ab9de7c4cb2bac64ed550cef95ddd593c',1,'lcd_lock_s::cs'],['../structlcd__thread__safe__s.html#a46a34cbc680af9d6f33f77fae68b9bf0',1,'lcd_thread_safe_s::cs']]],

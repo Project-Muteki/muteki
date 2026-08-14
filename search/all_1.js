@@ -25,6 +25,7 @@ var searchData=
   ['attr_5fsystem_22',['ATTR_SYSTEM',['../fs_8h.html#ace1ad2f8a5bced52258703097c71e8d4a042322e39228b60dba114d89308f6f79',1,'fs.h']]],
   ['attrib_23',['attrib',['../structfind__context__t.html#aaf9ef2d837fe910e1689598cf233633e',1,'find_context_t']]],
   ['attrib_5fmask_24',['attrib_mask',['../structfind__context__t.html#aac9e4050319bcc44aa33e99cf7e24b5c',1,'find_context_t']]],
-  ['audio_2eh_25',['audio.h',['../audio_8h.html',1,'']]],
-  ['available_5fmultipress_5fevents_26',['available_multipress_events',['../structui__event__prime__s.html#ae7fd9495aa212efdc49db13682ffa88f',1,'ui_event_prime_s']]]
+  ['attributes_25',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
+  ['audio_2eh_26',['audio.h',['../audio_8h.html',1,'']]],
+  ['available_5fmultipress_5fevents_27',['available_multipress_events',['../structui__event__prime__s.html#ae7fd9495aa212efdc49db13682ffa88f',1,'ui_event_prime_s']]]
 ];
