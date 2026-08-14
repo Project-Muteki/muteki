@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['on_5fdraw_0',['on_draw',['../structui__component__s.html#aae7e87991174116e83bb255db0c31cb6',1,'ui_component_s']]],
-  ['on_5ferase_5fbg_1',['on_erase_bg',['../structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811',1,'ui_component_s']]],
-  ['on_5fevent_2',['on_event',['../structui__component__s.html#aab73249ff71fabef7bc2d13a6d56e67a',1,'ui_component_s']]],
-  ['on_5fexec_3',['on_exec',['../structui__group__s.html#a41d6260f2b622110d4c03676cc056c4d',1,'ui_group_s']]],
-  ['on_5ffind_5fprevious_4',['on_find_previous',['../structui__group__s.html#acddf31d44f3415c9b0f7588830be2543',1,'ui_group_s']]],
-  ['on_5finsert_5',['on_insert',['../structui__group__s.html#a8d3e2cb9f8f0924f1240314e098bb046',1,'ui_group_s']]],
-  ['on_5fnoentry_6',['on_noentry',['../structdevio__descriptor__t.html#a282c61d15d84304863cded08f39fdf47',1,'devio_descriptor_t']]],
-  ['on_5fredraw_7',['on_redraw',['../structui__group__s.html#aa4520bf4c2eb233d099e7bce818157c4',1,'ui_group_s']]],
-  ['on_5fset_5fcurrent_8',['on_set_current',['../structui__group__s.html#a64df702dd1c367df6c0f7094ff370244',1,'ui_group_s']]],
-  ['on_5fset_5fstate_9',['on_set_state',['../structui__component__s.html#adb06d5df117e2ec49284ff3ff3012232',1,'ui_component_s']]]
+  ['on_5fclose_5fhelp_5ffiles_0',['on_close_help_files',['../structui__deskbox__s.html#adb9df399190dc7ba736ac73a73f4f78e',1,'ui_deskbox_s']]],
+  ['on_5fdraw_1',['on_draw',['../structui__component__s.html#aae7e87991174116e83bb255db0c31cb6',1,'ui_component_s']]],
+  ['on_5fdraw_5fborder_2',['on_draw_border',['../structui__button__s.html#a5d7243017c58918c6822cca0f1ff1c68',1,'ui_button_s']]],
+  ['on_5fdraw_5fcontent_3',['on_draw_content',['../structui__button__s.html#a07b44ab2b508ef8a0a51bd78cd55ea11',1,'ui_button_s']]],
+  ['on_5fdraw_5ftitle_4',['on_draw_title',['../structui__deskbox__s.html#afd2001387907ca6246d162e32131f4fb',1,'ui_deskbox_s']]],
+  ['on_5ferase_5fbg_5',['on_erase_bg',['../structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811',1,'ui_component_s']]],
+  ['on_5fevent_6',['on_event',['../structui__component__s.html#aab73249ff71fabef7bc2d13a6d56e67a',1,'ui_component_s']]],
+  ['on_5fexec_7',['on_exec',['../structui__group__s.html#a41d6260f2b622110d4c03676cc056c4d',1,'ui_group_s']]],
+  ['on_5ffind_5fprevious_8',['on_find_previous',['../structui__group__s.html#acddf31d44f3415c9b0f7588830be2543',1,'ui_group_s']]],
+  ['on_5finsert_9',['on_insert',['../structui__group__s.html#a8d3e2cb9f8f0924f1240314e098bb046',1,'ui_group_s']]],
+  ['on_5fnoentry_10',['on_noentry',['../structdevio__descriptor__t.html#a282c61d15d84304863cded08f39fdf47',1,'devio_descriptor_t']]],
+  ['on_5fopen_5fhelp_5ffiles_11',['on_open_help_files',['../structui__deskbox__s.html#a7ce46e9081039f88501866ebeb301969',1,'ui_deskbox_s']]],
+  ['on_5fredraw_12',['on_redraw',['../structui__group__s.html#aa4520bf4c2eb233d099e7bce818157c4',1,'ui_group_s']]],
+  ['on_5fset_5fcurrent_13',['on_set_current',['../structui__group__s.html#a64df702dd1c367df6c0f7094ff370244',1,'ui_group_s']]],
+  ['on_5fset_5fstate_14',['on_set_state',['../structui__component__s.html#adb06d5df117e2ec49284ff3ff3012232',1,'ui_component_s']]],
+  ['on_5fsystem_5fevent_15',['on_system_event',['../structui__deskbox__s.html#a6d6c4bbe405793b51518ec8e61c385e0',1,'ui_deskbox_s']]]
 ];

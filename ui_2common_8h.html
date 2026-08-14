@@ -112,7 +112,9 @@ $(document).ready(function(){initNavTree('ui_2common_8h.html',''); initResizable
 
 <p>Common data structures and definitions for the UI subsystem.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loader_8h_source.html">muteki/loader.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="muteki_2threading_8h_source.html">muteki/threading.h</a>&gt;</code><br />
 </div>
 <p><a href="ui_2common_8h_source.html">Go to the source code of this file.</a></p>
@@ -162,6 +164,12 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__group__s.html">ui_group_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI component group/container struct.  <a href="structui__group__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__deskbox__s.html">ui_deskbox_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deskbox container struct.  <a href="structui__deskbox__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__button__s.html">ui_button_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button widget struct.  <a href="structui__button__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -220,6 +228,18 @@ typedef struct <a class="el" href="structui__component__s.html">ui_component_s</
 <tr class="memitem:a03e4df71234a29f422d7efaff27e4bbb" id="r_a03e4df71234a29f422d7efaff27e4bbb"><td class="memItemLeft" align="right" valign="top"><a id="a03e4df71234a29f422d7efaff27e4bbb" name="a03e4df71234a29f422d7efaff27e4bbb"></a>
 typedef struct <a class="el" href="structui__group__s.html">ui_group_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_group_t</b></td></tr>
 <tr class="separator:a03e4df71234a29f422d7efaff27e4bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c95ad98170201fcc24e64a8d5603fc" id="r_a10c95ad98170201fcc24e64a8d5603fc"><td class="memItemLeft" align="right" valign="top"><a id="a10c95ad98170201fcc24e64a8d5603fc" name="a10c95ad98170201fcc24e64a8d5603fc"></a>
+typedef struct <a class="el" href="structui__deskbox__s.html">ui_deskbox_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_deskbox_t</b></td></tr>
+<tr class="separator:a10c95ad98170201fcc24e64a8d5603fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d380631833dccc06e5f46405369c51" id="r_a70d380631833dccc06e5f46405369c51"><td class="memItemLeft" align="right" valign="top"><a id="a70d380631833dccc06e5f46405369c51" name="a70d380631833dccc06e5f46405369c51"></a>
+typedef struct ui_imageclip_s&#160;</td><td class="memItemRight" valign="bottom"><b>ui_imageclip_t</b></td></tr>
+<tr class="separator:a70d380631833dccc06e5f46405369c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed84caafdc452f8ac25c68d1db0854dc" id="r_aed84caafdc452f8ac25c68d1db0854dc"><td class="memItemLeft" align="right" valign="top"><a id="aed84caafdc452f8ac25c68d1db0854dc" name="aed84caafdc452f8ac25c68d1db0854dc"></a>
+typedef struct ui_menu_entry_s&#160;</td><td class="memItemRight" valign="bottom"><b>ui_menu_entry_t</b></td></tr>
+<tr class="separator:aed84caafdc452f8ac25c68d1db0854dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6205daaaac059331281406d9a5b89099" id="r_a6205daaaac059331281406d9a5b89099"><td class="memItemLeft" align="right" valign="top"><a id="a6205daaaac059331281406d9a5b89099" name="a6205daaaac059331281406d9a5b89099"></a>
+typedef struct <a class="el" href="structui__button__s.html">ui_button_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_button_t</b></td></tr>
+<tr class="separator:a6205daaaac059331281406d9a5b89099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab319ff33cb05ce60cb3e35af842e80b7" id="r_ab319ff33cb05ce60cb3e35af842e80b7"><td class="memItemLeft" align="right" valign="top"><a id="ab319ff33cb05ce60cb3e35af842e80b7" name="ab319ff33cb05ce60cb3e35af842e80b7"></a>
 typedef struct <a class="el" href="structui__multipress__event__s.html">ui_multipress_event_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_multipress_event_t</b></td></tr>
 <tr class="separator:ab319ff33cb05ce60cb3e35af842e80b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -535,19 +555,42 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaaff0dcac4f2ee444a881ae7405f2603a4">UI_COMPONENT_FLAG_SELECTABLE</a> = 0x0001
 , <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa142481754928f011e61898219db9a902">UI_COMPONENT_FLAG_FOCUS_TERMINAL</a> = 0x0002
 , <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c">UI_COMPONENT_FLAG_FOCUS_SKIP</a> = 0x0004
-, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105">UI_DESKBOX_FLAG_ALLOW_HOME_KEY</a> = 0x0100
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa5894cafc7e7a6f641c44130944213112">UI_COMPONENT_FLAG_DESKBOX_ALLOW_HOME_KEY</a> = 0x0100
 , <br />
-&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331">UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS</a> = 0x0400
-, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd">UI_GROUP_FLAG_ALLOW_EXIT_WORD</a> = 0x0400
-, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1">UI_DESKBOX_FLAG_ALLOW_SEARCH_KEYS</a> = 0x0800
-, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64">UI_DESKBOX_FLAG_ALLOW_INLINE_SEARCH</a> = 0x2000
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaab2a3dbf32186fb444c5b8b0aa895ef7a">UI_COMPONENT_FLAG_DESKBOX_ALLOW_SYSTEM_EVENTS</a> = 0x0400
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaac139c0c8c1d087723c539036ad32fc2e">UI_COMPONENT_FLAG_GROUP_ALLOW_EXIT_WORD</a> = 0x0400
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa6b2bf2575665c0a483f7c89f2b0c7bc0">UI_COMPONENT_FLAG_DESKBOX_ALLOW_SEARCH_KEYS</a> = 0x0800
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaae3b18dc0422170f2107f21f496cbe476">UI_COMPONENT_FLAG_DESKBOX_ALLOW_INLINE_SEARCH</a> = 0x2000
 , <br />
-&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49">UI_GROUP_FLAG_NO_AUTO_DRAW</a> = 0x8000
-, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d">UI_DESKBOX_FLAG_ALLOW_APP_KEYS</a> = 0x8000
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa653ed570a24b61678c2c376d74e8a0cf">UI_COMPONENT_FLAG_GROUP_NO_AUTO_DRAW</a> = 0x8000
+, <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaacb70d8c18b2809812b6337dae1c6c0e5">UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS</a> = 0x8000
 <br />
  }</td></tr>
 <tr class="memdesc:a98c0abfc010b6de14277b0838a0adfea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component behavior flag. Usually set by the component constructors but can sometimes change over time.  <a href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea">More...</a><br /></td></tr>
 <tr class="separator:a98c0abfc010b6de14277b0838a0adfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb26d7b87229534c893fcc1fc9bd9c5b" id="r_adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memItemLeft" align="right" valign="top"><a id="adb26d7b87229534c893fcc1fc9bd9c5b" name="adb26d7b87229534c893fcc1fc9bd9c5b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ui_deskbox_flag_e</b> { <br />
+&#160;&#160;<b>UI_DESKBOX_FLAG_NONE</b> = 0x0000
+, <b>UI_DESKBOX_FLAG_CLOSE_BUTTON</b> = 0x0001
+, <b>UI_DESKBOX_FLAG_DONE_BUTTON</b> = 0x0002
+, <b>UI_DESKBOX_FLAG_SAVE_BUTTON</b> = 0x0004
+, <br />
+&#160;&#160;<b>UI_DESKBOX_FLAG_HELP_BUTTON</b> = 0x0008
+, <b>UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON</b> = 0x0010
+, <b>UI_DESKBOX_FLAG_STYLE_NORMAL</b> = 0x0000
+, <b>UI_DESKBOX_FLAG_STYLE_NONE</b> = 0x0100
+, <br />
+&#160;&#160;<b>UI_DESKBOX_FLAG_STYLE_SIMPLE</b> = 0x0200
+, <b>UI_DESKBOX_FLAG_STYLE_FLOAT</b> = 0x0400
+, <b>UI_DESKBOX_FLAG_STYLE_POPUP</b> = 0x0800
+, <b>UI_DESKBOX_FLAG_NO_CLOSE_BUTTON</b> = 0x80000
+<br />
+ }</td></tr>
+<tr class="separator:adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8004bfe5c13384578c2557715250ff9" id="r_ae8004bfe5c13384578c2557715250ff9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9">ui_button_visual_state_e</a> { <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b">UI_BUTTON_VS_RELEASED</a> = 0
+, <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a76463a4e90f6ed5c97a7b0051a761ca1">UI_BUTTON_VS_PRESSED</a> = 1
+, <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf">UI_BUTTON_VS_UNCHANGED</a> = 10
+ }</td></tr>
+<tr class="separator:ae8004bfe5c13384578c2557715250ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -766,7 +809,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="af7cc0af385a79f99f5634d7050ad9920a49a7d146f3f01df824cda600f61f6601" name="af7cc0af385a79f99f5634d7050ad9920a49a7d146f3f01df824cda600f61f6601"></a>KEY_FONT&#160;</td><td class="fielddoc"><p>Change font size. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="af7cc0af385a79f99f5634d7050ad9920ab4c5d0aeca12b4f3d7cbd4e939599690" name="af7cc0af385a79f99f5634d7050ad9920ab4c5d0aeca12b4f3d7cbd4e939599690"></a>KEY_LANG_CHN&#160;</td><td class="fielddoc"><p>Trigger TTS in Mandarain Chinese. </p>
+<tr><td class="fieldname"><a id="af7cc0af385a79f99f5634d7050ad9920ab4c5d0aeca12b4f3d7cbd4e939599690" name="af7cc0af385a79f99f5634d7050ad9920ab4c5d0aeca12b4f3d7cbd4e939599690"></a>KEY_LANG_CHN&#160;</td><td class="fielddoc"><p>Trigger TTS in Mandarin Chinese. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af7cc0af385a79f99f5634d7050ad9920a84de7c48f1d08128901b1867af3ac8e8" name="af7cc0af385a79f99f5634d7050ad9920a84de7c48f1d08128901b1867af3ac8e8"></a>KEY_LANG_YUE&#160;</td><td class="fielddoc"><p>Trigger TTS in Cantonese. </p>
 </td></tr>
@@ -1100,6 +1143,28 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="ae8004bfe5c13384578c2557715250ff9" name="ae8004bfe5c13384578c2557715250ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8004bfe5c13384578c2557715250ff9">&#9670;&#160;</a></span>ui_button_visual_state_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9">ui_button_visual_state_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b" name="ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b"></a>UI_BUTTON_VS_RELEASED&#160;</td><td class="fielddoc"><p>Redraw the button as released/not pressed down. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae8004bfe5c13384578c2557715250ff9a76463a4e90f6ed5c97a7b0051a761ca1" name="ae8004bfe5c13384578c2557715250ff9a76463a4e90f6ed5c97a7b0051a761ca1"></a>UI_BUTTON_VS_PRESSED&#160;</td><td class="fielddoc"><p>Redraw the button as pressed down. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf" name="ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf"></a>UI_BUTTON_VS_UNCHANGED&#160;</td><td class="fielddoc"><p>Do nothing and keep the current on-screen state. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a98c0abfc010b6de14277b0838a0adfea" name="a98c0abfc010b6de14277b0838a0adfea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98c0abfc010b6de14277b0838a0adfea">&#9670;&#160;</a></span>ui_component_flag_e</h2>
 
@@ -1123,20 +1188,20 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c" name="a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c"></a>UI_COMPONENT_FLAG_FOCUS_SKIP&#160;</td><td class="fielddoc"><p>Skip this component when searching for the next component to gain focus. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105" name="a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105"></a>UI_DESKBOX_FLAG_ALLOW_HOME_KEY&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920ad5b83418c285e43af5d3a87b4d4049d7" title="Return to home menu.">KEY_HOME</a> presses to system. </p>
-<p>Requires <a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331" title="Deskbox-specific: Handle system events and exit word.">UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS</a> to properly work. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa5894cafc7e7a6f641c44130944213112" name="a98c0abfc010b6de14277b0838a0adfeaa5894cafc7e7a6f641c44130944213112"></a>UI_COMPONENT_FLAG_DESKBOX_ALLOW_HOME_KEY&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920ad5b83418c285e43af5d3a87b4d4049d7" title="Return to home menu.">KEY_HOME</a> presses to system. </p>
+<p>Requires ::UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS to properly work. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331" name="a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331"></a>UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Handle system events and exit word. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaab2a3dbf32186fb444c5b8b0aa895ef7a" name="a98c0abfc010b6de14277b0838a0adfeaab2a3dbf32186fb444c5b8b0aa895ef7a"></a>UI_COMPONENT_FLAG_DESKBOX_ALLOW_SYSTEM_EVENTS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Handle system events and exit word. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd" name="a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd"></a>UI_GROUP_FLAG_ALLOW_EXIT_WORD&#160;</td><td class="fielddoc"><p>Group-specific: Handle exit word. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaac139c0c8c1d087723c539036ad32fc2e" name="a98c0abfc010b6de14277b0838a0adfeaac139c0c8c1d087723c539036ad32fc2e"></a>UI_COMPONENT_FLAG_GROUP_ALLOW_EXIT_WORD&#160;</td><td class="fielddoc"><p>Group-specific: Handle exit word. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1" name="a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1"></a>UI_DESKBOX_FLAG_ALLOW_SEARCH_KEYS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble translator and search key presses to system. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa6b2bf2575665c0a483f7c89f2b0c7bc0" name="a98c0abfc010b6de14277b0838a0adfeaa6b2bf2575665c0a483f7c89f2b0c7bc0"></a>UI_COMPONENT_FLAG_DESKBOX_ALLOW_SEARCH_KEYS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble translator and search key presses to system. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64" name="a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64"></a>UI_DESKBOX_FLAG_ALLOW_INLINE_SEARCH&#160;</td><td class="fielddoc"><p>Deskbox-specific: Invoke the inline search modal with the selected text instead of the normal search modal on <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920a6754ac630f586113c555d224c98a3351" title="Launch the unified search app.">KEY_SEARCH</a> key presses. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaae3b18dc0422170f2107f21f496cbe476" name="a98c0abfc010b6de14277b0838a0adfeaae3b18dc0422170f2107f21f496cbe476"></a>UI_COMPONENT_FLAG_DESKBOX_ALLOW_INLINE_SEARCH&#160;</td><td class="fielddoc"><p>Deskbox-specific: Invoke the inline search modal with the selected text instead of the normal search modal on <a class="el" href="ui_2common_8h.html#af7cc0af385a79f99f5634d7050ad9920a6754ac630f586113c555d224c98a3351" title="Launch the unified search app.">KEY_SEARCH</a> key presses. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49" name="a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49"></a>UI_GROUP_FLAG_NO_AUTO_DRAW&#160;</td><td class="fielddoc"><p>Group-specific: Do not periodically draw this group. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa653ed570a24b61678c2c376d74e8a0cf" name="a98c0abfc010b6de14277b0838a0adfeaa653ed570a24b61678c2c376d74e8a0cf"></a>UI_COMPONENT_FLAG_GROUP_NO_AUTO_DRAW&#160;</td><td class="fielddoc"><p>Group-specific: Do not periodically draw this group. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d" name="a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d"></a>UI_DESKBOX_FLAG_ALLOW_APP_KEYS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble app key presses to system. </p>
+<tr><td class="fieldname"><a id="a98c0abfc010b6de14277b0838a0adfeaacb70d8c18b2809812b6337dae1c6c0e5" name="a98c0abfc010b6de14277b0838a0adfeaacb70d8c18b2809812b6337dae1c6c0e5"></a>UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS&#160;</td><td class="fielddoc"><p>Deskbox-specific: Bubble app key presses to system. </p>
 </td></tr>
 </table>
 

@@ -139,11 +139,91 @@ Functions</h2></td></tr>
 <tr class="memitem:add3363d6b708d4c621b4b01278b71746" id="r_add3363d6b708d4c621b4b01278b71746"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui__component__s.html">ui_component_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#add3363d6b708d4c621b4b01278b71746">PGROUP_preView</a> (<a class="el" href="structui__group__s.html">ui_group_t</a> *self)</td></tr>
 <tr class="memdesc:add3363d6b708d4c621b4b01278b71746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find and return the component that has the <a class="el" href="structui__group__s.html#a90b1cef2888abfe5c1a288b80a4ba4e5" title="The current head item.">ui_group_t::current</a> component as its next component.  <br /></td></tr>
 <tr class="separator:add3363d6b708d4c621b4b01278b71746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff40fe49bfb203776c049ab4fa43474" id="r_a0ff40fe49bfb203776c049ab4fa43474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a0ff40fe49bfb203776c049ab4fa43474">Destroy</a> (<a class="el" href="structui__group__s.html">ui_group_t</a> *group)</td></tr>
+<tr class="memdesc:a0ff40fe49bfb203776c049ab4fa43474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose a group component and free up its memory.  <br /></td></tr>
+<tr class="separator:a0ff40fe49bfb203776c049ab4fa43474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9488ef6eb4f116b8bbda0d38411ff79e" id="r_a9488ef6eb4f116b8bbda0d38411ff79e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a9488ef6eb4f116b8bbda0d38411ff79e">SetDeskBoxReturn</a> (<a class="el" href="structui__group__s.html">ui_group_t</a> *self, int execution_result)</td></tr>
+<tr class="memdesc:a9488ef6eb4f116b8bbda0d38411ff79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the group execution result.  <br /></td></tr>
+<tr class="separator:a9488ef6eb4f116b8bbda0d38411ff79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259c2a967db255dd68dbf3481c7f0e1b" id="r_a259c2a967db255dd68dbf3481c7f0e1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a259c2a967db255dd68dbf3481c7f0e1b">SetExitWordVal</a> (int val)</td></tr>
+<tr class="memdesc:a259c2a967db255dd68dbf3481c7f0e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the exit word.  <br /></td></tr>
+<tr class="separator:a259c2a967db255dd68dbf3481c7f0e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6074243dcd07b02defdcec876abb4046" id="r_a6074243dcd07b02defdcec876abb4046"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a6074243dcd07b02defdcec876abb4046">GetExitWordVal</a> (void)</td></tr>
+<tr class="memdesc:a6074243dcd07b02defdcec876abb4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current exit word.  <br /></td></tr>
+<tr class="separator:a6074243dcd07b02defdcec876abb4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Component group/container methods. </p>
 <p>Methods of a ui_group_t but as syscalls. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a0ff40fe49bfb203776c049ab4fa43474" name="a0ff40fe49bfb203776c049ab4fa43474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ff40fe49bfb203776c049ab4fa43474">&#9670;&#160;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__group__s.html">ui_group_t</a> *&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dispose a group component and free up its memory. </p>
+<p>This function sets the exit word to 0, sends itself a destroy event, restores the exit value, and frees up the memory occupied by this component. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10177</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>The group object to be freed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
+ </p>
+
+</div>
+</div>
+<a id="a6074243dcd07b02defdcec876abb4046" name="a6074243dcd07b02defdcec876abb4046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6074243dcd07b02defdcec876abb4046">&#9670;&#160;</a></span>GetExitWordVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetExitWordVal </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current exit word. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1017e</code></dd></dl>
+<p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
+ </p><dl class="section return"><dt>Returns</dt><dd>The exit word value. </dd></dl>
+
+</div>
+</div>
 <a id="a4b715c4a56d8cb20d12268805954e9b9" name="a4b715c4a56d8cb20d12268805954e9b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b715c4a56d8cb20d12268805954e9b9">&#9670;&#160;</a></span>PGROUP_draw()</h2>
 
@@ -485,6 +565,88 @@ Functions</h2></td></tr>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="a9488ef6eb4f116b8bbda0d38411ff79e" name="a9488ef6eb4f116b8bbda0d38411ff79e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9488ef6eb4f116b8bbda0d38411ff79e">&#9670;&#160;</a></span>SetDeskBoxReturn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDeskBoxReturn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__group__s.html">ui_group_t</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>execution_result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the group execution result. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x1017b</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>The group object. </td></tr>
+    <tr><td class="paramname">execution_result</td><td>The new execution result. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a259c2a967db255dd68dbf3481c7f0e1b" name="a259c2a967db255dd68dbf3481c7f0e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259c2a967db255dd68dbf3481c7f0e1b">&#9670;&#160;</a></span>SetExitWordVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SetExitWordVal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the exit word. </p>
+<p>Setting this to a non-zero value (usually 1) causes eligible components to exit early after an event handling callback. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1017d</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val</td><td>The new value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The old value. </dd></dl>
 
 </div>
 </div>

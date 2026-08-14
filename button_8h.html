@@ -102,8 +102,6 @@ $(document).ready(function(){initNavTree('button_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">button.h File Reference</div></div>
 </div><!--header-->
@@ -115,34 +113,23 @@ $(document).ready(function(){initNavTree('button_8h.html',''); initResizable(); 
 </div>
 <p><a href="button_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__widget__button__s.html">ui_widget_button_s</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a53ba244b524267f75b5b2f6a49168934" id="r_a53ba244b524267f75b5b2f6a49168934"><td class="memItemLeft" align="right" valign="top"><a id="a53ba244b524267f75b5b2f6a49168934" name="a53ba244b524267f75b5b2f6a49168934"></a>
-typedef struct <a class="el" href="structui__widget__button__s.html">ui_widget_button_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_widget_button_t</b></td></tr>
-<tr class="separator:a53ba244b524267f75b5b2f6a49168934"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2f7fcf7966b58a965ec4bcadf9e450b8" id="r_a2f7fcf7966b58a965ec4bcadf9e450b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui__widget__button__s.html">ui_widget_button_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="button_8h.html#a2f7fcf7966b58a965ec4bcadf9e450b8">CreateButton</a> (unsigned short tag, short x0, short y0, short x1, short y1, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *label, unsigned int event, unsigned short flags)</td></tr>
-<tr class="memdesc:a2f7fcf7966b58a965ec4bcadf9e450b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a button widget object.  <br /></td></tr>
-<tr class="separator:a2f7fcf7966b58a965ec4bcadf9e450b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639ac5f8fd8cccdfa624dbaa965c1f76" id="r_a639ac5f8fd8cccdfa624dbaa965c1f76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui__button__s.html">ui_button_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="button_8h.html#a639ac5f8fd8cccdfa624dbaa965c1f76">CreateButton</a> (unsigned short tag, short x0, short y0, short x1, short y1, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *label, unsigned int event, unsigned short flags)</td></tr>
+<tr class="memdesc:a639ac5f8fd8cccdfa624dbaa965c1f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a button widget object.  <br /></td></tr>
+<tr class="separator:a639ac5f8fd8cccdfa624dbaa965c1f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Button widget API. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a2f7fcf7966b58a965ec4bcadf9e450b8" name="a2f7fcf7966b58a965ec4bcadf9e450b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f7fcf7966b58a965ec4bcadf9e450b8">&#9670;&#160;</a></span>CreateButton()</h2>
+<a id="a639ac5f8fd8cccdfa624dbaa965c1f76" name="a639ac5f8fd8cccdfa624dbaa965c1f76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639ac5f8fd8cccdfa624dbaa965c1f76">&#9670;&#160;</a></span>CreateButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structui__widget__button__s.html">ui_widget_button_t</a> * CreateButton </td>
+          <td class="memname"><a class="el" href="structui__button__s.html">ui_button_t</a> * CreateButton </td>
           <td>(</td>
           <td class="paramtype">unsigned short&#160;</td>
           <td class="paramname"><em>tag</em>, </td>
@@ -198,7 +185,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a button widget object. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd><p class="startdd">Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd><p class="startdd">Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
 <p class="enddd">Figure out the flags. </p>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>

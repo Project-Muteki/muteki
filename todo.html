@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <div class="textblock"><dl class="reflist">
 <dt>Global <a class="el" href="ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a>  </dt>
 <dd><a class="anchor" id="_todo000020"></a>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?)  </dd>
-<dt>Global <a class="el" href="button_8h.html#a2f7fcf7966b58a965ec4bcadf9e450b8">CreateButton</a>  (unsigned short tag, short x0, short y0, short x1, short y1, UTF16 *label, unsigned int event, unsigned short flags)</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000035"></a>Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
+<dt>Global <a class="el" href="button_8h.html#a639ac5f8fd8cccdfa624dbaa965c1f76">CreateButton</a>  (unsigned short tag, short x0, short y0, short x1, short y1, UTF16 *label, unsigned int event, unsigned short flags)</dt>
+<dd><p class="startdd"><a class="anchor" id="_todo000036"></a>Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
 <p class="interdd"></p>
 <p class="enddd">Figure out the flags.  </p>
 </dd>
@@ -121,9 +121,9 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Global <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1">EXEC_UNSUPPORTED</a>  </dt>
 <dd><a class="anchor" id="_todo000008"></a>Double check.  </dd>
 <dt>Global <a class="el" href="structfilepicker__context__s.html#aee6a3db6942684f44fe844bd3e10589d">filepicker_context_s::status</a>  </dt>
-<dd><a class="anchor" id="_todo000034"></a>Document what each status meant.  </dd>
+<dd><a class="anchor" id="_todo000035"></a>Document what each status meant.  </dd>
 <dt>Global <a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deb">filepicker_flag_e</a>  </dt>
-<dd><a class="anchor" id="_todo000033"></a>Add more.  </dd>
+<dd><a class="anchor" id="_todo000034"></a>Add more.  </dd>
 <dt>Global <a class="el" href="canvas_8h.html#ae2e04adcbe5e0869e2276210424764ae">GetCursorType</a>  (void)</dt>
 <dd><a class="anchor" id="_todo000018"></a>Document the actual type as an enum.  </dd>
 <dt>Global <a class="el" href="structlcd__base__s.html#a50a963898afa5cbfb9e213eea857a42d">lcd_base_s::depth_bytes</a>  </dt>
@@ -175,7 +175,9 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Struct <a class="el" href="structui__component__s.html">ui_component_s</a>  </dt>
 <dd><a class="anchor" id="_todo000024"></a>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal.  </dd>
 <dt>Global <a class="el" href="structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811">ui_component_s::on_erase_bg</a>  )(ui_component_t *self)</dt>
-<dd><a class="anchor" id="_todo000032"></a>Figure out exactly what this does. </dd>
+<dd><a class="anchor" id="_todo000032"></a>Figure out exactly what this does.  </dd>
+<dt>Global <a class="el" href="structui__deskbox__s.html#a37938a1e77e74253781e0fc204553d7c">ui_deskbox_s::ime_control</a>  </dt>
+<dd><a class="anchor" id="_todo000033"></a>Document the format. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

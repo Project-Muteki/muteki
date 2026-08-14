@@ -15,6 +15,8 @@ var ui_2common_8h =
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "ui_group_s", "structui__group__s.html", "structui__group__s" ],
+    [ "ui_deskbox_s", "structui__deskbox__s.html", "structui__deskbox__s" ],
+    [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
     [ "RGB_FROM_U8", "ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf", null ],
     [ "lcd_rotate_callback_t", "ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5", null ],
     [ "blit_flag_e", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd", [
@@ -264,17 +266,22 @@ var ui_2common_8h =
       [ "DASH_24_8", "ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cba2886105d82f41b62325f1553fd7e34ca", null ],
       [ "DASH_CUSTOM", "ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9", null ]
     ] ],
+    [ "ui_button_visual_state_e", "ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9", [
+      [ "UI_BUTTON_VS_RELEASED", "ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b", null ],
+      [ "UI_BUTTON_VS_PRESSED", "ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a76463a4e90f6ed5c97a7b0051a761ca1", null ],
+      [ "UI_BUTTON_VS_UNCHANGED", "ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf", null ]
+    ] ],
     [ "ui_component_flag_e", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea", [
       [ "UI_COMPONENT_FLAG_SELECTABLE", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaaff0dcac4f2ee444a881ae7405f2603a4", null ],
       [ "UI_COMPONENT_FLAG_FOCUS_TERMINAL", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa142481754928f011e61898219db9a902", null ],
       [ "UI_COMPONENT_FLAG_FOCUS_SKIP", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa249bffaf1d4ee97a4ed729d1f7e9b02c", null ],
-      [ "UI_DESKBOX_FLAG_ALLOW_HOME_KEY", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa57596672a1a59d26f358ad60f3154105", null ],
-      [ "UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa501510e110c4e863c86fddd86726d331", null ],
-      [ "UI_GROUP_FLAG_ALLOW_EXIT_WORD", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaadae3fd5a3138469dfa448c33316be6bd", null ],
-      [ "UI_DESKBOX_FLAG_ALLOW_SEARCH_KEYS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa05c50cb1bea92fe70a5128e3896a49c1", null ],
-      [ "UI_DESKBOX_FLAG_ALLOW_INLINE_SEARCH", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaaa64818b9747020328597cf6889787c64", null ],
-      [ "UI_GROUP_FLAG_NO_AUTO_DRAW", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaae2219ab1f5c6792c73e96c60f8ea3d49", null ],
-      [ "UI_DESKBOX_FLAG_ALLOW_APP_KEYS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa62f544d31abfbcde8702d792e54c0d5d", null ]
+      [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_HOME_KEY", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa5894cafc7e7a6f641c44130944213112", null ],
+      [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_SYSTEM_EVENTS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaab2a3dbf32186fb444c5b8b0aa895ef7a", null ],
+      [ "UI_COMPONENT_FLAG_GROUP_ALLOW_EXIT_WORD", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaac139c0c8c1d087723c539036ad32fc2e", null ],
+      [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_SEARCH_KEYS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa6b2bf2575665c0a483f7c89f2b0c7bc0", null ],
+      [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_INLINE_SEARCH", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaae3b18dc0422170f2107f21f496cbe476", null ],
+      [ "UI_COMPONENT_FLAG_GROUP_NO_AUTO_DRAW", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa653ed570a24b61678c2c376d74e8a0cf", null ],
+      [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaacb70d8c18b2809812b6337dae1c6c0e5", null ]
     ] ],
     [ "ui_event_internal_e", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67c", [
       [ "UI_EVENT_INTERNAL_FLAG", "ui_2common_8h.html#a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98", null ],

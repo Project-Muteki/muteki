@@ -12,7 +12,7 @@ var searchData=
   ['errno_5fns_5fuser_9',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]],
   ['errno_5fuser_5fe_10',['errno_user_e',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455',1,'errno.h']]],
   ['error_5ftext_11',['error_text',['../structfilepicker__context__s.html#aa92a3c64f754fbea6d4d0dfd514443a8',1,'filepicker_context_s']]],
-  ['event_12',['event',['../structui__message__s.html#a536d210016f0ed33f5598827e423ef43',1,'ui_message_s::event'],['../structui__widget__button__s.html#ac4d0cceb9ba8eb2e2524f0dcf39b57c5',1,'ui_widget_button_s::event'],['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s::event']]],
+  ['event_12',['event',['../structui__message__s.html#a536d210016f0ed33f5598827e423ef43',1,'ui_message_s::event'],['../structui__button__s.html#a30f5b2d31fab1d156efc4eab1c798b32',1,'ui_button_s::event'],['../structthread__s.html#abed2d6ccdc71dc3b5d7aeec72775c5f9',1,'thread_s::event']]],
   ['event_2eh_13',['event.h',['../event_8h.html',1,'']]],
   ['event_5fs_14',['event_s',['../structevent__s.html',1,'']]],
   ['event_5fsource_15',['event_source',['../structui__event__prime__s.html#ac09475750d01972f246b9fd8395fb800',1,'ui_event_prime_s::event_source'],['../structui__event__base__s.html#a20d75100ff0228e977f9ff911428a56e',1,'ui_event_base_s::event_source']]],
