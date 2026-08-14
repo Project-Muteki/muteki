@@ -4,6 +4,9 @@ CompileFlags:
     CompilationDatabase: './builddir'
     BuiltinHeaders: QueryDriver
 
+Completion:
+    HeaderInsertion: Never
+
 Style:
     AngledHeaders:
         - './include/.*'

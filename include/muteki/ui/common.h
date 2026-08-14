@@ -14,7 +14,6 @@
 #ifndef __MUTEKI_UI_COMMON_H__
 #define __MUTEKI_UI_COMMON_H__
 
-#include <assert.h>
 #include <muteki/common.h>
 #include <muteki/loader.h>
 #include <muteki/threading.h>
@@ -731,6 +730,9 @@ enum ui_component_flag_e {
     UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS = 0x8000,
 };
 
+/**
+ * @brief Deskbox style flags.
+ */
 enum ui_deskbox_flag_e {
     UI_DESKBOX_FLAG_NONE = 0x0000,
     UI_DESKBOX_FLAG_CLOSE_BUTTON = 0x0001,
@@ -746,6 +748,9 @@ enum ui_deskbox_flag_e {
     UI_DESKBOX_FLAG_NO_CLOSE_BUTTON = 0x80000,
 };
 
+/**
+ * @brief Valid button visual states.
+ */
 enum ui_button_visual_state_e {
     /**
      * @brief Redraw the button as released/not pressed down.
@@ -759,6 +764,46 @@ enum ui_button_visual_state_e {
      * @brief Do nothing and keep the current on-screen state.
      */
     UI_BUTTON_VS_UNCHANGED = 10,
+};
+
+/**
+ * @brief Menu entry attribute flags.
+ */
+enum ui_menu_entry_attribute_e {
+    /**
+     * @brief Put separator after current item.
+     */
+    UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER = 0x0001,
+    /**
+     * @brief Use bold font for label.
+     */
+    UI_MENU_ENTRY_ATTR_BOLD_FONT = 0x0002,
+    /**
+     * @brief Put separator before current item.
+     */
+    UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE = 0x0004,
+    /**
+     * @brief Set the index of this item as the selection value by default (?).
+     */
+    UI_MENU_ENTRY_ATTR_VALUE_ITEM = 0x0080,
+    /**
+     * @brief Label uses 8-bit encoding with codepage CP950.
+     */
+    UI_MENU_ENTRY_ATTR_ENCODING_CP950 = 0x0100,
+    /**
+     * @brief Label uses 8-bit encoding with codepage CP936.
+     */
+    UI_MENU_ENTRY_ATTR_ENCODING_CP936 = 0x0200,
+    /**
+     * @brief Label uses 8-bit encoding with codepage CP949.
+     */
+    UI_MENU_ENTRY_ATTR_ENCODING_CP949 = 0x0400,
+    /**
+     * @brief Default selection.
+     * @details Make this item (or the last item that had this bit set) the default selection.
+     * Prioritized over the default item selected by PopUpList().
+     */
+    UI_MENU_ENTRY_ATTR_DEFAULT = 0x1000,
 };
 
 /**
@@ -1655,6 +1700,90 @@ struct ui_deskbox_s {
      * @brief Reserved for subtype use.
      */
     unsigned int user_data;
+};
+
+/**
+ * @brief Image clip subwidget struct.
+ * @details This does not exist independently, rather it is optionally instantiated by the deskbox as a part of it.
+ */
+struct ui_imageclip_s {
+    /**
+     * @brief The inherited component struct.
+     */
+    ui_component_t component;
+    /**
+     * @brief Replace image callback.
+     */
+    bool (*on_replace_image)(
+        ui_imageclip_t *self,
+        unsigned int x,
+        unsigned int y,
+        lcd_surface_t *surface,
+        int free_surface,
+        int notify_redraw
+    );
+    /**
+     * @brief Allocated surface that contains the background image.
+     */
+    lcd_surface_t *surface;
+    /**
+     * @brief Background image ID if it is a built-in image. Otherwise it should be `-1`.
+     */
+    int builtin_background_id;
+    /**
+     * @brief Unknown. Probably padding bytes.
+     */
+    int unk_0x40;
+    /**
+     * @brief X offset within the background image.
+     */
+    short image_offset_x;
+    /**
+     * @brief Y offset within the background image.
+     */
+    short image_offset_y;
+    /**
+     * @brief Non-zero if the image surface is allocated by us.
+     */
+    unsigned short image_allocated;
+    /**
+     * @brief Blit mode.
+     * @see blit_flag_e
+     */
+    unsigned short blit_mode;
+    /**
+     * @brief Unknown. Seems unused.
+     */
+    int unk_0x4c[5];
+};
+
+/**
+ * @brief Menu entry struct used by various menu widgets.
+ */
+struct ui_menu_entry_s {
+    union {
+        /**
+         * @brief UTF-16-encoded label text.
+         */
+        UTF16 label_wide[24];
+        /**
+         * @brief 8-bit-encoded label text.
+         */
+        char label_narrow[48];
+    };
+    /**
+     * @brief Event value emitted when selected.
+     */
+    unsigned int event;
+    /**
+     * @brief Attributes.
+     * @see ui_menu_entry_attribute_e
+     */
+    unsigned short attributes;
+    /**
+     * @brief Unknown. Probably padding bytes.
+     */
+    short unk_0x36;
 };
 
 /**
