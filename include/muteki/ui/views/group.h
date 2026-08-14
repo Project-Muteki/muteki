@@ -97,6 +97,42 @@ extern int PGROUP_execute(ui_group_t *self);
  */
 extern ui_component_t *PGROUP_preView(ui_group_t *self);
 
+/**
+ * @brief Dispose a group component and free up its memory.
+ * @details This function sets the exit word to 0, sends itself a destroy event, restores the exit value, and frees up
+ * the memory occupied by this component.
+ * @x_syscall_num `0x10177`
+ * @param group The group object to be freed.
+ * @x_void_return
+ */
+extern void Destroy(ui_group_t *group);
+
+/**
+ * @brief Set the group execution result.
+ * @x_syscall_num `0x1017b`
+ * @param self The group object.
+ * @param execution_result The new execution result.
+ */
+extern void SetDeskBoxReturn(ui_group_t *self, int execution_result);
+
+/**
+ * @brief Set the exit word.
+ * @details Setting this to a non-zero value (usually 1) causes eligible components to exit early after an event
+ * handling callback.
+ * @x_syscall_num `0x1017d`
+ * @param val The new value.
+ * @return The old value.
+ */
+extern int SetExitWordVal(int val);
+
+/**
+ * @brief Get the current exit word.
+ * @x_syscall_num `0x1017e`
+ * @x_void_param
+ * @return The exit word value.
+ */
+extern int GetExitWordVal(void);
+
 #ifdef __cplusplus
 } // extern "C"
 #endif

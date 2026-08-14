@@ -14,7 +14,9 @@
 #ifndef __MUTEKI_UI_COMMON_H__
 #define __MUTEKI_UI_COMMON_H__
 
+#include <assert.h>
 #include <muteki/common.h>
+#include <muteki/loader.h>
 #include <muteki/threading.h>
 
 #ifdef __cplusplus
@@ -324,7 +326,7 @@ enum keycode_e {
     KEY_Z = 'Z',
     /* 0x80 */
     /**
-     * @brief Trigger TTS in Mandarain Chinese.
+     * @brief Trigger TTS in Mandarin Chinese.
      */
     KEY_LANG_CHN = 0x80,
     /**
@@ -702,31 +704,61 @@ enum ui_component_flag_e {
      * @brief Deskbox-specific: Bubble ::KEY_HOME presses to system.
      * @details Requires ::UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS to properly work.
      */
-    UI_DESKBOX_FLAG_ALLOW_HOME_KEY = 0x0100,
+    UI_COMPONENT_FLAG_DESKBOX_ALLOW_HOME_KEY = 0x0100,
     /**
      * @brief Deskbox-specific: Handle system events and exit word.
      */
-    UI_DESKBOX_FLAG_ALLOW_SYSTEM_EVENTS = 0x0400,
+    UI_COMPONENT_FLAG_DESKBOX_ALLOW_SYSTEM_EVENTS = 0x0400,
     /**
      * @brief Group-specific: Handle exit word.
      */
-    UI_GROUP_FLAG_ALLOW_EXIT_WORD = 0x0400,
+    UI_COMPONENT_FLAG_GROUP_ALLOW_EXIT_WORD = 0x0400,
     /**
      * @brief Deskbox-specific: Bubble translator and search key presses to system.
      */
-    UI_DESKBOX_FLAG_ALLOW_SEARCH_KEYS = 0x0800,
+    UI_COMPONENT_FLAG_DESKBOX_ALLOW_SEARCH_KEYS = 0x0800,
     /**
      * @brief Deskbox-specific: Invoke the inline search modal with the selected text instead of the normal search modal on ::KEY_SEARCH key presses.
      */
-    UI_DESKBOX_FLAG_ALLOW_INLINE_SEARCH = 0x2000,
+    UI_COMPONENT_FLAG_DESKBOX_ALLOW_INLINE_SEARCH = 0x2000,
     /**
      * @brief Group-specific: Do not periodically draw this group.
      */
-    UI_GROUP_FLAG_NO_AUTO_DRAW = 0x8000,
+    UI_COMPONENT_FLAG_GROUP_NO_AUTO_DRAW = 0x8000,
     /**
      * @brief Deskbox-specific: Bubble app key presses to system. 
      */
-    UI_DESKBOX_FLAG_ALLOW_APP_KEYS = 0x8000,
+    UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS = 0x8000,
+};
+
+enum ui_deskbox_flag_e {
+    UI_DESKBOX_FLAG_NONE = 0x0000,
+    UI_DESKBOX_FLAG_CLOSE_BUTTON = 0x0001,
+    UI_DESKBOX_FLAG_DONE_BUTTON = 0x0002,
+    UI_DESKBOX_FLAG_SAVE_BUTTON = 0x0004,
+    UI_DESKBOX_FLAG_HELP_BUTTON = 0x0008,
+    UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON = 0x0010,
+    UI_DESKBOX_FLAG_STYLE_NORMAL = 0x0000,
+    UI_DESKBOX_FLAG_STYLE_NONE = 0x0100,
+    UI_DESKBOX_FLAG_STYLE_SIMPLE = 0x0200,
+    UI_DESKBOX_FLAG_STYLE_FLOAT = 0x0400,
+    UI_DESKBOX_FLAG_STYLE_POPUP = 0x0800,
+    UI_DESKBOX_FLAG_NO_CLOSE_BUTTON = 0x80000,
+};
+
+enum ui_button_visual_state_e {
+    /**
+     * @brief Redraw the button as released/not pressed down.
+     */
+    UI_BUTTON_VS_RELEASED = 0,
+    /**
+     * @brief Redraw the button as pressed down.
+     */
+    UI_BUTTON_VS_PRESSED = 1,
+    /**
+     * @brief Do nothing and keep the current on-screen state.
+     */
+    UI_BUTTON_VS_UNCHANGED = 10,
 };
 
 /**
@@ -800,6 +832,10 @@ struct ui_event_sys_s;
 struct ui_message_s;
 struct ui_component_s;
 struct ui_group_s;
+struct ui_deskbox_s;
+struct ui_imageclip_s;
+struct ui_menu_entry_s;
+struct ui_button_s;
 struct ui_multipress_event_s;
 
 typedef struct lcd_surface_s lcd_surface_t;
@@ -816,6 +852,10 @@ typedef struct ui_event_sys_s ui_event_sys_t;
 typedef struct ui_message_s ui_message_t;
 typedef struct ui_component_s ui_component_t;
 typedef struct ui_group_s ui_group_t;
+typedef struct ui_deskbox_s ui_deskbox_t;
+typedef struct ui_imageclip_s ui_imageclip_t;
+typedef struct ui_menu_entry_s ui_menu_entry_t;
+typedef struct ui_button_s ui_button_t;
 typedef struct ui_multipress_event_s ui_multipress_event_t;
 
 #if defined(MUTEKI_HAS_PRIME_UI_EVENT) && MUTEKI_HAS_PRIME_UI_EVENT == 1
@@ -1531,6 +1571,151 @@ struct ui_group_s {
      */
     int execution_result;  // 0x4c:0x50
 };
+
+/**
+ * @brief Deskbox container struct.
+ */
+struct ui_deskbox_s {
+    /**
+     * @brief Parent group struct.
+     */
+    ui_group_t group;
+    /**
+     * @brief Foreground color.
+     */
+    unsigned int surface_color;
+    /**
+     * @brief Background color.
+     */
+    unsigned int background_color;
+    /**
+     * @brief background image wrapper.
+     * @details Set via InsertImageClip(). Hooks into the deskbox drawing routines to repaint background pixels when
+     * foreground graphics unload.
+     */
+    ui_imageclip_t *background_image;
+    /**
+     * @brief IME control struct.
+     * @todo Document the format.
+     */
+    void *ime_control;
+    /**
+     * @brief Draw title callback.
+     */
+    void (*on_draw_title)(ui_deskbox_t *self);
+    /**
+     * @brief Open help content and index files.
+     */
+    void (*on_open_help_files)(ui_deskbox_t *self, loader_file_descriptor_t **out_content, loader_file_descriptor_t **out_index);
+    /**
+     * @brief System event callback.
+     */
+    void (*on_system_event)(ui_component_t *self, ui_event_t *event);
+    /**
+     * @brief Close previously opened help content and index files.
+     */
+    void (*on_close_help_files)(ui_deskbox_t *self, loader_file_descriptor_t **content_file, loader_file_descriptor_t **index_file);
+    /**
+     * @brief Title/caption text.
+     */
+    UTF16 *title;
+    /**
+     * @brief Command menu entries array.
+     */
+    const ui_menu_entry_t *cmdmenu_entries;
+    /**
+     * @brief Command menu title text.
+     */
+    UTF16 *cmdmenu_title;
+    /**
+     * @brief Unknown. Probably padding bytes.
+     */
+    int unk_0x7c;
+    /**
+     * @brief Style flags.
+     */
+    unsigned int deskbox_flags;
+    /**
+     * @brief Disable mask of command menu entries.
+     */
+    unsigned int cmdmenu_disable_mask;
+    /**
+     * @brief Help type index for this deskbox.
+     */
+    unsigned int help_type;
+    /**
+     * @brief Left boundary of the titlebar content.
+     */
+    short title_content_x0;
+    /**
+     * @brief Right boundary of the titlebar content.
+     */
+    short title_content_x1;
+    /**
+     * @brief Reserved for subtype use.
+     */
+    unsigned int user_data;
+};
+
+/**
+ * @brief Button widget struct.
+ */
+struct ui_button_s {
+    ui_component_t component; // 0x0:0x34
+    /**
+     * @brief Draw the button content.
+     */
+    void (*on_draw_content)(ui_button_t *self); // 0x34:0x38
+    /**
+     * @brief Draw the button border.
+     */
+    void (*on_draw_border)(ui_button_t *self, short x0, short y0, short x1, short y1, unsigned short button_flags, unsigned short state); // 0x38:0x3c
+    /**
+     * @brief Key binding.
+     * @details Setting this to 0 disables key binding.
+     * @see keycode_e
+     */
+    int key_binding; // 0x3c:0x40
+    /**
+     * @brief Custom event to be sent on button press.
+     */
+    unsigned int event; // 0x40:0x44
+    /**
+     * @brief Button label text.
+     */
+    const UTF16 *label; // 0x44:0x48
+    /**
+     * @brief Human-readable label of key binding (can be `NULL`).
+     */
+    const char *key_binding_str; // 0x48:0x4c
+    /**
+     * @brief Unknown. Probably padding bytes.
+     */
+    int unk_0x4c; // 0x4c:0x50
+    /**
+     * @brief Visual state.
+     * @see ui_button_visual_state_e
+     */
+    unsigned int next_visual_state; // 0x50:0x54
+    /**
+     * @brief Content layout.
+     * @see ui_text_layout_e
+     */
+    unsigned int content_layout; // 0x54:0x58
+    /**
+     * @brief Number of horizontal padding pixels.
+     */
+    short horizontal_padding; // 0x58:0x5a
+    /**
+     * @brief Style flags.
+     * @see ui_button_flag_e
+     */
+    unsigned short button_flags; // 0x5a:0x5c
+    /**
+     * @brief Reserved for subtype use.
+     */
+    unsigned int user_data; // 0x5c:0x60
+}; // 0x60 bytes
 
 /**
  * @brief Convert separate RGB values to integer RGB representation

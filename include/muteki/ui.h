@@ -10,6 +10,7 @@
 #include <muteki/ui/common.h>
 #include <muteki/ui/event.h>
 #include <muteki/ui/font.h>
+#include <muteki/ui/modals.h>
 #include <muteki/ui/surface.h>
 #include <muteki/ui/views.h>
 #include <muteki/ui/widgets.h>
