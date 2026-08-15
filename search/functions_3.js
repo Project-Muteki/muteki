@@ -14,10 +14,11 @@ var searchData=
   ['convchartounicode_11',['ConvCharToUnicode',['../utf16_8h.html#a7fd29bb7b87579c21ea7502dff6fdebb',1,'utf16.h']]],
   ['convstrtounicode_12',['ConvStrToUnicode',['../utf16_8h.html#a28c3557ce0b22dda56167d7d34271dfe',1,'utf16.h']]],
   ['createbutton_13',['CreateButton',['../button_8h.html#a639ac5f8fd8cccdfa624dbaa965c1f76',1,'button.h']]],
-  ['createcompatiblelcd_14',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
-  ['createdeskbox_15',['CreateDeskBox',['../deskbox_8h.html#a43780d1cdb7e8fbba35dd335683810e7',1,'deskbox.h']]],
-  ['createfile_16',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
-  ['createvirtuallcd_17',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
-  ['cursorlock_18',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
-  ['cursorunlock_19',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
+  ['createcompatibleimage_14',['CreateCompatibleImage',['../canvas_8h.html#adccc0c65418334d72d21608e1313d754',1,'canvas.h']]],
+  ['createcompatiblelcd_15',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
+  ['createdeskbox_16',['CreateDeskBox',['../deskbox_8h.html#a43780d1cdb7e8fbba35dd335683810e7',1,'deskbox.h']]],
+  ['createfile_17',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
+  ['createvirtuallcd_18',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
+  ['cursorlock_19',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
+  ['cursorunlock_20',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
 ];

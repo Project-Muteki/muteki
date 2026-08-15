@@ -145,17 +145,70 @@ Functions</h2></td></tr>
 <tr class="memitem:a9488ef6eb4f116b8bbda0d38411ff79e" id="r_a9488ef6eb4f116b8bbda0d38411ff79e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a9488ef6eb4f116b8bbda0d38411ff79e">SetDeskBoxReturn</a> (<a class="el" href="structui__group__s.html">ui_group_t</a> *self, int execution_result)</td></tr>
 <tr class="memdesc:a9488ef6eb4f116b8bbda0d38411ff79e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the group execution result.  <br /></td></tr>
 <tr class="separator:a9488ef6eb4f116b8bbda0d38411ff79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5cf047a1dc3da31d9784d05c76ef31" id="r_afa5cf047a1dc3da31d9784d05c76ef31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#afa5cf047a1dc3da31d9784d05c76ef31">ExecView</a> (<a class="el" href="structui__group__s.html">ui_group_t</a> *group)</td></tr>
+<tr class="memdesc:afa5cf047a1dc3da31d9784d05c76ef31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates a group.  <br /></td></tr>
+<tr class="separator:afa5cf047a1dc3da31d9784d05c76ef31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a259c2a967db255dd68dbf3481c7f0e1b" id="r_a259c2a967db255dd68dbf3481c7f0e1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a259c2a967db255dd68dbf3481c7f0e1b">SetExitWordVal</a> (int val)</td></tr>
 <tr class="memdesc:a259c2a967db255dd68dbf3481c7f0e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the exit word.  <br /></td></tr>
 <tr class="separator:a259c2a967db255dd68dbf3481c7f0e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6074243dcd07b02defdcec876abb4046" id="r_a6074243dcd07b02defdcec876abb4046"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a6074243dcd07b02defdcec876abb4046">GetExitWordVal</a> (void)</td></tr>
 <tr class="memdesc:a6074243dcd07b02defdcec876abb4046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current exit word.  <br /></td></tr>
 <tr class="separator:a6074243dcd07b02defdcec876abb4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0f1d000e6813c5d1e36f3670032956" id="r_a1b0f1d000e6813c5d1e36f3670032956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group_8h.html#a1b0f1d000e6813c5d1e36f3670032956">Delete</a> (<a class="el" href="structui__group__s.html">ui_group_t</a> *group, <a class="el" href="structui__component__s.html">ui_component_t</a> *child)</td></tr>
+<tr class="memdesc:a1b0f1d000e6813c5d1e36f3670032956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a child from group.  <br /></td></tr>
+<tr class="separator:a1b0f1d000e6813c5d1e36f3670032956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Component group/container methods. </p>
 <p>Methods of a ui_group_t but as syscalls. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a1b0f1d000e6813c5d1e36f3670032956" name="a1b0f1d000e6813c5d1e36f3670032956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0f1d000e6813c5d1e36f3670032956">&#9670;&#160;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__group__s.html">ui_group_t</a> *&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structui__component__s.html">ui_component_t</a> *&#160;</td>
+          <td class="paramname"><em>child</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a child from group. </p>
+<p>Finds and unlinks the specified child component from the group's component ring. </p><dl class="section warning"><dt>Warning</dt><dd>This does not free the component. </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10182</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>The group object. </td></tr>
+    <tr><td class="paramname">child</td><td>Target child to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0ff40fe49bfb203776c049ab4fa43474" name="a0ff40fe49bfb203776c049ab4fa43474"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ff40fe49bfb203776c049ab4fa43474">&#9670;&#160;</a></span>Destroy()</h2>
 
@@ -190,6 +243,42 @@ Functions</h2></td></tr>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="afa5cf047a1dc3da31d9784d05c76ef31" name="afa5cf047a1dc3da31d9784d05c76ef31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa5cf047a1dc3da31d9784d05c76ef31">&#9670;&#160;</a></span>ExecView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ExecView </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structui__group__s.html">ui_group_t</a> *&#160;</td>
+          <td class="paramname"><em>group</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Activates a group. </p>
+<p>This manages the global navigation state and calls the <a class="el" href="structui__group__s.html#a41d6260f2b622110d4c03676cc056c4d" title="Execute callback.">ui_group_t::on_exec</a> callback, which starts a local event loop that routes all events through the group. Returns <a class="el" href="structui__group__s.html#a228a0fa3c62c4857edd7921db0193f6e" title="Execution result.">ui_group_t::execution_result</a> when it is set to a non-zero value or, in case when exit work is permitted, when exit word is set to a non-zero value. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1017c</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>The group object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The group-defined execution result. </dd></dl>
 
 </div>
 </div>

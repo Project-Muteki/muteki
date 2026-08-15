@@ -259,6 +259,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ae8d53e141ab966cba778a9b9be545331" id="r_ae8d53e141ab966cba778a9b9be545331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__base__s.html">lcd_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#ae8d53e141ab966cba778a9b9be545331">CreateCompatibleLCD</a> (<a class="el" href="structlcd__base__s.html">lcd_t</a> *source)</td></tr>
 <tr class="memdesc:ae8d53e141ab966cba778a9b9be545331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an LCD descriptor (excluding surface).  <br /></td></tr>
 <tr class="separator:ae8d53e141ab966cba778a9b9be545331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adccc0c65418334d72d21608e1313d754" id="r_adccc0c65418334d72d21608e1313d754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#adccc0c65418334d72d21608e1313d754">CreateCompatibleImage</a> (const <a class="el" href="structlcd__base__s.html">lcd_t</a> *source, short width, short height)</td></tr>
+<tr class="memdesc:adccc0c65418334d72d21608e1313d754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a surface for an LCD descriptor.  <br /></td></tr>
+<tr class="separator:adccc0c65418334d72d21608e1313d754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e80bde47dc3a14e43681418f86b573" id="r_a12e80bde47dc3a14e43681418f86b573"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a12e80bde47dc3a14e43681418f86b573">DeleteLCD</a> (<a class="el" href="structlcd__thread__safe__s.html">lcd_thread_safe_t</a> *lcd)</td></tr>
+<tr class="memdesc:a12e80bde47dc3a14e43681418f86b573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a thread-safe LCD descriptor.  <br /></td></tr>
+<tr class="separator:a12e80bde47dc3a14e43681418f86b573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3b127630f7b87ecfaa5333bd0e51b7" id="r_a3a3b127630f7b87ecfaa5333bd0e51b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a3a3b127630f7b87ecfaa5333bd0e51b7">SelectLCDObject</a> (<a class="el" href="structlcd__base__s.html">lcd_t</a> *lcd, <a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *new_surface)</td></tr>
+<tr class="memdesc:a3a3b127630f7b87ecfaa5333bd0e51b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checked version of <a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba" title="Link a surface (device context) to an LCD descriptor.">SetDCObject()</a>.  <br /></td></tr>
+<tr class="separator:a3a3b127630f7b87ecfaa5333bd0e51b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02cfab663da37703f2ca976ebdbdfcd0" id="r_a02cfab663da37703f2ca976ebdbdfcd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a02cfab663da37703f2ca976ebdbdfcd0">DeleteLCDObject</a> (<a class="el" href="structlcd__base__s.html">lcd_t</a> *lcd)</td></tr>
+<tr class="memdesc:a02cfab663da37703f2ca976ebdbdfcd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a regular LCD descriptor.  <br /></td></tr>
+<tr class="separator:a02cfab663da37703f2ca976ebdbdfcd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ea8e6ecb6c78f8721e204851174f7ba" id="r_a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba">SetDCObject</a> (<a class="el" href="structlcd__base__s.html">lcd_t</a> *lcd, <a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *new_surface)</td></tr>
 <tr class="memdesc:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link a surface (device context) to an LCD descriptor.  <br /></td></tr>
 <tr class="separator:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,6 +319,60 @@ Functions</h2></td></tr>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="adccc0c65418334d72d21608e1313d754" name="adccc0c65418334d72d21608e1313d754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adccc0c65418334d72d21608e1313d754">&#9670;&#160;</a></span>CreateCompatibleImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> * CreateCompatibleImage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlcd__base__s.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a surface for an LCD descriptor. </p>
+<p>This function creates a new LCD surface (with allocated pixel buffer) that has the same pixel format as the surface already attached to the source LCD descriptor. This can be used alongside <a class="el" href="canvas_8h.html#ae8d53e141ab966cba778a9b9be545331" title="Copy an LCD descriptor (excluding surface).">CreateCompatibleLCD()</a> to create a fully functional LCD descriptor. <a class="el" href="structlcd__base__s.html#aa5b0c5117508e29ee512256150dec98f" title="Total size of the pixel/framebuffer in bytes.">lcd_t::pixel_size</a> of the source must not be 0. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x1008f</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The source LCD descriptor. </td></tr>
+    <tr><td class="paramname">width</td><td>The width of the surface. </td></tr>
+    <tr><td class="paramname">height</td><td>The height of the surface. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The resulting surface. </dd></dl>
 
 </div>
 </div>
@@ -462,6 +528,83 @@ Functions</h2></td></tr>
 <p><dl class="section user"><dt>Parameters</dt><dd>None. </dd></dl>
  <dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="a12e80bde47dc3a14e43681418f86b573" name="a12e80bde47dc3a14e43681418f86b573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e80bde47dc3a14e43681418f86b573">&#9670;&#160;</a></span>DeleteLCD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DeleteLCD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__thread__safe__s.html">lcd_thread_safe_t</a> *&#160;</td>
+          <td class="paramname"><em>lcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Free a thread-safe LCD descriptor. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10090</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcd</td><td>The thread-safe LCD descriptor to be freed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error.  </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a02cfab663da37703f2ca976ebdbdfcd0" name="a02cfab663da37703f2ca976ebdbdfcd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02cfab663da37703f2ca976ebdbdfcd0">&#9670;&#160;</a></span>DeleteLCDObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteLCDObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__base__s.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>lcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Free a regular LCD descriptor. </p>
+<p>This is simply a wrapper around <a class="el" href="memory_8h.html#a8f71293c4cba373e738bcfc0721901e6" title="Free previously allocated memory.">_lfree()</a> with <code>NULL</code> check. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10092</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcd</td><td>The thread-safe LCD descriptor to be freed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2095,6 +2238,53 @@ Functions</h2></td></tr>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p>
+
+</div>
+</div>
+<a id="a3a3b127630f7b87ecfaa5333bd0e51b7" name="a3a3b127630f7b87ecfaa5333bd0e51b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a3b127630f7b87ecfaa5333bd0e51b7">&#9670;&#160;</a></span>SelectLCDObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> * SelectLCDObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlcd__base__s.html">lcd_t</a> *&#160;</td>
+          <td class="paramname"><em>lcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlcd__surface__s.html">lcd_surface_t</a> *&#160;</td>
+          <td class="paramname"><em>new_surface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checked version of <a class="el" href="canvas_8h.html#a8ea8e6ecb6c78f8721e204851174f7ba" title="Link a surface (device context) to an LCD descriptor.">SetDCObject()</a>. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10091</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lcd</td><td>The LCD descriptor. </td></tr>
+    <tr><td class="paramname">new_surface</td><td>The descriptor of the new surface to be linked to <code>lcd</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>lcd_surface_t* The descriptor of the surface previously linked to <code>lcd</code>, or <code>NULL</code> if <code>new_surface</code> is <code>NULL</code>. </dd></dl>
 
 </div>
 </div>

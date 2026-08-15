@@ -1,6 +1,8 @@
 var group_8h =
 [
+    [ "Delete", "group_8h.html#a1b0f1d000e6813c5d1e36f3670032956", null ],
     [ "Destroy", "group_8h.html#a0ff40fe49bfb203776c049ab4fa43474", null ],
+    [ "ExecView", "group_8h.html#afa5cf047a1dc3da31d9784d05c76ef31", null ],
     [ "GetExitWordVal", "group_8h.html#a6074243dcd07b02defdcec876abb4046", null ],
     [ "PGROUP_draw", "group_8h.html#a4b715c4a56d8cb20d12268805954e9b9", null ],
     [ "PGROUP_execute", "group_8h.html#a56d331855c9b49f0cb8bb84cd7f786b6", null ],

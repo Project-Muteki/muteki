@@ -1,10 +1,13 @@
 var canvas_8h =
 [
     [ "ClearScreen", "canvas_8h.html#ac98bb3e2b7bdb7654679de8a70fc9692", null ],
+    [ "CreateCompatibleImage", "canvas_8h.html#adccc0c65418334d72d21608e1313d754", null ],
     [ "CreateCompatibleLCD", "canvas_8h.html#ae8d53e141ab966cba778a9b9be545331", null ],
     [ "CreateVirtualLCD", "canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011", null ],
     [ "CursorLock", "canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8", null ],
     [ "CursorUnlock", "canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481", null ],
+    [ "DeleteLCD", "canvas_8h.html#a12e80bde47dc3a14e43681418f86b573", null ],
+    [ "DeleteLCDObject", "canvas_8h.html#a02cfab663da37703f2ca976ebdbdfcd0", null ],
     [ "DeleteVirtualLCD", "canvas_8h.html#adca965f3a7d9d1fceb2543b96a52dac2", null ],
     [ "DrawCircle", "canvas_8h.html#a304f2cf51abd5b22b3bddeb75d3bd389", null ],
     [ "DrawEllipse", "canvas_8h.html#af20d9fea67e5a3884449e37b32fe84d7", null ],
@@ -36,6 +39,7 @@ var canvas_8h =
     [ "ScrollLeft", "canvas_8h.html#ad73ff8fc68cb4aa0a67ef824ad679498", null ],
     [ "ScrollRight", "canvas_8h.html#afacb044524d273f84760b74ae0910179", null ],
     [ "ScrollUp", "canvas_8h.html#a502ba629582f39f4301680052db48620", null ],
+    [ "SelectLCDObject", "canvas_8h.html#a3a3b127630f7b87ecfaa5333bd0e51b7", null ],
     [ "SetActiveLCD", "canvas_8h.html#aa2442aa53fb420d155f16e717ad5c221", null ],
     [ "SetCursorPosition", "canvas_8h.html#acf7d03e578762205cc22de994c368b86", null ],
     [ "SetCursorSize", "canvas_8h.html#aea877b097cd19dff1122cce9f01ac7db", null ],
