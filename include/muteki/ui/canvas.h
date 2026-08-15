@@ -543,6 +543,46 @@ extern lcd_t *GetActiveLCD(void);
 extern lcd_t *CreateCompatibleLCD(lcd_t *source);
 
 /**
+ * @brief Create a surface for an LCD descriptor.
+ * @details This function creates a new LCD surface (with allocated pixel buffer) that has the same pixel format
+ * as the surface already attached to the source LCD descriptor. This can be used alongside CreateCompatibleLCD()
+ * to create a fully functional LCD descriptor. lcd_t::pixel_size of the source must not be 0.
+ * @x_syscall_num `0x1008f`
+ * @param source The source LCD descriptor.
+ * @param width The width of the surface.
+ * @param height The height of the surface.
+ * @return The resulting surface.
+ */
+extern lcd_surface_t *CreateCompatibleImage(const lcd_t *source, short width, short height);
+
+/**
+ * @brief Free a thread-safe LCD descriptor.
+ * @x_syscall_num `0x10090`
+ * @param lcd The thread-safe LCD descriptor to be freed.
+ * @retval true @x_term ok
+ * @retval false @x_term ng
+ */
+extern bool DeleteLCD(lcd_thread_safe_t *lcd);
+
+/**
+ * @brief Checked version of SetDCObject().
+ * @x_syscall_num `0x10091`
+ * @param lcd The LCD descriptor.
+ * @param new_surface The descriptor of the new surface to be linked to `lcd`.
+ * @return lcd_surface_t* The descriptor of the surface previously linked to `lcd`, or `NULL` if `new_surface` is
+ * `NULL`.
+ */
+extern lcd_surface_t *SelectLCDObject(lcd_t *lcd, lcd_surface_t *new_surface);
+
+/**
+ * @brief Free a regular LCD descriptor.
+ * @details This is simply a wrapper around _lfree() with `NULL` check.
+ * @x_syscall_num `0x10092`
+ * @param lcd The thread-safe LCD descriptor to be freed.
+ */
+extern void DeleteLCDObject(lcd_t *lcd);
+
+/**
  * @brief Link a surface (device context) to an LCD descriptor.
  * @details
  * The drawing area lcd_t::drawing_area will also be reset to cover the entire surface.

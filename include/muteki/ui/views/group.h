@@ -116,6 +116,17 @@ extern void Destroy(ui_group_t *group);
 extern void SetDeskBoxReturn(ui_group_t *self, int execution_result);
 
 /**
+ * @brief Activates a group.
+ * @details This manages the global navigation state and calls the ui_group_t::on_exec callback, which starts a local
+ * event loop that routes all events through the group. Returns ui_group_t::execution_result when it is set to a
+ * non-zero value or, in case when exit work is permitted, when exit word is set to a non-zero value.
+ * @x_syscall_num `0x1017c`
+ * @param group The group object.
+ * @return The group-defined execution result.
+ */
+extern int ExecView(ui_group_t *group);
+
+/**
  * @brief Set the exit word.
  * @details Setting this to a non-zero value (usually 1) causes eligible components to exit early after an event
  * handling callback.
@@ -133,6 +144,15 @@ extern int SetExitWordVal(int val);
  */
 extern int GetExitWordVal(void);
 
+/**
+ * @brief Remove a child from group.
+ * @details Finds and unlinks the specified child component from the group's component ring.
+ * @warning This does not free the component.
+ * @x_syscall_num `0x10182`
+ * @param group The group object.
+ * @param child Target child to remove.
+ */
+extern void Delete(ui_group_t *group, ui_component_t *child);
 #ifdef __cplusplus
 } // extern "C"
 #endif
