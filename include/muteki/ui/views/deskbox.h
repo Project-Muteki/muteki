@@ -43,7 +43,7 @@ ui_imageclip_t *InsertImageClip(
     short height,
     short image_x,
     short image_y,
-    lcd_surface_t *source_image,
+    const lcd_surface_t *source_image,
     bool free_source_after_copy,
     unsigned short blit_flag
 );
@@ -69,9 +69,9 @@ extern ui_deskbox_t *CreateDeskBox(
     short y0,
     short x1,
     short y1,
-    UTF16 *title,
+    const UTF16 *title,
     const ui_menu_entry_t *cmdmenu,
-    UTF16 *cmdmenu_title,
+    const UTF16 *cmdmenu_title,
     unsigned int flags
 );
 
@@ -155,7 +155,12 @@ extern void ChangeCommandMenu(ui_deskbox_t *deskbox, const ui_menu_entry_t *cmdm
  * @param event Event value assigned to the button.
  * @return The resulting button object.
  */
-extern ui_button_t *InsertTitleBarButton(ui_deskbox_t *self, unsigned short tag, UTF16 *label, unsigned int event);
+extern ui_button_t *InsertTitleBarButton(
+    ui_deskbox_t *self,
+    unsigned short tag,
+    const UTF16 *label,
+    unsigned int event
+);
 
 /**
  * @brief Get the user-drawable area on a deskbox.

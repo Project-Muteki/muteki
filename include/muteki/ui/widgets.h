@@ -12,5 +12,6 @@
 #define __MUTEKI_UI_WIDGETS_H__
 
 #include <muteki/ui/widgets/button.h>
+#include <muteki/ui/widgets/controlmenu.h>
 
 #endif // __MUTEKI_UI_WIDGETS_H__

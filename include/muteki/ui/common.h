@@ -734,19 +734,111 @@ enum ui_component_flag_e {
  * @brief Deskbox style flags.
  */
 enum ui_deskbox_flag_e {
+    /**
+     * @brief No flag.
+     */
     UI_DESKBOX_FLAG_NONE = 0x0000,
+    /**
+     * @brief Add a close button to the title bar.
+     * @note Some systems may suppress this.
+     */
     UI_DESKBOX_FLAG_CLOSE_BUTTON = 0x0001,
+    /**
+     * @brief Add a done button to the title bar.
+     */
     UI_DESKBOX_FLAG_DONE_BUTTON = 0x0002,
+    /**
+     * @brief Add a save button to the title bar.
+     */
     UI_DESKBOX_FLAG_SAVE_BUTTON = 0x0004,
+    /**
+     * @brief Handle help key presses.
+     * @note This does not add a button, instead it adds a hook to the deskbox event handler that opens the help menu.
+     */
     UI_DESKBOX_FLAG_HELP_BUTTON = 0x0008,
+    /**
+     * @brief Add a function button to the title bar.
+     */
     UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON = 0x0010,
+    /**
+     * @brief Normal style (with title bar).
+     */
     UI_DESKBOX_FLAG_STYLE_NORMAL = 0x0000,
+    /**
+     * @brief Do not draw title bar and frame.
+     */
     UI_DESKBOX_FLAG_STYLE_NONE = 0x0100,
+    /**
+     * @brief Draw a simple frame.
+     * @details Implies ::UI_DESKBOX_FLAG_STYLE_NONE.
+     */
     UI_DESKBOX_FLAG_STYLE_SIMPLE = 0x0200,
+    /**
+     * @brief Create a floating window deskbox.
+     */
     UI_DESKBOX_FLAG_STYLE_FLOAT = 0x0400,
+    /**
+     * @brief Create a popup deskbox.
+     */
     UI_DESKBOX_FLAG_STYLE_POPUP = 0x0800,
+    /**
+     * @brief Inhibit close button creation.
+     * @details This takes priority over ::UI_DESKBOX_FLAG_CLOSE_BUTTON.
+     */
     UI_DESKBOX_FLAG_NO_CLOSE_BUTTON = 0x80000,
 };
+
+/**
+ * @brief Text layout types.
+ * @details Used by several widgets to indicate the text layout.
+ */
+enum ui_text_layout_e {
+    /**
+     * @brief Render the text at the center of the widget.
+     */
+    UI_TEXT_LAYOUT_CENTER_CENTER = 0,
+    /**
+     * @brief Render the text at the top-left of the widget.
+     */
+    UI_TEXT_LAYOUT_LEFT_TOP,
+    /**
+     * @brief Render the text at the bottom-left of the widget.
+     */
+    UI_TEXT_LAYOUT_LEFT_BOTTOM,
+    /**
+     * @brief Render the text at the left of the widget.
+     */
+    UI_TEXT_LAYOUT_LEFT_CENTER,
+    /**
+     * @brief Render the text at the top-right of the widget.
+     */
+    UI_TEXT_LAYOUT_RIGHT_TOP,
+    /**
+     * @brief Render the text at the bottom-left of the widget.
+     */
+    UI_TEXT_LAYOUT_RIGHT_BOTTOM,
+    /**
+     * @brief Render the text at the right of the widget.
+     */
+    UI_TEXT_LAYOUT_RIGHT_CENTER,
+    /**
+     * @brief Render the text at the top of the widget.
+     */
+    UI_TEXT_LAYOUT_CENTER_TOP,
+    /**
+     * @brief Render the text at the bottom of the widget.
+     */
+    UI_TEXT_LAYOUT_CENTER_BOTTOM,
+};
+
+/**
+ * @brief Convert a ::ui_text_layout_e member to a ui_button_t::content_layout value.
+ * @param text_layout A valid ::ui_text_layout_e member.
+ * @return A value for ui_button_t::content_layout.
+ */
+static inline unsigned int ui_button_layout_from_text_layout(enum ui_text_layout_e text_layout) {
+    return ((unsigned int) text_layout) << 22;
+}
 
 /**
  * @brief Valid button visual states.
@@ -775,17 +867,24 @@ enum ui_menu_entry_attribute_e {
      */
     UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER = 0x0001,
     /**
-     * @brief Use bold font for label.
+     * @brief Render the widget label using bold font.
+     * @details Use ::SERIF_BOLD_CJK in place of the usual ::SERIF_CJK font when rendering the label.
+     * @note This attribute only takes effect when the user of the entry item is a ::ui_controlmenu_t. It will be
+     * ignored otherwise.
      */
-    UI_MENU_ENTRY_ATTR_BOLD_FONT = 0x0002,
+    UI_CONTROLMENU_ENTRY_ATTR_BOLD_FONT = 0x0002,
     /**
      * @brief Put separator before current item.
      */
     UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE = 0x0004,
     /**
-     * @brief Set the index of this item as the selection value by default (?).
+     * @brief Item can be selected as a control menu value.
+     * @details Only items with this flag can be selected as a value. Otherwise selecting the item will only emit
+     * an event.
+     * @note This attribute only takes effect when the user of the entry item is a ::ui_controlmenu_t. It will be
+     * ignored otherwise.
      */
-    UI_MENU_ENTRY_ATTR_VALUE_ITEM = 0x0080,
+    UI_CONTROLMENU_ENTRY_ATTR_VALUE_ITEM = 0x0080,
     /**
      * @brief Label uses 8-bit encoding with codepage CP950.
      */
@@ -804,6 +903,44 @@ enum ui_menu_entry_attribute_e {
      * Prioritized over the default item selected by PopUpList().
      */
     UI_MENU_ENTRY_ATTR_DEFAULT = 0x1000,
+};
+
+/**
+ * @brief Control menu layout type.
+ */
+enum ui_controlmenu_layout_e {
+    /**
+     * @brief Absolute X coordinates and widget height.
+     * @details Skip X value overrides. The y1 bound will also not be automatically derived from the font height.
+     */
+    UI_CONTROLMENU_LAYOUT_ABS = 0,
+
+    /**
+     * @brief Draw the control menu at the left half of the screen.
+     * @details Override x0 as 1 pixel right to the left border of the screen, and x1 as the midpoint of the
+     * screen ((GetMaxScrX() + 1) / 2).
+     */
+    UI_CONTROLMENU_LAYOUT_LEFT_HALF,
+
+    /**
+     * @brief Draw the control menu at the right half of the screen with a 2-pixel separation.
+     * @details Override x0 as 2 pixels right to the midpoint of the screen, and x1 as 1 pixel left to the right
+     * border of the screen.
+     */
+    UI_CONTROLMENU_LAYOUT_RIGHT_HALF_WITH_SEP,
+
+    /**
+     * @brief Fill the screen horizontally.
+     * @details Override x0 as 1 pixel right to the left border of the screen, and x1 as 1 pixel left to the right
+     * border of the screen.
+     */
+    UI_CONTROLMENU_LAYOUT_SCREEN_WIDTH,
+
+    /**
+     * @brief Draw the control menu at the right half of the screen.
+     * @details Override x0 as the midpoint of the screen, and x1 as 1 pixel left to the right border of the screen.
+     */
+    UI_CONTROLMENU_LAYOUT_RIGHT_HALF,
 };
 
 /**
@@ -881,6 +1018,7 @@ struct ui_deskbox_s;
 struct ui_imageclip_s;
 struct ui_menu_entry_s;
 struct ui_button_s;
+struct ui_controlmenu_s;
 struct ui_multipress_event_s;
 
 typedef struct lcd_surface_s lcd_surface_t;
@@ -901,6 +1039,7 @@ typedef struct ui_deskbox_s ui_deskbox_t;
 typedef struct ui_imageclip_s ui_imageclip_t;
 typedef struct ui_menu_entry_s ui_menu_entry_t;
 typedef struct ui_button_s ui_button_t;
+typedef struct ui_controlmenu_s ui_controlmenu_t;
 typedef struct ui_multipress_event_s ui_multipress_event_t;
 
 #if defined(MUTEKI_HAS_PRIME_UI_EVENT) && MUTEKI_HAS_PRIME_UI_EVENT == 1
@@ -1309,10 +1448,10 @@ struct ui_event_base_s {
     };
     union {
         /**
-        * @brief Unknown.
-        * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+        * @brief User data.
+        * @details Format is event-specific.
         */
-        void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+        void *user_data; // 12-16 pointer that only shows up on USB insertion event.
         /**
          * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
          * @see scroll_wheel_e
@@ -1390,10 +1529,10 @@ struct ui_event_prime_s {
     };
     union {
         /**
-        * @brief Unknown.
-        * @details Set along with a ::KEY_USB_INSERTION event. Seems to point to some data. Exact purpose unknown.
+        * @brief User data.
+        * @details Format is event-specific.
         */
-        void *usb_data; // 12-16 pointer that only shows up on USB insertion event.
+        void *user_data; // 12-16 pointer that only shows up on USB insertion event.
         /**
          * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
          * @see scroll_wheel_e
@@ -1431,7 +1570,13 @@ struct ui_event_prime_s {
 };
 
 struct ui_event_sys_s {
-    unsigned int unk_0x0;
+    /**
+     * @brief Event recipient.
+     * @details If set to `NULL`, the event is a broadcast event (e.g. input event). Otherwise, the
+     * widget's ui_component_t::on_event callback will be called with this event.
+     * @note Unused in system events.
+     */
+    ui_component_t *recipient; // 0-4
     /**
      * @brief The type of event (0x10 being key event)
      * @see ui_event_type_e List of event types.
@@ -1471,10 +1616,18 @@ struct ui_event_sys_s {
             unsigned short touch_y;
         };
     };
-    /**
-     * @brief User data. Exact content vary depending on the event type.
-     */
-    void *user_data;
+    union {
+        /**
+        * @brief User data.
+        * @details Format is event-specific.
+        */
+        void *user_data; // 12-16 pointer that only shows up on USB insertion event.
+        /**
+         * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
+         * @see scroll_wheel_e
+         */
+        unsigned int scroll_wheel;
+    };
 };
 
 /**
@@ -1505,7 +1658,7 @@ struct ui_component_s {
     ui_component_t *next; // 0x0:0x4
     /**
      * @brief Parent component.
-     * @details This will usually be a view.
+     * @details This will usually be a group.
      */
     ui_component_t *parent; // 0x4:0x8
     /**
@@ -1651,7 +1804,11 @@ struct ui_deskbox_s {
     /**
      * @brief Open help content and index files.
      */
-    void (*on_open_help_files)(ui_deskbox_t *self, loader_file_descriptor_t **out_content, loader_file_descriptor_t **out_index);
+    void (*on_open_help_files)(
+        ui_deskbox_t *self,
+        loader_file_descriptor_t **out_content,
+        loader_file_descriptor_t **out_index
+    );
     /**
      * @brief System event callback.
      */
@@ -1659,19 +1816,23 @@ struct ui_deskbox_s {
     /**
      * @brief Close previously opened help content and index files.
      */
-    void (*on_close_help_files)(ui_deskbox_t *self, loader_file_descriptor_t **content_file, loader_file_descriptor_t **index_file);
+    void (*on_close_help_files)(
+        ui_deskbox_t *self,
+        loader_file_descriptor_t **content_file,
+        loader_file_descriptor_t **index_file
+    );
     /**
      * @brief Title/caption text.
      */
     UTF16 *title;
     /**
-     * @brief Command menu entries array.
+     * @brief Function menu entry array.
      */
-    const ui_menu_entry_t *cmdmenu_entries;
+    const ui_menu_entry_t *menu_entries;
     /**
-     * @brief Command menu title text.
+     * @brief Function menu title text.
      */
-    UTF16 *cmdmenu_title;
+    const UTF16 *menu_title_text;
     /**
      * @brief Unknown. Probably padding bytes.
      */
@@ -1759,17 +1920,29 @@ struct ui_imageclip_s {
 
 /**
  * @brief Menu entry struct used by various menu widgets.
+ * @details
+ * Normally should be used in an empty-record-terminated array. For example:
+ *
+ * @code{.c}
+ * const ui_menu_entry_t MENU[] = {
+ *     { .label_wide = _BUL("Item"), .event = 0x10000, .attributes = 0 },
+ *     { .label_wide = NULL, .event = 0, .attributes = 0 },  // or UI_MENU_ENTRY_END
+ * };
+ * @endcode
+ *
+ * ui_menu_entry_s::attributes defines extra attributes that apply to the menu entries. Some attributes are exclusive
+ * to certain subtype of menu widgets.
  */
 struct ui_menu_entry_s {
     union {
         /**
          * @brief UTF-16-encoded label text.
          */
-        UTF16 label_wide[24];
+        const UTF16 label_wide[24];
         /**
          * @brief 8-bit-encoded label text.
          */
-        char label_narrow[48];
+        const char label_narrow[48];
     };
     /**
      * @brief Event value emitted when selected.
@@ -1787,9 +1960,17 @@ struct ui_menu_entry_s {
 };
 
 /**
+ * @brief End record for ui_menu_entry_t.
+ */
+#define UI_MENU_ENTRY_END { .label_wide = NULL, .event = 0, .attributes = 0 }
+
+/**
  * @brief Button widget struct.
  */
 struct ui_button_s {
+    /**
+     * @brief The inherited component struct.
+     */
     ui_component_t component; // 0x0:0x34
     /**
      * @brief Draw the button content.
@@ -1798,7 +1979,15 @@ struct ui_button_s {
     /**
      * @brief Draw the button border.
      */
-    void (*on_draw_border)(ui_button_t *self, short x0, short y0, short x1, short y1, unsigned short button_flags, unsigned short state); // 0x38:0x3c
+    void (*on_draw_border)(
+        ui_button_t *self,
+        short x0,
+        short y0,
+        short x1,
+        short y1,
+        unsigned short button_flags,
+        unsigned short state
+    ); // 0x38:0x3c
     /**
      * @brief Key binding.
      * @details Setting this to 0 disables key binding.
@@ -1827,8 +2016,12 @@ struct ui_button_s {
      */
     unsigned int next_visual_state; // 0x50:0x54
     /**
-     * @brief Content layout.
-     * @see ui_text_layout_e
+     * @brief Text layout of the button label.
+     * @details This is most likely not intended to be set by the end-user, as the resulting layouts enabled by values
+     * other than the default look broken on the default button style, and both the default constructor and all public
+     * methods never allowed the user to set it.
+     * @see ui_text_layout_e Raw values for the text layout types.
+     * @see ui_button_layout_from_text_layout Convert ::ui_text_layout_e to accepted format.
      */
     unsigned int content_layout; // 0x54:0x58
     /**
@@ -1845,6 +2038,43 @@ struct ui_button_s {
      */
     unsigned int user_data; // 0x5c:0x60
 }; // 0x60 bytes
+
+/**
+ * @brief Control menu struct.
+ */
+struct ui_controlmenu_s {
+    /**
+     * @brief The inherited component struct.
+     */
+    ui_component_t component;
+    /**
+     * @brief Layout mode.
+     * @see ui_controlmenu_layout_e
+     */
+    unsigned short layout_mode;
+    /**
+     * @brief Index of currently selected item.
+     */
+    unsigned short current_index;
+    /**
+     * @brief Menu entry array.
+     */
+    const ui_menu_entry_t *menu_entries;
+    /**
+     * @brief Title text of the pop-up menu.
+     */
+    const UTF16 *menu_title_text;
+    /**
+     * @brief Selection policy.
+     * @details Set this to 1 to allow reselection of the currently selected item. Values other than 1 will cause the
+     * event handler to filter out the selection event when the currently selected item is reselected.
+     */
+    unsigned short selection_policy;
+    /**
+     * @brief Unknown. Probably padding bytes.
+     */
+    unsigned short unk_0x42;
+};
 
 /**
  * @brief Convert separate RGB values to integer RGB representation
