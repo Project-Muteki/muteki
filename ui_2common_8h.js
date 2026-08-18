@@ -19,7 +19,9 @@ var ui_2common_8h =
     [ "ui_imageclip_s", "structui__imageclip__s.html", "structui__imageclip__s" ],
     [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
     [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
+    [ "ui_controlmenu_s", "structui__controlmenu__s.html", "structui__controlmenu__s" ],
     [ "RGB_FROM_U8", "ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf", null ],
+    [ "UI_MENU_ENTRY_END", "ui_2common_8h.html#af1ec6c2abe02d681462b3ca5dd4a2a31", null ],
     [ "lcd_rotate_callback_t", "ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5", null ],
     [ "blit_flag_e", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd", [
       [ "BLIT_NONE", "ui_2common_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05", null ],
@@ -285,6 +287,13 @@ var ui_2common_8h =
       [ "UI_COMPONENT_FLAG_GROUP_NO_AUTO_DRAW", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaa653ed570a24b61678c2c376d74e8a0cf", null ],
       [ "UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS", "ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfeaacb70d8c18b2809812b6337dae1c6c0e5", null ]
     ] ],
+    [ "ui_controlmenu_layout_e", "ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eb", [
+      [ "UI_CONTROLMENU_LAYOUT_ABS", "ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696ebaf9b220544784796277d2d20f6084f286", null ],
+      [ "UI_CONTROLMENU_LAYOUT_LEFT_HALF", "ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eba578f99ec820296870db79f9f15746924", null ],
+      [ "UI_CONTROLMENU_LAYOUT_RIGHT_HALF_WITH_SEP", "ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696ebac6a0230ff6f34e8b4ad190f87bd2db69", null ],
+      [ "UI_CONTROLMENU_LAYOUT_SCREEN_WIDTH", "ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696ebad9036e7ebc983bd5f1ecf016f95beec6", null ],
+      [ "UI_CONTROLMENU_LAYOUT_RIGHT_HALF", "ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eba3d65b00c1dc2052337f6c5676106cc4a", null ]
+    ] ],
     [ "ui_deskbox_flag_e", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b", [
       [ "UI_DESKBOX_FLAG_NONE", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bab277d1ca42c031a5c5263cf1b537cdd8", null ],
       [ "UI_DESKBOX_FLAG_CLOSE_BUTTON", "ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12", null ],
@@ -322,12 +331,23 @@ var ui_2common_8h =
     ] ],
     [ "ui_menu_entry_attribute_e", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6", [
       [ "UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970", null ],
-      [ "UI_MENU_ENTRY_ATTR_BOLD_FONT", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb", null ],
+      [ "UI_CONTROLMENU_ENTRY_ATTR_BOLD_FONT", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0", null ],
       [ "UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7", null ],
-      [ "UI_MENU_ENTRY_ATTR_VALUE_ITEM", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b", null ],
+      [ "UI_CONTROLMENU_ENTRY_ATTR_VALUE_ITEM", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ad68f556c9bc281a3950bd1bb008e0262", null ],
       [ "UI_MENU_ENTRY_ATTR_ENCODING_CP950", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec", null ],
       [ "UI_MENU_ENTRY_ATTR_ENCODING_CP936", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a3e9c972bf77b4054b5517cd083af1401", null ],
       [ "UI_MENU_ENTRY_ATTR_ENCODING_CP949", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ad6b3105a9b27076f99ff8406aec1ffcd", null ],
       [ "UI_MENU_ENTRY_ATTR_DEFAULT", "ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e", null ]
+    ] ],
+    [ "ui_text_layout_e", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9", [
+      [ "UI_TEXT_LAYOUT_CENTER_CENTER", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a00f108f08b6c0856d7c82281ea80f293", null ],
+      [ "UI_TEXT_LAYOUT_LEFT_TOP", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a2fe230e385fe6d7c19c7e04b082339d3", null ],
+      [ "UI_TEXT_LAYOUT_LEFT_BOTTOM", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a0f39f72d0bebedcc0aa996ceccc615ef", null ],
+      [ "UI_TEXT_LAYOUT_LEFT_CENTER", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a356692dd1d5e9c93aec764e7617ba2ee", null ],
+      [ "UI_TEXT_LAYOUT_RIGHT_TOP", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a5df47398de46ac17a7e6cf16ed3e6790", null ],
+      [ "UI_TEXT_LAYOUT_RIGHT_BOTTOM", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a4a44fee12e506781d59b650e56595341", null ],
+      [ "UI_TEXT_LAYOUT_RIGHT_CENTER", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9ac8b5c52685483bd6ed18f25b949c75ce", null ],
+      [ "UI_TEXT_LAYOUT_CENTER_TOP", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9acfe1f6a55f50d11f70f89c1a6ace27a1", null ],
+      [ "UI_TEXT_LAYOUT_CENTER_BOTTOM", "ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a68af43d5cad722479549d3a66f2cf554", null ]
     ] ]
 ];

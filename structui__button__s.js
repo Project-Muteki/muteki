@@ -1,6 +1,7 @@
 var structui__button__s =
 [
     [ "button_flags", "structui__button__s.html#a19670e0eeb9350913a60b775d9673378", null ],
+    [ "component", "structui__button__s.html#a43f3c54d1f878753632d872011df9e16", null ],
     [ "content_layout", "structui__button__s.html#ace17945fd66d41a326c8ae332686c94f", null ],
     [ "event", "structui__button__s.html#a30f5b2d31fab1d156efc4eab1c798b32", null ],
     [ "horizontal_padding", "structui__button__s.html#ab038ec9fc4278258aa8db18182fe7821", null ],

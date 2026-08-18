@@ -10,6 +10,6 @@ var structui__event__base__s =
     [ "touch_y", "structui__event__base__s.html#a6792b48cfd00f0f9fb24683eec00c18e", null ],
     [ "unk16", "structui__event__base__s.html#af5f520b1307958f7d6f904787372049f", null ],
     [ "unk22", "structui__event__base__s.html#a53869d0e4916c6836f98c76b20f9cadd", null ],
-    [ "usb_data", "structui__event__base__s.html#af812bdcd50769ca5b7c09ec4e3ad58d8", null ],
+    [ "user_data", "structui__event__base__s.html#ad86270890788038214c5bdf3d87c0d94", null ],
     [ "value", "structui__event__base__s.html#a0525ca83af1fc75c535263bd023eedf1", null ]
 ];

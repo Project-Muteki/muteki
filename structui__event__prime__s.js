@@ -13,6 +13,6 @@ var structui__event__prime__s =
     [ "unk16", "structui__event__prime__s.html#a9b425884886d0de4ead6f9ed0976cf9f", null ],
     [ "unk22", "structui__event__prime__s.html#af6a04ae2ca6611a106a1c86ecac1c604", null ],
     [ "unk_0x1a", "structui__event__prime__s.html#ab98234ab0126058eec9a21fb23c07251", null ],
-    [ "usb_data", "structui__event__prime__s.html#aa440213d307e0789aec1522142cd7308", null ],
+    [ "user_data", "structui__event__prime__s.html#a7fc6ebcf5601f0881f163118f3cc58e4", null ],
     [ "value", "structui__event__prime__s.html#a7389bbd63e6d1b243b2adbd414d4fccb", null ]
 ];

@@ -114,19 +114,19 @@ $(document).ready(function(){initNavTree('structui__menu__entry__s.html',''); in
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a599a69fa62b38da3b9417995b221f247" id="r_a599a69fa62b38da3b9417995b221f247"><td class="memItemLeft" ><a id="a599a69fa62b38da3b9417995b221f247" name="a599a69fa62b38da3b9417995b221f247"></a>
+<tr class="memitem:a2631258a35bad1fe9c5eac116118f1da" id="r_a2631258a35bad1fe9c5eac116118f1da"><td class="memItemLeft" ><a id="a2631258a35bad1fe9c5eac116118f1da" name="a2631258a35bad1fe9c5eac116118f1da"></a>
 union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af994e28b1584018f60d6c3289252c2d6" id="r_af994e28b1584018f60d6c3289252c2d6"><td class="memItemLeft" >
-&#160;&#160;&#160;<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>&#160;&#160;&#160;<b>label_wide</b> [24]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:af994e28b1584018f60d6c3289252c2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-16-encoded label text. <br /></td></tr>
-<tr class="separator:af994e28b1584018f60d6c3289252c2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ae1fa81349fd92e9e084f485e1137e1" id="r_a1ae1fa81349fd92e9e084f485e1137e1"><td class="memItemLeft" >
-&#160;&#160;&#160;char&#160;&#160;&#160;<b>label_narrow</b> [48]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a1ae1fa81349fd92e9e084f485e1137e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit-encoded label text. <br /></td></tr>
-<tr class="separator:a1ae1fa81349fd92e9e084f485e1137e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a599a69fa62b38da3b9417995b221f247" id="r_a599a69fa62b38da3b9417995b221f247"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a599a69fa62b38da3b9417995b221f247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af526d148d2321271c6dacba2098202" id="r_a5af526d148d2321271c6dacba2098202"><td class="memItemLeft" >
+&#160;&#160;&#160;const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>&#160;&#160;&#160;<b>label_wide</b> [24]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a5af526d148d2321271c6dacba2098202"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-16-encoded label text. <br /></td></tr>
+<tr class="separator:a5af526d148d2321271c6dacba2098202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac5f5e89e3077947743910758fc6791" id="r_afac5f5e89e3077947743910758fc6791"><td class="memItemLeft" >
+&#160;&#160;&#160;const char&#160;&#160;&#160;<b>label_narrow</b> [48]&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:afac5f5e89e3077947743910758fc6791"><td class="mdescLeft">&#160;</td><td class="mdescRight">8-bit-encoded label text. <br /></td></tr>
+<tr class="separator:afac5f5e89e3077947743910758fc6791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2631258a35bad1fe9c5eac116118f1da" id="r_a2631258a35bad1fe9c5eac116118f1da"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a2631258a35bad1fe9c5eac116118f1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3c5bf87317a5e58b221245cc209c3e" id="r_abb3c5bf87317a5e58b221245cc209c3e"><td class="memItemLeft" align="right" valign="top"><a id="abb3c5bf87317a5e58b221245cc209c3e" name="abb3c5bf87317a5e58b221245cc209c3e"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>event</b></td></tr>
 <tr class="memdesc:abb3c5bf87317a5e58b221245cc209c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event value emitted when selected. <br /></td></tr>
@@ -141,6 +141,15 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x36</b></td></t
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Menu entry struct used by various menu widgets. </p>
+<p>Normally should be used in an empty-record-terminated array. For example:</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_struct" href="structui__menu__entry__s.html">ui_menu_entry_t</a> MENU[] = {</div>
+<div class="line">    { .<a class="code hl_variable" href="structui__menu__entry__s.html#a20aa1b949bb70fdc621f98d3302b9dd8">label_wide</a> = <a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;Item&quot;</span>), .event = 0x10000, .attributes = 0 },</div>
+<div class="line">    { .label_wide = NULL, .event = 0, .attributes = 0 },  <span class="comment">// or UI_MENU_ENTRY_END</span></div>
+<div class="line">};</div>
+<div class="ttc" id="acommon_8h_html_a1f2319b35fdcf33e9544b53a14371156"><div class="ttname"><a href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a></div><div class="ttdeci">#define _BUL(x)</div><div class="ttdoc">Besta UTF-16 string literal.</div><div class="ttdef"><b>Definition</b> common.h:61</div></div>
+<div class="ttc" id="astructui__menu__entry__s_html"><div class="ttname"><a href="structui__menu__entry__s.html">ui_menu_entry_s</a></div><div class="ttdoc">Menu entry struct used by various menu widgets.</div><div class="ttdef"><b>Definition</b> common.h:1936</div></div>
+<div class="ttc" id="astructui__menu__entry__s_html_a20aa1b949bb70fdc621f98d3302b9dd8"><div class="ttname"><a href="structui__menu__entry__s.html#a20aa1b949bb70fdc621f98d3302b9dd8">ui_menu_entry_s::label_wide</a></div><div class="ttdeci">const UTF16 label_wide[24]</div><div class="ttdoc">UTF-16-encoded label text.</div><div class="ttdef"><b>Definition</b> common.h:1941</div></div>
+</div><!-- fragment --><p><a class="el" href="structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3" title="Attributes.">ui_menu_entry_s::attributes</a> defines extra attributes that apply to the menu entries. Some attributes are exclusive to certain subtype of menu widgets. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a2a4aba15a383ccd54e17ca49bdc432f3" name="a2a4aba15a383ccd54e17ca49bdc432f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a4aba15a383ccd54e17ca49bdc432f3">&#9670;&#160;</a></span>attributes</h2>

@@ -116,6 +116,7 @@ $(document).ready(function(){initNavTree('structui__button__s.html',''); initRes
 Data Fields</h2></td></tr>
 <tr class="memitem:a43f3c54d1f878753632d872011df9e16" id="r_a43f3c54d1f878753632d872011df9e16"><td class="memItemLeft" align="right" valign="top"><a id="a43f3c54d1f878753632d872011df9e16" name="a43f3c54d1f878753632d872011df9e16"></a>
 <a class="el" href="structui__component__s.html">ui_component_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>component</b></td></tr>
+<tr class="memdesc:a43f3c54d1f878753632d872011df9e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">The inherited component struct. <br /></td></tr>
 <tr class="separator:a43f3c54d1f878753632d872011df9e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b44ab2b508ef8a0a51bd78cd55ea11" id="r_a07b44ab2b508ef8a0a51bd78cd55ea11"><td class="memItemLeft" align="right" valign="top"><a id="a07b44ab2b508ef8a0a51bd78cd55ea11" name="a07b44ab2b508ef8a0a51bd78cd55ea11"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>on_draw_content</b> )(<a class="el" href="structui__button__s.html">ui_button_t</a> *self)</td></tr>
@@ -148,7 +149,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x4c</b></td></tr>
 <tr class="memdesc:a1a8cc4d4eb5dd3583dc58f9344526970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visual state.  <br /></td></tr>
 <tr class="separator:a1a8cc4d4eb5dd3583dc58f9344526970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace17945fd66d41a326c8ae332686c94f" id="r_ace17945fd66d41a326c8ae332686c94f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__button__s.html#ace17945fd66d41a326c8ae332686c94f">content_layout</a></td></tr>
-<tr class="memdesc:ace17945fd66d41a326c8ae332686c94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Content layout.  <br /></td></tr>
+<tr class="memdesc:ace17945fd66d41a326c8ae332686c94f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text layout of the button label.  <br /></td></tr>
 <tr class="separator:ace17945fd66d41a326c8ae332686c94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab038ec9fc4278258aa8db18182fe7821" id="r_ab038ec9fc4278258aa8db18182fe7821"><td class="memItemLeft" align="right" valign="top"><a id="ab038ec9fc4278258aa8db18182fe7821" name="ab038ec9fc4278258aa8db18182fe7821"></a>
 short&#160;</td><td class="memItemRight" valign="bottom"><b>horizontal_padding</b></td></tr>
@@ -194,8 +195,10 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>user_data</b>
       </table>
 </div><div class="memdoc">
 
-<p>Content layout. </p>
-<dl class="section see"><dt>See also</dt><dd>ui_text_layout_e </dd></dl>
+<p>Text layout of the button label. </p>
+<p>This is most likely not intended to be set by the end-user, as the resulting layouts enabled by values other than the default look broken on the default button style, and both the default constructor and all public methods never allowed the user to set it. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9" title="Text layout types.">ui_text_layout_e</a> Raw values for the text layout types. </dd>
+<dd>
+ui_button_layout_from_text_layout Convert <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9" title="Text layout types.">ui_text_layout_e</a> to accepted format. </dd></dl>
 
 </div>
 </div>

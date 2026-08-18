@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['recipient_0',['recipient',['../structui__event__base__s.html#af59ae22188d83376bc07bb6f77202115',1,'ui_event_base_s::recipient'],['../structui__event__prime__s.html#a05ddf0f048d9e588293b8a41e882084b',1,'ui_event_prime_s::recipient']]],
+  ['recipient_0',['recipient',['../structui__event__base__s.html#af59ae22188d83376bc07bb6f77202115',1,'ui_event_base_s::recipient'],['../structui__event__prime__s.html#a05ddf0f048d9e588293b8a41e882084b',1,'ui_event_prime_s::recipient'],['../structui__event__sys__s.html#a8ec3c4c827c77bb7b0c8bbfb715090bf',1,'ui_event_sys_s::recipient']]],
   ['refcount_1',['refcount',['../structdevio__descriptor__t.html#a894b8dc09fbf027e283e82ead39ddeea',1,'devio_descriptor_t::refcount'],['../structloader__loaded__s.html#a6a1ae993e34d50523fc55ef3beadeb73',1,'loader_loaded_s::refcount'],['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s::refcount']]],
   ['rom_5fmagic_2',['rom_magic',['../structloader__applet__info__s.html#a6d94c483a49da384869a25d03d540eb4',1,'loader_applet_info_s']]],
   ['rom_5fspec_5foffset_5f0xc_3',['rom_spec_offset_0xc',['../structloader__loaded__s.html#a519bc33945c32f4b3a3872bc258f215d',1,'loader_loaded_s']]],

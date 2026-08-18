@@ -1,15 +1,15 @@
 var searchData=
 [
   ['readfile_0',['ReadFile',['../devio_8h.html#a98b978028308602d13c21f47be32f6a9',1,'devio.h']]],
-  ['recipient_1',['recipient',['../structui__event__prime__s.html#a05ddf0f048d9e588293b8a41e882084b',1,'ui_event_prime_s::recipient'],['../structui__event__base__s.html#af59ae22188d83376bc07bb6f77202115',1,'ui_event_base_s::recipient']]],
-  ['refcount_2',['refcount',['../structloader__loaded__s.html#a6a1ae993e34d50523fc55ef3beadeb73',1,'loader_loaded_s::refcount'],['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s::refcount'],['../structdevio__descriptor__t.html#a894b8dc09fbf027e283e82ead39ddeea',1,'devio_descriptor_t::refcount']]],
+  ['recipient_1',['recipient',['../structui__event__prime__s.html#a05ddf0f048d9e588293b8a41e882084b',1,'ui_event_prime_s::recipient'],['../structui__event__base__s.html#af59ae22188d83376bc07bb6f77202115',1,'ui_event_base_s::recipient'],['../structui__event__sys__s.html#a8ec3c4c827c77bb7b0c8bbfb715090bf',1,'ui_event_sys_s::recipient']]],
+  ['refcount_2',['refcount',['../structloader__loaded__s.html#a6a1ae993e34d50523fc55ef3beadeb73',1,'loader_loaded_s::refcount'],['../structdevio__descriptor__t.html#a894b8dc09fbf027e283e82ead39ddeea',1,'devio_descriptor_t::refcount'],['../structcritical__section__s.html#aad2ed6cb50d44d2cac500c0a445d111e',1,'critical_section_s::refcount']]],
   ['rgb_5ffrom_5fu8_3',['RGB_FROM_U8',['../ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf',1,'common.h']]],
   ['rgbsetbkcolor_4',['rgbSetBkColor',['../canvas_8h.html#aa7333109cd5c46ab957287b7722a1f77',1,'canvas.h']]],
   ['rgbsetcolor_5',['rgbSetColor',['../canvas_8h.html#a40fa1f62900939b0b578f94dc44d8db4',1,'canvas.h']]],
   ['rom_5fmagic_6',['rom_magic',['../structloader__applet__info__s.html#a6d94c483a49da384869a25d03d540eb4',1,'loader_applet_info_s']]],
   ['rom_5fspec_5foffset_5f0xc_7',['rom_spec_offset_0xc',['../structloader__loaded__s.html#a519bc33945c32f4b3a3872bc258f215d',1,'loader_loaded_s']]],
   ['rom_5ftype_8',['rom_type',['../structloader__applet__info__s.html#a090f8fe7a7e52ebf2cb851df7c6482ea',1,'loader_applet_info_s']]],
-  ['rotate_9',['rotate',['../structlcd__base__s.html#a466b8361da90dc49d956ea84fa3e0c50',1,'lcd_base_s::rotate'],['../structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22',1,'lcd_thread_safe_s::rotate']]],
+  ['rotate_9',['rotate',['../structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22',1,'lcd_thread_safe_s::rotate'],['../structlcd__base__s.html#a466b8361da90dc49d956ea84fa3e0c50',1,'lcd_base_s::rotate']]],
   ['rotation_10',['rotation',['../structlcd__thread__safe__s.html#a2ac14d9831a87a4af2556c379b7ad5e5',1,'lcd_thread_safe_s::rotation'],['../structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0',1,'lcd_base_s::rotation']]],
   ['rotation_5fapply_11',['ROTATION_APPLY',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493',1,'common.h']]],
   ['rotation_5fquery_12',['ROTATION_QUERY',['../ui_2common_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607',1,'common.h']]],

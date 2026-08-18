@@ -16,9 +16,10 @@ var searchData=
   ['createbutton_13',['CreateButton',['../button_8h.html#a639ac5f8fd8cccdfa624dbaa965c1f76',1,'button.h']]],
   ['createcompatibleimage_14',['CreateCompatibleImage',['../canvas_8h.html#adccc0c65418334d72d21608e1313d754',1,'canvas.h']]],
   ['createcompatiblelcd_15',['CreateCompatibleLCD',['../canvas_8h.html#ae8d53e141ab966cba778a9b9be545331',1,'canvas.h']]],
-  ['createdeskbox_16',['CreateDeskBox',['../deskbox_8h.html#a43780d1cdb7e8fbba35dd335683810e7',1,'deskbox.h']]],
-  ['createfile_17',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
-  ['createvirtuallcd_18',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
-  ['cursorlock_19',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
-  ['cursorunlock_20',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
+  ['createcontrolmenu_16',['CreateControlMenu',['../controlmenu_8h.html#a2afd15daf319979ed386801ef109a790',1,'controlmenu.h']]],
+  ['createdeskbox_17',['CreateDeskBox',['../deskbox_8h.html#a2a1814beaf29a936348076c0bf9f33a5',1,'deskbox.h']]],
+  ['createfile_18',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
+  ['createvirtuallcd_19',['CreateVirtualLCD',['../canvas_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'canvas.h']]],
+  ['cursorlock_20',['CursorLock',['../canvas_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'canvas.h']]],
+  ['cursorunlock_21',['CursorUnlock',['../canvas_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'canvas.h']]]
 ];

@@ -176,6 +176,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__button__s.html">ui_button_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button widget struct.  <a href="structui__button__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__controlmenu__s.html">ui_controlmenu_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control menu struct.  <a href="structui__controlmenu__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -185,6 +188,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a4d63ad6a3852cf9527d45e19ae8c4b12" id="r_a4d63ad6a3852cf9527d45e19ae8c4b12"><td class="memItemLeft" align="right" valign="top"><a id="a4d63ad6a3852cf9527d45e19ae8c4b12" name="a4d63ad6a3852cf9527d45e19ae8c4b12"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_s</b>&#160;&#160;&#160;<a class="el" href="structlcd__base__s.html">lcd_base_s</a></td></tr>
 <tr class="separator:a4d63ad6a3852cf9527d45e19ae8c4b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ec6c2abe02d681462b3ca5dd4a2a31" id="r_af1ec6c2abe02d681462b3ca5dd4a2a31"><td class="memItemLeft" align="right" valign="top"><a id="af1ec6c2abe02d681462b3ca5dd4a2a31" name="af1ec6c2abe02d681462b3ca5dd4a2a31"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>UI_MENU_ENTRY_END</b>&#160;&#160;&#160;{ .label_wide = NULL, .event = 0, .attributes = 0 }</td></tr>
+<tr class="memdesc:af1ec6c2abe02d681462b3ca5dd4a2a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">End record for ui_menu_entry_t. <br /></td></tr>
+<tr class="separator:af1ec6c2abe02d681462b3ca5dd4a2a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d12e70227ae6a8e9e465d42a4de14bf" id="r_a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf">RGB_FROM_U8</a>(r,  g,  b)&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td></tr>
 <tr class="memdesc:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert separate RGB values to integer RGB representation.  <br /></td></tr>
 <tr class="separator:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,6 +252,9 @@ typedef struct <a class="el" href="structui__menu__entry__s.html">ui_menu_entry_
 <tr class="memitem:a6205daaaac059331281406d9a5b89099" id="r_a6205daaaac059331281406d9a5b89099"><td class="memItemLeft" align="right" valign="top"><a id="a6205daaaac059331281406d9a5b89099" name="a6205daaaac059331281406d9a5b89099"></a>
 typedef struct <a class="el" href="structui__button__s.html">ui_button_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_button_t</b></td></tr>
 <tr class="separator:a6205daaaac059331281406d9a5b89099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30f37acbae08ed23070a1bc504acb2e" id="r_ad30f37acbae08ed23070a1bc504acb2e"><td class="memItemLeft" align="right" valign="top"><a id="ad30f37acbae08ed23070a1bc504acb2e" name="ad30f37acbae08ed23070a1bc504acb2e"></a>
+typedef struct <a class="el" href="structui__controlmenu__s.html">ui_controlmenu_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_controlmenu_t</b></td></tr>
+<tr class="separator:ad30f37acbae08ed23070a1bc504acb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab319ff33cb05ce60cb3e35af842e80b7" id="r_ab319ff33cb05ce60cb3e35af842e80b7"><td class="memItemLeft" align="right" valign="top"><a id="ab319ff33cb05ce60cb3e35af842e80b7" name="ab319ff33cb05ce60cb3e35af842e80b7"></a>
 typedef struct <a class="el" href="structui__multipress__event__s.html">ui_multipress_event_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_multipress_event_t</b></td></tr>
 <tr class="separator:ab319ff33cb05ce60cb3e35af842e80b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -573,25 +583,41 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a98c0abfc010b6de14277b0838a0adfea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component behavior flag. Usually set by the component constructors but can sometimes change over time.  <a href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea">More...</a><br /></td></tr>
 <tr class="separator:a98c0abfc010b6de14277b0838a0adfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb26d7b87229534c893fcc1fc9bd9c5b" id="r_adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memItemLeft" align="right" valign="top"><a id="adb26d7b87229534c893fcc1fc9bd9c5b" name="adb26d7b87229534c893fcc1fc9bd9c5b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b">ui_deskbox_flag_e</a> { <br />
-&#160;&#160;<b>UI_DESKBOX_FLAG_NONE</b> = 0x0000
-, <b>UI_DESKBOX_FLAG_CLOSE_BUTTON</b> = 0x0001
-, <b>UI_DESKBOX_FLAG_DONE_BUTTON</b> = 0x0002
-, <b>UI_DESKBOX_FLAG_SAVE_BUTTON</b> = 0x0004
+<tr class="memitem:adb26d7b87229534c893fcc1fc9bd9c5b" id="r_adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b">ui_deskbox_flag_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bab277d1ca42c031a5c5263cf1b537cdd8">UI_DESKBOX_FLAG_NONE</a> = 0x0000
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12">UI_DESKBOX_FLAG_CLOSE_BUTTON</a> = 0x0001
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba49e0083904415a4c450f4c51f8ef508f">UI_DESKBOX_FLAG_DONE_BUTTON</a> = 0x0002
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bad181fe33471d86e053214f8aa5907fdc">UI_DESKBOX_FLAG_SAVE_BUTTON</a> = 0x0004
 , <br />
-&#160;&#160;<b>UI_DESKBOX_FLAG_HELP_BUTTON</b> = 0x0008
-, <b>UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON</b> = 0x0010
-, <b>UI_DESKBOX_FLAG_STYLE_NORMAL</b> = 0x0000
-, <b>UI_DESKBOX_FLAG_STYLE_NONE</b> = 0x0100
+&#160;&#160;<a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bacf86a72eab163f8947f110630b877a5b">UI_DESKBOX_FLAG_HELP_BUTTON</a> = 0x0008
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bae3c179b13848baa0471b832c4838b1c9">UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON</a> = 0x0010
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5baf1d189f8c1084165e2eb2108777986b9">UI_DESKBOX_FLAG_STYLE_NORMAL</a> = 0x0000
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5babb32daabc9e41c7e17600148777443b2">UI_DESKBOX_FLAG_STYLE_NONE</a> = 0x0100
 , <br />
-&#160;&#160;<b>UI_DESKBOX_FLAG_STYLE_SIMPLE</b> = 0x0200
-, <b>UI_DESKBOX_FLAG_STYLE_FLOAT</b> = 0x0400
-, <b>UI_DESKBOX_FLAG_STYLE_POPUP</b> = 0x0800
-, <b>UI_DESKBOX_FLAG_NO_CLOSE_BUTTON</b> = 0x80000
+&#160;&#160;<a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba8b6a19eef87a3d1d88dc8e432a2c331c">UI_DESKBOX_FLAG_STYLE_SIMPLE</a> = 0x0200
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5baa847a4e6f5087b0b1a57ba252b9e0545">UI_DESKBOX_FLAG_STYLE_FLOAT</a> = 0x0400
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bafa4ff3f87fad00d35d36f911b69082b6">UI_DESKBOX_FLAG_STYLE_POPUP</a> = 0x0800
+, <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bae62bdaed1c97d94965a25b95df61777c">UI_DESKBOX_FLAG_NO_CLOSE_BUTTON</a> = 0x80000
 <br />
  }</td></tr>
-<tr class="memdesc:adb26d7b87229534c893fcc1fc9bd9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deskbox style flags. <br /></td></tr>
+<tr class="memdesc:adb26d7b87229534c893fcc1fc9bd9c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deskbox style flags.  <a href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b">More...</a><br /></td></tr>
 <tr class="separator:adb26d7b87229534c893fcc1fc9bd9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04cd7e420f6db91709a517d4e09ceeb9" id="r_a04cd7e420f6db91709a517d4e09ceeb9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9">ui_text_layout_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a00f108f08b6c0856d7c82281ea80f293">UI_TEXT_LAYOUT_CENTER_CENTER</a> = 0
+, <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a2fe230e385fe6d7c19c7e04b082339d3">UI_TEXT_LAYOUT_LEFT_TOP</a>
+, <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a0f39f72d0bebedcc0aa996ceccc615ef">UI_TEXT_LAYOUT_LEFT_BOTTOM</a>
+, <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a356692dd1d5e9c93aec764e7617ba2ee">UI_TEXT_LAYOUT_LEFT_CENTER</a>
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a5df47398de46ac17a7e6cf16ed3e6790">UI_TEXT_LAYOUT_RIGHT_TOP</a>
+, <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a4a44fee12e506781d59b650e56595341">UI_TEXT_LAYOUT_RIGHT_BOTTOM</a>
+, <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9ac8b5c52685483bd6ed18f25b949c75ce">UI_TEXT_LAYOUT_RIGHT_CENTER</a>
+, <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9acfe1f6a55f50d11f70f89c1a6ace27a1">UI_TEXT_LAYOUT_CENTER_TOP</a>
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a68af43d5cad722479549d3a66f2cf554">UI_TEXT_LAYOUT_CENTER_BOTTOM</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a04cd7e420f6db91709a517d4e09ceeb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text layout types.  <a href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9">More...</a><br /></td></tr>
+<tr class="separator:a04cd7e420f6db91709a517d4e09ceeb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8004bfe5c13384578c2557715250ff9" id="r_ae8004bfe5c13384578c2557715250ff9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9">ui_button_visual_state_e</a> { <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9ace4de8e270907707617e4509da72810b">UI_BUTTON_VS_RELEASED</a> = 0
 , <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a76463a4e90f6ed5c97a7b0051a761ca1">UI_BUTTON_VS_PRESSED</a> = 1
 , <a class="el" href="ui_2common_8h.html#ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf">UI_BUTTON_VS_UNCHANGED</a> = 10
@@ -600,9 +626,9 @@ Enumerations</h2></td></tr>
 <tr class="separator:ae8004bfe5c13384578c2557715250ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b4f94b1f5f25b6851bed8ddc11881f6" id="r_a9b4f94b1f5f25b6851bed8ddc11881f6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6">ui_menu_entry_attribute_e</a> { <br />
 &#160;&#160;<a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970">UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER</a> = 0x0001
-, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb">UI_MENU_ENTRY_ATTR_BOLD_FONT</a> = 0x0002
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0">UI_CONTROLMENU_ENTRY_ATTR_BOLD_FONT</a> = 0x0002
 , <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7">UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE</a> = 0x0004
-, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b">UI_MENU_ENTRY_ATTR_VALUE_ITEM</a> = 0x0080
+, <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ad68f556c9bc281a3950bd1bb008e0262">UI_CONTROLMENU_ENTRY_ATTR_VALUE_ITEM</a> = 0x0080
 , <br />
 &#160;&#160;<a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec">UI_MENU_ENTRY_ATTR_ENCODING_CP950</a> = 0x0100
 , <a class="el" href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6a3e9c972bf77b4054b5517cd083af1401">UI_MENU_ENTRY_ATTR_ENCODING_CP936</a> = 0x0200
@@ -612,6 +638,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a9b4f94b1f5f25b6851bed8ddc11881f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu entry attribute flags.  <a href="ui_2common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6">More...</a><br /></td></tr>
 <tr class="separator:a9b4f94b1f5f25b6851bed8ddc11881f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1ce8f5a02b18bda82409dd04c696eb" id="r_afc1ce8f5a02b18bda82409dd04c696eb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eb">ui_controlmenu_layout_e</a> { <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696ebaf9b220544784796277d2d20f6084f286">UI_CONTROLMENU_LAYOUT_ABS</a> = 0
+, <a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eba578f99ec820296870db79f9f15746924">UI_CONTROLMENU_LAYOUT_LEFT_HALF</a>
+, <a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696ebac6a0230ff6f34e8b4ad190f87bd2db69">UI_CONTROLMENU_LAYOUT_RIGHT_HALF_WITH_SEP</a>
+, <a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696ebad9036e7ebc983bd5f1ecf016f95beec6">UI_CONTROLMENU_LAYOUT_SCREEN_WIDTH</a>
+, <br />
+&#160;&#160;<a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eba3d65b00c1dc2052337f6c5676106cc4a">UI_CONTROLMENU_LAYOUT_RIGHT_HALF</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:afc1ce8f5a02b18bda82409dd04c696eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control menu layout type.  <a href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eb">More...</a><br /></td></tr>
+<tr class="separator:afc1ce8f5a02b18bda82409dd04c696eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a626b23c6e6f587deeea5e3cc43b10171" id="r_a626b23c6e6f587deeea5e3cc43b10171"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ui_2common_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a> { <br />
 &#160;&#160;<b>SANS_TINY_CJK_NORMAL</b> = 0
 , <b>SANS_BOLD_TINY_CJK_NORMAL</b>
@@ -1230,6 +1267,85 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="afc1ce8f5a02b18bda82409dd04c696eb" name="afc1ce8f5a02b18bda82409dd04c696eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1ce8f5a02b18bda82409dd04c696eb">&#9670;&#160;</a></span>ui_controlmenu_layout_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#afc1ce8f5a02b18bda82409dd04c696eb">ui_controlmenu_layout_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Control menu layout type. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc1ce8f5a02b18bda82409dd04c696ebaf9b220544784796277d2d20f6084f286" name="afc1ce8f5a02b18bda82409dd04c696ebaf9b220544784796277d2d20f6084f286"></a>UI_CONTROLMENU_LAYOUT_ABS&#160;</td><td class="fielddoc"><p>Absolute X coordinates and widget height. </p>
+<p>Skip X value overrides. The y1 bound will also not be automatically derived from the font height. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc1ce8f5a02b18bda82409dd04c696eba578f99ec820296870db79f9f15746924" name="afc1ce8f5a02b18bda82409dd04c696eba578f99ec820296870db79f9f15746924"></a>UI_CONTROLMENU_LAYOUT_LEFT_HALF&#160;</td><td class="fielddoc"><p>Draw the control menu at the left half of the screen. </p>
+<p>Override x0 as 1 pixel right to the left border of the screen, and x1 as the midpoint of the screen ((<a class="el" href="canvas_8h.html#ad168addbefac40ab57c3c86f038ae47f" title="Get X coordinate of the rightmost visible pixels on the current canvas.">GetMaxScrX()</a> + 1) / 2). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc1ce8f5a02b18bda82409dd04c696ebac6a0230ff6f34e8b4ad190f87bd2db69" name="afc1ce8f5a02b18bda82409dd04c696ebac6a0230ff6f34e8b4ad190f87bd2db69"></a>UI_CONTROLMENU_LAYOUT_RIGHT_HALF_WITH_SEP&#160;</td><td class="fielddoc"><p>Draw the control menu at the right half of the screen with a 2-pixel separation. </p>
+<p>Override x0 as 2 pixels right to the midpoint of the screen, and x1 as 1 pixel left to the right border of the screen. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc1ce8f5a02b18bda82409dd04c696ebad9036e7ebc983bd5f1ecf016f95beec6" name="afc1ce8f5a02b18bda82409dd04c696ebad9036e7ebc983bd5f1ecf016f95beec6"></a>UI_CONTROLMENU_LAYOUT_SCREEN_WIDTH&#160;</td><td class="fielddoc"><p>Fill the screen horizontally. </p>
+<p>Override x0 as 1 pixel right to the left border of the screen, and x1 as 1 pixel left to the right border of the screen. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc1ce8f5a02b18bda82409dd04c696eba3d65b00c1dc2052337f6c5676106cc4a" name="afc1ce8f5a02b18bda82409dd04c696eba3d65b00c1dc2052337f6c5676106cc4a"></a>UI_CONTROLMENU_LAYOUT_RIGHT_HALF&#160;</td><td class="fielddoc"><p>Draw the control menu at the right half of the screen. </p>
+<p>Override x0 as the midpoint of the screen, and x1 as 1 pixel left to the right border of the screen. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="adb26d7b87229534c893fcc1fc9bd9c5b" name="adb26d7b87229534c893fcc1fc9bd9c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb26d7b87229534c893fcc1fc9bd9c5b">&#9670;&#160;</a></span>ui_deskbox_flag_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b">ui_deskbox_flag_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deskbox style flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5bab277d1ca42c031a5c5263cf1b537cdd8" name="adb26d7b87229534c893fcc1fc9bd9c5bab277d1ca42c031a5c5263cf1b537cdd8"></a>UI_DESKBOX_FLAG_NONE&#160;</td><td class="fielddoc"><p>No flag. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12" name="adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12"></a>UI_DESKBOX_FLAG_CLOSE_BUTTON&#160;</td><td class="fielddoc"><p>Add a close button to the title bar. </p>
+<dl class="section note"><dt>Note</dt><dd>Some systems may suppress this. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5ba49e0083904415a4c450f4c51f8ef508f" name="adb26d7b87229534c893fcc1fc9bd9c5ba49e0083904415a4c450f4c51f8ef508f"></a>UI_DESKBOX_FLAG_DONE_BUTTON&#160;</td><td class="fielddoc"><p>Add a done button to the title bar. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5bad181fe33471d86e053214f8aa5907fdc" name="adb26d7b87229534c893fcc1fc9bd9c5bad181fe33471d86e053214f8aa5907fdc"></a>UI_DESKBOX_FLAG_SAVE_BUTTON&#160;</td><td class="fielddoc"><p>Add a save button to the title bar. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5bacf86a72eab163f8947f110630b877a5b" name="adb26d7b87229534c893fcc1fc9bd9c5bacf86a72eab163f8947f110630b877a5b"></a>UI_DESKBOX_FLAG_HELP_BUTTON&#160;</td><td class="fielddoc"><p>Handle help key presses. </p>
+<dl class="section note"><dt>Note</dt><dd>This does not add a button, instead it adds a hook to the deskbox event handler that opens the help menu. </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5bae3c179b13848baa0471b832c4838b1c9" name="adb26d7b87229534c893fcc1fc9bd9c5bae3c179b13848baa0471b832c4838b1c9"></a>UI_DESKBOX_FLAG_FUNCTION_MENU_BUTTON&#160;</td><td class="fielddoc"><p>Add a function button to the title bar. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5baf1d189f8c1084165e2eb2108777986b9" name="adb26d7b87229534c893fcc1fc9bd9c5baf1d189f8c1084165e2eb2108777986b9"></a>UI_DESKBOX_FLAG_STYLE_NORMAL&#160;</td><td class="fielddoc"><p>Normal style (with title bar). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5babb32daabc9e41c7e17600148777443b2" name="adb26d7b87229534c893fcc1fc9bd9c5babb32daabc9e41c7e17600148777443b2"></a>UI_DESKBOX_FLAG_STYLE_NONE&#160;</td><td class="fielddoc"><p>Do not draw title bar and frame. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5ba8b6a19eef87a3d1d88dc8e432a2c331c" name="adb26d7b87229534c893fcc1fc9bd9c5ba8b6a19eef87a3d1d88dc8e432a2c331c"></a>UI_DESKBOX_FLAG_STYLE_SIMPLE&#160;</td><td class="fielddoc"><p>Draw a simple frame. </p>
+<p>Implies <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5babb32daabc9e41c7e17600148777443b2" title="Do not draw title bar and frame.">UI_DESKBOX_FLAG_STYLE_NONE</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5baa847a4e6f5087b0b1a57ba252b9e0545" name="adb26d7b87229534c893fcc1fc9bd9c5baa847a4e6f5087b0b1a57ba252b9e0545"></a>UI_DESKBOX_FLAG_STYLE_FLOAT&#160;</td><td class="fielddoc"><p>Create a floating window deskbox. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5bafa4ff3f87fad00d35d36f911b69082b6" name="adb26d7b87229534c893fcc1fc9bd9c5bafa4ff3f87fad00d35d36f911b69082b6"></a>UI_DESKBOX_FLAG_STYLE_POPUP&#160;</td><td class="fielddoc"><p>Create a popup deskbox. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adb26d7b87229534c893fcc1fc9bd9c5bae62bdaed1c97d94965a25b95df61777c" name="adb26d7b87229534c893fcc1fc9bd9c5bae62bdaed1c97d94965a25b95df61777c"></a>UI_DESKBOX_FLAG_NO_CLOSE_BUTTON&#160;</td><td class="fielddoc"><p>Inhibit close button creation. </p>
+<p>This takes priority over <a class="el" href="ui_2common_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12" title="Add a close button to the title bar.">UI_DESKBOX_FLAG_CLOSE_BUTTON</a>. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a6edd1204219bf9674aa3bf2d1212c67c" name="a6edd1204219bf9674aa3bf2d1212c67c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6edd1204219bf9674aa3bf2d1212c67c">&#9670;&#160;</a></span>ui_event_internal_e</h2>
 
@@ -1335,11 +1451,13 @@ Enumerations</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970" name="a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970"></a>UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER&#160;</td><td class="fielddoc"><p>Put separator after current item. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb" name="a9b4f94b1f5f25b6851bed8ddc11881f6a0918e163d1d0fa357dd7d4ce0f3186bb"></a>UI_MENU_ENTRY_ATTR_BOLD_FONT&#160;</td><td class="fielddoc"><p>Use bold font for label. </p>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0" name="a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0"></a>UI_CONTROLMENU_ENTRY_ATTR_BOLD_FONT&#160;</td><td class="fielddoc"><p>Render the widget label using bold font. </p>
+<p>Use SERIF_BOLD_CJK in place of the usual SERIF_CJK font when rendering the label. </p><dl class="section note"><dt>Note</dt><dd>This attribute only takes effect when the user of the entry item is a ui_controlmenu_t. It will be ignored otherwise. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7" name="a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7"></a>UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE&#160;</td><td class="fielddoc"><p>Put separator before current item. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b" name="a9b4f94b1f5f25b6851bed8ddc11881f6ab08bdc43d65012d379ba1e5611d6cf8b"></a>UI_MENU_ENTRY_ATTR_VALUE_ITEM&#160;</td><td class="fielddoc"><p>Set the index of this item as the selection value by default (?). </p>
+<tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ad68f556c9bc281a3950bd1bb008e0262" name="a9b4f94b1f5f25b6851bed8ddc11881f6ad68f556c9bc281a3950bd1bb008e0262"></a>UI_CONTROLMENU_ENTRY_ATTR_VALUE_ITEM&#160;</td><td class="fielddoc"><p>Item can be selected as a control menu value. </p>
+<p>Only items with this flag can be selected as a value. Otherwise selecting the item will only emit an event. </p><dl class="section note"><dt>Note</dt><dd>This attribute only takes effect when the user of the entry item is a ui_controlmenu_t. It will be ignored otherwise. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec" name="a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec"></a>UI_MENU_ENTRY_ATTR_ENCODING_CP950&#160;</td><td class="fielddoc"><p>Label uses 8-bit encoding with codepage CP950. </p>
 </td></tr>
@@ -1349,6 +1467,43 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e" name="a9b4f94b1f5f25b6851bed8ddc11881f6a314c0e6005196654137447ce35bee48e"></a>UI_MENU_ENTRY_ATTR_DEFAULT&#160;</td><td class="fielddoc"><p>Default selection. </p>
 <p>Make this item (or the last item that had this bit set) the default selection. Prioritized over the default item selected by PopUpList(). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a04cd7e420f6db91709a517d4e09ceeb9" name="a04cd7e420f6db91709a517d4e09ceeb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04cd7e420f6db91709a517d4e09ceeb9">&#9670;&#160;</a></span>ui_text_layout_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ui_2common_8h.html#a04cd7e420f6db91709a517d4e09ceeb9">ui_text_layout_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Text layout types. </p>
+<p>Used by several widgets to indicate the text layout. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a00f108f08b6c0856d7c82281ea80f293" name="a04cd7e420f6db91709a517d4e09ceeb9a00f108f08b6c0856d7c82281ea80f293"></a>UI_TEXT_LAYOUT_CENTER_CENTER&#160;</td><td class="fielddoc"><p>Render the text at the center of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a2fe230e385fe6d7c19c7e04b082339d3" name="a04cd7e420f6db91709a517d4e09ceeb9a2fe230e385fe6d7c19c7e04b082339d3"></a>UI_TEXT_LAYOUT_LEFT_TOP&#160;</td><td class="fielddoc"><p>Render the text at the top-left of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a0f39f72d0bebedcc0aa996ceccc615ef" name="a04cd7e420f6db91709a517d4e09ceeb9a0f39f72d0bebedcc0aa996ceccc615ef"></a>UI_TEXT_LAYOUT_LEFT_BOTTOM&#160;</td><td class="fielddoc"><p>Render the text at the bottom-left of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a356692dd1d5e9c93aec764e7617ba2ee" name="a04cd7e420f6db91709a517d4e09ceeb9a356692dd1d5e9c93aec764e7617ba2ee"></a>UI_TEXT_LAYOUT_LEFT_CENTER&#160;</td><td class="fielddoc"><p>Render the text at the left of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a5df47398de46ac17a7e6cf16ed3e6790" name="a04cd7e420f6db91709a517d4e09ceeb9a5df47398de46ac17a7e6cf16ed3e6790"></a>UI_TEXT_LAYOUT_RIGHT_TOP&#160;</td><td class="fielddoc"><p>Render the text at the top-right of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a4a44fee12e506781d59b650e56595341" name="a04cd7e420f6db91709a517d4e09ceeb9a4a44fee12e506781d59b650e56595341"></a>UI_TEXT_LAYOUT_RIGHT_BOTTOM&#160;</td><td class="fielddoc"><p>Render the text at the bottom-left of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9ac8b5c52685483bd6ed18f25b949c75ce" name="a04cd7e420f6db91709a517d4e09ceeb9ac8b5c52685483bd6ed18f25b949c75ce"></a>UI_TEXT_LAYOUT_RIGHT_CENTER&#160;</td><td class="fielddoc"><p>Render the text at the right of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9acfe1f6a55f50d11f70f89c1a6ace27a1" name="a04cd7e420f6db91709a517d4e09ceeb9acfe1f6a55f50d11f70f89c1a6ace27a1"></a>UI_TEXT_LAYOUT_CENTER_TOP&#160;</td><td class="fielddoc"><p>Render the text at the top of the widget. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a04cd7e420f6db91709a517d4e09ceeb9a68af43d5cad722479549d3a66f2cf554" name="a04cd7e420f6db91709a517d4e09ceeb9a68af43d5cad722479549d3a66f2cf554"></a>UI_TEXT_LAYOUT_CENTER_BOTTOM&#160;</td><td class="fielddoc"><p>Render the text at the bottom of the widget. </p>
 </td></tr>
 </table>
 
