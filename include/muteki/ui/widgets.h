@@ -13,5 +13,6 @@
 
 #include <muteki/ui/widgets/button.h>
 #include <muteki/ui/widgets/controlmenu.h>
+#include <muteki/ui/widgets/menufield.h>
 
 #endif // __MUTEKI_UI_WIDGETS_H__

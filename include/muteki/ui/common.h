@@ -944,6 +944,23 @@ enum ui_controlmenu_layout_e {
 };
 
 /**
+ * @brief Menu field flags.
+ */
+enum ui_menufield_flag_e {
+    /**
+     * @brief Notify others of a new selection.
+     * @details When this flag is set, produce an event with the type ::UI_EVENT_TYPE_COMPONENT_CMD, the value
+     * set to the value of the selected ui_menu_entry_t::event, and user data set to the index of current selection
+     * (as ui_event_t::user_data_scalar).
+     */
+    UI_MENUFIELD_FLAG_NOTIFY = 0x0001,
+    /**
+     * @brief Set by the file picker user. Purpose unclear.
+     */
+    UI_MENUFIELD_FILEPICKER = 0x0020,
+};
+
+/**
  * @brief Font types.
  * @details The naming follows the following format, joined with underscores (_):
  *
@@ -1019,6 +1036,7 @@ struct ui_imageclip_s;
 struct ui_menu_entry_s;
 struct ui_button_s;
 struct ui_controlmenu_s;
+struct ui_menufield_s;
 struct ui_multipress_event_s;
 
 typedef struct lcd_surface_s lcd_surface_t;
@@ -1040,6 +1058,7 @@ typedef struct ui_imageclip_s ui_imageclip_t;
 typedef struct ui_menu_entry_s ui_menu_entry_t;
 typedef struct ui_button_s ui_button_t;
 typedef struct ui_controlmenu_s ui_controlmenu_t;
+typedef struct ui_menufield_s ui_menufield_t;
 typedef struct ui_multipress_event_s ui_multipress_event_t;
 
 #if defined(MUTEKI_HAS_PRIME_UI_EVENT) && MUTEKI_HAS_PRIME_UI_EVENT == 1
@@ -1453,6 +1472,10 @@ struct ui_event_base_s {
         */
         void *user_data; // 12-16 pointer that only shows up on USB insertion event.
         /**
+         * @brief User data as a scalar value.
+         */
+        unsigned int user_data_scalar;
+        /**
          * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
          * @see scroll_wheel_e
          */
@@ -1533,6 +1556,10 @@ struct ui_event_prime_s {
         * @details Format is event-specific.
         */
         void *user_data; // 12-16 pointer that only shows up on USB insertion event.
+        /**
+         * @brief User data as a scalar value.
+         */
+        unsigned int user_data_scalar;
         /**
          * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
          * @see scroll_wheel_e
@@ -1622,6 +1649,10 @@ struct ui_event_sys_s {
         * @details Format is event-specific.
         */
         void *user_data; // 12-16 pointer that only shows up on USB insertion event.
+        /**
+         * @brief User data as a scalar value.
+         */
+        unsigned int user_data_scalar;
         /**
          * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
          * @see scroll_wheel_e
@@ -2074,6 +2105,49 @@ struct ui_controlmenu_s {
      * @brief Unknown. Probably padding bytes.
      */
     unsigned short unk_0x42;
+};
+
+struct ui_menufield_s {
+    /**
+     * @brief The inherited component struct.
+     */
+    ui_component_t component;
+    /**
+     * @brief Not used. Likely used by the widget theming module.
+     */
+    unsigned short theme_param;
+    /**
+     * @brief Unknown. Probably padding bytes.
+     */
+    short unk_0x36;
+    /**
+     * @brief Post update callback.
+     * @details Called whenever there is a new valid menu item selection.
+     */
+    void (*post_update)(ui_menufield_t *self);
+    /**
+     * @brief Menu entry array.
+     */
+    const ui_menu_entry_t *menu_entries;
+    /**
+     * @brief Borrowed reference to the memory storing the current index.
+     * @warning This must be a valid pointer to a 16-bit integer at all times the widget is alive.
+     */
+    unsigned short *current_index_p;
+    /**
+     * @brief Maximum text area x1 coordinate.
+     * @details Set by the constructor. Normally should not be overridden by the user.
+     */
+    short max_x1;
+    /**
+     * @brief Flags.
+     * @see ui_menufield_flag_e
+     */
+    unsigned short menufield_flags;
+    /**
+     * @brief Unknown.
+     */
+    int unk_0x48;
 };
 
 /**
