@@ -128,13 +128,19 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__multipress__event__s.html">ui_multipress_event_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multipress/multitouch event.  <a href="structui__multipress__event__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__base__s.html">ui_event_base_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events.  <a href="structui__event__base__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__ext__s.html">ui_event_ext_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main event struct extension.  <a href="structui__event__ext__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__ext__prime__s.html">ui_event_ext_prime_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__sys__s.html">ui_event_sys_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common struct subset shared across system and main events.  <a href="structui__event__sys__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__std__s.html">ui_event_std_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for UI events.  <a href="structui__event__std__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__prime__s.html">ui_event_prime_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure for low level UI events (Prime G1 extension).  <a href="structui__event__prime__s.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__event__sys__s.html">ui_event_sys_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__message__s.html">ui_message_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event struct used by <a class="el" href="framework_2event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a>.  <a href="structui__message__s.html#details">More...</a><br /></td></tr>
@@ -143,7 +149,7 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a345fc2016c20f349464d40ae3bc795b5" id="r_a345fc2016c20f349464d40ae3bc795b5"><td class="memItemLeft" align="right" valign="top"><a id="a345fc2016c20f349464d40ae3bc795b5" name="a345fc2016c20f349464d40ae3bc795b5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_s</b>&#160;&#160;&#160;<a class="el" href="structui__event__base__s.html">ui_event_base_s</a></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_s</b>&#160;&#160;&#160;<a class="el" href="structui__event__std__s.html">ui_event_std_s</a></td></tr>
 <tr class="separator:a345fc2016c20f349464d40ae3bc795b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -151,12 +157,18 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a8d6d9f1cc52acef63b2bcb922d9f312a" id="r_a8d6d9f1cc52acef63b2bcb922d9f312a"><td class="memItemLeft" align="right" valign="top"><a id="a8d6d9f1cc52acef63b2bcb922d9f312a" name="a8d6d9f1cc52acef63b2bcb922d9f312a"></a>
 typedef struct <a class="el" href="structui__component__s.html">ui_component_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_component_t</b></td></tr>
 <tr class="separator:a8d6d9f1cc52acef63b2bcb922d9f312a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac30c0b3ae5570cafc84658e45604dfda" id="r_ac30c0b3ae5570cafc84658e45604dfda"><td class="memItemLeft" align="right" valign="top"><a id="ac30c0b3ae5570cafc84658e45604dfda" name="ac30c0b3ae5570cafc84658e45604dfda"></a>
-typedef struct <a class="el" href="structui__event__base__s.html">ui_event_base_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_base_t</b></td></tr>
-<tr class="separator:ac30c0b3ae5570cafc84658e45604dfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55676e6bfa4297e96cadd79abf1a236a" id="r_a55676e6bfa4297e96cadd79abf1a236a"><td class="memItemLeft" align="right" valign="top"><a id="a55676e6bfa4297e96cadd79abf1a236a" name="a55676e6bfa4297e96cadd79abf1a236a"></a>
+typedef struct <a class="el" href="structui__event__std__s.html">ui_event_std_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_std_t</b></td></tr>
+<tr class="separator:a55676e6bfa4297e96cadd79abf1a236a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f39d7d5fe5d04f76f76544c1260aa23" id="r_a1f39d7d5fe5d04f76f76544c1260aa23"><td class="memItemLeft" align="right" valign="top"><a id="a1f39d7d5fe5d04f76f76544c1260aa23" name="a1f39d7d5fe5d04f76f76544c1260aa23"></a>
 typedef struct <a class="el" href="structui__event__prime__s.html">ui_event_prime_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_prime_t</b></td></tr>
 <tr class="separator:a1f39d7d5fe5d04f76f76544c1260aa23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683e84a4ee196cb28eca043d933bef0c" id="r_a683e84a4ee196cb28eca043d933bef0c"><td class="memItemLeft" align="right" valign="top"><a id="a683e84a4ee196cb28eca043d933bef0c" name="a683e84a4ee196cb28eca043d933bef0c"></a>
+typedef struct <a class="el" href="structui__event__ext__s.html">ui_event_ext_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_ext_t</b></td></tr>
+<tr class="separator:a683e84a4ee196cb28eca043d933bef0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8406fe09bd7a8e37faf7f578d4d7a1" id="r_a4c8406fe09bd7a8e37faf7f578d4d7a1"><td class="memItemLeft" align="right" valign="top"><a id="a4c8406fe09bd7a8e37faf7f578d4d7a1" name="a4c8406fe09bd7a8e37faf7f578d4d7a1"></a>
+typedef struct <a class="el" href="structui__event__ext__prime__s.html">ui_event_ext_prime_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_ext_prime_t</b></td></tr>
+<tr class="separator:a4c8406fe09bd7a8e37faf7f578d4d7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affbed9cef3b04989fe90163953abcbe3" id="r_affbed9cef3b04989fe90163953abcbe3"><td class="memItemLeft" align="right" valign="top"><a id="affbed9cef3b04989fe90163953abcbe3" name="affbed9cef3b04989fe90163953abcbe3"></a>
 typedef struct <a class="el" href="structui__event__sys__s.html">ui_event_sys_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_sys_t</b></td></tr>
 <tr class="separator:affbed9cef3b04989fe90163953abcbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,9 +178,9 @@ typedef struct <a class="el" href="structui__multipress__event__s.html">ui_multi
 <tr class="memitem:a03e4df71234a29f422d7efaff27e4bbb" id="r_a03e4df71234a29f422d7efaff27e4bbb"><td class="memItemLeft" align="right" valign="top"><a id="a03e4df71234a29f422d7efaff27e4bbb" name="a03e4df71234a29f422d7efaff27e4bbb"></a>
 typedef struct <a class="el" href="structui__group__s.html">ui_group_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_group_t</b></td></tr>
 <tr class="separator:a03e4df71234a29f422d7efaff27e4bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60dfc45aaf8437a0ec1d966fd504f094" id="r_a60dfc45aaf8437a0ec1d966fd504f094"><td class="memItemLeft" align="right" valign="top"><a id="a60dfc45aaf8437a0ec1d966fd504f094" name="a60dfc45aaf8437a0ec1d966fd504f094"></a>
-typedef struct <a class="el" href="structui__event__base__s.html">ui_event_base_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_t</b></td></tr>
-<tr class="separator:a60dfc45aaf8437a0ec1d966fd504f094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1489cb1864b00de51258bc009b1e1eaa" id="r_a1489cb1864b00de51258bc009b1e1eaa"><td class="memItemLeft" align="right" valign="top"><a id="a1489cb1864b00de51258bc009b1e1eaa" name="a1489cb1864b00de51258bc009b1e1eaa"></a>
+typedef struct <a class="el" href="structui__event__std__s.html">ui_event_std_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_event_t</b></td></tr>
+<tr class="separator:a1489cb1864b00de51258bc009b1e1eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>

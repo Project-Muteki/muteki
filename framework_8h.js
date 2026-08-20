@@ -3,9 +3,11 @@ var framework_8h =
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "ui_group_s", "structui__group__s.html", "structui__group__s" ],
     [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
-    [ "ui_event_base_s", "structui__event__base__s.html", "structui__event__base__s" ],
-    [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
+    [ "ui_event_ext_s", "structui__event__ext__s.html", "structui__event__ext__s" ],
+    [ "ui_event_ext_prime_s", "structui__event__ext__prime__s.html", "structui__event__ext__prime__s" ],
     [ "ui_event_sys_s", "structui__event__sys__s.html", "structui__event__sys__s" ],
+    [ "ui_event_std_s", "structui__event__std__s.html", "structui__event__std__s" ],
+    [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_component_flag_e", "framework_8h.html#a98c0abfc010b6de14277b0838a0adfea", [
       [ "UI_COMPONENT_FLAG_SELECTABLE", "framework_8h.html#a98c0abfc010b6de14277b0838a0adfeaaff0dcac4f2ee444a881ae7405f2603a4", null ],

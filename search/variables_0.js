@@ -10,5 +10,5 @@ var searchData=
   ['attrib_7',['attrib',['../structfind__context__t.html#aaf9ef2d837fe910e1689598cf233633e',1,'find_context_t']]],
   ['attrib_5fmask_8',['attrib_mask',['../structfind__context__t.html#aac9e4050319bcc44aa33e99cf7e24b5c',1,'find_context_t']]],
   ['attributes_9',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
-  ['available_5fmultipress_5fevents_10',['available_multipress_events',['../structui__event__prime__s.html#ae7fd9495aa212efdc49db13682ffa88f',1,'ui_event_prime_s']]]
+  ['available_5fmultipress_5fevents_10',['available_multipress_events',['../structui__event__ext__prime__s.html#a0d301403934bad3492f2324915774a0d',1,'ui_event_ext_prime_s']]]
 ];

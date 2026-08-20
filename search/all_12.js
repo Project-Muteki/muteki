@@ -5,7 +5,7 @@ var searchData=
   ['saved_5fcursor_2',['saved_cursor',['../structlcd__base__s.html#aebac51ee7c8d1975232be89a0867a6f5',1,'lcd_base_s::saved_cursor'],['../structlcd__thread__safe__s.html#adbeffc3c26fa06d8f2230dce4753c46d',1,'lcd_thread_safe_s::saved_cursor']]],
   ['scroll_5fdown_3',['SCROLL_DOWN',['../types_2event_8h.html#a1be4f211929ba28d21f38530d28e263da9d522bb191bf21bcaace5569ec49475d',1,'event.h']]],
   ['scroll_5fup_4',['SCROLL_UP',['../types_2event_8h.html#a1be4f211929ba28d21f38530d28e263dadc276c852fdda273d5091ee8e2ceb4ec',1,'event.h']]],
-  ['scroll_5fwheel_5',['scroll_wheel',['../structui__event__prime__s.html#af1c72489f4ef7365b55805d07637ae66',1,'ui_event_prime_s::scroll_wheel'],['../structui__event__sys__s.html#a3234b32564d2339b5db415533c85b8c6',1,'ui_event_sys_s::scroll_wheel'],['../structui__event__base__s.html#a63f0c429a86e494928332c5104ccb3c5',1,'ui_event_base_s::scroll_wheel']]],
+  ['scroll_5fwheel_5',['scroll_wheel',['../structui__event__sys__s.html#a3234b32564d2339b5db415533c85b8c6',1,'ui_event_sys_s']]],
   ['scroll_5fwheel_5fe_6',['scroll_wheel_e',['../types_2event_8h.html#a1be4f211929ba28d21f38530d28e263d',1,'event.h']]],
   ['scrolldown_7',['ScrollDown',['../lcd_8h.html#a67466ab247cac07728916e19b5e60dde',1,'lcd.h']]],
   ['scrollleft_8',['ScrollLeft',['../lcd_8h.html#ad73ff8fc68cb4aa0a67ef824ad679498',1,'lcd.h']]],

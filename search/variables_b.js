@@ -11,5 +11,5 @@ var searchData=
   ['minute_8',['minute',['../structdatetime__t.html#a83983f81b68d05438751579020fa0982',1,'datetime_t']]],
   ['month_9',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
   ['mtime_10',['mtime',['../structfind__context__t.html#a8db4ad446253092c6ca188481f352b51',1,'find_context_t']]],
-  ['multipress_5fevents_11',['multipress_events',['../structui__event__prime__s.html#a6eaabdd633230c8ab3ba306a575e015e',1,'ui_event_prime_s']]]
+  ['multipress_5fevents_11',['multipress_events',['../structui__event__ext__prime__s.html#a0b4a95e52f291df9ce8e21cf032f9648',1,'ui_event_ext_prime_s']]]
 ];

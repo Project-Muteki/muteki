@@ -15,10 +15,11 @@ var searchData=
   ['blit_5for_12',['BLIT_OR',['../types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda5ab586bc19c613fc6d806f4000573f46',1,'surface.h']]],
   ['blit_5ftransparent_13',['BLIT_TRANSPARENT',['../types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab2de94bebe319a861270572bebef8349',1,'surface.h']]],
   ['blit_5fxor_14',['BLIT_XOR',['../types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2ed0db7536274d43537c663a26bc7a23',1,'surface.h']]],
-  ['btime_15',['btime',['../structfind__context__t.html#a5bfdf38ee70aea97901b008d9dd81f30',1,'find_context_t']]],
-  ['buffer_16',['buffer',['../structlcd__surface__s.html#adcd55c9fe31df136982c5c73d0bf2cdf',1,'lcd_surface_s::buffer'],['../structpcm__decoder__buffer__s.html#a0fdfa398b875e0ea96df3a0e82f1258c',1,'pcm_decoder_buffer_s::buffer'],['../structpcm__frame__s.html#a96aeeb7a63c6f62bc8685cbca526a8bd',1,'pcm_frame_s::buffer']]],
-  ['builtin_5fbackground_5fid_17',['builtin_background_id',['../structui__imageclip__s.html#a8f74b5c77b9f5521a4b5786ae40e22a7',1,'ui_imageclip_s']]],
-  ['button_2eh_18',['button.h',['../widgets_2button_8h.html',1,'(Global Namespace)'],['../types_2button_8h.html',1,'(Global Namespace)']]],
-  ['button_5fflags_19',['button_flags',['../structui__button__s.html#a19670e0eeb9350913a60b775d9673378',1,'ui_button_s']]],
-  ['buzzer_20',['Buzzer',['../system_8h.html#aef1cc89349e8bbf4146fdf74097c882f',1,'system.h']]]
+  ['body_15',['body',['../structui__event__prime__s.html#a4a08df1a931cd2f76ae106179b12223c',1,'ui_event_prime_s::body'],['../structui__event__std__s.html#aa2929a613bcf8224b29f3458ee78be8e',1,'ui_event_std_s::body']]],
+  ['btime_16',['btime',['../structfind__context__t.html#a5bfdf38ee70aea97901b008d9dd81f30',1,'find_context_t']]],
+  ['buffer_17',['buffer',['../structlcd__surface__s.html#adcd55c9fe31df136982c5c73d0bf2cdf',1,'lcd_surface_s::buffer'],['../structpcm__decoder__buffer__s.html#a0fdfa398b875e0ea96df3a0e82f1258c',1,'pcm_decoder_buffer_s::buffer'],['../structpcm__frame__s.html#a96aeeb7a63c6f62bc8685cbca526a8bd',1,'pcm_frame_s::buffer']]],
+  ['builtin_5fbackground_5fid_18',['builtin_background_id',['../structui__imageclip__s.html#a8f74b5c77b9f5521a4b5786ae40e22a7',1,'ui_imageclip_s']]],
+  ['button_2eh_19',['button.h',['../widgets_2button_8h.html',1,'(Global Namespace)'],['../types_2button_8h.html',1,'(Global Namespace)']]],
+  ['button_5fflags_20',['button_flags',['../structui__button__s.html#a19670e0eeb9350913a60b775d9673378',1,'ui_button_s']]],
+  ['buzzer_21',['Buzzer',['../system_8h.html#aef1cc89349e8bbf4146fdf74097c882f',1,'system.h']]]
 ];
