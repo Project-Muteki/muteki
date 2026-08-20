@@ -3,7 +3,7 @@ var searchData=
   ['label_0',['label',['../structui__button__s.html#a4b7db838fe7998d276a6c5b8dcdf6c34',1,'ui_button_s']]],
   ['label_5fnarrow_1',['label_narrow',['../structui__menu__entry__s.html#a0b8b6bf10fc97d45f320c42c01eea39b',1,'ui_menu_entry_s']]],
   ['label_5fwide_2',['label_wide',['../structui__menu__entry__s.html#a20aa1b949bb70fdc621f98d3302b9dd8',1,'ui_menu_entry_s']]],
-  ['latch_5fon_3',['latch_on',['../structevent__s.html#aeaba0e5d74e1c9713db4201129358ecc',1,'event_s']]],
+  ['latch_5fon_3',['latch_on',['../structbxc__event__s.html#acb21f62b6a5fc7d3cc1e66c9b9b03f77',1,'bxc_event_s']]],
   ['layout_5fmode_4',['layout_mode',['../structui__controlmenu__s.html#affb022ddc825f2e47f199108a3552638',1,'ui_controlmenu_s']]],
   ['ldrfd_5',['ldrfd',['../structloader__loaded__s.html#ab00163cefa0e2a8d2e3d8a21414c21b1',1,'loader_loaded_s']]],
   ['level_6',['level',['../structpower__battery__status__t.html#ad1728ebce1011e7d352dcf90333580e1',1,'power_battery_status_t']]],

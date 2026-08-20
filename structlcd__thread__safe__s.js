@@ -1,11 +1,11 @@
 var structlcd__thread__safe__s =
 [
     [ "bg_color", "structlcd__thread__safe__s.html#a1781a1a1a9d3f661b05c6fc2568343a2", null ],
-    [ "cs", "structlcd__thread__safe__s.html#a46a34cbc680af9d6f33f77fae68b9bf0", null ],
+    [ "cs", "structlcd__thread__safe__s.html#a593e324511befed9c2bc48bee3b1e058", null ],
     [ "cursor", "structlcd__thread__safe__s.html#a72f9c20ab87115656833f63ca15a4d86", null ],
     [ "depth_bytes", "structlcd__thread__safe__s.html#a4b8a84a642cd579b137fe9be67b52eac", null ],
     [ "draw", "structlcd__thread__safe__s.html#a240ffcf991233f15689ffb4284fda8ab", null ],
-    [ "drawing_area", "structlcd__thread__safe__s.html#a6d20c1773cdffd2d17e1b7c40aac0cbc", null ],
+    [ "drawing_area", "structlcd__thread__safe__s.html#a99d147e52daf5dad9e90cdba6c275373", null ],
     [ "font", "structlcd__thread__safe__s.html#a6b9700b7f90247a689d54dca1ab02fda", null ],
     [ "height", "structlcd__thread__safe__s.html#a9ee7ef65d19be1983d6596bca18e140a", null ],
     [ "lock", "structlcd__thread__safe__s.html#a77e644287b1e6870b667d88085883083", null ],

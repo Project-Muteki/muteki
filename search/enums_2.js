@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['errno_5fexec_5fe_0',['errno_exec_e',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32',1,'errno.h']]],
-  ['errno_5fkernel_5fe_1',['errno_kernel_e',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73',1,'errno.h']]],
-  ['errno_5fns_5fflag_5fe_2',['errno_ns_flag_e',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5',1,'errno.h']]],
-  ['errno_5fuser_5fe_3',['errno_user_e',['../errno_8h.html#a36f8929d56bd487eb91b68bdc2cb2455',1,'errno.h']]]
+  ['font_5ftype_5fe_0',['font_type_e',['../types_2font_8h.html#a626b23c6e6f587deeea5e3cc43b10171',1,'font.h']]],
+  ['fs_5fattribute_5fe_1',['fs_attribute_e',['../path_8h.html#ace1ad2f8a5bced52258703097c71e8d4',1,'path.h']]]
 ];

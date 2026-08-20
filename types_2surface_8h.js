@@ -1,14 +1,14 @@
 var types_2surface_8h =
 [
     [ "lcd_surface_s", "structlcd__surface__s.html", "structlcd__surface__s" ],
-    [ "blit_flag_e", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd", [
-      [ "BLIT_NONE", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdae48767444476f5ff3a30d85d1740af05", null ],
-      [ "BLIT_AND", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab09108491dca48f71f3784108c9b5137", null ],
-      [ "BLIT_OR", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda5ab586bc19c613fc6d806f4000573f46", null ],
-      [ "BLIT_XOR", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda2ed0db7536274d43537c663a26bc7a23", null ],
-      [ "BLIT_TRANSPARENT", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdab2de94bebe319a861270572bebef8349", null ],
-      [ "BLIT_ALPHA_BLENDING", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcda864243b80a19945e013259d3145a8cf4", null ],
-      [ "BLIT_ALPHA_BLENDING_FAST", "types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcdaf39803d24f9b685b4661637d3bf75a1a", null ]
+    [ "lcd_surface_blit_flag_e", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68a", [
+      [ "LCD_SURFACE_BLIT_NONE", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aa88bfed5c4f618c40515a8bddf4902877", null ],
+      [ "LCD_SURFACE_BLIT_AND", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aae7dd7a75a8fee020bf8d345075d4553a", null ],
+      [ "LCD_SURFACE_BLIT_OR", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aab57f6ab2aa87106633f5ca574da11ab6", null ],
+      [ "LCD_SURFACE_BLIT_XOR", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aaab3cfbc47280e30604caa30edd79ee9f", null ],
+      [ "LCD_SURFACE_BLIT_TRANSPARENT", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aa401645156cbfe8f8e1bba12441ad9d1f", null ],
+      [ "LCD_SURFACE_BLIT_ALPHA_BLENDING", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aa631036988acd19d8ed0270c24131e999", null ],
+      [ "LCD_SURFACE_BLIT_ALPHA_BLENDING_FAST", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aa1782366a2aec0bbca98286ac33c8141d", null ]
     ] ],
     [ "lcd_surface_encoding_e", "types_2surface_8h.html#ac8ad346137bfb59adac20e2fb680f76d", [
       [ "LCD_SURFACE_ENCODING_HCA", "types_2surface_8h.html#ac8ad346137bfb59adac20e2fb680f76da6bc24f25680455a1709b49f8d93dd8e0", null ],

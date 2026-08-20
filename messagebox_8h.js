@@ -1,22 +1,22 @@
 var messagebox_8h =
 [
-    [ "message_box_result_e", "messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7", [
-      [ "MB_RESULT_OK", "messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7a7899324599e9c2e400713172c4291661", null ],
-      [ "MB_RESULT_CANCEL", "messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7a73c93a27b6bf552ce25f79d905979f4b", null ],
-      [ "MB_RESULT_YES", "messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7ac6782c2ab7c70f0d91a54a7fc5bdc50f", null ],
-      [ "MB_RESULT_NO", "messagebox_8h.html#abb00ba0ce0413f07101a74085629a5f7a6587e339e749832a44e902ace6139a1e", null ]
+    [ "ui_messagebox_result_e", "messagebox_8h.html#aa4d4f3ecdfb194bce6dcbda03b599375", [
+      [ "UI_MB_RESULT_OK", "messagebox_8h.html#aa4d4f3ecdfb194bce6dcbda03b599375aa2f52f2c023be8ee2605d59f9afca610", null ],
+      [ "UI_MB_RESULT_CANCEL", "messagebox_8h.html#aa4d4f3ecdfb194bce6dcbda03b599375a5f8a1c259b658c0007bd1b59fea1dde2", null ],
+      [ "UI_MB_RESULT_YES", "messagebox_8h.html#aa4d4f3ecdfb194bce6dcbda03b599375a527a2f00db2223a71a88716e73f2a179", null ],
+      [ "UI_MB_RESULT_NO", "messagebox_8h.html#aa4d4f3ecdfb194bce6dcbda03b599375ab8f64d657e4de52cfc9fadf3d68e7f39", null ]
     ] ],
-    [ "message_box_type_e", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7", [
-      [ "MB_DEFAULT", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a78612ab1042f18e75827cf00659d4957", null ],
-      [ "MB_ICON_ERROR", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7abc604a9b1e559a4bdb495c1287e8a338", null ],
-      [ "MB_ICON_INFO", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a62f3bcd86daa3ebd948b2f4ed08d577f", null ],
-      [ "MB_ICON_WARNING", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aa446d5edaaefc56e1783fb516b72f58e", null ],
-      [ "MB_ICON_QUESTION", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a4a7fef38df7510bf5ccfbe7a5bdf9955", null ],
-      [ "MB_BUTTON_YES", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a596382a0d812d1ae8a2e9d8822e88742", null ],
-      [ "MB_BUTTON_NO", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a6cb123b721b6d4fee9b67a4c0d4b322e", null ],
-      [ "MB_BUTTON_OK", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7aaaeb146cff843e3ac963d8efcc82a181", null ],
-      [ "MB_BUTTON_CANCEL", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7a297851b94671c90ad1e8fa22fca718c8", null ],
-      [ "MB_BUTTON_NONE", "messagebox_8h.html#a0e51ae1bb45dc6694697cdf16cf4bfd7ae22213942c1b70a5b4ce317937ada6cd", null ]
+    [ "ui_messagebox_type_e", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3", [
+      [ "UI_MB_DEFAULT", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3a7c4a7c1dd3a91a4b234dc8a34afbdbbd", null ],
+      [ "UI_MB_ICON_ERROR", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3aa506de5dce7faf7faf2f4aba8c1d0381", null ],
+      [ "UI_MB_ICON_INFO", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3aac1c680332972c5bd99d50558fae1017", null ],
+      [ "UI_MB_ICON_WARNING", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3a861d1e23b88316151fc877b59dc68b7b", null ],
+      [ "UI_MB_ICON_QUESTION", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3a12443845f32fb457d5ac6977d2030494", null ],
+      [ "UI_MB_BUTTON_YES", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3ad6ec7e7ee3a27868ecdcb8676f3f0aac", null ],
+      [ "UI_MB_BUTTON_NO", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3aa3a3ba6a419c5cdc46d467d93b6f7e32", null ],
+      [ "UI_MB_BUTTON_OK", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3aa501a394b07608f4f5ed5528ee7c93d3", null ],
+      [ "UI_MB_BUTTON_CANCEL", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3af8076b6812a4dea32be18ddc4eb674c5", null ],
+      [ "UI_MB_BUTTON_NONE", "messagebox_8h.html#ae558de91e806342437dfa3b7a77854f3a8e4734e81d3c3b8b4531c0769be0dd18", null ]
     ] ],
     [ "MessageBox", "messagebox_8h.html#a405b7e2f7937bcfef87a415edc42f6ee", null ]
 ];

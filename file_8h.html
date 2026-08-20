@@ -117,9 +117,9 @@ $(document).ready(function(){initNavTree('file_8h.html',''); initResizable(); })
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa94f4020cde9f2b6110659e7939063bc" id="r_aa94f4020cde9f2b6110659e7939063bc"><td class="memItemLeft" align="right" valign="top"><a id="aa94f4020cde9f2b6110659e7939063bc" name="aa94f4020cde9f2b6110659e7939063bc"></a>
-typedef struct file_descriptor_s&#160;</td><td class="memItemRight" valign="bottom"><b>file_descriptor_t</b></td></tr>
-<tr class="separator:aa94f4020cde9f2b6110659e7939063bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8aeba579631045d1e23d35ae56ca8e" id="r_a6d8aeba579631045d1e23d35ae56ca8e"><td class="memItemLeft" align="right" valign="top"><a id="a6d8aeba579631045d1e23d35ae56ca8e" name="a6d8aeba579631045d1e23d35ae56ca8e"></a>
+typedef struct bxc_fs_file_s&#160;</td><td class="memItemRight" valign="bottom"><b>bxc_fs_file_t</b></td></tr>
+<tr class="separator:a6d8aeba579631045d1e23d35ae56ca8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -127,35 +127,35 @@ Enumerations</h2></td></tr>
 , <a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51a213e666a4cfa6170bc49dcd2169da944">_SYS_SEEK_CUR</a>
 , <a class="el" href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51a61aea510d114606570fe74928a85a85c">_SYS_SEEK_END</a>
  }</td></tr>
-<tr class="memdesc:a9e681ad97b1d973134148a35e64b5d51"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>whence</code> values for <a class="el" href="file_8h.html#a5c11cd43bf9ac1607c0c6de35de24280" title="Seek to a specific position in an opened file.">__fseek()</a>.  <a href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">More...</a><br /></td></tr>
+<tr class="memdesc:a9e681ad97b1d973134148a35e64b5d51"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>whence</code> values for <a class="el" href="file_8h.html#adf33cb14598c566f57e5f4c2dd727e82" title="Seek to a specific position in an opened file.">__fseek()</a>.  <a href="file_8h.html#a9e681ad97b1d973134148a35e64b5d51">More...</a><br /></td></tr>
 <tr class="separator:a9e681ad97b1d973134148a35e64b5d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8980ef8033e0f7097ab1ff7244b67800" id="r_a8980ef8033e0f7097ab1ff7244b67800"><td class="memItemLeft" align="right" valign="top">file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800">_afopen</a> (const char *pathname, const char *mode)</td></tr>
-<tr class="memdesc:a8980ef8033e0f7097ab1ff7244b67800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file located at <code>pathname</code>.  <br /></td></tr>
-<tr class="separator:a8980ef8033e0f7097ab1ff7244b67800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa9bd4f56dad0bd15ec58277df301eb" id="r_aefa9bd4f56dad0bd15ec58277df301eb"><td class="memItemLeft" align="right" valign="top">file_descriptor_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#aefa9bd4f56dad0bd15ec58277df301eb">__wfopen</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *mode)</td></tr>
-<tr class="memdesc:aefa9bd4f56dad0bd15ec58277df301eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file located at UTF-16-encoded <code>pathname</code>.  <br /></td></tr>
-<tr class="separator:aefa9bd4f56dad0bd15ec58277df301eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab61f4c0f79548886158e019d812eba61" id="r_ab61f4c0f79548886158e019d812eba61"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ab61f4c0f79548886158e019d812eba61">_fread</a> (void *ptr, size_t size, size_t nmemb, file_descriptor_t *stream)</td></tr>
-<tr class="memdesc:ab61f4c0f79548886158e019d812eba61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read <code>nmemb</code> data units of size <code>size</code> from a file.  <br /></td></tr>
-<tr class="separator:ab61f4c0f79548886158e019d812eba61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af91b869693f31100f7d847588f830972" id="r_af91b869693f31100f7d847588f830972"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#af91b869693f31100f7d847588f830972">_fwrite</a> (const void *ptr, size_t size, size_t nmemb, file_descriptor_t *stream)</td></tr>
-<tr class="memdesc:af91b869693f31100f7d847588f830972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write <code>nmemb</code> data units of size <code>size</code> to a file.  <br /></td></tr>
-<tr class="separator:af91b869693f31100f7d847588f830972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c11cd43bf9ac1607c0c6de35de24280" id="r_a5c11cd43bf9ac1607c0c6de35de24280"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a5c11cd43bf9ac1607c0c6de35de24280">__fseek</a> (file_descriptor_t *stream, long offset, int whence)</td></tr>
-<tr class="memdesc:a5c11cd43bf9ac1607c0c6de35de24280"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to a specific position in an opened file.  <br /></td></tr>
-<tr class="separator:a5c11cd43bf9ac1607c0c6de35de24280"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b2033b575c5de50f66e551b515f363" id="r_a44b2033b575c5de50f66e551b515f363"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a44b2033b575c5de50f66e551b515f363">_ftell</a> (file_descriptor_t *stream)</td></tr>
-<tr class="memdesc:a44b2033b575c5de50f66e551b515f363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current position of the file.  <br /></td></tr>
-<tr class="separator:a44b2033b575c5de50f66e551b515f363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c85d20df5e54d8ca87e19d1566f728" id="r_a10c85d20df5e54d8ca87e19d1566f728"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a10c85d20df5e54d8ca87e19d1566f728">__fflush</a> (file_descriptor_t *stream)</td></tr>
-<tr class="memdesc:a10c85d20df5e54d8ca87e19d1566f728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the cached writes to the file.  <br /></td></tr>
-<tr class="separator:a10c85d20df5e54d8ca87e19d1566f728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca01556c61c6038965e8013cbf618f85" id="r_aca01556c61c6038965e8013cbf618f85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#aca01556c61c6038965e8013cbf618f85">_fclose</a> (file_descriptor_t *stream)</td></tr>
-<tr class="memdesc:aca01556c61c6038965e8013cbf618f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a file.  <br /></td></tr>
-<tr class="separator:aca01556c61c6038965e8013cbf618f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d37f80ada97ccef25811216bd5a32c4" id="r_a4d37f80ada97ccef25811216bd5a32c4"><td class="memItemLeft" align="right" valign="top">bxc_fs_file_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4">_afopen</a> (const char *pathname, const char *mode)</td></tr>
+<tr class="memdesc:a4d37f80ada97ccef25811216bd5a32c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file located at <code>pathname</code>.  <br /></td></tr>
+<tr class="separator:a4d37f80ada97ccef25811216bd5a32c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579bc47871084fa1793dd0182a670d19" id="r_a579bc47871084fa1793dd0182a670d19"><td class="memItemLeft" align="right" valign="top">bxc_fs_file_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a579bc47871084fa1793dd0182a670d19">__wfopen</a> (const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *pathname, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *mode)</td></tr>
+<tr class="memdesc:a579bc47871084fa1793dd0182a670d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file located at UTF-16-encoded <code>pathname</code>.  <br /></td></tr>
+<tr class="separator:a579bc47871084fa1793dd0182a670d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28ef6264a0cadd4dcb3f512a765389d" id="r_ac28ef6264a0cadd4dcb3f512a765389d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ac28ef6264a0cadd4dcb3f512a765389d">_fread</a> (void *ptr, size_t size, size_t nmemb, bxc_fs_file_t *stream)</td></tr>
+<tr class="memdesc:ac28ef6264a0cadd4dcb3f512a765389d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read <code>nmemb</code> data units of size <code>size</code> from a file.  <br /></td></tr>
+<tr class="separator:ac28ef6264a0cadd4dcb3f512a765389d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bbc401f8d8ca5871bdb935ccd2d34f" id="r_ad2bbc401f8d8ca5871bdb935ccd2d34f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#ad2bbc401f8d8ca5871bdb935ccd2d34f">_fwrite</a> (const void *ptr, size_t size, size_t nmemb, bxc_fs_file_t *stream)</td></tr>
+<tr class="memdesc:ad2bbc401f8d8ca5871bdb935ccd2d34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write <code>nmemb</code> data units of size <code>size</code> to a file.  <br /></td></tr>
+<tr class="separator:ad2bbc401f8d8ca5871bdb935ccd2d34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf33cb14598c566f57e5f4c2dd727e82" id="r_adf33cb14598c566f57e5f4c2dd727e82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#adf33cb14598c566f57e5f4c2dd727e82">__fseek</a> (bxc_fs_file_t *stream, long offset, int whence)</td></tr>
+<tr class="memdesc:adf33cb14598c566f57e5f4c2dd727e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to a specific position in an opened file.  <br /></td></tr>
+<tr class="separator:adf33cb14598c566f57e5f4c2dd727e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963788bd7bdb916666a98b23bc517f00" id="r_a963788bd7bdb916666a98b23bc517f00"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a963788bd7bdb916666a98b23bc517f00">_ftell</a> (bxc_fs_file_t *stream)</td></tr>
+<tr class="memdesc:a963788bd7bdb916666a98b23bc517f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current position of the file.  <br /></td></tr>
+<tr class="separator:a963788bd7bdb916666a98b23bc517f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a84dd97a30d15de5a904f8ed030d96d" id="r_a2a84dd97a30d15de5a904f8ed030d96d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a2a84dd97a30d15de5a904f8ed030d96d">__fflush</a> (bxc_fs_file_t *stream)</td></tr>
+<tr class="memdesc:a2a84dd97a30d15de5a904f8ed030d96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the cached writes to the file.  <br /></td></tr>
+<tr class="separator:a2a84dd97a30d15de5a904f8ed030d96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117b86f7ee7032c9227dceb8b3bd875a" id="r_a117b86f7ee7032c9227dceb8b3bd875a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="file_8h.html#a117b86f7ee7032c9227dceb8b3bd875a">_fclose</a> (bxc_fs_file_t *stream)</td></tr>
+<tr class="memdesc:a117b86f7ee7032c9227dceb8b3bd875a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a file.  <br /></td></tr>
+<tr class="separator:a117b86f7ee7032c9227dceb8b3bd875a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Low-level and built-in high-level file operation API. </p>
@@ -172,7 +172,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><code>whence</code> values for <a class="el" href="file_8h.html#a5c11cd43bf9ac1607c0c6de35de24280" title="Seek to a specific position in an opened file.">__fseek()</a>. </p>
+<p><code>whence</code> values for <a class="el" href="file_8h.html#adf33cb14598c566f57e5f4c2dd727e82" title="Seek to a specific position in an opened file.">__fseek()</a>. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9e681ad97b1d973134148a35e64b5d51ad78be8894e0857edfb7f4d1601c5025d" name="a9e681ad97b1d973134148a35e64b5d51ad78be8894e0857edfb7f4d1601c5025d"></a>_SYS_SEEK_SET&#160;</td><td class="fielddoc"><p>Seek from the beginning of file. </p>
 </td></tr>
@@ -185,8 +185,8 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a10c85d20df5e54d8ca87e19d1566f728" name="a10c85d20df5e54d8ca87e19d1566f728"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10c85d20df5e54d8ca87e19d1566f728">&#9670;&#160;</a></span>__fflush()</h2>
+<a id="a2a84dd97a30d15de5a904f8ed030d96d" name="a2a84dd97a30d15de5a904f8ed030d96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a84dd97a30d15de5a904f8ed030d96d">&#9670;&#160;</a></span>__fflush()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +197,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int __fflush </td>
           <td>(</td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">bxc_fs_file_t *&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td></td>
         </tr>
@@ -212,7 +212,7 @@ Functions</h2></td></tr>
 <p>Flush the cached writes to the file. </p>
 <p>Analogous to the fflush() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -226,8 +226,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5c11cd43bf9ac1607c0c6de35de24280" name="a5c11cd43bf9ac1607c0c6de35de24280"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c11cd43bf9ac1607c0c6de35de24280">&#9670;&#160;</a></span>__fseek()</h2>
+<a id="adf33cb14598c566f57e5f4c2dd727e82" name="adf33cb14598c566f57e5f4c2dd727e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf33cb14598c566f57e5f4c2dd727e82">&#9670;&#160;</a></span>__fseek()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +238,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int __fseek </td>
           <td>(</td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">bxc_fs_file_t *&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
@@ -269,7 +269,7 @@ Functions</h2></td></tr>
 <p>Seek to a specific position in an opened file. </p>
 <p>Analogous to the fseek() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
     <tr><td class="paramname">offset</td><td>Seek offset. </td></tr>
     <tr><td class="paramname">whence</td><td>Treat offset as relative to start of file/current offset/end of file. </td></tr>
   </table>
@@ -286,8 +286,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aefa9bd4f56dad0bd15ec58277df301eb" name="aefa9bd4f56dad0bd15ec58277df301eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefa9bd4f56dad0bd15ec58277df301eb">&#9670;&#160;</a></span>__wfopen()</h2>
+<a id="a579bc47871084fa1793dd0182a670d19" name="a579bc47871084fa1793dd0182a670d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579bc47871084fa1793dd0182a670d19">&#9670;&#160;</a></span>__wfopen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -296,7 +296,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">file_descriptor_t * __wfopen </td>
+          <td class="memname">bxc_fs_file_t * __wfopen </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *&#160;</td>
           <td class="paramname"><em>pathname</em>, </td>
@@ -332,8 +332,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8980ef8033e0f7097ab1ff7244b67800" name="a8980ef8033e0f7097ab1ff7244b67800"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8980ef8033e0f7097ab1ff7244b67800">&#9670;&#160;</a></span>_afopen()</h2>
+<a id="a4d37f80ada97ccef25811216bd5a32c4" name="a4d37f80ada97ccef25811216bd5a32c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d37f80ada97ccef25811216bd5a32c4">&#9670;&#160;</a></span>_afopen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,7 +342,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">file_descriptor_t * _afopen </td>
+          <td class="memname">bxc_fs_file_t * _afopen </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>pathname</em>, </td>
@@ -378,8 +378,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aca01556c61c6038965e8013cbf618f85" name="aca01556c61c6038965e8013cbf618f85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca01556c61c6038965e8013cbf618f85">&#9670;&#160;</a></span>_fclose()</h2>
+<a id="a117b86f7ee7032c9227dceb8b3bd875a" name="a117b86f7ee7032c9227dceb8b3bd875a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117b86f7ee7032c9227dceb8b3bd875a">&#9670;&#160;</a></span>_fclose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +390,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int _fclose </td>
           <td>(</td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">bxc_fs_file_t *&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td></td>
         </tr>
@@ -405,7 +405,7 @@ Functions</h2></td></tr>
 <p>Close a file. </p>
 <p>Analogous to the fclose() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -413,8 +413,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab61f4c0f79548886158e019d812eba61" name="ab61f4c0f79548886158e019d812eba61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab61f4c0f79548886158e019d812eba61">&#9670;&#160;</a></span>_fread()</h2>
+<a id="ac28ef6264a0cadd4dcb3f512a765389d" name="ac28ef6264a0cadd4dcb3f512a765389d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28ef6264a0cadd4dcb3f512a765389d">&#9670;&#160;</a></span>_fread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,7 +443,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">bxc_fs_file_t *&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -465,7 +465,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">ptr</td><td>Pointer reference to a buffer that will hold the data read from the file. </td></tr>
     <tr><td class="paramname">size</td><td>Size of individual data unit. </td></tr>
     <tr><td class="paramname">nmemb</td><td>Number of data units to read. </td></tr>
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -473,8 +473,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a44b2033b575c5de50f66e551b515f363" name="a44b2033b575c5de50f66e551b515f363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44b2033b575c5de50f66e551b515f363">&#9670;&#160;</a></span>_ftell()</h2>
+<a id="a963788bd7bdb916666a98b23bc517f00" name="a963788bd7bdb916666a98b23bc517f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a963788bd7bdb916666a98b23bc517f00">&#9670;&#160;</a></span>_ftell()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -485,7 +485,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">long _ftell </td>
           <td>(</td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">bxc_fs_file_t *&#160;</td>
           <td class="paramname"><em>stream</em></td><td>)</td>
           <td></td>
         </tr>
@@ -500,7 +500,7 @@ Functions</h2></td></tr>
 <p>Return the current position of the file. </p>
 <p>Analogous to the ftell() function in POSIX. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>
@@ -508,8 +508,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af91b869693f31100f7d847588f830972" name="af91b869693f31100f7d847588f830972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af91b869693f31100f7d847588f830972">&#9670;&#160;</a></span>_fwrite()</h2>
+<a id="ad2bbc401f8d8ca5871bdb935ccd2d34f" name="ad2bbc401f8d8ca5871bdb935ccd2d34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bbc401f8d8ca5871bdb935ccd2d34f">&#9670;&#160;</a></span>_fwrite()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -538,7 +538,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">file_descriptor_t *&#160;</td>
+          <td class="paramtype">bxc_fs_file_t *&#160;</td>
           <td class="paramname"><em>stream</em>&#160;</td>
         </tr>
         <tr>
@@ -560,7 +560,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">ptr</td><td>Pointer reference to data that will be written to the file. </td></tr>
     <tr><td class="paramname">size</td><td>Size of individual data unit. </td></tr>
     <tr><td class="paramname">nmemb</td><td>Number of data units to write. </td></tr>
-    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a8980ef8033e0f7097ab1ff7244b67800" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
+    <tr><td class="paramname">stream</td><td>Pointer reference returned by <a class="el" href="file_8h.html#a4d37f80ada97ccef25811216bd5a32c4" title="Open a file located at pathname.">_afopen()</a> or _wfopen(). </td></tr>
   </table>
   </dd>
 </dl>

@@ -105,8 +105,10 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Global <a class="el" href="types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd">blit_flag_e</a>  </dt>
-<dd><a class="anchor" id="_todo000020"></a>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?)  </dd>
+<dt>Global <a class="el" href="errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2ba973eace0c4fde4ee9f3c2387b48cb392">BXC_ERR_EXEC_INVALID</a>  </dt>
+<dd><a class="anchor" id="_todo000022"></a>Double check.  </dd>
+<dt>Global <a class="el" href="errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2ba668426a8e4d2e82e6a05d19b4bc4f5c6">BXC_ERR_EXEC_UNSUPPORTED</a>  </dt>
+<dd><a class="anchor" id="_todo000021"></a>Double check.  </dd>
 <dt>Global <a class="el" href="widgets_2button_8h.html#a639ac5f8fd8cccdfa624dbaa965c1f76">CreateButton</a>  (unsigned short tag, short x0, short y0, short x1, short y1, UTF16 *label, unsigned int event, unsigned short flags)</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000036"></a>Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
 <p class="interdd"></p>
@@ -116,14 +118,6 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dd><a class="anchor" id="_todo000007"></a>Documentation on accepted arguments are mostly based on speculations at this moment. More details and through verifications needed.  </dd>
 <dt>Global <a class="el" href="devio_8h.html#aad905401d73d4d0eef800c430cede335">devio_backend_t</a>  </dt>
 <dd><a class="anchor" id="_todo000006"></a>Add more details.  </dd>
-<dt>Global <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af95115c686b05e48b93049fc0519a6c5">EXEC_INVALID</a>  </dt>
-<dd><a class="anchor" id="_todo000022"></a>Double check.  </dd>
-<dt>Global <a class="el" href="errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1">EXEC_UNSUPPORTED</a>  </dt>
-<dd><a class="anchor" id="_todo000021"></a>Double check.  </dd>
-<dt>Global <a class="el" href="structfilepicker__context__s.html#aee6a3db6942684f44fe844bd3e10589d">filepicker_context_s::status</a>  </dt>
-<dd><a class="anchor" id="_todo000031"></a>Document what each status meant.  </dd>
-<dt>Global <a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deb">filepicker_flag_e</a>  </dt>
-<dd><a class="anchor" id="_todo000030"></a>Add more.  </dd>
 <dt>Global <a class="el" href="lcd_8h.html#ae2e04adcbe5e0869e2276210424764ae">GetCursorType</a>  (void)</dt>
 <dd><a class="anchor" id="_todo000009"></a>Document the actual type as an enum.  </dd>
 <dt>Global <a class="el" href="structlcd__base__s.html#a50a963898afa5cbfb9e213eea857a42d">lcd_base_s::depth_bytes</a>  </dt>
@@ -134,6 +128,14 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dd><a class="anchor" id="_todo000015"></a>Document the actual meaning of this.  </dd>
 <dt>Struct <a class="el" href="structlcd__lock__s.html">lcd_lock_s</a>  </dt>
 <dd><a class="anchor" id="_todo000012"></a>Get a better picture of which systems have this and which do not.  </dd>
+<dt>Global <a class="el" href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5">lcd_print_flag_e</a>  </dt>
+<dd><a class="anchor" id="_todo000010"></a>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!).  </dd>
+<dt>Global <a class="el" href="types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124a0227317ff1fb3618383a677adb541e21">LCD_PRINT_STR_ENCODING_BIG5</a>  </dt>
+<dd><a class="anchor" id="_todo000014"></a>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.  </dd>
+<dt>Global <a class="el" href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a4a1ace949b039ef9ec4736d9288cd470">LCD_PRINT_UNDERSCORE_ONLY</a>  </dt>
+<dd><a class="anchor" id="_todo000013"></a>Speculation based on behavior. Seems to be very broken with &gt;16px fonts.  </dd>
+<dt>Global <a class="el" href="types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68a">lcd_surface_blit_flag_e</a>  </dt>
+<dd><a class="anchor" id="_todo000020"></a>Need to look into this further. 2 and 16 seem to draw the image verbatim like 0. Nothing is being drawn when setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent color?)  </dd>
 <dt>Global <a class="el" href="structlcd__thread__safe__s.html#a4b8a84a642cd579b137fe9be67b52eac">lcd_thread_safe_s::depth_bytes</a>  </dt>
 <dd><a class="anchor" id="_todo000018"></a>Verify.  </dd>
 <dt>Global <a class="el" href="structlcd__thread__safe__s.html#aee0fef719c53262a72fa8b019f1c1119">lcd_thread_safe_s::xsize</a>  </dt>
@@ -154,12 +156,6 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dd><a class="anchor" id="_todo000001"></a>Verify.  </dd>
 <dt>Global <a class="el" href="structpcm__frame__s.html#a2a96e932d05e30d8cb8916187fff3d40">pcm_frame_s::tx_state</a>  </dt>
 <dd><a class="anchor" id="_todo000002"></a>Verify.  </dd>
-<dt>Global <a class="el" href="types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591">print_flag_e</a>  </dt>
-<dd><a class="anchor" id="_todo000010"></a>A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!).  </dd>
-<dt>Global <a class="el" href="types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752">PRINT_STR_ENCODING_BIG5</a>  </dt>
-<dd><a class="anchor" id="_todo000014"></a>Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.  </dd>
-<dt>Global <a class="el" href="types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c">PRINT_UNDERSCORE_ONLY</a>  </dt>
-<dd><a class="anchor" id="_todo000013"></a>Speculation based on behavior. Seems to be very broken with &gt;16px fonts.  </dd>
 <dt>Global <a class="el" href="lcd_8h.html#aa88f019698b464c366243cf8ecff261d">SetCursorType</a>  (short new_type)</dt>
 <dd><a class="anchor" id="_todo000008"></a>Document the actual type as an enum.  </dd>
 <dt>Global <a class="el" href="types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cb">stroke_predefined_dash_e</a>  </dt>
@@ -177,7 +173,11 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <dt>Global <a class="el" href="structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811">ui_component_s::on_erase_bg</a>  )(ui_component_t *self)</dt>
 <dd><a class="anchor" id="_todo000035"></a>Figure out exactly what this does.  </dd>
 <dt>Global <a class="el" href="structui__deskbox__s.html#a37938a1e77e74253781e0fc204553d7c">ui_deskbox_s::ime_control</a>  </dt>
-<dd><a class="anchor" id="_todo000032"></a>Document the format. </dd>
+<dd><a class="anchor" id="_todo000032"></a>Document the format.  </dd>
+<dt>Global <a class="el" href="structui__filepicker__context__s.html#a1ff65c7783f46836522b5ea35eaa8b82">ui_filepicker_context_s::status</a>  </dt>
+<dd><a class="anchor" id="_todo000031"></a>Document what each status meant.  </dd>
+<dt>Global <a class="el" href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4">ui_filepicker_flag_e</a>  </dt>
+<dd><a class="anchor" id="_todo000030"></a>Add more. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

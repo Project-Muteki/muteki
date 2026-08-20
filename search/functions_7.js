@@ -17,7 +17,7 @@ var searchData=
   ['getcursorposition_14',['GetCursorPosition',['../lcd_8h.html#a1b44760495067590b0823c6dff8aed2b',1,'lcd.h']]],
   ['getcursorsize_15',['GetCursorSize',['../lcd_8h.html#a8513b40ddc1edf9f3b7950710539531c',1,'lcd.h']]],
   ['getcursortype_16',['GetCursorType',['../lcd_8h.html#ae2e04adcbe5e0869e2276210424764ae',1,'lcd.h']]],
-  ['getdeskclientrect_17',['GetDeskClientRect',['../views_2deskbox_8h.html#a7a6f0291f52e82a9202b9425d6833f97',1,'deskbox.h']]],
+  ['getdeskclientrect_17',['GetDeskClientRect',['../views_2deskbox_8h.html#a9c71bf4c41488ae85e0414fcf8c05ae0',1,'deskbox.h']]],
   ['getdrawarea_18',['GetDrawArea',['../lcd_8h.html#ae73f5af6932e361f5ecb50e9a6648fd9',1,'lcd.h']]],
   ['getevent_19',['GetEvent',['../framework_2event_8h.html#a9a41667de6a37b2a6b2c6fa1020197de',1,'event.h']]],
   ['geteventtype_20',['GetEventType',['../framework_2event_8h.html#a41f1232f560ddd62e320726955b2ae79',1,'event.h']]],
@@ -38,6 +38,6 @@ var searchData=
   ['getpixel_35',['GetPixel',['../lcd_8h.html#af1d43ce8054b27206bbfc04a93ae3d49',1,'lcd.h']]],
   ['getshiftstate_36',['GetShiftState',['../framework_2event_8h.html#a15362671b8ae018c0b8b6fcf0bc100cd',1,'event.h']]],
   ['getsyskeystate_37',['GetSysKeyState',['../framework_2event_8h.html#a562d456e1940f303308135ac5dac9788',1,'event.h']]],
-  ['getsystime_38',['GetSysTime',['../datetime_8h.html#a32e84df2811a0547e643cd22097004f8',1,'datetime.h']]],
+  ['getsystime_38',['GetSysTime',['../datetime_8h.html#a1fe680486ffeea27cb01f62d90e06fff',1,'datetime.h']]],
   ['gettimer1inthandler_39',['GetTimer1IntHandler',['../system_8h.html#a77c18dab7a63ff188e452878d5907582',1,'system.h']]]
 ];

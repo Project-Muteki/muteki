@@ -117,33 +117,33 @@ $(document).ready(function(){initNavTree('primitives_8h.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrect__s.html">rect_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structrect__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__rect__s.html">lcd_rect_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectangle used to represent usable drawing area in an LCD descriptor.  <a href="structlcd__rect__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1d12e70227ae6a8e9e465d42a4de14bf" id="r_a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="primitives_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf">RGB_FROM_U8</a>(r,  g,  b)&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td></tr>
-<tr class="memdesc:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert separate RGB values to integer RGB representation.  <br /></td></tr>
-<tr class="separator:a1d12e70227ae6a8e9e465d42a4de14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814ec1d39351b1a10d87359efbf16237" id="r_a814ec1d39351b1a10d87359efbf16237"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="primitives_8h.html#a814ec1d39351b1a10d87359efbf16237">LCD_RGB_FROM_U8</a>(r,  g,  b)&#160;&#160;&#160;((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</td></tr>
+<tr class="memdesc:a814ec1d39351b1a10d87359efbf16237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert separate RGB values to integer RGB representation.  <br /></td></tr>
+<tr class="separator:a814ec1d39351b1a10d87359efbf16237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ad8a2aa69cd4582e6bc435e381411f2f9" id="r_ad8a2aa69cd4582e6bc435e381411f2f9"><td class="memItemLeft" align="right" valign="top"><a id="ad8a2aa69cd4582e6bc435e381411f2f9" name="ad8a2aa69cd4582e6bc435e381411f2f9"></a>
-typedef struct <a class="el" href="structrect__s.html">rect_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rect_t</b></td></tr>
-<tr class="separator:ad8a2aa69cd4582e6bc435e381411f2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099651cf2c5f4702c91e4f9ba7075897" id="r_a099651cf2c5f4702c91e4f9ba7075897"><td class="memItemLeft" align="right" valign="top"><a id="a099651cf2c5f4702c91e4f9ba7075897" name="a099651cf2c5f4702c91e4f9ba7075897"></a>
+typedef struct <a class="el" href="structlcd__rect__s.html">lcd_rect_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lcd_rect_t</b></td></tr>
+<tr class="separator:a099651cf2c5f4702c91e4f9ba7075897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drawing routine primitive types. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a1d12e70227ae6a8e9e465d42a4de14bf" name="a1d12e70227ae6a8e9e465d42a4de14bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d12e70227ae6a8e9e465d42a4de14bf">&#9670;&#160;</a></span>RGB_FROM_U8</h2>
+<a id="a814ec1d39351b1a10d87359efbf16237" name="a814ec1d39351b1a10d87359efbf16237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814ec1d39351b1a10d87359efbf16237">&#9670;&#160;</a></span>LCD_RGB_FROM_U8</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RGB_FROM_U8</td>
+          <td class="memname">#define LCD_RGB_FROM_U8</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">r, </td>

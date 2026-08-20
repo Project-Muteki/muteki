@@ -1,5 +1,5 @@
 var datetime_8h =
 [
-    [ "datetime_t", "structdatetime__t.html", "structdatetime__t" ],
-    [ "GetSysTime", "datetime_8h.html#a32e84df2811a0547e643cd22097004f8", null ]
+    [ "bxc_datetime_t", "structbxc__datetime__t.html", "structbxc__datetime__t" ],
+    [ "GetSysTime", "datetime_8h.html#a1fe680486ffeea27cb01f62d90e06fff", null ]
 ];

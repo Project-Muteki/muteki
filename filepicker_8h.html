@@ -119,14 +119,14 @@ $(document).ready(function(){initNavTree('filepicker_8h.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfilepicker__context__s.html">filepicker_context_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file picker context.  <a href="structfilepicker__context__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file picker context.  <a href="structui__filepicker__context__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a4d86250eb6687fa80ec40c29ac99b32a" id="r_a4d86250eb6687fa80ec40c29ac99b32a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#a4d86250eb6687fa80ec40c29ac99b32a">FILEPICKER_CONTEXT_OUTPUT_ALLOC</a>(calloc_impl,  entries,  is_utf16)&#160;&#160;&#160;    calloc_impl(entries * 260 + 2, is_utf16 ? sizeof(<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>) : sizeof(char))</td></tr>
-<tr class="memdesc:a4d86250eb6687fa80ec40c29ac99b32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate output buffer for filepicker_context_t.  <br /></td></tr>
+<tr class="memdesc:a4d86250eb6687fa80ec40c29ac99b32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate output buffer for ui_filepicker_context_t.  <br /></td></tr>
 <tr class="separator:a4d86250eb6687fa80ec40c29ac99b32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f94109871cf139788f86d3f2b1bda5" id="r_ad4f94109871cf139788f86d3f2b1bda5"><td class="memItemLeft" align="right" valign="top"><a id="ad4f94109871cf139788f86d3f2b1bda5" name="ad4f94109871cf139788f86d3f2b1bda5"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>FILEPICKER_CONTEXT_OUTPUT_MAX_LFN</b>&#160;&#160;&#160;260</td></tr>
@@ -135,29 +135,29 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ac32a3d443cbf5b14d76fb53b7fda7d7d" id="r_ac32a3d443cbf5b14d76fb53b7fda7d7d"><td class="memItemLeft" align="right" valign="top"><a id="ac32a3d443cbf5b14d76fb53b7fda7d7d" name="ac32a3d443cbf5b14d76fb53b7fda7d7d"></a>
-typedef struct <a class="el" href="structfilepicker__context__s.html">filepicker_context_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>filepicker_context_t</b></td></tr>
-<tr class="separator:ac32a3d443cbf5b14d76fb53b7fda7d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ad2f72a912b48252e50224da483444" id="r_af9ad2f72a912b48252e50224da483444"><td class="memItemLeft" align="right" valign="top"><a id="af9ad2f72a912b48252e50224da483444" name="af9ad2f72a912b48252e50224da483444"></a>
+typedef struct <a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ui_filepicker_context_t</b></td></tr>
+<tr class="separator:af9ad2f72a912b48252e50224da483444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a7f09eec1bc6bf4a4bc33da366aa92deb" id="r_a7f09eec1bc6bf4a4bc33da366aa92deb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deb">filepicker_flag_e</a> { <a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deba8030cc3692410ca853444cf12b1fb2c3">FILEPICKER_ALLOW_MULTIPLE</a> =0x200
-, <a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deba9adccc774ce96a1a78404cf5531f5883">FILEPICKER_USE_MB</a> =0x40000
+<tr class="memitem:a5ccc24d1d105e7b5ae1476256817f5f4" id="r_a5ccc24d1d105e7b5ae1476256817f5f4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4">ui_filepicker_flag_e</a> { <a class="el" href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4a8030cc3692410ca853444cf12b1fb2c3">FILEPICKER_ALLOW_MULTIPLE</a> =0x200
+, <a class="el" href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4a9adccc774ce96a1a78404cf5531f5883">FILEPICKER_USE_MB</a> =0x40000
  }</td></tr>
-<tr class="memdesc:a7f09eec1bc6bf4a4bc33da366aa92deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Known file picker flags.  <a href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deb">More...</a><br /></td></tr>
-<tr class="separator:a7f09eec1bc6bf4a4bc33da366aa92deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a5ccc24d1d105e7b5ae1476256817f5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Known file picker flags.  <a href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4">More...</a><br /></td></tr>
+<tr class="separator:a5ccc24d1d105e7b5ae1476256817f5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8d15fb9767f809ba6792fc9e70576b15" id="r_a8d15fb9767f809ba6792fc9e70576b15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#a8d15fb9767f809ba6792fc9e70576b15">_GetOpenFileName</a> (<a class="el" href="structfilepicker__context__s.html">filepicker_context_t</a> *ctx)</td></tr>
-<tr class="memdesc:a8d15fb9767f809ba6792fc9e70576b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a file picker in open mode.  <br /></td></tr>
-<tr class="separator:a8d15fb9767f809ba6792fc9e70576b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b567d24d9be11d764c48ec2b337ed6" id="r_ac0b567d24d9be11d764c48ec2b337ed6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#ac0b567d24d9be11d764c48ec2b337ed6">_GetSaveFileName</a> (<a class="el" href="structfilepicker__context__s.html">filepicker_context_t</a> *ctx)</td></tr>
-<tr class="memdesc:ac0b567d24d9be11d764c48ec2b337ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a file picker in save mode.  <br /></td></tr>
-<tr class="separator:ac0b567d24d9be11d764c48ec2b337ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a876f3cd40f7b647f7023e4998ebc6464" id="r_a876f3cd40f7b647f7023e4998ebc6464"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#a876f3cd40f7b647f7023e4998ebc6464">_GetNextFileName</a> (<a class="el" href="structfilepicker__context__s.html">filepicker_context_t</a> *ctx, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *out)</td></tr>
-<tr class="memdesc:a876f3cd40f7b647f7023e4998ebc6464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next path from a context struct.  <br /></td></tr>
-<tr class="separator:a876f3cd40f7b647f7023e4998ebc6464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa370d16dddce6c8ea0d5db8bbad458ea" id="r_aa370d16dddce6c8ea0d5db8bbad458ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#aa370d16dddce6c8ea0d5db8bbad458ea">_GetOpenFileName</a> (<a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_t</a> *ctx)</td></tr>
+<tr class="memdesc:aa370d16dddce6c8ea0d5db8bbad458ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a file picker in open mode.  <br /></td></tr>
+<tr class="separator:aa370d16dddce6c8ea0d5db8bbad458ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe3c47e1b42fa1464ff44e89b6b1a21" id="r_adfe3c47e1b42fa1464ff44e89b6b1a21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#adfe3c47e1b42fa1464ff44e89b6b1a21">_GetSaveFileName</a> (<a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_t</a> *ctx)</td></tr>
+<tr class="memdesc:adfe3c47e1b42fa1464ff44e89b6b1a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a file picker in save mode.  <br /></td></tr>
+<tr class="separator:adfe3c47e1b42fa1464ff44e89b6b1a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96022fd21f00c73811f2b6ce203747fa" id="r_a96022fd21f00c73811f2b6ce203747fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="filepicker_8h.html#a96022fd21f00c73811f2b6ce203747fa">_GetNextFileName</a> (<a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_t</a> *ctx, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *out)</td></tr>
+<tr class="memdesc:a96022fd21f00c73811f2b6ce203747fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the next path from a context struct.  <br /></td></tr>
+<tr class="separator:a96022fd21f00c73811f2b6ce203747fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions related to the file picker modal. </p>
@@ -194,12 +194,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allocate output buffer for filepicker_context_t. </p>
+<p>Allocate output buffer for ui_filepicker_context_t. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">calloc_impl</td><td>Implementation of calloc(). </td></tr>
-    <tr><td class="paramname">entries</td><td>Maximum number of entries allowed. Must be the same as <a class="el" href="structfilepicker__context__s.html#a7daa2aae3f0de3c2db088b93e1ca32b7" title="Number of paths expected.">filepicker_context_t::npaths</a>. </td></tr>
-    <tr><td class="paramname">is_utf16</td><td><code>true</code> if the buffer should be UTF16 type. Set to <code>false</code> if the flag <a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deba9adccc774ce96a1a78404cf5531f5883" title="Use multi-byte strings in the current locale&#39;s encoding instead of UTF16.">FILEPICKER_USE_MB</a> is set. </td></tr>
+    <tr><td class="paramname">entries</td><td>Maximum number of entries allowed. Must be the same as <a class="el" href="structui__filepicker__context__s.html#a9fa4e523c36b898b20c3fd4f4c3865e5" title="Number of paths expected.">ui_filepicker_context_t::npaths</a>. </td></tr>
+    <tr><td class="paramname">is_utf16</td><td><code>true</code> if the buffer should be UTF16 type. Set to <code>false</code> if the flag <a class="el" href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4a9adccc774ce96a1a78404cf5531f5883" title="Use multi-byte strings in the current locale&#39;s encoding instead of UTF16.">FILEPICKER_USE_MB</a> is set. </td></tr>
   </table>
   </dd>
 </dl>
@@ -208,14 +208,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a7f09eec1bc6bf4a4bc33da366aa92deb" name="a7f09eec1bc6bf4a4bc33da366aa92deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f09eec1bc6bf4a4bc33da366aa92deb">&#9670;&#160;</a></span>filepicker_flag_e</h2>
+<a id="a5ccc24d1d105e7b5ae1476256817f5f4" name="a5ccc24d1d105e7b5ae1476256817f5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccc24d1d105e7b5ae1476256817f5f4">&#9670;&#160;</a></span>ui_filepicker_flag_e</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="filepicker_8h.html#a7f09eec1bc6bf4a4bc33da366aa92deb">filepicker_flag_e</a></td>
+          <td class="memname">enum <a class="el" href="filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4">ui_filepicker_flag_e</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -223,17 +223,17 @@ Functions</h2></td></tr>
 <p>Known file picker flags. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo:</a></b></dt><dd>Add more. </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7f09eec1bc6bf4a4bc33da366aa92deba8030cc3692410ca853444cf12b1fb2c3" name="a7f09eec1bc6bf4a4bc33da366aa92deba8030cc3692410ca853444cf12b1fb2c3"></a>FILEPICKER_ALLOW_MULTIPLE&#160;</td><td class="fielddoc"><p>Allow multiple files. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5ccc24d1d105e7b5ae1476256817f5f4a8030cc3692410ca853444cf12b1fb2c3" name="a5ccc24d1d105e7b5ae1476256817f5f4a8030cc3692410ca853444cf12b1fb2c3"></a>FILEPICKER_ALLOW_MULTIPLE&#160;</td><td class="fielddoc"><p>Allow multiple files. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7f09eec1bc6bf4a4bc33da366aa92deba9adccc774ce96a1a78404cf5531f5883" name="a7f09eec1bc6bf4a4bc33da366aa92deba9adccc774ce96a1a78404cf5531f5883"></a>FILEPICKER_USE_MB&#160;</td><td class="fielddoc"><p>Use multi-byte strings in the current locale's encoding instead of UTF16. </p>
+<tr><td class="fieldname"><a id="a5ccc24d1d105e7b5ae1476256817f5f4a9adccc774ce96a1a78404cf5531f5883" name="a5ccc24d1d105e7b5ae1476256817f5f4a9adccc774ce96a1a78404cf5531f5883"></a>FILEPICKER_USE_MB&#160;</td><td class="fielddoc"><p>Use multi-byte strings in the current locale's encoding instead of UTF16. </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a876f3cd40f7b647f7023e4998ebc6464" name="a876f3cd40f7b647f7023e4998ebc6464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a876f3cd40f7b647f7023e4998ebc6464">&#9670;&#160;</a></span>_GetNextFileName()</h2>
+<a id="a96022fd21f00c73811f2b6ce203747fa" name="a96022fd21f00c73811f2b6ce203747fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96022fd21f00c73811f2b6ce203747fa">&#9670;&#160;</a></span>_GetNextFileName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +244,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int _GetNextFileName </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structfilepicker__context__s.html">filepicker_context_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_t</a> *&#160;</td>
           <td class="paramname"><em>ctx</em>, </td>
         </tr>
         <tr>
@@ -285,8 +285,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d15fb9767f809ba6792fc9e70576b15" name="a8d15fb9767f809ba6792fc9e70576b15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d15fb9767f809ba6792fc9e70576b15">&#9670;&#160;</a></span>_GetOpenFileName()</h2>
+<a id="aa370d16dddce6c8ea0d5db8bbad458ea" name="aa370d16dddce6c8ea0d5db8bbad458ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa370d16dddce6c8ea0d5db8bbad458ea">&#9670;&#160;</a></span>_GetOpenFileName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +297,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool _GetOpenFileName </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structfilepicker__context__s.html">filepicker_context_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_t</a> *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>
@@ -323,8 +323,8 @@ false The operation failed with error.  </dd></dl>
 
 </div>
 </div>
-<a id="ac0b567d24d9be11d764c48ec2b337ed6" name="ac0b567d24d9be11d764c48ec2b337ed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0b567d24d9be11d764c48ec2b337ed6">&#9670;&#160;</a></span>_GetSaveFileName()</h2>
+<a id="adfe3c47e1b42fa1464ff44e89b6b1a21" name="adfe3c47e1b42fa1464ff44e89b6b1a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe3c47e1b42fa1464ff44e89b6b1a21">&#9670;&#160;</a></span>_GetSaveFileName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,7 +335,7 @@ false The operation failed with error.  </dd></dl>
         <tr>
           <td class="memname">bool _GetSaveFileName </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structfilepicker__context__s.html">filepicker_context_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structui__filepicker__context__s.html">ui_filepicker_context_t</a> *&#160;</td>
           <td class="paramname"><em>ctx</em></td><td>)</td>
           <td></td>
         </tr>

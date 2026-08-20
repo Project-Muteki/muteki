@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fs_5fparts_5fdos_5ft_0',['fs_parts_dos_t',['../path_8h.html#a4a9b0a73cc30651c70d8a0dcee7d60ba',1,'path.h']]],
-  ['fs_5fparts_5flfn_5ft_1',['fs_parts_lfn_t',['../path_8h.html#a7fe79bbaa9158a111d732641a477ec58',1,'path.h']]]
+  ['osdep_5futls_5fstats_5ft_0',['osdep_utls_stats_t',['../utls_8h.html#acdb3bccf42b7c8c5f6d1564b77fb2af3',1,'utls.h']]]
 ];

@@ -1,21 +1,5 @@
 var searchData=
 [
-  ['filepicker_5fcontext_5foutput_5falloc_0',['FILEPICKER_CONTEXT_OUTPUT_ALLOC',['../filepicker_8h.html#a4d86250eb6687fa80ec40c29ac99b32a',1,'filepicker.h']]],
-  ['filepicker_5fcontext_5foutput_5fmax_5flfn_1',['FILEPICKER_CONTEXT_OUTPUT_MAX_LFN',['../filepicker_8h.html#ad4f94109871cf139788f86d3f2b1bda5',1,'filepicker.h']]],
-  ['find_5fts_5fday_2',['FIND_TS_DAY',['../path_8h.html#a0a14a0c1912146f7750a367521a9ca72',1,'path.h']]],
-  ['find_5fts_5fhour_3',['FIND_TS_HOUR',['../path_8h.html#a79a116f2aa0a82a027d75019085986cd',1,'path.h']]],
-  ['find_5fts_5fminute_4',['FIND_TS_MINUTE',['../path_8h.html#a23d085a5b7bd67057e0d35fd61d17c1b',1,'path.h']]],
-  ['find_5fts_5fmonth_5',['FIND_TS_MONTH',['../path_8h.html#a6a970833b60ebeda6c9791c8167546e8',1,'path.h']]],
-  ['find_5fts_5fsecond_6',['FIND_TS_SECOND',['../path_8h.html#a214672671b2f6a1bca9481f25b07b65a',1,'path.h']]],
-  ['find_5fts_5fyear_7',['FIND_TS_YEAR',['../path_8h.html#a2c2cfbb03e319776b36d0b1169a83f54',1,'path.h']]],
-  ['fnsplit_5fdos_5fbasename_5fmax_8',['FNSPLIT_DOS_BASENAME_MAX',['../path_8h.html#a712477813b0182267cf9c0a9a4baeb70',1,'path.h']]],
-  ['fnsplit_5fdos_5fdirname_5fmax_9',['FNSPLIT_DOS_DIRNAME_MAX',['../path_8h.html#ac50d7b89068a21b7fcfb2afebdd24f5f',1,'path.h']]],
-  ['fnsplit_5fdos_5fdrive_5fmax_10',['FNSPLIT_DOS_DRIVE_MAX',['../path_8h.html#ad8cfbbceb9db6242652dbd002cfb09e6',1,'path.h']]],
-  ['fnsplit_5fdos_5fpathname_5fmax_11',['FNSPLIT_DOS_PATHNAME_MAX',['../path_8h.html#af2718d94ecd6f3c61c961c96ddeccaf4',1,'path.h']]],
-  ['fnsplit_5fdos_5fsuffix_5fmax_12',['FNSPLIT_DOS_SUFFIX_MAX',['../path_8h.html#a0b509c3119c9ba53b5028b83b1589bf3',1,'path.h']]],
-  ['fnsplit_5flfn_5fbasename_5fmax_13',['FNSPLIT_LFN_BASENAME_MAX',['../path_8h.html#a047c5a80374681047ce1f732893c5859',1,'path.h']]],
-  ['fnsplit_5flfn_5fdirname_5fmax_14',['FNSPLIT_LFN_DIRNAME_MAX',['../path_8h.html#a3d90a37b04db17a9774c37883d3ddd08',1,'path.h']]],
-  ['fnsplit_5flfn_5fdrive_5fmax_15',['FNSPLIT_LFN_DRIVE_MAX',['../path_8h.html#a103c4b7dc2e0391ff7a075a92c028eff',1,'path.h']]],
-  ['fnsplit_5flfn_5fpathname_5fmax_16',['FNSPLIT_LFN_PATHNAME_MAX',['../path_8h.html#a12bb551b566519b579c951d6df8370f9',1,'path.h']]],
-  ['fnsplit_5flfn_5fsuffix_5fmax_17',['FNSPLIT_LFN_SUFFIX_MAX',['../path_8h.html#aacb79f1d3e464b37e2b8a8e1fe159d03',1,'path.h']]]
+  ['devio_5fdesc_5finvalid_0',['DEVIO_DESC_INVALID',['../devio_8h.html#af93b813cbecdfcd0a7b429e994763694',1,'devio.h']]],
+  ['devio_5fdesc_5fmagic_1',['DEVIO_DESC_MAGIC',['../devio_8h.html#a5bda580cad8fb376cb89556a084769f2',1,'devio.h']]]
 ];

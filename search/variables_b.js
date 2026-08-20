@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['magic_0',['magic',['../structlcd__surface__s.html#a2f96dc50466bc9202ca976c204f589bc',1,'lcd_surface_s::magic'],['../structnand__params__t.html#ad8bd4407970629b300858e9ac6b38083',1,'nand_params_t::magic'],['../structthread__s.html#a76fa0c7a73730f6448a8510709e47ca7',1,'thread_s::magic'],['../structsemaphore__s.html#af38b5696860a0d47d6e0afcfd80092dd',1,'semaphore_s::magic'],['../structevent__s.html#a8f852906872e66494a69f688c1bee050',1,'event_s::magic'],['../structcritical__section__s.html#a80b61cc3eb1efc9d6e0cd064a7d3b286',1,'critical_section_s::magic'],['../structmessage__queue__s.html#af3bca8e265fb74ad8f4f7cff6d774bc2',1,'message_queue_s::magic'],['../structdevio__descriptor__t.html#a910e2b021acaf414cde76acb18e4a0b0',1,'devio_descriptor_t::magic']]],
+  ['magic_0',['magic',['../structlcd__surface__s.html#a2f96dc50466bc9202ca976c204f589bc',1,'lcd_surface_s::magic'],['../structnand__params__t.html#ad8bd4407970629b300858e9ac6b38083',1,'nand_params_t::magic'],['../structbxc__thread__s.html#a6265d5ca179c99abe8f1e03d46f26cec',1,'bxc_thread_s::magic'],['../structbxc__semaphore__s.html#a400eb5e386ebd4fb185e4b10f1b663c2',1,'bxc_semaphore_s::magic'],['../structbxc__event__s.html#abc981955d9b08cb1c454ba3983d03c85',1,'bxc_event_s::magic'],['../structbxc__cs__s.html#a4fc2016a21805ecd21e2c8b030a421da',1,'bxc_cs_s::magic'],['../structbxc__queue__s.html#a3be07cacfdd52213b688fb2bb13b67a8',1,'bxc_queue_s::magic'],['../structdevio__descriptor__t.html#a910e2b021acaf414cde76acb18e4a0b0',1,'devio_descriptor_t::magic']]],
   ['mapped_5fexecutable_1',['mapped_executable',['../structloader__loaded__s.html#a036142b6a161eff0b5a30e0fcb259376',1,'loader_loaded_s']]],
   ['max_5fx1_2',['max_x1',['../structui__menufield__s.html#a634ac7636b17d6ab23349069d4c2dc54',1,'ui_menufield_s']]],
   ['menu_5fentries_3',['menu_entries',['../structui__deskbox__s.html#a122e34ce7fc6118546b862f209a176d7',1,'ui_deskbox_s::menu_entries'],['../structui__menufield__s.html#ac74b6bad6f3906d9d37c04ac665a1d5c',1,'ui_menufield_s::menu_entries'],['../structui__controlmenu__s.html#a8c8e2af4308c55627dad89e306e1a9fb',1,'ui_controlmenu_s::menu_entries']]],
   ['menu_5ftitle_5ftext_4',['menu_title_text',['../structui__controlmenu__s.html#ab017fcde732276668098aa5ef75575c1',1,'ui_controlmenu_s::menu_title_text'],['../structui__deskbox__s.html#a181a7e4fc996adec62fa82cf64a367d9',1,'ui_deskbox_s::menu_title_text']]],
   ['menufield_5fflags_5',['menufield_flags',['../structui__menufield__s.html#a95c54bff06a2688c7779a536cb2b62c7',1,'ui_menufield_s']]],
-  ['messages_6',['messages',['../structmessage__queue__nonatomic__t.html#a4a813e0f623660ad2fbb12f6cf1963bb',1,'message_queue_nonatomic_t']]],
-  ['millis_7',['millis',['../structdatetime__t.html#a0835307538b39b1b9b8d0cb86d1ec366',1,'datetime_t']]],
-  ['minute_8',['minute',['../structdatetime__t.html#a83983f81b68d05438751579020fa0982',1,'datetime_t']]],
-  ['month_9',['month',['../structdatetime__t.html#a5d2ac4cfe4155d71e613dc9a6c8b0ece',1,'datetime_t']]],
-  ['mtime_10',['mtime',['../structfind__context__t.html#a8db4ad446253092c6ca188481f352b51',1,'find_context_t']]],
+  ['messages_6',['messages',['../structbxc__queue__nonatomic__t.html#a24e3eb2fe477061d5e3973e5e9e6a83f',1,'bxc_queue_nonatomic_t']]],
+  ['millis_7',['millis',['../structbxc__datetime__t.html#ab8bbd461342e9067b05f6d41bc66dff9',1,'bxc_datetime_t']]],
+  ['minute_8',['minute',['../structbxc__datetime__t.html#abf46b447a6980b6d552f37c0687ccbb8',1,'bxc_datetime_t']]],
+  ['month_9',['month',['../structbxc__datetime__t.html#a9d4db20ca7744a4bdd54bfaf32b45f05',1,'bxc_datetime_t']]],
+  ['mtime_10',['mtime',['../structbxc__find__context__t.html#ae56f2933398e31f44f0fa6f58bd5dbcd',1,'bxc_find_context_t']]],
   ['multipress_5fevents_11',['multipress_events',['../structui__event__ext__prime__s.html#a0b4a95e52f291df9ce8e21cf032f9648',1,'ui_event_ext_prime_s']]]
 ];

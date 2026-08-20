@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rgb_5ffrom_5fu8_0',['RGB_FROM_U8',['../primitives_8h.html#a1d12e70227ae6a8e9e465d42a4de14bf',1,'primitives.h']]]
+  ['filepicker_5fcontext_5foutput_5falloc_0',['FILEPICKER_CONTEXT_OUTPUT_ALLOC',['../filepicker_8h.html#a4d86250eb6687fa80ec40c29ac99b32a',1,'filepicker.h']]],
+  ['filepicker_5fcontext_5foutput_5fmax_5flfn_1',['FILEPICKER_CONTEXT_OUTPUT_MAX_LFN',['../filepicker_8h.html#ad4f94109871cf139788f86d3f2b1bda5',1,'filepicker.h']]]
 ];

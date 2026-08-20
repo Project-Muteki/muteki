@@ -6,29 +6,29 @@ var types_2lcd_8h =
     [ "lcd_base_s", "structlcd__base__s.html", "structlcd__base__s" ],
     [ "lcd_thread_safe_s", "structlcd__thread__safe__s.html", "structlcd__thread__safe__s" ],
     [ "lcd_rotate_callback_t", "types_2lcd_8h.html#a7ef9e48cde5ff06441262c36e162fba5", null ],
-    [ "print_flag_e", "types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591", [
-      [ "PRINT_NONE", "types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591a4bc48aa490ea7ed72d9c229323623daf", null ],
-      [ "PRINT_INVERT", "types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591af6ea821e1d64905d021e49ec74f498f1", null ],
-      [ "PRINT_INVERT_ALT", "types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591ae5fccb1ed96882b9666a1772df8d8224", null ],
-      [ "PRINT_UNDERSCORE_ONLY", "types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591a75517ae1a45104cf1b3ef249be3d8a8c", null ]
+    [ "lcd_print_flag_e", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5", [
+      [ "LCD_PRINT_NONE", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a59fa30ef79d23c00a3f8b6ec3744094c", null ],
+      [ "LCD_PRINT_INVERT", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5aafae6faf45b1cf54bf12641ce48ac191", null ],
+      [ "LCD_PRINT_INVERT_ALT", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a587e7eea45b2c33c60a34889d6be4de1", null ],
+      [ "LCD_PRINT_UNDERSCORE_ONLY", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a4a1ace949b039ef9ec4736d9288cd470", null ]
     ] ],
-    [ "print_str_flag_e", "types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579", [
-      [ "PRINT_STR_ENCODING_BIG5", "types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579a023d10dda1643157e7725e7aa1558752", null ],
-      [ "PRINT_STR_ENCODING_GB18030", "types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579a87daa3aa92990290beba60c9e25b3db6", null ],
-      [ "PRINT_STR_ENCODING_TIS_620", "types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579a413b73fb9378fcaa73f745607d800abe", null ]
+    [ "lcd_print_str_flag_e", "types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124", [
+      [ "LCD_PRINT_STR_ENCODING_BIG5", "types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124a0227317ff1fb3618383a677adb541e21", null ],
+      [ "LCD_PRINT_STR_ENCODING_GB18030", "types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124a462e35bd6b064d36f8cd1a2633c7f03c", null ],
+      [ "LCD_PRINT_STR_ENCODING_TIS_620", "types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124a918c619ddda9dc5ead0ddb6336fda010", null ]
     ] ],
-    [ "rotation_value_e", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345", [
-      [ "ROTATION_TOP_SIDE_FACING_UP", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a77d6f5ac6bb74e5ab8345b0073e1bcaa", null ],
-      [ "ROTATION_TOP_SIDE_FACING_LEFT", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345af06e0be3f0b219b9902d87d39c88db15", null ],
-      [ "ROTATION_TOP_SIDE_FACING_DOWN", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ab31676121514d7e9c2444d6a90ec4b03", null ],
-      [ "ROTATION_TOP_SIDE_FACING_RIGHT", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345ad88b2c52d4cfc0e77d1a6e84736202e5", null ],
-      [ "ROTATION_QUERY", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345aebde31049768839f8622e739d859a607", null ],
-      [ "ROTATION_APPLY", "types_2lcd_8h.html#a7a3ebca299d07bdf69299b4a5dfb6345a33bf27ba7edc3464872e11a4f00f9493", null ]
+    [ "lcd_rotation_e", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aab", [
+      [ "LCD_ROTATION_TOP_SIDE_UP", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aaba4ef43f2f8a8df12121bc1e59aacd69a5", null ],
+      [ "LCD_ROTATION_TOP_SIDE_LEFT", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aabaa19d4b80e124276fe85daf224c1e6db3", null ],
+      [ "LCD_ROTATION_TOP_SIDE_DOWN", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aabad35359f0ab4e75ac4cf067a1839921f2", null ],
+      [ "LCD_ROTATION_TOP_SIDE_RIGHT", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aaba034dbdb54113291bfd3520073f9e469f", null ],
+      [ "LCD_ROTATION_QUERY", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aabae6f84e76e6605cd46afb3b7fb2b64de6", null ],
+      [ "LCD_ROTATION_APPLY", "types_2lcd_8h.html#a5a6f426194f69573b639a6572e803aaba66772897fc6af3969f83a4540744028f", null ]
     ] ],
-    [ "str_align_e", "types_2lcd_8h.html#af8edb33a562b4bcc85154e3e2a951650", [
-      [ "STR_ALIGN_LEFT", "types_2lcd_8h.html#af8edb33a562b4bcc85154e3e2a951650a9dbcae6a4c4d5986317dec6c1d8ac54a", null ],
-      [ "STR_ALIGN_RIGHT", "types_2lcd_8h.html#af8edb33a562b4bcc85154e3e2a951650aaadd9d41887e133d6702b78a2cbe2821", null ],
-      [ "STR_ALIGN_CENTER", "types_2lcd_8h.html#af8edb33a562b4bcc85154e3e2a951650a9770a80d4bc7e0b8ae8ee7ee04d83f98", null ]
+    [ "lcd_str_align_e", "types_2lcd_8h.html#a942231b321b6deb477ea06353cbcf5b8", [
+      [ "LCD_STR_ALIGN_LEFT", "types_2lcd_8h.html#a942231b321b6deb477ea06353cbcf5b8a800abd7e942370407b69233f287c0c01", null ],
+      [ "LCD_STR_ALIGN_RIGHT", "types_2lcd_8h.html#a942231b321b6deb477ea06353cbcf5b8a3d08cd9bb02fb3b84199cbdc2aab97a4", null ],
+      [ "LCD_STR_ALIGN_CENTER", "types_2lcd_8h.html#a942231b321b6deb477ea06353cbcf5b8a81bcc2fecb29320e060445cf5f67049e", null ]
     ] ],
     [ "stroke_predefined_dash_e", "types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cb", [
       [ "DASH_NONE", "types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3", null ],

@@ -1887,7 +1887,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68a" title="Process flags for blit operations.">lcd_surface_blit_flag_e</a> Accepted processing flags. </dd>
 <dd>
 <a class="el" href="lcd_8h.html#ad41cc74eaed78e7d19fa947fe0535da9" title="Draw a surface onto the current active LCD.">ShowGraphic</a> A function that pretty much does the same thing but with <code>NULL</code> check and a return value. </dd></dl>
 
@@ -2480,7 +2480,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Link a surface (device context) to an LCD descriptor. </p>
-<p>The drawing area <a class="el" href="structlcd__base__s.html#af87e9b38462ecdb6bc1e22276c4d33f9" title="Usable drawing area of the LCD.">lcd_t::drawing_area</a> will also be reset to cover the entire surface.</p>
+<p>The drawing area <a class="el" href="structlcd__base__s.html#a6ebc9b835c8b2064f2243d8ea164589e" title="Usable drawing area of the LCD.">lcd_t::drawing_area</a> will also be reset to cover the entire surface.</p>
 <p>If the display is portrait as indicated by the <a class="el" href="structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0" title="Current canvas rotation.">lcd_t::rotation</a> value, the LCD descriptor's width/height fields will be updated to reflect the dimension shown to the user (i.e. swap width and height).</p>
 <dl class="section user"><dt>Syscall Number</dt><dd><code>0x10093</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2809,7 +2809,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2surface_8h.html#a41b02fda321c9d1ab9502aa8aa49adcd" title="Process flags for blit operations.">blit_flag_e</a> Accepted processing flags. </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68a" title="Process flags for blit operations.">lcd_surface_blit_flag_e</a> Accepted processing flags. </dd>
 <dd>
 <a class="el" href="lcd_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b" title="Copy pixels from a surface to current active LCD.">PutImage</a> A simplified version of this function. </dd></dl>
 
@@ -2888,11 +2888,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5" title="Process flags for string and character printing.">lcd_print_flag_e</a> Valid process flags. </dd>
 <dd>
-<a class="el" href="types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd>
+<a class="el" href="types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124" title="Process flags for string printing only.">lcd_print_str_flag_e</a> Encoding conversion flags. </dd>
 <dd>
-<a class="el" href="types_2lcd_8h.html#af8edb33a562b4bcc85154e3e2a951650" title="String alignment types.">str_align_e</a> </dd></dl>
+<a class="el" href="types_2lcd_8h.html#a942231b321b6deb477ea06353cbcf5b8" title="String alignment types.">lcd_str_align_e</a> </dd></dl>
 
 </div>
 </div>
@@ -2954,7 +2954,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd></dl>
+ </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5" title="Process flags for string and character printing.">lcd_print_flag_e</a> Valid process flags. </dd></dl>
 
 </div>
 </div>
@@ -3018,9 +3018,9 @@ Functions</h2></td></tr>
 <p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
  </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="lcd_8h.html#aa8759b123224e598b231e6c871632c4b" title="Draw a UTF-16 character c aligned to the top left corner at (x, y) px.">WriteChar</a> Similar function that displays single characters instead. </dd>
 <dd>
-<a class="el" href="types_2lcd_8h.html#a1f54f589f151bdd540c978eba5161591" title="Process flags for string and character printing.">print_flag_e</a> Valid process flags. </dd>
+<a class="el" href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5" title="Process flags for string and character printing.">lcd_print_flag_e</a> Valid process flags. </dd>
 <dd>
-<a class="el" href="types_2lcd_8h.html#a5cdd9c950c7c047ddd0979f457a09579" title="Process flags for string printing only.">print_str_flag_e</a> Encoding conversion flags. </dd></dl>
+<a class="el" href="types_2lcd_8h.html#a9af32784215ae82f0f3b1d19efd13124" title="Process flags for string printing only.">lcd_print_str_flag_e</a> Encoding conversion flags. </dd></dl>
 
 </div>
 </div>

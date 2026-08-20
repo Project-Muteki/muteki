@@ -1,20 +1,8 @@
 var searchData=
 [
-  ['errno_5fns_5fapplet_5fspecific_0',['ERRNO_NS_APPLET_SPECIFIC',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a05a5ebcb4b1ef8ca5ef3cf5b2f6f7e07',1,'errno.h']]],
-  ['errno_5fns_5fexec_1',['ERRNO_NS_EXEC',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a42a7a9000abfbd639e750f5d124bfdfa',1,'errno.h']]],
-  ['errno_5fns_5fkernel_2',['ERRNO_NS_KERNEL',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a10659f0da1730daacd31d92c45b73a60',1,'errno.h']]],
-  ['errno_5fns_5fuser_3',['ERRNO_NS_USER',['../errno_8h.html#a2a5f5cf0247fb920e87e95fd487aefb5a793cd7139079746006f9e70020f655a7',1,'errno.h']]],
-  ['exec_5fbestape_5fheader_5fparser_5ffailure_4',['EXEC_BESTAPE_HEADER_PARSER_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af313c0fc6301dcfb40dda60f4be07e3a',1,'errno.h']]],
-  ['exec_5fbestape_5fld_5ffailure_5',['EXEC_BESTAPE_LD_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ab706886b0940b6439521df5bba29538a',1,'errno.h']]],
-  ['exec_5fbestape_5freloc_5ffailure_6',['EXEC_BESTAPE_RELOC_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a1a09302361386ef3a705ce99b10bd720',1,'errno.h']]],
-  ['exec_5fdecompression_5ffailed_7',['EXEC_DECOMPRESSION_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae44221a7da49451c1886dac0463c5720',1,'errno.h']]],
-  ['exec_5fgeneric_5ferror_8',['EXEC_GENERIC_ERROR',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32aa187a4d74f8f243b0a3170124102580d',1,'errno.h']]],
-  ['exec_5finvalid_9',['EXEC_INVALID',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32af95115c686b05e48b93049fc0519a6c5',1,'errno.h']]],
-  ['exec_5floader_5ffailure_10',['EXEC_LOADER_FAILURE',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a4ecbd599844c0f4864ca993b3d902dd5',1,'errno.h']]],
-  ['exec_5fmalloc_5ffailed_11',['EXEC_MALLOC_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32ae2a8dc3f3525c2cc559143277139e279',1,'errno.h']]],
-  ['exec_5fmap_5ffull_12',['EXEC_MAP_FULL',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a896430c12d395f8968f1c2edfd12798a',1,'errno.h']]],
-  ['exec_5fmp3_5fplayer_5fis_5frunning_13',['EXEC_MP3_PLAYER_IS_RUNNING',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32acdb3b3998f3a7bf62730f0b27e9c5075',1,'errno.h']]],
-  ['exec_5fnot_5floaded_14',['EXEC_NOT_LOADED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a99b71b6ad1eaf774808033e88fded275',1,'errno.h']]],
-  ['exec_5fopen_5ffailed_15',['EXEC_OPEN_FAILED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a6209483baa6c26dac7e22bc7db5d3dd8',1,'errno.h']]],
-  ['exec_5funsupported_16',['EXEC_UNSUPPORTED',['../errno_8h.html#ad8c9085e0bdd5a9b0b159fb117161c32a43c55c4ea0cd1ac41cfaef58f39e4ec1',1,'errno.h']]]
+  ['filepicker_5fallow_5fmultiple_0',['FILEPICKER_ALLOW_MULTIPLE',['../filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4a8030cc3692410ca853444cf12b1fb2c3',1,'filepicker.h']]],
+  ['filepicker_5fuse_5fmb_1',['FILEPICKER_USE_MB',['../filepicker_8h.html#a5ccc24d1d105e7b5ae1476256817f5f4a9adccc774ce96a1a78404cf5531f5883',1,'filepicker.h']]],
+  ['format_5fauto_2',['FORMAT_AUTO',['../audio_8h.html#a9da83b49a219b0be41860d617caa6b6eadaf2c151dbaee3d86281f4bf8d278da3',1,'audio.h']]],
+  ['format_5fpcm_5fmono_3',['FORMAT_PCM_MONO',['../audio_8h.html#a9da83b49a219b0be41860d617caa6b6ea33e1b714e466864615cb5ce0c34ff586',1,'audio.h']]],
+  ['format_5fpcm_5fstereo_4',['FORMAT_PCM_STEREO',['../audio_8h.html#a9da83b49a219b0be41860d617caa6b6eaa18e4edccc0c600055185cc6be4c1d99',1,'audio.h']]]
 ];

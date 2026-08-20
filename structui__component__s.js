@@ -1,7 +1,7 @@
 var structui__component__s =
 [
     [ "flags", "structui__component__s.html#a49d4083f78cb820481a88c55152f207d", null ],
-    [ "footprint", "structui__component__s.html#af909f8609457e423f6ff8ad8f93b8401", null ],
+    [ "footprint", "structui__component__s.html#abbf53bd0db7ef98f916a1b4c122fd2dc", null ],
     [ "next", "structui__component__s.html#ad3ba772f21cf112205f5241b5940665b", null ],
     [ "on_draw", "structui__component__s.html#aae7e87991174116e83bb255db0c31cb6", null ],
     [ "on_erase_bg", "structui__component__s.html#a7027c6ea7459136c54cba0ab6ed83811", null ],
