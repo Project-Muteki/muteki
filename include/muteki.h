@@ -28,6 +28,7 @@
 #include "muteki/fs/path.h"
 #include "muteki/fs/ftl.h"
 
+#include "muteki/ui/framework/arena.h"
 #include "muteki/ui/framework/component.h"
 #include "muteki/ui/framework/event.h"
 #include "muteki/ui/framework/group.h"
