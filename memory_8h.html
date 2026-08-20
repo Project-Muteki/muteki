@@ -127,12 +127,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a8f71293c4cba373e738bcfc0721901e6" id="r_a8f71293c4cba373e738bcfc0721901e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a8f71293c4cba373e738bcfc0721901e6">_lfree</a> (void *ptr)</td></tr>
 <tr class="memdesc:a8f71293c4cba373e738bcfc0721901e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free previously allocated memory.  <br /></td></tr>
 <tr class="separator:a8f71293c4cba373e738bcfc0721901e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa75be9711c444f3e8494ea89a71cd0e8" id="r_aa75be9711c444f3e8494ea89a71cd0e8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8">AllocBlock</a> (size_t size, unsigned short tag, bool new_segment)</td></tr>
-<tr class="memdesc:aa75be9711c444f3e8494ea89a71cd0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory on the secondary heap.  <br /></td></tr>
-<tr class="separator:aa75be9711c444f3e8494ea89a71cd0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2902ddabae243afba311b771c36a483c" id="r_a2902ddabae243afba311b771c36a483c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a2902ddabae243afba311b771c36a483c">FreeBlock</a> (void *ptr)</td></tr>
-<tr class="memdesc:a2902ddabae243afba311b771c36a483c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free memory previously allocated with <a class="el" href="memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8" title="Allocate memory on the secondary heap.">AllocBlock()</a>.  <br /></td></tr>
-<tr class="separator:a2902ddabae243afba311b771c36a483c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e4bdf44201594586d5b48ec0345bf36" id="r_a7e4bdf44201594586d5b48ec0345bf36"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a7e4bdf44201594586d5b48ec0345bf36">GetFreeMemory</a> (void)</td></tr>
 <tr class="memdesc:a7e4bdf44201594586d5b48ec0345bf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of available memory.  <br /></td></tr>
 <tr class="separator:a7e4bdf44201594586d5b48ec0345bf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,100 +161,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Free previously allocated memory. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr</td><td>Pointer to previously allocated memory.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p><dl class="section user"><dt>Returns</dt><dd>None. </dd></dl>
- </p>
-
-</div>
-</div>
-<a id="aa75be9711c444f3e8494ea89a71cd0e8" name="aa75be9711c444f3e8494ea89a71cd0e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa75be9711c444f3e8494ea89a71cd0e8">&#9670;&#160;</a></span>AllocBlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void * AllocBlock </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned short&#160;</td>
-          <td class="paramname"><em>tag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>new_segment</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Allocate memory on the secondary heap. </p>
-<p>This allocates a block of memory on a secondary heap, that may be backed by a large block of memory on the primary heap. This secondary heap is usually 64KiB in size.</p>
-<p>This seems to have a tie to the UI subsystem as UI-related syscalls seem to use this extensively.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Memory allocated with this function has to be freed with the <a class="el" href="memory_8h.html#a2902ddabae243afba311b771c36a483c" title="Free memory previously allocated with AllocBlock().">FreeBlock()</a> call.</dd></dl>
-<dl class="section user"><dt>Syscall Number</dt><dd><code>0x10145</code></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">size</td><td>Size of the memory. </td></tr>
-    <tr><td class="paramname">tag</td><td>Write this value to <code>&lt;allocated address&gt; + 0x30</code> when the allocated memory is located on a fresh chunk (i.e. allocated on previously unused memory directly following the last chunk). Seems to be used in UI subsystem to differentiate components in some circumstances. </td></tr>
-    <tr><td class="paramname">new_segment</td><td>Set to <code>true</code> to start a new segment. This will prevent this chunk and all chunks above from being reused until this memory is freed. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The allocated memory. </dd></dl>
-
-</div>
-</div>
-<a id="a2902ddabae243afba311b771c36a483c" name="a2902ddabae243afba311b771c36a483c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2902ddabae243afba311b771c36a483c">&#9670;&#160;</a></span>FreeBlock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void FreeBlock </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Free memory previously allocated with <a class="el" href="memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8" title="Allocate memory on the secondary heap.">AllocBlock()</a>. </p>
-<p>If a segment chunk is freed, everything below it will also be implicitly freed. </p><dl class="section user"><dt>Syscall Number</dt><dd><code>0x10146</code> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>Pointer to previously allocated memory.</td></tr>

@@ -5,7 +5,7 @@ var searchData=
   ['access_2',['access',['../structdevio__descriptor__t.html#af6c8801199327d8e0cedbe5e2f21aadd',1,'devio_descriptor_t']]],
   ['active_5fbytes_3',['active_bytes',['../structbxc__waitable__t.html#ade5206a06bc165e3275c8da1b0e93ada',1,'bxc_waitable_t']]],
   ['active_5frefcount_4',['active_refcount',['../structloader__loaded__s.html#a5ff5a21ee89aaaa35b113c149b6b4630',1,'loader_loaded_s']]],
-  ['allocblock_5',['AllocBlock',['../memory_8h.html#aa75be9711c444f3e8494ea89a71cd0e8',1,'memory.h']]],
+  ['allocblock_5',['AllocBlock',['../arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5',1,'arena.h']]],
   ['apcs_5fwrapper_6',['APCS_WRAPPER',['../abi_8h.html#af36cab907cfc4bc0f79145cf4124e3f1',1,'abi.h']]],
   ['apcs_5fwrapper_5fstatic_7',['APCS_WRAPPER_STATIC',['../abi_8h.html#ab49b46ec8adce6e2dcdad8095200b7e8',1,'abi.h']]],
   ['applet_5farg1_8',['applet_arg1',['../structapplet__args__v4__s.html#a3cc3481c22183740061592e1429088b8',1,'applet_args_v4_s']]],
@@ -15,11 +15,12 @@ var searchData=
   ['applet_5fsubroutine_5fe_12',['applet_subroutine_e',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7',1,'loader.h']]],
   ['applet_5fsubroutine_5fmain_13',['APPLET_SUBROUTINE_MAIN',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d',1,'loader.h']]],
   ['applet_5fsubroutine_5freset_5fstates_14',['APPLET_SUBROUTINE_RESET_STATES',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946',1,'loader.h']]],
-  ['asset_5ffile_15',['asset_file',['../structloader__loaded__s.html#a4b48623b4dfc4b950051fcb290738299',1,'loader_loaded_s']]],
-  ['atime_16',['atime',['../structbxc__find__context__t.html#ab6069a7928cb8c520639aad6b095a943',1,'bxc_find_context_t']]],
-  ['attrib_17',['attrib',['../structbxc__find__context__t.html#ac3f6c84b88be83cd94a460f93d79839b',1,'bxc_find_context_t']]],
-  ['attrib_5fmask_18',['attrib_mask',['../structbxc__find__context__t.html#a4f2f3410cf8668bf78a2641b0d870bde',1,'bxc_find_context_t']]],
-  ['attributes_19',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
-  ['audio_2eh_20',['audio.h',['../audio_8h.html',1,'']]],
-  ['available_5fmultipress_5fevents_21',['available_multipress_events',['../structui__event__ext__prime__s.html#a0d301403934bad3492f2324915774a0d',1,'ui_event_ext_prime_s']]]
+  ['arena_2eh_15',['arena.h',['../arena_8h.html',1,'']]],
+  ['asset_5ffile_16',['asset_file',['../structloader__loaded__s.html#a4b48623b4dfc4b950051fcb290738299',1,'loader_loaded_s']]],
+  ['atime_17',['atime',['../structbxc__find__context__t.html#ab6069a7928cb8c520639aad6b095a943',1,'bxc_find_context_t']]],
+  ['attrib_18',['attrib',['../structbxc__find__context__t.html#ac3f6c84b88be83cd94a460f93d79839b',1,'bxc_find_context_t']]],
+  ['attrib_5fmask_19',['attrib_mask',['../structbxc__find__context__t.html#a4f2f3410cf8668bf78a2641b0d870bde',1,'bxc_find_context_t']]],
+  ['attributes_20',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
+  ['audio_2eh_21',['audio.h',['../audio_8h.html',1,'']]],
+  ['available_5fmultipress_5fevents_22',['available_multipress_events',['../structui__event__ext__prime__s.html#a0d301403934bad3492f2324915774a0d',1,'ui_event_ext_prime_s']]]
 ];

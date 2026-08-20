@@ -31,7 +31,7 @@ var searchData=
   ['framework_2eh_28',['framework.h',['../framework_8h.html',1,'']]],
   ['free_29',['free',['../structbxc__fs__stat__t.html#a5fbeb447c37ce3bcdf85ffb95f0ff1b5',1,'bxc_fs_stat_t']]],
   ['free_5fkb_30',['free_kb',['../structbxc__fs__stat__t.html#ae13e942f9ad61c3f66fe42acc9e028bd',1,'bxc_fs_stat_t']]],
-  ['freeblock_31',['FreeBlock',['../memory_8h.html#a2902ddabae243afba311b771c36a483c',1,'memory.h']]],
+  ['freeblock_31',['FreeBlock',['../arena_8h.html#a1fe66b2cc424a12cc3e1af3ec1a15cac',1,'arena.h']]],
   ['freeimage_32',['FreeImage',['../surface_8h.html#ababdb62cafc2718b2e720bc8166157a2',1,'surface.h']]],
   ['freeprogram_33',['FreeProgram',['../loader_8h.html#ab3102d5e62efa83e012747716c6185fd',1,'loader.h']]],
   ['fs_5fattribute_5fe_34',['fs_attribute_e',['../path_8h.html#ace1ad2f8a5bced52258703097c71e8d4',1,'path.h']]],
