@@ -112,8 +112,7 @@ $(document).ready(function(){initNavTree('loader_8h.html',''); initResizable(); 
 
 <p>Binary loader API.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="common_8h_source.html">muteki/common.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="file_8h_source.html">muteki/file.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 </div>
 <p><a href="loader_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -316,7 +315,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Cart file descriptor. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Add more details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>Add more details. </dd></dl>
 
 </div>
 </div>
@@ -333,7 +332,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Executable image info. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>Add more details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd>Add more details. </dd></dl>
 
 </div>
 </div>
@@ -350,7 +349,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Loader implementation vtable. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>Add more details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo:</a></b></dt><dd>Add more details. </dd></dl>
 
 </div>
 </div>
@@ -367,7 +366,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resource descriptor. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>Add more details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd>Add more details. </dd></dl>
 
 </div>
 </div>
@@ -384,7 +383,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Resource descriptor subfile request. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>Add more details. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd>Add more details. </dd></dl>
 
 </div>
 </div>
@@ -1188,7 +1187,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structloader__loaded__s.html">loader_loaded_t</a> *current_applet = <a class="code hl_function" href="loader_8h.html#a64365d82f725618acac1571ff300fe7f">GetApplicationProcA</a>(<a class="code hl_function" href="loader_8h.html#a4709e1754120dd47e1a5c6f5f36105fc">GetCurrentPathA</a>());</div>
 <div class="ttc" id="aloader_8h_html_a4709e1754120dd47e1a5c6f5f36105fc"><div class="ttname"><a href="loader_8h.html#a4709e1754120dd47e1a5c6f5f36105fc">GetCurrentPathA</a></div><div class="ttdeci">const char * GetCurrentPathA(void)</div><div class="ttdoc">Get the path to the current running executable (argv[0]).</div></div>
 <div class="ttc" id="aloader_8h_html_a64365d82f725618acac1571ff300fe7f"><div class="ttname"><a href="loader_8h.html#a64365d82f725618acac1571ff300fe7f">GetApplicationProcA</a></div><div class="ttdeci">loader_loaded_t * GetApplicationProcA(const char *pathname)</div><div class="ttdoc">Search and return the applet instance by DOS 8.3 pathname.</div></div>
-<div class="ttc" id="astructloader__loaded__s_html"><div class="ttname"><a href="structloader__loaded__s.html">loader_loaded_s</a></div><div class="ttdoc">Loaded applet executable.</div><div class="ttdef"><b>Definition</b> loader.h:203</div></div>
+<div class="ttc" id="astructloader__loaded__s_html"><div class="ttname"><a href="structloader__loaded__s.html">loader_loaded_s</a></div><div class="ttdoc">Loaded applet executable.</div><div class="ttdef"><b>Definition</b> loader.h:202</div></div>
 </div><!-- fragment --><p>or</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structloader__loaded__s.html">loader_loaded_t</a> *current_applet = <a class="code hl_function" href="loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5">ProgramIsRunningA</a>(<a class="code hl_function" href="loader_8h.html#a4709e1754120dd47e1a5c6f5f36105fc">GetCurrentPathA</a>());</div>
 <div class="ttc" id="aloader_8h_html_a49b3aae10043dbc221a7ae34a59d71b5"><div class="ttname"><a href="loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5">ProgramIsRunningA</a></div><div class="ttdeci">loader_loaded_t * ProgramIsRunningA(const char *pathname)</div><div class="ttdoc">Return the instance of a running applet by its DOS 8.3 path name.</div></div>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: include/muteki/ui/surface.h Source File</title>
+<title>muteki: include/muteki/draw/surface.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -114,10 +114,10 @@ $(document).ready(function(){initNavTree('surface_8h_source.html',''); initResiz
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * SPDX-License-Identifier: MIT</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __MUTEKI_UI_SURFACE_H__</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __MUTEKI_UI_SURFACE_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __MUTEKI_DRAW_SURFACE_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __MUTEKI_DRAW_SURFACE_H__</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="ui_2common_8h.html">muteki/ui/common.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="types_2surface_8h.html">types/surface.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
@@ -152,8 +152,8 @@ $(document).ready(function(){initNavTree('surface_8h_source.html',''); initResiz
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>} <span class="comment">// extern &quot;C&quot;</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_UI_SURFACE_H__</span></div>
-<div class="ttc" id="astructlcd__surface__s_html"><div class="ttname"><a href="structlcd__surface__s.html">lcd_surface_s</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> common.h:1065</div></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_DRAW_SURFACE_H__</span></div>
+<div class="ttc" id="astructlcd__surface__s_html"><div class="ttname"><a href="structlcd__surface__s.html">lcd_surface_s</a></div><div class="ttdoc">Descriptor of an LCD drawing surface or hardware framebuffer.</div><div class="ttdef"><b>Definition</b> surface.h:126</div></div>
 <div class="ttc" id="asurface_8h_html_a04239638c97cb1c6a52bb11f22223862"><div class="ttname"><a href="surface_8h.html#a04239638c97cb1c6a52bb11f22223862">SizeofGraphic</a></div><div class="ttdeci">size_t SizeofGraphic(lcd_surface_t *surface)</div><div class="ttdoc">Calculate the total on-memory size of a surface (including descriptor).</div></div>
 <div class="ttc" id="asurface_8h_html_a1fa6c5c38a95c92f0b5c9e134311d637"><div class="ttname"><a href="surface_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637">_BitBlt</a></div><div class="ttdeci">void _BitBlt(lcd_surface_t *dst, short xdstoffset, short ydstoffset, short xsize, short ysize, lcd_surface_t *src, int xsrcoffset, int ysrcoffset, unsigned short flags)</div><div class="ttdoc">Perform blit operation from src surface to dst surface.</div></div>
 <div class="ttc" id="asurface_8h_html_a2165c15c7ab6599b017cf6562f5db2e6"><div class="ttname"><a href="surface_8h.html#a2165c15c7ab6599b017cf6562f5db2e6">ImageData</a></div><div class="ttdeci">void * ImageData(lcd_surface_t *surface)</div><div class="ttdoc">Get the palette and bitmap buffer for an all-in-one surface.</div></div>
@@ -162,13 +162,13 @@ $(document).ready(function(){initNavTree('surface_8h_source.html',''); initResiz
 <div class="ttc" id="asurface_8h_html_ababdb62cafc2718b2e720bc8166157a2"><div class="ttname"><a href="surface_8h.html#ababdb62cafc2718b2e720bc8166157a2">FreeImage</a></div><div class="ttdeci">void FreeImage(lcd_surface_t *surface)</div><div class="ttdoc">Dispose an all-in-one surface.</div></div>
 <div class="ttc" id="asurface_8h_html_ae983d7fa372d0a7612b98b400aae8bfc"><div class="ttname"><a href="surface_8h.html#ae983d7fa372d0a7612b98b400aae8bfc">InitGraphic</a></div><div class="ttdeci">lcd_surface_t * InitGraphic(lcd_surface_t *surface, short width, short height, short depth)</div><div class="ttdoc">Initialize a buffer as an all-in-one surface.</div></div>
 <div class="ttc" id="asurface_8h_html_afaee65f5adc0182e5b96e35bcb222e3f"><div class="ttname"><a href="surface_8h.html#afaee65f5adc0182e5b96e35bcb222e3f">SizeofImage</a></div><div class="ttdeci">size_t SizeofImage(lcd_surface_t *surface)</div><div class="ttdoc">Get the total on-memory size of a surface, in bytes.</div></div>
-<div class="ttc" id="aui_2common_8h_html"><div class="ttname"><a href="ui_2common_8h.html">common.h</a></div><div class="ttdoc">Common data structures and definitions for the UI subsystem.</div></div>
+<div class="ttc" id="atypes_2surface_8h_html"><div class="ttname"><a href="types_2surface_8h.html">surface.h</a></div><div class="ttdoc">Surface type definitions.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_fc0f3252f3a072e51ecf0f9666ed4795.html">ui</a></li><li class="navelem"><a class="el" href="surface_8h.html">surface.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_965f2f6133d58cc85d33ea8bbc415a82.html">draw</a></li><li class="navelem"><a class="el" href="surface_8h.html">surface.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

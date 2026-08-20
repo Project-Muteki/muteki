@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['dash_5fcustom_0',['DASH_CUSTOM',['../ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9',1,'common.h']]],
-  ['dash_5fnone_1',['DASH_NONE',['../ui_2common_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3',1,'common.h']]],
+  ['dash_5fcustom_0',['DASH_CUSTOM',['../types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9',1,'lcd.h']]],
+  ['dash_5fnone_1',['DASH_NONE',['../types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3',1,'lcd.h']]],
   ['db_5fcorrupted_2',['DB_CORRUPTED',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a4bb96a0cea4da7dfc4fac08d6c9fa9bc',1,'errno.h']]],
   ['db_5ffull_3',['DB_FULL',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73aac765a6820ebfb3898d963e8a6fd38b4',1,'errno.h']]],
   ['db_5findex_5ffull_5fdelete_4',['DB_INDEX_FULL_DELETE',['../errno_8h.html#abcf282c7663bd0455f40aadcdcd2bf73a59e9093a53bfe2eb483523435641b0dc',1,'errno.h']]],

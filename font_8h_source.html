@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: include/muteki/ui/font.h Source File</title>
+<title>muteki: include/muteki/draw/font.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -114,36 +114,37 @@ $(document).ready(function(){initNavTree('font_8h_source.html',''); initResizabl
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * SPDX-License-Identifier: MIT</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __MUTEKI_UI_FONT_H__</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __MUTEKI_UI_FONT_H__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __MUTEKI_DRAW_FONT_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __MUTEKI_DRAW_FONT_H__</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="ui_2common_8h.html">muteki/ui/common.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;types/font.h&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//extern int GetFontWidth(int32_t type);</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="font_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">   29</a></span><span class="keyword">extern</span> <span class="keywordtype">short</span> <a class="code hl_function" href="font_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">GetCharWidth</a>(<a class="code hl_define" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, uint8_t font_type);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="font_8h.html#a009e14c23044791c4250d8242ec811c4">   37</a></span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_function" href="font_8h.html#a009e14c23044791c4250d8242ec811c4">GetFontHeight</a>(uint8_t font_type);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="font_8h.html#ab26dcdc80abf289d89644b6d12808c6e">   28</a></span><span class="keyword">extern</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_function" href="font_8h.html#ab26dcdc80abf289d89644b6d12808c6e">GetCharWidth</a>(<a class="code hl_define" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> font_type);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="font_8h.html#af00a16708b950c95ab2c4d3b60763914">   37</a></span><span class="keyword">extern</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_function" href="font_8h.html#af00a16708b950c95ab2c4d3b60763914">GetFontHeight</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> font_type);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>} <span class="comment">// extern &quot;C&quot;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_UI_FONT_H__</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="font_8h.html#af4ddde3220b4ff029803aec319beb4d1">   47</a></span><span class="keyword">extern</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_function" href="font_8h.html#af4ddde3220b4ff029803aec319beb4d1">GetFontWidth</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> c, <a class="code hl_struct" href="structfont__info__s.html">font_info_t</a> *font, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> *out_glyph_extent);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_DRAW_FONT_H__</span></div>
 <div class="ttc" id="acommon_8h_html_a11673b324737202065319b55ec126bec"><div class="ttname"><a href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a></div><div class="ttdeci">#define UTF16</div><div class="ttdoc">&quot;Portable&quot; Besta UTF-16 type used by other headers.</div><div class="ttdef"><b>Definition</b> common.h:54</div></div>
-<div class="ttc" id="afont_8h_html_a009e14c23044791c4250d8242ec811c4"><div class="ttname"><a href="font_8h.html#a009e14c23044791c4250d8242ec811c4">GetFontHeight</a></div><div class="ttdeci">int GetFontHeight(uint8_t font_type)</div><div class="ttdoc">Get the height of the font font_type.</div></div>
-<div class="ttc" id="afont_8h_html_a2eddaf1d5fdc62b53e63bf3fcb53c09b"><div class="ttname"><a href="font_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">GetCharWidth</a></div><div class="ttdeci">short GetCharWidth(UTF16 c, uint8_t font_type)</div><div class="ttdoc">Get the width of the character c used in font_type.</div></div>
-<div class="ttc" id="aui_2common_8h_html"><div class="ttname"><a href="ui_2common_8h.html">common.h</a></div><div class="ttdoc">Common data structures and definitions for the UI subsystem.</div></div>
+<div class="ttc" id="afont_8h_html_ab26dcdc80abf289d89644b6d12808c6e"><div class="ttname"><a href="font_8h.html#ab26dcdc80abf289d89644b6d12808c6e">GetCharWidth</a></div><div class="ttdeci">unsigned short GetCharWidth(UTF16 c, unsigned short font_type)</div><div class="ttdoc">Get the width of the character c used in font_type.</div></div>
+<div class="ttc" id="afont_8h_html_af00a16708b950c95ab2c4d3b60763914"><div class="ttname"><a href="font_8h.html#af00a16708b950c95ab2c4d3b60763914">GetFontHeight</a></div><div class="ttdeci">unsigned short GetFontHeight(unsigned short font_type)</div><div class="ttdoc">Get the height of the font font_type.</div></div>
+<div class="ttc" id="afont_8h_html_af4ddde3220b4ff029803aec319beb4d1"><div class="ttname"><a href="font_8h.html#af4ddde3220b4ff029803aec319beb4d1">GetFontWidth</a></div><div class="ttdeci">unsigned short GetFontWidth(unsigned int c, font_info_t *font, unsigned short *out_glyph_extent)</div><div class="ttdoc">Calculate the width of a glyph.</div></div>
+<div class="ttc" id="astructfont__info__s_html"><div class="ttname"><a href="structfont__info__s.html">font_info_s</a></div><div class="ttdoc">Font rendering routine common states.</div><div class="ttdef"><b>Definition</b> font.h:81</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_fc0f3252f3a072e51ecf0f9666ed4795.html">ui</a></li><li class="navelem"><a class="el" href="font_8h.html">font.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_965f2f6133d58cc85d33ea8bbc415a82.html">draw</a></li><li class="navelem"><a class="el" href="font_8h.html">font.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

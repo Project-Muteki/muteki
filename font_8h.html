@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: include/muteki/ui/font.h File Reference</title>
+<title>muteki: include/muteki/draw/font.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,24 +109,27 @@ $(document).ready(function(){initNavTree('font_8h.html',''); initResizable(); })
 
 <p>Font-related API.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="ui_2common_8h_source.html">muteki/ui/common.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &quot;types/font.h&quot;</code><br />
 </div>
 <p><a href="font_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2eddaf1d5fdc62b53e63bf3fcb53c09b" id="r_a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="font_8h.html#a2eddaf1d5fdc62b53e63bf3fcb53c09b">GetCharWidth</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, uint8_t font_type)</td></tr>
-<tr class="memdesc:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the character <code>c</code> used in <code>font_type</code>.  <br /></td></tr>
-<tr class="separator:a2eddaf1d5fdc62b53e63bf3fcb53c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a009e14c23044791c4250d8242ec811c4" id="r_a009e14c23044791c4250d8242ec811c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="font_8h.html#a009e14c23044791c4250d8242ec811c4">GetFontHeight</a> (uint8_t font_type)</td></tr>
-<tr class="memdesc:a009e14c23044791c4250d8242ec811c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the font <code>font_type</code>.  <br /></td></tr>
-<tr class="separator:a009e14c23044791c4250d8242ec811c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26dcdc80abf289d89644b6d12808c6e" id="r_ab26dcdc80abf289d89644b6d12808c6e"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="font_8h.html#ab26dcdc80abf289d89644b6d12808c6e">GetCharWidth</a> (<a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> c, unsigned short font_type)</td></tr>
+<tr class="memdesc:ab26dcdc80abf289d89644b6d12808c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the width of the character <code>c</code> used in <code>font_type</code>.  <br /></td></tr>
+<tr class="separator:ab26dcdc80abf289d89644b6d12808c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00a16708b950c95ab2c4d3b60763914" id="r_af00a16708b950c95ab2c4d3b60763914"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="font_8h.html#af00a16708b950c95ab2c4d3b60763914">GetFontHeight</a> (unsigned short font_type)</td></tr>
+<tr class="memdesc:af00a16708b950c95ab2c4d3b60763914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the height of the font <code>font_type</code>.  <br /></td></tr>
+<tr class="separator:af00a16708b950c95ab2c4d3b60763914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ddde3220b4ff029803aec319beb4d1" id="r_af4ddde3220b4ff029803aec319beb4d1"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="font_8h.html#af4ddde3220b4ff029803aec319beb4d1">GetFontWidth</a> (unsigned int c, <a class="el" href="structfont__info__s.html">font_info_t</a> *font, unsigned short *out_glyph_extent)</td></tr>
+<tr class="memdesc:af4ddde3220b4ff029803aec319beb4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the width of a glyph.  <br /></td></tr>
+<tr class="separator:af4ddde3220b4ff029803aec319beb4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Font-related API. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a2eddaf1d5fdc62b53e63bf3fcb53c09b" name="a2eddaf1d5fdc62b53e63bf3fcb53c09b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eddaf1d5fdc62b53e63bf3fcb53c09b">&#9670;&#160;</a></span>GetCharWidth()</h2>
+<a id="ab26dcdc80abf289d89644b6d12808c6e" name="ab26dcdc80abf289d89644b6d12808c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab26dcdc80abf289d89644b6d12808c6e">&#9670;&#160;</a></span>GetCharWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +138,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">short GetCharWidth </td>
+          <td class="memname">unsigned short GetCharWidth </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a>&#160;</td>
           <td class="paramname"><em>c</em>, </td>
@@ -143,7 +146,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">unsigned short&#160;</td>
           <td class="paramname"><em>font_type</em>&#160;</td>
         </tr>
         <tr>
@@ -169,11 +172,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The width in pixels of that character. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>font_type_e List of known font types. </dd></dl>
 
 </div>
 </div>
-<a id="a009e14c23044791c4250d8242ec811c4" name="a009e14c23044791c4250d8242ec811c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a009e14c23044791c4250d8242ec811c4">&#9670;&#160;</a></span>GetFontHeight()</h2>
+<a id="af00a16708b950c95ab2c4d3b60763914" name="af00a16708b950c95ab2c4d3b60763914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00a16708b950c95ab2c4d3b60763914">&#9670;&#160;</a></span>GetFontHeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,9 +186,9 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int GetFontHeight </td>
+          <td class="memname">unsigned short GetFontHeight </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">unsigned short&#160;</td>
           <td class="paramname"><em>font_type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,6 +209,61 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The height in pixels of that font. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>font_type_e List of known font types. </dd></dl>
+
+</div>
+</div>
+<a id="af4ddde3220b4ff029803aec319beb4d1" name="af4ddde3220b4ff029803aec319beb4d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ddde3220b4ff029803aec319beb4d1">&#9670;&#160;</a></span>GetFontWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short GetFontWidth </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfont__info__s.html">font_info_t</a> *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short *&#160;</td>
+          <td class="paramname"><em>out_glyph_extent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the width of a glyph. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><code>0x102bf</code> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">c</td><td>Unicode codepoint of the character. Going above U+FFFF is possible. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">font</td><td>The font info record. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_glyph_extent</td><td>Actual horizontal extent of the glyph in pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Simple width of the glyph in pixels, without accounting for features such as italic overhangs. </dd></dl>
 
 </div>
 </div>
@@ -213,7 +272,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_fc0f3252f3a072e51ecf0f9666ed4795.html">ui</a></li><li class="navelem"><a class="el" href="font_8h.html">font.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_965f2f6133d58cc85d33ea8bbc415a82.html">draw</a></li><li class="navelem"><a class="el" href="font_8h.html">font.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

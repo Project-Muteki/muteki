@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: include/muteki/ui/views/group.h Source File</title>
+<title>muteki: include/muteki/ui/framework/group.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -114,10 +114,10 @@ $(document).ready(function(){initNavTree('group_8h_source.html',''); initResizab
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * SPDX-License-Identifier: MIT</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __MUTEKI_UI_VIEWS_GROUP_H__</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __MUTEKI_UI_VIEWS_GROUP_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __MUTEKI_UI_FRAMEWORK_GROUP_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __MUTEKI_UI_FRAMEWORK_GROUP_H__</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="ui_2common_8h.html">muteki/ui/common.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../types/framework.h&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('group_8h_source.html',''); initResizab
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>} <span class="comment">// extern &quot;C&quot;</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_UI_VIEWS_GROUP_H__</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_UI_FRAMEWORK_GROUP_H__</span></div>
 <div class="ttc" id="agroup_8h_html_a0ff40fe49bfb203776c049ab4fa43474"><div class="ttname"><a href="group_8h.html#a0ff40fe49bfb203776c049ab4fa43474">Destroy</a></div><div class="ttdeci">void Destroy(ui_group_t *group)</div><div class="ttdoc">Dispose a group component and free up its memory.</div></div>
 <div class="ttc" id="agroup_8h_html_a1b0f1d000e6813c5d1e36f3670032956"><div class="ttname"><a href="group_8h.html#a1b0f1d000e6813c5d1e36f3670032956">Delete</a></div><div class="ttdeci">void Delete(ui_group_t *group, ui_component_t *child)</div><div class="ttdoc">Remove a child from group.</div></div>
 <div class="ttc" id="agroup_8h_html_a227c73252a7ac5cb41cff2918166017c"><div class="ttname"><a href="group_8h.html#a227c73252a7ac5cb41cff2918166017c">PGROUP_handleEvent</a></div><div class="ttdeci">void PGROUP_handleEvent(ui_group_t *self, ui_event_t *event)</div><div class="ttdoc">Handle events.</div></div>
@@ -169,16 +169,15 @@ $(document).ready(function(){initNavTree('group_8h_source.html',''); initResizab
 <div class="ttc" id="agroup_8h_html_add3363d6b708d4c621b4b01278b71746"><div class="ttname"><a href="group_8h.html#add3363d6b708d4c621b4b01278b71746">PGROUP_preView</a></div><div class="ttdeci">ui_component_t * PGROUP_preView(ui_group_t *self)</div><div class="ttdoc">Find and return the component that has the ui_group_t::current component as its next component.</div></div>
 <div class="ttc" id="agroup_8h_html_afa5cf047a1dc3da31d9784d05c76ef31"><div class="ttname"><a href="group_8h.html#afa5cf047a1dc3da31d9784d05c76ef31">ExecView</a></div><div class="ttdeci">int ExecView(ui_group_t *group)</div><div class="ttdoc">Activates a group.</div></div>
 <div class="ttc" id="agroup_8h_html_afb7b3c722459c45b9bf653bb40bdf0f0"><div class="ttname"><a href="group_8h.html#afb7b3c722459c45b9bf653bb40bdf0f0">PGROUP_redraw</a></div><div class="ttdeci">void PGROUP_redraw(ui_group_t *self)</div><div class="ttdoc">Redraw the child components.</div></div>
-<div class="ttc" id="astructui__component__s_html"><div class="ttname"><a href="structui__component__s.html">ui_component_s</a></div><div class="ttdoc">Common part of all widgets and modals.</div><div class="ttdef"><b>Definition</b> common.h:1652</div></div>
-<div class="ttc" id="astructui__event__base__s_html"><div class="ttname"><a href="structui__event__base__s.html">ui_event_base_s</a></div><div class="ttdoc">Structure for low level UI events.</div><div class="ttdef"><b>Definition</b> common.h:1403</div></div>
-<div class="ttc" id="astructui__group__s_html"><div class="ttname"><a href="structui__group__s.html">ui_group_s</a></div><div class="ttdoc">UI component group/container struct.</div><div class="ttdef"><b>Definition</b> common.h:1730</div></div>
-<div class="ttc" id="aui_2common_8h_html"><div class="ttname"><a href="ui_2common_8h.html">common.h</a></div><div class="ttdoc">Common data structures and definitions for the UI subsystem.</div></div>
+<div class="ttc" id="astructui__component__s_html"><div class="ttname"><a href="structui__component__s.html">ui_component_s</a></div><div class="ttdoc">Common part of all widgets and modals.</div><div class="ttdef"><b>Definition</b> framework.h:97</div></div>
+<div class="ttc" id="astructui__event__base__s_html"><div class="ttname"><a href="structui__event__base__s.html">ui_event_base_s</a></div><div class="ttdoc">Structure for low level UI events.</div><div class="ttdef"><b>Definition</b> framework.h:270</div></div>
+<div class="ttc" id="astructui__group__s_html"><div class="ttname"><a href="structui__group__s.html">ui_group_s</a></div><div class="ttdoc">UI component group/container struct.</div><div class="ttdef"><b>Definition</b> framework.h:175</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_fc0f3252f3a072e51ecf0f9666ed4795.html">ui</a></li><li class="navelem"><a class="el" href="dir_2e14aa908ed68e70b328171ee229a0ea.html">views</a></li><li class="navelem"><a class="el" href="group_8h.html">group.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_fc0f3252f3a072e51ecf0f9666ed4795.html">ui</a></li><li class="navelem"><a class="el" href="dir_849e6953bd16a8f178391f7ef86e75d7.html">framework</a></li><li class="navelem"><a class="el" href="group_8h.html">group.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

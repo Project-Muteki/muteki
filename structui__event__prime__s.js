@@ -14,5 +14,6 @@ var structui__event__prime__s =
     [ "unk22", "structui__event__prime__s.html#af6a04ae2ca6611a106a1c86ecac1c604", null ],
     [ "unk_0x1a", "structui__event__prime__s.html#ab98234ab0126058eec9a21fb23c07251", null ],
     [ "user_data", "structui__event__prime__s.html#a7fc6ebcf5601f0881f163118f3cc58e4", null ],
+    [ "user_data_scalar", "structui__event__prime__s.html#a294567de63b967c939842fe40e9d241d", null ],
     [ "value", "structui__event__prime__s.html#a7389bbd63e6d1b243b2adbd414d4fccb", null ]
 ];

@@ -8,5 +8,6 @@ var structui__event__sys__s =
     [ "touch_x", "structui__event__sys__s.html#afab7109188dacd9d2ad350de23a3d274", null ],
     [ "touch_y", "structui__event__sys__s.html#acd3e82aca278abf7aa6d3784270be13e", null ],
     [ "user_data", "structui__event__sys__s.html#a04b43398e87f18cb34263b1c36773003", null ],
+    [ "user_data_scalar", "structui__event__sys__s.html#a2a75583c693281e00db999aaecedb2a7", null ],
     [ "value", "structui__event__sys__s.html#a8d7dad4fe4daf12d4b392c172496f835", null ]
 ];

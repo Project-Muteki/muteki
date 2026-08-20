@@ -10,12 +10,12 @@ var annotated_dup =
     [ "find_context_t", "structfind__context__t.html", "structfind__context__t" ],
     [ "fn_parts_dos_s", "structfn__parts__dos__s.html", "structfn__parts__dos__s" ],
     [ "fn_parts_lfn_s", "structfn__parts__lfn__s.html", "structfn__parts__lfn__s" ],
+    [ "font_info_s", "structfont__info__s.html", "structfont__info__s" ],
     [ "fs_stat_t", "structfs__stat__t.html", "structfs__stat__t" ],
     [ "key_press_event_config_t", "structkey__press__event__config__t.html", "structkey__press__event__config__t" ],
     [ "lcd_base_s", "structlcd__base__s.html", "structlcd__base__s" ],
     [ "lcd_cursor_s", "structlcd__cursor__s.html", "structlcd__cursor__s" ],
     [ "lcd_draw_s", "structlcd__draw__s.html", "structlcd__draw__s" ],
-    [ "lcd_font_s", "structlcd__font__s.html", "structlcd__font__s" ],
     [ "lcd_lock_s", "structlcd__lock__s.html", "structlcd__lock__s" ],
     [ "lcd_surface_s", "structlcd__surface__s.html", "structlcd__surface__s" ],
     [ "lcd_thread_safe_s", "structlcd__thread__safe__s.html", "structlcd__thread__safe__s" ],
@@ -37,6 +37,7 @@ var annotated_dup =
     [ "pcm_frame_s", "structpcm__frame__s.html", "structpcm__frame__s" ],
     [ "pcm_state_s", "structpcm__state__s.html", null ],
     [ "power_battery_status_t", "structpower__battery__status__t.html", "structpower__battery__status__t" ],
+    [ "rect_s", "structrect__s.html", "structrect__s" ],
     [ "semaphore_s", "structsemaphore__s.html", "structsemaphore__s" ],
     [ "thread_s", "structthread__s.html", "structthread__s" ],
     [ "threading_waitable_t", "structthreading__waitable__t.html", "structthreading__waitable__t" ],
@@ -50,7 +51,7 @@ var annotated_dup =
     [ "ui_group_s", "structui__group__s.html", "structui__group__s" ],
     [ "ui_imageclip_s", "structui__imageclip__s.html", "structui__imageclip__s" ],
     [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
+    [ "ui_menufield_s", "structui__menufield__s.html", "structui__menufield__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
-    [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
-    [ "ui_rect_s", "structui__rect__s.html", "structui__rect__s" ]
+    [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ]
 ];

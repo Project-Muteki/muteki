@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('structui__event__prime__s.html',''); i
 <p>Structure for low level UI events (Prime G1 extension).  
  <a href="structui__event__prime__s.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ui_2common_8h_source.html">common.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="framework_8h_source.html">framework.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -157,6 +157,10 @@ union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memitem:ae96f8fe5e6678f107c1f0b6e40eef26d" id="r_ae96f8fe5e6678f107c1f0b6e40eef26d"><td class="memItemLeft" >&#160;&#160;&#160;void *&#160;&#160;&#160;<a class="el" href="structui__event__prime__s.html#a7fc6ebcf5601f0881f163118f3cc58e4">user_data</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memdesc:ae96f8fe5e6678f107c1f0b6e40eef26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">User data.  <a href="structui__event__prime__s.html#a7fc6ebcf5601f0881f163118f3cc58e4">More...</a><br /></td></tr>
 <tr class="separator:ae96f8fe5e6678f107c1f0b6e40eef26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59025fccf6c7dba8338895f6be1d2ef6" id="r_a59025fccf6c7dba8338895f6be1d2ef6"><td class="memItemLeft" >
+&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<b>user_data_scalar</b>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a59025fccf6c7dba8338895f6be1d2ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">User data as a scalar value. <br /></td></tr>
+<tr class="separator:a59025fccf6c7dba8338895f6be1d2ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af10a3b2265db4b9cb2f17f92aced5141" id="r_af10a3b2265db4b9cb2f17f92aced5141"><td class="memItemLeft" >&#160;&#160;&#160;unsigned int&#160;&#160;&#160;<a class="el" href="structui__event__prime__s.html#af1c72489f4ef7365b55805d07637ae66">scroll_wheel</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="memdesc:af10a3b2265db4b9cb2f17f92aced5141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.  <a href="structui__event__prime__s.html#af1c72489f4ef7365b55805d07637ae66">More...</a><br /></td></tr>
 <tr class="separator:af10a3b2265db4b9cb2f17f92aced5141"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,7 +206,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>Seems to be tied to where the event comes from. </p>
-<p>Set to 1 in <a class="el" href="event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a> events, 2 in <a class="el" href="event_8h.html#a0dfa96c341f7f5141934baa765b00e25" title="Produce an event in the main event queue.">PutEvent()</a> events that is of neither the <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a> type or the <code>0x20</code> type. Otherwise it would usually be 0. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a7ac7cfdad39bdbb473237794863b19b9" title="Event source.">ui_event_source_e</a> </dd></dl>
+<p>Set to 1 in <a class="el" href="framework_2event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a> events, 2 in <a class="el" href="framework_2event_8h.html#a0dfa96c341f7f5141934baa765b00e25" title="Produce an event in the main event queue.">PutEvent()</a> events that is of neither the <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a> type or the <code>0x20</code> type. Otherwise it would usually be 0. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2event_8h.html#a7ac7cfdad39bdbb473237794863b19b9" title="Event source.">ui_event_source_e</a> </dd></dl>
 
 </div>
 </div>
@@ -219,7 +223,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>The type of event (0x10 being key event) </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966f" title="UI event types.">ui_event_type_e</a> List of event types. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966f" title="UI event types.">ui_event_type_e</a> List of event types. </dd></dl>
 
 </div>
 </div>
@@ -236,7 +240,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>Keycode for the first pressed key. </p>
-<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a>. </p>
+<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a>. </p>
 
 </div>
 </div>
@@ -253,7 +257,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>Keycode for the second pressed key. </p>
-<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a>. </p><dl class="section note"><dt>Note</dt><dd>Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover, some devices may lack support of simultaneous key presses. </dd></dl>
+<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa63947a013fc73ad26886ce8f8f94ff86" title="Key(s) pressed.">UI_EVENT_TYPE_KEY</a>. </p><dl class="section note"><dt>Note</dt><dd>Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover, some devices may lack support of simultaneous key presses. </dd></dl>
 
 </div>
 </div>
@@ -287,7 +291,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a1be4f211929ba28d21f38530d28e263d" title="Scroll wheel direction.">scroll_wheel_e</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2event_8h.html#a1be4f211929ba28d21f38530d28e263d" title="Scroll wheel direction.">scroll_wheel_e</a> </dd></dl>
 
 </div>
 </div>
@@ -304,7 +308,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>The X coordinate of where the touch event is located, in pixels. </p>
-<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf" title="Beginning of touch/pen down event.">UI_EVENT_TYPE_TOUCH_BEGIN</a>, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741" title="Touch/pen move event.">UI_EVENT_TYPE_TOUCH_MOVE</a>, or <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" title="End of touch/pen up event.">UI_EVENT_TYPE_TOUCH_END</a>. </p>
+<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf" title="Beginning of touch/pen down event.">UI_EVENT_TYPE_TOUCH_BEGIN</a>, <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741" title="Touch/pen move event.">UI_EVENT_TYPE_TOUCH_MOVE</a>, or <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" title="End of touch/pen up event.">UI_EVENT_TYPE_TOUCH_END</a>. </p>
 
 </div>
 </div>
@@ -321,7 +325,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div><div class="memdoc">
 
 <p>The Y coordinate of where the touch event is located, in pixels. </p>
-<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf" title="Beginning of touch/pen down event.">UI_EVENT_TYPE_TOUCH_BEGIN</a>, <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741" title="Touch/pen move event.">UI_EVENT_TYPE_TOUCH_MOVE</a>, or <a class="el" href="ui_2common_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" title="End of touch/pen up event.">UI_EVENT_TYPE_TOUCH_END</a>. </p>
+<p>Only available when <a class="el" href="structui__event__prime__s.html#abd9d5c95dc0dccb947b26010991044ff" title="The type of event (0x10 being key event)">event_type</a> is <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa5eb63e2a3e672f82599551f0ff0f4dbf" title="Beginning of touch/pen down event.">UI_EVENT_TYPE_TOUCH_BEGIN</a>, <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa0cc5d69728924ecd19a6f06082a2f741" title="Touch/pen move event.">UI_EVENT_TYPE_TOUCH_MOVE</a>, or <a class="el" href="types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa459168799437844e53fc0bcf79455748" title="End of touch/pen up event.">UI_EVENT_TYPE_TOUCH_END</a>. </p>
 
 </div>
 </div>
@@ -360,7 +364,7 @@ unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x1a</b
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/muteki/ui/<a class="el" href="ui_2common_8h_source.html">common.h</a></li>
+<li>include/muteki/ui/types/<a class="el" href="framework_8h_source.html">framework.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

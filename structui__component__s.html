@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('structui__component__s.html',''); init
 <p>Common part of all widgets and modals.  
  <a href="structui__component__s.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ui_2common_8h_source.html">common.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="framework_8h_source.html">framework.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -126,9 +126,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a49d4083f78cb820481a88c55152f207d" id="r_a49d4083f78cb820481a88c55152f207d"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a49d4083f78cb820481a88c55152f207d">flags</a></td></tr>
 <tr class="memdesc:a49d4083f78cb820481a88c55152f207d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component behavior bit field.  <br /></td></tr>
 <tr class="separator:a49d4083f78cb820481a88c55152f207d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f533fb3c00c1a7251565e4cfbd027c3" id="r_a7f533fb3c00c1a7251565e4cfbd027c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structui__rect__s.html">ui_rect_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#a7f533fb3c00c1a7251565e4cfbd027c3">footprint</a></td></tr>
-<tr class="memdesc:a7f533fb3c00c1a7251565e4cfbd027c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component visual footprint.  <br /></td></tr>
-<tr class="separator:a7f533fb3c00c1a7251565e4cfbd027c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af909f8609457e423f6ff8ad8f93b8401" id="r_af909f8609457e423f6ff8ad8f93b8401"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrect__s.html">rect_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#af909f8609457e423f6ff8ad8f93b8401">footprint</a></td></tr>
+<tr class="memdesc:af909f8609457e423f6ff8ad8f93b8401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component visual footprint.  <br /></td></tr>
+<tr class="separator:af909f8609457e423f6ff8ad8f93b8401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb06d5df117e2ec49284ff3ff3012232" id="r_adb06d5df117e2ec49284ff3ff3012232"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structui__component__s.html#adb06d5df117e2ec49284ff3ff3012232">on_set_state</a> )(<a class="el" href="structui__component__s.html">ui_component_t</a> *self, unsigned short mask, bool value)</td></tr>
 <tr class="memdesc:adb06d5df117e2ec49284ff3ff3012232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component state change callback.  <br /></td></tr>
 <tr class="separator:adb06d5df117e2ec49284ff3ff3012232"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,7 +166,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common part of all widgets and modals. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000034">Todo:</a></b></dt><dd>Find a way to make the callbacks respect subtypes? Currently type-specific callbacks need to have their <code>self</code> argument defined as <code>ui_component_t *</code> (or <code>void *</code> if we opt to do that) which is a bit less ideal. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a49d4083f78cb820481a88c55152f207d" name="a49d4083f78cb820481a88c55152f207d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49d4083f78cb820481a88c55152f207d">&#9670;&#160;</a></span>flags</h2>
@@ -181,18 +181,18 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
 </div><div class="memdoc">
 
 <p>Component behavior bit field. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a98c0abfc010b6de14277b0838a0adfea" title="Component behavior flag. Usually set by the component constructors but can sometimes change over time...">ui_component_flag_e</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="framework_8h.html#a98c0abfc010b6de14277b0838a0adfea" title="Component behavior flag. Usually set by the component constructors but can sometimes change over time...">ui_component_flag_e</a> </dd></dl>
 
 </div>
 </div>
-<a id="a7f533fb3c00c1a7251565e4cfbd027c3" name="a7f533fb3c00c1a7251565e4cfbd027c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f533fb3c00c1a7251565e4cfbd027c3">&#9670;&#160;</a></span>footprint</h2>
+<a id="af909f8609457e423f6ff8ad8f93b8401" name="af909f8609457e423f6ff8ad8f93b8401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af909f8609457e423f6ff8ad8f93b8401">&#9670;&#160;</a></span>footprint</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structui__rect__s.html">ui_rect_t</a> ui_component_s::footprint</td>
+          <td class="memname"><a class="el" href="structrect__s.html">rect_t</a> ui_component_s::footprint</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -249,7 +249,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
 </div><div class="memdoc">
 
 <p>Component callback for erasing background. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd>Figure out exactly what this does. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd>Figure out exactly what this does. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="component_8h.html#a6c9f51175af33cebdd37fa9255189d5d" title="Signal the parent container to restore pixels that were obstructed by this component.">PVIEW_EraseBackGround</a> </dd></dl>
 
 </div>
@@ -338,7 +338,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x32</b></td></t
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/muteki/ui/<a class="el" href="ui_2common_8h_source.html">common.h</a></li>
+<li>include/muteki/ui/types/<a class="el" href="framework_8h_source.html">framework.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

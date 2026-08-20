@@ -11,5 +11,6 @@ var structui__event__base__s =
     [ "unk16", "structui__event__base__s.html#af5f520b1307958f7d6f904787372049f", null ],
     [ "unk22", "structui__event__base__s.html#a53869d0e4916c6836f98c76b20f9cadd", null ],
     [ "user_data", "structui__event__base__s.html#ad86270890788038214c5bdf3d87c0d94", null ],
+    [ "user_data_scalar", "structui__event__base__s.html#ab0ec81592fd0d28aea1e1a74ac802627", null ],
     [ "value", "structui__event__base__s.html#a0525ca83af1fc75c535263bd023eedf1", null ]
 ];

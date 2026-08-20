@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: include/muteki/ftl.h Source File</title>
+<title>muteki: include/muteki/fs/ftl.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -114,10 +114,10 @@ $(document).ready(function(){initNavTree('ftl_8h_source.html',''); initResizable
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * SPDX-License-Identifier: MIT</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __MUTEKI_FTL_H__</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __MUTEKI_FTL_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef __MUTEKI_FS_FTL_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define __MUTEKI_FS_FTL_H__</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="common_8h.html">muteki/common.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../common.h&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
@@ -154,8 +154,7 @@ $(document).ready(function(){initNavTree('ftl_8h_source.html',''); initResizable
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <span class="comment">// extern &quot;C&quot;</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_FTL_H__</span></div>
-<div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div><div class="ttdoc">Common include file for all muteki-shims headers.</div></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif </span><span class="comment">// __MUTEKI_FS_FTL_H__</span></div>
 <div class="ttc" id="aftl_8h_html_a16fb1f63c4e0d1e321cc1acfba680f90"><div class="ttname"><a href="ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90">FTL_ReadSector</a></div><div class="ttdeci">int FTL_ReadSector(size_t sector, void *ptr, size_t count)</div><div class="ttdoc">Read sectors from the block device the current active drive belongs to.</div></div>
 <div class="ttc" id="aftl_8h_html_a65b2c998ef7d819d0487b1be42a38615"><div class="ttname"><a href="ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615">FTL_GetCurDiskSize</a></div><div class="ttdeci">size_t FTL_GetCurDiskSize(size_t *size_hi)</div><div class="ttdoc">Get the size of block device the current active drive belongs to.</div></div>
 <div class="ttc" id="aftl_8h_html_a7d59bb98342f5b462320cd05a2b51127"><div class="ttname"><a href="ftl_8h.html#a7d59bb98342f5b462320cd05a2b51127">nand_read_page</a></div><div class="ttdeci">int nand_read_page(int sbz, size_t page, void *ptr, size_t count, short arg5)</div><div class="ttdoc">Read NAND flash pages at a specific page number.</div></div>
@@ -176,7 +175,7 @@ $(document).ready(function(){initNavTree('ftl_8h_source.html',''); initResizable
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="ftl_8h.html">ftl.h</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_89e46442482f5622ab783d5d97d4fad2.html">muteki</a></li><li class="navelem"><a class="el" href="dir_85af0a31b2604c6359a6a47e823f80c1.html">fs</a></li><li class="navelem"><a class="el" href="ftl_8h.html">ftl.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

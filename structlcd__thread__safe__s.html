@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('structlcd__thread__safe__s.html',''); 
 <p>A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.  
  <a href="structlcd__thread__safe__s.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ui_2common_8h_source.html">common.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="types_2lcd_8h_source.html">lcd.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -138,18 +138,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>transparent_color</b><
 <a class="el" href="structlcd__draw__s.html">lcd_draw_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b></td></tr>
 <tr class="memdesc:a240ffcf991233f15689ffb4284fda8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-LCD states shared by drawing routines. <br /></td></tr>
 <tr class="separator:a240ffcf991233f15689ffb4284fda8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e19bbbded6c976bf4d6915778534fb5" id="r_a3e19bbbded6c976bf4d6915778534fb5"><td class="memItemLeft" align="right" valign="top"><a id="a3e19bbbded6c976bf4d6915778534fb5" name="a3e19bbbded6c976bf4d6915778534fb5"></a>
-<a class="el" href="structlcd__font__s.html">lcd_font_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>font</b></td></tr>
-<tr class="memdesc:a3e19bbbded6c976bf4d6915778534fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-LCD states shared by specifically font rendering routines. <br /></td></tr>
-<tr class="separator:a3e19bbbded6c976bf4d6915778534fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9700b7f90247a689d54dca1ab02fda" id="r_a6b9700b7f90247a689d54dca1ab02fda"><td class="memItemLeft" align="right" valign="top"><a id="a6b9700b7f90247a689d54dca1ab02fda" name="a6b9700b7f90247a689d54dca1ab02fda"></a>
+<a class="el" href="structfont__info__s.html">font_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>font</b></td></tr>
+<tr class="memdesc:a6b9700b7f90247a689d54dca1ab02fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-LCD states shared by specifically font rendering routines. <br /></td></tr>
+<tr class="separator:a6b9700b7f90247a689d54dca1ab02fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbeffc3c26fa06d8f2230dce4753c46d" id="r_adbeffc3c26fa06d8f2230dce4753c46d"><td class="memItemLeft" align="right" valign="top"><a id="adbeffc3c26fa06d8f2230dce4753c46d" name="adbeffc3c26fa06d8f2230dce4753c46d"></a>
 <a class="el" href="structlcd__cursor__s.html">lcd_cursor_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>saved_cursor</b></td></tr>
 <tr class="memdesc:adbeffc3c26fa06d8f2230dce4753c46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copy of the cursor states when the LCD descriptor was created. <br /></td></tr>
 <tr class="separator:adbeffc3c26fa06d8f2230dce4753c46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c91b9170b58b5dbec275d8223445734" id="r_a0c91b9170b58b5dbec275d8223445734"><td class="memItemLeft" align="right" valign="top"><a id="a0c91b9170b58b5dbec275d8223445734" name="a0c91b9170b58b5dbec275d8223445734"></a>
-<a class="el" href="structui__rect__s.html">ui_rect_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawing_area</b></td></tr>
-<tr class="memdesc:a0c91b9170b58b5dbec275d8223445734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usable drawing area of the LCD. <br /></td></tr>
-<tr class="separator:a0c91b9170b58b5dbec275d8223445734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d20c1773cdffd2d17e1b7c40aac0cbc" id="r_a6d20c1773cdffd2d17e1b7c40aac0cbc"><td class="memItemLeft" align="right" valign="top"><a id="a6d20c1773cdffd2d17e1b7c40aac0cbc" name="a6d20c1773cdffd2d17e1b7c40aac0cbc"></a>
+<a class="el" href="structrect__s.html">rect_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawing_area</b></td></tr>
+<tr class="memdesc:a6d20c1773cdffd2d17e1b7c40aac0cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usable drawing area of the LCD. <br /></td></tr>
+<tr class="separator:a6d20c1773cdffd2d17e1b7c40aac0cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b11c2f1000d9ff140e10f85f8098d3" id="r_a64b11c2f1000d9ff140e10f85f8098d3"><td class="memItemLeft" align="right" valign="top"><a id="a64b11c2f1000d9ff140e10f85f8098d3" name="a64b11c2f1000d9ff140e10f85f8098d3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0x74</b> [3]</td></tr>
 <tr class="memdesc:a64b11c2f1000d9ff140e10f85f8098d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
@@ -175,7 +175,7 @@ short&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
 <tr class="memitem:aee0fef719c53262a72fa8b019f1c1119" id="r_aee0fef719c53262a72fa8b019f1c1119"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__s.html#aee0fef719c53262a72fa8b019f1c1119">xsize</a></td></tr>
 <tr class="memdesc:aee0fef719c53262a72fa8b019f1c1119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pixel row size in bytes.  <br /></td></tr>
 <tr class="separator:aee0fef719c53262a72fa8b019f1c1119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac256bc66d0758cac4d31347dd9407f22" id="r_ac256bc66d0758cac4d31347dd9407f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22">rotate</a></td></tr>
+<tr class="memitem:ac256bc66d0758cac4d31347dd9407f22" id="r_ac256bc66d0758cac4d31347dd9407f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2lcd_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22">rotate</a></td></tr>
 <tr class="memdesc:ac256bc66d0758cac4d31347dd9407f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotation callback.  <br /></td></tr>
 <tr class="separator:ac256bc66d0758cac4d31347dd9407f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd08da8d5d6207a1b02f890f0373842" id="r_a4dd08da8d5d6207a1b02f890f0373842"><td class="memItemLeft" align="right" valign="top"><a id="a4dd08da8d5d6207a1b02f890f0373842" name="a4dd08da8d5d6207a1b02f890f0373842"></a>
@@ -217,7 +217,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0xa4</b> [23]</td>
 
 <p>Integer size of each pixel in bytes. </p>
 <dl class="section note"><dt>Note</dt><dd>This will be 0 when a pixel takes less than a byte. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo:</a></b></dt><dd>Verify. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>Verify. </dd></dl>
 
 </div>
 </div>
@@ -228,13 +228,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0xa4</b> [23]</td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a> lcd_thread_safe_s::rotate</td>
+          <td class="memname"><a class="el" href="types_2lcd_8h.html#a7ef9e48cde5ff06441262c36e162fba5">lcd_rotate_callback_t</a> lcd_thread_safe_s::rotate</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Rotation callback. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ui_2common_8h.html#a7ef9e48cde5ff06441262c36e162fba5" title="Callback type for handling canvas rotation.">lcd_rotate_callback_t</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2lcd_8h.html#a7ef9e48cde5ff06441262c36e162fba5" title="Callback type for handling canvas rotation.">lcd_rotate_callback_t</a> </dd></dl>
 
 </div>
 </div>
@@ -268,12 +268,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>unk_0xa4</b> [23]</td>
 </div><div class="memdoc">
 
 <p>Pixel row size in bytes. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd>Verify. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>Verify. </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/muteki/ui/<a class="el" href="ui_2common_8h_source.html">common.h</a></li>
+<li>include/muteki/draw/types/<a class="el" href="types_2lcd_8h_source.html">lcd.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
