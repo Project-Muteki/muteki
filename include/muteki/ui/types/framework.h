@@ -68,15 +68,19 @@ enum ui_component_flag_e {
 };
 
 struct ui_component_s;
-struct ui_event_base_s;
+struct ui_event_std_s;
 struct ui_event_prime_s;
+struct ui_event_ext_s;
+struct ui_event_ext_prime_s;
 struct ui_event_sys_s;
 struct ui_multipress_event_s;
 struct ui_group_s;
 
 typedef struct ui_component_s ui_component_t;
-typedef struct ui_event_base_s ui_event_base_t;
+typedef struct ui_event_std_s ui_event_std_t;
 typedef struct ui_event_prime_s ui_event_prime_t;
+typedef struct ui_event_ext_s ui_event_ext_t;
+typedef struct ui_event_ext_prime_s ui_event_ext_prime_t;
 typedef struct ui_event_sys_s ui_event_sys_t;
 typedef struct ui_multipress_event_s ui_multipress_event_t;
 typedef struct ui_group_s ui_group_t;
@@ -85,8 +89,8 @@ typedef struct ui_group_s ui_group_t;
 #define ui_event_s ui_event_prime_s
 typedef struct ui_event_prime_s ui_event_t;
 #else
-#define ui_event_s ui_event_base_s
-typedef struct ui_event_base_s ui_event_t;
+#define ui_event_s ui_event_std_s
+typedef struct ui_event_std_s ui_event_t;
 #endif
 
 /**
@@ -264,79 +268,21 @@ struct ui_multipress_event_s {
 };
 
 /**
- * @brief Structure for low level UI events.
- * @see ui_event_prime_s HP Prime G1's extension of this struct.
+ * @brief Main event struct extension.
+ * @details This is the event struct used by GetEvent() and PutEvent().
  */
-struct ui_event_base_s {
-    /**
-     * @brief Event recipient.
-     * @details If set to `NULL`, the event is a broadcast event (e.g. input event). Otherwise, the
-     * widget's ui_component_t::on_event callback will be called with this event.
-     */
-    ui_component_t *recipient; // 0-4
-    /**
-     * @brief The type of event (0x10 being key event)
-     * @see ui_event_type_e List of event types.
-     */
-    int event_type; // 4-8 16: key (?).
+struct ui_event_ext_s {
     union {
         /**
-         * @brief Raw value of the event.
-         */
-        unsigned int value;
-        struct {
-            /**
-             * @brief Keycode for the first pressed key.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
-             * @see keycode_e
-             */
-            unsigned short key_code0; // 8-10
-            /**
-             * @brief Keycode for the second pressed key.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
-             * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
-             * some devices may lack support of simultaneous key presses.
-             * @see keycode_e
-             */
-            unsigned short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
-        };
-        struct {
-            /**
-             * @brief The X coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
-             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
-             */
-            unsigned short touch_x;
-            /**
-             * @brief The Y coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
-             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
-             */
-            unsigned short touch_y;
-        };
-    };
-    union {
-        /**
-        * @brief User data.
-        * @details Format is event-specific.
+        * @brief Extra user data.
+        * @details Format is event-specific. Usually unused.
         */
-        void *user_data; // 12-16 pointer that only shows up on USB insertion event.
+        void *user_data2; // 12-16 pointer that only shows up on USB insertion event.
         /**
-         * @brief User data as a scalar value.
+         * @brief Extra user data as a scalar value.
          */
-        unsigned int user_data_scalar;
-        /**
-         * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
-         * @see scroll_wheel_e
-         */
-        unsigned int scroll_wheel;
+        unsigned int user_data2_scalar;
     };
-
-    /**
-     * @brief Unknown.
-     * @details Maybe used on event types other than touch and key press.
-     */
-    void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
     /**
      * @brief Seems to be tied to where the event comes from.
      * @details Set to 1 in SendMessage() events, 2 in PutEvent() events that is of neither the ::UI_EVENT_TYPE_KEY
@@ -350,88 +296,7 @@ struct ui_event_base_s {
     unsigned short unk22; // 22-24
 };
 
-/**
- * @brief Structure for low level UI events (Prime G1 extension).
- * @details Define `MUTEKI_HAS_PRIME_UI_EVENT` as 1 to make this the underlying type of ui_event_t.
- */
-struct ui_event_prime_s {
-    /**
-     * @brief Event recipient.
-     * @details If set to `NULL`, the event is a broadcast event (e.g. input event). Otherwise, the
-     * widget's ui_component_t::on_event callback will be called with this event.
-     */
-    ui_component_t *recipient; // 0-4
-    /**
-     * @brief The type of event (0x10 being key event)
-     * @see ui_event_type_e List of event types.
-     */
-    int event_type; // 4-8 16: key (?).
-    union {
-        /**
-         * @brief Raw value of the event.
-         */
-        unsigned int value;
-        struct {
-            /**
-             * @brief Keycode for the first pressed key.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
-             */
-            unsigned short key_code0; // 8-10
-            /**
-             * @brief Keycode for the second pressed key.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_KEY.
-             * @note Depending on the exact keys pressed simultaneously, this is not always accurate. Moreover,
-             * some devices may lack support of simultaneous key presses.
-             */
-            unsigned short key_code1; // 10-12 sometimes set when 2 keys are pressed simultaneously. Does not always work.
-        };
-        struct {
-            /**
-             * @brief The X coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
-             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
-             */
-            unsigned short touch_x;
-            /**
-             * @brief The Y coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::event_type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
-             * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
-             */
-            unsigned short touch_y;
-        };
-    };
-    union {
-        /**
-        * @brief User data.
-        * @details Format is event-specific.
-        */
-        void *user_data; // 12-16 pointer that only shows up on USB insertion event.
-        /**
-         * @brief User data as a scalar value.
-         */
-        unsigned int user_data_scalar;
-        /**
-         * @brief Scroll wheel direction, either SCROLL_DOWN or SCROLL_UP.
-         * @see scroll_wheel_e
-         */
-        unsigned int scroll_wheel;
-    };
-    /**
-     * @brief Unknown.
-     * @details Maybe used on event types other than touch and key press.
-     */
-    void *unk16; // 16-20 sometimes a pointer especially on unstable USB connection? junk data?
-    /**
-     * @brief Seems to be tied to where the event comes from.
-     * @details Set to 1 in SendMessage() events, 2 in PutEvent() events that is of neither the ::UI_EVENT_TYPE_KEY
-     * type or the `0x20` type. Otherwise it would usually be 0.
-     * @see ui_event_source_e
-     */
-    unsigned short event_source; // 20-22
-    /**
-     * @brief Unknown. Seems unused.
-     */
-    unsigned short unk22; // 22-24
+struct ui_event_ext_prime_s {
     /**
      * @brief Number of valid multipress events available for processing.
      */
@@ -446,6 +311,10 @@ struct ui_event_prime_s {
     ui_multipress_event_t multipress_events[8]; // 28-124
 };
 
+/**
+ * @brief Common struct subset shared across system and main events.
+ * @details This is the event struct used by GetPenEvent() and PutSystemEvent().
+ */
 struct ui_event_sys_s {
     /**
      * @brief Event recipient.
@@ -509,6 +378,40 @@ struct ui_event_sys_s {
          */
         unsigned int scroll_wheel;
     };
+};
+
+/**
+ * @brief Structure for UI events.
+ * @see ui_event_prime_s HP Prime G1's extension of this struct.
+ */
+struct ui_event_std_s {
+    /**
+     * @brief Event body.
+     */
+    ui_event_sys_t body;
+    /**
+     * @brief Extended main event data.
+     */
+    ui_event_ext_t ext;
+};
+
+/**
+ * @brief Structure for low level UI events (Prime G1 extension).
+ * @details Define `MUTEKI_HAS_PRIME_UI_EVENT` as 1 to make this the underlying type of ui_event_t.
+ */
+struct ui_event_prime_s {
+    /**
+     * @brief Event body.
+     */
+    ui_event_sys_t body;
+    /**
+     * @brief Extended main event data.
+     */
+    ui_event_ext_t ext;
+    /**
+     * @brief HP Prime multitouch extension.
+     */
+    ui_event_ext_prime_t ext_prime;
 };
 
 /**
