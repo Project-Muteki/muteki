@@ -9,10 +9,10 @@
  * @details Methods of a vanilla ::ui_component_t but as syscalls.
  */
 
-#ifndef __MUTEKI_UI_VIEWS_COMPONENT_H__
-#define __MUTEKI_UI_VIEWS_COMPONENT_H__
+#ifndef __MUTEKI_UI_FRAMEWORK_COMPONENT_H__
+#define __MUTEKI_UI_FRAMEWORK_COMPONENT_H__
 
-#include <muteki/ui/common.h>
+#include "../types/framework.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -56,4 +56,4 @@ void PVIEW_setState(ui_component_t *self, unsigned short mask, bool set);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_VIEWS_COMPONENT_H__
+#endif // __MUTEKI_UI_FRAMEWORK_COMPONENT_H__

@@ -11,7 +11,7 @@
 #ifndef __MUTEKI_SYSTEM_H__
 #define __MUTEKI_SYSTEM_H__
 
-#include <muteki/common.h>
+#include "common.h"
 
 #ifdef __cplusplus
 extern "C" {

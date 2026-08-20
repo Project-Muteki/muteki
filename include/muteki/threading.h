@@ -11,8 +11,8 @@
 #ifndef __MUTEKI_THREADING_H__
 #define __MUTEKI_THREADING_H__
 
-#include <muteki/common.h>
-#include <muteki/errno.h>
+#include "common.h"
+#include "errno.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -12,8 +12,8 @@
 #ifndef __MUTEKI_UTILS_H__
 #define __MUTEKI_UTILS_H__
 
-#include <muteki/common.h>
-#include <muteki/ui/canvas.h>
+#include "common.h"
+#include "draw/types/surface.h"
 
 #ifdef __cplusplus
 extern "C" {

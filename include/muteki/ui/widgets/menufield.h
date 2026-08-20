@@ -11,7 +11,7 @@
 #ifndef __MUTEKI_UI_WIDGETS_MENUFIELD_H__
 #define __MUTEKI_UI_WIDGETS_MENUFIELD_H__
 
-#include <muteki/ui/common.h>
+#include "../types/menufield.h"
 
 #ifdef __cplusplus
 extern "C" {

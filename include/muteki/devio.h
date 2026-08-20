@@ -11,7 +11,7 @@
 #ifndef __MUTEKI_DEVIO_H__
 #define __MUTEKI_DEVIO_H__
 
-#include <muteki/common.h>
+#include "common.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -143,7 +143,7 @@ extern bool ReadFile(devio_descriptor_t *devfd, void *buf, size_t size, size_t *
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool WriteFile(devio_descriptor_t *devfd, const void *buf,size_t size, size_t *actual_size, void *overlapped);
+extern bool WriteFile(devio_descriptor_t *devfd, const void *buf, size_t size, size_t *actual_size, void *overlapped);
 
 /**
  * @brief Send an IOCTL request to a device IO descriptor `devfd`.

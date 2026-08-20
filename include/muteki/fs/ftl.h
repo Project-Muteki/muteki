@@ -9,10 +9,10 @@
  * @details @x_term require-krnllib
  */
 
-#ifndef __MUTEKI_FTL_H__
-#define __MUTEKI_FTL_H__
+#ifndef __MUTEKI_FS_FTL_H__
+#define __MUTEKI_FS_FTL_H__
 
-#include <muteki/common.h>
+#include "../common.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -108,4 +108,4 @@ int nand_read_page(int sbz, size_t page, void *ptr, size_t count, short arg5);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_FTL_H__
+#endif // __MUTEKI_FS_FTL_H__

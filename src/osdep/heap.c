@@ -1,6 +1,6 @@
 #include "osdep/heap.h"
 #include "muteki/memory.h"  // for _lfree() and lmalloc()
-#include "muteki/file.h"  // for _afopen() et al
+#include "muteki/fs/file.h"  // for _afopen() et al
 
 typedef struct {
     size_t usable_size;

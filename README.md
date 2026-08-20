@@ -1,8 +1,8 @@
 # muteki
 
-Make EABI code runs on Besta® RTOS devices.
+EABI code execution on Besta® RTOS devices.
 
-Contains `libmuteki-shims`, an unofficial, free as in freedom syscall shims and headers for working with Besta® RTOS syscalls, and `libmuteki-osdep`, an EABI bridge library for Besta® RTOS applets and modules.
+This repo contains `libmuteki-shims`, an unofficial, free as in freedom syscall shims and headers for working with Besta® RTOS syscalls, and `libmuteki-osdep`, an EABI bridge library for Besta® RTOS applets and modules.
 
 ## Integrating muteki into a C compiler
 

@@ -9,10 +9,10 @@
   * @details Methods of a ::ui_group_t but as syscalls.
   */
 
-#ifndef __MUTEKI_UI_VIEWS_GROUP_H__
-#define __MUTEKI_UI_VIEWS_GROUP_H__
+#ifndef __MUTEKI_UI_FRAMEWORK_GROUP_H__
+#define __MUTEKI_UI_FRAMEWORK_GROUP_H__
 
-#include <muteki/ui/common.h>
+#include "../types/framework.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -157,4 +157,4 @@ extern void Delete(ui_group_t *group, ui_component_t *child);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_VIEWS_GROUP_H__
+#endif // __MUTEKI_UI_FRAMEWORK_GROUP_H__

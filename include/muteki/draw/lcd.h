@@ -1,19 +1,19 @@
 /*
- * Copyright 2021-present dogtopus
+ * Copyright 2024-2026 dogtopus
  * SPDX-License-Identifier: MIT
  */
 
 /**
- * @file canvas.h
+ * @file lcd.h
  * @brief Display canvas (LCD) API.
  * @details Note that the term "display canvas", "canvas" and "LCD" may be used interchangeably below. This may get
  * rectified in a future release.
  */
 
-#ifndef __MUTEKI_UI_CANVAS_H__
-#define __MUTEKI_UI_CANVAS_H__
+#ifndef __MUTEKI_DRAW_LCD_H__
+#define __MUTEKI_DRAW_LCD_H__
 
-#include <muteki/ui/common.h>
+#include "types/lcd.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,16 +26,16 @@ extern "C" {
  * @return The current font type.
  * @see font_type_e Valid values for `font_type`.
  */
-extern short GetFontType(void);
+extern unsigned short GetFontType(void);
 
 /**
  * @brief Set the current font type to `font_type`.
  * @x_syscall_num `0x10051`
  * @param font_type The font type.
- * @x_void_return
+ * @return The previous font type.
  * @see font_type_e Valid values for `font_type`.
  */
-extern void SetFontType(short font_type);
+extern unsigned short SetFontType(unsigned short font_type);
 
 /**
  * @brief Draw a string `s` with specified alignment at `(x, y)` px.
@@ -55,6 +55,7 @@ extern void SetFontType(short font_type);
  * @param flags String processing flags
  * @see print_flag_e Valid process flags.
  * @see print_str_flag_e Encoding conversion flags.
+ * @see str_align_e
  */
 extern void WriteAlignString(short x, short y, const void *s, short max_length, int align, unsigned int flags);
 
@@ -106,7 +107,7 @@ extern void Printf(const char *format, ...) SYS_IS_PRINTF(1, 2);
 extern void PrintfXY(short x, short y, const char *format, ...) SYS_IS_PRINTF(3, 4);
 
 /**
- * @brief Draw a surface onto current active LCD.
+ * @brief Draw a surface onto the current active LCD.
  * @details If `surface` is set to `NULL` this will fail gracefully.
  * @x_syscall_num `0x10059`
  * @param x X coordinate.
@@ -223,6 +224,7 @@ extern int rgbSetColor(int color);
  * @param[in, out] dash_pattern New dash bit pattern. Will be set to the previous dash bit pattern once this function
  * returns.
  * @return Previous predefined dash pattern.
+ * @see stroke_predefined_dash_e
  */
 short SetPenStyle(short dash, unsigned int *dash_pattern);
 
@@ -623,4 +625,4 @@ extern short GetMaxScrY(void);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_CANVAS_H__
+#endif // __MUTEKI_DRAW_LCD_H__

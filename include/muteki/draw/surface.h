@@ -8,10 +8,10 @@
  * @brief Surface API.
  */
 
-#ifndef __MUTEKI_UI_SURFACE_H__
-#define __MUTEKI_UI_SURFACE_H__
+#ifndef __MUTEKI_DRAW_SURFACE_H__
+#define __MUTEKI_DRAW_SURFACE_H__
 
-#include <muteki/ui/common.h>
+#include "types/surface.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -142,4 +142,4 @@ extern void FreeImage(lcd_surface_t *surface);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_SURFACE_H__
+#endif // __MUTEKI_DRAW_SURFACE_H__

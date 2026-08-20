@@ -11,9 +11,9 @@
 #ifndef __MUTEKI_AUDIO_H__
 #define __MUTEKI_AUDIO_H__
 
-#include <muteki/common.h>
-#include <muteki/devio.h>
-#include <muteki/threading.h>
+#include "common.h"
+#include "devio.h"
+#include "threading.h"
 
 #ifdef __cplusplus
 extern "C" {

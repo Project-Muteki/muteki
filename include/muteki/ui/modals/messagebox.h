@@ -5,13 +5,13 @@
 
 /**
  * @file messagebox.h
- * @brief Functions related to the message box view.
+ * @brief Functions related to the message box modal.
  */
 
 #ifndef __MUTEKI_UI_MODALS_MESSAGEBOX_H__
 #define __MUTEKI_UI_MODALS_MESSAGEBOX_H__
 
-#include <muteki/common.h>
+#include "../../common.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -8,10 +8,10 @@
  * @brief Low-level and built-in high-level file operation API.
  */
 
-#ifndef __MUTEKI_FILE_H__
-#define __MUTEKI_FILE_H__
+#ifndef __MUTEKI_FS_FILE_H__
+#define __MUTEKI_FS_FILE_H__
 
-#include <muteki/common.h>
+#include "../common.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -117,4 +117,4 @@ extern int _fclose(file_descriptor_t *stream);
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_FILE_H__
+#endif // __MUTEKI_FS_FILE_H__

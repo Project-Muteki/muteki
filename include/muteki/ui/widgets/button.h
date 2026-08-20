@@ -11,7 +11,7 @@
 #ifndef __MUTEKI_UI_WIDGETS_BUTTON_H__
 #define __MUTEKI_UI_WIDGETS_BUTTON_H__
 
-#include <muteki/ui/common.h>
+#include "../types/button.h"
 
 #ifdef __cplusplus
 extern "C" {

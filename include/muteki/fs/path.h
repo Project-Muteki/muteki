@@ -4,14 +4,14 @@
  */
 
 /**
- * @file fs.h
- * @brief Filesystem access API.
+ * @file path.h
+ * @brief Filesystem path API.
  */
 
-#ifndef __MUTEKI_FS_H__
-#define __MUTEKI_FS_H__
+#ifndef __MUTEKI_FS_PATH_H__
+#define __MUTEKI_FS_PATH_H__
 
-#include <muteki/common.h>
+#include "../common.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -536,4 +536,4 @@ extern int _wfnmerge(UTF16 *pathname, const UTF16 *drive, const UTF16 *dirname, 
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_FS_H__
+#endif // __MUTEKI_FS_PATH_H__

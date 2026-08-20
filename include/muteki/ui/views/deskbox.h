@@ -11,7 +11,9 @@
 #ifndef __MUTEKI_UI_VIEWS_DESKBOX_H__
 #define __MUTEKI_UI_VIEWS_DESKBOX_H__
 
-#include <muteki/ui/common.h>
+#include "../types/deskbox.h"
+
+#include "../types/button.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -169,7 +171,7 @@ extern ui_button_t *InsertTitleBarButton(
  * @param[in] from The deskbox object.
  * @x_void_return
  */
-extern void GetDeskClientRect(ui_rect_t *rect, ui_deskbox_t *from);
+extern void GetDeskClientRect(rect_t *rect, ui_deskbox_t *from);
 
 #ifdef __cplusplus
 } // extern "C"

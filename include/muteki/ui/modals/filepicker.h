@@ -5,13 +5,13 @@
 
 /**
  * @file filepicker.h
- * @brief Functions related to the file picker view.
+ * @brief Functions related to the file picker modal.
  */
 
 #ifndef __MUTEKI_UI_MODALS_FILEPICKER_H__
 #define __MUTEKI_UI_MODALS_FILEPICKER_H__
 
-#include <muteki/ui/common.h>
+#include "../../common.h"
 
 #ifdef __cplusplus
 extern "C" {

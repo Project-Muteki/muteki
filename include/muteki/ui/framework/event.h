@@ -17,10 +17,10 @@
  * UI component. See SendMessage() and SendMessageExt().
  */
 
-#ifndef __MUTEKI_UI_EVENT_H__
-#define __MUTEKI_UI_EVENT_H__
+#ifndef __MUTEKI_UI_FRAMEWORK_EVENT_H__
+#define __MUTEKI_UI_FRAMEWORK_EVENT_H__
 
-#include <muteki/ui/common.h>
+#include "../types/framework.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -320,4 +320,4 @@ extern bool SendMessageExt(ui_component_t *recipient, int event_type, unsigned i
 } // extern "C"
 #endif
 
-#endif // __MUTEKI_UI_EVENT_H__
+#endif // __MUTEKI_UI_FRAMEWORK_EVENT_H__
