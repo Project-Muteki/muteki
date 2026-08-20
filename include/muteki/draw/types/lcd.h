@@ -24,80 +24,80 @@ extern "C" {
  * @brief Process flags for string and character printing.
  * @todo A lot of the bits seem to just print nothing. We need to formally look at the disassembly for this (huge!).
  */
-enum print_flag_e {
+enum lcd_print_flag_e {
     /**
      * @brief No extra process.
      */
-    PRINT_NONE = 0,
+    LCD_PRINT_NONE = 0,
     /**
      * @brief Invert colors.
      * @details Within the bounding box of the glyphs to be rendered, the RGB pixel value is inverted.
      */
-    PRINT_INVERT = 0x1,
+    LCD_PRINT_INVERT = 0x1,
     /**
-     * @brief Seems to be an alternative version of `PRINT_INVERT`.
+     * @brief Seems to be an alternative version of `LCD_PRINT_INVERT`.
      */
-    PRINT_INVERT_ALT = 0x4,
+    LCD_PRINT_INVERT_ALT = 0x4,
     /**
      * @brief Draw underscores only.
      * @todo Speculation based on behavior. Seems to be very broken with >16px fonts.
      */
-    PRINT_UNDERSCORE_ONLY = 0x40,
+    LCD_PRINT_UNDERSCORE_ONLY = 0x40,
 };
 
 /**
  * @brief Process flags for string printing only.
  */
-enum print_str_flag_e {
+enum lcd_print_str_flag_e {
     /**
      * @brief Assume text encoding to be BIG5 instead of UTF-16.
      * @todo Seems to be some unknown extension? Limited mojibake test doesn't match iconv result.
      */
-    PRINT_STR_ENCODING_BIG5 = 0x100,
+    LCD_PRINT_STR_ENCODING_BIG5 = 0x100,
     /**
      * @brief Assume text encoding to be GB18030 instead of UTF-16.
      */
-    PRINT_STR_ENCODING_GB18030 = 0x200,
+    LCD_PRINT_STR_ENCODING_GB18030 = 0x200,
     /**
      * @brief Assume text encoding to be TIS-620 instead of UTF-16.
      */
-    PRINT_STR_ENCODING_TIS_620 = 0x400,
+    LCD_PRINT_STR_ENCODING_TIS_620 = 0x400,
 };
 
 /**
  * @brief String alignment types.
  */
-enum str_align_e {
+enum lcd_str_align_e {
     /**
      * @brief Align to top-left.
      */
-    STR_ALIGN_LEFT = 0,
+    LCD_STR_ALIGN_LEFT = 0,
     /**
      * @brief Align to top-right.
      */
-    STR_ALIGN_RIGHT,
+    LCD_STR_ALIGN_RIGHT,
     /**
      * @brief Align to top-center.
      */
-    STR_ALIGN_CENTER,
+    LCD_STR_ALIGN_CENTER,
 };
 
 /**
  * @brief Rotation values used by lcd_rotate_callback_t.
  */
-enum rotation_value_e {
+enum lcd_rotation_e {
     /** @brief Set the rotation so the top side of the canvas is facing up. */
-    ROTATION_TOP_SIDE_FACING_UP = 0,
+    LCD_ROTATION_TOP_SIDE_UP = 0,
     /** @brief Set the rotation so the top side of the canvas is facing left. */
-    ROTATION_TOP_SIDE_FACING_LEFT,
+    LCD_ROTATION_TOP_SIDE_LEFT,
     /** @brief Set the rotation so the top side of the canvas is facing down. */
-    ROTATION_TOP_SIDE_FACING_DOWN,
+    LCD_ROTATION_TOP_SIDE_DOWN,
     /** @brief Set the rotation so the top side of the canvas is facing right. */
-    ROTATION_TOP_SIDE_FACING_RIGHT,
+    LCD_ROTATION_TOP_SIDE_RIGHT,
     /** @brief Query the current rotation. Will not change the current location. */
-    ROTATION_QUERY = 0xfe,
+    LCD_ROTATION_QUERY = 0xfe,
     /** @brief Actually rotate the buffer. Used internally. */
-    ROTATION_APPLY = 0xff,
+    LCD_ROTATION_APPLY = 0xff,
 };
 
 /**
@@ -213,7 +213,7 @@ struct lcd_lock_s {
     /** @brief Unknown. */
     int unk_0x0; // 0x0:0x4 (lcd_thread_safe_t[0x94:0x98])
     /** @brief A critical section descriptor. It's unclear where it is used. */
-    critical_section_t *cs; // 0x4:0x8 (lcd_thread_safe_t[0x98:0x9c])
+    bxc_cs_t *cs; // 0x4:0x8 (lcd_thread_safe_t[0x98:0x9c])
     /** @brief Shortcut to lock the descriptor. */
     void (*lock)(void); // 0x8:0xc (lcd_thread_safe_t[0x9c:0xa0])
      /** @brief Shortcut to unlock the descriptor. */
@@ -224,16 +224,16 @@ struct lcd_lock_s {
 
 /**
  * @brief Callback type for handling canvas rotation.
- * @details When `rotation` is set to ::ROTATION_QUERY, the current rotation value will be returned
- * with no side effect. When `rotation` is set to ::ROTATION_APPLY, the canvas will rotate based on
+ * @details When `rotation` is set to ::LCD_ROTATION_QUERY, the current rotation value will be returned
+ * with no side effect. When `rotation` is set to ::LCD_ROTATION_APPLY, the canvas will rotate based on
  * current value of lcd_t::rotation.
  * @param self The LCD descriptor this was called from.
  * @param rotation New rotation. This value will be written to lcd_t::rotation and this callback will be called
- * recursively with ::ROTATION_APPLY as the rotation value to actually apply the change.
+ * recursively with ::LCD_ROTATION_APPLY as the rotation value to actually apply the change.
  * @return Current rotation value in effect. This will be the same as `rotation` when no magic value documented above
  * was used.
  * @see lcd_t::rotation Where the location value is stored in the LCD descriptor.
- * @see rotation_value_e Possible rotation values.
+ * @see lcd_rotation_e Possible rotation values.
  */
 typedef int (*lcd_rotate_callback_t)(lcd_t *self, int rotation);
 
@@ -259,7 +259,7 @@ struct lcd_base_s {
     /** @brief A copy of the cursor states when the LCD descriptor was created. */
     lcd_cursor_t saved_cursor; // 0x5c:0x6c
     /** @brief Usable drawing area of the LCD. */
-    rect_t drawing_area; // 0x6c:0x74
+    lcd_rect_t drawing_area; // 0x6c:0x74
     /** @brief Unknown. */
     int unk_0x74[3]; // 0x74:0x80
     /** @brief Cursor states. */
@@ -313,7 +313,7 @@ struct lcd_thread_safe_s {
     /** @brief A copy of the cursor states when the LCD descriptor was created. */
     lcd_cursor_t saved_cursor; // 0x5c:0x6c
     /** @brief Usable drawing area of the LCD. */
-    rect_t drawing_area; // 0x6c:0x74
+    lcd_rect_t drawing_area; // 0x6c:0x74
     /** @brief Unknown. */
     int unk_0x74[3]; // 0x74:0x80
     /** @brief Cursor states. */
@@ -346,7 +346,7 @@ struct lcd_thread_safe_s {
     /** @brief Unknown. */
     int unk_0x94; // 0x94:0x98
     /** @brief A critical section descriptor. It's unclear where it is used. */
-    critical_section_t *cs; // 0x98:0x9c
+    bxc_cs_t *cs; // 0x98:0x9c
     /** @brief Shortcut to lock the descriptor. */
     void (*lock)(void); // 0x9c:0xa0
      /** @brief Shortcut to unlock the descriptor. */

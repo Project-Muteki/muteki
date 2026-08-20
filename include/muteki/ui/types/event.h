@@ -19,7 +19,7 @@ extern "C" {
  * @brief List of available keycodes.
  * @details Keycodes starting with `KEY_PRIME_` are extended keycodes exclusive to HP Prime G1 (EA656).
  */
-enum keycode_e {
+enum ui_keycode_e {
     /* 0x00 */
     KEY_ESC = 0x01,
     KEY_LEFT,

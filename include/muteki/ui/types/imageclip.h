@@ -67,7 +67,7 @@ struct ui_imageclip_s {
     unsigned short image_allocated;
     /**
      * @brief Blit mode.
-     * @see blit_flag_e
+     * @see lcd_surface_blit_flag_e
      */
     unsigned short blit_mode;
     /**

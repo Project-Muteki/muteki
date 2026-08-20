@@ -161,7 +161,7 @@ struct pcm_state_s {
     int unk_0x10;
     size_t max_frames;
     size_t frame_queue_tip;
-    critical_section_t cs;
+    bxc_cs_t cs;
 };
 
 /**

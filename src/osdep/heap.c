@@ -9,7 +9,7 @@ typedef struct {
 
 static const size_t __OVER_ALLOC_SIZE = 4 + sizeof(__mchx_t);
 static const char TRACE_START[4] = {'H', 'T', 'R', 'C'};
-static file_descriptor_t *__heap_tracer_osfh = NULL;
+static bxc_fs_file_t *__heap_tracer_osfh = NULL;
 
 // So we lose as little performance as possible when heap tracer is turned off.
 #define _unlikely(x) __builtin_expect(!!(x), 0)

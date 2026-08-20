@@ -24,46 +24,46 @@ extern "C" {
  * setting any other flags. (Could it be related to some other properties on the surface descriptor such as transparent
  * color?)
  */
-enum blit_flag_e {
+enum lcd_surface_blit_flag_e {
     /**
      * @brief Nothing.
      * @details This just copies the pixels as-is.
      */
-    BLIT_NONE = 0,
+    LCD_SURFACE_BLIT_NONE = 0,
     /**
      * @brief Perform AND operation between source line and destination line.
      * @details This effectively does a bit-wise color masking of the destination surface.
      */
-    BLIT_AND = 0x2,
+    LCD_SURFACE_BLIT_AND = 0x2,
     /**
      * @brief Perform OR operation between source line and destination line.
      * @details This effectively does a bit-wise painting onto the destination surface.
      * Colors will also be mixed in a bit-wise fashion.
      */
-    BLIT_OR = 0x3,
+    LCD_SURFACE_BLIT_OR = 0x3,
     /**
      * @brief Perform XOR operation between source line and destination line.
      * @details This effectively does a bit-wise color inversion of the destination surface.
      */
-    BLIT_XOR = 0x4,
+    LCD_SURFACE_BLIT_XOR = 0x4,
     /**
      * @brief Honor transparent color settings on the current LCD canvas.
      * @details This copies the pixels when it's not exactly the same as the transparent color of the current LCD
      * canvas.
      */
-    BLIT_TRANSPARENT = 0xe,
+    LCD_SURFACE_BLIT_TRANSPARENT = 0xe,
     /**
      * @brief Perform alpha blending (when supported).
      * @details This is done without gamma correction.
      */
-    BLIT_ALPHA_BLENDING = 0xf,
+    LCD_SURFACE_BLIT_ALPHA_BLENDING = 0xf,
     /**
      * @brief Perform alpha blending (when supported).
      * @details This is similar to #BLIT_ALPHA_BLENDING but instead of using alpha values per-pixel, it uses only the
      * alpha value of the first pixel for the entire surface. This makes the process slightly faster if the entire
      * image has the same alpha values for every pixel.
      */
-    BLIT_ALPHA_BLENDING_FAST = 0x10,
+    LCD_SURFACE_BLIT_ALPHA_BLENDING_FAST = 0x10,
 };
 
 /**

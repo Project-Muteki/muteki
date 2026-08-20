@@ -22,7 +22,7 @@ extern "C" {
  * @brief Rectangle used to represent usable drawing area in an LCD descriptor.
  * @details The area is double-inclusive (i.e. `{0, 0, 479, 271}` represents an area of 480x272 px).
  */
-struct rect_s {
+struct lcd_rect_s {
     /** @brief @x_term x0 */
     short x0; // (lcd_t[0x6c:0x6e])
     /** @brief @x_term y0 */
@@ -33,7 +33,7 @@ struct rect_s {
     short y1; // (lcd_t[0x72:0x74])
 }; // 0x8 bytes
 
-typedef struct rect_s rect_t;
+typedef struct lcd_rect_s lcd_rect_t;
 
 /**
  * @brief Convert separate RGB values to integer RGB representation
@@ -41,7 +41,7 @@ typedef struct rect_s rect_t;
  * @param g Green value.
  * @param b Blue value.
  */
-#define RGB_FROM_U8(r, g, b) ((r & 0xff) << 16 | ((g & 0xff) << 8) | (b & 0xff))
+#define LCD_RGB_FROM_U8(r, g, b) ((r & 0xff) << 16 | ((g & 0xff) << 8) | (b & 0xff))
 
 #ifdef __cplusplus
 } // extern "C"

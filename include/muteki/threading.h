@@ -21,39 +21,39 @@ extern "C" {
 /**
  * @brief Thread wait reason enum.
  */
-enum thread_wait_reason_e {
+enum bxc_wait_reason_e {
     /** Nothing */
-    WAIT_ON_NONE = 0x0,
+    BXC_WAIT_ON_NONE = 0x0,
     /** Waiting on a semaphore. */
-    WAIT_ON_SEMAPHORE = 0x1,
+    BXC_WAIT_ON_SEMAPHORE = 0x1,
     /** Waiting on an event. */
-    WAIT_ON_EVENT = 0x2,
+    BXC_WAIT_ON_EVENT = 0x2,
     /** Waiting for a message queue push. */
-    WAIT_ON_QUEUE = 0x4,
+    BXC_WAIT_ON_QUEUE = 0x4,
     /** Waiting to be unsuspended by OSResumeThread(). */
-    WAIT_ON_SUSPEND = 0x8,
+    BXC_WAIT_ON_SUSPEND = 0x8,
     /** Waiting for a critical section to be released. */
-    WAIT_ON_CRITICAL_SECTION = 0x10,
+    BXC_WAIT_ON_CRITICAL_SECTION = 0x10,
     /** Waiting for sleep counter to expire. */
-    WAIT_ON_SLEEP = 0x20,
+    BXC_WAIT_ON_SLEEP = 0x20,
 };
 
 /**
  * @brief Result of waitables.
  */
-typedef enum wait_result_e {
+typedef enum bxc_wait_result_e {
     /** Timeout before the event is set. */
-    WAIT_RESULT_TIMEOUT = 0x82,
+    BXC_WAIT_RESULT_TIMEOUT = 0x82,
     /** The event is set. */
-    WAIT_RESULT_RESOLVED,
+    BXC_WAIT_RESULT_RESOLVED,
     /** An error occurred. */
-    WAIT_RESULT_ERROR,
-} wait_result_t;
+    BXC_WAIT_RESULT_ERROR,
+} bxc_wait_result_t;
 
 /**
  * @brief Thread function type
  */
-typedef int (*thread_func_t)(void *user_data);
+typedef int (*bxc_thread_func_t)(void *user_data);
 
 /**
  * @brief Common data structure for waitables.
@@ -65,14 +65,14 @@ typedef struct {
     unsigned char active_bytes;
     /** Bitfield that tracks threads that are waiting for this waitable. Indexed by `byte offset * 8 + bit offset` */
     unsigned char waiting_by[8];
-} threading_waitable_t;
+} bxc_waitable_t;
 
 /**
  * @brief Message type for message queues.
  * @details This needs to be 4 byte aligned since the inline memcpy in the internal FIFO queue routines use hardcoded
  * ldm/stm.
  */
-typedef char message_queue_message_t[16] SYS_ALIGN(4);
+typedef char bxc_queue_message_t[16] SYS_ALIGN(4);
 
 /**
  * @brief Nonatomic backend storage for message queues.
@@ -80,7 +80,7 @@ typedef char message_queue_message_t[16] SYS_ALIGN(4);
  */
 typedef struct {
     /** Message body. */
-    message_queue_message_t *messages;
+    bxc_queue_message_t *messages;
     /** Number of chunks. */
     unsigned short size;
     /** Pop index. */
@@ -88,33 +88,33 @@ typedef struct {
     /** Push index. */
     short push_idx;
     short _padding_0xa;
-} message_queue_nonatomic_t;
+} bxc_queue_nonatomic_t;
 
 /**
  * @brief Thread descriptor type.
  */
-typedef struct thread_s thread_t;
+typedef struct bxc_thread_s bxc_thread_t;
 /**
  * @brief Semaphore descriptor type.
  */
-typedef struct semaphore_s semaphore_t;
+typedef struct bxc_semaphore_s bxc_semaphore_t;
 /**
  * @brief Event descriptor type.
  */
-typedef struct event_s event_t;
+typedef struct bxc_event_s bxc_event_t;
 /**
  * @brief Critical section descriptor type.
  */
-typedef struct critical_section_s critical_section_t;
+typedef struct bxc_cs_s bxc_cs_t;
 /**
  * @brief Message queue descriptor type.
  */
-typedef struct message_queue_s message_queue_t;
+typedef struct bxc_queue_s bxc_queue_t;
 
 /**
  * @brief Thread descriptor structure.
  */
-struct thread_s {
+struct bxc_thread_s {
     /** Magic. Always `0x100`. */
     int magic; // always 0x100
     /** Stack pointer. When the thread is suspended this will point to the CPU context saved on thread stack. */
@@ -124,18 +124,18 @@ struct thread_s {
     /** Exit code of the thread. Initializes to 0. */
     int exit_code; // init to 0
     /** Error code. */
-    kerrno_t kerrno; // init to 0
+    bxc_errno_t kerrno; // init to 0
     /** Unknown. Initializes to 0x80000000. */
     uintptr_t unk_0x14; // init to 0x80000000
     /** Thread function entrypoint. */
-    thread_func_t thread_func;
+    bxc_thread_func_t thread_func;
     /** Unknown. */
     short unk_0x1c;
     /** Milliseconds left to sleep. */
     short sleep_counter;
     /**
      * Current wait reason of the thread.
-     * @see thread_wait_reason_e
+     * @see bxc_wait_reason_e
      */
     short wait_reason; // 0x20
     /** Slot number. For scheduler. */
@@ -149,11 +149,11 @@ struct thread_s {
     /** Upper 3 bit bitmask of the slot number. For scheduler. */
     unsigned char slot_high3b_bit;
     /** Event descriptor that belongs to the event the thread is currently waiting for. */
-    event_t *event;
+    bxc_event_t *event;
     /** Previous thread descriptor. */
-    thread_t *prev;
+    bxc_thread_t *prev;
     /** Next thread descriptor. */
-    thread_t *next;
+    bxc_thread_t *next;
     union {
         /** Unknown and seems to be uninitialized. */
         char unk_0x34[0x20];
@@ -165,7 +165,7 @@ struct thread_s {
 /**
  * @brief Semaphore descriptor structure.
  */
-struct semaphore_s {
+struct bxc_semaphore_s {
     /** Magic. Always `0x200`. */
     int magic;
     int _padding_0x4;
@@ -173,16 +173,15 @@ struct semaphore_s {
     short ctr;
     /**
      * @brief Wait state of the current semaphore.
-     * @see threading_waitable_t
      */
-    threading_waitable_t wait_state;
+    bxc_waitable_t wait_state;
     char _padding_0x13;
 };
 
 /**
  * @brief Event descriptor structure.
  */
-struct event_s {
+struct bxc_event_s {
     /** Magic. Always `0x201`. */
     int magic;
     /** Flag value. 1 is set and 0 is clear. */
@@ -191,44 +190,44 @@ struct event_s {
     short latch_on;
     /**
      * @brief Wait state of the current event.
-     * @see threading_waitable_t
+     * @see bxc_waitable_t
      */
-    threading_waitable_t wait_state;
+    bxc_waitable_t wait_state;
     char _padding_0x13;
 };
 
 /**
  * @brief Critical section descriptor structure.
  */
-struct critical_section_s {
+struct bxc_cs_s {
     /** Magic. Always `0x202`. Note that for some reason this is the same as ::message_queue_t. */
     int magic; // 0x00000202
     /** Thread descriptor for this thread. */
-    thread_t *thr;
+    bxc_thread_t *thr;
     /** Reference counter. */
     unsigned short refcount;
     /**
      * @brief Wait state of the current critical section.
-     * @see threading_waitable_t
+     * @see bxc_waitable_t
      */
-    threading_waitable_t wait_state;
+    bxc_waitable_t wait_state;
     char _padding_0x13;
 }; // 0x14
 
 /**
  * @brief Message queue descriptor structure.
  */
-struct message_queue_s {
+struct bxc_queue_s {
     /** Magic. Always `0x202`. Note that for some reason this is the same as ::critical_section_t. */
     int magic;
     /** Storage structure i.e. the actual queue part of the queue. */
-    message_queue_nonatomic_t *storage;
+    bxc_queue_nonatomic_t *storage;
     short _padding_0x8;
     /**
      * @brief Wait state of the current event.
-     * @see threading_waitable_t
+     * @see bxc_waitable_t
      */
-    threading_waitable_t wait_state;
+    bxc_waitable_t wait_state;
     char _padding_0x13;
 };
 
@@ -241,7 +240,7 @@ struct message_queue_s {
  * @param defer_start Do not immediately schedule this thread and create it as suspended.
  * @return The thread descriptor.
  */
-extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stack_size, bool defer_start);
+extern bxc_thread_t *OSCreateThread(bxc_thread_func_t func, void *user_data, size_t stack_size, bool defer_start);
 
 /**
  * @brief Terminate a thread.
@@ -250,7 +249,7 @@ extern thread_t *OSCreateThread(thread_func_t func, void *user_data, size_t stac
  * @param exit_code The exit code.
  * @retval 0 @x_term ok
  */
-extern int OSTerminateThread(thread_t *thr, int exit_code);
+extern int OSTerminateThread(bxc_thread_t *thr, int exit_code);
 
 /**
  * @brief Set the thread priority (slot number).
@@ -267,7 +266,7 @@ extern int OSTerminateThread(thread_t *thr, int exit_code);
  * @retval false @x_term ng
  * @see OSGetThreadPriority
  */
- extern bool OSSetThreadPriority(thread_t *thr, short new_slot);
+ extern bool OSSetThreadPriority(bxc_thread_t *thr, short new_slot);
 
 /**
  * @brief Get the thread priority (slot number).
@@ -275,7 +274,7 @@ extern int OSTerminateThread(thread_t *thr, int exit_code);
  * @param thr The thread descriptor.
  * @return The slot number of the thread.
  */
-extern short OSGetThreadPriority(thread_t *thr);
+extern short OSGetThreadPriority(bxc_thread_t *thr);
 
 /**
  * @brief Suspend a thread from outside of that thread.
@@ -284,7 +283,7 @@ extern short OSGetThreadPriority(thread_t *thr);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSSuspendThread(thread_t *thr);
+extern bool OSSuspendThread(bxc_thread_t *thr);
 
 /**
  * @brief Start/restart a previously suspended thread.
@@ -293,7 +292,7 @@ extern bool OSSuspendThread(thread_t *thr);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSResumeThread(thread_t *thr);
+extern bool OSResumeThread(bxc_thread_t *thr);
 
 /**
  * @brief Force wake up a sleeping thread
@@ -303,7 +302,7 @@ extern bool OSResumeThread(thread_t *thr);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSWakeUpThread(thread_t *thr);
+extern bool OSWakeUpThread(bxc_thread_t *thr);
 
 /**
  * @brief Terminate current thread.
@@ -328,7 +327,7 @@ extern void OSSleep(short millis);
  * @param init_ctr Initial counter value.
  * @return The semaphore descriptor.
  */
-extern semaphore_t *OSCreateSemaphore(short init_ctr);
+extern bxc_semaphore_t *OSCreateSemaphore(short init_ctr);
 
 /**
  * @brief Wait and acquire a semaphore.
@@ -336,9 +335,8 @@ extern semaphore_t *OSCreateSemaphore(short init_ctr);
  * @param semaphore The semaphore context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
- * @see wait_result_t
  */
-extern wait_result_t OSWaitForSemaphore(semaphore_t *semaphore, short timeout);
+extern bxc_wait_result_t OSWaitForSemaphore(bxc_semaphore_t *semaphore, short timeout);
 
 /**
  * @brief Release a semaphore.
@@ -347,7 +345,7 @@ extern wait_result_t OSWaitForSemaphore(semaphore_t *semaphore, short timeout);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSReleaseSemaphore(semaphore_t *semaphore);
+extern bool OSReleaseSemaphore(bxc_semaphore_t *semaphore);
 
 /**
  * @brief Destroy a semaphore.
@@ -356,7 +354,7 @@ extern bool OSReleaseSemaphore(semaphore_t *semaphore);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSCloseSemaphore(semaphore_t *semaphore);
+extern bool OSCloseSemaphore(bxc_semaphore_t *semaphore);
 
 /**
  * @brief Create an event descriptor.
@@ -365,7 +363,7 @@ extern bool OSCloseSemaphore(semaphore_t *semaphore);
  * @param flag The initial flag value. Can be either 0 or 1.
  * @return The event descriptor.
  */
-extern event_t *OSCreateEvent(short latch_on, int flag);
+extern bxc_event_t *OSCreateEvent(short latch_on, int flag);
 
 /**
  * @brief Wait for an event.
@@ -373,9 +371,8 @@ extern event_t *OSCreateEvent(short latch_on, int flag);
  * @param event The event context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
- * @see wait_result_t
  */
-extern wait_result_t OSWaitForEvent(event_t *event, short timeout);
+extern bxc_wait_result_t OSWaitForEvent(bxc_event_t *event, short timeout);
 
 /**
  * @brief Set the event flag.
@@ -385,7 +382,7 @@ extern wait_result_t OSWaitForEvent(event_t *event, short timeout);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSSetEvent(event_t *event);
+extern bool OSSetEvent(bxc_event_t *event);
 
 /**
  * @brief Reset the event flag.
@@ -395,7 +392,7 @@ extern bool OSSetEvent(event_t *event);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSResetEvent(event_t *event);
+extern bool OSResetEvent(bxc_event_t *event);
 
 /**
  * @brief Destroy the event descriptor.
@@ -404,7 +401,7 @@ extern bool OSResetEvent(event_t *event);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSCloseEvent(event_t *event);
+extern bool OSCloseEvent(bxc_event_t *event);
 
 /**
  * @brief Initialize a critical section descriptor.
@@ -412,7 +409,7 @@ extern bool OSCloseEvent(event_t *event);
  * @param[out] cs The critical section descriptor.
  * @x_void_return
  */
-extern void OSInitCriticalSection(critical_section_t *cs);
+extern void OSInitCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Enter/aquire a critical section.
@@ -425,7 +422,7 @@ extern void OSInitCriticalSection(critical_section_t *cs);
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
  */
-extern void OSEnterCriticalSection(critical_section_t *cs);
+extern void OSEnterCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Leave/release a critical section.
@@ -433,7 +430,7 @@ extern void OSEnterCriticalSection(critical_section_t *cs);
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
  */
-extern void OSLeaveCriticalSection(critical_section_t *cs);
+extern void OSLeaveCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Destroy a critical section descriptor.
@@ -441,7 +438,7 @@ extern void OSLeaveCriticalSection(critical_section_t *cs);
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
  */
-extern void OSDeleteCriticalSection(critical_section_t *cs);
+extern void OSDeleteCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Create a message queue descriptor.
@@ -450,7 +447,7 @@ extern void OSDeleteCriticalSection(critical_section_t *cs);
  * memory).
  * @return The message queue descriptor.
  */
-extern message_queue_t *OSCreateMsgQue(unsigned short size);
+extern bxc_queue_t *OSCreateMsgQue(unsigned short size);
 
 /**
  * @brief Push a message into the queue.
@@ -460,7 +457,7 @@ extern message_queue_t *OSCreateMsgQue(unsigned short size);
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSPostMsgQue(message_queue_t *queue, const message_queue_message_t *message);
+extern bool OSPostMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message);
 
 /**
  * @brief Push a message into the queue and reschedule immediately.
@@ -470,7 +467,7 @@ extern bool OSPostMsgQue(message_queue_t *queue, const message_queue_message_t *
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSSendMsgQue(message_queue_t *queue, const message_queue_message_t *message);
+extern bool OSSendMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message);
 
 /**
  * @brief Peek the bottom of the queue without popping the message.
@@ -480,7 +477,7 @@ extern bool OSSendMsgQue(message_queue_t *queue, const message_queue_message_t *
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSPeekMsgQue(message_queue_t *queue, message_queue_message_t *message);
+extern bool OSPeekMsgQue(bxc_queue_t *queue, bxc_queue_message_t *message);
 
 /**
  * @brief Pop a message from the queue.
@@ -490,7 +487,7 @@ extern bool OSPeekMsgQue(message_queue_t *queue, message_queue_message_t *messag
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSGetMsgQue(message_queue_t *queue, message_queue_message_t *message);
+extern bool OSGetMsgQue(bxc_queue_t *queue, bxc_queue_message_t *message);
 
 /**
  * @brief Destroy a message queue descriptor.
@@ -499,7 +496,7 @@ extern bool OSGetMsgQue(message_queue_t *queue, message_queue_message_t *message
  * @retval true @x_term ok
  * @retval false @x_term ng
  */
-extern bool OSCloseMsgQue(message_queue_t *queue);
+extern bool OSCloseMsgQue(bxc_queue_t *queue);
 
 /**
  * @brief Get the current running thread's priority (slot number).

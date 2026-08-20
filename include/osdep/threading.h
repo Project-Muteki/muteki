@@ -22,7 +22,7 @@ extern "C" {
  * @x_void_param
  * @return Current running thread.
  */
-extern thread_t *osdep_thread_get_current(void);
+extern bxc_thread_t *osdep_thread_get_current(void);
 
 #ifdef __cplusplus
 }  // extern "C"

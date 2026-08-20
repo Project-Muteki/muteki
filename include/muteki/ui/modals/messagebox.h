@@ -20,86 +20,86 @@ extern "C" {
 /**
  * @brief Message box types.
  * @details
- * A valid message box type is either `MB_DEFAULT` or a `MB_ICON_` enum joined by one or more `MB_BUTTON_` enums
+ * A valid message box type is either `UI_MB_DEFAULT` or a `UI_MB_ICON_` enum joined by one or more `UI_MB_BUTTON_` enums
  * with the bitwise-or operator (`|`). For example,
  * @code{.c}
- * MessageBox(_BUL("hello world"), MB_ICON_WARNING | MB_BUTTON_YES | MB_BUTTON_NO);
+ * MessageBox(_BUL("hello world"), UI_MB_ICON_WARNING | UI_MB_BUTTON_YES | UI_MB_BUTTON_NO);
  * @endcode
  * will cause a message box with the message `"hello world"`, the exclamation-point icon, and both the Yes and No
  * buttons to be shown.
  */
-enum message_box_type_e {
+enum ui_messagebox_type_e {
     /**
      * @brief The default type.
-     * @details This is usually equivalent to `(MB_ICON_WARNING | MB_BUTTON_OK)`.
+     * @details This is usually equivalent to `(UI_MB_ICON_WARNING | UI_MB_BUTTON_OK)`.
      */
-    MB_DEFAULT = 0,
+    UI_MB_DEFAULT = 0,
     /**
      * @brief Display an error (stop-sign) icon on the message box.
      */
-    MB_ICON_ERROR,
+    UI_MB_ICON_ERROR,
     /**
      * @brief Display an info icon (lower case `i`) on the message box.
      */
-    MB_ICON_INFO,
+    UI_MB_ICON_INFO,
     /**
      * @brief Display a warning (exclamation-point) icon on the message box.
      */
-    MB_ICON_WARNING,
+    UI_MB_ICON_WARNING,
     /**
      * @brief Display a question-mark icon on the message box.
      */
-    MB_ICON_QUESTION,
+    UI_MB_ICON_QUESTION,
     /**
      * @brief Provide `Yes` button on the message box.
      */
-    MB_BUTTON_YES = 1 << 8,
+    UI_MB_BUTTON_YES = 1 << 8,
     /**
      * @brief Provide `No` button on the message box.
      */
-    MB_BUTTON_NO = 2 << 8,
+    UI_MB_BUTTON_NO = 2 << 8,
     /**
      * @brief Provide `OK` button on the message box.
      */
-    MB_BUTTON_OK = 4 << 8,
+    UI_MB_BUTTON_OK = 4 << 8,
     /**
      * @brief Provide `Cancel` button on the message box.
      */
-    MB_BUTTON_CANCEL = 8 << 8,
+    UI_MB_BUTTON_CANCEL = 8 << 8,
     /**
      * @brief Do not show any button.
      * @details This will hide all buttons on the message box. Any key press will dismiss the message box and the
-     * return value will always be set to message_box_result_t::MB_RESULT_OK.
+     * return value will always be set to message_box_result_t::UI_MB_RESULT_OK.
      */
-    MB_BUTTON_NONE = 16 << 8,
+    UI_MB_BUTTON_NONE = 16 << 8,
 };
 
 /**
  * @brief Results returned by the MessageBox() function after the user dismisses the message box.
  */
-enum message_box_result_e {
+enum ui_messagebox_result_e {
     /**
      * @brief The OK button was pressed by the user.
      * @details Pressing `Y` key on the keyboard could also trigger this (specifically when OK button is enabled via
-     * ::MB_BUTTON_OK).
+     * ::UI_MB_BUTTON_OK).
      */
-    MB_RESULT_OK = 3,
+    UI_MB_RESULT_OK = 3,
     /**
      * @brief The Cancel button was pressed by the user.
      * @details Pressing `C` key or `ESC` key on the keyboard could also trigger this.
      */
-    MB_RESULT_CANCEL = 4,
+    UI_MB_RESULT_CANCEL = 4,
     /**
      * @brief The Yes button was pressed by the user.
      * @details Pressing `Y` key on the keyboard could also trigger this (specifically when Yes button is enabled via
-     * ::MB_BUTTON_YES).
+     * ::UI_MB_BUTTON_YES).
      */
-    MB_RESULT_YES = 5,
+    UI_MB_RESULT_YES = 5,
     /**
      * @brief The No button was pressed by the user.
      * @details Pressing `N` key or `ESC` key on the keyboard could also trigger this.
      */
-    MB_RESULT_NO = 6,
+    UI_MB_RESULT_NO = 6,
 };
 
 /**
@@ -115,15 +115,15 @@ enum message_box_result_e {
  *
  * When OK and Yes are both available, what the user has selected takes precedence. That is, if the user selects Yes
  * button instead of the OK button with TAB or arrow keys, pressing the `Y` key on the keyboard will make the function
- * return ::MB_RESULT_YES instead of ::MB_RESULT_OK.
+ * return ::UI_MB_RESULT_YES instead of ::UI_MB_RESULT_OK.
  *
  * @x_syscall_num `0x1013d`
  *
  * @param text UTF-16 encoded text to be displayed on the message box.
  * @param type The message box type.
  * @return Which button is pressed to dismiss the message box.
- * @see message_box_type_e Valid message box types.
- * @see message_box_result_e Valid return values of this function.
+ * @see ui_messagebox_type_e Valid message box types.
+ * @see ui_messagebox_result_e Valid return values of this function.
  */
 extern int MessageBox(const UTF16 *text, unsigned short type);
 

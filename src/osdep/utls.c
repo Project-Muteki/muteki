@@ -21,13 +21,13 @@ struct utls_dict_s {
 struct utls_container_s {
     unsigned int magic;
     utls_dict_t dict;
-    critical_section_t cs;
+    bxc_cs_t cs;
 };
 
 struct utls_key_s {
-    const thread_t *desc;
+    const bxc_thread_t *desc;
     const void *stack_mem;
-    thread_func_t thread_func;
+    bxc_thread_func_t thread_func;
 };
 
 struct utls_element_s {
@@ -268,7 +268,7 @@ void osdep_utls_cfini(void) {
     OSDeleteCriticalSection(&__utls.cs);
 }
 
-void *osdep_utls_peek(const thread_t *thr) {
+void *osdep_utls_peek(const bxc_thread_t *thr) {
     if (thr == NULL) {
         return NULL;
     }
@@ -304,7 +304,7 @@ static void *osdep_utls_read_tp(void) {
 
     OSEnterCriticalSection(&__utls.cs);
 
-    thread_t *thr = osdep_thread_get_current();
+    bxc_thread_t *thr = osdep_thread_get_current();
     utls_key_t key = { thr, thr->stack, thr->thread_func };
 
     void *val = osdep_utls_dict_get(&__utls.dict, &key);

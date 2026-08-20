@@ -124,7 +124,7 @@ struct ui_component_s {
      * @brief Component visual footprint.
      * @details This defines the size and location of the component on screen.
      */
-    rect_t footprint; // 0xc:0x14
+    lcd_rect_t footprint; // 0xc:0x14
     /**
      * @brief Component state change callback.
      * @see PVIEW_setState

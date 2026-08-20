@@ -65,7 +65,7 @@ extern lcd_surface_t *InitGraphic(lcd_surface_t *surface, short width, short hei
  * in pixels.
  * @param flags Process flags.
  * @x_void_return
- * @see blit_flag_e Accepted processing flags.
+ * @see lcd_surface_blit_flag_e Accepted processing flags.
  * @see [BitBlt](https://learn.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-bitblt) in WinGDI, which this
  * function has been loosely based on.
  */

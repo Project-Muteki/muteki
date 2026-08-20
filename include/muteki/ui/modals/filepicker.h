@@ -18,9 +18,9 @@ extern "C" {
 #endif
 
 /**
- * @brief Allocate output buffer for filepicker_context_t.
+ * @brief Allocate output buffer for ui_filepicker_context_t.
  * @param calloc_impl Implementation of calloc().
- * @param entries Maximum number of entries allowed. Must be the same as filepicker_context_t::npaths.
+ * @param entries Maximum number of entries allowed. Must be the same as ui_filepicker_context_t::npaths.
  * @param is_utf16 `true` if the buffer should be UTF16 type. Set to `false` if the flag ::FILEPICKER_USE_MB is set.
  * @return Allocated buffer.
  */
@@ -36,7 +36,7 @@ extern "C" {
  * @brief Known file picker flags.
  * @todo Add more.
  */
-enum filepicker_flag_e {
+enum ui_filepicker_flag_e {
     /**
      * @brief Allow multiple files.
      */
@@ -47,16 +47,16 @@ enum filepicker_flag_e {
     FILEPICKER_USE_MB=0x40000,
 };
 
-struct filepicker_context_s;
-typedef struct filepicker_context_s filepicker_context_t;
+struct ui_filepicker_context_s;
+typedef struct ui_filepicker_context_s ui_filepicker_context_t;
 
 /**
  * @brief The file picker context.
  */
-struct filepicker_context_s {
+struct ui_filepicker_context_s {
     /**
      * @brief Context size.
-     * @details Must be set to sizeof(filepicker_context_t) before invoking the file picker.
+     * @details Must be set to sizeof(ui_filepicker_context_t) before invoking the file picker.
      */
     size_t ctx_size;
     /**
@@ -206,7 +206,7 @@ struct filepicker_context_s {
  * @return true @x_term ok
  * @return false @x_term ng
  */
-extern bool _GetOpenFileName(filepicker_context_t *ctx);
+extern bool _GetOpenFileName(ui_filepicker_context_t *ctx);
 
 /**
  * @brief Show a file picker in save mode.
@@ -215,7 +215,7 @@ extern bool _GetOpenFileName(filepicker_context_t *ctx);
  * @return true @x_term ok
  * @return false @x_term ng
  */
-extern bool _GetSaveFileName(filepicker_context_t *ctx);
+extern bool _GetSaveFileName(ui_filepicker_context_t *ctx);
 
 /**
  * @brief Read the next path from a context struct.
@@ -225,7 +225,7 @@ extern bool _GetSaveFileName(filepicker_context_t *ctx);
  * @retval 0 @x_term ok
  * @retval 1 @x_term ng
  */
-extern int _GetNextFileName(filepicker_context_t *ctx, UTF16 *out);
+extern int _GetNextFileName(ui_filepicker_context_t *ctx, UTF16 *out);
 
 #ifdef __cplusplus
 } // extern "C"

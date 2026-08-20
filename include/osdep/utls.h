@@ -62,7 +62,7 @@ extern void osdep_utls_cfini(void);
  * @param thr Thread pointer.
  * @return TLS space, or `NULL` if not yet allocated.
  */
-extern void *osdep_utls_peek(const thread_t *thr);
+extern void *osdep_utls_peek(const bxc_thread_t *thr);
 
 /**
  * @brief Get statistics of TLS allocation.

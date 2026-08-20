@@ -1,7 +1,7 @@
 #include "osdep/threading.h"
 
-thread_t *osdep_thread_get_current(void) {
-    critical_section_t cs;
+bxc_thread_t *osdep_thread_get_current(void) {
+    bxc_cs_t cs;
 
     /* This is based on the observation that critical sections don't touch any
      * kernel structures when there's nothing else that acquired it. It

@@ -171,7 +171,7 @@ extern ui_button_t *InsertTitleBarButton(
  * @param[in] from The deskbox object.
  * @x_void_return
  */
-extern void GetDeskClientRect(rect_t *rect, ui_deskbox_t *from);
+extern void GetDeskClientRect(lcd_rect_t *rect, ui_deskbox_t *from);
 
 #ifdef __cplusplus
 } // extern "C"

@@ -27,50 +27,50 @@ extern "C" {
 /**
  * @brief Read year from find timestamp.
  */
-#define FIND_TS_YEAR(ts) ((ts >> 25) + 1980)
+#define BXC_FIND_TS_YEAR(ts) ((ts >> 25) + 1980)
 /**
  * @brief Read month from find timestamp.
  */
-#define FIND_TS_MONTH(ts) ((ts >> 21) & 0xf)
+#define BXC_FIND_TS_MONTH(ts) ((ts >> 21) & 0xf)
 /**
  * @brief Read day from find timestamp.
  */
-#define FIND_TS_DAY(ts) ((ts >> 16) & 0x1f)
+#define BXC_FIND_TS_DAY(ts) ((ts >> 16) & 0x1f)
 
 /**
  * @brief Read hour from find timestamp.
  */
-#define FIND_TS_HOUR(ts) ((ts >> 11) & 0x1f)
+#define BXC_FIND_TS_HOUR(ts) ((ts >> 11) & 0x1f)
 /**
  * @brief Read minute from find timestamp.
  */
-#define FIND_TS_MINUTE(ts) ((ts >> 5) & 0x3f)
+#define BXC_FIND_TS_MINUTE(ts) ((ts >> 5) & 0x3f)
 /**
  * @brief Read second from find timestamp.
  */
-#define FIND_TS_SECOND(ts) ((ts & 0xf) * 4)
+#define BXC_FIND_TS_SECOND(ts) ((ts & 0xf) * 4)
 
 /** Maximum number of code units an LFN pathname can have including the trailing NUL. */
-#define FNSPLIT_LFN_PATHNAME_MAX 261u
+#define BXC_FNSPLIT_LFN_PATHNAME_MAX 261u
 /** Maximum number of code units an LFN drive specifier can have including the trailing NUL. */
-#define FNSPLIT_LFN_DRIVE_MAX 4u
+#define BXC_FNSPLIT_LFN_DRIVE_MAX 4u
 /** Maximum number of code units an LFN directory name can have including the trailing NUL. */
-#define FNSPLIT_LFN_DIRNAME_MAX 257u
+#define BXC_FNSPLIT_LFN_DIRNAME_MAX 257u
 /** Maximum number of code units an LFN base name can have including the trailing NUL. */
-#define FNSPLIT_LFN_BASENAME_MAX 257u
+#define BXC_FNSPLIT_LFN_BASENAME_MAX 257u
 /** Maximum number of code units an LFN file suffix can have including the trailing NUL. */
-#define FNSPLIT_LFN_SUFFIX_MAX 259u
+#define BXC_FNSPLIT_LFN_SUFFIX_MAX 259u
 
 /** Maximum number of code units an DOS 8.3 pathname can have including the trailing NUL. */
-#define FNSPLIT_DOS_PATHNAME_MAX 81u
+#define BXC_FNSPLIT_DOS_PATHNAME_MAX 81u
 /** Maximum number of code units a DOS 8.3 drive specifier can have including the trailing NUL. */
-#define FNSPLIT_DOS_DRIVE_MAX 4u
+#define BXC_FNSPLIT_DOS_DRIVE_MAX 4u
 /** Maximum number of code units a DOS 8.3 directory name can have including the trailing NUL. */
-#define FNSPLIT_DOS_DIRNAME_MAX 67u
+#define BXC_FNSPLIT_DOS_DIRNAME_MAX 67u
 /** Maximum number of code units a DOS 8.3 base name can have including the trailing NUL. */
-#define FNSPLIT_DOS_BASENAME_MAX 10u
+#define BXC_FNSPLIT_DOS_BASENAME_MAX 10u
 /** Maximum number of code units a DOS 8.3 file suffix can have including the trailing NUL. */
-#define FNSPLIT_DOS_SUFFIX_MAX 9u
+#define BXC_FNSPLIT_DOS_SUFFIX_MAX 9u
 
 /**
  * @brief File/directory attributes.
@@ -79,18 +79,18 @@ extern "C" {
  */
 enum fs_attribute_e {
     /** Entry is read only. */
-    ATTR_READONLY = 0x1,
+    BXC_FS_ATTR_READONLY = 0x1,
     /** Entry is hidden. */
-    ATTR_HIDDEN = 0x2,
+    BXC_FS_ATTR_HIDDEN = 0x2,
     /** Entry is a system file/directory. */
-    ATTR_SYSTEM = 0x4,
+    BXC_FS_ATTR_SYSTEM = 0x4,
     /** Entry is a directory. */
-    ATTR_DIR = 0x10,
+    BXC_FS_ATTR_DIR = 0x10,
     /** Entry is archived. */
-    ATTR_ARCHIVE = 0x20,
-    ATTR_DEVICE = 0x40,
+    BXC_FS_ATTR_ARCHIVE = 0x20,
+    BXC_FS_ATTR_DEVICE = 0x40,
     /** Entry does not have any other attribute. */
-    ATTR_NONE = 0x80,
+    BXC_FS_ATTR_NONE = 0x80,
 };
 
 /**
@@ -118,12 +118,12 @@ typedef struct {
     size_t size; // 0x14
     /**
      * @brief Modify timestamp.
-     * @see FIND_TS_YEAR
-     * @see FIND_TS_MONTH
-     * @see FIND_TS_DAY
-     * @see FIND_TS_HOUR
-     * @see FIND_TS_MINUTE
-     * @see FIND_TS_SECOND
+     * @see BXC_FIND_TS_YEAR
+     * @see BXC_FIND_TS_MONTH
+     * @see BXC_FIND_TS_DAY
+     * @see BXC_FIND_TS_HOUR
+     * @see BXC_FIND_TS_MINUTE
+     * @see BXC_FIND_TS_SECOND
      */
     unsigned int mtime; // 0x18
     /**
@@ -141,7 +141,7 @@ typedef struct {
     unsigned char attrib_mask; // 0x24
     /** FAT filesystem file attributes. */
     unsigned char attrib; // 0x25
-} find_context_t;
+} bxc_find_context_t;
 
 /**
  * @brief Filesystem usage statistics.
@@ -149,9 +149,9 @@ typedef struct {
 typedef struct {
     /** Filesystem size in KiB. */
     size_t size_kb;
-    /** Seems to be the same as fs_stat_t::size_kb. */
+    /** Seems to be the same as bxc_fs_stat_t::size_kb. */
     size_t size2_kb;
-    /** Seems to be the same as fs_stat_t::size_kb. */
+    /** Seems to be the same as bxc_fs_stat_t::size_kb. */
     size_t size3_kb;
     /** Used space in KiB. */
     size_t used_kb;
@@ -159,67 +159,67 @@ typedef struct {
     size_t free_kb;
     /** Filesystem size in bytes. */
     unsigned long long SYS_DWORD size;
-    /** Seems to be the same as fs_stat_t::size. */
+    /** Seems to be the same as bxc_fs_stat_t::size. */
     unsigned long long SYS_DWORD size2;
-    /** Seems to be the same as fs_stat_t::size. */
+    /** Seems to be the same as bxc_fs_stat_t::size. */
     unsigned long long SYS_DWORD size3;
     /** Used space in bytes. */
     unsigned long long SYS_DWORD used;
     /** Available space in bytes. */
     unsigned long long SYS_DWORD free;
-} fs_stat_t;
+} bxc_fs_stat_t;
 
 /**
  * @brief All-in-one struct that contain all parts used in _wfnsplit() and _wfnmerge()
  */
-typedef struct fn_parts_lfn_s {
+typedef struct bxc_fs_parts_lfn_s {
     /**
      * @brief Pathname.
      */
-    UTF16 pathname[FNSPLIT_LFN_PATHNAME_MAX];
+    UTF16 pathname[BXC_FNSPLIT_LFN_PATHNAME_MAX];
     /**
      * @brief Drive.
      */
-    UTF16 drive[FNSPLIT_LFN_DRIVE_MAX];
+    UTF16 drive[BXC_FNSPLIT_LFN_DRIVE_MAX];
     /**
      * @brief Directory name.
      */
-    UTF16 dirname[FNSPLIT_LFN_DIRNAME_MAX];
+    UTF16 dirname[BXC_FNSPLIT_LFN_DIRNAME_MAX];
     /**
      * @brief Base name without suffix.
      */
-    UTF16 basename[FNSPLIT_LFN_BASENAME_MAX];
+    UTF16 basename[BXC_FNSPLIT_LFN_BASENAME_MAX];
     /**
      * @brief Suffix.
      */
-    UTF16 suffix[FNSPLIT_LFN_SUFFIX_MAX];
-} fs_parts_lfn_t;
+    UTF16 suffix[BXC_FNSPLIT_LFN_SUFFIX_MAX];
+} bxc_fs_parts_lfn_t;
 
 /**
  * @brief All-in-one struct that contain all parts used in _afnsplit() and _afnmerge()
  */
-typedef struct fn_parts_dos_s {
+typedef struct bxc_fs_parts_dos_s {
     /**
      * @brief Pathname.
      */
-    char pathname[FNSPLIT_DOS_PATHNAME_MAX];
+    char pathname[BXC_FNSPLIT_DOS_PATHNAME_MAX];
     /**
      * @brief Drive.
      */
-    char drive[FNSPLIT_DOS_DRIVE_MAX];
+    char drive[BXC_FNSPLIT_DOS_DRIVE_MAX];
     /**
      * @brief Directory name.
      */
-    char dirname[FNSPLIT_DOS_DIRNAME_MAX];
+    char dirname[BXC_FNSPLIT_DOS_DIRNAME_MAX];
     /**
      * @brief Base name without suffix.
      */
-    char basename[FNSPLIT_DOS_BASENAME_MAX];
+    char basename[BXC_FNSPLIT_DOS_BASENAME_MAX];
     /**
      * @brief Suffix.
      */
-    char suffix[FNSPLIT_DOS_SUFFIX_MAX];
-} fs_parts_dos_t;
+    char suffix[BXC_FNSPLIT_DOS_SUFFIX_MAX];
+} bxc_fs_parts_dos_t;
 
 /**
  * @brief Delete a file.
@@ -251,7 +251,7 @@ extern bool __wremove(const UTF16 *pathname);
  * @retval 0 There is a match.
  * @retval -1 No more match was found.
  */
-extern short _afindfirst(const char *fnmatch, find_context_t *ctx, int attrib_mask);
+extern short _afindfirst(const char *fnmatch, bxc_find_context_t *ctx, int attrib_mask);
 
 /**
  * @brief Continue a previously started file/directory search.
@@ -261,7 +261,7 @@ extern short _afindfirst(const char *fnmatch, find_context_t *ctx, int attrib_ma
  * @retval 0 There is a match.
  * @retval -1 No more match was found.
  */
-extern short _afindnext(find_context_t *ctx);
+extern short _afindnext(bxc_find_context_t *ctx);
 
 /**
  * @brief Begin a file/directory search (LFN support).
@@ -275,7 +275,7 @@ extern short _afindnext(find_context_t *ctx);
  * @retval 0 There is a match.
  * @retval -1 No more match was found.
  */
-extern short _wfindfirst(const UTF16 *fnmatch, find_context_t *ctx, int attrib_mask);
+extern short _wfindfirst(const UTF16 *fnmatch, bxc_find_context_t *ctx, int attrib_mask);
 
 /**
  * @brief Continue a previously started file/directory search.
@@ -290,7 +290,7 @@ extern short _wfindfirst(const UTF16 *fnmatch, find_context_t *ctx, int attrib_m
  * @retval 0 There is a match.
  * @retval -1 No more match was found.
  */
-extern short _wfindnext(find_context_t *ctx);
+extern short _wfindnext(bxc_find_context_t *ctx);
 
 /**
  * @brief Terminate a file/directory search.
@@ -298,7 +298,7 @@ extern short _wfindnext(find_context_t *ctx);
  * @param ctx The context object.
  * @retval 0 @x_term ok
  */
-extern int _findclose(find_context_t *ctx);
+extern int _findclose(bxc_find_context_t *ctx);
 
 /**
  * @brief Get attributes of specific path.
@@ -363,7 +363,7 @@ extern int _amkdir(char *path);
 /**
  * @brief Remove a directory.
  * @x_syscall_num `0x10278`
- * @details Sets kerrno namespace to ::ERRNO_NS_KERNEL and error code to `0xffff` when directory is not empty.
+ * @details Sets kerrno namespace to ::BXC_ERRNO_NS_KERNEL and error code to `0xffff` when directory is not empty.
  * @param path UTF-16 LFN path to the directory being removed.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
@@ -373,7 +373,7 @@ extern int _wrmdir(UTF16 *path);
 /**
  * @brief Remove a directory.
  * @x_syscall_num `0x100e1`
- * @details Sets kerrno namespace to ::ERRNO_NS_KERNEL and error code to `0xffff` when directory is not empty.
+ * @details Sets kerrno namespace to ::BXC_ERRNO_NS_KERNEL and error code to `0xffff` when directory is not empty.
  * @param path DOS 8.3 path to the directory being removed.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
@@ -445,7 +445,7 @@ extern short _wrename(const UTF16 *old_path, const UTF16 *new_path);
  * @param fs_stat Target to store filesystem usage stats.
  * @retval 0 @x_term ok
  */
-extern int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
+extern int FSGetDiskRoomState(int fsid, bxc_fs_stat_t *fs_stat);
 
 /**
  * @brief Split a DOS 8.3 pathname into parts.
@@ -453,13 +453,13 @@ extern int FSGetDiskRoomState(int fsid, fs_stat_t *fs_stat);
  * @x_syscall_num `0x100c5`
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_DOS_DRIVE_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_DOS_DRIVE_MAX.
  * @param[out] dirname Directory, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_DOS_DIRNAME_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_DOS_DIRNAME_MAX.
  * @param[out] basename Basename without suffix, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_DOS_BASENAME_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_DOS_BASENAME_MAX.
  * @param[out] suffix Suffix, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_DOS_SUFFIX_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_DOS_SUFFIX_MAX.
  * @return Bitfield that indicates which parts were being extracted successfully.
  * @see _wfnsplit Its LFN counterpart.
  */
@@ -470,7 +470,7 @@ extern int _afnsplit(const char *pathname, char *drive, char *dirname, char *bas
  * @details DOS 8.3 counterpart of _wfnmerge().
  * @x_syscall_num `0x100c6`
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
- * This buffer must be at least as long as ::FNSPLIT_DOS_PATHNAME_MAX.
+ * This buffer must be at least as long as ::BXC_FNSPLIT_DOS_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.
  * @param[in] dirname Directory path (e.g., `\path\to\a\`). If provided, it must end with a backslash.
  * @param[in] basename Base name without a suffix (e.g., `file`).
@@ -496,13 +496,13 @@ extern int _afnmerge(char *pathname, const char *drive, const char *dirname, con
  * @x_syscall_num `0x1026b`
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_LFN_DRIVE_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_LFN_DRIVE_MAX.
  * @param[out] dirname Directory, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_LFN_DIRNAME_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_LFN_DIRNAME_MAX.
  * @param[out] basename Basename without suffix, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_LFN_BASENAME_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_LFN_BASENAME_MAX.
  * @param[out] suffix Suffix, or NULL to omit this part.
- * Must be at least as long as ::FNSPLIT_LFN_SUFFIX_MAX.
+ * Must be at least as long as ::BXC_FNSPLIT_LFN_SUFFIX_MAX.
  * @return Bitfield that indicates which parts were being extracted successfully.
  */
 extern int _wfnsplit(const UTF16 *pathname, UTF16 *drive, UTF16 *dirname, UTF16 *basename, UTF16 *suffix);
@@ -523,7 +523,7 @@ extern int _wfnsplit(const UTF16 *pathname, UTF16 *drive, UTF16 *dirname, UTF16 
  *
  * @x_syscall_num `0x1026c`
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
- * This buffer must be at least as long as ::FNSPLIT_LFN_PATHNAME_MAX.
+ * This buffer must be at least as long as ::BXC_FNSPLIT_LFN_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.
  * @param[in] dirname Directory path (e.g., `\path\to\a\`). If provided, it must end with a backslash.
  * @param[in] basename Base name without a suffix (e.g., `file`).

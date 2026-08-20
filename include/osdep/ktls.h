@@ -18,7 +18,7 @@
 extern "C" {
 #endif
 
-static const unsigned int OSDEP_KTLS_KEY_MAX = sizeof(((thread_t *) NULL)->unk_0x34) / 4 - 1;
+static const unsigned int OSDEP_KTLS_KEY_MAX = sizeof(((bxc_thread_t *) NULL)->unk_0x34) / 4 - 1;
 
 /**
  * @brief Initialize the TLS container on a specific thread.
@@ -26,7 +26,7 @@ static const unsigned int OSDEP_KTLS_KEY_MAX = sizeof(((thread_t *) NULL)->unk_0
  * @param thr Pointer to a thread descriptor.
  * @retval 0 @x_term ok
  */
-extern int osdep_ktls_init(thread_t *thr);
+extern int osdep_ktls_init(bxc_thread_t *thr);
 
 /**
  * @brief Get the pointer to the TLS slot on the thread descriptor.
@@ -35,7 +35,7 @@ extern int osdep_ktls_init(thread_t *thr);
  * @param key Numerical key. Must be in the range of `(0, 8)`.
  * @return Pointer to the TLS slot. Or `NULL` when an invalid key was supplied.
  */
-extern void **osdep_ktls_get(thread_t *thr, unsigned int key);
+extern void **osdep_ktls_get(bxc_thread_t *thr, unsigned int key);
 
 /**
  * @brief Get the value stored in the TLS slot on the thread descriptor.
@@ -44,7 +44,7 @@ extern void **osdep_ktls_get(thread_t *thr, unsigned int key);
  * @param key Numerical key. Must be in the range of `(0, 8)`.
  * @return Value stored in the TLS slot. Or `NULL` when an error occurres.
  */
-extern void *osdep_ktls_getvalue(thread_t *thr, unsigned int key);
+extern void *osdep_ktls_getvalue(bxc_thread_t *thr, unsigned int key);
 
 /**
  * @brief Store a value in the TLS slot.
@@ -56,7 +56,7 @@ extern void *osdep_ktls_getvalue(thread_t *thr, unsigned int key);
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
-extern int osdep_ktls_set(thread_t *thr, unsigned int key, void *value);
+extern int osdep_ktls_set(bxc_thread_t *thr, unsigned int key, void *value);
 
 /**
  * @brief Allocate memory and store the resulting pointer in the TLS slot.
@@ -66,7 +66,7 @@ extern int osdep_ktls_set(thread_t *thr, unsigned int key, void *value);
  * @param bytes Number of bytes to allocate.
  * @return Allocated buffer, or NULL if the slot is not NULL, or if the allocation fails.
  */
-extern void *osdep_ktls_alloc(thread_t *thr, unsigned int key, size_t bytes);
+extern void *osdep_ktls_alloc(bxc_thread_t *thr, unsigned int key, size_t bytes);
 
 /**
  * @brief Free memory previously allocated by osdep_ktls_alloc().
@@ -75,7 +75,7 @@ extern void *osdep_ktls_alloc(thread_t *thr, unsigned int key, size_t bytes);
  * @param key Numerical key. Must be in the range of `(0, 8)`.
  * @retval 0 @x_term ok
  */
-extern int osdep_ktls_free(thread_t *thr, unsigned int key);
+extern int osdep_ktls_free(bxc_thread_t *thr, unsigned int key);
 
 /**
  * @brief Initialize the TLS container on the current thread.

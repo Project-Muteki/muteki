@@ -28,27 +28,27 @@ typedef enum utf16_mb_encoding_e {
      * @brief Use CP936 (GB18030-based).
      * @details Supported by both ConvStrToUnicode() and ConvCharToUnicode().
      */
-    MB_ENCODING_CP936 = 0x0001,
+    UTF16_MB_ENCODING_CP936 = 0x0001,
     /**
      * @brief Use CP950 (BIG5-based).
      * @details Supported by both ConvStrToUnicode() and ConvCharToUnicode().
      */
-    MB_ENCODING_CP950 = 0x0002,
+    UTF16_MB_ENCODING_CP950 = 0x0002,
     /**
      * @brief Use CP932 (Shift-JIS-based).
      * @details Supported by both ConvStrToUnicode() and ConvCharToUnicode().
      */
-    MB_ENCODING_CP932 = 0x0004,
+    UTF16_MB_ENCODING_CP932 = 0x0004,
     /**
      * @brief Use CP949 (EUC-KR-based).
      * @details Supported by both ConvStrToUnicode() and ConvCharToUnicode().
      */
-    MB_ENCODING_CP949 = 0x0008,
+    UTF16_MB_ENCODING_CP949 = 0x0008,
     /**
      * @brief Use CP874 (TIS-620-based).
      * @details Supported by ConvStrToUnicode() only.
      */
-    MB_ENCODING_CP874 = 0x0010,
+    UTF16_MB_ENCODING_CP874 = 0x0010,
     /**
      * @brief Use CP1252 (ISO8859-1-based).
      * @details
@@ -56,17 +56,17 @@ typedef enum utf16_mb_encoding_e {
      *
      * @warning This may not work as intended, as it is an alias to CP950 on at least BA742.
      */
-    MB_ENCODING_CP1252 = 0x1000,
+    UTF16_MB_ENCODING_CP1252 = 0x1000,
     /**
      * @brief Use UTF-8.
      * @details Supported by ConvStrToUnicode() only.
      */
-    MB_ENCODING_UTF8 = 0x7fff,
+    UTF16_MB_ENCODING_UTF8 = 0x7fff,
     /**
      * @brief Use UTF-16.
      * @details Supported by both ConvStrToUnicode() and ConvCharToUnicode().
      */
-    MB_ENCODING_UTF16 = 0x8000,
+    UTF16_MB_ENCODING_UTF16 = 0x8000,
     /**
      * @brief Use default encoding.
      * @details
@@ -74,7 +74,7 @@ typedef enum utf16_mb_encoding_e {
      * 
      * Supported by both ConvStrToUnicode() and ConvCharToUnicode().
      */
-    MB_ENCODING_DEFAULT = 0xffff,
+    UTF16_MB_ENCODING_DEFAULT = 0xffff,
 } utf16_mb_encoding_e;
 
 /**

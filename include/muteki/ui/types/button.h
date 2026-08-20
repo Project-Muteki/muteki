@@ -75,7 +75,7 @@ struct ui_button_s {
     /**
      * @brief Key binding.
      * @details Setting this to 0 disables key binding.
-     * @see keycode_e
+     * @see ui_keycode_e
      */
     int key_binding; // 0x3c:0x40
     /**

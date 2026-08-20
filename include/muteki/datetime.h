@@ -37,14 +37,14 @@ typedef struct {
     short second;
     /** Number of milliseconds after the second. */
     short millis;
-} datetime_t;
+} bxc_datetime_t;
 
 /**
  * @brief Read current time of the day and store it in `dt`.
  * @param[out] dt Pointer to an empty datetime struct.
  * @x_void_return
  */
-extern void GetSysTime(datetime_t *dt);
+extern void GetSysTime(bxc_datetime_t *dt);
 
 #ifdef __cplusplus
 } // extern "C"

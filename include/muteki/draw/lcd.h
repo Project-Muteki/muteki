@@ -53,9 +53,9 @@ extern unsigned short SetFontType(unsigned short font_type);
  * @param max_length The maximum length of the string in pixels.
  * @param align String alignment.
  * @param flags String processing flags
- * @see print_flag_e Valid process flags.
- * @see print_str_flag_e Encoding conversion flags.
- * @see str_align_e
+ * @see lcd_print_flag_e Valid process flags.
+ * @see lcd_print_str_flag_e Encoding conversion flags.
+ * @see lcd_str_align_e
  */
 extern void WriteAlignString(short x, short y, const void *s, short max_length, int align, unsigned int flags);
 
@@ -67,7 +67,7 @@ extern void WriteAlignString(short x, short y, const void *s, short max_length, 
  * @param c UTF-16 codepoint of the character.
  * @param flags Process flags.
  * @x_void_return
- * @see print_flag_e Valid process flags.
+ * @see lcd_print_flag_e Valid process flags.
  */
 extern void WriteChar(short x, short y, UTF16 c, unsigned int flags);
 
@@ -80,8 +80,8 @@ extern void WriteChar(short x, short y, UTF16 c, unsigned int flags);
  * @param flags Process flags.
  * @x_void_return
  * @see WriteChar Similar function that displays single characters instead.
- * @see print_flag_e Valid process flags.
- * @see print_str_flag_e Encoding conversion flags.
+ * @see lcd_print_flag_e Valid process flags.
+ * @see lcd_print_str_flag_e Encoding conversion flags.
  */
 extern void WriteString(short x, short y, const void *s, unsigned int flags);
 
@@ -116,7 +116,7 @@ extern void PrintfXY(short x, short y, const char *format, ...) SYS_IS_PRINTF(3,
  * @param flags Processing flags.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
- * @see blit_flag_e Accepted processing flags.
+ * @see lcd_surface_blit_flag_e Accepted processing flags.
  * @see PutImage A simplified version of this function.
  */
 extern int ShowGraphic(short x, short y, lcd_surface_t *surface, unsigned short flags);
@@ -299,7 +299,7 @@ extern size_t GetImage(short x0, short y0, short x1, short y1, lcd_surface_t *su
  * @param surface The surface descriptor.
  * @param flags Processing flags.
  * @x_void_return
- * @see blit_flag_e Accepted processing flags.
+ * @see lcd_surface_blit_flag_e Accepted processing flags.
  * @see ShowGraphic A function that pretty much does the same thing but with `NULL` check and a return value.
  */
 extern void PutImage(short x, short y, lcd_surface_t *surface, unsigned short flags);
