@@ -4,8 +4,8 @@
  */
 
 /**
- * @file imageclip.h
- * @brief Image clip subwidget type definition.
+ * @file menu_common.h
+ * @brief Menu type definitions that are shared among several menu implementations.
  */
 
 

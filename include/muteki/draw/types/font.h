@@ -4,8 +4,8 @@
  */
 
 /**
- * @file primitives.h
- * @brief Drawing routine primitive types.
+ * @file font.h
+ * @brief Font management data types.
  */
 
 
