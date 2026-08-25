@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_5fsys_5fseek_5fcur_0',['_SYS_SEEK_CUR',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51a213e666a4cfa6170bc49dcd2169da944',1,'file.h']]],
-  ['_5fsys_5fseek_5fend_1',['_SYS_SEEK_END',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51a61aea510d114606570fe74928a85a85c',1,'file.h']]],
-  ['_5fsys_5fseek_5fset_2',['_SYS_SEEK_SET',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51ad78be8894e0857edfb7f4d1601c5025d',1,'file.h']]]
+  ['applet_5fsubroutine_5fmain_0',['APPLET_SUBROUTINE_MAIN',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d',1,'loader.h']]],
+  ['applet_5fsubroutine_5freset_5fstates_1',['APPLET_SUBROUTINE_RESET_STATES',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946',1,'loader.h']]]
 ];

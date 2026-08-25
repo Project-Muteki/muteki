@@ -79,9 +79,7 @@ var searchData=
   ['sys_5falign_76',['SYS_ALIGN',['../common_8h.html#a7cfbdd1a9e16d40f0f7c8ef00c18ae25',1,'common.h']]],
   ['sys_5fdword_77',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],
   ['sys_5fis_5fprintf_78',['SYS_IS_PRINTF',['../common_8h.html#aad78f1ddd0830141e8ad38443423b42a',1,'common.h']]],
-  ['sys_5fpath_5fmax_5fcu_79',['SYS_PATH_MAX_CU',['../path_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb',1,'path.h']]],
-  ['sys_5fseek_5fwhence_5fe_80',['sys_seek_whence_e',['../file_8h.html#a9e681ad97b1d973134148a35e64b5d51',1,'file.h']]],
-  ['syscall_20definitions_20into_20ghidra_81',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['syspoweroff_82',['SysPowerOff',['../system_8h.html#a1242f094041fc8b774ce94f3790d6c84',1,'system.h']]],
-  ['system_2eh_83',['system.h',['../system_8h.html',1,'']]]
+  ['syscall_20definitions_20into_20ghidra_79',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
+  ['syspoweroff_80',['SysPowerOff',['../system_8h.html#a1242f094041fc8b774ce94f3790d6c84',1,'system.h']]],
+  ['system_2eh_81',['system.h',['../system_8h.html',1,'']]]
 ];

@@ -134,9 +134,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9f8d8fd8933220f6f35209cdb65d7cfb" id="r_a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="path_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb">SYS_PATH_MAX_CU</a>&#160;&#160;&#160;256u</td></tr>
-<tr class="memdesc:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max code units (ASCII or UTF-16) a path can contain.  <br /></td></tr>
-<tr class="separator:a9f8d8fd8933220f6f35209cdb65d7cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6997f8e98537753c1d777c088b119a9" id="r_ae6997f8e98537753c1d777c088b119a9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="path_8h.html#ae6997f8e98537753c1d777c088b119a9">BXC_FS_PATH_MAX_CU</a>&#160;&#160;&#160;256u</td></tr>
+<tr class="memdesc:ae6997f8e98537753c1d777c088b119a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max code units (ASCII or UTF-16) a path can contain.  <br /></td></tr>
+<tr class="separator:ae6997f8e98537753c1d777c088b119a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9dc04137450d4f1d278ddaae9c55a04" id="r_af9dc04137450d4f1d278ddaae9c55a04"><td class="memItemLeft" align="right" valign="top"><a id="af9dc04137450d4f1d278ddaae9c55a04" name="af9dc04137450d4f1d278ddaae9c55a04"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BXC_FIND_TS_YEAR</b>(ts)&#160;&#160;&#160;((ts &gt;&gt; 25) + 1980)</td></tr>
 <tr class="memdesc:af9dc04137450d4f1d278ddaae9c55a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read year from find timestamp. <br /></td></tr>
@@ -443,14 +443,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9f8d8fd8933220f6f35209cdb65d7cfb" name="a9f8d8fd8933220f6f35209cdb65d7cfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f8d8fd8933220f6f35209cdb65d7cfb">&#9670;&#160;</a></span>SYS_PATH_MAX_CU</h2>
+<a id="ae6997f8e98537753c1d777c088b119a9" name="ae6997f8e98537753c1d777c088b119a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6997f8e98537753c1d777c088b119a9">&#9670;&#160;</a></span>BXC_FS_PATH_MAX_CU</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SYS_PATH_MAX_CU&#160;&#160;&#160;256u</td>
+          <td class="memname">#define BXC_FS_PATH_MAX_CU&#160;&#160;&#160;256u</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -942,7 +942,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least <a class="el" href="path_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain.">SYS_PATH_MAX_CU</a> bytes long. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a DOS8.3 path. Must be at least <a class="el" href="path_8h.html#ae6997f8e98537753c1d777c088b119a9" title="Max code units (ASCII or UTF-16) a path can contain.">BXC_FS_PATH_MAX_CU</a> bytes long. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1593,7 +1593,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">unk</td><td>Some context object, format unknown. Use NULL to get the CWD of current applet. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least <a class="el" href="path_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb" title="Max code units (ASCII or UTF-16) a path can contain.">SYS_PATH_MAX_CU</a> units long. </td></tr>
+    <tr><td class="paramname">buf</td><td>Buffer large enough to contain a UTF-16 LFN path. Must be at least <a class="el" href="path_8h.html#ae6997f8e98537753c1d777c088b119a9" title="Max code units (ASCII or UTF-16) a path can contain.">BXC_FS_PATH_MAX_CU</a> units long. </td></tr>
   </table>
   </dd>
 </dl>

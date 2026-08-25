@@ -1,9 +1,9 @@
 var file_8h =
 [
-    [ "sys_seek_whence_e", "file_8h.html#a9e681ad97b1d973134148a35e64b5d51", [
-      [ "_SYS_SEEK_SET", "file_8h.html#a9e681ad97b1d973134148a35e64b5d51ad78be8894e0857edfb7f4d1601c5025d", null ],
-      [ "_SYS_SEEK_CUR", "file_8h.html#a9e681ad97b1d973134148a35e64b5d51a213e666a4cfa6170bc49dcd2169da944", null ],
-      [ "_SYS_SEEK_END", "file_8h.html#a9e681ad97b1d973134148a35e64b5d51a61aea510d114606570fe74928a85a85c", null ]
+    [ "bxc_seek_whence_e", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13", [
+      [ "BXC_SEEK_SET", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13a07d179667ba351f7b656c7368a93afbc", null ],
+      [ "BXC_SEEK_CUR", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13a21d10f0feb06957d653f354fe429ee71", null ],
+      [ "BXC_SEEK_END", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13abf2a4b98952cb0a1e2d107537916b1b4", null ]
     ] ],
     [ "__fflush", "file_8h.html#a2a84dd97a30d15de5a904f8ed030d96d", null ],
     [ "__fseek", "file_8h.html#adf33cb14598c566f57e5f4c2dd727e82", null ],

@@ -20,7 +20,7 @@ var path_8h =
     [ "BXC_FNSPLIT_LFN_DRIVE_MAX", "path_8h.html#a74ea056f078d4c54e49ede1b691742c2", null ],
     [ "BXC_FNSPLIT_LFN_PATHNAME_MAX", "path_8h.html#a5d8c6e133340373b410cb270e498c6b0", null ],
     [ "BXC_FNSPLIT_LFN_SUFFIX_MAX", "path_8h.html#ad5c648dc1755fad06b9b311625f55065", null ],
-    [ "SYS_PATH_MAX_CU", "path_8h.html#a9f8d8fd8933220f6f35209cdb65d7cfb", null ],
+    [ "BXC_FS_PATH_MAX_CU", "path_8h.html#ae6997f8e98537753c1d777c088b119a9", null ],
     [ "bxc_fs_parts_dos_t", "path_8h.html#ad0c7e97d44376a94f131c9f4a5dbd8a8", null ],
     [ "bxc_fs_parts_lfn_t", "path_8h.html#a70e5fd58d25bb78907c2f523f4ce72b1", null ],
     [ "fs_attribute_e", "path_8h.html#ace1ad2f8a5bced52258703097c71e8d4", [

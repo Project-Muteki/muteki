@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['scroll_5fdown_0',['SCROLL_DOWN',['../types_2event_8h.html#a1be4f211929ba28d21f38530d28e263da9d522bb191bf21bcaace5569ec49475d',1,'event.h']]],
-  ['scroll_5fup_1',['SCROLL_UP',['../types_2event_8h.html#a1be4f211929ba28d21f38530d28e263dadc276c852fdda273d5091ee8e2ceb4ec',1,'event.h']]]
+  ['toggle_5fkey_5factive_0',['TOGGLE_KEY_ACTIVE',['../framework_2event_8h.html#a41db433e298d3572044a6b89993a5541a238b66768cfba9955b79267923345ef3',1,'event.h']]],
+  ['toggle_5fkey_5finactive_1',['TOGGLE_KEY_INACTIVE',['../framework_2event_8h.html#a41db433e298d3572044a6b89993a5541a9049a0a8c683abb47b7aad26a9be5c37',1,'event.h']]],
+  ['toggle_5fkey_5ftriggered_2',['TOGGLE_KEY_TRIGGERED',['../framework_2event_8h.html#a41db433e298d3572044a6b89993a5541a94931c479ed65c1f84d210e6843d6dc3',1,'event.h']]]
 ];
