@@ -119,7 +119,7 @@ bool osdep_heap_trace_start(void) {
             return false;
         }
     }
-    __fseek(__heap_tracer_osfh, 0, _SYS_SEEK_END);
+    __fseek(__heap_tracer_osfh, 0, BXC_SEEK_END);
     _fwrite(TRACE_START, 1, sizeof(TRACE_START), __heap_tracer_osfh);
     __fflush(__heap_tracer_osfh);
     return true;

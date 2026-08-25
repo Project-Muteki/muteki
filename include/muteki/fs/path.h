@@ -22,7 +22,7 @@ extern "C" {
  * @details This includes the NUL terminator. Note that this can differ from libc definitions due to possible encoding
  * differences (e.g. newlib-muteki uses UTF-8 as the "ANSI" encoding by default).
  */
-#define SYS_PATH_MAX_CU 256u
+#define BXC_FS_PATH_MAX_CU 256u
 
 /**
  * @brief Read year from find timestamp.
@@ -384,7 +384,7 @@ extern int _armdir(char *path);
  * @brief Get system CWD value.
  * @x_syscall_num `0x100e3`
  * @param unk Some context object, format unknown. Use NULL to get the CWD of current applet.
- * @param buf Buffer large enough to contain a DOS8.3 path. Must be at least ::SYS_PATH_MAX_CU bytes long.
+ * @param buf Buffer large enough to contain a DOS8.3 path. Must be at least ::BXC_FS_PATH_MAX_CU bytes long.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */
@@ -394,7 +394,7 @@ extern short _agetcurdir(void *unk, char *buf);
  * @brief Get system CWD value.
  * @x_syscall_num `0x1027a`
  * @param unk Some context object, format unknown. Use NULL to get the CWD of current applet.
- * @param buf Buffer large enough to contain a UTF-16 LFN path. Must be at least ::SYS_PATH_MAX_CU units long.
+ * @param buf Buffer large enough to contain a UTF-16 LFN path. Must be at least ::BXC_FS_PATH_MAX_CU units long.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
  */

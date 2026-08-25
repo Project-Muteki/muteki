@@ -201,14 +201,23 @@ enum bxc_errno_kernel_e {
     BXC_ERR_FS_OPERATION_ERROR,
     /** File or directory exists. */
     BXC_ERR_FS_ENTRY_EXISTS,
-    /** Too many files in this directory. */
-    BXC_ERR_FS_DIR_FULL,
-    /** No such file or directory. */
+    /**
+     * @brief Directory/mount record cannot grow.
+     */
+    BXC_ERR_FS_DIR_RECORD_GROWTH,
+    /**
+     * @brief No such file or directory.
+     * @details This is raised when a file/directory cannot be found, or attempting to access an unmounted drive.
+     * @see ::BXC_ERR_FS_PATH_TRAVERSAL Raised when entries cannot be found due to directory traversal failures.
+     */
     BXC_ERR_FS_NO_SUCH_ENTRY,
     /** File/directory is not available. */
     BXC_ERR_FS_FILE_UNAVAILABLE,
-    /** Accessing file out of bound. */
-    BXC_ERR_FS_FILE_OOB_ACCESS,
+    /**
+     * @brief Seeking a subfile out-of-bound.
+     * @details Only seems to be used by the loader's subfile API.
+     */
+    BXC_ERR_FS_SUBFILE_OOB_SEEK,
     /** Conflicting file/directory attributes */
     BXC_ERR_FS_CONFLICTING_ATTR,
     /** Too many open files. */
@@ -220,8 +229,13 @@ enum bxc_errno_kernel_e {
     /** No space left for device. */
     BXC_ERR_FS_NO_SPACE_LEFT,
 
-    /** No such file or directory (alternative). */
-    BXC_ERR_FS_NO_SUCH_ENTRY_ALT = 0x0154,
+    /**
+     * @brief Path traversal failure.
+     * @details This is raised when attempting to access a file but the path traversal fails at a directory, or wrong
+     * type of node is found during path traversal (i.e. expecting a directory but a file is found, and vice-versa).
+     * @see ::BXC_ERR_FS_NO_SUCH_ENTRY Raised when no entry can be found, but not caused by a traversal failure.
+     */
+    BXC_ERR_FS_PATH_TRAVERSAL = 0x0154,
     /**
      * @brief File is read-only.
      * @details File descriptor does not support read function.
@@ -240,10 +254,18 @@ enum bxc_errno_kernel_e {
      * supplied file descriptor is invalid.
      */
     BXC_ERR_FS_GENERIC_ERROR = 0x0163,
-    /** Too many files in this directory (alternative). */
-    BXC_ERR_FS_DIR_FULL_ALT1 = 0x0165,
-    /** Too many files in this directory (alternative). */
-    BXC_ERR_FS_DIR_FULL_ALT2,
+    /**
+     * @brief EOF reached when accessing (R/W) a file.
+     * @note This is usually handled internally by either truncating the result or allocating more space. This could
+     * explain why the strerror message of this errno seems to indicate that it is a "record overflow" condition, since
+     * this errno may be visible by the top caller when automatic file growth fails.
+     */
+    BXC_ERR_FS_EOF_REACHED = 0x0165,
+    /**
+     * @brief FAT16 directory entry allocation failure.
+     * @details Seems to be raised when the FAT16 driver cannot find an empty slot to put a new directory entry in.
+     */
+    BXC_ERR_FS_FAT16_DIR_ALLOC,
 
     /** Database is corrupted. */
     BXC_ERR_DB_CORRUPTED = 0x0200,

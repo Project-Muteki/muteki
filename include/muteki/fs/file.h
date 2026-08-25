@@ -20,13 +20,13 @@ extern "C" {
 /**
  * @brief `whence` values for __fseek().
  */
-enum sys_seek_whence_e {
+enum bxc_seek_whence_e {
     /** Seek from the beginning of file. */
-    _SYS_SEEK_SET = 0,
+    BXC_SEEK_SET = 0,
     /** Seek from current offset. */
-    _SYS_SEEK_CUR,
+    BXC_SEEK_CUR,
     /** Seek from the end of file. */
-    _SYS_SEEK_END,
+    BXC_SEEK_END,
 };
 
 /**
@@ -84,7 +84,7 @@ extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, bxc_fs_file_t 
  * @param whence Treat offset as relative to start of file/current offset/end of file.
  * @retval 0 @x_term ok
  * @retval -1 @x_term ng
- * @see sys_seek_whence_e
+ * @see bxc_seek_whence_e
  */
 extern int __fseek(bxc_fs_file_t *stream, long offset, int whence);
 
