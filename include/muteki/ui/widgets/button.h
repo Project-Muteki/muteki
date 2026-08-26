@@ -24,8 +24,8 @@ extern "C" {
  * @param tag @x_term{tag}
  * @param x0 @x_term{x0}
  * @param y0 @x_term{y0}
- * @param x1 @x_term{x1}-auto
- * @param y1 @x_term{y1}-auto
+ * @param x1 @x_term{x1-auto}
+ * @param y1 @x_term{y1-auto}
  * @param label UTF-16 encoded string to be used as a label.
  * @param event Custom event to be sent on button press.
  * @param flags Flags. Valid options seem to be 2, 4, 0x40.

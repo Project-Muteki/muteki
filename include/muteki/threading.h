@@ -296,8 +296,8 @@ extern bool OSResumeThread(bxc_thread_t *thr);
 
 /**
  * @brief Force wake up a sleeping thread
- * @x_syscall_num{0x10006}
  * @details This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended.
+ * @x_syscall_num{0x10006}
  * @param thr The thread descriptor.
  * @retval true @x_term{ok}
  * @retval false @x_term{ng}
@@ -515,7 +515,7 @@ extern bool OSCloseMsgQue(bxc_queue_t *queue);
  * }
  * @endcode
  *
- * @x_term{require}-krnllib
+ * @x_term{require-krnllib}
  *
  * @x_syscall_num{0x200a2}
  * @x_void_param

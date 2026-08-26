@@ -343,7 +343,7 @@ extern bxc_errno_t OSGetLastError(void);
  * If the errno namespace is unset, it will also automatically set ::BXC_ERRNO_NS_APPLET before passing it to
  * OSSetLastError().
  *
- * @x_term{require}-krnllib
+ * @x_term{require-krnllib}
  *
  * @param err New errno value.
  * @x_void_return
@@ -356,7 +356,7 @@ extern void _SetLastError(bxc_errno_t err);
  * If kernel errno is set, the errno is returned with ::BXC_ERRNO_NS_KERNEL bit set. Otherwise it will return
  * the result from OSSetLastError() with ::BXC_ERRNO_NS_USER bit set.
  *
- * @x_term{require}-krnllib
+ * @x_term{require-krnllib}
  *
  * @x_void_param
  * @return The current errno value from either kernel or OSSetLastError().

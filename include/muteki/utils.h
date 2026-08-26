@@ -27,7 +27,7 @@ extern "C" {
  *     return GetActiveLCD()->surface;
  * }
  * @endcode
- * @x_term{require}-krnllib
+ * @x_term{require-krnllib}
  * @x_syscall_num{0x20022}
  * @x_void_param
  * @return The LCD surface descriptor.

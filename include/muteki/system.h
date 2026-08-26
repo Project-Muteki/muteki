@@ -133,7 +133,7 @@ extern char *_GetSystemDirectory(char *buffer, size_t size);
 
 /**
  * @brief Read the battery voltage and level.
- * @details @x_term{require}-krnllib
+ * @details @x_term{require-krnllib}
  * @warning On some versions of Besta RTOS, the return value may be undefined if the struct that `output` points to is
  * not zero filled.
  * @x_syscall_num{0x2001a}

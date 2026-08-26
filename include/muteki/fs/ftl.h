@@ -6,7 +6,7 @@
 /**
  * @file ftl.h
  * @brief Flash Translation Layer (FTL) and block device API.
- * @details @x_term{require}-krnllib
+ * @details @x_term{require-krnllib}
  */
 
 #ifndef __MUTEKI_FS_FTL_H__
