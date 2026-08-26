@@ -19,10 +19,10 @@ extern "C" {
 
 /**
  * @brief Create a menu field widget.
- * @x_syscall_num `0x10154`
- * @param tag @x_term tag
- * @param x @x_term x0
- * @param y @x_term y0
+ * @x_syscall_num{0x10154}
+ * @param tag @x_term{tag}
+ * @param x @x_term{x0}
+ * @param y @x_term{y0}
  * @param[in, out] index_p Borrowed reference to a 16-bit integer that holds the index of the currently selected item.
  * Must be valid across the entire lifespan of the widget.
  * @param entries Menu entry array.

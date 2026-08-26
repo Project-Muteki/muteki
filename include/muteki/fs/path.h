@@ -223,19 +223,19 @@ typedef struct bxc_fs_parts_dos_s {
 
 /**
  * @brief Delete a file.
- * @x_syscall_num `0x100dd`
+ * @x_syscall_num{0x100dd}
  * @param pathname DOS 8.3 path to the file being removed.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool _aremove(const char *pathname);
 
 /**
  * @brief Delete a file.
- * @x_syscall_num `0x10274`
+ * @x_syscall_num{0x10274}
  * @param pathname UTF-16 LFN path to the file being removed.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool __wremove(const UTF16 *pathname);
 
@@ -244,7 +244,7 @@ extern bool __wremove(const UTF16 *pathname);
  * @details Matches the first file/directory based on fnmatch pattern `fnmatch` and attribute mask `attrib_mask`. Saves
  * context at `ctx`, which can be used later with _afindnext() and _findclose().
  * 
- * @x_syscall_num `0x100d8`
+ * @x_syscall_num{0x100d8}
  * @param fnmatch The pattern.
  * @param ctx The context object.
  * @param attrib_mask Attribute mask (use 0 to match everything regardless of attributes).
@@ -256,7 +256,7 @@ extern short _afindfirst(const char *fnmatch, bxc_find_context_t *ctx, int attri
 /**
  * @brief Continue a previously started file/directory search.
  * @details Matches the next file/directory.
- * @x_syscall_num `0x100d9`
+ * @x_syscall_num{0x100d9}
  * @param ctx The context object.
  * @retval 0 There is a match.
  * @retval -1 No more match was found.
@@ -268,7 +268,7 @@ extern short _afindnext(bxc_find_context_t *ctx);
  * @details Matches the first file/directory based on fnmatch pattern `fnmatch` and attribute mask `attrib_mask`. Saves
  * context at `ctx`, which can be used later with _afindnext() and _findclose().
  * 
- * @x_syscall_num `0x10270`
+ * @x_syscall_num{0x10270}
  * @param fnmatch The pattern (encoded in UTF-16).
  * @param ctx The context object.
  * @param attrib_mask Attribute mask (use 0 to match everything regardless of attributes).
@@ -285,7 +285,7 @@ extern short _wfindfirst(const UTF16 *fnmatch, bxc_find_context_t *ctx, int attr
  * Not sure if interchangeable with _afindnext() since it should have no dependency on different find context. Needs to
  * be verified later.
  *
- * @x_syscall_num `0x10271`
+ * @x_syscall_num{0x10271}
  * @param ctx The context object.
  * @retval 0 There is a match.
  * @retval -1 No more match was found.
@@ -294,16 +294,16 @@ extern short _wfindnext(bxc_find_context_t *ctx);
 
 /**
  * @brief Terminate a file/directory search.
- * @x_syscall_num `0x100da`
+ * @x_syscall_num{0x100da}
  * @param ctx The context object.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern int _findclose(bxc_find_context_t *ctx);
 
 /**
  * @brief Get attributes of specific path.
  * @details Similar to GetFileAttributeW() in Windows.
- * @x_syscall_num `0x10272`
+ * @x_syscall_num{0x10272}
  * @param path UTF-16 LFN path.
  * @return The attribute, or -1 on error.
  * @see fs_attribute_e
@@ -313,7 +313,7 @@ extern short _wfgetattr(UTF16 *path);
 /**
  * @brief Set attributes of specific path.
  * @details Similar to SetFileAttributeW() in Windows.
- * @x_syscall_num `0x10273`
+ * @x_syscall_num{0x10273}
  * @param path UTF-16 LFN path.
  * @param attrs The new attribute.
  * @return The new attribute, or -1 on error.
@@ -324,7 +324,7 @@ extern short _wfsetattr(UTF16 *path, short attrs);
 /**
  * @brief Get attributes of specific path.
  * @details Similar to GetFileAttributeA() in Windows.
- * @x_syscall_num `0x100db`
+ * @x_syscall_num{0x100db}
  * @param path DOS 8.3 path.
  * @return The attribute, or -1 on error.
  * @see fs_attribute_e
@@ -334,7 +334,7 @@ extern short _afgetattr(char *path);
 /**
  * @brief Set attributes of specific path.
  * @details Similar to SetFileAttributeA() in Windows.
- * @x_syscall_num `0x100dc`
+ * @x_syscall_num{0x100dc}
  * @param path DOS 8.3 path.
  * @param attrs The new attribute.
  * @return The new attribute, or -1 on error.
@@ -344,113 +344,113 @@ extern short _afsetattr(char *path, short attrs);
 
 /**
  * @brief Create a new directory.
- * @x_syscall_num `0x10277`
+ * @x_syscall_num{0x10277}
  * @param path UTF-16 LFN path to the new directory.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int _wmkdir(UTF16 *path);
 
 /**
  * @brief Create a new directory.
- * @x_syscall_num `0x100e0`
+ * @x_syscall_num{0x100e0}
  * @param path DOS 8.3 path to the new directory.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int _amkdir(char *path);
 
 /**
  * @brief Remove a directory.
- * @x_syscall_num `0x10278`
+ * @x_syscall_num{0x10278}
  * @details Sets kerrno namespace to ::BXC_ERRNO_NS_KERNEL and error code to `0xffff` when directory is not empty.
  * @param path UTF-16 LFN path to the directory being removed.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int _wrmdir(UTF16 *path);
 
 /**
  * @brief Remove a directory.
- * @x_syscall_num `0x100e1`
+ * @x_syscall_num{0x100e1}
  * @details Sets kerrno namespace to ::BXC_ERRNO_NS_KERNEL and error code to `0xffff` when directory is not empty.
  * @param path DOS 8.3 path to the directory being removed.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int _armdir(char *path);
 
 /**
  * @brief Get system CWD value.
- * @x_syscall_num `0x100e3`
+ * @x_syscall_num{0x100e3}
  * @param unk Some context object, format unknown. Use NULL to get the CWD of current applet.
  * @param buf Buffer large enough to contain a DOS8.3 path. Must be at least ::BXC_FS_PATH_MAX_CU bytes long.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern short _agetcurdir(void *unk, char *buf);
 
 /**
  * @brief Get system CWD value.
- * @x_syscall_num `0x1027a`
+ * @x_syscall_num{0x1027a}
  * @param unk Some context object, format unknown. Use NULL to get the CWD of current applet.
  * @param buf Buffer large enough to contain a UTF-16 LFN path. Must be at least ::BXC_FS_PATH_MAX_CU units long.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern short _wgetcurdir(void *unk, UTF16 *buf);
 
 /**
  * @brief Change system working directory to a new path.
- * @x_syscall_num `0x100e2`
+ * @x_syscall_num{0x100e2}
  * @param path DOS 8.3 path.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern short _achdir(const char *path);
 
 /**
  * @brief Change system working directory to a new path.
- * @x_syscall_num `0x10279`
+ * @x_syscall_num{0x10279}
  * @param path UTF-16 LFN path.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern short _wchdir(const UTF16 *path);
 
 /**
  * @brief Rename/move a file.
- * @x_syscall_num `0x100de`
+ * @x_syscall_num{0x100de}
  * @param old_path Old DOS 8.3 path.
  * @param new_path New DOS 8.3 path.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern short _arename(const char *old_path, const char *new_path);
 
 /**
  * @brief Rename/move a file.
- * @x_syscall_num `0x10275`
+ * @x_syscall_num{0x10275}
  * @param old_path Old UTF-16 LFN path.
  * @param new_path New UTF-16 LFN path.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern short _wrename(const UTF16 *old_path, const UTF16 *new_path);
 
 /**
  * @brief Get filesystem usage stats.
- * @x_syscall_num `0x100eb`
+ * @x_syscall_num{0x100eb}
  * @param fsid Filesystem ID.
  * @param fs_stat Target to store filesystem usage stats.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern int FSGetDiskRoomState(int fsid, bxc_fs_stat_t *fs_stat);
 
 /**
  * @brief Split a DOS 8.3 pathname into parts.
  * @details DOS 8.3 counterpart of _wfnsplit().
- * @x_syscall_num `0x100c5`
+ * @x_syscall_num{0x100c5}
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
  * Must be at least as long as ::BXC_FNSPLIT_DOS_DRIVE_MAX.
@@ -468,7 +468,7 @@ extern int _afnsplit(const char *pathname, char *drive, char *dirname, char *bas
 /**
  * @brief Build an DOS 8.3 pathname from parts.
  * @details DOS 8.3 counterpart of _wfnmerge().
- * @x_syscall_num `0x100c6`
+ * @x_syscall_num{0x100c6}
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
  * This buffer must be at least as long as ::BXC_FNSPLIT_DOS_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.
@@ -493,7 +493,7 @@ extern int _afnmerge(char *pathname, const char *drive, const char *dirname, con
  * Borland C++ has a documentation regarding to their implementation:
  * https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Fnsplit,_wfnsplit.
  *
- * @x_syscall_num `0x1026b`
+ * @x_syscall_num{0x1026b}
  * @param[in] pathname Pathname to be split.
  * @param[out] drive Drive name, or NULL to omit this part.
  * Must be at least as long as ::BXC_FNSPLIT_LFN_DRIVE_MAX.
@@ -521,7 +521,7 @@ extern int _wfnsplit(const UTF16 *pathname, UTF16 *drive, UTF16 *dirname, UTF16 
  * Borland C++ has a documentation regarding to their implementation:
  * https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Fnmerge,_wfnmerge.
  *
- * @x_syscall_num `0x1026c`
+ * @x_syscall_num{0x1026c}
  * @param[out] pathname Pointer to a buffer where the constructed pathname will be stored.
  * This buffer must be at least as long as ::BXC_FNSPLIT_LFN_PATHNAME_MAX.
  * @param[in] drive Drive specifier (e.g., `C` or `C:`). If provided, it must be a valid drive name.

@@ -26,7 +26,7 @@ extern "C" {
  *
  * @warning Memory allocated with this function has to be freed with the FreeBlock() call.
  *
- * @x_syscall_num `0x10145`
+ * @x_syscall_num{0x10145}
  *
  * @param size Size of the memory.
  * @param tag Write this value to `<allocated address> + 0x28` (`<chunk address> + 0x30`) when the allocated memory is
@@ -40,7 +40,7 @@ extern ui_component_t *AllocBlock(size_t size, unsigned short tag, bool new_segm
 /**
  * @brief Free memory previously allocated with AllocBlock().
  * @details If a segment chunk is freed, everything below it will also be implicitly freed.
- * @x_syscall_num `0x10146`
+ * @x_syscall_num{0x10146}
  * @param ptr Pointer to previously allocated memory.
  * @x_void_return
  */

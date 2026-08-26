@@ -19,12 +19,12 @@ extern "C" {
 
 /**
  * @brief Create a control menu widget.
- * @x_syscall_num `0x10153`
- * @param tag @x_term tag
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
+ * @x_syscall_num{0x10153}
+ * @param tag @x_term{tag}
+ * @param x0 @x_term{x0}
+ * @param y0 @x_term{y0}
+ * @param x1 @x_term{x1}
+ * @param y1 @x_term{y1}
  * @param entries Menu entry array.
  * @param title Title of the pop-up menu.
  * @param default_index Default selected item index.

@@ -81,7 +81,7 @@ typedef enum utf16_mb_encoding_e {
  * @brief Convert a multi-byte codepoint to UTF-16.
  * @note Not all encoding types listed in ::utf16_mb_encoding_e are supported by this syscall. Check the documentation
  * of it before proceeding. Passing unsupported encoding type to this syscall will cause undefined behavior.
- * @x_syscall_num `0x100bc`
+ * @x_syscall_num{0x100bc}
  * @param src Multi-byte codepoint.
  * @param src_encoding Encoding type of the input codepoint.
  * @return UTF-16 codepoint.
@@ -92,7 +92,7 @@ extern UTF16 ConvCharToUnicode(unsigned int src, unsigned short src_encoding);
 /**
  * @brief Convert a multi-byte string to UTF-16.
  * @note Passing unsupported encoding type to this syscall will cause undefined behavior.
- * @x_syscall_num `0x100bd`
+ * @x_syscall_num{0x100bd}
  * @param[in] src Source multi-byte string.
  * @param[out] dst Converted UTF-16 string.
  * @param src_encoding Encoding type of the input codepoint.

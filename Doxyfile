@@ -283,11 +283,11 @@ TAB_SIZE               = 4
 # with the commands \{ and \} for these it is advised to use the version @{ and
 # @} or use a double escape (\\{ and \\})
 
-ALIASES                = "x_term=@snippet{doc} glossary.txt"
+ALIASES                = "x_term{1}=@snippet{doc} glossary.txt \1"
 ALIASES               += "x_void_param=^^@snippet{doc} glossary.txt void-param^^"
 ALIASES               += "x_void_return=^^@snippet{doc} glossary.txt void-return^^"
 ALIASES               += "x_void=^^@snippet{doc} glossary.txt void-param^^@snippet{doc} glossary.txt void-return^^"
-ALIASES               += "x_syscall_num=@par Syscall Number^^"
+ALIASES               += "x_syscall_num{1}=@par Syscall Number^^`\1`"
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C sources
 # only. Doxygen will then generate output that is more tailored for C. For

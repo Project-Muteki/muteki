@@ -52,8 +52,8 @@ extern void osdep_heap_free(void *ptr);
  * @brief Start the heap tracer.
  *
  * @x_void_param
- * @retval true @x_term ok
- * @retval false @x_term ok
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ok}
  */
 extern bool osdep_heap_trace_start(void);
 
@@ -61,8 +61,8 @@ extern bool osdep_heap_trace_start(void);
  * @brief Stop the heap tracer.
  *
  * @x_void_param
- * @retval true @x_term ok
- * @retval false @x_term ok
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ok}
  */
 extern bool osdep_heap_trace_stop(void);
 

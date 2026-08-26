@@ -27,8 +27,8 @@ extern "C" {
  *     return GetActiveLCD()->surface;
  * }
  * @endcode
- * @x_term require-krnllib
- * @x_syscall_num `0x20022`
+ * @x_term{require}-krnllib
+ * @x_syscall_num{0x20022}
  * @x_void_param
  * @return The LCD surface descriptor.
  */ 
@@ -37,9 +37,9 @@ extern lcd_surface_t *GetActiveVRamAddress(void);
 /**
  * @brief Play a beep using the built in piezo speaker.
  * @details This usually plays a 4000Hz tone for 10ms.
- * @x_syscall_num `0x1009e`
+ * @x_syscall_num{0x1009e}
  * @x_void_param
- * @retval true @x_term ok
+ * @retval true @x_term{ok}
  */
 extern bool WarningBeep(void);
 
@@ -51,7 +51,7 @@ extern bool WarningBeep(void);
  * Moreover, the size of the internal buffer used by `vsnprintf()` to save formatted message might also be
  * device-specific. On BA742 this buffer is `0x800` bytes long, with `0x7ff` bytes actually available to the
  * formatted message.
- * @x_syscall_num `0x102a1`
+ * @x_syscall_num{0x102a1}
  * @param format The format string.
  * @param ... Any subsequent values.
  * @x_void_return

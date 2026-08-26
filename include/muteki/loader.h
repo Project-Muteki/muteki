@@ -308,7 +308,7 @@ typedef struct loader_applet_info_s {
  * <tr><td><tt>\\\\.\\DATAFILE</tt></td> <td>Opens the data partition of the cartridge as a file. More details TBA.</td></tr>
  * </table>
  *
- * @x_syscall_num `0x100ec`
+ * @x_syscall_num{0x100ec}
  *
  * @param[in] pathname DOS 8.3 path to the file.
  * @param[in] mode_or_subfile Either a mode string accepted by _afopen(), or a special UNC path to open assets of the
@@ -319,7 +319,7 @@ extern loader_file_descriptor_t *_OpenFile(const char *pathname, const char *mod
 
 /**
  * @brief Open a loader file descriptor from a file (LFN path).
- * @x_syscall_num `0x100ee`
+ * @x_syscall_num{0x100ee}
  * @param[in] pathname LFN path to the file.
  * @param[in] mode_or_subfile Either a mode string accepted by __wfopen() (in UTF-16), or a special UNC path (**in ASCII**) to open
  * assets of the current applet/cartridge.
@@ -329,16 +329,16 @@ extern loader_file_descriptor_t *_OpenFileW(const UTF16 *pathname, const void *m
 
 /**
  * @brief Close a loader file descriptor.
- * @x_syscall_num `0x100ef`
+ * @x_syscall_num{0x100ef}
  * @param ldrfd The loader file descriptor.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int _CloseFile(loader_file_descriptor_t *ldrfd);
 
 /**
  * @brief Read data from a loader file descriptor.
- * @x_syscall_num `0x100f0`
+ * @x_syscall_num{0x100f0}
  * @param ldrfd The loader file descriptor.
  * @param[out] buf Buffer that holds the data.
  * @param size Number of bytes to be read.
@@ -348,18 +348,18 @@ extern size_t _ReadFile(loader_file_descriptor_t *ldrfd, void *buf, size_t size)
 
 /**
  * @brief Seek to a specific position in an opened sub-file.
- * @x_syscall_num `0x100f1`
+ * @x_syscall_num{0x100f1}
  * @param ldrfd The loader file descriptor.
  * @param offset Seek offset.
  * @param whence Treat offset as relative to start of file/current offset/end of file.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int _FseekFile(loader_file_descriptor_t *ldrfd, size_t offset, int whence);
 
 /**
  * @brief Get the size of sub-file.
- * @x_syscall_num `0x100f2`
+ * @x_syscall_num{0x100f2}
  * @param ldrfd The loader file descriptor.
  * @return The size of the sub-file, or `-1` when something is wrong.
  */
@@ -370,7 +370,7 @@ extern ssize_t _FileSize(loader_file_descriptor_t *ldrfd);
  * @details Sub-files are areas in the parent file. The parameter `base` and `max_size` controls where and how large the area
  * will be. The sub-file descriptors operate independently of the parent file descriptor, a la `dup()` in POSIX. This is also
  * used internally to parse ROM files and asset packs.
- * @x_syscall_num `0x100f3`
+ * @x_syscall_num{0x100f3}
  * @param parent Parent file descriptor.
  * @param base Base offset of the file.
  * @param max_size Max size of the area included in this sub-file.
@@ -380,7 +380,7 @@ extern loader_file_descriptor_t *_OpenSubFile(loader_file_descriptor_t *parent, 
 
 /**
  * @brief Get the current offset of sub-file.
- * @x_syscall_num `0x100f4`
+ * @x_syscall_num{0x100f4}
  * @param ldrfd The loader file descriptor.
  * @return The offset of the sub-file, or `-1` when something is wrong.
  */
@@ -388,7 +388,7 @@ extern ssize_t _TellFile(loader_file_descriptor_t *ldrfd);
 
 /**
  * @brief Load and execute an applet by its DOS 8.3 pathname.
- * @x_syscall_num `0x10114`
+ * @x_syscall_num{0x10114}
  * @param pathname DOS 8.3 path to the applet executable file, or name of a registered system applet.
  * @param subroutine Subroutine to invoke.
  * @param applet_arg1 Argument 1. Can either be a pointer to some data or an integer.
@@ -400,7 +400,7 @@ extern int RunApplicationA(const char *pathname,int subroutine,void *applet_arg1
 /**
  * @brief Get the title name of the ROM file.
  * @details This will return UTF16-encoded localized title name that matches the current locale.
- * @x_syscall_num `0x10115`
+ * @x_syscall_num{0x10115}
  * @param[in] pathname DOS 8.3 path to the ROM file or executable.
  * @param[out] out_name The title name in current locale.
  * @param max_size Max size of the title name.
@@ -411,7 +411,7 @@ extern size_t GetApplicationNameA(const char *pathname, UTF16 *out_name, size_t 
 /**
  * @brief Load an applet executable.
  * @details The `pathname` specified must be a DOS 8.3 name.
- * @x_syscall_num `0x10116`
+ * @x_syscall_num{0x10116}
  * @param pathname Path to executable.
  * @return A pointer to a structure describing the loaded executable, or NULL if the loading process failed.
  */
@@ -419,7 +419,7 @@ extern loader_loaded_t *LoadProgramA(const char *pathname);
 
 /**
  * @brief Unload a loaded applet.
- * @x_syscall_num `0x10117`
+ * @x_syscall_num{0x10117}
  * @param prog The loaded executable description returned by LoadProgramA() or LoadProgramW().
  * @see LoadProgramA
  * @see LoadProgramW
@@ -433,7 +433,7 @@ extern int FreeProgram(loader_loaded_t *applet);
  *
  * Actual format of arguments seem to be applet-specific.
  *
- * @x_syscall_num `0x10118`
+ * @x_syscall_num{0x10118}
  *
  * @param prog The loaded applet descriptor returned by LoadProgramA or LoadProgramW.
  * @param subroutine Subroutine to invoke.
@@ -448,7 +448,7 @@ extern int ExecuteProgram(loader_loaded_t *applet, int subroutine, const void *a
 
 /**
  * @brief Get the path to the current running executable (argv[0]).
- * @x_syscall_num `0x10119`
+ * @x_syscall_num{0x10119}
  * @x_void_param
  * @return The DOS 8.3 path to the current running executable.
  */
@@ -457,7 +457,7 @@ extern const char *GetCurrentPathA(void);
 /**
  * @brief Return the instance of a running applet by its DOS 8.3 path name.
  * @details This is similar to GetApplicationProcA() but will return `NULL` in case loader_loaded_s::active_refcount of that applet is 0.
- * @x_syscall_num `0x1011a`
+ * @x_syscall_num{0x1011a}
  * @param pathname DOS 8.3 path to the ROM file or executable.
  * @return Pointer to the applet instance, or `NULL` when applet is not loaded or not currently running.
  */
@@ -465,7 +465,7 @@ extern loader_loaded_t *ProgramIsRunningA(const char *pathname);
 
 /**
  * @brief Load and execute an applet by its LFN pathname.
- * @x_syscall_num `0x1027f`
+ * @x_syscall_num{0x1027f}
  * @param pathname LFN path to the applet executable file.
  * @param subroutine Subroutine to invoke.
  * @param applet_arg1 Argument 1. Can either be a pointer to some data or an integer.
@@ -478,7 +478,7 @@ extern int RunApplicationW(const UTF16 *pathname, int subroutine, void *applet_a
  * @brief Get the title name of the ROM file (LFN path).
  * @details This will return UTF16-encoded localized title name that matches the current locale.
  * @warning Not all systems implement this. When not implemented, the length read will always be 0.
- * @x_syscall_num `0x10280`
+ * @x_syscall_num{0x10280}
  * @param[in] pathname LFN path to the ROM file or executable.
  * @param[out] out_name The title name in current locale.
  * @param max_size Max size of the title name.
@@ -488,7 +488,7 @@ extern size_t GetApplicationNameW(const UTF16 *pathname, UTF16 *out_name, size_t
 
 /**
  * @brief Load an applet executable. (UTF-16 variant)
- * @x_syscall_num `0x10281`
+ * @x_syscall_num{0x10281}
  * @param pathname UTF-16 LFN path to executable.
  * @return A pointer to a structure describing the loaded executable, or `NULL` if the loading process failed.
  * @see LoadProgramA
@@ -497,7 +497,7 @@ extern loader_loaded_t *LoadProgramW(const UTF16 *pathname);
 
 /**
  * @brief Get the path to the current running executable (argv[0]). (UTF-16 variant)
- * @x_syscall_num `0x10282`
+ * @x_syscall_num{0x10282}
  * @x_void_param
  * @return The UTF-16 LFN path to the current running executable.
  */
@@ -506,7 +506,7 @@ extern const UTF16 *GetCurrentPathW(void);
 /**
  * @brief Return the instance of a running applet by its LFN.
  * @details This is similar to GetApplicationProcW() but will return `NULL` in case loader_loaded_s::active_refcount of that applet is 0.
- * @x_syscall_num `0x10283`
+ * @x_syscall_num{0x10283}
  * @param pathname LFN path to the ROM file or executable.
  * @return Pointer to the applet instance, or `NULL` when applet is not loaded or not currently running.
  */
@@ -514,7 +514,7 @@ extern loader_loaded_t *ProgramIsRunningW(const UTF16 *pathname);
 
 /**
  * @brief Load an applet executable from a loader file descriptor.
- * @x_syscall_num `0x10284`
+ * @x_syscall_num{0x10284}
  * @param ldrfd Loader file descriptor of the applet executable.
  * @param pathname LFN path to the applet executable.
  * @return A pointer to a structure describing the loaded executable, or `NULL` if `ldrfd` is `NULL` or the loading process failed.
@@ -523,7 +523,7 @@ extern loader_loaded_t *LoadHFileProgramW(loader_file_descriptor_t *ldrfd, const
 
 /**
  * @brief Load an applet executable from a loader file descriptor.
- * @x_syscall_num `0x10285`
+ * @x_syscall_num{0x10285}
  * @param ldrfd Loader file descriptor of the applet executable.
  * @param pathname DOS 8.3 path to the applet executable, or name of a registered system applet.
  * @return A pointer to a structure describing the loaded executable, or `NULL` if `ldrfd` is `NULL` or the loading process failed.
@@ -544,7 +544,7 @@ extern loader_loaded_t *LoadHFileProgramA(loader_file_descriptor_t *ldrfd, const
  * loader_loaded_t *current_applet = ProgramIsRunningA(GetCurrentPathA());
  * @endcode
  *
- * @x_syscall_num `0x10289`
+ * @x_syscall_num{0x10289}
  * @param pathname DOS 8.3 path to the loaded applet file.
  * @return Pointer to the applet instance, or `NULL` when applet is not loaded.
  */
@@ -553,26 +553,26 @@ extern loader_loaded_t *GetApplicationProcA(const char *pathname);
 /**
  * @brief Mark a loaded applet as stay resident by its DOS 8.3 pathname.
  * @details This prevents the applet from being unloaded even when the applet is not running and after FreeProgram() has been called on it.
- * @x_syscall_num `0x1028a`
+ * @x_syscall_num{0x1028a}
  * @param pathname DOS 8.3 path to the applet executable file, or name of a registered system applet.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int StayResidentProgramA(const char *pathname);
 
 /**
  * @brief Unmark a loaded applet as stay resident by its DOS 8.3 pathname.
  * @details This reverts a previous StayResidentProgramA() call.
- * @x_syscall_num `0x1028b`
+ * @x_syscall_num{0x1028b}
  * @param pathname DOS 8.3 path to the applet executable file, or name of a registered system applet.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int UnStayResidentProgramA(const char *pathname);
 
 /**
  * @brief Check if an loaded applet has been set to stay resident.
- * @x_syscall_num `0x1028c`
+ * @x_syscall_num{0x1028c}
  * @param[in, out] applet Loaded applet descriptor to perform the check on.
  * @retval 0 Applet is not stay resident.
  * @retval 1 Applet is stay resident.
@@ -595,7 +595,7 @@ extern int CheckProgramIsStayResident(loader_loaded_t *applet);
  *
  * However using the GetApplicationProcA() counterpart results in slightly more performant code.
  *
- * @x_syscall_num `0x10292`
+ * @x_syscall_num{0x10292}
  * @param pathname LFN path to the loaded applet file.
  * @return Pointer to the applet instance, or `NULL` when applet is not loaded.
  */
@@ -604,40 +604,40 @@ extern loader_loaded_t *GetApplicationProcW(const UTF16 *pathname);
 /**
  * @brief Mark a loaded applet as stay resident by its LFN pathname.
  * @details This prevents the applet from being unloaded even when the applet is not running and after FreeProgram() has been called on it.
- * @x_syscall_num `0x10295`
+ * @x_syscall_num{0x10295}
  * @param pathname LFN path path to the applet executable file.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int StayResidentProgramW(const UTF16 *pathname);
 
 /**
  * @brief Unmark a loaded applet as stay resident by its LFN pathname.
  * @details This reverts a previous StayResidentProgramW() call.
- * @x_syscall_num `0x10296`
+ * @x_syscall_num{0x10296}
  * @param pathname LFN path to the applet executable file.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int UnStayResidentProgramW(const UTF16 *pathname);
 
 /**
  * @brief Obtain information on loaded applet by its DOS 8.3 pathname.
- * @x_syscall_num `0x102cb`
+ * @x_syscall_num{0x102cb}
  * @param pathname Pathname of the applet.
  * @param[out] Information on the applet.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int GetApplicationHeadInfoA(const char *pathname,loader_applet_info_t *info);
 
 /**
  * @brief Obtain information on loaded applet by its LFN pathname.
- * @x_syscall_num `0x102cc`
+ * @x_syscall_num{0x102cc}
  * @param pathname Pathname of the applet.
  * @param[out] Information on the applet.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int GetApplicationHeadInfoW(const UTF16 *pathname, loader_applet_info_t *info);
 

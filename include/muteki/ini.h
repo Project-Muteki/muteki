@@ -23,7 +23,7 @@ extern "C" {
 
 /**
  * @brief Read a value from an INI file and parse it as an integer.
- * @x_syscall_num `0x10110`
+ * @x_syscall_num{0x10110}
  * @param section The section where the key is located.
  * @param key The key.
  * @param default_value The default value to be returned when the key does not exist in the INI file.
@@ -40,7 +40,7 @@ extern unsigned int _GetPrivateProfileInt(const char *section, const char *key, 
  * on such systems.
  * @note The section/key listing behavior as seen in the corresponding Win32 API call is unimplemented and setting
  * `section` or `key` to `NULL` seems to only let the call fail unconditionally.
- * @x_syscall_num `0x10111`
+ * @x_syscall_num{0x10111}
  * @param section The section where the key is located.
  * @param key The key.
  * @param default_value The default value to be copied to `out` when the key does not exist in the INI file, or `""`
@@ -63,13 +63,13 @@ extern unsigned int _GetPrivateProfileString(
  * @brief Write a value to an INI file.
  * @details `NULL` in `section`, `key` or `value` will be interpreted as the string `"<NULL>"`. A `NULL`
  * key but not a `NULL` section seems to also cause the function to stop using the specified section.
- * @x_syscall_num `0x10112`
+ * @x_syscall_num{0x10112}
  * @param section The section where the key is located.
  * @param key The key.
  * @param value The value.
  * @param path DOS 8.3 path to INI file.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool _WritePrivateProfileString(const char *section, const char *key, const char *value, const char *path);
 

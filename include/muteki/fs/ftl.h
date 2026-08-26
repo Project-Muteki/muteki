@@ -6,7 +6,7 @@
 /**
  * @file ftl.h
  * @brief Flash Translation Layer (FTL) and block device API.
- * @details @x_term require-krnllib
+ * @details @x_term{require}-krnllib
  */
 
 #ifndef __MUTEKI_FS_FTL_H__
@@ -63,8 +63,8 @@ extern size_t FTL_GetCurDiskSize(size_t *size_hi);
  * @param sector Start sector number.
  * @param ptr Target pointer. The size must be multiple of 512 bytes.
  * @param count How many sectors to read.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int FTL_ReadSector(size_t sector, void *ptr, size_t count);
 
@@ -85,22 +85,22 @@ extern void FTL_DestroyRamDisk(void);
 
 /**
  * @brief Get NAND flash parameters.
- * @param sbz @x_term sbz
+ * @param sbz @x_term{sbz}
  * @param params Parameter structure to write to.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 int nand_get_params(int sbz, nand_params_t *params);
 
 /**
  * @brief Read NAND flash pages at a specific page number.
- * @param sbz @x_term sbz
+ * @param sbz @x_term{sbz}
  * @param page Page number where the read should start.
  * @param ptr Buffer where the page content will be stored.
  * @param count Number of pages to read.
  * @param arg5 Unknown. May be related to reading spare sector?
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 int nand_read_page(int sbz, size_t page, void *ptr, size_t count, short arg5);
 

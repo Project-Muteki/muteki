@@ -117,7 +117,7 @@ enum ui_messagebox_result_e {
  * button instead of the OK button with TAB or arrow keys, pressing the `Y` key on the keyboard will make the function
  * return ::UI_MB_RESULT_YES instead of ::UI_MB_RESULT_OK.
  *
- * @x_syscall_num `0x1013d`
+ * @x_syscall_num{0x1013d}
  *
  * @param text UTF-16 encoded text to be displayed on the message box.
  * @param type The message box type.

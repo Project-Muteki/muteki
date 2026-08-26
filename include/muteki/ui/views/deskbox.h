@@ -21,11 +21,11 @@ extern "C" {
 
 /**
  * @brief Assign a background image to the deskbox.
- * @x_syscall_num `0x1014f`
+ * @x_syscall_num{0x1014f}
  * @param parent Parent deskbox object to attach a image to.
- * @param tag @x_term tag
- * @param x0 @x_term x0
- * @param y0 @x_term y0
+ * @param tag @x_term{tag}
+ * @param x0 @x_term{x0}
+ * @param y0 @x_term{y0}
  * @param width Width of the image
  * @param height Height of the image.
  * @param image_x X offset of the image to blit.
@@ -52,12 +52,12 @@ ui_imageclip_t *InsertImageClip(
 
 /**
  * @brief Create a deskbox object.
- * @x_syscall_num `0x10172`
- * @param tag @x_term tag
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
+ * @x_syscall_num{0x10172}
+ * @param tag @x_term{tag}
+ * @param x0 @x_term{x0}
+ * @param y0 @x_term{y0}
+ * @param x1 @x_term{x1}
+ * @param y1 @x_term{y1}
  * @param title Title of the deskbox.
  * @param cmdmenu Array of the command menu entries.
  * @param cmdmenu_title Title text of the command menu.
@@ -79,7 +79,7 @@ extern ui_deskbox_t *CreateDeskBox(
 
 /**
  * @brief Draw the deskbox.
- * @x_syscall_num `0x10173`
+ * @x_syscall_num{0x10173}
  * @param self The deskbox object.
  * @x_void_return
  */
@@ -87,7 +87,7 @@ extern void PDESKBOX_draw(ui_deskbox_t *self);
 
 /**
  * @brief Draw the title of the deskbox.
- * @x_syscall_num `0x10174`
+ * @x_syscall_num{0x10174}
  * @param self The deskbox object.
  * @x_void_return
  */
@@ -95,7 +95,7 @@ extern void PDESKBOX_drawTitle(ui_deskbox_t *self);
 
 /**
  * @brief Default event handler of the deskbox.
- * @x_syscall_num `0x10175`
+ * @x_syscall_num{0x10175}
  * @param self The deskbox object.
  * @param event The event.
  * @x_void_return
@@ -104,7 +104,7 @@ extern void PDESKBOX_handleEvent(ui_deskbox_t *self, ui_event_t *event);
 
 /**
  * @brief Redraw the deskbox.
- * @x_syscall_num `0x10176`
+ * @x_syscall_num{0x10176}
  * @param self The deskbox object.
  * @x_void_return
  */
@@ -113,7 +113,7 @@ extern void PDESKBOX_redraw(ui_deskbox_t *self);
 /**
  * @brief Populate a deskbox object in-place.
  * @details This is used internally inside CreateDeskBox() and is normally not needed.
- * @x_syscall_num `0x10178`
+ * @x_syscall_num{0x10178}
  * @param self Unpopulated deskbox object.
  * @return The same object.
  */
@@ -122,11 +122,11 @@ extern ui_deskbox_t *DeskBox_construct(ui_deskbox_t *self);
 /**
  * @brief Helper to render the borders of a deskbox.
  * @details This is used internally inside PDESKBOX_draw() and is normally not needed.
- * @x_syscall_num `0x10179`
- * @param x0 @x_term x0
- * @param y0 @x_term y0
- * @param x1 @x_term x1
- * @param y1 @x_term y1
+ * @x_syscall_num{0x10179}
+ * @param x0 @x_term{x0}
+ * @param y0 @x_term{y0}
+ * @param x1 @x_term{x1}
+ * @param y1 @x_term{y1}
  * @param deskbox_flags 
  * @x_void_return
  * @see ui_deskbox_flag_e
@@ -141,7 +141,7 @@ extern void DrawDeskBoxBound(
 
 /**
  * @brief Update the command menu on a deskbox.
- * @x_syscall_num `0x1017a`
+ * @x_syscall_num{0x1017a}
  * @param deskbox The parent deskbox to attach the menu to.
  * @param cmdmenu Array of the new command menu entries.
  * @x_void_return
@@ -150,9 +150,9 @@ extern void ChangeCommandMenu(ui_deskbox_t *deskbox, const ui_menu_entry_t *cmdm
 
 /**
  * @brief Convenience method to add the function button to the title bar of a deskbox.
- * @x_syscall_num `0x10181`
+ * @x_syscall_num{0x10181}
  * @param self The parent deskbox to attach the button to.
- * @param tag @x_term tag
+ * @param tag @x_term{tag}
  * @param label Text label on the button.
  * @param event Event value assigned to the button.
  * @return The resulting button object.
@@ -166,7 +166,7 @@ extern ui_button_t *InsertTitleBarButton(
 
 /**
  * @brief Get the user-drawable area on a deskbox.
- * @x_syscall_num `0x10192`
+ * @x_syscall_num{0x10192}
  * @param[out] rect Result rectangle.
  * @param[in] from The deskbox object.
  * @x_void_return

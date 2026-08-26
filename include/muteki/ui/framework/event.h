@@ -78,7 +78,7 @@ typedef struct {
 
 /**
  * @brief Read current configuration of key event generator.
- * @x_syscall_num `0x10032`
+ * @x_syscall_num{0x10032}
  * @param[out] config The configuration struct for holding the exported configuration.
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
@@ -87,7 +87,7 @@ extern void GetSysKeyState(key_press_event_config_t *config);
 
 /**
  * @brief Configure key event generator.
- * @x_syscall_num `0x10033`
+ * @x_syscall_num{0x10033}
  * @param[in] config The configuration struct to be imported.
  * @x_void_return
  * @see key_press_event_config_t The config struct and details on the expected format.
@@ -101,7 +101,7 @@ extern void SetSysKeyState(const key_press_event_config_t *config);
  * generated if touch is not active. Due to this behavior, this function never blocks.
  * @note The name suggests that it is only for touch/pen event but it can also consume a key event, or anything
  * that is in the system event queue.
- * @x_syscall_num `0x1003b`
+ * @x_syscall_num{0x1003b}
  * @param[out] event A simplified event struct that contains only the fields related to input.
  * @retval 0 No event was consumed.
  * @retval 1 Event is consumed.
@@ -110,7 +110,7 @@ extern int GetPenEvent(ui_event_sys_t *event);
 
 /**
  * @brief Check whether or not there are any pending system UI events.
- * @x_syscall_num `0x1003c`
+ * @x_syscall_num{0x1003c}
  * @x_void_param
  * @retval 0 No event available, and touch is not active.
  * @retval 1 Some event is available, or touch is active.
@@ -119,14 +119,14 @@ extern int CheckPenEvent(void);
 
 /**
  * @brief Discard all unconsumed system UI events.
- * @x_syscall_num `0x1003d`
+ * @x_syscall_num{0x1003d}
  * @x_void
  */
 extern void ClearPenEvent(void);
 
 /**
  * @brief Produce a system UI event.
- * @x_syscall_num `0x1003e`
+ * @x_syscall_num{0x1003e}
  * @param event New system UI event.
  * @retval true Successfully signaled the subscribers.
  * @retval false Error occurred when signaling the subscribers.
@@ -140,7 +140,7 @@ extern int PutSystemEvent(ui_event_sys_t *event);
  * the system event queue.
  * @note This function will subscribe to the OS event of the UI event subsystem and will block when there is currently
  * no event to be processed.
- * @x_syscall_num `0x1003f`
+ * @x_syscall_num{0x1003f}
  * @param[out] event Pointer to a ::ui_event_t struct.
  * @retval true Some events were consumed and returned.
  * @retval false No event was consumed and returned.
@@ -153,7 +153,7 @@ extern bool GetEvent(ui_event_t *event);
  * This pops an event from the main event queue only without blocking.
  *
  * This is mostly used as a pass in GetEvent() internally.
- * @x_syscall_num `0x10040`
+ * @x_syscall_num{0x10040}
  * @param[out] event Event.
  * @retval true An event has been consumed.
  * @retval false No event has been consumed.
@@ -165,7 +165,7 @@ extern bool GetPendEvent(ui_event_t *event);
  * @details
  * The default is to allow all event types (`0xffffffff`).
  * If the corresponding bit is 0, the event processing with GetEvent() will stall until the bit is set back to 1.
- * @x_syscall_num `0x10041`
+ * @x_syscall_num{0x10041}
  * @param mask New event type bit mask of allowed event types.
  * @return The old event type bit mask.
  * @see ui_event_type_e List of event types.
@@ -174,7 +174,7 @@ extern unsigned int SetEventType(unsigned int mask);
 
 /**
  * @brief Get the current event type bit mask.
- * @x_syscall_num `0x10042`
+ * @x_syscall_num{0x10042}
  * @x_void_param
  * @return The current event type bit mask.
  */
@@ -182,7 +182,7 @@ extern unsigned int GetEventType(void);
 
 /**
  * @brief Produce an event in the main event queue.
- * @x_syscall_num `0x10043`
+ * @x_syscall_num{0x10043}
  * @param[in, out] event The event.
  * @retval true Successfully signaled the subscribers.
  * @retval false Attempt to produce an invalidated event, or failed to signal the subscribers.
@@ -193,7 +193,7 @@ extern bool PutEvent(ui_event_t *event);
  * @brief Produce an event in the main event queue (by values).
  * @details This zero-allocates a temporary event struct on the stack, sets the user-specified fields and then calls
  * PutEvent() to produce an event.
- * @x_syscall_num `0x10045`
+ * @x_syscall_num{0x10045}
  * @param type Event type.
  * @param value Raw 32-bit event value.
  * @param user_data User data pointer.
@@ -204,7 +204,7 @@ extern void PutEventExt(int type, unsigned int value, void *user_data);
 
 /**
  * @brief Peek pending events in the main event queue, and also special events.
- * @x_syscall_num `0x10046`
+ * @x_syscall_num{0x10046}
  * @param[out] event pointer to a ::ui_event_t struct.
  * @retval true Some events need to be consumed. This may be a special event that has no data. In that case
  * event.event_type is cleared.
@@ -215,14 +215,14 @@ extern bool TestPendEvent(ui_event_t *event);
 
 /**
  * @brief Empty all unconsumed events in the main event queue.
- * @x_syscall_num `0x10047`
+ * @x_syscall_num{0x10047}
  * @x_void
  */
 extern void ClearPendEvent(void);
 
 /**
  * @brief Reset the touch state tracker only.
- * @x_syscall_num `0x10048`
+ * @x_syscall_num{0x10048}
  * @x_void
  */
 extern void ClearPenState(void);
@@ -230,7 +230,7 @@ extern void ClearPenState(void);
 /**
  * @brief Invalidate an event struct.
  * @details This function zeros out ui_event_t::event_type and ui_event_t::event_source.
- * @x_syscall_num `0x10049`
+ * @x_syscall_num{0x10049}
  * @param[in, out] event Pointer to a ::ui_event_t struct.
  * @x_void_return
  */
@@ -242,14 +242,14 @@ extern void ClearEvent(ui_event_t *event);
  * touch state tracker.
  * @note This does not clear flags related to ::UI_EVENT_TYPE_INTERNAL. However a ::UI_EVENT_TYPE_INTERNAL event with
  * value ::UI_EVENT_INTERNAL_BYPASS will be cleared during the clearing of the system event queue.
- * @x_syscall_num `0x1004a`
+ * @x_syscall_num{0x1004a}
  * @x_void
  */
 extern void ClearAllEvents(void);
 
 /**
  * @brief Peek pending events in the system event queue.
- * @x_syscall_num `0x1004b`
+ * @x_syscall_num{0x1004b}
  * @param[out] event pointer to a ::ui_event_t struct.
  * @retval true Some events were processed.
  * @retval false No event was processed.
@@ -259,7 +259,7 @@ extern bool TestKeyEvent(ui_event_t *event);
 
 /**
  * @brief Manually set the state of the SHIFT toggle key.
- * @x_syscall_num `0x100ad`
+ * @x_syscall_num{0x100ad}
  * @param new_state The new state.
  * @return The previous state.
  * @see toggle_key_state_e Valid toggle key states.
@@ -268,7 +268,7 @@ extern unsigned short SetShiftState(unsigned short new_state);
 
 /**
  * @brief Manually set the state of the CAPS toggle key.
- * @x_syscall_num `0x100ae`
+ * @x_syscall_num{0x100ae}
  * @param new_state The new state.
  * @return The previous state.
  * @see toggle_key_state_e Valid toggle key states.
@@ -277,7 +277,7 @@ extern unsigned short SetCapsState(unsigned short new_state);
 
 /**
  * @brief Get the state of the SHIFT toggle key.
- * @x_syscall_num `0x100af`
+ * @x_syscall_num{0x100af}
  * @x_void_param
  * @return The current state.
  * @see toggle_key_state_e Valid toggle key states.
@@ -286,7 +286,7 @@ extern unsigned short GetShiftState(void);
 
 /**
  * @brief Get the state of the SHIFT toggle key.
- * @x_syscall_num `0x100af`
+ * @x_syscall_num{0x100af}
  * @x_void_param
  * @return The current state.
  * @see toggle_key_state_e Valid toggle key states.
@@ -295,7 +295,7 @@ extern unsigned short GetCapsState(void);
 
 /**
  * @brief Synchronously send an event to a recipient, bypassing the event queuing mechanism.
- * @x_syscall_num `0x10188`
+ * @x_syscall_num{0x10188}
  * @param[in, out] event The event. Must contain a valid ui_event_t::recipient.
  * @return true Event is consumed by the recipient.
  * @return false Event is not consumed by the recipient or recipient is `NULL`.
@@ -306,7 +306,7 @@ extern bool SendMessage(ui_event_t *event);
  * @brief Synchronously send an event to a recipient (by values).
  * @details This allocates a temporary event struct on the stack, sets the user-specified fields and then calls
  * SendMessage() to send the generated event.
- * @x_syscall_num `0x10189`
+ * @x_syscall_num{0x10189}
  * @param[in, out] recipient The UI component receiving the event.
  * @param event_type Event type.
  * @param value Raw 32-bit event value.

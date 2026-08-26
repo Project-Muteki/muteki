@@ -20,7 +20,7 @@ extern "C" {
 
 /**
  * @brief Draw a component.
- * @x_syscall_num `0x10166`
+ * @x_syscall_num{0x10166}
  * @param self The component object.
  * @x_void_return
  */
@@ -28,7 +28,7 @@ void PVIEW_draw(ui_component_t *self);
 
 /**
  * @brief Signal the parent container to restore pixels that were obstructed by this component.
- * @x_syscall_num `0x10167`
+ * @x_syscall_num{0x10167}
  * @param self The component object.
  * @x_void_return
  */
@@ -36,7 +36,7 @@ void PVIEW_EraseBackGround(ui_component_t *self);
 
 /**
  * @brief Handle incoming events.
- * @x_syscall_num `0x10168`
+ * @x_syscall_num{0x10168}
  * @param self The component object.
  * @param e Event.
  * @x_void_return
@@ -45,7 +45,7 @@ void PVIEW_handleEvent(ui_component_t *self, ui_event_t *e);
 
 /**
  * @brief Change the object `state` bitmask.
- * @x_syscall_num `0x10169`
+ * @x_syscall_num{0x10169}
  * @param self The component object.
  * @param mask Bits to set/clear.
  * @param set `true` if setting bits, `false` if clearing bits.

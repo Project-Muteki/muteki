@@ -151,7 +151,7 @@ struct ui_component_s {
      */
     void *user_data; // 0x24:0x2a
     /**
-     * @brief @x_term tag
+     * @brief @x_term{tag}
      */
     unsigned short tag;
     /**

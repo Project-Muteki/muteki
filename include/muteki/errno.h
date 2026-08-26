@@ -308,9 +308,9 @@ static inline unsigned short BXC_ERRNO_ERR(bxc_errno_t kerrno) {
  * API in Windows.
  * @param flags Flags. Only ::BXC_FORMAT_MESSAGE_FROM_SYSTEM and ::BXC_FORMAT_MESSAGE_ALLOCATE_BUFFER are supported.
  * In addition, ::BXC_FORMAT_MESSAGE_FROM_SYSTEM must be set.
- * @param _sbz0 @x_term sbz
- * @param _sbz1 @x_term sbz
- * @param _sbz2 @x_term sbz
+ * @param _sbz0 @x_term{sbz}
+ * @param _sbz1 @x_term{sbz}
+ * @param _sbz2 @x_term{sbz}
  * @param outbuf The output buffer.
  * If using ::BXC_FORMAT_MESSAGE_ALLOCATE_BUFFER, the pointer to the allocated buffer will be placed at this location.
  * Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer
@@ -343,7 +343,7 @@ extern bxc_errno_t OSGetLastError(void);
  * If the errno namespace is unset, it will also automatically set ::BXC_ERRNO_NS_APPLET before passing it to
  * OSSetLastError().
  *
- * @x_term require-krnllib
+ * @x_term{require}-krnllib
  *
  * @param err New errno value.
  * @x_void_return
@@ -356,7 +356,7 @@ extern void _SetLastError(bxc_errno_t err);
  * If kernel errno is set, the errno is returned with ::BXC_ERRNO_NS_KERNEL bit set. Otherwise it will return
  * the result from OSSetLastError() with ::BXC_ERRNO_NS_USER bit set.
  *
- * @x_term require-krnllib
+ * @x_term{require}-krnllib
  *
  * @x_void_param
  * @return The current errno value from either kernel or OSSetLastError().

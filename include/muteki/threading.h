@@ -233,7 +233,7 @@ struct bxc_queue_s {
 
 /**
  * @brief Create a new thread.
- * @x_syscall_num `0x10000`
+ * @x_syscall_num{0x10000}
  * @param func Function to execute in the new thread.
  * @param user_data User data for the thread.
  * @param stack_size The size of the thread stack.
@@ -244,10 +244,10 @@ extern bxc_thread_t *OSCreateThread(bxc_thread_func_t func, void *user_data, siz
 
 /**
  * @brief Terminate a thread.
- * @x_syscall_num `0x10001`
+ * @x_syscall_num{0x10001}
  * @param thr Thread to terminate.
  * @param exit_code The exit code.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern int OSTerminateThread(bxc_thread_t *thr, int exit_code);
 
@@ -259,18 +259,18 @@ extern int OSTerminateThread(bxc_thread_t *thr, int exit_code);
  * allocating the thread with OSCreateThread(). User can move threads to these reserved slots by calling the
  * OSSetThreadPriority() function.
  *
- * @x_syscall_num `0x10002`
+ * @x_syscall_num{0x10002}
  * @param thr The thread descriptor.
  * @param new_slot The new slot number.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  * @see OSGetThreadPriority
  */
  extern bool OSSetThreadPriority(bxc_thread_t *thr, short new_slot);
 
 /**
  * @brief Get the thread priority (slot number).
- * @x_syscall_num `0x10003`
+ * @x_syscall_num{0x10003}
  * @param thr The thread descriptor.
  * @return The slot number of the thread.
  */
@@ -278,44 +278,44 @@ extern short OSGetThreadPriority(bxc_thread_t *thr);
 
 /**
  * @brief Suspend a thread from outside of that thread.
- * @x_syscall_num `0x10004`
+ * @x_syscall_num{0x10004}
  * @param thr The thread descriptor.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSSuspendThread(bxc_thread_t *thr);
 
 /**
  * @brief Start/restart a previously suspended thread.
- * @x_syscall_num `0x10005`
+ * @x_syscall_num{0x10005}
  * @param thr The thread descriptor.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSResumeThread(bxc_thread_t *thr);
 
 /**
  * @brief Force wake up a sleeping thread
- * @x_syscall_num `0x10006`
+ * @x_syscall_num{0x10006}
  * @details This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended.
  * @param thr The thread descriptor.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSWakeUpThread(bxc_thread_t *thr);
 
 /**
  * @brief Terminate current thread.
- * @x_syscall_num `0x10007`
+ * @x_syscall_num{0x10007}
  * @details This calls OSTerminateThread() with the descriptor of current thread as `thr`.
  * @param exit_code The exit code.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
  extern int OSExitThread(int exit_code);
 
 /**
  * @brief Sleep for `millis` milliseconds.
- * @x_syscall_num `0x10008`
+ * @x_syscall_num{0x10008}
  * @param millis Time to sleep in milliseconds.
  * @x_void_return
  */
@@ -323,7 +323,7 @@ extern void OSSleep(short millis);
 
 /**
  * @brief Create an semaphore descriptor.
- * @x_syscall_num `0x10009`
+ * @x_syscall_num{0x10009}
  * @param init_ctr Initial counter value.
  * @return The semaphore descriptor.
  */
@@ -331,7 +331,7 @@ extern bxc_semaphore_t *OSCreateSemaphore(short init_ctr);
 
 /**
  * @brief Wait and acquire a semaphore.
- * @x_syscall_num `0x1000a`
+ * @x_syscall_num{0x1000a}
  * @param semaphore The semaphore context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
@@ -340,25 +340,25 @@ extern bxc_wait_result_t OSWaitForSemaphore(bxc_semaphore_t *semaphore, short ti
 
 /**
  * @brief Release a semaphore.
- * @x_syscall_num `0x1000b`
+ * @x_syscall_num{0x1000b}
  * @param semaphore The semaphore context.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSReleaseSemaphore(bxc_semaphore_t *semaphore);
 
 /**
  * @brief Destroy a semaphore.
- * @x_syscall_num `0x1000c`
+ * @x_syscall_num{0x1000c}
  * @param semaphore The semaphore context.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSCloseSemaphore(bxc_semaphore_t *semaphore);
 
 /**
  * @brief Create an event descriptor.
- * @x_syscall_num `0x1000d`
+ * @x_syscall_num{0x1000d}
  * @param latch_on Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved.
  * @param flag The initial flag value. Can be either 0 or 1.
  * @return The event descriptor.
@@ -367,7 +367,7 @@ extern bxc_event_t *OSCreateEvent(short latch_on, int flag);
 
 /**
  * @brief Wait for an event.
- * @x_syscall_num `0x1000e`
+ * @x_syscall_num{0x1000e}
  * @param event The event context.
  * @param timeout Timeout in OSSleep() units.
  * @return The result.
@@ -377,35 +377,35 @@ extern bxc_wait_result_t OSWaitForEvent(bxc_event_t *event, short timeout);
 /**
  * @brief Set the event flag.
  * @details This sets the event_t::flag to 1.
- * @x_syscall_num `0x1000f`
+ * @x_syscall_num{0x1000f}
  * @param event The event context.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSSetEvent(bxc_event_t *event);
 
 /**
  * @brief Reset the event flag.
  * @details This sets the event_t::flag to 0.
- * @x_syscall_num `0x10010`
+ * @x_syscall_num{0x10010}
  * @param event The event context.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSResetEvent(bxc_event_t *event);
 
 /**
  * @brief Destroy the event descriptor.
- * @x_syscall_num `0x10011`
+ * @x_syscall_num{0x10011}
  * @param event The event context.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSCloseEvent(bxc_event_t *event);
 
 /**
  * @brief Initialize a critical section descriptor.
- * @x_syscall_num `0x10012`
+ * @x_syscall_num{0x10012}
  * @param[out] cs The critical section descriptor.
  * @x_void_return
  */
@@ -418,7 +418,7 @@ extern void OSInitCriticalSection(bxc_cs_t *cs);
  * trying to enter the same context, but it will let repeated entry attempts initiated by the same thread to pass
  * through. The context is released when all of the entries are reverted by a OSLeaveCriticalSection() call.
  *
- * @x_syscall_num `0x10013`
+ * @x_syscall_num{0x10013}
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
  */
@@ -426,7 +426,7 @@ extern void OSEnterCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Leave/release a critical section.
- * @x_syscall_num `0x10014`
+ * @x_syscall_num{0x10014}
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
  */
@@ -434,7 +434,7 @@ extern void OSLeaveCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Destroy a critical section descriptor.
- * @x_syscall_num `0x10015`
+ * @x_syscall_num{0x10015}
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
  */
@@ -442,7 +442,7 @@ extern void OSDeleteCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Create a message queue descriptor.
- * @x_syscall_num `0x10018`
+ * @x_syscall_num{0x10018}
  * @param size Size of the queue in number of messages (will use `sizeof(`::message_queue_message_t`) * size` bytes of
  * memory).
  * @return The message queue descriptor.
@@ -451,50 +451,50 @@ extern bxc_queue_t *OSCreateMsgQue(unsigned short size);
 
 /**
  * @brief Push a message into the queue.
- * @x_syscall_num `0x10019`
+ * @x_syscall_num{0x10019}
  * @param queue The message queue descriptor.
  * @param message The message being pushed.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSPostMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message);
 
 /**
  * @brief Push a message into the queue and reschedule immediately.
- * @x_syscall_num `0x1001a`
+ * @x_syscall_num{0x1001a}
  * @param queue The message queue descriptor.
  * @param message The message being pushed.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSSendMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message);
 
 /**
  * @brief Peek the bottom of the queue without popping the message.
- * @x_syscall_num `0x1001b`
+ * @x_syscall_num{0x1001b}
  * @param queue The message queue descriptor.
  * @param message The result message.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSPeekMsgQue(bxc_queue_t *queue, bxc_queue_message_t *message);
 
 /**
  * @brief Pop a message from the queue.
- * @x_syscall_num `0x1001c`
+ * @x_syscall_num{0x1001c}
  * @param queue The message queue descriptor.
  * @param message The result message.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSGetMsgQue(bxc_queue_t *queue, bxc_queue_message_t *message);
 
 /**
  * @brief Destroy a message queue descriptor.
- * @x_syscall_num `0x1001d`
+ * @x_syscall_num{0x1001d}
  * @param queue The message queue descriptor.
- * @retval true @x_term ok
- * @retval false @x_term ng
+ * @retval true @x_term{ok}
+ * @retval false @x_term{ng}
  */
 extern bool OSCloseMsgQue(bxc_queue_t *queue);
 
@@ -515,9 +515,9 @@ extern bool OSCloseMsgQue(bxc_queue_t *queue);
  * }
  * @endcode
  *
- * @x_term require-krnllib
+ * @x_term{require}-krnllib
  *
- * @x_syscall_num `0x200a2`
+ * @x_syscall_num{0x200a2}
  * @x_void_param
  * @return The current running thread's priority.
  */

@@ -201,29 +201,29 @@ struct ui_filepicker_context_s {
 
 /**
  * @brief Show a file picker in open mode.
- * @x_syscall_num `0x101d2`
+ * @x_syscall_num{0x101d2}
  * @param ctx The file picker context.
- * @return true @x_term ok
- * @return false @x_term ng
+ * @return true @x_term{ok}
+ * @return false @x_term{ng}
  */
 extern bool _GetOpenFileName(ui_filepicker_context_t *ctx);
 
 /**
  * @brief Show a file picker in save mode.
- * @x_syscall_num `0x101d3`
+ * @x_syscall_num{0x101d3}
  * @param ctx The file picker context.
- * @return true @x_term ok
- * @return false @x_term ng
+ * @return true @x_term{ok}
+ * @return false @x_term{ng}
  */
 extern bool _GetSaveFileName(ui_filepicker_context_t *ctx);
 
 /**
  * @brief Read the next path from a context struct.
- * @x_syscall_num `0x101d4`
+ * @x_syscall_num{0x101d4}
  * @param ctx The file picker context.
  * @param[out] out UTF16 string. Recommended to be at least 260 CUs long.
- * @retval 0 @x_term ok
- * @retval 1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval 1 @x_term{ng}
  */
 extern int _GetNextFileName(ui_filepicker_context_t *ctx, UTF16 *out);
 

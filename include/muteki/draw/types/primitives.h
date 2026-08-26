@@ -23,13 +23,13 @@ extern "C" {
  * @details The area is double-inclusive (i.e. `{0, 0, 479, 271}` represents an area of 480x272 px).
  */
 struct lcd_rect_s {
-    /** @brief @x_term x0 */
+    /** @brief @x_term{x0} */
     short x0; // (lcd_t[0x6c:0x6e])
-    /** @brief @x_term y0 */
+    /** @brief @x_term{y0} */
     short y0; // (lcd_t[0x6e:0x70])
-    /** @brief @x_term x1 */
+    /** @brief @x_term{x1} */
     short x1; // (lcd_t[0x70:0x72])
-    /** @brief @x_term y1 */
+    /** @brief @x_term{y1} */
     short y1; // (lcd_t[0x72:0x74])
 }; // 0x8 bytes
 

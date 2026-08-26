@@ -82,8 +82,8 @@ extern size_t _fwrite(const void *ptr, size_t size, size_t nmemb, bxc_fs_file_t 
  * @param stream Pointer reference returned by _afopen() or _wfopen().
  * @param offset Seek offset.
  * @param whence Treat offset as relative to start of file/current offset/end of file.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  * @see bxc_seek_whence_e
  */
 extern int __fseek(bxc_fs_file_t *stream, long offset, int whence);
@@ -100,8 +100,8 @@ extern long _ftell(bxc_fs_file_t *stream);
  * @brief Flush the cached writes to the file.
  * @details Analogous to the fflush() function in POSIX.
  * @param stream Pointer reference returned by _afopen() or _wfopen().
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int __fflush(bxc_fs_file_t *stream);
 

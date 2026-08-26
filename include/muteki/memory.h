@@ -59,7 +59,7 @@ extern void _lfree(void *ptr);
 
 /**
  * @brief Return the size of available memory.
- * @details @x_term require-krnllib
+ * @details @x_term{require}-krnllib
  * @x_void_param
  * @return Size of available memory.
  */

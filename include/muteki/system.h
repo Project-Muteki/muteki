@@ -73,10 +73,10 @@ typedef void (*timer1_callback_t)(void);
 /**
  * @brief Play a tone using the built in piezo speaker.
  * @details This will block the execution.
- * @x_syscall_num `0x1002c`
+ * @x_syscall_num{0x1002c}
  * @param frequency Frequency of the tone in Hz.
  * @param duration Duration of the tone in milliseconds.
- * @retval true @x_term ok
+ * @retval true @x_term{ok}
  */
 extern bool Buzzer(int frequency, short duration);
 
@@ -87,7 +87,7 @@ extern bool Buzzer(int frequency, short duration);
  * @note On all Arm-based machines I tested this is always emulated using a thread instead of using real hardware
  * timers. For TLCS-900-based machines this is likely different and it's unknown whether the callback will be called
  * in a way that's safe to the rest of the OS (e.g. calling the callback directly in timer ISR could break the OS).
- * @x_syscall_num `0x1002e`
+ * @x_syscall_num{0x1002e}
  * @param callback The callback function called when timer fires, or `NULL` to unset a previously set callback.
  * @param interval An interval value in 10 milliseconds increments (1 means 10ms, 2 means 20, etc.), or defaulting to
  * 1 when set to 0.
@@ -97,7 +97,7 @@ extern void SetTimer1IntHandler(timer1_callback_t callback, short interval);
 
 /**
  * @brief Get the Timer1 interrupt handler and custom interval.
- * @x_syscall_num `0x10030`
+ * @x_syscall_num{0x10030}
  * @param[out] interval A pointer to a variable that will hold the timer interval. Must not be NULL.
  * @return The callback function previously registered with SetTimer1IntHandler().
  */
@@ -105,7 +105,7 @@ extern timer1_callback_t GetTimer1IntHandler(short *interval);
 
 /**
  * @brief Power off the system immediately.
- * @x_syscall_num `0x10032`
+ * @x_syscall_num{0x10032}
  * @x_void_param
  * @x_void_return
  */
@@ -113,7 +113,7 @@ extern void SysPowerOff(void);
 
 /**
  * @brief Get the system power source type.
- * @x_syscall_num `0x10035`
+ * @x_syscall_num{0x10035}
  * @x_void_param
  * @return The system power source type.
  * @see ::power_source_type_e
@@ -124,7 +124,7 @@ extern int GetBatteryType(void);
  * @brief Get the DOS 8.3 path to the system configuration directory on user data partition.
  * @details This function will also ensure that the path exists before returning it. Although if the function fails,
  * no directory will be created.
- * @x_syscall_num `0x1010e`
+ * @x_syscall_num{0x1010e}
  * @param buffer The buffer to hold the path.
  * @param size The size of the buffer.
  * @return The buffer that now contains the path, or `NULL` if the function fails.
@@ -133,13 +133,13 @@ extern char *_GetSystemDirectory(char *buffer, size_t size);
 
 /**
  * @brief Read the battery voltage and level.
- * @details @x_term require-krnllib
+ * @details @x_term{require}-krnllib
  * @warning On some versions of Besta RTOS, the return value may be undefined if the struct that `output` points to is
  * not zero filled.
- * @x_syscall_num `0x2001a`
+ * @x_syscall_num{0x2001a}
  * @param sbz Unknown. Should be set to 0.
  * @param output Pointer to a battery status info struct that will contain the returned values.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern short GetBatteryValue(short sbz, power_battery_status_t *output);
 

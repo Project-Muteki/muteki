@@ -249,7 +249,7 @@ struct pcm_decoder_buffer_s {
  * ClosePCMCodec(pcmdesc);
  * @endcode
  *
- * @x_syscall_num `0x10250`
+ * @x_syscall_num{0x10250}
  *
  * @param direction Direction. Can either be input (record) or output (playback).
  * @param sample_rate Sample rate.
@@ -262,7 +262,7 @@ extern pcm_codec_context_t *OpenPCMCodec(int direction, int sample_rate, int for
 
 /**
  * @brief Destroy a PCM codec context.
- * @x_syscall_num `0x10251`
+ * @x_syscall_num{0x10251}
  * @param ctx The context.
  */
 extern void ClosePCMCodec(pcm_codec_context_t *ctx);

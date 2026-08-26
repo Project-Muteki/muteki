@@ -24,7 +24,7 @@ static const unsigned int OSDEP_KTLS_KEY_MAX = sizeof(((bxc_thread_t *) NULL)->u
  * @brief Initialize the TLS container on a specific thread.
  *
  * @param thr Pointer to a thread descriptor.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern int osdep_ktls_init(bxc_thread_t *thr);
 
@@ -53,8 +53,8 @@ extern void *osdep_ktls_getvalue(bxc_thread_t *thr, unsigned int key);
  * @param thr Pointer to a thread descriptor.
  * @param key Numerical key. Must be in the range of `(0, 8)`.
  * @param value Value to be stored into the TLS slot.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng}
  */
 extern int osdep_ktls_set(bxc_thread_t *thr, unsigned int key, void *value);
 
@@ -73,7 +73,7 @@ extern void *osdep_ktls_alloc(bxc_thread_t *thr, unsigned int key, size_t bytes)
  *
  * @param thr Pointer to a thread descriptor.
  * @param key Numerical key. Must be in the range of `(0, 8)`.
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern int osdep_ktls_free(bxc_thread_t *thr, unsigned int key);
 
@@ -81,7 +81,7 @@ extern int osdep_ktls_free(bxc_thread_t *thr, unsigned int key);
  * @brief Initialize the TLS container on the current thread.
  *
  * @x_void_param
- * @retval 0 @x_term ok
+ * @retval 0 @x_term{ok}
  */
 extern int osdep_ktls_init_self(void);
 
@@ -106,8 +106,8 @@ extern void *osdep_ktls_getvalue_self(unsigned int key);
  *
  * @param key Numerical key. Must be in the range of `(0, 8)`.
  * @param value Value to be stored into the TLS slot.
- * @retval 0 @x_term ok
- * @retval -1 @x_term ng 
+ * @retval 0 @x_term{ok}
+ * @retval -1 @x_term{ng} 
  */
 extern int osdep_ktls_set_self(unsigned int key, void *value);
 
@@ -124,7 +124,7 @@ extern void *osdep_ktls_alloc_self(unsigned int key, size_t bytes);
  * @brief Free memory previously allocated by osdep_ktls_alloc().
  *
  * @param key Numerical key. Must be in the range of `(0, 8)`.
- * @retval 0 @x_term ok 
+ * @retval 0 @x_term{ok} 
  */
 extern int osdep_ktls_free_self(unsigned int key);
 
