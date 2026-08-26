@@ -12,8 +12,8 @@ on:
   workflow_dispatch:
 
 env:
-  DOXYGEN_VER: '1.9.8'
-  DOXYGEN_RELEASE_TAG: 'Release_1_9_8'
+  DOXYGEN_VER: '1.18.0'
+  DOXYGEN_RELEASE_TAG: 'Release_1_18_0'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
