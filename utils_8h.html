@@ -174,7 +174,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="alcd_8h_html_adfc2c8cc6a6608027a65f969e93aa110"><div class="ttname"><a href="lcd_8h.html#adfc2c8cc6a6608027a65f969e93aa110">GetActiveLCD</a></div><div class="ttdeci">lcd_t * GetActiveLCD(void)</div><div class="ttdoc">Get the current active LCD descriptor.</div></div>
 <div class="ttc" id="astructlcd__base__s_html_aeb44786ce39347b44fa9f4fa6bdb270a"><div class="ttname"><a href="structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a">lcd_base_s::surface</a></div><div class="ttdeci">lcd_surface_t * surface</div><div class="ttdoc">Surface linked to the LCD.</div><div class="ttdef"><b>Definition</b> lcd.h:246</div></div>
 <div class="ttc" id="autils_8h_html_ad8e4f8b8a49b1621a4ab287076b859de"><div class="ttname"><a href="#ad8e4f8b8a49b1621a4ab287076b859de">GetActiveVRamAddress</a></div><div class="ttdeci">lcd_surface_t * GetActiveVRamAddress(void)</div><div class="ttdoc">Get the descriptor of the currently active LCD surface.</div></div>
-</div><!-- fragment --><p> -krnllib </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x20022</span></dd></dl>
+</div><!-- fragment --><p>   Requires <span class="tt">-lkrnllib</span> when dynamically linking with the shims.  </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x20022</span></dd></dl>
 <dl class="section user"><dt>Parameters</dt><dd>None.  </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The LCD surface descriptor. </dd></dl>
 

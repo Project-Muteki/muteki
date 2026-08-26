@@ -764,7 +764,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="amuteki_2threading_8h_html"><div class="ttname"><a href="muteki_2threading_8h.html">threading.h</a></div><div class="ttdoc">Native threading API.</div></div>
 <div class="ttc" id="amuteki_2threading_8h_html_aa9503bd24a31b76eea7b6db739eecf45"><div class="ttname"><a href="#aa9503bd24a31b76eea7b6db739eecf45">OSGetCurrentlyRunningTCBPrio</a></div><div class="ttdeci">short OSGetCurrentlyRunningTCBPrio(void)</div><div class="ttdoc">Get the current running thread&#39;s priority (slot number).</div></div>
 <div class="ttc" id="amuteki_2threading_8h_html_acbe9d815f4fec04053e185b3a6bfb180"><div class="ttname"><a href="#acbe9d815f4fec04053e185b3a6bfb180">OSGetThreadPriority</a></div><div class="ttdeci">short OSGetThreadPriority(bxc_thread_t *thr)</div><div class="ttdoc">Get the thread priority (slot number).</div></div>
-</div><!-- fragment --><p>-krnllib</p>
+</div><!-- fragment --><p>Requires <span class="tt">-lkrnllib</span> when dynamically linking with the shims.  </p>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x200a2</span></dd></dl>
 <dl class="section user"><dt>Parameters</dt><dd>None.  </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The current running thread's priority. </dd></dl>
@@ -1497,8 +1497,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Force wake up a sleeping thread. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10006</span></dd></dl>
-<p>This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This expire the sleep counter of a thread immediately and reschedule if the thread is not suspended. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10006</span> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thr</td><td>The thread descriptor. </td></tr>
   </table>

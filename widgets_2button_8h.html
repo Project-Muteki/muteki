@@ -196,8 +196,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
     <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
-    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).   -auto </td></tr>
-    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).   -auto </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the function automatically decide the size.  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive), or 0 to let the function automatically decide the size.  </td></tr>
     <tr><td class="paramname">label</td><td>UTF-16 encoded string to be used as a label. </td></tr>
     <tr><td class="paramname">event</td><td>Custom event to be sent on button press. </td></tr>
     <tr><td class="paramname">flags</td><td>Flags. Valid options seem to be 2, 4, 0x40. </td></tr>

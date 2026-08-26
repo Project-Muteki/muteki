@@ -336,7 +336,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read the battery voltage and level. </p>
-<p>-krnllib </p><dl class="section warning"><dt>Warning</dt><dd>On some versions of Besta RTOS, the return value may be undefined if the struct that <span class="tt">output</span> points to is not zero filled. </dd></dl>
+<p>Requires <span class="tt">-lkrnllib</span> when dynamically linking with the shims.  </p>
+<dl class="section warning"><dt>Warning</dt><dd>On some versions of Besta RTOS, the return value may be undefined if the struct that <span class="tt">output</span> points to is not zero filled. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x2001a</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
