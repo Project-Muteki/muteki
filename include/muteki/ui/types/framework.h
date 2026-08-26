@@ -67,29 +67,30 @@ enum ui_component_flag_e {
     UI_COMPONENT_FLAG_DESKBOX_ALLOW_APP_KEYS = 0x8000,
 };
 
-struct ui_component_s;
-struct ui_event_std_s;
-struct ui_event_prime_s;
-struct ui_event_ext_s;
-struct ui_event_ext_prime_s;
-struct ui_event_sys_s;
-struct ui_multipress_event_s;
-struct ui_group_s;
-
+/** @brief ui_component_s */
 typedef struct ui_component_s ui_component_t;
+/** @brief ui_event_std_s */
 typedef struct ui_event_std_s ui_event_std_t;
+/** @brief ui_event_prime_s */
 typedef struct ui_event_prime_s ui_event_prime_t;
+/** @brief ui_event_ext_s */
 typedef struct ui_event_ext_s ui_event_ext_t;
+/** @brief ui_event_ext_prime_s */
 typedef struct ui_event_ext_prime_s ui_event_ext_prime_t;
+/** @brief ui_event_sys_s */
 typedef struct ui_event_sys_s ui_event_sys_t;
+/** @brief ui_multipress_event_s */
 typedef struct ui_multipress_event_s ui_multipress_event_t;
+/** @brief ui_group_s */
 typedef struct ui_group_s ui_group_t;
 
 #if defined(MUTEKI_HAS_PRIME_UI_EVENT) && MUTEKI_HAS_PRIME_UI_EVENT == 1
 #define ui_event_s ui_event_prime_s
+/** @brief ui_event_prime_s */
 typedef struct ui_event_prime_s ui_event_t;
 #else
 #define ui_event_s ui_event_std_s
+/** @brief ui_event_std_s */
 typedef struct ui_event_std_s ui_event_t;
 #endif
 
@@ -196,7 +197,7 @@ struct ui_group_s {
      */
     void (*on_redraw)(ui_group_t *self);  // 0x3c:0x40
     /**
-     * @brief Find the component that has ::current as its next component.
+     * @brief Find the component that has ui_group_s::current as its next component.
      * @see PGROUP_preView
      */
     ui_component_t *(*on_find_previous)(ui_group_t *self);  // 0x40:0x44
@@ -206,15 +207,15 @@ struct ui_group_s {
      */
     ui_component_t *(*on_set_current)(ui_group_t *self, ui_component_t *child);  // 0x44:0x48
     /**
-     * @brief Insert a new component after ::on_find_previous.
+     * @brief Insert a new component after ui_group_s::on_find_previous.
      * @see PGROUP_insert
      */
     void (*on_insert)(ui_group_t *self, ui_component_t *child);  // 0x48:0x4c
     /**
      * @brief Execution result.
-     * @details The default ::on_exec implementation will keep executing until this value is no longer 0, or exit word is
-     * allowed and has been set to a non-zero value. Thus a value of 0 returned by ExecView() indicates that the
-     * execution has been interrupted by an exit word.
+     * @details The default ui_group_s::on_exec implementation will keep executing until this value is no longer 0,
+     * or exit word is allowed and has been set to a non-zero value. Thus a value of 0 returned by ExecView()
+     * indicates that the execution has been interrupted by an exit word.
      */
     int execution_result;  // 0x4c:0x50
 };
@@ -249,13 +250,15 @@ struct ui_multipress_event_s {
         struct {
             /**
              * @brief The X coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * @details Only available when ui_multipress_event_s::type is
+             * ::UI_EVENT_TYPE_TOUCH_BEGIN,
              * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
              */
             unsigned short touch_x;
             /**
              * @brief The Y coordinate of where the touch event is located, in pixels.
-             * @details Only available when ::type is ::UI_EVENT_TYPE_TOUCH_BEGIN,
+             * @details Only available when ui_multipress_event_s::type is
+             * ::UI_EVENT_TYPE_TOUCH_BEGIN,
              * ::UI_EVENT_TYPE_TOUCH_MOVE, or ::UI_EVENT_TYPE_TOUCH_END.
              */
             unsigned short touch_y;

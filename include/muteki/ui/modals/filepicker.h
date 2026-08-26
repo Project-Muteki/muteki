@@ -47,7 +47,9 @@ enum ui_filepicker_flag_e {
     FILEPICKER_USE_MB=0x40000,
 };
 
-struct ui_filepicker_context_s;
+/**
+ * @brief The file picker context type.
+ */
 typedef struct ui_filepicker_context_s ui_filepicker_context_t;
 
 /**

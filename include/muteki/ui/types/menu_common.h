@@ -66,6 +66,11 @@ enum ui_menu_entry_attribute_e {
 };
 
 /**
+ * @brief End of menu entry record.
+ */
+#define UI_MENU_ENTRY_END { .label_wide = _BUL(""), .event = 0, .attributes = 0 }
+
+/**
  * @brief Menu entry struct used by various menu widgets.
  * @details
  * Normally should be used in an empty-record-terminated array. For example:
@@ -73,14 +78,14 @@ enum ui_menu_entry_attribute_e {
  * @code{.c}
  * const ui_menu_entry_t MENU[] = {
  *     { .label_wide = _BUL("Item"), .event = 0x10000, .attributes = 0 },
- *     { .label_wide = NULL, .event = 0, .attributes = 0 },  // or UI_MENU_ENTRY_END
+ *     { .label_wide = _BUL(""), .event = 0, .attributes = 0 },  // or UI_MENU_ENTRY_END
  * };
  * @endcode
  *
  * ui_menu_entry_s::attributes defines extra attributes that apply to the menu entries. Some attributes are exclusive
  * to certain subtype of menu widgets.
  */
-struct ui_menu_entry_s {
+typedef struct ui_menu_entry_s {
     union {
         /**
          * @brief UTF-16-encoded label text.
@@ -104,9 +109,7 @@ struct ui_menu_entry_s {
      * @brief Unknown. Probably padding bytes.
      */
     short unk_0x36;
-};
-
-typedef struct ui_menu_entry_s ui_menu_entry_t;
+} ui_menu_entry_t;
 
 #ifdef __cplusplus
 } // extern "C"

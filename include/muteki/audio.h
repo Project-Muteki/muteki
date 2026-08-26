@@ -60,20 +60,22 @@ enum pcm_format_e {
  */
 const int SAMPLE_RATE_AUTO = -1;
 
-struct device_service_pcm_s;
-struct pcm_config_s;
-struct pcm_codec_context_s;
-struct pcm_state_s;
-struct pcm_frame_s;
-struct pcm_decoder_buffer_s;
-
+/** @brief device_service_pcm_s */
 typedef struct device_service_pcm_s device_service_pcm_t;
+/** @brief pcm_config_s */
 typedef struct pcm_config_s pcm_config_t;
+/** @brief pcm_codec_context_s */
 typedef struct pcm_codec_context_s pcm_codec_context_t;
+/** @brief pcm_state_s */
 typedef struct pcm_state_s pcm_state_t;
+/** @brief pcm_frame_s */
 typedef struct pcm_frame_s pcm_frame_t;
+/** @brief pcm_decoder_buffer_s */
 typedef struct pcm_decoder_buffer_s pcm_decoder_buffer_t;
 
+/**
+ * @brief Codec function.
+ */
 typedef void (*pcm_codec_func_t)(device_service_pcm_t *pcm, pcm_decoder_buffer_t *src, pcm_decoder_buffer_t *dest);
 
 /**

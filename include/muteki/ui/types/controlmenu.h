@@ -57,6 +57,11 @@ enum ui_controlmenu_layout_e {
 };
 
 /**
+ * @brief Control menu type.
+ */
+typedef struct ui_controlmenu_s ui_controlmenu_t;
+
+/**
  * @brief Control menu struct.
  */
 struct ui_controlmenu_s {
@@ -92,8 +97,6 @@ struct ui_controlmenu_s {
      */
     unsigned short unk_0x42;
 };
-
-typedef struct ui_controlmenu_s ui_controlmenu_t;
 
 #ifdef __cplusplus
 } // extern "C"

@@ -134,23 +134,24 @@ enum stroke_predefined_dash_e {
     DASH_CUSTOM = 0x100,
 };
 
-struct lcd_cursor_s;
-struct lcd_draw_s;
-struct lcd_lock_s;
-struct lcd_base_s;
-struct lcd_thread_safe_s;
-
+/** @brief lcd_cursor_s */
 typedef struct lcd_cursor_s lcd_cursor_t;
+/** @brief lcd_draw_s */
 typedef struct lcd_draw_s lcd_draw_t;
+/** @brief lcd_lock_s */
 typedef struct lcd_lock_s lcd_lock_t;
+/** @brief lcd_base_s */
 typedef struct lcd_base_s lcd_base_t;
+/** @brief lcd_thread_safe_s */
 typedef struct lcd_thread_safe_s lcd_thread_safe_t;
 
 #if defined(MUTEKI_HAS_THREAD_SAFE_LCD) && MUTEKI_HAS_THREAD_SAFE_LCD == 1
 #define lcd_s lcd_thread_safe_s
+/** @brief lcd_thread_safe_s */
 typedef struct lcd_thread_safe_s lcd_t;
 #else
 #define lcd_s lcd_base_s
+/** @brief lcd_base_s */
 typedef struct lcd_base_s lcd_t;
 #endif
 

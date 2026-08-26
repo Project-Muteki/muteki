@@ -47,7 +47,7 @@ ui_controlmenu_t *CreateControlMenu(
 
 /**
  * @brief Default draw callback of control menu.
- * @x_syscal_num `0x10164`
+ * @x_syscall_num{0x10164}
  * @param self The control menu object.
  * @x_void_return
  */
@@ -55,7 +55,7 @@ void PCONTROLMENU_draw(ui_controlmenu_t *self);
 
 /**
  * @brief Default event handler of control menu.
- * @x_syscal_num `0x10165`
+ * @x_syscall_num{0x10165}
  * @param self The control menu object.
  * @param event The incoming event.
  * @x_void_return

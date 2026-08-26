@@ -123,7 +123,7 @@ enum lcd_surface_encoding_e {
  * @brief Descriptor of an LCD drawing surface or hardware framebuffer.
  * @details This contains format description of the pixel/framebuffer and a pointer to the actual buffer.
  */
-struct lcd_surface_s {
+typedef struct lcd_surface_s {
     /**
      * @brief Header magic.
      * @details Always `"PX"` without NUL.
@@ -162,9 +162,7 @@ struct lcd_surface_s {
      * @details The actual format varies and depends on the parameters provided above.
      */
     void *buffer; // 16:20
-}; // 20 bytes
-
-typedef struct lcd_surface_s lcd_surface_t;
+} lcd_surface_t; // 20 bytes
 
 #ifdef __cplusplus
 } // extern "C"

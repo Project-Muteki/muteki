@@ -78,7 +78,7 @@ enum font_type_e {
 /**
  * @brief Font rendering routine common states.
  */
-struct font_info_s {
+typedef struct font_info_s {
     /**
      * @brief Font type.
      * @see font_type_e
@@ -106,9 +106,7 @@ struct font_info_s {
      */
     short unk_0xc; // 0xc:0xe (lcd[0x40:0x42])
     short unk_0xe[13]; // 0xe:0x28 (lcd[0x42:0x5c])
-}; // 0x28 bytes
-
-typedef struct font_info_s font_info_t;
+} font_info_t; // 0x28 bytes
 
 #ifdef __cplusplus
 } // extern "C"

@@ -45,7 +45,9 @@ static inline unsigned int ui_button_layout_from_text_layout(enum ui_text_layout
     return ((unsigned int) text_layout) << 22;
 }
 
-struct ui_button_s;
+/**
+ * @brief Button widget type.
+ */
 typedef struct ui_button_s ui_button_t;
 
 /**

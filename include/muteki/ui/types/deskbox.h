@@ -78,7 +78,9 @@ enum ui_deskbox_flag_e {
     UI_DESKBOX_FLAG_NO_CLOSE_BUTTON = 0x80000,
 };
 
-struct ui_deskbox_s;
+/**
+ * @brief Deskbox container type.
+ */
 typedef struct ui_deskbox_s ui_deskbox_t;
 
 /**

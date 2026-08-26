@@ -41,7 +41,7 @@ ui_menufield_t *CreateMenuField(
 
 /**
  * @brief Default draw callback of menu field.
- * @x_syscal_num `0x10162`
+ * @x_syscall_num{0x10162}
  * @param self The menu field object.
  * @x_void_return
  */
@@ -49,7 +49,7 @@ void PMENUFIELD_draw(ui_menufield_t *self);
 
 /**
  * @brief Default event handler of menu field.
- * @x_syscal_num `0x10163`
+ * @x_syscall_num{0x10163}
  * @param self The menu field object.
  * @param event The incoming event.
  * @x_void_return

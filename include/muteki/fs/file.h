@@ -29,12 +29,13 @@ enum bxc_seek_whence_e {
     BXC_SEEK_END,
 };
 
+/** @brief File descriptor type. */
+typedef struct bxc_fs_file_s bxc_fs_file_t;
 /**
  * @brief File descriptor struct.
  * @todo Populate its internals.
  */
 struct bxc_fs_file_s;
-typedef struct bxc_fs_file_s bxc_fs_file_t;
 
 /**
  * @brief Open a file located at @p pathname.

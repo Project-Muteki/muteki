@@ -18,7 +18,9 @@
 extern "C" {
 #endif
 
-struct ui_imageclip_s;
+/**
+ * @brief Image clip subwidget type.
+ */
 typedef struct ui_imageclip_s ui_imageclip_t;
 
 /**

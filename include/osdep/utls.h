@@ -28,11 +28,12 @@ typedef struct osdep_utls_stats_s {
      */
     bool is_initialized;
     /**
-     * @brief Number of slots used. Only valid when ::is_initialized is true.
+     * @brief Number of slots used. Only valid when osdep_utls_stats_s::is_initialized is true.
      */
     size_t slots_used;
     /**
-     * @brief Number of slots already allocated for the container. Only valid when ::is_initialized is true.
+     * @brief Number of slots already allocated for the container. Only valid when osdep_utls_stats_s::is_initialized
+     * is true.
      */
     size_t slots_allocated;
 } osdep_utls_stats_t;

@@ -35,7 +35,9 @@ enum ui_menufield_flag_e {
     UI_MENUFIELD_FILEPICKER = 0x0020,
 };
 
-struct ui_menufield_s;
+/**
+ * @brief Menu field type.
+ */
 typedef struct ui_menufield_s ui_menufield_t;
 
 /**
