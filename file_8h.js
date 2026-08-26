@@ -1,5 +1,6 @@
 var file_8h =
 [
+    [ "bxc_fs_file_t", "file_8h.html#a6d8aeba579631045d1e23d35ae56ca8e", null ],
     [ "bxc_seek_whence_e", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13", [
       [ "BXC_SEEK_SET", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13a07d179667ba351f7b656c7368a93afbc", null ],
       [ "BXC_SEEK_CUR", "file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13a21d10f0feb06957d653f354fe429ee71", null ],

@@ -6,6 +6,13 @@ var audio_8h =
     [ "pcm_state_s", "structpcm__state__s.html", null ],
     [ "pcm_frame_s", "structpcm__frame__s.html", "structpcm__frame__s" ],
     [ "pcm_decoder_buffer_s", "structpcm__decoder__buffer__s.html", "structpcm__decoder__buffer__s" ],
+    [ "device_service_pcm_t", "audio_8h.html#ad0d4c260fb946eefcb143a1fe2521604", null ],
+    [ "pcm_codec_context_t", "audio_8h.html#af1a66a5a9b258006d2d1a97fef52a4cb", null ],
+    [ "pcm_codec_func_t", "audio_8h.html#a65856f3cd3fa45be4e2598c0c7cbf968", null ],
+    [ "pcm_config_t", "audio_8h.html#a99a27a4d6d074a142327b68f2e6022a3", null ],
+    [ "pcm_decoder_buffer_t", "audio_8h.html#af8b02d47f901da3ae3afaf2a0b5ca196", null ],
+    [ "pcm_frame_t", "audio_8h.html#ac790a2ffb73d05b3f86c6867514e282c", null ],
+    [ "pcm_state_t", "audio_8h.html#a30485e5884ed69ce39db89f09b21d6fa", null ],
     [ "pcm_direction_e", "audio_8h.html#a1d6d3f6a69949cf8d7d0686124d90e85", [
       [ "DIRECTION_DEFAULT", "audio_8h.html#a1d6d3f6a69949cf8d7d0686124d90e85abcef02f91550ca5a4e8f091ff37a73d9", null ],
       [ "DIRECTION_OUT", "audio_8h.html#a1d6d3f6a69949cf8d7d0686124d90e85a110d8bc2cf7464da0e5b438dc51ee183", null ],

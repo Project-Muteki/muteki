@@ -1,6 +1,8 @@
 var menu__common_8h =
 [
     [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
+    [ "UI_MENU_ENTRY_END", "menu__common_8h.html#af1ec6c2abe02d681462b3ca5dd4a2a31", null ],
+    [ "ui_menu_entry_t", "menu__common_8h.html#aed84caafdc452f8ac25c68d1db0854dc", null ],
     [ "ui_menu_entry_attribute_e", "menu__common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6", [
       [ "UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER", "menu__common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970", null ],
       [ "UI_CONTROLMENU_ENTRY_ATTR_BOLD_FONT", "menu__common_8h.html#a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0", null ],

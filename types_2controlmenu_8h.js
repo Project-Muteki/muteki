@@ -1,6 +1,7 @@
 var types_2controlmenu_8h =
 [
     [ "ui_controlmenu_s", "structui__controlmenu__s.html", "structui__controlmenu__s" ],
+    [ "ui_controlmenu_t", "types_2controlmenu_8h.html#ad30f37acbae08ed23070a1bc504acb2e", null ],
     [ "ui_controlmenu_layout_e", "types_2controlmenu_8h.html#afc1ce8f5a02b18bda82409dd04c696eb", [
       [ "UI_CONTROLMENU_LAYOUT_ABS", "types_2controlmenu_8h.html#afc1ce8f5a02b18bda82409dd04c696ebaf9b220544784796277d2d20f6084f286", null ],
       [ "UI_CONTROLMENU_LAYOUT_LEFT_HALF", "types_2controlmenu_8h.html#afc1ce8f5a02b18bda82409dd04c696eba578f99ec820296870db79f9f15746924", null ],

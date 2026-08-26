@@ -135,10 +135,16 @@ Data Structures</h2></td></tr>
 <tr class="memitem:ui_5Fmenu_5Fentry_5Fs" id="r_ui_5Fmenu_5Fentry_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structui__menu__entry__s.html">ui_menu_entry_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu entry struct used by various menu widgets.  <a href="structui__menu__entry__s.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af1ec6c2abe02d681462b3ca5dd4a2a31" id="r_af1ec6c2abe02d681462b3ca5dd4a2a31"><td class="memItemLeft"><a id="af1ec6c2abe02d681462b3ca5dd4a2a31" name="af1ec6c2abe02d681462b3ca5dd4a2a31"></a>
+#define&#160;</td><td class="memItemRight"><b>UI_MENU_ENTRY_END</b>&#160;&#160;&#160;{ .label_wide = <a class="el" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(&quot;&quot;), .event = 0, .attributes = 0 }</td></tr>
+<tr class="memdesc:af1ec6c2abe02d681462b3ca5dd4a2a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">End of menu entry record. <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aed84caafdc452f8ac25c68d1db0854dc" id="r_aed84caafdc452f8ac25c68d1db0854dc"><td class="memItemLeft"><a id="aed84caafdc452f8ac25c68d1db0854dc" name="aed84caafdc452f8ac25c68d1db0854dc"></a>
-typedef struct <a class="el" href="structui__menu__entry__s.html">ui_menu_entry_s</a>&#160;</td><td class="memItemRight"><b>ui_menu_entry_t</b></td></tr>
+<tr class="memitem:aed84caafdc452f8ac25c68d1db0854dc" id="r_aed84caafdc452f8ac25c68d1db0854dc"><td class="memItemLeft">typedef struct <a class="el" href="structui__menu__entry__s.html">ui_menu_entry_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#aed84caafdc452f8ac25c68d1db0854dc">ui_menu_entry_t</a></td></tr>
+<tr class="memdesc:aed84caafdc452f8ac25c68d1db0854dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu entry struct used by various menu widgets.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -158,7 +164,32 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Menu type definitions that are shared among several menu implementations. </p>
-</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="aed84caafdc452f8ac25c68d1db0854dc" name="aed84caafdc452f8ac25c68d1db0854dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed84caafdc452f8ac25c68d1db0854dc">&#9670;&#160;</a></span>ui_menu_entry_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structui__menu__entry__s.html">ui_menu_entry_s</a> <a class="el" href="#aed84caafdc452f8ac25c68d1db0854dc">ui_menu_entry_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Menu entry struct used by various menu widgets. </p>
+<p>Normally should be used in an empty-record-terminated array. For example:</p>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="#aed84caafdc452f8ac25c68d1db0854dc">ui_menu_entry_t</a> MENU[] = {</div>
+<div class="line">    { .label_wide = <a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;Item&quot;</span>), .event = 0x10000, .attributes = 0 },</div>
+<div class="line">    { .label_wide = <a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;&quot;</span>), .event = 0, .attributes = 0 },  <span class="comment">// or UI_MENU_ENTRY_END</span></div>
+<div class="line">};</div>
+<div class="ttc" id="acommon_8h_html_a1f2319b35fdcf33e9544b53a14371156"><div class="ttname"><a href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a></div><div class="ttdeci">#define _BUL(x)</div><div class="ttdoc">Besta UTF-16 string literal.</div><div class="ttdef"><b>Definition</b> common.h:61</div></div>
+<div class="ttc" id="amenu__common_8h_html_aed84caafdc452f8ac25c68d1db0854dc"><div class="ttname"><a href="#aed84caafdc452f8ac25c68d1db0854dc">ui_menu_entry_t</a></div><div class="ttdeci">struct ui_menu_entry_s ui_menu_entry_t</div><div class="ttdoc">Menu entry struct used by various menu widgets.</div></div>
+</div><!-- fragment --><p><a class="el" href="structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3" title="Attributes.">ui_menu_entry_s::attributes</a> defines extra attributes that apply to the menu entries. Some attributes are exclusive to certain subtype of menu widgets. </p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a9b4f94b1f5f25b6851bed8ddc11881f6" name="a9b4f94b1f5f25b6851bed8ddc11881f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b4f94b1f5f25b6851bed8ddc11881f6">&#9670;&#160;</a></span>ui_menu_entry_attribute_e</h2>
 
@@ -176,12 +207,12 @@ Enumerations</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970" name="a9b4f94b1f5f25b6851bed8ddc11881f6adcb2614a0ab475edde6fc60ac0e43970"></a>UI_MENU_ENTRY_ATTR_SEPARATOR_AFTER&#160;</td><td class="fielddoc"><p>Put separator after current item. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0" name="a9b4f94b1f5f25b6851bed8ddc11881f6aca9eb7be478d3d9a94999b2368d5bca0"></a>UI_CONTROLMENU_ENTRY_ATTR_BOLD_FONT&#160;</td><td class="fielddoc"><p>Render the widget label using bold font. </p>
-<p>Use ::SERIF_BOLD_CJK in place of the usual ::SERIF_CJK font when rendering the label. </p><dl class="section note"><dt>Note</dt><dd>This attribute only takes effect when the user of the entry item is a ::ui_controlmenu_t. It will be ignored otherwise. </dd></dl>
+<p>Use ::SERIF_BOLD_CJK in place of the usual ::SERIF_CJK font when rendering the label. </p><dl class="section note"><dt>Note</dt><dd>This attribute only takes effect when the user of the entry item is a <a class="el" href="types_2controlmenu_8h.html#ad30f37acbae08ed23070a1bc504acb2e" title="Control menu type.">ui_controlmenu_t</a>. It will be ignored otherwise. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7" name="a9b4f94b1f5f25b6851bed8ddc11881f6a9d5fcafe61257fc75f2f0e2ff9cd47f7"></a>UI_MENU_ENTRY_ATTR_SEPARATOR_BEFORE&#160;</td><td class="fielddoc"><p>Put separator before current item. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ad68f556c9bc281a3950bd1bb008e0262" name="a9b4f94b1f5f25b6851bed8ddc11881f6ad68f556c9bc281a3950bd1bb008e0262"></a>UI_CONTROLMENU_ENTRY_ATTR_VALUE_ITEM&#160;</td><td class="fielddoc"><p>Item can be selected as a control menu value. </p>
-<p>Only items with this flag can be selected as a value. Otherwise selecting the item will only emit an event. </p><dl class="section note"><dt>Note</dt><dd>This attribute only takes effect when the user of the entry item is a ::ui_controlmenu_t. It will be ignored otherwise. </dd></dl>
+<p>Only items with this flag can be selected as a value. Otherwise selecting the item will only emit an event. </p><dl class="section note"><dt>Note</dt><dd>This attribute only takes effect when the user of the entry item is a <a class="el" href="types_2controlmenu_8h.html#ad30f37acbae08ed23070a1bc504acb2e" title="Control menu type.">ui_controlmenu_t</a>. It will be ignored otherwise. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a id="a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec" name="a9b4f94b1f5f25b6851bed8ddc11881f6ac7c777cda24fd2e72c39c49b8b08e2ec"></a>UI_MENU_ENTRY_ATTR_ENCODING_CP950&#160;</td><td class="fielddoc"><p>Label uses 8-bit encoding with codepage CP950. </p>
 </td></tr>

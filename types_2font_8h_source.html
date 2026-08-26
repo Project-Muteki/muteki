@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('types_2font_8h
 </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="};">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structfont__info__s.html">   81</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structfont__info__s.html">font_info_s</a> {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structfont__info__s.html">   81</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structfont__info__s.html">font_info_s</a> {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structfont__info__s.html#a195be068ae0944dcb7725a6d9a98c01f">   86</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_variable" href="structfont__info__s.html#a195be068ae0944dcb7725a6d9a98c01f">type</a>; <span class="comment">// 0x0:0x2 (lcd[0x34:0x36])</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structfont__info__s.html#af702f86a05fdf06ca8db89922768e324">   88</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structfont__info__s.html#af702f86a05fdf06ca8db89922768e324">height</a>; <span class="comment">// 0x2:0x4 (lcd[0x36:0x38])</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="structfont__info__s.html#a60ea3001545166f863e1df1e04b2936a">   93</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structfont__info__s.html#a60ea3001545166f863e1df1e04b2936a">unk_0x4</a>; <span class="comment">// 0x4:0x6 (lcd[0x38:0x3a])</span></div>
@@ -191,16 +191,14 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('types_2font_8h
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structfont__info__s.html#a8c9b88d779183a228236bbcd4f423816">  102</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structfont__info__s.html#a8c9b88d779183a228236bbcd4f423816">unk_0xa</a>; <span class="comment">// 0xa:0xc (lcd[0x3e:0x40])</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="structfont__info__s.html#add7cf23efeed07d41c9aee08178d0aa3">  107</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structfont__info__s.html#add7cf23efeed07d41c9aee08178d0aa3">unk_0xc</a>; <span class="comment">// 0xc:0xe (lcd[0x40:0x42])</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">short</span> unk_0xe[13]; <span class="comment">// 0xe:0x28 (lcd[0x42:0x5c])</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}; <span class="comment">// 0x28 bytes</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="types_2font_8h.html#a3f0002062951796ccd53b40d14545169">  109</a></span>} <a class="code hl_typedef" href="types_2font_8h.html#a3f0002062951796ccd53b40d14545169">font_info_t</a>; <span class="comment">// 0x28 bytes</span></div>
 </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structfont__info__s.html">font_info_s</a> font_info_t;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>} <span class="comment">// extern &quot;C&quot;</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif  </span><span class="comment">// __MUTEKI_DRAW_TYPES_FONT_H__</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif  </span><span class="comment">// __MUTEKI_DRAW_TYPES_FONT_H__</span></div>
 <div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div><div class="ttdoc">Common include file for all muteki-shims headers.</div></div>
 <div class="ttc" id="astructfont__info__s_html"><div class="ttname"><a href="structfont__info__s.html">font_info_s</a></div><div class="ttdoc">Font rendering routine common states.</div><div class="ttdef"><b>Definition</b> font.h:81</div></div>
 <div class="ttc" id="astructfont__info__s_html_a11ba564b17ba49ae213be429cbd40349"><div class="ttname"><a href="structfont__info__s.html#a11ba564b17ba49ae213be429cbd40349">font_info_s::unk_0x8</a></div><div class="ttdeci">short unk_0x8</div><div class="ttdoc">Unknown.</div><div class="ttdef"><b>Definition</b> font.h:97</div></div>
@@ -210,6 +208,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('types_2font_8h
 <div class="ttc" id="astructfont__info__s_html_ac67ee22c1ee0cf58114f2ad423c300b5"><div class="ttname"><a href="structfont__info__s.html#ac67ee22c1ee0cf58114f2ad423c300b5">font_info_s::unk_0x6</a></div><div class="ttdeci">short unk_0x6</div><div class="ttdoc">Unknown.</div><div class="ttdef"><b>Definition</b> font.h:95</div></div>
 <div class="ttc" id="astructfont__info__s_html_add7cf23efeed07d41c9aee08178d0aa3"><div class="ttname"><a href="structfont__info__s.html#add7cf23efeed07d41c9aee08178d0aa3">font_info_s::unk_0xc</a></div><div class="ttdeci">short unk_0xc</div><div class="ttdoc">Unknown.</div><div class="ttdef"><b>Definition</b> font.h:107</div></div>
 <div class="ttc" id="astructfont__info__s_html_af702f86a05fdf06ca8db89922768e324"><div class="ttname"><a href="structfont__info__s.html#af702f86a05fdf06ca8db89922768e324">font_info_s::height</a></div><div class="ttdeci">short height</div><div class="ttdoc">Height of the font.</div><div class="ttdef"><b>Definition</b> font.h:88</div></div>
+<div class="ttc" id="atypes_2font_8h_html_a3f0002062951796ccd53b40d14545169"><div class="ttname"><a href="types_2font_8h.html#a3f0002062951796ccd53b40d14545169">font_info_t</a></div><div class="ttdeci">struct font_info_s font_info_t</div><div class="ttdoc">Font rendering routine common states.</div></div>
 <div class="ttc" id="atypes_2font_8h_html_a626b23c6e6f587deeea5e3cc43b10171"><div class="ttname"><a href="types_2font_8h.html#a626b23c6e6f587deeea5e3cc43b10171">font_type_e</a></div><div class="ttdeci">font_type_e</div><div class="ttdoc">Font types.</div><div class="ttdef"><b>Definition</b> font.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

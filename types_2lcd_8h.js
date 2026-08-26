@@ -5,7 +5,13 @@ var types_2lcd_8h =
     [ "lcd_lock_s", "structlcd__lock__s.html", "structlcd__lock__s" ],
     [ "lcd_base_s", "structlcd__base__s.html", "structlcd__base__s" ],
     [ "lcd_thread_safe_s", "structlcd__thread__safe__s.html", "structlcd__thread__safe__s" ],
+    [ "lcd_base_t", "types_2lcd_8h.html#a14cf00a9609c8ab40592d711921c7188", null ],
+    [ "lcd_cursor_t", "types_2lcd_8h.html#a1b72e0aefa19a6aa40318efffee03e30", null ],
+    [ "lcd_draw_t", "types_2lcd_8h.html#a547b5957126d827e07b35f7f7e9c8eb5", null ],
+    [ "lcd_lock_t", "types_2lcd_8h.html#a26b900705e9f5ffce32d611e5231373e", null ],
     [ "lcd_rotate_callback_t", "types_2lcd_8h.html#ab6498736eb805681f6bc408eae7ee171", null ],
+    [ "lcd_t", "types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7", null ],
+    [ "lcd_thread_safe_t", "types_2lcd_8h.html#a672ecacc55975da31df89ba6de942631", null ],
     [ "lcd_print_flag_e", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5", [
       [ "LCD_PRINT_NONE", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a59fa30ef79d23c00a3f8b6ec3744094c", null ],
       [ "LCD_PRINT_INVERT", "types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5aafae6faf45b1cf54bf12641ce48ac191", null ],

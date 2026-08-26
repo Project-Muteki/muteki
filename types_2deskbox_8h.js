@@ -1,6 +1,7 @@
 var types_2deskbox_8h =
 [
     [ "ui_deskbox_s", "structui__deskbox__s.html", "structui__deskbox__s" ],
+    [ "ui_deskbox_t", "types_2deskbox_8h.html#a10c95ad98170201fcc24e64a8d5603fc", null ],
     [ "ui_deskbox_flag_e", "types_2deskbox_8h.html#adb26d7b87229534c893fcc1fc9bd9c5b", [
       [ "UI_DESKBOX_FLAG_NONE", "types_2deskbox_8h.html#adb26d7b87229534c893fcc1fc9bd9c5bab277d1ca42c031a5c5263cf1b537cdd8", null ],
       [ "UI_DESKBOX_FLAG_CLOSE_BUTTON", "types_2deskbox_8h.html#adb26d7b87229534c893fcc1fc9bd9c5ba0bb1f2ec5f960f3a7d46b632585a1b12", null ],

@@ -140,25 +140,24 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('primitives_8h_
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
 <div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structlcd__rect__s.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structlcd__rect__s.html">lcd_rect_s</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structlcd__rect__s.html">   25</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlcd__rect__s.html">lcd_rect_s</a> {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structlcd__rect__s.html#ac744a3ffcb5a1833584ad71f0c5b5fb3">   27</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structlcd__rect__s.html#ac744a3ffcb5a1833584ad71f0c5b5fb3">x0</a>; <span class="comment">// (lcd_t[0x6c:0x6e])</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structlcd__rect__s.html#a05c54ee702ed4eaf403fbaa004378d9d">   29</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structlcd__rect__s.html#a05c54ee702ed4eaf403fbaa004378d9d">y0</a>; <span class="comment">// (lcd_t[0x6e:0x70])</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structlcd__rect__s.html#adde5853843e9d1a9f7e3a7d66d87c7b1">   31</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structlcd__rect__s.html#adde5853843e9d1a9f7e3a7d66d87c7b1">x1</a>; <span class="comment">// (lcd_t[0x70:0x72])</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structlcd__rect__s.html#a86c6e14d1075a760a739e2a66aea409a">   33</a></span>    <span class="keywordtype">short</span> <a class="code hl_variable" href="structlcd__rect__s.html#a86c6e14d1075a760a739e2a66aea409a">y1</a>; <span class="comment">// (lcd_t[0x72:0x74])</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}; <span class="comment">// 0x8 bytes</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlcd__rect__s.html">lcd_rect_s</a> lcd_rect_t;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <a class="code hl_typedef" href="primitives_8h.html#a099651cf2c5f4702c91e4f9ba7075897">lcd_rect_t</a>; <span class="comment">// 0x8 bytes</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define LCD_RGB_FROM_U8(r, g, b) ((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// extern &quot;C&quot;</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="primitives_8h.html#a814ec1d39351b1a10d87359efbf16237">   48</a></span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif  </span><span class="comment">// __MUTEKI_DRAW_TYPES_PRIMITIVES_H__</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="primitives_8h.html#a099651cf2c5f4702c91e4f9ba7075897">   39</a></span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define LCD_RGB_FROM_U8(r, g, b) ((r &amp; 0xff) &lt;&lt; 16 | ((g &amp; 0xff) &lt;&lt; 8) | (b &amp; 0xff))</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="primitives_8h.html#a814ec1d39351b1a10d87359efbf16237">   46</a></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif  </span><span class="comment">// __MUTEKI_DRAW_TYPES_PRIMITIVES_H__</span></div>
 <div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div><div class="ttdoc">Common include file for all muteki-shims headers.</div></div>
+<div class="ttc" id="aprimitives_8h_html_a099651cf2c5f4702c91e4f9ba7075897"><div class="ttname"><a href="primitives_8h.html#a099651cf2c5f4702c91e4f9ba7075897">lcd_rect_t</a></div><div class="ttdeci">struct lcd_rect_s lcd_rect_t</div><div class="ttdoc">Rectangle used to represent usable drawing area in an LCD descriptor.</div></div>
 <div class="ttc" id="astructlcd__rect__s_html"><div class="ttname"><a href="structlcd__rect__s.html">lcd_rect_s</a></div><div class="ttdoc">Rectangle used to represent usable drawing area in an LCD descriptor.</div><div class="ttdef"><b>Definition</b> primitives.h:25</div></div>
 <div class="ttc" id="astructlcd__rect__s_html_a05c54ee702ed4eaf403fbaa004378d9d"><div class="ttname"><a href="structlcd__rect__s.html#a05c54ee702ed4eaf403fbaa004378d9d">lcd_rect_s::y0</a></div><div class="ttdeci">short y0</div><div class="ttdoc">Y coordinate of the top-left corner, in pixels (inclusive).</div><div class="ttdef"><b>Definition</b> primitives.h:29</div></div>
 <div class="ttc" id="astructlcd__rect__s_html_a86c6e14d1075a760a739e2a66aea409a"><div class="ttname"><a href="structlcd__rect__s.html#a86c6e14d1075a760a739e2a66aea409a">lcd_rect_s::y1</a></div><div class="ttdeci">short y1</div><div class="ttdoc">Y coordinate of the bottom-right corner, in pixels (inclusive).</div><div class="ttdef"><b>Definition</b> primitives.h:33</div></div>

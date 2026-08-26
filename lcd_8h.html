@@ -146,7 +146,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2a6f9f393e5e4765c4dda1837a6a69af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string.  <br /></td></tr>
 <tr class="memitem:a7c41a12f427a08332e20a9b5c201544e" id="r_a7c41a12f427a08332e20a9b5c201544e"><td class="memItemLeft">void void&#160;</td><td class="memItemRight"><a class="el" href="#a7c41a12f427a08332e20a9b5c201544e">PrintfXY</a> (short x, short y, const char *format,...) <a class="el" href="common_8h.html#aad78f1ddd0830141e8ad38443423b42a">SYS_IS_PRINTF</a>(3</td></tr>
 <tr class="memdesc:a7c41a12f427a08332e20a9b5c201544e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format and draw a string aligned to the top left corner at <span class="tt">(x, y)</span> px.  <br /></td></tr>
-<tr class="memitem:ad41cc74eaed78e7d19fa947fe0535da9" id="r_ad41cc74eaed78e7d19fa947fe0535da9"><td class="memItemLeft">void void int&#160;</td><td class="memItemRight"><a class="el" href="#ad41cc74eaed78e7d19fa947fe0535da9">ShowGraphic</a> (short x, short y, lcd_surface_t *surface, unsigned short flags)</td></tr>
+<tr class="memitem:ad41cc74eaed78e7d19fa947fe0535da9" id="r_ad41cc74eaed78e7d19fa947fe0535da9"><td class="memItemLeft">void void int&#160;</td><td class="memItemRight"><a class="el" href="#ad41cc74eaed78e7d19fa947fe0535da9">ShowGraphic</a> (short x, short y, <a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *surface, unsigned short flags)</td></tr>
 <tr class="memdesc:ad41cc74eaed78e7d19fa947fe0535da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a surface onto the current active LCD.  <br /></td></tr>
 <tr class="memitem:aea877b097cd19dff1122cce9f01ac7db" id="r_aea877b097cd19dff1122cce9f01ac7db"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#aea877b097cd19dff1122cce9f01ac7db">SetCursorSize</a> (unsigned int new_size)</td></tr>
 <tr class="memdesc:aea877b097cd19dff1122cce9f01ac7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size of the cursor on the current canvas.  <br /></td></tr>
@@ -182,9 +182,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:af1d43ce8054b27206bbfc04a93ae3d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the RGB value of a pixel on the current active surface.  <br /></td></tr>
 <tr class="memitem:a69560b4543015dac7002eaad1b9c3fa5" id="r_a69560b4543015dac7002eaad1b9c3fa5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a69560b4543015dac7002eaad1b9c3fa5">SetPixel</a> (short x, short y, int color)</td></tr>
 <tr class="memdesc:a69560b4543015dac7002eaad1b9c3fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pixel color on the current active surface with the given pixel.  <br /></td></tr>
-<tr class="memitem:a9e4671aa490d9de31beb0218ac34e5d8" id="r_a9e4671aa490d9de31beb0218ac34e5d8"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a9e4671aa490d9de31beb0218ac34e5d8">GetImage</a> (short x0, short y0, short x1, short y1, lcd_surface_t *surface)</td></tr>
+<tr class="memitem:a9e4671aa490d9de31beb0218ac34e5d8" id="r_a9e4671aa490d9de31beb0218ac34e5d8"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a9e4671aa490d9de31beb0218ac34e5d8">GetImage</a> (short x0, short y0, short x1, short y1, <a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *surface)</td></tr>
 <tr class="memdesc:a9e4671aa490d9de31beb0218ac34e5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a rectangle of pixels from current active LCD and save it to the specified buffer.  <br /></td></tr>
-<tr class="memitem:a00fcaab305a3c8429dea4f6ff1350c5b" id="r_a00fcaab305a3c8429dea4f6ff1350c5b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a00fcaab305a3c8429dea4f6ff1350c5b">PutImage</a> (short x, short y, lcd_surface_t *surface, unsigned short flags)</td></tr>
+<tr class="memitem:a00fcaab305a3c8429dea4f6ff1350c5b" id="r_a00fcaab305a3c8429dea4f6ff1350c5b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a00fcaab305a3c8429dea4f6ff1350c5b">PutImage</a> (short x, short y, <a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *surface, unsigned short flags)</td></tr>
 <tr class="memdesc:a00fcaab305a3c8429dea4f6ff1350c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy pixels from a surface to current active LCD.  <br /></td></tr>
 <tr class="memitem:a31d78d4e6fbdfd69a372ca29c697c0f8" id="r_a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a31d78d4e6fbdfd69a372ca29c697c0f8">SetDrawArea</a> (short x0, short y0, short x1, short y1)</td></tr>
 <tr class="memdesc:a31d78d4e6fbdfd69a372ca29c697c0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the drawing area of the current active LCD.  <br /></td></tr>
@@ -218,25 +218,25 @@ Functions</h2></td></tr>
 <tr class="memdesc:afacb044524d273f84760b74ae0910179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move a rectangle right by <span class="tt">amount</span> pixels.  <br /></td></tr>
 <tr class="memitem:a502ba629582f39f4301680052db48620" id="r_a502ba629582f39f4301680052db48620"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a502ba629582f39f4301680052db48620">ScrollUp</a> (short x0, short y0, short x1, short y1, short amount)</td></tr>
 <tr class="memdesc:a502ba629582f39f4301680052db48620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move a rectangle up by <span class="tt">amount</span> pixels.  <br /></td></tr>
-<tr class="memitem:ab3b6119a8df2456843fc8e1a41030011" id="r_ab3b6119a8df2456843fc8e1a41030011"><td class="memItemLeft">lcd_t *&#160;</td><td class="memItemRight"><a class="el" href="#ab3b6119a8df2456843fc8e1a41030011">CreateVirtualLCD</a> (short width, short height, short width_bytes)</td></tr>
+<tr class="memitem:ab3b6119a8df2456843fc8e1a41030011" id="r_ab3b6119a8df2456843fc8e1a41030011"><td class="memItemLeft"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab3b6119a8df2456843fc8e1a41030011">CreateVirtualLCD</a> (short width, short height, short width_bytes)</td></tr>
 <tr class="memdesc:ab3b6119a8df2456843fc8e1a41030011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a virtual LCD descriptor.  <br /></td></tr>
-<tr class="memitem:adca965f3a7d9d1fceb2543b96a52dac2" id="r_adca965f3a7d9d1fceb2543b96a52dac2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adca965f3a7d9d1fceb2543b96a52dac2">DeleteVirtualLCD</a> (lcd_t *lcd)</td></tr>
+<tr class="memitem:adca965f3a7d9d1fceb2543b96a52dac2" id="r_adca965f3a7d9d1fceb2543b96a52dac2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adca965f3a7d9d1fceb2543b96a52dac2">DeleteVirtualLCD</a> (<a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *lcd)</td></tr>
 <tr class="memdesc:adca965f3a7d9d1fceb2543b96a52dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose a previously created virtual LCD descriptor.  <br /></td></tr>
-<tr class="memitem:aa2442aa53fb420d155f16e717ad5c221" id="r_aa2442aa53fb420d155f16e717ad5c221"><td class="memItemLeft">lcd_t *&#160;</td><td class="memItemRight"><a class="el" href="#aa2442aa53fb420d155f16e717ad5c221">SetActiveLCD</a> (lcd_t *new_lcd)</td></tr>
+<tr class="memitem:aa2442aa53fb420d155f16e717ad5c221" id="r_aa2442aa53fb420d155f16e717ad5c221"><td class="memItemLeft"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa2442aa53fb420d155f16e717ad5c221">SetActiveLCD</a> (<a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *new_lcd)</td></tr>
 <tr class="memdesc:aa2442aa53fb420d155f16e717ad5c221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an LCD descriptor as active.  <br /></td></tr>
-<tr class="memitem:adfc2c8cc6a6608027a65f969e93aa110" id="r_adfc2c8cc6a6608027a65f969e93aa110"><td class="memItemLeft">lcd_t *&#160;</td><td class="memItemRight"><a class="el" href="#adfc2c8cc6a6608027a65f969e93aa110">GetActiveLCD</a> (void)</td></tr>
+<tr class="memitem:adfc2c8cc6a6608027a65f969e93aa110" id="r_adfc2c8cc6a6608027a65f969e93aa110"><td class="memItemLeft"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adfc2c8cc6a6608027a65f969e93aa110">GetActiveLCD</a> (void)</td></tr>
 <tr class="memdesc:adfc2c8cc6a6608027a65f969e93aa110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current active LCD descriptor.  <br /></td></tr>
-<tr class="memitem:ae8d53e141ab966cba778a9b9be545331" id="r_ae8d53e141ab966cba778a9b9be545331"><td class="memItemLeft">lcd_t *&#160;</td><td class="memItemRight"><a class="el" href="#ae8d53e141ab966cba778a9b9be545331">CreateCompatibleLCD</a> (lcd_t *source)</td></tr>
+<tr class="memitem:ae8d53e141ab966cba778a9b9be545331" id="r_ae8d53e141ab966cba778a9b9be545331"><td class="memItemLeft"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae8d53e141ab966cba778a9b9be545331">CreateCompatibleLCD</a> (<a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *source)</td></tr>
 <tr class="memdesc:ae8d53e141ab966cba778a9b9be545331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an LCD descriptor (excluding surface).  <br /></td></tr>
-<tr class="memitem:adccc0c65418334d72d21608e1313d754" id="r_adccc0c65418334d72d21608e1313d754"><td class="memItemLeft">lcd_surface_t *&#160;</td><td class="memItemRight"><a class="el" href="#adccc0c65418334d72d21608e1313d754">CreateCompatibleImage</a> (const lcd_t *source, short width, short height)</td></tr>
+<tr class="memitem:adccc0c65418334d72d21608e1313d754" id="r_adccc0c65418334d72d21608e1313d754"><td class="memItemLeft"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#adccc0c65418334d72d21608e1313d754">CreateCompatibleImage</a> (const <a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *source, short width, short height)</td></tr>
 <tr class="memdesc:adccc0c65418334d72d21608e1313d754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a surface for an LCD descriptor.  <br /></td></tr>
-<tr class="memitem:a12e80bde47dc3a14e43681418f86b573" id="r_a12e80bde47dc3a14e43681418f86b573"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a12e80bde47dc3a14e43681418f86b573">DeleteLCD</a> (lcd_thread_safe_t *lcd)</td></tr>
+<tr class="memitem:a12e80bde47dc3a14e43681418f86b573" id="r_a12e80bde47dc3a14e43681418f86b573"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a12e80bde47dc3a14e43681418f86b573">DeleteLCD</a> (<a class="el" href="types_2lcd_8h.html#a672ecacc55975da31df89ba6de942631">lcd_thread_safe_t</a> *lcd)</td></tr>
 <tr class="memdesc:a12e80bde47dc3a14e43681418f86b573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a thread-safe LCD descriptor.  <br /></td></tr>
-<tr class="memitem:a3a3b127630f7b87ecfaa5333bd0e51b7" id="r_a3a3b127630f7b87ecfaa5333bd0e51b7"><td class="memItemLeft">lcd_surface_t *&#160;</td><td class="memItemRight"><a class="el" href="#a3a3b127630f7b87ecfaa5333bd0e51b7">SelectLCDObject</a> (lcd_t *lcd, lcd_surface_t *new_surface)</td></tr>
+<tr class="memitem:a3a3b127630f7b87ecfaa5333bd0e51b7" id="r_a3a3b127630f7b87ecfaa5333bd0e51b7"><td class="memItemLeft"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3a3b127630f7b87ecfaa5333bd0e51b7">SelectLCDObject</a> (<a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *lcd, <a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *new_surface)</td></tr>
 <tr class="memdesc:a3a3b127630f7b87ecfaa5333bd0e51b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checked version of <a class="el" href="#a8ea8e6ecb6c78f8721e204851174f7ba" title="Link a surface (device context) to an LCD descriptor.">SetDCObject()</a>.  <br /></td></tr>
-<tr class="memitem:a02cfab663da37703f2ca976ebdbdfcd0" id="r_a02cfab663da37703f2ca976ebdbdfcd0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02cfab663da37703f2ca976ebdbdfcd0">DeleteLCDObject</a> (lcd_t *lcd)</td></tr>
+<tr class="memitem:a02cfab663da37703f2ca976ebdbdfcd0" id="r_a02cfab663da37703f2ca976ebdbdfcd0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a02cfab663da37703f2ca976ebdbdfcd0">DeleteLCDObject</a> (<a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *lcd)</td></tr>
 <tr class="memdesc:a02cfab663da37703f2ca976ebdbdfcd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free a regular LCD descriptor.  <br /></td></tr>
-<tr class="memitem:a8ea8e6ecb6c78f8721e204851174f7ba" id="r_a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memItemLeft">lcd_surface_t *&#160;</td><td class="memItemRight"><a class="el" href="#a8ea8e6ecb6c78f8721e204851174f7ba">SetDCObject</a> (lcd_t *lcd, lcd_surface_t *new_surface)</td></tr>
+<tr class="memitem:a8ea8e6ecb6c78f8721e204851174f7ba" id="r_a8ea8e6ecb6c78f8721e204851174f7ba"><td class="memItemLeft"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8ea8e6ecb6c78f8721e204851174f7ba">SetDCObject</a> (<a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *lcd, <a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *new_surface)</td></tr>
 <tr class="memdesc:a8ea8e6ecb6c78f8721e204851174f7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link a surface (device context) to an LCD descriptor.  <br /></td></tr>
 <tr class="memitem:ad168addbefac40ab57c3c86f038ae47f" id="r_ad168addbefac40ab57c3c86f038ae47f"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ad168addbefac40ab57c3c86f038ae47f">GetMaxScrX</a> (void)</td></tr>
 <tr class="memdesc:ad168addbefac40ab57c3c86f038ae47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get X coordinate of the rightmost visible pixels on the current canvas.  <br /></td></tr>
@@ -292,9 +292,9 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_surface_t * CreateCompatibleImage </td>
+          <td class="memname"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> * CreateCompatibleImage </td>
           <td>(</td>
-          <td class="paramtype">const lcd_t *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -338,9 +338,9 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_t * CreateCompatibleLCD </td>
+          <td class="memname"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> * CreateCompatibleLCD </td>
           <td>(</td>
-          <td class="paramtype">lcd_t *</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -374,7 +374,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_t * CreateVirtualLCD </td>
+          <td class="memname"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> * CreateVirtualLCD </td>
           <td>(</td>
           <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
         </tr>
@@ -482,7 +482,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool DeleteLCD </td>
           <td>(</td>
-          <td class="paramtype">lcd_thread_safe_t *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a672ecacc55975da31df89ba6de942631">lcd_thread_safe_t</a> *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -523,7 +523,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void DeleteLCDObject </td>
           <td>(</td>
-          <td class="paramtype">lcd_t *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -557,7 +557,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void DeleteVirtualLCD </td>
           <td>(</td>
-          <td class="paramtype">lcd_t *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1055,7 +1055,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_t * GetActiveLCD </td>
+          <td class="memname"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> * GetActiveLCD </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -1291,7 +1291,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">lcd_surface_t *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1627,7 +1627,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">lcd_surface_t *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+          <td class="paramtype"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1972,14 +1972,14 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_surface_t * SelectLCDObject </td>
+          <td class="memname"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> * SelectLCDObject </td>
           <td>(</td>
-          <td class="paramtype">lcd_t *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span>, </td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">lcd_surface_t *</td>          <td class="paramname"><span class="paramname"><em>new_surface</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *</td>          <td class="paramname"><span class="paramname"><em>new_surface</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2012,9 +2012,9 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_t * SetActiveLCD </td>
+          <td class="memname"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> * SetActiveLCD </td>
           <td>(</td>
-          <td class="paramtype">lcd_t *</td>          <td class="paramname"><span class="paramname"><em>new_lcd</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>new_lcd</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2158,14 +2158,14 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">lcd_surface_t * SetDCObject </td>
+          <td class="memname"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> * SetDCObject </td>
           <td>(</td>
-          <td class="paramtype">lcd_t *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span>, </td>
+          <td class="paramtype"><a class="el" href="types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *</td>          <td class="paramname"><span class="paramname"><em>lcd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">lcd_surface_t *</td>          <td class="paramname"><span class="paramname"><em>new_surface</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *</td>          <td class="paramname"><span class="paramname"><em>new_surface</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -2435,7 +2435,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">lcd_surface_t *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+          <td class="paramtype"><a class="el" href="types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5">lcd_surface_t</a> *</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -1,6 +1,7 @@
 var types_2surface_8h =
 [
     [ "lcd_surface_s", "structlcd__surface__s.html", "structlcd__surface__s" ],
+    [ "lcd_surface_t", "types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5", null ],
     [ "lcd_surface_blit_flag_e", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68a", [
       [ "LCD_SURFACE_BLIT_NONE", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aa88bfed5c4f618c40515a8bddf4902877", null ],
       [ "LCD_SURFACE_BLIT_AND", "types_2surface_8h.html#a9170dcebc2c6e966e75ed7f029bce68aae7dd7a75a8fee020bf8d345075d4553a", null ],

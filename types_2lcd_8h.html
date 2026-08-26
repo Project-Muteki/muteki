@@ -155,17 +155,23 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a1b72e0aefa19a6aa40318efffee03e30" id="r_a1b72e0aefa19a6aa40318efffee03e30"><td class="memItemLeft"><a id="a1b72e0aefa19a6aa40318efffee03e30" name="a1b72e0aefa19a6aa40318efffee03e30"></a>
 typedef struct <a class="el" href="structlcd__cursor__s.html">lcd_cursor_s</a>&#160;</td><td class="memItemRight"><b>lcd_cursor_t</b></td></tr>
+<tr class="memdesc:a1b72e0aefa19a6aa40318efffee03e30"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structlcd__cursor__s.html" title="Cursor states usually linked to an LCD descriptor.">lcd_cursor_s</a> <br /></td></tr>
 <tr class="memitem:a547b5957126d827e07b35f7f7e9c8eb5" id="r_a547b5957126d827e07b35f7f7e9c8eb5"><td class="memItemLeft"><a id="a547b5957126d827e07b35f7f7e9c8eb5" name="a547b5957126d827e07b35f7f7e9c8eb5"></a>
 typedef struct <a class="el" href="structlcd__draw__s.html">lcd_draw_s</a>&#160;</td><td class="memItemRight"><b>lcd_draw_t</b></td></tr>
+<tr class="memdesc:a547b5957126d827e07b35f7f7e9c8eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structlcd__draw__s.html" title="Drawing routine common states.">lcd_draw_s</a> <br /></td></tr>
 <tr class="memitem:a26b900705e9f5ffce32d611e5231373e" id="r_a26b900705e9f5ffce32d611e5231373e"><td class="memItemLeft"><a id="a26b900705e9f5ffce32d611e5231373e" name="a26b900705e9f5ffce32d611e5231373e"></a>
 typedef struct <a class="el" href="structlcd__lock__s.html">lcd_lock_s</a>&#160;</td><td class="memItemRight"><b>lcd_lock_t</b></td></tr>
+<tr class="memdesc:a26b900705e9f5ffce32d611e5231373e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structlcd__lock__s.html" title="An extended part of the LCD descriptor that implements descriptor locking.">lcd_lock_s</a> <br /></td></tr>
 <tr class="memitem:a14cf00a9609c8ab40592d711921c7188" id="r_a14cf00a9609c8ab40592d711921c7188"><td class="memItemLeft"><a id="a14cf00a9609c8ab40592d711921c7188" name="a14cf00a9609c8ab40592d711921c7188"></a>
 typedef struct <a class="el" href="structlcd__base__s.html">lcd_base_s</a>&#160;</td><td class="memItemRight"><b>lcd_base_t</b></td></tr>
+<tr class="memdesc:a14cf00a9609c8ab40592d711921c7188"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structlcd__base__s.html" title="The LCD descriptor.">lcd_base_s</a> <br /></td></tr>
 <tr class="memitem:a672ecacc55975da31df89ba6de942631" id="r_a672ecacc55975da31df89ba6de942631"><td class="memItemLeft"><a id="a672ecacc55975da31df89ba6de942631" name="a672ecacc55975da31df89ba6de942631"></a>
 typedef struct <a class="el" href="structlcd__thread__safe__s.html">lcd_thread_safe_s</a>&#160;</td><td class="memItemRight"><b>lcd_thread_safe_t</b></td></tr>
+<tr class="memdesc:a672ecacc55975da31df89ba6de942631"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structlcd__thread__safe__s.html" title="A thread-safe variant of the LCD descriptor used on some versions of Besta RTOS.">lcd_thread_safe_s</a> <br /></td></tr>
 <tr class="memitem:a569ee32aab18538abd9aba90ff98b3f7" id="r_a569ee32aab18538abd9aba90ff98b3f7"><td class="memItemLeft"><a id="a569ee32aab18538abd9aba90ff98b3f7" name="a569ee32aab18538abd9aba90ff98b3f7"></a>
 typedef struct <a class="el" href="structlcd__base__s.html">lcd_base_s</a>&#160;</td><td class="memItemRight"><b>lcd_t</b></td></tr>
-<tr class="memitem:ab6498736eb805681f6bc408eae7ee171" id="r_ab6498736eb805681f6bc408eae7ee171"><td class="memItemLeft">typedef int(*)&#160;</td><td class="memItemRight"><a class="el" href="#ab6498736eb805681f6bc408eae7ee171">lcd_rotate_callback_t</a>(lcd_t *self, int rotation)</td></tr>
+<tr class="memdesc:a569ee32aab18538abd9aba90ff98b3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structlcd__base__s.html" title="The LCD descriptor.">lcd_base_s</a> <br /></td></tr>
+<tr class="memitem:ab6498736eb805681f6bc408eae7ee171" id="r_ab6498736eb805681f6bc408eae7ee171"><td class="memItemLeft">typedef int(*)&#160;</td><td class="memItemRight"><a class="el" href="#ab6498736eb805681f6bc408eae7ee171">lcd_rotate_callback_t</a>(<a class="el" href="#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *self, int rotation)</td></tr>
 <tr class="memdesc:ab6498736eb805681f6bc408eae7ee171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback type for handling canvas rotation.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -234,7 +240,7 @@ Enumerations</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(*) lcd_rotate_callback_t(lcd_t *self, int rotation)</td>
+          <td class="memname">typedef int(*) lcd_rotate_callback_t(<a class="el" href="#a569ee32aab18538abd9aba90ff98b3f7">lcd_t</a> *self, int rotation)</td>
         </tr>
       </table>
 </div><div class="memdoc">

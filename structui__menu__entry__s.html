@@ -149,11 +149,12 @@ short&#160;</td><td class="memItemRight"><b>unk_0x36</b></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Menu entry struct used by various menu widgets. </p>
 <p>Normally should be used in an empty-record-terminated array. For example:</p>
-<div class="fragment"><div class="line"><span class="keyword">const</span> ui_menu_entry_t MENU[] = {</div>
+<div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code hl_typedef" href="menu__common_8h.html#aed84caafdc452f8ac25c68d1db0854dc">ui_menu_entry_t</a> MENU[] = {</div>
 <div class="line">    { .label_wide = <a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;Item&quot;</span>), .event = 0x10000, .attributes = 0 },</div>
-<div class="line">    { .label_wide = NULL, .event = 0, .attributes = 0 },  <span class="comment">// or UI_MENU_ENTRY_END</span></div>
+<div class="line">    { .label_wide = <a class="code hl_define" href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a>(<span class="stringliteral">&quot;&quot;</span>), .event = 0, .attributes = 0 },  <span class="comment">// or UI_MENU_ENTRY_END</span></div>
 <div class="line">};</div>
 <div class="ttc" id="acommon_8h_html_a1f2319b35fdcf33e9544b53a14371156"><div class="ttname"><a href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a></div><div class="ttdeci">#define _BUL(x)</div><div class="ttdoc">Besta UTF-16 string literal.</div><div class="ttdef"><b>Definition</b> common.h:61</div></div>
+<div class="ttc" id="amenu__common_8h_html_aed84caafdc452f8ac25c68d1db0854dc"><div class="ttname"><a href="menu__common_8h.html#aed84caafdc452f8ac25c68d1db0854dc">ui_menu_entry_t</a></div><div class="ttdeci">struct ui_menu_entry_s ui_menu_entry_t</div><div class="ttdoc">Menu entry struct used by various menu widgets.</div></div>
 </div><!-- fragment --><p><a class="el" href="#a2a4aba15a383ccd54e17ca49bdc432f3" title="Attributes.">ui_menu_entry_s::attributes</a> defines extra attributes that apply to the menu entries. Some attributes are exclusive to certain subtype of menu widgets. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a2a4aba15a383ccd54e17ca49bdc432f3" name="a2a4aba15a383ccd54e17ca49bdc432f3"></a>

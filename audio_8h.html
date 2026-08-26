@@ -149,18 +149,25 @@ Data Structures</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:ad0d4c260fb946eefcb143a1fe2521604" id="r_ad0d4c260fb946eefcb143a1fe2521604"><td class="memItemLeft"><a id="ad0d4c260fb946eefcb143a1fe2521604" name="ad0d4c260fb946eefcb143a1fe2521604"></a>
 typedef struct <a class="el" href="structdevice__service__pcm__s.html">device_service_pcm_s</a>&#160;</td><td class="memItemRight"><b>device_service_pcm_t</b></td></tr>
+<tr class="memdesc:ad0d4c260fb946eefcb143a1fe2521604"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdevice__service__pcm__s.html">device_service_pcm_s</a> <br /></td></tr>
 <tr class="memitem:a99a27a4d6d074a142327b68f2e6022a3" id="r_a99a27a4d6d074a142327b68f2e6022a3"><td class="memItemLeft"><a id="a99a27a4d6d074a142327b68f2e6022a3" name="a99a27a4d6d074a142327b68f2e6022a3"></a>
 typedef struct <a class="el" href="structpcm__config__s.html">pcm_config_s</a>&#160;</td><td class="memItemRight"><b>pcm_config_t</b></td></tr>
+<tr class="memdesc:a99a27a4d6d074a142327b68f2e6022a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpcm__config__s.html" title="The PCM codec configuration.">pcm_config_s</a> <br /></td></tr>
 <tr class="memitem:af1a66a5a9b258006d2d1a97fef52a4cb" id="r_af1a66a5a9b258006d2d1a97fef52a4cb"><td class="memItemLeft"><a id="af1a66a5a9b258006d2d1a97fef52a4cb" name="af1a66a5a9b258006d2d1a97fef52a4cb"></a>
 typedef struct <a class="el" href="structpcm__codec__context__s.html">pcm_codec_context_s</a>&#160;</td><td class="memItemRight"><b>pcm_codec_context_t</b></td></tr>
+<tr class="memdesc:af1a66a5a9b258006d2d1a97fef52a4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpcm__codec__context__s.html" title="The PCM codec context.">pcm_codec_context_s</a> <br /></td></tr>
 <tr class="memitem:a30485e5884ed69ce39db89f09b21d6fa" id="r_a30485e5884ed69ce39db89f09b21d6fa"><td class="memItemLeft"><a id="a30485e5884ed69ce39db89f09b21d6fa" name="a30485e5884ed69ce39db89f09b21d6fa"></a>
 typedef struct <a class="el" href="structpcm__state__s.html">pcm_state_s</a>&#160;</td><td class="memItemRight"><b>pcm_state_t</b></td></tr>
+<tr class="memdesc:a30485e5884ed69ce39db89f09b21d6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpcm__state__s.html">pcm_state_s</a> <br /></td></tr>
 <tr class="memitem:ac790a2ffb73d05b3f86c6867514e282c" id="r_ac790a2ffb73d05b3f86c6867514e282c"><td class="memItemLeft"><a id="ac790a2ffb73d05b3f86c6867514e282c" name="ac790a2ffb73d05b3f86c6867514e282c"></a>
 typedef struct <a class="el" href="structpcm__frame__s.html">pcm_frame_s</a>&#160;</td><td class="memItemRight"><b>pcm_frame_t</b></td></tr>
+<tr class="memdesc:ac790a2ffb73d05b3f86c6867514e282c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpcm__frame__s.html" title="PCM frame data structure. Used internally.">pcm_frame_s</a> <br /></td></tr>
 <tr class="memitem:af8b02d47f901da3ae3afaf2a0b5ca196" id="r_af8b02d47f901da3ae3afaf2a0b5ca196"><td class="memItemLeft"><a id="af8b02d47f901da3ae3afaf2a0b5ca196" name="af8b02d47f901da3ae3afaf2a0b5ca196"></a>
 typedef struct <a class="el" href="structpcm__decoder__buffer__s.html">pcm_decoder_buffer_s</a>&#160;</td><td class="memItemRight"><b>pcm_decoder_buffer_t</b></td></tr>
+<tr class="memdesc:af8b02d47f901da3ae3afaf2a0b5ca196"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpcm__decoder__buffer__s.html" title="Codec buffer descriptor. Used Internally.">pcm_decoder_buffer_s</a> <br /></td></tr>
 <tr class="memitem:a65856f3cd3fa45be4e2598c0c7cbf968" id="r_a65856f3cd3fa45be4e2598c0c7cbf968"><td class="memItemLeft"><a id="a65856f3cd3fa45be4e2598c0c7cbf968" name="a65856f3cd3fa45be4e2598c0c7cbf968"></a>
-typedef void(*)&#160;</td><td class="memItemRight"><b>pcm_codec_func_t</b>(device_service_pcm_t *pcm, pcm_decoder_buffer_t *src, pcm_decoder_buffer_t *dest)</td></tr>
+typedef void(*)&#160;</td><td class="memItemRight"><b>pcm_codec_func_t</b>(<a class="el" href="#ad0d4c260fb946eefcb143a1fe2521604">device_service_pcm_t</a> *pcm, <a class="el" href="#af8b02d47f901da3ae3afaf2a0b5ca196">pcm_decoder_buffer_t</a> *src, <a class="el" href="#af8b02d47f901da3ae3afaf2a0b5ca196">pcm_decoder_buffer_t</a> *dest)</td></tr>
+<tr class="memdesc:a65856f3cd3fa45be4e2598c0c7cbf968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codec function. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -177,9 +184,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab50792381358ccbdee7aa5e716a27129" id="r_ab50792381358ccbdee7aa5e716a27129"><td class="memItemLeft">pcm_codec_context_t *&#160;</td><td class="memItemRight"><a class="el" href="#ab50792381358ccbdee7aa5e716a27129">OpenPCMCodec</a> (int direction, int sample_rate, int format)</td></tr>
+<tr class="memitem:ab50792381358ccbdee7aa5e716a27129" id="r_ab50792381358ccbdee7aa5e716a27129"><td class="memItemLeft"><a class="el" href="#af1a66a5a9b258006d2d1a97fef52a4cb">pcm_codec_context_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab50792381358ccbdee7aa5e716a27129">OpenPCMCodec</a> (int direction, int sample_rate, int format)</td></tr>
 <tr class="memdesc:ab50792381358ccbdee7aa5e716a27129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create PCM codec context.  <br /></td></tr>
-<tr class="memitem:a6e10cce977d859ad0586d00d2cdc7750" id="r_a6e10cce977d859ad0586d00d2cdc7750"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e10cce977d859ad0586d00d2cdc7750">ClosePCMCodec</a> (pcm_codec_context_t *ctx)</td></tr>
+<tr class="memitem:a6e10cce977d859ad0586d00d2cdc7750" id="r_a6e10cce977d859ad0586d00d2cdc7750"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e10cce977d859ad0586d00d2cdc7750">ClosePCMCodec</a> (<a class="el" href="#af1a66a5a9b258006d2d1a97fef52a4cb">pcm_codec_context_t</a> *ctx)</td></tr>
 <tr class="memdesc:a6e10cce977d859ad0586d00d2cdc7750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a PCM codec context.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
@@ -252,7 +259,7 @@ const int&#160;</td><td class="memItemRight"><b>SAMPLE_RATE_AUTO</b> = -1</td></
         <tr>
           <td class="memname">void ClosePCMCodec </td>
           <td>(</td>
-          <td class="paramtype">pcm_codec_context_t *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#af1a66a5a9b258006d2d1a97fef52a4cb">pcm_codec_context_t</a> *</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -284,7 +291,7 @@ const int&#160;</td><td class="memItemRight"><b>SAMPLE_RATE_AUTO</b> = -1</td></
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">pcm_codec_context_t * OpenPCMCodec </td>
+          <td class="memname"><a class="el" href="#af1a66a5a9b258006d2d1a97fef52a4cb">pcm_codec_context_t</a> * OpenPCMCodec </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em></span>, </td>
         </tr>
@@ -314,7 +321,7 @@ const int&#160;</td><td class="memItemRight"><b>SAMPLE_RATE_AUTO</b> = -1</td></
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> sample[0x2000]; <span class="comment">// Write audio data to this buffer periodically</span></div>
 <div class="line"><span class="keywordtype">size_t</span> num_bytes, actual_bytes;</div>
 <div class="line"> </div>
-<div class="line">pcm_codec_context_t *pcmdesc = <a class="code hl_function" href="#ab50792381358ccbdee7aa5e716a27129">OpenPCMCodec</a>(<a class="code hl_enumvalue" href="#a1d6d3f6a69949cf8d7d0686124d90e85a110d8bc2cf7464da0e5b438dc51ee183">DIRECTION_OUT</a>, <a class="code hl_variable" href="#af55be39d044b9238d9beef8a80809b15">SAMPLE_RATE_AUTO</a>, <a class="code hl_enumvalue" href="#a9da83b49a219b0be41860d617caa6b6eadaf2c151dbaee3d86281f4bf8d278da3">FORMAT_AUTO</a>);</div>
+<div class="line"><a class="code hl_typedef" href="#af1a66a5a9b258006d2d1a97fef52a4cb">pcm_codec_context_t</a> *pcmdesc = <a class="code hl_function" href="#ab50792381358ccbdee7aa5e716a27129">OpenPCMCodec</a>(<a class="code hl_enumvalue" href="#a1d6d3f6a69949cf8d7d0686124d90e85a110d8bc2cf7464da0e5b438dc51ee183">DIRECTION_OUT</a>, <a class="code hl_variable" href="#af55be39d044b9238d9beef8a80809b15">SAMPLE_RATE_AUTO</a>, <a class="code hl_enumvalue" href="#a9da83b49a219b0be41860d617caa6b6eadaf2c151dbaee3d86281f4bf8d278da3">FORMAT_AUTO</a>);</div>
 <div class="line"><span class="keywordflow">if</span> (pcmdesc == NULL) {</div>
 <div class="line">    <span class="comment">// TODO fail</span></div>
 <div class="line">}</div>
@@ -339,6 +346,7 @@ const int&#160;</td><td class="memItemRight"><b>SAMPLE_RATE_AUTO</b> = -1</td></
 <div class="ttc" id="aaudio_8h_html_a6e10cce977d859ad0586d00d2cdc7750"><div class="ttname"><a href="#a6e10cce977d859ad0586d00d2cdc7750">ClosePCMCodec</a></div><div class="ttdeci">void ClosePCMCodec(pcm_codec_context_t *ctx)</div><div class="ttdoc">Destroy a PCM codec context.</div></div>
 <div class="ttc" id="aaudio_8h_html_a9da83b49a219b0be41860d617caa6b6eadaf2c151dbaee3d86281f4bf8d278da3"><div class="ttname"><a href="#a9da83b49a219b0be41860d617caa6b6eadaf2c151dbaee3d86281f4bf8d278da3">FORMAT_AUTO</a></div><div class="ttdeci">@ FORMAT_AUTO</div><div class="ttdoc">Use the default format. Usually FORMAT_PCM_STEREO.</div><div class="ttdef"><b>Definition</b> audio.h:47</div></div>
 <div class="ttc" id="aaudio_8h_html_ab50792381358ccbdee7aa5e716a27129"><div class="ttname"><a href="#ab50792381358ccbdee7aa5e716a27129">OpenPCMCodec</a></div><div class="ttdeci">pcm_codec_context_t * OpenPCMCodec(int direction, int sample_rate, int format)</div><div class="ttdoc">Create PCM codec context.</div></div>
+<div class="ttc" id="aaudio_8h_html_af1a66a5a9b258006d2d1a97fef52a4cb"><div class="ttname"><a href="#af1a66a5a9b258006d2d1a97fef52a4cb">pcm_codec_context_t</a></div><div class="ttdeci">struct pcm_codec_context_s pcm_codec_context_t</div><div class="ttdoc">pcm_codec_context_s</div><div class="ttdef"><b>Definition</b> audio.h:68</div></div>
 <div class="ttc" id="aaudio_8h_html_af55be39d044b9238d9beef8a80809b15"><div class="ttname"><a href="#af55be39d044b9238d9beef8a80809b15">SAMPLE_RATE_AUTO</a></div><div class="ttdeci">const int SAMPLE_RATE_AUTO</div><div class="ttdoc">Use the default sample rate. Usually this is equivalent to 44100Hz.</div><div class="ttdef"><b>Definition</b> audio.h:61</div></div>
 <div class="ttc" id="adevio_8h_html_a53d5c8ec17bb4eaa87daeaf1007e5736"><div class="ttname"><a href="devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736">CreateFile</a></div><div class="ttdeci">devio_descriptor_t * CreateFile(const char *pathname, unsigned int access, unsigned int shmode, void *secattr, unsigned int on_noentry, unsigned int flags, void *template_file)</div><div class="ttdoc">Open or create a file/device by its pathname.</div></div>
 <div class="ttc" id="adevio_8h_html_ad1f4f33a3ff2ee699ece61fe83210508"><div class="ttname"><a href="devio_8h.html#ad1f4f33a3ff2ee699ece61fe83210508">WriteFile</a></div><div class="ttdeci">bool WriteFile(devio_descriptor_t *devfd, const void *buf, size_t size, size_t *actual_size, void *overlapped)</div><div class="ttdoc">Write/send data to a device IO descriptor.</div></div>
