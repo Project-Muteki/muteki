@@ -1,9 +1,9 @@
 var structbxc__thread__s =
 [
+    [ "[union].__unnamed0__", "unionbxc__thread__s_1_1_0funion_0e_8____unnamed0____.html", "unionbxc__thread__s_1_1_0funion_0e_8____unnamed0____" ],
     [ "event", "structbxc__thread__s.html#a3afabc40fbf319fe12396018d198a587", null ],
     [ "exit_code", "structbxc__thread__s.html#a74c6fb6d0e9d50e1840fdf8bae533509", null ],
     [ "kerrno", "structbxc__thread__s.html#ad057a872f6c784d20e0e1b4e87ed89bb", null ],
-    [ "ktls", "structbxc__thread__s.html#a366431ff63fbb00c6631c10fe48b050a", null ],
     [ "magic", "structbxc__thread__s.html#a6265d5ca179c99abe8f1e03d46f26cec", null ],
     [ "next", "structbxc__thread__s.html#a78b55b75f5310fbc49130ec5d6cdf14e", null ],
     [ "prev", "structbxc__thread__s.html#a339ad95901fc2720f474aba679c821fc", null ],
@@ -18,6 +18,5 @@ var structbxc__thread__s =
     [ "thread_func", "structbxc__thread__s.html#a9b71ef3ac4a60d8b67842a096c0a8884", null ],
     [ "unk_0x14", "structbxc__thread__s.html#aaf248d0b0db59e9622099c345a67c0b3", null ],
     [ "unk_0x1c", "structbxc__thread__s.html#a2de5a8aa1324b001cf012649d6444e0d", null ],
-    [ "unk_0x34", "structbxc__thread__s.html#aaa8459fdcfa3dd921950cab02e114e66", null ],
     [ "wait_reason", "structbxc__thread__s.html#ac990383b0315eef960a75f331e75b98a", null ]
 ];

@@ -9,8 +9,8 @@ var structui__button__s =
     [ "key_binding_str", "structui__button__s.html#ad1abc8959de1b63aab1a97ef24b124d0", null ],
     [ "label", "structui__button__s.html#a4b7db838fe7998d276a6c5b8dcdf6c34", null ],
     [ "next_visual_state", "structui__button__s.html#a1a8cc4d4eb5dd3583dc58f9344526970", null ],
-    [ "on_draw_border", "structui__button__s.html#a5d7243017c58918c6822cca0f1ff1c68", null ],
-    [ "on_draw_content", "structui__button__s.html#a07b44ab2b508ef8a0a51bd78cd55ea11", null ],
+    [ "on_draw_border", "structui__button__s.html#a9f4cafa77e6febbcf7de1b9ea4c48f7f", null ],
+    [ "on_draw_content", "structui__button__s.html#a29726e352d3127a016bdc1d8fc4f2cf6", null ],
     [ "unk_0x4c", "structui__button__s.html#a0ced5206f95f6fb15a1889d9e18b07ce", null ],
     [ "user_data", "structui__button__s.html#a8f2e33eed6a02bf919ef471fe1c12892", null ]
 ];

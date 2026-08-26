@@ -1,20 +1,8 @@
 var searchData=
 [
-  ['id_0',['id',['../structloader__loaded__s.html#af216b56011aa1c24b8907ba34741b637',1,'loader_loaded_s']]],
-  ['image_5fallocated_1',['image_allocated',['../structui__imageclip__s.html#a5c0805b9a896cb350ec4a0654b6e687e',1,'ui_imageclip_s']]],
-  ['image_5foffset_5fx_2',['image_offset_x',['../structui__imageclip__s.html#a8e0d8595de61bf81c192d37a4b427557',1,'ui_imageclip_s']]],
-  ['image_5foffset_5fy_3',['image_offset_y',['../structui__imageclip__s.html#ad9b8bfcc8f6a09f7dcee5855023f6c6b',1,'ui_imageclip_s']]],
-  ['imageclip_2eh_4',['imageclip.h',['../imageclip_8h.html',1,'']]],
-  ['imagedata_5',['ImageData',['../surface_8h.html#a2165c15c7ab6599b017cf6562f5db2e6',1,'surface.h']]],
-  ['ime_5fcontrol_6',['ime_control',['../structui__deskbox__s.html#a37938a1e77e74253781e0fc204553d7c',1,'ui_deskbox_s']]],
-  ['ini_2eh_7',['ini.h',['../ini_8h.html',1,'']]],
-  ['initgraphic_8',['InitGraphic',['../surface_8h.html#ae983d7fa372d0a7612b98b400aae8bfc',1,'surface.h']]],
-  ['insertimageclip_9',['InsertImageClip',['../views_2deskbox_8h.html#a8d2a0df58f904dfb13e55023926c0ce7',1,'deskbox.h']]],
-  ['inserttitlebarbutton_10',['InsertTitleBarButton',['../views_2deskbox_8h.html#aa0c0ca875012ab6a8d81283f6d90f833',1,'deskbox.h']]],
-  ['integrating_20muteki_20into_20a_20c_20compiler_11',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['integrating_20muteki_20syscall_20definitions_20into_20ghidra_12',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['into_20a_20c_20compiler_13',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['into_20ghidra_14',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['inversesetarea_15',['InverseSetArea',['../lcd_8h.html#a5ab7d9158ebf7827aa1317d2d8379bb4',1,'lcd.h']]],
-  ['is_5finitialized_16',['is_initialized',['../structosdep__utls__stats__s.html#a623f4e29dd0638e68479f3d78bf57b0c',1,'osdep_utls_stats_s']]]
+  ['heap_2eh_0',['heap.h',['../heap_8h.html',1,'']]],
+  ['height_1',['height',['../structfont__info__s.html#af702f86a05fdf06ca8db89922768e324',1,'font_info_s::height'],['../structlcd__base__s.html#ae7ab2f37151f08fe0dc3bd4e919e575b',1,'lcd_base_s::height'],['../structlcd__thread__safe__s.html#a9ee7ef65d19be1983d6596bca18e140a',1,'lcd_thread_safe_s::height'],['../structlcd__surface__s.html#a556c8787def54e4d2844adbf1ee21f5f',1,'lcd_surface_s::height']]],
+  ['help_5ftype_2',['help_type',['../structui__deskbox__s.html#ace36aac227c3a505fc7db971c142fd86',1,'ui_deskbox_s']]],
+  ['horizontal_5fpadding_3',['horizontal_padding',['../structui__button__s.html#ab038ec9fc4278258aa8db18182fe7821',1,'ui_button_s']]],
+  ['hour_4',['hour',['../structbxc__datetime__t.html#a0f86001200b1549f8d0971931fdb1194',1,'bxc_datetime_t']]]
 ];

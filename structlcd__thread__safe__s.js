@@ -8,7 +8,7 @@ var structlcd__thread__safe__s =
     [ "drawing_area", "structlcd__thread__safe__s.html#a99d147e52daf5dad9e90cdba6c275373", null ],
     [ "font", "structlcd__thread__safe__s.html#a6b9700b7f90247a689d54dca1ab02fda", null ],
     [ "height", "structlcd__thread__safe__s.html#a9ee7ef65d19be1983d6596bca18e140a", null ],
-    [ "lock", "structlcd__thread__safe__s.html#a77e644287b1e6870b667d88085883083", null ],
+    [ "lock", "structlcd__thread__safe__s.html#aea9bf212f3980c4dcb8acb2e4597142c", null ],
     [ "pixel_end", "structlcd__thread__safe__s.html#abe4fe3d70fb6d59ed39dd34008305f57", null ],
     [ "pixel_size", "structlcd__thread__safe__s.html#a9fcd2cf13d136cd09977e291f3aa308a", null ],
     [ "rotate", "structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22", null ],
@@ -19,7 +19,7 @@ var structlcd__thread__safe__s =
     [ "unk_0x74", "structlcd__thread__safe__s.html#a64b11c2f1000d9ff140e10f85f8098d3", null ],
     [ "unk_0x94", "structlcd__thread__safe__s.html#a4dd08da8d5d6207a1b02f890f0373842", null ],
     [ "unk_0xa4", "structlcd__thread__safe__s.html#a4b48d9c2b79e05cdd066d0c89bf5ff7f", null ],
-    [ "unlock", "structlcd__thread__safe__s.html#a12cc4047690e64499eee33f1f4bde8e3", null ],
+    [ "unlock", "structlcd__thread__safe__s.html#aa5e00dc464895269b015a18eae7bd034", null ],
     [ "width", "structlcd__thread__safe__s.html#ad26b5c69bfa15f2c72f4ea2a544a61c8", null ],
     [ "xsize", "structlcd__thread__safe__s.html#aee0fef719c53262a72fa8b019f1c1119", null ]
 ];

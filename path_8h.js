@@ -29,7 +29,6 @@ var path_8h =
       [ "BXC_FS_ATTR_SYSTEM", "path_8h.html#ace1ad2f8a5bced52258703097c71e8d4a653c1a72758185ef817c1f8bf2369634", null ],
       [ "BXC_FS_ATTR_DIR", "path_8h.html#ace1ad2f8a5bced52258703097c71e8d4aa31394efe26ddf824db6925dc7e39cc3", null ],
       [ "BXC_FS_ATTR_ARCHIVE", "path_8h.html#ace1ad2f8a5bced52258703097c71e8d4a87e541c3e5d1042446bdd77c8b51b254", null ],
-      [ "BXC_FS_ATTR_DEVICE", "path_8h.html#ace1ad2f8a5bced52258703097c71e8d4ab6c5c5b3ada96f3bd883fbf1bcc87112", null ],
       [ "BXC_FS_ATTR_NONE", "path_8h.html#ace1ad2f8a5bced52258703097c71e8d4adda247a42f47f9060c5a52de7923409a", null ]
     ] ],
     [ "__wremove", "path_8h.html#a81b1111388a7a37663fe98b9631d66cc", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['osdep_5futls_5fstats_5fs_0',['osdep_utls_stats_s',['../structosdep__utls__stats__s.html',1,'']]]
+  ['nand_5fparams_5ft_0',['nand_params_t',['../structnand__params__t.html',1,'']]]
 ];

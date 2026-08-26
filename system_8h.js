@@ -1,7 +1,7 @@
 var system_8h =
 [
     [ "power_battery_status_t", "structpower__battery__status__t.html", "structpower__battery__status__t" ],
-    [ "timer1_callback_t", "system_8h.html#aa7a435c8a2cda84eaef92144c9ba0798", null ],
+    [ "timer1_callback_t", "system_8h.html#aa8a152285b8f49c34ada713089da0343", null ],
     [ "power_source_type_e", "system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94", [
       [ "POWER_SOURCE_BATTERY", "system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94a88da2f02a30dc1bc97e65039977c9809", null ],
       [ "POWER_SOURCE_AC", "system_8h.html#a7aaf6f829cca7dec5a22c925d7c69d94a7ad789de1505a6c2cbf893b0ed66d4a0", null ]

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['font_5finfo_5fs_0',['font_info_s',['../structfont__info__s.html',1,'']]]
+  ['device_5fservice_5fpcm_5fs_0',['device_service_pcm_s',['../structdevice__service__pcm__s.html',1,'']]],
+  ['devio_5fdescriptor_5ft_1',['devio_descriptor_t',['../structdevio__descriptor__t.html',1,'']]]
 ];
