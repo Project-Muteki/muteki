@@ -566,7 +566,7 @@ Functions</h2></td></tr>
 
 <p>Get errno. </p>
 <p>If kernel errno is set, the errno is returned with <a class="el" href="#a30cce4bb9dc7151d4ec02dfa4fd09405acb5b367dbd46def3e5da80136eb8b302">BXC_ERRNO_NS_KERNEL</a> bit set. Otherwise it will return the result from <a class="el" href="#a37c336a3e8b717cb46ff29daf236de68" title="Set the global errno.">OSSetLastError()</a> with <a class="el" href="#a30cce4bb9dc7151d4ec02dfa4fd09405aff010f1d9ec96508a58bfc918a992bd6">BXC_ERRNO_NS_USER</a> bit set.</p>
-<p>require-krnllib</p>
+<p>-krnllib</p>
 <dl class="section user"><dt>Parameters</dt><dd>None.  </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>The current errno value from either kernel or <a class="el" href="#a37c336a3e8b717cb46ff29daf236de68" title="Set the global errno.">OSSetLastError()</a>. </dd></dl>
 
@@ -598,7 +598,7 @@ Functions</h2></td></tr>
 <p>Set errno. </p>
 <p>Unlike <a class="el" href="#a37c336a3e8b717cb46ff29daf236de68" title="Set the global errno.">OSSetLastError()</a>, this also clears the kernel errno before calling <a class="el" href="#a37c336a3e8b717cb46ff29daf236de68" title="Set the global errno.">OSSetLastError()</a>.</p>
 <p>If the errno namespace is unset, it will also automatically set <a class="el" href="#a30cce4bb9dc7151d4ec02dfa4fd09405a8efba9a2930f1de497e770faef38b395">BXC_ERRNO_NS_APPLET</a> before passing it to <a class="el" href="#a37c336a3e8b717cb46ff29daf236de68" title="Set the global errno.">OSSetLastError()</a>.</p>
-<p>require-krnllib</p>
+<p>-krnllib</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">err</td><td>New errno value.</td></tr>
@@ -660,9 +660,9 @@ Functions</h2></td></tr>
 <p>Fetch error descriptions (encoded in <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec" title="&quot;Portable&quot; Besta UTF-16 type used by other headers.">UTF16</a>) for last set error in a similar manner to <span class="tt"><a class="el" href="#adf9dcc5640b9f66851e35a5f7e3f4d03" title="Fetch an error message.">FormatMessage</a></span> API in Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">flags</td><td>Flags. Only <a class="el" href="#a89ea254f551e25be4a7d90f88b1c908caf69e66cdb200efb13f0226ee1d358025">BXC_FORMAT_MESSAGE_FROM_SYSTEM</a> and <a class="el" href="#a89ea254f551e25be4a7d90f88b1c908caccf12babb7fe1a879e0bec5dd9ed4bc5">BXC_FORMAT_MESSAGE_ALLOCATE_BUFFER</a> are supported. In addition, <a class="el" href="#a89ea254f551e25be4a7d90f88b1c908caf69e66cdb200efb13f0226ee1d358025">BXC_FORMAT_MESSAGE_FROM_SYSTEM</a> must be set. </td></tr>
-    <tr><td class="paramname">_sbz0</td><td>sbz </td></tr>
-    <tr><td class="paramname">_sbz1</td><td>sbz </td></tr>
-    <tr><td class="paramname">_sbz2</td><td>sbz </td></tr>
+    <tr><td class="paramname">_sbz0</td><td>Reserved. Should be set to 0.  </td></tr>
+    <tr><td class="paramname">_sbz1</td><td>Reserved. Should be set to 0.  </td></tr>
+    <tr><td class="paramname">_sbz2</td><td>Reserved. Should be set to 0.  </td></tr>
     <tr><td class="paramname">outbuf</td><td>The output buffer. If using <a class="el" href="#a89ea254f551e25be4a7d90f88b1c908caccf12babb7fe1a879e0bec5dd9ed4bc5">BXC_FORMAT_MESSAGE_ALLOCATE_BUFFER</a>, the pointer to the allocated buffer will be placed at this location. Otherwise the message will be written directly to this location. It's caller's responsibility to free any buffer allocated by <a class="el" href="#a89ea254f551e25be4a7d90f88b1c908caccf12babb7fe1a879e0bec5dd9ed4bc5">BXC_FORMAT_MESSAGE_ALLOCATE_BUFFER</a>. </td></tr>
     <tr><td class="paramname">outlen</td><td>When not using <a class="el" href="#a89ea254f551e25be4a7d90f88b1c908caccf12babb7fe1a879e0bec5dd9ed4bc5">BXC_FORMAT_MESSAGE_ALLOCATE_BUFFER</a>, this is the length of the message buffer. Otherwise this is the minimum size of the buffer allocated for the message by the function. </td></tr>
   </table>

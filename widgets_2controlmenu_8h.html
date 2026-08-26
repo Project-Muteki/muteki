@@ -205,11 +205,11 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10153</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tag</td><td>tag </td></tr>
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">entries</td><td>Menu entry array. </td></tr>
     <tr><td class="paramname">title</td><td>Title of the pop-up menu. </td></tr>
     <tr><td class="paramname">default_index</td><td>Default selected item index. </td></tr>

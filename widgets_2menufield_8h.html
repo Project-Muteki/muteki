@@ -185,9 +185,9 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10154</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">tag</td><td>tag </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">x</td><td>x0 </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname">y</td><td>y0 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">x</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">y</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">index_p</td><td>Borrowed reference to a 16-bit integer that holds the index of the currently selected item. Must be valid across the entire lifespan of the widget. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">entries</td><td>Menu entry array. </td></tr>
     <tr><td class="paramdir"></td><td class="paramname">flags</td><td>Menu field flags. </td></tr>

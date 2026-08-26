@@ -503,8 +503,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>ok </td></tr>
-    <tr><td class="paramname">false</td><td>ng </td></tr>
+    <tr><td class="paramname">true</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">false</td><td>The operation failed with error.   </td></tr>
   </table>
   </dd>
 </dl>
@@ -794,10 +794,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10076</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
   </table>
   </dd>
@@ -862,10 +862,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10078</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">rx</td><td>Horizontal radius in pixels. </td></tr>
     <tr><td class="paramname">ry</td><td>Vertical radius in pixels. </td></tr>
     <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
@@ -1033,10 +1033,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10077</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">flags</td><td>Blit processing flags.</td></tr>
   </table>
   </dd>
@@ -1217,10 +1217,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10074</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">y1</td><td>y1</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
   </table>
   </dd>
 </dl>
@@ -1305,10 +1305,10 @@ Functions</h2></td></tr>
 <p>This is similar to using <a class="el" href="surface_8h.html#a1fa6c5c38a95c92f0b5c9e134311d637" title="Perform blit operation from src surface to dst surface.">_BitBlt()</a> on the active LCD surface but with a seemingly different implementation and a different function signature. Surface initialization is done implicitly by this function although calling <a class="el" href="surface_8h.html#ababbf47f56c76a835a04e8709859bca0" title="Calculate the buffer size required for an all-in-one surface of a specific size.">GetImageSize()</a> in user code is still required in order to allocate a buffer of appropriate size. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10071</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">surface</td><td>Target buffer that will hold the surface. </td></tr>
   </table>
   </dd>
@@ -1502,10 +1502,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1007d</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1</td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
   </table>
   </dd>
 </dl>
@@ -1776,10 +1776,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10080</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1834,10 +1834,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10081</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1892,10 +1892,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10082</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -1950,10 +1950,10 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10083</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">amount</td><td>Amount of pixels to move.</td></tr>
   </table>
   </dd>
@@ -2231,10 +2231,10 @@ Functions</h2></td></tr>
 <p>The new values will be rejected if they are out of bounds (specifically when <span class="tt">x0</span> or <span class="tt">x1</span> are negative or <span class="tt">x1</span> or <span class="tt">y1</span> are less than <span class="tt">x0</span> and <span class="tt">y0</span> respectively), although <span class="tt">x1</span> and <span class="tt">y1</span> will be automatically capped at the <em>physical</em> display size if they are larger than that instead of failing outright. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10073</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1</td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
   </table>
   </dd>
 </dl>
@@ -2463,8 +2463,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>ok </td></tr>
-    <tr><td class="paramname">-1</td><td>ng </td></tr>
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.  </td></tr>
   </table>
   </dd>
 </dl>

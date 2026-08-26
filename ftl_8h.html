@@ -152,7 +152,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Flash Translation Layer (FTL) and block device API. </p>
-<p>require-krnllib </p>
+<p>-krnllib </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="af641b186facc7ee474d06ddda52bfefc" name="af641b186facc7ee474d06ddda52bfefc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af641b186facc7ee474d06ddda52bfefc">&#9670;&#160;</a></span>FTL_CreateRamDisk()</h2>
@@ -298,8 +298,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>ok </td></tr>
-    <tr><td class="paramname">-1</td><td>ng </td></tr>
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.   </td></tr>
   </table>
   </dd>
 </dl>
@@ -328,15 +328,15 @@ Functions</h2></td></tr>
 <p>Get NAND flash parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sbz</td><td>sbz </td></tr>
+    <tr><td class="paramname">sbz</td><td>Reserved. Should be set to 0.  </td></tr>
     <tr><td class="paramname">params</td><td>Parameter structure to write to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>ok </td></tr>
-    <tr><td class="paramname">-1</td><td>ng </td></tr>
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.   </td></tr>
   </table>
   </dd>
 </dl>
@@ -380,7 +380,7 @@ Functions</h2></td></tr>
 <p>Read NAND flash pages at a specific page number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sbz</td><td>sbz </td></tr>
+    <tr><td class="paramname">sbz</td><td>Reserved. Should be set to 0.  </td></tr>
     <tr><td class="paramname">page</td><td>Page number where the read should start. </td></tr>
     <tr><td class="paramname">ptr</td><td>Buffer where the page content will be stored. </td></tr>
     <tr><td class="paramname">count</td><td>Number of pages to read. </td></tr>
@@ -390,8 +390,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>ok </td></tr>
-    <tr><td class="paramname">-1</td><td>ng </td></tr>
+    <tr><td class="paramname">0</td><td>The operation was completed successfully.  </td></tr>
+    <tr><td class="paramname">-1</td><td>The operation failed with error.   </td></tr>
   </table>
   </dd>
 </dl>

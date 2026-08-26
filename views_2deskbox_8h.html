@@ -265,11 +265,11 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10172</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tag</td><td>tag </td></tr>
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">title</td><td>Title of the deskbox. </td></tr>
     <tr><td class="paramname">cmdmenu</td><td>Array of the command menu entries. </td></tr>
     <tr><td class="paramname">cmdmenu_title</td><td>Title text of the command menu. </td></tr>
@@ -363,10 +363,10 @@ Functions</h2></td></tr>
 <p>This is used internally inside <a class="el" href="#a481ece36800a164b4e01eed6c3cb0b7b" title="Draw the deskbox.">PDESKBOX_draw()</a> and is normally not needed. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10179</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
-    <tr><td class="paramname">x1</td><td>x1 </td></tr>
-    <tr><td class="paramname">y1</td><td>y1 </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">x1</td><td>X coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y1</td><td>Y coordinate of the bottom-right corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">deskbox_flags</td><td></td></tr>
   </table>
   </dd>
@@ -485,9 +485,9 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>Parent deskbox object to attach a image to. </td></tr>
-    <tr><td class="paramname">tag</td><td>tag </td></tr>
-    <tr><td class="paramname">x0</td><td>x0 </td></tr>
-    <tr><td class="paramname">y0</td><td>y0 </td></tr>
+    <tr><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
+    <tr><td class="paramname">x0</td><td>X coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
+    <tr><td class="paramname">y0</td><td>Y coordinate of the top-left corner, in pixels (inclusive).  </td></tr>
     <tr><td class="paramname">width</td><td>Width of the image </td></tr>
     <tr><td class="paramname">height</td><td>Height of the image. </td></tr>
     <tr><td class="paramname">image_x</td><td>X offset of the image to blit. </td></tr>
@@ -544,7 +544,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">self</td><td>The parent deskbox to attach the button to. </td></tr>
-    <tr><td class="paramname">tag</td><td>tag </td></tr>
+    <tr><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
     <tr><td class="paramname">label</td><td>Text label on the button. </td></tr>
     <tr><td class="paramname">event</td><td>Event value assigned to the button. </td></tr>
   </table>

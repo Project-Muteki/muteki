@@ -152,9 +152,8 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ad1c7f870630648915d5bde12577e9d8e" id="r_ad1c7f870630648915d5bde12577e9d8e"><td class="memItemLeft"><a id="ad1c7f870630648915d5bde12577e9d8e" name="ad1c7f870630648915d5bde12577e9d8e"></a>
 void *&#160;</td><td class="memItemRight"><b>user_data</b></td></tr>
 <tr class="memdesc:ad1c7f870630648915d5bde12577e9d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">User data pointer. Content is component-specific. <br /></td></tr>
-<tr class="memitem:a7549a5508dd75eea64956844d3b5d84d" id="r_a7549a5508dd75eea64956844d3b5d84d"><td class="memItemLeft"><a id="a7549a5508dd75eea64956844d3b5d84d" name="a7549a5508dd75eea64956844d3b5d84d"></a>
-unsigned short&#160;</td><td class="memItemRight"><b>tag</b></td></tr>
-<tr class="memdesc:a7549a5508dd75eea64956844d3b5d84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">tag <br /></td></tr>
+<tr class="memitem:a7549a5508dd75eea64956844d3b5d84d" id="r_a7549a5508dd75eea64956844d3b5d84d"><td class="memItemLeft">unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#a7549a5508dd75eea64956844d3b5d84d">tag</a></td></tr>
+<tr class="memdesc:a7549a5508dd75eea64956844d3b5d84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  <br /></td></tr>
 <tr class="memitem:a640e234a12ade3562e7493f5b509d45d" id="r_a640e234a12ade3562e7493f5b509d45d"><td class="memItemLeft"><a id="a640e234a12ade3562e7493f5b509d45d" name="a640e234a12ade3562e7493f5b509d45d"></a>
 unsigned short&#160;</td><td class="memItemRight"><b>runtime_type</b></td></tr>
 <tr class="memdesc:a640e234a12ade3562e7493f5b509d45d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Set to 0x65 on buttons. <br /></td></tr>
@@ -323,6 +322,22 @@ short&#160;</td><td class="memItemRight"><b>unk_0x32</b></td></tr>
 
 <p>Component state bit field. </p>
 <p>Each component may use this differently to represent different states. </p>
+
+</div>
+</div>
+<a id="a7549a5508dd75eea64956844d3b5d84d" name="a7549a5508dd75eea64956844d3b5d84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7549a5508dd75eea64956844d3b5d84d">&#9670;&#160;</a></span>tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short ui_component_s::tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated. </p>
 
 </div>
 </div>
