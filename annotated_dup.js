@@ -55,5 +55,6 @@ var annotated_dup =
     [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
     [ "ui_menufield_s", "structui__menufield__s.html", "structui__menufield__s" ],
     [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
-    [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ]
+    [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
+    [ "ui_slider_s", "structui__slider__s.html", "structui__slider__s" ]
 ];

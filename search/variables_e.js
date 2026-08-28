@@ -12,9 +12,11 @@ var searchData=
   ['pending_5fsize_9',['pending_size',['../structpcm__frame__s.html#a8f091dc64a684b148e1bc32c0f6419cf',1,'pcm_frame_s']]],
   ['pixel_5fend_10',['pixel_end',['../structlcd__base__s.html#a91336ecbb49f824f44230820ee684f18',1,'lcd_base_s::pixel_end'],['../structlcd__thread__safe__s.html#abe4fe3d70fb6d59ed39dd34008305f57',1,'lcd_thread_safe_s::pixel_end']]],
   ['pixel_5fsize_11',['pixel_size',['../structlcd__base__s.html#aa5b0c5117508e29ee512256150dec98f',1,'lcd_base_s::pixel_size'],['../structlcd__thread__safe__s.html#a9fcd2cf13d136cd09977e291f3aa308a',1,'lcd_thread_safe_s::pixel_size']]],
-  ['pop_5fidx_12',['pop_idx',['../structbxc__queue__nonatomic__t.html#a497455f5b1b9373575ba860a7e2b749b',1,'bxc_queue_nonatomic_t']]],
-  ['posixfd_5from_13',['posixfd_rom',['../structloader__loaded__s.html#ad37e6477fd09d91d049ef95eeea8c1d5',1,'loader_loaded_s']]],
-  ['post_5fupdate_14',['post_update',['../structui__menufield__s.html#a74248aba6376823dbe98850b3a7ad902',1,'ui_menufield_s']]],
-  ['prev_15',['prev',['../structbxc__thread__s.html#a339ad95901fc2720f474aba679c821fc',1,'bxc_thread_s']]],
-  ['push_5fidx_16',['push_idx',['../structbxc__queue__nonatomic__t.html#a80530bb4f3567fd67a584657fa130cf6',1,'bxc_queue_nonatomic_t']]]
+  ['pixels_5fper_5fstep_12',['pixels_per_step',['../structui__slider__s.html#a8703e6b95289a774573b3c0751e787be',1,'ui_slider_s']]],
+  ['pop_5fidx_13',['pop_idx',['../structbxc__queue__nonatomic__t.html#a497455f5b1b9373575ba860a7e2b749b',1,'bxc_queue_nonatomic_t']]],
+  ['position_14',['position',['../structui__slider__s.html#ae86e68b7b70303d50d184059fe8377c4',1,'ui_slider_s']]],
+  ['posixfd_5from_15',['posixfd_rom',['../structloader__loaded__s.html#ad37e6477fd09d91d049ef95eeea8c1d5',1,'loader_loaded_s']]],
+  ['post_5fupdate_16',['post_update',['../structui__menufield__s.html#a74248aba6376823dbe98850b3a7ad902',1,'ui_menufield_s']]],
+  ['prev_17',['prev',['../structbxc__thread__s.html#a339ad95901fc2720f474aba679c821fc',1,'bxc_thread_s']]],
+  ['push_5fidx_18',['push_idx',['../structbxc__queue__nonatomic__t.html#a80530bb4f3567fd67a584657fa130cf6',1,'bxc_queue_nonatomic_t']]]
 ];

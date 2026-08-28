@@ -20,12 +20,15 @@ var searchData=
   ['printfxy_17',['PrintfXY',['../lcd_8h.html#a7c41a12f427a08332e20a9b5c201544e',1,'lcd.h']]],
   ['programisrunninga_18',['ProgramIsRunningA',['../loader_8h.html#a49b3aae10043dbc221a7ae34a59d71b5',1,'loader.h']]],
   ['programisrunningw_19',['ProgramIsRunningW',['../loader_8h.html#acef8c80267888eadf86ee52e625e6534',1,'loader.h']]],
-  ['putevent_20',['PutEvent',['../framework_2event_8h.html#a0dfa96c341f7f5141934baa765b00e25',1,'event.h']]],
-  ['puteventext_21',['PutEventExt',['../framework_2event_8h.html#a3a0a70f0744bc1fc712cea4050d40893',1,'event.h']]],
-  ['putimage_22',['PutImage',['../lcd_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'lcd.h']]],
-  ['putsystemevent_23',['PutSystemEvent',['../framework_2event_8h.html#a429a689cf8a4d534f491775f454b3cb8',1,'event.h']]],
-  ['pview_5fdraw_24',['PVIEW_draw',['../component_8h.html#a22f0feec9098d47a63052e75bb26abf4',1,'component.h']]],
-  ['pview_5ferasebackground_25',['PVIEW_EraseBackGround',['../component_8h.html#a6c9f51175af33cebdd37fa9255189d5d',1,'component.h']]],
-  ['pview_5fhandleevent_26',['PVIEW_handleEvent',['../component_8h.html#ac85bd7426bac94ce46f80d82df373215',1,'component.h']]],
-  ['pview_5fsetstate_27',['PVIEW_setState',['../component_8h.html#a53c0497b77c76d36f8dfa134b1198783',1,'component.h']]]
+  ['pslider_5fhandleevent_20',['PSLIDER_handleEvent',['../widgets_2slider_8h.html#a3988d3dc498ee174934fff76ba77059f',1,'slider.h']]],
+  ['pslider_5fsetpos_21',['PSLIDER_SetPos',['../widgets_2slider_8h.html#acfbe14726807e052ac257510a08589d9',1,'slider.h']]],
+  ['pslider_5fsetrange_22',['PSLIDER_SetRange',['../widgets_2slider_8h.html#af7280bc0c65624ec906fe69d2f3a1cf2',1,'slider.h']]],
+  ['putevent_23',['PutEvent',['../framework_2event_8h.html#a0dfa96c341f7f5141934baa765b00e25',1,'event.h']]],
+  ['puteventext_24',['PutEventExt',['../framework_2event_8h.html#a3a0a70f0744bc1fc712cea4050d40893',1,'event.h']]],
+  ['putimage_25',['PutImage',['../lcd_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'lcd.h']]],
+  ['putsystemevent_26',['PutSystemEvent',['../framework_2event_8h.html#a429a689cf8a4d534f491775f454b3cb8',1,'event.h']]],
+  ['pview_5fdraw_27',['PVIEW_draw',['../component_8h.html#a22f0feec9098d47a63052e75bb26abf4',1,'component.h']]],
+  ['pview_5ferasebackground_28',['PVIEW_EraseBackGround',['../component_8h.html#a6c9f51175af33cebdd37fa9255189d5d',1,'component.h']]],
+  ['pview_5fhandleevent_29',['PVIEW_handleEvent',['../component_8h.html#ac85bd7426bac94ce46f80d82df373215',1,'component.h']]],
+  ['pview_5fsetstate_30',['PVIEW_setState',['../component_8h.html#a53c0497b77c76d36f8dfa134b1198783',1,'component.h']]]
 ];
