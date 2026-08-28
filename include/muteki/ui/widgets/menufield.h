@@ -31,7 +31,7 @@ extern "C" {
  * @see ui_menufield_flag_e
  */
 ui_menufield_t *CreateMenuField(
-    ushort tag,
+    unsigned short tag,
     short x,
     short y,
     unsigned short *index_p,
