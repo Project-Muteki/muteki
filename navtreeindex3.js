@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"structbxc__thread__s.html#ae21e6ccebb4860b7e5e24153f9df256a":[4,0,11,13],
 "structbxc__thread__s.html#ae881bd296e9589be684c0a80b6edd971":[4,0,11,7],
 "structbxc__thread__s.html#aecf67c08dbee2373077dd7d1f75632b6":[4,0,11,11],
 "structbxc__waitable__t.html":[4,0,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "structui__deskbox__s.html#a06f73e43f2a3c6531026d438ded83478":[4,0,43,2],
 "structui__deskbox__s.html#a0d441bb46b0ca3970f94d3bf7cd85202":[4,0,43,16],
 "structui__deskbox__s.html#a122e34ce7fc6118546b862f209a176d7":[4,0,43,7],
-"structui__deskbox__s.html#a181a7e4fc996adec62fa82cf64a367d9":[4,0,43,8],
-"structui__deskbox__s.html#a22a0d6c97b91d81646c2eaaa0fd95c67":[4,0,43,18]
+"structui__deskbox__s.html#a181a7e4fc996adec62fa82cf64a367d9":[4,0,43,8]
 };

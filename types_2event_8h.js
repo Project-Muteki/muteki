@@ -4,6 +4,11 @@ var types_2event_8h =
       [ "SCROLL_DOWN", "types_2event_8h.html#a1be4f211929ba28d21f38530d28e263da9d522bb191bf21bcaace5569ec49475d", null ],
       [ "SCROLL_UP", "types_2event_8h.html#a1be4f211929ba28d21f38530d28e263dadc276c852fdda273d5091ee8e2ceb4ec", null ]
     ] ],
+    [ "ui_event_component_call_e", "types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cde", [
+      [ "UI_EVENT_COMPONENT_CALL_ERASE_BG", "types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cdea84754c7e27781b645b4ac9920ea44dd5", null ],
+      [ "UI_EVENT_COMPONENT_CALL_DRAW", "types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cdeac9f4a5b006b44acd9484b5cb8556d8b2", null ],
+      [ "UI_EVENT_COMPONENT_CALL_SET_STATE", "types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cdea361713e32d71bd9148a49d62f6f99438", null ]
+    ] ],
     [ "ui_event_internal_e", "types_2event_8h.html#a6edd1204219bf9674aa3bf2d1212c67c", [
       [ "UI_EVENT_INTERNAL_FLAG", "types_2event_8h.html#a6edd1204219bf9674aa3bf2d1212c67caba8c3fbd91e33b70a96cc6bbf6a46e98", null ],
       [ "UI_EVENT_INTERNAL_BATTERY_CHECK_REQUEST", "types_2event_8h.html#a6edd1204219bf9674aa3bf2d1212c67ca57be2af4f02f321d5917eb1f9e22e697", null ],
@@ -23,6 +28,7 @@ var types_2event_8h =
       [ "UI_EVENT_TYPE_SPECIAL", "types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa844f0bcc32943b0a2a402babc39da477", null ],
       [ "UI_EVENT_TYPE_COMPONENT_CMD", "types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa7bff103c505cbd6c3ed04e9c9aa278f1", null ],
       [ "UI_EVENT_TYPE_INTERNAL", "types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa024fcaf067429ee738b453a0c6c2188e", null ],
+      [ "UI_EVENT_TYPE_COMPONENT_CALL", "types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fa0b407e518228d55f2467251221b4c339", null ],
       [ "UI_EVENT_TYPE_KEY_UP", "types_2event_8h.html#ad23e002626a9b8e5b06b32178419966fae986ba84f01d4838c6234527cc6c1b48", null ]
     ] ],
     [ "ui_keycode_e", "types_2event_8h.html#a5a8a35936de2c47931e5b19cad130e63", [

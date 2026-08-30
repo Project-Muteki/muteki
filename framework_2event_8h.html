@@ -830,6 +830,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Synchronously send an event to a recipient, bypassing the event queuing mechanism. </p>
+<dl class="section note"><dt>Note</dt><dd>Some events have different data layout. For example <a class="el" href="types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cdea361713e32d71bd9148a49d62f6f99438" title="Set state.">UI_EVENT_COMPONENT_CALL_SET_STATE</a> requires the <a class="el" href="framework_8h.html#a4d86d118b5e754098193d94615fc8593" title="ui_event_state_change_s">ui_event_state_change_t</a> instead of <a class="el" href="framework_8h.html#a1489cb1864b00de51258bc009b1e1eaa" title="ui_event_std_s">ui_event_t</a>. Either cast them into <a class="el" href="framework_8h.html#a1489cb1864b00de51258bc009b1e1eaa" title="ui_event_std_s">ui_event_t</a> or pass the parent <span class="tt">event</span> member. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10188</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: ui_message_s Struct Reference</title>
+<title>muteki: ui_event_state_change_s Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('structui__message__s.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structui__event__state__change__s.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structui__mess
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ui_message_s Struct Reference</div></div>
+  <div class="headertitle"><div class="title">ui_event_state_change_s Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -131,16 +131,33 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structui__mess
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a536d210016f0ed33f5598827e423ef43" id="r_a536d210016f0ed33f5598827e423ef43"><td class="memItemLeft"><a id="a536d210016f0ed33f5598827e423ef43" name="a536d210016f0ed33f5598827e423ef43"></a>
+<tr class="memitem:a54c3363fe35d6dd54678fd716e5c7175" id="r_a54c3363fe35d6dd54678fd716e5c7175"><td class="memItemLeft"><a id="a54c3363fe35d6dd54678fd716e5c7175" name="a54c3363fe35d6dd54678fd716e5c7175"></a>
 <a class="el" href="framework_8h.html#a1489cb1864b00de51258bc009b1e1eaa">ui_event_t</a>&#160;</td><td class="memItemRight"><b>event</b></td></tr>
-<tr class="memdesc:a536d210016f0ed33f5598827e423ef43"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event struct. <br /></td></tr>
-<tr class="memitem:a4025320801b748f96eb0512da3e89559" id="r_a4025320801b748f96eb0512da3e89559"><td class="memItemLeft"><a id="a4025320801b748f96eb0512da3e89559" name="a4025320801b748f96eb0512da3e89559"></a>
-int&#160;</td><td class="memItemRight"><b>unk_0x18</b></td></tr>
-<tr class="memdesc:a4025320801b748f96eb0512da3e89559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. <br /></td></tr>
+<tr class="memdesc:a54c3363fe35d6dd54678fd716e5c7175"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event struct. <br /></td></tr>
+<tr class="memitem:a63f8873d58128338afd5521bf6a70a4e" id="r_a63f8873d58128338afd5521bf6a70a4e"><td class="memItemLeft">unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a63f8873d58128338afd5521bf6a70a4e">state_change</a></td></tr>
+<tr class="memdesc:a63f8873d58128338afd5521bf6a70a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">State change value.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Event struct used by <a class="el" href="framework_2event_8h.html#a81e92618904579d8d96b9edf4939baef" title="Synchronously send an event to a recipient, bypassing the event queuing mechanism.">SendMessage()</a>. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a63f8873d58128338afd5521bf6a70a4e" name="a63f8873d58128338afd5521bf6a70a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f8873d58128338afd5521bf6a70a4e">&#9670;&#160;</a></span>state_change</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ui_event_state_change_s::state_change</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>State change value. </p>
+<p>The lower 16 bits are the bit mask, and the 16th bit is whether the bits should be set (1) or cleared (0). </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/muteki/ui/types/<a class="el" href="framework_8h_source.html">framework.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -156,7 +173,7 @@ int&#160;</td><td class="memItemRight"><b>unk_0x18</b></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="structui__message__s.html">ui_message_s</a></li>
+    <li class="navelem"><a href="structui__event__state__change__s.html">ui_event_state_change_s</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

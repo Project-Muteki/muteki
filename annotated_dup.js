@@ -47,6 +47,7 @@ var annotated_dup =
     [ "ui_event_ext_prime_s", "structui__event__ext__prime__s.html", "structui__event__ext__prime__s" ],
     [ "ui_event_ext_s", "structui__event__ext__s.html", "structui__event__ext__s" ],
     [ "ui_event_prime_s", "structui__event__prime__s.html", "structui__event__prime__s" ],
+    [ "ui_event_state_change_s", "structui__event__state__change__s.html", "structui__event__state__change__s" ],
     [ "ui_event_std_s", "structui__event__std__s.html", "structui__event__std__s" ],
     [ "ui_event_sys_s", "structui__event__sys__s.html", "structui__event__sys__s" ],
     [ "ui_filepicker_context_s", "structui__filepicker__context__s.html", "structui__filepicker__context__s" ],
@@ -54,7 +55,6 @@ var annotated_dup =
     [ "ui_imageclip_s", "structui__imageclip__s.html", "structui__imageclip__s" ],
     [ "ui_menu_entry_s", "structui__menu__entry__s.html", "structui__menu__entry__s" ],
     [ "ui_menufield_s", "structui__menufield__s.html", "structui__menufield__s" ],
-    [ "ui_message_s", "structui__message__s.html", "structui__message__s" ],
     [ "ui_multipress_event_s", "structui__multipress__event__s.html", "structui__multipress__event__s" ],
     [ "ui_slider_s", "structui__slider__s.html", "structui__slider__s" ]
 ];
