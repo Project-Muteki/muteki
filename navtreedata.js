@@ -28,6 +28,7 @@ var NAVTREE =
     [ "Integrating muteki into a C compiler", "index.html#autotoc_md1", null ],
     [ "Integrating muteki syscall definitions into Ghidra", "index.html#autotoc_md2", null ],
     [ "Developing muteki using clangd", "index.html#autotoc_md3", null ],
+    [ "Pre-commit index header generation", "index.html#autotoc_md4", null ],
     [ "Todo List", "todo.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -56,10 +57,10 @@ var NAVTREEINDEX =
 [
 "abi_8h.html",
 "ftl_8h_source.html",
-"loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d",
-"structbxc__thread__s.html#ae21e6ccebb4860b7e5e24153f9df256a",
-"structui__deskbox__s.html#a22a0d6c97b91d81646c2eaaa0fd95c67",
-"types_2event_8h.html#a5a8a35936de2c47931e5b19cad130e63ab7f8f641dbca817e6d7f29a29d7c25ef"
+"loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946",
+"structbxc__thread__s.html#ad3fd508427f328d56becccb59b38da59",
+"structui__deskbox__s.html#a181a7e4fc996adec62fa82cf64a367d9",
+"types_2event_8h.html#a5a8a35936de2c47931e5b19cad130e63ab4c5d0aeca12b4f3d7cbd4e939599690"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

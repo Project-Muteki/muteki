@@ -139,7 +139,11 @@ Integrating muteki syscall definitions into Ghidra</h1>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 Developing muteki using clangd</h1>
 <p>Generate a fresh build directory named <span class="tt">builddir/</span> and specify <span class="tt">--query-driver=/path/to/arm-none-bestaeabi-gcc</span> in the clangd command line to get started.</p>
-<p>clangd <a href="https://github.com/clangd/clangd/issues/45">does not support non-stand-alone (headers-only) files</a> at this moment. To make the language server work properly, open the test file under <span class="tt">src/test.c</span> first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers. </p>
+<p>clangd <a href="https://github.com/clangd/clangd/issues/45">does not support non-stand-alone (headers-only) files</a> at this moment. To make the language server work properly, open the test file under <span class="tt">src/test.c</span> first before opening any of the header files. Fail to do so may cause the language server to output bogus errors on how it cannot find system headers.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Pre-commit index header generation</h1>
+<p>This repo uses a pre-commit hook script to generate the index header <span class="tt"><a class="el" href="muteki_8h.html" title="Index header that includes everything available.">muteki.h</a></span>. After checking out this repo, run <span class="tt">python scripts/pre_commit_hook.py --install</span> to activate the pre-commit hook. Or alternatively use <span class="tt">python scripts/pre_commit_hook.py</span> to run the hook manually.</p>
+<p>In order for this to work, Python and git must be installed and are reachable by <span class="tt">PATH</span>. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
