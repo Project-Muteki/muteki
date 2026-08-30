@@ -8,6 +8,7 @@ var dir_99f49a061dade37ab5c90804c9c23e3b =
     [ "imageclip.h", "imageclip_8h.html", "imageclip_8h" ],
     [ "menu_common.h", "menu__common_8h.html", "menu__common_8h" ],
     [ "menufield.h", "types_2menufield_8h.html", "types_2menufield_8h" ],
+    [ "progressbar.h", "types_2progressbar_8h.html", "types_2progressbar_8h" ],
     [ "slider.h", "types_2slider_8h.html", "types_2slider_8h" ],
     [ "text_layout.h", "text__layout_8h.html", "text__layout_8h" ]
 ];

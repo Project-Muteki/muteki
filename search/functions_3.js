@@ -20,8 +20,9 @@ var searchData=
   ['createdeskbox_17',['CreateDeskBox',['../views_2deskbox_8h.html#a2a1814beaf29a936348076c0bf9f33a5',1,'deskbox.h']]],
   ['createfile_18',['CreateFile',['../devio_8h.html#a53d5c8ec17bb4eaa87daeaf1007e5736',1,'devio.h']]],
   ['createmenufield_19',['CreateMenuField',['../widgets_2menufield_8h.html#a874a499326de31d96b141dbf46aedbf7',1,'menufield.h']]],
-  ['createslider_20',['CreateSlider',['../widgets_2slider_8h.html#ac83a1109c851a7b05699a1f6a6f6b2e7',1,'slider.h']]],
-  ['createvirtuallcd_21',['CreateVirtualLCD',['../lcd_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'lcd.h']]],
-  ['cursorlock_22',['CursorLock',['../lcd_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'lcd.h']]],
-  ['cursorunlock_23',['CursorUnlock',['../lcd_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'lcd.h']]]
+  ['createprogress_20',['CreateProgress',['../widgets_2progressbar_8h.html#a0592148d25f7953859f7f330790ace92',1,'progressbar.h']]],
+  ['createslider_21',['CreateSlider',['../widgets_2slider_8h.html#ac83a1109c851a7b05699a1f6a6f6b2e7',1,'slider.h']]],
+  ['createvirtuallcd_22',['CreateVirtualLCD',['../lcd_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'lcd.h']]],
+  ['cursorlock_23',['CursorLock',['../lcd_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'lcd.h']]],
+  ['cursorunlock_24',['CursorUnlock',['../lcd_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'lcd.h']]]
 ];
