@@ -295,6 +295,9 @@ extern unsigned short GetCapsState(void);
 
 /**
  * @brief Synchronously send an event to a recipient, bypassing the event queuing mechanism.
+ * @note Some events have different data layout. For example ::UI_EVENT_COMPONENT_CALL_SET_STATE requires the
+ * ::ui_event_state_change_t instead of ::ui_event_t. Either cast them into ::ui_event_t or pass the parent `event`
+ * member.
  * @x_syscall_num{0x10188}
  * @param[in, out] event The event. Must contain a valid ui_event_t::recipient.
  * @return true Event is consumed by the recipient.

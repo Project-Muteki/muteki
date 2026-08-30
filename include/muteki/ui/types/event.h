@@ -408,6 +408,11 @@ enum ui_event_type_e {
      */
     UI_EVENT_TYPE_INTERNAL = 0x4000,
     /**
+     * @brief Internal UI component call request.
+     * @see ui_event_component_call_e
+     */
+    UI_EVENT_TYPE_COMPONENT_CALL = 0x40000,
+    /**
      * @brief Key(s) released.
      * @details Available on S3C and TCC boards.
      */
@@ -434,6 +439,33 @@ enum ui_event_internal_e {
      * @brief Queue this event normally into the system event queue. Exact purpose is unclear.
      */
     UI_EVENT_INTERNAL_BYPASS = 2,
+};
+
+/**
+ * @brief Internal UI component call request types.
+ * @details
+ * These values may go into the ui_event_t::value field when ui_event_t::event_type is ::UI_EVENT_TYPE_COMPONENT_CALL.
+ */
+enum ui_event_component_call_e {
+    /**
+     * @brief Erase the background of the component.
+     * @details This runs the ui_component_s::on_erase_bg callback.
+     */
+    UI_EVENT_COMPONENT_CALL_ERASE_BG = 1,
+    /**
+     * @brief Draw the component.
+     * @details This runs the ui_component_s::on_draw callback and sets the ui_event_sys_s::user_data to `0x5a5a5a5a`.
+     */
+    UI_EVENT_COMPONENT_CALL_DRAW = 2,
+    /**
+     * @brief Set state.
+     * @details This runs the ui_component_s::on_set_state callback with the mask and set value set in the event.
+     * @warning The event format must be the extended ::ui_event_state_change_t, which is 4 bytes larger than the
+     * standard ::ui_event_t, and having the parameters that will be passed to ui_component_s::on_set_state packed into
+     * the ui_event_state_change_t::state_change property.
+     * @see ui_event_state_change_t::state_change
+     */
+    UI_EVENT_COMPONENT_CALL_SET_STATE = 3,
 };
 
 /**

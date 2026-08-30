@@ -79,6 +79,8 @@ typedef struct ui_event_ext_s ui_event_ext_t;
 typedef struct ui_event_ext_prime_s ui_event_ext_prime_t;
 /** @brief ui_event_sys_s */
 typedef struct ui_event_sys_s ui_event_sys_t;
+/** @brief ui_event_state_change_s */
+typedef struct ui_event_state_change_s ui_event_state_change_t;
 /** @brief ui_multipress_event_s */
 typedef struct ui_multipress_event_s ui_multipress_event_t;
 /** @brief ui_group_s */
@@ -420,15 +422,16 @@ struct ui_event_prime_s {
 /**
  * @brief Event struct used by SendMessage().
  */
-struct ui_message_s {
+struct ui_event_state_change_s {
     /**
      * @brief The event struct.
      */
     ui_event_t event; // 0x0:0x18
     /**
-     * @brief Unknown.
+     * @brief State change value.
+     * @details The lower 16 bits are the bit mask, and the 16th bit is whether the bits should be set (1) or cleared (0).
      */
-    int unk_0x18; // 0x18:0x1c
+    unsigned int state_change; // 0x18:0x1c
 }; // 0x1c bytes
 
 #ifdef __cplusplus
