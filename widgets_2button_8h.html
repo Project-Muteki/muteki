@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('widgets_2butto
 </div><!--header-->
 <div class="contents">
 
-<p>Button widget API.  
+<p>Button widget constructor and methods.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="types_2button_8h_source.html">../types/button.h</a>&quot;</code><br />
 </div>
@@ -132,17 +132,76 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('widgets_2butto
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a639ac5f8fd8cccdfa624dbaa965c1f76" id="r_a639ac5f8fd8cccdfa624dbaa965c1f76"><td class="memItemLeft"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a639ac5f8fd8cccdfa624dbaa965c1f76">CreateButton</a> (unsigned short tag, short x0, short y0, short x1, short y1, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *label, unsigned int event, unsigned short flags)</td></tr>
-<tr class="memdesc:a639ac5f8fd8cccdfa624dbaa965c1f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a button widget object.  <br /></td></tr>
+<tr class="memitem:a09f830e656b677408b334b1b6c0a2702" id="r_a09f830e656b677408b334b1b6c0a2702"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a09f830e656b677408b334b1b6c0a2702">RelatedKeyButton</a> (<a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *button, int keycode)</td></tr>
+<tr class="memdesc:a09f830e656b677408b334b1b6c0a2702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a button to a keyboard key.  <br /></td></tr>
+<tr class="memitem:a740cfced565e2cac81dd0e5af2b89723" id="r_a740cfced565e2cac81dd0e5af2b89723"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a740cfced565e2cac81dd0e5af2b89723">RelatedKeyButtonEx</a> (<a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *button, int keycode)</td></tr>
+<tr class="memdesc:a740cfced565e2cac81dd0e5af2b89723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind a button to a keyboard key and attach the prompt string for that key.  <br /></td></tr>
+<tr class="memitem:a8803419f3b36f792c275d1da9fb1a473" id="r_a8803419f3b36f792c275d1da9fb1a473"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8803419f3b36f792c275d1da9fb1a473">UnRelatedKeyButton</a> (<a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *button)</td></tr>
+<tr class="memdesc:a8803419f3b36f792c275d1da9fb1a473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove existing key binding on a button.  <br /></td></tr>
+<tr class="memitem:af4cb094595bf3503d7e1b00d120158fb" id="r_af4cb094595bf3503d7e1b00d120158fb"><td class="memItemLeft"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af4cb094595bf3503d7e1b00d120158fb">CreateButton</a> (unsigned short tag, short x0, short y0, short x1, short y1, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *label, unsigned int event, unsigned short flags)</td></tr>
+<tr class="memdesc:af4cb094595bf3503d7e1b00d120158fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a button widget object.  <br /></td></tr>
+<tr class="memitem:ac79056a917f4065d26274cea63df7e86" id="r_ac79056a917f4065d26274cea63df7e86"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac79056a917f4065d26274cea63df7e86">ChangeButton</a> (<a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *button, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *label, unsigned int event)</td></tr>
+<tr class="memdesc:ac79056a917f4065d26274cea63df7e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify and redraw the button.  <br /></td></tr>
+<tr class="memitem:add64f6d03db4e0ee0e076a2103d4ee11" id="r_add64f6d03db4e0ee0e076a2103d4ee11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#add64f6d03db4e0ee0e076a2103d4ee11">PBUTTON_draw</a> (<a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *self)</td></tr>
+<tr class="memdesc:add64f6d03db4e0ee0e076a2103d4ee11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default draw callback of the button widget.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Button widget API. </p>
+<div class="textblock"><p>Button widget constructor and methods. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a639ac5f8fd8cccdfa624dbaa965c1f76" name="a639ac5f8fd8cccdfa624dbaa965c1f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a639ac5f8fd8cccdfa624dbaa965c1f76">&#9670;&#160;</a></span>CreateButton()</h2>
+<a id="ac79056a917f4065d26274cea63df7e86" name="ac79056a917f4065d26274cea63df7e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79056a917f4065d26274cea63df7e86">&#9670;&#160;</a></span>ChangeButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChangeButton </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *</td>          <td class="paramname"><span class="paramname"><em>button</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *</td>          <td class="paramname"><span class="paramname"><em>label</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>event</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Modify and redraw the button. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1014b</span> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>The button object. </td></tr>
+    <tr><td class="paramname">label</td><td>New UTF-16 encoded string to be used as a label. Will be skipped if set to <span class="tt">NULL</span>. </td></tr>
+    <tr><td class="paramname">event</td><td>New custom event to be sent on button press. Will be skipped if set to <span class="tt">0</span>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>None.   </dd></dl>
+
+</div>
+</div>
+<a id="af4cb094595bf3503d7e1b00d120158fb" name="af4cb094595bf3503d7e1b00d120158fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4cb094595bf3503d7e1b00d120158fb">&#9670;&#160;</a></span>CreateButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> * CreateButton </td>
@@ -172,7 +231,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *</td>          <td class="paramname"><span class="paramname"><em>label</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *</td>          <td class="paramname"><span class="paramname"><em>label</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -185,12 +244,18 @@ Functions</h2></td></tr>
           <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Create a button widget object. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo</a></b></dt><dd><p class="startdd">Test the event behavior. This needs more reverse engineering on the view event handling process. </p>
 <p class="enddd">Figure out the flags. </p>
 </dd></dl>
+<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1014a</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>Component tag. Can be used to distinguish components under some circumstances (like when sharing a callback with another component, or looking up an item with GetDeskItem()). Does not need to be unique. Usually will be set by <a class="el" href="arena_8h.html#a7337af92411abadd2bb3cc273d88a8b5" title="Allocate memory on the secondary heap.">AllocBlock()</a> after the memory was allocated.  </td></tr>
@@ -205,6 +270,159 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The allocated object. </dd></dl>
+
+</div>
+</div>
+<a id="add64f6d03db4e0ee0e076a2103d4ee11" name="add64f6d03db4e0ee0e076a2103d4ee11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add64f6d03db4e0ee0e076a2103d4ee11">&#9670;&#160;</a></span>PBUTTON_draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PBUTTON_draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default draw callback of the button widget. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1014e</span> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a09f830e656b677408b334b1b6c0a2702" name="a09f830e656b677408b334b1b6c0a2702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09f830e656b677408b334b1b6c0a2702">&#9670;&#160;</a></span>RelatedKeyButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RelatedKeyButton </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *</td>          <td class="paramname"><span class="paramname"><em>button</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>keycode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind a button to a keyboard key. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10147</span> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>The button object. </td></tr>
+    <tr><td class="paramname">keycode</td><td>Keycode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>None.  </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2event_8h.html#a5a8a35936de2c47931e5b19cad130e63" title="List of available keycodes.">ui_keycode_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="a740cfced565e2cac81dd0e5af2b89723" name="a740cfced565e2cac81dd0e5af2b89723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740cfced565e2cac81dd0e5af2b89723">&#9670;&#160;</a></span>RelatedKeyButtonEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RelatedKeyButtonEx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *</td>          <td class="paramname"><span class="paramname"><em>button</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>keycode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bind a button to a keyboard key and attach the prompt string for that key. </p>
+<p>The default draw callback will draw the key prompt string before the label string (e.g. <span class="tt">F1 Press Me</span>) </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10148</span> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>The button object. </td></tr>
+    <tr><td class="paramname">keycode</td><td>Keycode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>None.  </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="types_2event_8h.html#a5a8a35936de2c47931e5b19cad130e63" title="List of available keycodes.">ui_keycode_e</a> </dd>
+<dd>
+<a class="el" href="structui__button__s.html#ad1abc8959de1b63aab1a97ef24b124d0" title="Human-readable label of key binding (can be NULL).">ui_button_s::key_binding_str</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8803419f3b36f792c275d1da9fb1a473" name="a8803419f3b36f792c275d1da9fb1a473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8803419f3b36f792c275d1da9fb1a473">&#9670;&#160;</a></span>UnRelatedKeyButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnRelatedKeyButton </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2button_8h.html#a6205daaaac059331281406d9a5b89099">ui_button_t</a> *</td>          <td class="paramname"><span class="paramname"><em>button</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove existing key binding on a button. </p>
+<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10149</span> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>The button object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>Returns</dt><dd>None.   </dd></dl>
 
 </div>
 </div>
