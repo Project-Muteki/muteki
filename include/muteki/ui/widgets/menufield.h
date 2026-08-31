@@ -5,7 +5,7 @@
 
 /**
  * @file menufield.h
- * @brief Menu field widget API.
+ * @brief Menu field widget constructor and methods.
  */
 
 #ifndef __MUTEKI_UI_WIDGETS_MENUFIELD_H__

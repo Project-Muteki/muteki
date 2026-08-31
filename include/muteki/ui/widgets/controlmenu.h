@@ -5,7 +5,7 @@
 
 /**
  * @file controlmenu.h
- * @brief Control menu widget API.
+ * @brief Control menu widget constructor and methods.
  */
 
 #ifndef __MUTEKI_UI_WIDGETS_CONTROLMENU_H__
