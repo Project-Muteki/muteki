@@ -40,6 +40,8 @@ var annotated_dup =
     [ "pcm_frame_s", "structpcm__frame__s.html", "structpcm__frame__s" ],
     [ "pcm_state_s", "structpcm__state__s.html", null ],
     [ "power_battery_status_t", "structpower__battery__status__t.html", "structpower__battery__status__t" ],
+    [ "ui_appview_item_s", "structui__appview__item__s.html", "structui__appview__item__s" ],
+    [ "ui_appview_s", "structui__appview__s.html", "structui__appview__s" ],
     [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "ui_controlmenu_s", "structui__controlmenu__s.html", "structui__controlmenu__s" ],

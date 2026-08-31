@@ -1,0 +1,26 @@
+var structui__appview__s =
+[
+    [ "appview_flags", "structui__appview__s.html#afb43461cf06b38eebd9c412ec24fe4eb", null ],
+    [ "column_count", "structui__appview__s.html#ab38377009d624068d997a6cc09244463", null ],
+    [ "component", "structui__appview__s.html#a048b3407079ebf9a1aff61b6e5167b4c", null ],
+    [ "first_visible_item", "structui__appview__s.html#a79a1d7cae46a4f8a820023fa5a9a5c8c", null ],
+    [ "font_type", "structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda", null ],
+    [ "horizontal_gap", "structui__appview__s.html#a43f7737c775d367b0689a3bc412432b2", null ],
+    [ "icon_height", "structui__appview__s.html#aa48984175e82b52da2502b4a758db436", null ],
+    [ "icon_width", "structui__appview__s.html#a0d3ac04cb71ece8acd6fe380ad3f28f9", null ],
+    [ "item_count", "structui__appview__s.html#a165a39e18bf733885dcd15a37290c55a", null ],
+    [ "item_height", "structui__appview__s.html#ab8ae7fb1375a3d20aab81a3633b9da99", null ],
+    [ "item_width", "structui__appview__s.html#ab4ed776101a9593fd5635aa10dbbb071", null ],
+    [ "on_draw_icon", "structui__appview__s.html#a9e0d7fbe9627757fc940f15aa223efcb", null ],
+    [ "on_draw_item", "structui__appview__s.html#a75bc7d2675c4f3bf75980a8ad0fe30c3", null ],
+    [ "on_draw_label", "structui__appview__s.html#af44fc9232fcc0413a80f8e6e0537f4d0", null ],
+    [ "on_load_page", "structui__appview__s.html#a1e889e5e82f92b4b7ab2b86a45bd1644", null ],
+    [ "on_relayout", "structui__appview__s.html#adc4b6e60ab13daa039549c9f16b26cda", null ],
+    [ "page_capacity", "structui__appview__s.html#a38c3f241a5b36986c881ffd164a99bb5", null ],
+    [ "page_items", "structui__appview__s.html#a63c3bf70476cf8b94bd94f0b4d2aaf45", null ],
+    [ "reload_pending", "structui__appview__s.html#a343b222d3bbd11911e9db0871737bd1b", null ],
+    [ "selected_page_slot", "structui__appview__s.html#adba99005fe08c0cd7b6af73e7a334688", null ],
+    [ "unk_0x3a", "structui__appview__s.html#a73198d41a4bf68f76030f539b30bcab5", null ],
+    [ "unk_0x56", "structui__appview__s.html#a3f601c36ca31c8c5fd2ba48474f6974c", null ],
+    [ "vertical_gap", "structui__appview__s.html#a1f3fe012548197d3eb0490e3d890b48d", null ]
+];

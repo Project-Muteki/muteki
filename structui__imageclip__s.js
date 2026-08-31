@@ -8,6 +8,5 @@ var structui__imageclip__s =
     [ "image_offset_y", "structui__imageclip__s.html#ad9b8bfcc8f6a09f7dcee5855023f6c6b", null ],
     [ "on_replace_image", "structui__imageclip__s.html#aacd9f26a10ca2101c0548c444acd6991", null ],
     [ "surface", "structui__imageclip__s.html#a54641ce19ed28d98955d5bf135ac7498", null ],
-    [ "unk_0x40", "structui__imageclip__s.html#a1b145ac01dcda1c7ef116594b96b9844", null ],
     [ "unk_0x4c", "structui__imageclip__s.html#a62535b44a5745ff147c49dcc7ec3af06", null ]
 ];

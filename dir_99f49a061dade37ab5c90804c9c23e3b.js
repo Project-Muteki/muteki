@@ -1,5 +1,6 @@
 var dir_99f49a061dade37ab5c90804c9c23e3b =
 [
+    [ "appview.h", "types_2appview_8h.html", "types_2appview_8h" ],
     [ "button.h", "types_2button_8h.html", "types_2button_8h" ],
     [ "controlmenu.h", "types_2controlmenu_8h.html", "types_2controlmenu_8h" ],
     [ "deskbox.h", "types_2deskbox_8h.html", "types_2deskbox_8h" ],

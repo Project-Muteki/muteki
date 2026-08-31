@@ -59,8 +59,9 @@ var NAVTREEINDEX =
 "ftl_8h_source.html",
 "loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946",
 "structbxc__thread__s.html#ad3fd508427f328d56becccb59b38da59",
-"structui__deskbox__s.html#a181a7e4fc996adec62fa82cf64a367d9",
-"types_2event_8h.html#a5a8a35936de2c47931e5b19cad130e63ab4c5d0aeca12b4f3d7cbd4e939599690"
+"structui__button__s.html#afc240abf9b6d8ca6e068c3660c613ccf",
+"types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cdea361713e32d71bd9148a49d62f6f99438",
+"widgets_2slider_8h.html#ac83a1109c851a7b05699a1f6a6f6b2e7"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

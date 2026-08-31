@@ -17,6 +17,5 @@ var structui__deskbox__s =
     [ "title", "structui__deskbox__s.html#a95c5fef40efae6385ff0d231c68b29eb", null ],
     [ "title_content_x0", "structui__deskbox__s.html#afc084c2bbe5243e2b3a21d357c6859cd", null ],
     [ "title_content_x1", "structui__deskbox__s.html#a0d441bb46b0ca3970f94d3bf7cd85202", null ],
-    [ "unk_0x7c", "structui__deskbox__s.html#ada69740b4199393c2f8fef279650c784", null ],
     [ "user_data", "structui__deskbox__s.html#a22a0d6c97b91d81646c2eaaa0fd95c67", null ]
 ];

@@ -15,12 +15,14 @@ var searchData=
   ['applet_5fsubroutine_5fe_12',['applet_subroutine_e',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7',1,'loader.h']]],
   ['applet_5fsubroutine_5fmain_13',['APPLET_SUBROUTINE_MAIN',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d',1,'loader.h']]],
   ['applet_5fsubroutine_5freset_5fstates_14',['APPLET_SUBROUTINE_RESET_STATES',['../loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946',1,'loader.h']]],
-  ['arena_2eh_15',['arena.h',['../arena_8h.html',1,'']]],
-  ['asset_5ffile_16',['asset_file',['../structloader__loaded__s.html#a4b48623b4dfc4b950051fcb290738299',1,'loader_loaded_s']]],
-  ['atime_17',['atime',['../structbxc__find__context__t.html#ab6069a7928cb8c520639aad6b095a943',1,'bxc_find_context_t']]],
-  ['attrib_18',['attrib',['../structbxc__find__context__t.html#ac3f6c84b88be83cd94a460f93d79839b',1,'bxc_find_context_t']]],
-  ['attrib_5fmask_19',['attrib_mask',['../structbxc__find__context__t.html#a4f2f3410cf8668bf78a2641b0d870bde',1,'bxc_find_context_t']]],
-  ['attributes_20',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
-  ['audio_2eh_21',['audio.h',['../audio_8h.html',1,'']]],
-  ['available_5fmultipress_5fevents_22',['available_multipress_events',['../structui__event__ext__prime__s.html#a0d301403934bad3492f2324915774a0d',1,'ui_event_ext_prime_s']]]
+  ['appview_2eh_15',['appview.h',['../types_2appview_8h.html',1,'(Global Namespace)'],['../widgets_2appview_8h.html',1,'(Global Namespace)']]],
+  ['appview_5fflags_16',['appview_flags',['../structui__appview__s.html#afb43461cf06b38eebd9c412ec24fe4eb',1,'ui_appview_s']]],
+  ['arena_2eh_17',['arena.h',['../arena_8h.html',1,'']]],
+  ['asset_5ffile_18',['asset_file',['../structloader__loaded__s.html#a4b48623b4dfc4b950051fcb290738299',1,'loader_loaded_s']]],
+  ['atime_19',['atime',['../structbxc__find__context__t.html#ab6069a7928cb8c520639aad6b095a943',1,'bxc_find_context_t']]],
+  ['attrib_20',['attrib',['../structbxc__find__context__t.html#ac3f6c84b88be83cd94a460f93d79839b',1,'bxc_find_context_t']]],
+  ['attrib_5fmask_21',['attrib_mask',['../structbxc__find__context__t.html#a4f2f3410cf8668bf78a2641b0d870bde',1,'bxc_find_context_t']]],
+  ['attributes_22',['attributes',['../structui__menu__entry__s.html#a2a4aba15a383ccd54e17ca49bdc432f3',1,'ui_menu_entry_s']]],
+  ['audio_2eh_23',['audio.h',['../audio_8h.html',1,'']]],
+  ['available_5fmultipress_5fevents_24',['available_multipress_events',['../structui__event__ext__prime__s.html#a0d301403934bad3492f2324915774a0d',1,'ui_event_ext_prime_s']]]
 ];

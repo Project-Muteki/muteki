@@ -13,6 +13,5 @@ var structui__component__s =
     [ "tag", "structui__component__s.html#a7549a5508dd75eea64956844d3b5d84d", null ],
     [ "unk_0x2c", "structui__component__s.html#a1e781f428580d4269d8a1bbede42e6d8", null ],
     [ "unk_0x30", "structui__component__s.html#a73b34b38e0bdab71df80df7b70a26958", null ],
-    [ "unk_0x32", "structui__component__s.html#a95d6a6b74475cb7a1fd88721d85db7fc", null ],
     [ "user_data", "structui__component__s.html#ad1c7f870630648915d5bde12577e9d8e", null ]
 ];

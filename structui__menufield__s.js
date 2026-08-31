@@ -7,6 +7,5 @@ var structui__menufield__s =
     [ "menufield_flags", "structui__menufield__s.html#a95c54bff06a2688c7779a536cb2b62c7", null ],
     [ "post_update", "structui__menufield__s.html#a74248aba6376823dbe98850b3a7ad902", null ],
     [ "theme_param", "structui__menufield__s.html#a77e3b3db5670b93f18cc53334931a95d", null ],
-    [ "unk_0x36", "structui__menufield__s.html#a7e07c8b73b1165c5382da79fe70ef97a", null ],
     [ "unk_0x48", "structui__menufield__s.html#a60424bec3e5cd5e3e067f33e16dcc025", null ]
 ];
