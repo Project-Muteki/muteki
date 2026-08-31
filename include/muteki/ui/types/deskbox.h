@@ -147,7 +147,7 @@ struct ui_deskbox_s {
      */
     const UTF16 *menu_title_text;
     /**
-     * @brief Unknown. Probably padding bytes.
+     * @brief @x_term{padding}
      */
     int unk_0x7c;
     /**

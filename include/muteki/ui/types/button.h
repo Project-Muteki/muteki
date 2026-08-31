@@ -55,7 +55,7 @@ typedef struct ui_button_s ui_button_t;
  */
 struct ui_button_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component; // 0x0:0x34
     /**
@@ -93,7 +93,7 @@ struct ui_button_s {
      */
     const char *key_binding_str; // 0x48:0x4c
     /**
-     * @brief Unknown. Probably padding bytes.
+     * @brief @x_term{padding}
      */
     int unk_0x4c; // 0x4c:0x50
     /**

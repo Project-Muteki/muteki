@@ -66,7 +66,7 @@ typedef struct ui_controlmenu_s ui_controlmenu_t;
  */
 struct ui_controlmenu_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component;
     /**
@@ -93,7 +93,7 @@ struct ui_controlmenu_s {
      */
     unsigned short selection_policy;
     /**
-     * @brief Unknown. Probably padding bytes.
+     * @brief @x_term{padding}
      */
     unsigned short unk_0x42;
 };

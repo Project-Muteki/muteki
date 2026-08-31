@@ -106,7 +106,7 @@ typedef struct ui_menu_entry_s {
      */
     unsigned short attributes;
     /**
-     * @brief Unknown. Probably padding bytes.
+     * @brief @x_term{padding}
      */
     short unk_0x36;
 } ui_menu_entry_t;

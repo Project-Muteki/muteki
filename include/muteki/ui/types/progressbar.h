@@ -50,7 +50,7 @@ typedef struct ui_progressbar_s ui_progressbar_t;
  */
 struct ui_progressbar_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component;
     /**

@@ -45,7 +45,7 @@ typedef struct ui_menufield_s ui_menufield_t;
  */
 struct ui_menufield_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component;
     /**
@@ -53,7 +53,7 @@ struct ui_menufield_s {
      */
     unsigned short theme_param;
     /**
-     * @brief Unknown. Probably padding bytes.
+     * @brief @x_term{padding}
      */
     short unk_0x36;
     /**

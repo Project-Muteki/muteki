@@ -29,7 +29,7 @@ typedef struct ui_imageclip_s ui_imageclip_t;
  */
 struct ui_imageclip_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component;
     /**
@@ -52,7 +52,7 @@ struct ui_imageclip_s {
      */
     int builtin_background_id;
     /**
-     * @brief Unknown. Probably padding bytes.
+     * @brief @x_term{padding}
      */
     int unk_0x40;
     /**
@@ -73,7 +73,7 @@ struct ui_imageclip_s {
      */
     unsigned short blit_mode;
     /**
-     * @brief Unknown. Seems unused.
+     * @brief @x_term{unused}
      */
     int unk_0x4c[5];
 };

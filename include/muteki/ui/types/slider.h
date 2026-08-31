@@ -84,7 +84,7 @@ typedef struct ui_slider_s ui_slider_t;
  */
 struct ui_slider_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component;
     /**

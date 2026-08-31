@@ -170,7 +170,7 @@ struct ui_component_s {
      */
     unsigned short unk_0x30; // 0x30:0x32
     /**
-     * @brief Unknown. Probably padding.
+     * @brief @x_term{padding}
      */
     short unk_0x32; // 0x32:0x34
 };
@@ -181,7 +181,7 @@ struct ui_component_s {
  */
 struct ui_group_s {
     /**
-     * @brief The inherited component struct.
+     * @brief @x_term{superc}
      */
     ui_component_t component;  // 0x0:0x34
     /**
@@ -296,7 +296,7 @@ struct ui_event_ext_s {
      */
     unsigned short event_source; // 20-22
     /**
-     * @brief Unknown. Seems unused.
+     * @brief @x_term{unused}
      */
     unsigned short unk22; // 22-24
 };

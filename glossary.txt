@@ -59,3 +59,15 @@ Component tag. Can be used to distinguish components under some circumstances (l
 @par Returns
     None.
 //! [void-return]
+
+//! [superc]
+The inherited component struct.
+//! [superc]
+
+//! [unused]
+Unknown. Seems unused.
+//! [unused]
+
+//! [padding]
+Unknown. Probably padding bytes.
+//! [padding]
