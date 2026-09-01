@@ -16,6 +16,7 @@ var annotated_dup =
     [ "device_service_pcm_s", "structdevice__service__pcm__s.html", null ],
     [ "devio_descriptor_t", "structdevio__descriptor__t.html", "structdevio__descriptor__t" ],
     [ "font_info_s", "structfont__info__s.html", "structfont__info__s" ],
+    [ "id_device_info_s", "structid__device__info__s.html", "structid__device__info__s" ],
     [ "key_press_event_config_t", "structkey__press__event__config__t.html", "structkey__press__event__config__t" ],
     [ "lcd_base_s", "structlcd__base__s.html", "structlcd__base__s" ],
     [ "lcd_cursor_s", "structlcd__cursor__s.html", "structlcd__cursor__s" ],

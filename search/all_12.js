@@ -9,11 +9,13 @@ var searchData=
   ['rgbsetbkcolor_6',['rgbSetBkColor',['../lcd_8h.html#aa7333109cd5c46ab957287b7722a1f77',1,'lcd.h']]],
   ['rgbsetcolor_7',['rgbSetColor',['../lcd_8h.html#a40fa1f62900939b0b578f94dc44d8db4',1,'lcd.h']]],
   ['rom_5fmagic_8',['rom_magic',['../structloader__applet__info__s.html#a6d94c483a49da384869a25d03d540eb4',1,'loader_applet_info_s']]],
-  ['rom_5fspec_5foffset_5f0xc_9',['rom_spec_offset_0xc',['../structloader__loaded__s.html#a519bc33945c32f4b3a3872bc258f215d',1,'loader_loaded_s']]],
-  ['rom_5ftype_10',['rom_type',['../structloader__applet__info__s.html#a090f8fe7a7e52ebf2cb851df7c6482ea',1,'loader_applet_info_s']]],
-  ['rotate_11',['rotate',['../structlcd__base__s.html#a466b8361da90dc49d956ea84fa3e0c50',1,'lcd_base_s::rotate'],['../structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22',1,'lcd_thread_safe_s::rotate']]],
-  ['rotation_12',['rotation',['../structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0',1,'lcd_base_s::rotation'],['../structlcd__thread__safe__s.html#a2ac14d9831a87a4af2556c379b7ad5e5',1,'lcd_thread_safe_s::rotation']]],
-  ['runapplicationa_13',['RunApplicationA',['../loader_8h.html#aef3be04b023364a3ea972c21ce96bebb',1,'loader.h']]],
-  ['runapplicationw_14',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]],
-  ['runtime_5ftype_15',['runtime_type',['../structui__component__s.html#a640e234a12ade3562e7493f5b509d45d',1,'ui_component_s']]]
+  ['rom_5fname_9',['rom_name',['../structid__device__info__s.html#ad53f6614654064fd57972191d547e9c9',1,'id_device_info_s']]],
+  ['rom_5fspec_5foffset_5f0xc_10',['rom_spec_offset_0xc',['../structloader__loaded__s.html#a519bc33945c32f4b3a3872bc258f215d',1,'loader_loaded_s']]],
+  ['rom_5ftype_11',['rom_type',['../structloader__applet__info__s.html#a090f8fe7a7e52ebf2cb851df7c6482ea',1,'loader_applet_info_s']]],
+  ['rom_5fversion_12',['rom_version',['../structid__device__info__s.html#a0d7fbdb8e7e57b5906485c3ae7698a4a',1,'id_device_info_s']]],
+  ['rotate_13',['rotate',['../structlcd__base__s.html#a466b8361da90dc49d956ea84fa3e0c50',1,'lcd_base_s::rotate'],['../structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22',1,'lcd_thread_safe_s::rotate']]],
+  ['rotation_14',['rotation',['../structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0',1,'lcd_base_s::rotation'],['../structlcd__thread__safe__s.html#a2ac14d9831a87a4af2556c379b7ad5e5',1,'lcd_thread_safe_s::rotation']]],
+  ['runapplicationa_15',['RunApplicationA',['../loader_8h.html#aef3be04b023364a3ea972c21ce96bebb',1,'loader.h']]],
+  ['runapplicationw_16',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]],
+  ['runtime_5ftype_17',['runtime_type',['../structui__component__s.html#a640e234a12ade3562e7493f5b509d45d',1,'ui_component_s']]]
 ];

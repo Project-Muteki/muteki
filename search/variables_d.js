@@ -24,5 +24,6 @@ var searchData=
   ['on_5fset_5fposition_21',['on_set_position',['../structui__progressbar__s.html#a424e709ecac6a7a4f92a03345a06f996',1,'ui_progressbar_s::on_set_position'],['../structui__slider__s.html#a60eb887ac1d40b711a68662d59780943',1,'ui_slider_s::on_set_position']]],
   ['on_5fset_5fstate_22',['on_set_state',['../structui__component__s.html#adbe9fabb934190aeefeb7587837b3c9e',1,'ui_component_s']]],
   ['on_5fsystem_5fevent_23',['on_system_event',['../structui__deskbox__s.html#a98fce94efb7e4633dc5ac30d14e73127',1,'ui_deskbox_s']]],
-  ['on_5fvalue_5fto_5fpoint_24',['on_value_to_point',['../structui__slider__s.html#adc9d040919611ba95dbc24dc019356fb',1,'ui_slider_s']]]
+  ['on_5fvalue_5fto_5fpoint_24',['on_value_to_point',['../structui__slider__s.html#adc9d040919611ba95dbc24dc019356fb',1,'ui_slider_s']]],
+  ['os_5fversion_25',['os_version',['../structid__device__info__s.html#a10d8da5f94c85ba40a5ec0e3271ca56c',1,'id_device_info_s']]]
 ];

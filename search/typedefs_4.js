@@ -1,20 +1,4 @@
 var searchData=
 [
-  ['lcd_5fbase_5ft_0',['lcd_base_t',['../types_2lcd_8h.html#a14cf00a9609c8ab40592d711921c7188',1,'lcd.h']]],
-  ['lcd_5fcursor_5ft_1',['lcd_cursor_t',['../types_2lcd_8h.html#a1b72e0aefa19a6aa40318efffee03e30',1,'lcd.h']]],
-  ['lcd_5fdraw_5ft_2',['lcd_draw_t',['../types_2lcd_8h.html#a547b5957126d827e07b35f7f7e9c8eb5',1,'lcd.h']]],
-  ['lcd_5flock_5ft_3',['lcd_lock_t',['../types_2lcd_8h.html#a26b900705e9f5ffce32d611e5231373e',1,'lcd.h']]],
-  ['lcd_5frect_5ft_4',['lcd_rect_t',['../primitives_8h.html#a099651cf2c5f4702c91e4f9ba7075897',1,'primitives.h']]],
-  ['lcd_5frotate_5fcallback_5ft_5',['lcd_rotate_callback_t',['../types_2lcd_8h.html#ab6498736eb805681f6bc408eae7ee171',1,'lcd.h']]],
-  ['lcd_5fsurface_5ft_6',['lcd_surface_t',['../types_2surface_8h.html#a8b2b66f286b6da8b4d729c35be2035d5',1,'surface.h']]],
-  ['lcd_5ft_7',['lcd_t',['../types_2lcd_8h.html#a569ee32aab18538abd9aba90ff98b3f7',1,'lcd.h']]],
-  ['lcd_5fthread_5fsafe_5ft_8',['lcd_thread_safe_t',['../types_2lcd_8h.html#a672ecacc55975da31df89ba6de942631',1,'lcd.h']]],
-  ['loader_5fapplet_5finfo_5ft_9',['loader_applet_info_t',['../loader_8h.html#afae9a784ebd91a6770b181af26581d95',1,'loader.h']]],
-  ['loader_5fcart_5fdescriptor_5ft_10',['loader_cart_descriptor_t',['../loader_8h.html#a36560a68b70972e2a304de6f3ec5f06f',1,'loader.h']]],
-  ['loader_5ffile_5fdescriptor_5ft_11',['loader_file_descriptor_t',['../loader_8h.html#a184563acf3d4edda4e0df664c9f5b298',1,'loader.h']]],
-  ['loader_5fimage_5finfo_5ft_12',['loader_image_info_t',['../loader_8h.html#ad9d396ef2630eec25c9a1a29f79a190c',1,'loader.h']]],
-  ['loader_5fimpl_5ft_13',['loader_impl_t',['../loader_8h.html#a0190db9a9ff71c083bc749ebcb65e091',1,'loader.h']]],
-  ['loader_5floaded_5ft_14',['loader_loaded_t',['../loader_8h.html#a60bf1c38fe0f6c77ee48ad16faeee049',1,'loader.h']]],
-  ['loader_5fresource_5fdescriptor_5ft_15',['loader_resource_descriptor_t',['../loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8',1,'loader.h']]],
-  ['loader_5fresource_5fsubfile_5frequest_5ft_16',['loader_resource_subfile_request_t',['../loader_8h.html#a60398856a9baefcc4c1e54b6447efbb0',1,'loader.h']]]
+  ['id_5fdevice_5finfo_5ft_0',['id_device_info_t',['../id_8h.html#a66d8da071f2d62bf8fbb2f24310696a8',1,'id.h']]]
 ];

@@ -1,23 +1,9 @@
 var searchData=
 [
-  ['ui_5fappview_5fitem_5fs_0',['ui_appview_item_s',['../structui__appview__item__s.html',1,'']]],
-  ['ui_5fappview_5fs_1',['ui_appview_s',['../structui__appview__s.html',1,'']]],
-  ['ui_5fbutton_5fs_2',['ui_button_s',['../structui__button__s.html',1,'']]],
-  ['ui_5fcomponent_5fs_3',['ui_component_s',['../structui__component__s.html',1,'']]],
-  ['ui_5fcontrolmenu_5fs_4',['ui_controlmenu_s',['../structui__controlmenu__s.html',1,'']]],
-  ['ui_5fdeskbox_5fs_5',['ui_deskbox_s',['../structui__deskbox__s.html',1,'']]],
-  ['ui_5fevent_5fext_5fprime_5fs_6',['ui_event_ext_prime_s',['../structui__event__ext__prime__s.html',1,'']]],
-  ['ui_5fevent_5fext_5fs_7',['ui_event_ext_s',['../structui__event__ext__s.html',1,'']]],
-  ['ui_5fevent_5fprime_5fs_8',['ui_event_prime_s',['../structui__event__prime__s.html',1,'']]],
-  ['ui_5fevent_5fstate_5fchange_5fs_9',['ui_event_state_change_s',['../structui__event__state__change__s.html',1,'']]],
-  ['ui_5fevent_5fstd_5fs_10',['ui_event_std_s',['../structui__event__std__s.html',1,'']]],
-  ['ui_5fevent_5fsys_5fs_11',['ui_event_sys_s',['../structui__event__sys__s.html',1,'']]],
-  ['ui_5ffilepicker_5fcontext_5fs_12',['ui_filepicker_context_s',['../structui__filepicker__context__s.html',1,'']]],
-  ['ui_5fgroup_5fs_13',['ui_group_s',['../structui__group__s.html',1,'']]],
-  ['ui_5fimageclip_5fs_14',['ui_imageclip_s',['../structui__imageclip__s.html',1,'']]],
-  ['ui_5fmenu_5fentry_5fs_15',['ui_menu_entry_s',['../structui__menu__entry__s.html',1,'']]],
-  ['ui_5fmenufield_5fs_16',['ui_menufield_s',['../structui__menufield__s.html',1,'']]],
-  ['ui_5fmultipress_5fevent_5fs_17',['ui_multipress_event_s',['../structui__multipress__event__s.html',1,'']]],
-  ['ui_5fprogressbar_5fs_18',['ui_progressbar_s',['../structui__progressbar__s.html',1,'']]],
-  ['ui_5fslider_5fs_19',['ui_slider_s',['../structui__slider__s.html',1,'']]]
+  ['pcm_5fcodec_5fcontext_5fs_0',['pcm_codec_context_s',['../structpcm__codec__context__s.html',1,'']]],
+  ['pcm_5fconfig_5fs_1',['pcm_config_s',['../structpcm__config__s.html',1,'']]],
+  ['pcm_5fdecoder_5fbuffer_5fs_2',['pcm_decoder_buffer_s',['../structpcm__decoder__buffer__s.html',1,'']]],
+  ['pcm_5fframe_5fs_3',['pcm_frame_s',['../structpcm__frame__s.html',1,'']]],
+  ['pcm_5fstate_5fs_4',['pcm_state_s',['../structpcm__state__s.html',1,'']]],
+  ['power_5fbattery_5fstatus_5ft_5',['power_battery_status_t',['../structpower__battery__status__t.html',1,'']]]
 ];

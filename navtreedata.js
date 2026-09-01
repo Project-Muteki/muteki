@@ -57,11 +57,11 @@ var NAVTREEINDEX =
 [
 "abi_8h.html",
 "ftl_8h_source.html",
-"loader_8h.html#ae8f0fca22a294128b8da4968844e3fd7a9dee8d89a07e1b6622f3c1c50f7f3946",
-"structbxc__thread__s.html#ad3fd508427f328d56becccb59b38da59",
-"structui__button__s.html#afc240abf9b6d8ca6e068c3660c613ccf",
-"types_2event_8h.html#a497e23b2d74a8a01a030a18225d23cdea361713e32d71bd9148a49d62f6f99438",
-"widgets_2slider_8h.html#ac83a1109c851a7b05699a1f6a6f6b2e7"
+"loader_8h.html#ab1112346cdf9957b295b3379673f99d9",
+"structbxc__thread__s.html#a6265d5ca179c99abe8f1e03d46f26cec",
+"structui__appview__s.html#a79a1d7cae46a4f8a820023fa5a9a5c8c",
+"types_2controlmenu_8h.html#afc1ce8f5a02b18bda82409dd04c696ebaf9b220544784796277d2d20f6084f286",
+"widgets_2button_8h.html#a740cfced565e2cac81dd0e5af2b89723"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';
