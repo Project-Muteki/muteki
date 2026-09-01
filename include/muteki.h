@@ -12,6 +12,7 @@
 #include "muteki/datetime.h"
 #include "muteki/devio.h"
 #include "muteki/errno.h"
+#include "muteki/id.h"
 #include "muteki/ini.h"
 #include "muteki/loader.h"
 #include "muteki/memory.h"
