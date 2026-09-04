@@ -1,7 +1,7 @@
 var structid__device__info__s =
 [
+    [ "data_encodings", "structid__device__info__s.html#ac587e3f27d234bf53bc4b785e9229918", null ],
     [ "data_name", "structid__device__info__s.html#a78a6cf450c9fec5feb0a04f2536ad806", null ],
-    [ "data_type", "structid__device__info__s.html#abd088851ec38ec5a7ef5e8f4e5487561", null ],
     [ "data_version", "structid__device__info__s.html#a9a897346c45d4e34865c249c0af8514b", null ],
     [ "default_language_code", "structid__device__info__s.html#a5d1c64e0d6c001bc9bf6a970eafc8ef0", null ],
     [ "feature_masks", "structid__device__info__s.html#a6b086bff87d1a2548f3123a8988dd2be", null ],
