@@ -70,9 +70,10 @@ typedef struct id_device_info_s {
      */
     unsigned short default_language_code;
     /**
-     * @brief System data partition type. Should be `0x801d`
+     * @brief Allowed character encodings in the system data partition.
+     * @see utf16_mb_encoding_e
      */
-    unsigned short data_type;
+    unsigned short data_encodings;
     /**
      * @brief Installed operating system version.
      */
