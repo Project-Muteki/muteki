@@ -107,7 +107,14 @@ enum bxc_errno_exec_e {
      * @brief Failed to load executable file due to an error originated from the relocator.
      */
     BXC_ERR_EXEC_BESTAPE_RELOC_FAILURE = 0x0011,
-    BXC_ERR_EXEC_NO_SUCH_ENTRY = 0x0012,
+    /**
+     * @brief Invalid pathname.
+     */
+    BXC_ERR_EXEC_INVALID_PATH = 0x0012,
+    /**
+     * @brief Module is not loaded.
+     */
+    BXC_ERR_EXEC_MODULE_NOT_LOADED = 0x0013,
     /**
      * @brief Executable is not loaded.
      */
@@ -300,6 +307,17 @@ static inline unsigned short BXC_ERRNO_NS(bxc_errno_t kerrno) {
  */
 static inline unsigned short BXC_ERRNO_ERR(bxc_errno_t kerrno) {
     return kerrno & 0xffff;
+}
+
+/**
+ * @brief Helper function that builds an errno from namespace and error code.
+ * 
+ * @param ns Namespace.
+ * @param err Error code.
+ * @return The errno.
+ */
+static inline bxc_errno_t BXC_ERRNO(unsigned short ns, unsigned short err) {
+    return (ns << 16) | err;
 }
 
 /**

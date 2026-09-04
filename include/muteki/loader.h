@@ -175,25 +175,79 @@ typedef struct loader_image_info_s {
     unsigned char unk_0x20[24];
 } loader_image_info_t;
 
+typedef union loader_symbol_id_u {
+    const char *name;
+    unsigned int ordinal;
+} loader_symbol_id_t;
+
 /**
- * @brief Loader implementation vtable.
- * @todo Add more details.
+ * @brief Loader implementation function table.
  */
 typedef struct loader_impl_s {
-    void *load;
-    void *load_into;
-    void *unload;
-    void *exec;
-    void *probe;
-    unsigned char *(*dlopen)(char *);
-    void *unk_0x18;
-    void *dlsym;
-    void *unk_0x20;
-    void *unk_0x24;
-    loader_resource_descriptor_t * (*open_resource_descriptor)(loader_file_descriptor_t *);
-    void (*close_resource_descriptor)(loader_resource_descriptor_t *);
-    int (*get_resource)(loader_resource_descriptor_t *, UTF16 *, UTF16 *, loader_resource_subfile_request_t *);
-    int (*collect_image_info)(loader_file_descriptor_t *, loader_image_info_t *);
+    /**
+     * @brief Load a module from @p ldrfd .
+     */
+    void *(*load)(loader_file_descriptor_t *ldrfd);
+    /**
+     * @brief Load a module from @p ldrfd into @p load_address .
+     */
+    void *(*load_into)(loader_file_descriptor_t *ldrfd, void *load_address);
+    /**
+     * @brief Unload a module.
+     */
+    void (*unload)(void *module);
+    /**
+     * @brief Execute a registered subroutine in the module.
+     * @details This usually calls the applet entrypoint with the subroutine number and the optional arguments.
+     */
+    int (*exec)(void *module, int subroutine, void *arg1, void *arg2);
+    /**
+     * @brief Probe a @p ldrfd for the 
+     */
+    int (*probe)(loader_file_descriptor_t *ldrfd);
+    /**
+     * @brief Open a shared module/DLL dynamically.
+     */
+    void *(*dlopen)(char *pathname);
+    /**
+     * @brief Close a previously opened shared module/DLL.
+     */
+    void (*dlclose)(void *module);
+    /**
+     * @brief Find the address of a symbol or ordinal.
+     */
+    void *(*dlsym)(void *module, loader_symbol_id_t symbol_or_ordinal);
+    /**
+     * @brief Get the filename of a loaded module.
+     */
+    size_t (*get_module_filename)(void *module, char *out_filename, size_t size);
+    /**
+     * @brief Retrieve an already loaded module from the global module table.
+     * @details This will not attempt to open any module and instead will set the errno to BXC_ERRNO(
+     * ::BXC_ERRNO_NS_EXEC, ::BXC_ERR_EXEC_MODULE_NOT_LOADED) and return `NULL` if the module is not already loaded.
+     */
+    void *(*get_module)(const char *pathname);
+    /**
+     * @brief Open the resource section of a module (optional).
+     */
+    loader_resource_descriptor_t *(*open_resource_descriptor)(loader_file_descriptor_t *ldrfd);
+    /**
+     * @brief Close the resource descriptor of a module (optional).
+     */
+    void (*close_resource_descriptor)(loader_resource_descriptor_t *res);
+    /**
+     * @brief Find resource entry (optional).
+     */
+    int (*get_resource)(
+        loader_resource_descriptor_t *res,
+        const UTF16 *res_type,
+        const UTF16 *res_name,
+        loader_resource_subfile_request_t *out_subfile
+    );
+    /**
+     * @brief Collect information from a module file opened as @p ldrfd .
+     */
+    int (*collect_image_info)(loader_file_descriptor_t *ldrfd, loader_image_info_t *info);
 } loader_impl_t;
 
 /**
@@ -444,7 +498,7 @@ extern int FreeProgram(loader_loaded_t *applet);
  * @see LoadProgramW
  * 
  */
-extern int ExecuteProgram(loader_loaded_t *applet, int subroutine, const void *applet_arg1, const void *applet_arg2);
+extern int ExecuteProgram(loader_loaded_t *applet, int subroutine, void *applet_arg1, void *applet_arg2);
 
 /**
  * @brief Get the path to the current running executable (argv[0]).
