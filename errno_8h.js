@@ -14,6 +14,8 @@ var errno_8h =
       [ "BXC_ERR_EXEC_BESTAPE_HEADER_PARSER_FAILURE", "errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2baa9c0109dc92d1ad2d5f7ace5db88ee6a", null ],
       [ "BXC_ERR_EXEC_BESTAPE_LD_FAILURE", "errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2bae55e7a493072a6859dc6d4c1bd7260a1", null ],
       [ "BXC_ERR_EXEC_BESTAPE_RELOC_FAILURE", "errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2ba87af4492c923dd5218d536c170d8910d", null ],
+      [ "BXC_ERR_EXEC_INVALID_PATH", "errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2ba17cc583d060ef2514d404ef2201f46cb", null ],
+      [ "BXC_ERR_EXEC_MODULE_NOT_LOADED", "errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2ba70f2f5eeb8259d1e123ae78f554bc3c0", null ],
       [ "BXC_ERR_EXEC_NOT_LOADED", "errno_8h.html#a5f306c4c3be2ce9c63105bd31fc37a2babd3370368bc3819deebe310c2a408755", null ]
     ] ],
     [ "bxc_errno_kernel_e", "errno_8h.html#aae25a149e29bb16c0623b02b5a6801a0", [

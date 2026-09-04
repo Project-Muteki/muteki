@@ -14,5 +14,6 @@ var searchData=
   ['loader_5fimpl_5fs_11',['loader_impl_s',['../structloader__impl__s.html',1,'']]],
   ['loader_5floaded_5fs_12',['loader_loaded_s',['../structloader__loaded__s.html',1,'']]],
   ['loader_5fresource_5fdescriptor_5fs_13',['loader_resource_descriptor_s',['../structloader__resource__descriptor__s.html',1,'']]],
-  ['loader_5fresource_5fsubfile_5frequest_5fs_14',['loader_resource_subfile_request_s',['../structloader__resource__subfile__request__s.html',1,'']]]
+  ['loader_5fresource_5fsubfile_5frequest_5fs_14',['loader_resource_subfile_request_s',['../structloader__resource__subfile__request__s.html',1,'']]],
+  ['loader_5fsymbol_5fid_5fu_15',['loader_symbol_id_u',['../unionloader__symbol__id__u.html',1,'']]]
 ];

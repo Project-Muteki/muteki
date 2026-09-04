@@ -12,8 +12,11 @@ var searchData=
   ['deskbox_5fflags_9',['deskbox_flags',['../structui__deskbox__s.html#a486b37db5a3dd2226fc4a7179016eb34',1,'ui_deskbox_s']]],
   ['device_5fid_10',['device_id',['../structdevio__descriptor__t.html#aa0a9ede1c274124e94d75841400a3bcc',1,'devio_descriptor_t']]],
   ['dirname_11',['dirname',['../structbxc__fs__parts__lfn__s.html#acea08929d616c1f7b04b8b97dc7f43f5',1,'bxc_fs_parts_lfn_s::dirname'],['../structbxc__fs__parts__dos__s.html#af6549ce02678c1d4e5c6f0876bb3aa3a',1,'bxc_fs_parts_dos_s::dirname']]],
-  ['dospath_12',['dospath',['../structapplet__args__v4__s.html#a1be443a951d660ca3b63c076fd3817ea',1,'applet_args_v4_s']]],
-  ['draw_13',['draw',['../structlcd__base__s.html#a8e6c13f69bb4cd7e88860f4a2cb9d0ec',1,'lcd_base_s::draw'],['../structlcd__thread__safe__s.html#a240ffcf991233f15689ffb4284fda8ab',1,'lcd_thread_safe_s::draw']]],
-  ['drawing_5farea_14',['drawing_area',['../structlcd__base__s.html#a6ebc9b835c8b2064f2243d8ea164589e',1,'lcd_base_s::drawing_area'],['../structlcd__thread__safe__s.html#a99d147e52daf5dad9e90cdba6c275373',1,'lcd_thread_safe_s::drawing_area']]],
-  ['drive_15',['drive',['../structbxc__fs__parts__lfn__s.html#ac73b8d0fe3c08c4edcc7ec46e195fed7',1,'bxc_fs_parts_lfn_s::drive'],['../structbxc__fs__parts__dos__s.html#acec5c8a4777e97d78f23f1c81f641c16',1,'bxc_fs_parts_dos_s::drive']]]
+  ['dlclose_12',['dlclose',['../structloader__impl__s.html#aeb651f55935904759cc6c690efa49350',1,'loader_impl_s']]],
+  ['dlopen_13',['dlopen',['../structloader__impl__s.html#a64724c77881af48423d582031109f375',1,'loader_impl_s']]],
+  ['dlsym_14',['dlsym',['../structloader__impl__s.html#a84aec9e5f61baf74201cd078dd15bd8d',1,'loader_impl_s']]],
+  ['dospath_15',['dospath',['../structapplet__args__v4__s.html#a1be443a951d660ca3b63c076fd3817ea',1,'applet_args_v4_s']]],
+  ['draw_16',['draw',['../structlcd__base__s.html#a8e6c13f69bb4cd7e88860f4a2cb9d0ec',1,'lcd_base_s::draw'],['../structlcd__thread__safe__s.html#a240ffcf991233f15689ffb4284fda8ab',1,'lcd_thread_safe_s::draw']]],
+  ['drawing_5farea_17',['drawing_area',['../structlcd__base__s.html#a6ebc9b835c8b2064f2243d8ea164589e',1,'lcd_base_s::drawing_area'],['../structlcd__thread__safe__s.html#a99d147e52daf5dad9e90cdba6c275373',1,'lcd_thread_safe_s::drawing_area']]],
+  ['drive_18',['drive',['../structbxc__fs__parts__lfn__s.html#ac73b8d0fe3c08c4edcc7ec46e195fed7',1,'bxc_fs_parts_lfn_s::drive'],['../structbxc__fs__parts__dos__s.html#acec5c8a4777e97d78f23f1c81f641c16',1,'bxc_fs_parts_dos_s::drive']]]
 ];

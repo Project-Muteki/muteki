@@ -124,46 +124,93 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structloader__
 </div><!--header-->
 <div class="contents">
 
-<p>Loader implementation vtable.  
+<p>Loader implementation function table.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="loader_8h_source.html">loader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a44a7e5668e3053a725a4ec093b8099c9" id="r_a44a7e5668e3053a725a4ec093b8099c9"><td class="memItemLeft"><a id="a44a7e5668e3053a725a4ec093b8099c9" name="a44a7e5668e3053a725a4ec093b8099c9"></a>
-void *&#160;</td><td class="memItemRight"><b>load</b></td></tr>
-<tr class="memitem:a9f7842f409b9e1575640b0c7b9b30db3" id="r_a9f7842f409b9e1575640b0c7b9b30db3"><td class="memItemLeft"><a id="a9f7842f409b9e1575640b0c7b9b30db3" name="a9f7842f409b9e1575640b0c7b9b30db3"></a>
-void *&#160;</td><td class="memItemRight"><b>load_into</b></td></tr>
-<tr class="memitem:a7cfa8fb184b57195f470d627b29dc8e7" id="r_a7cfa8fb184b57195f470d627b29dc8e7"><td class="memItemLeft"><a id="a7cfa8fb184b57195f470d627b29dc8e7" name="a7cfa8fb184b57195f470d627b29dc8e7"></a>
-void *&#160;</td><td class="memItemRight"><b>unload</b></td></tr>
-<tr class="memitem:ab9e411be5c7a87aaf97599befcf56a1e" id="r_ab9e411be5c7a87aaf97599befcf56a1e"><td class="memItemLeft"><a id="ab9e411be5c7a87aaf97599befcf56a1e" name="ab9e411be5c7a87aaf97599befcf56a1e"></a>
-void *&#160;</td><td class="memItemRight"><b>exec</b></td></tr>
-<tr class="memitem:a16ef3fc95be57d8d5e035def8211fc27" id="r_a16ef3fc95be57d8d5e035def8211fc27"><td class="memItemLeft"><a id="a16ef3fc95be57d8d5e035def8211fc27" name="a16ef3fc95be57d8d5e035def8211fc27"></a>
-void *&#160;</td><td class="memItemRight"><b>probe</b></td></tr>
-<tr class="memitem:a39fd4314af74e03c73d50167f35493fd" id="r_a39fd4314af74e03c73d50167f35493fd"><td class="memItemLeft"><a id="a39fd4314af74e03c73d50167f35493fd" name="a39fd4314af74e03c73d50167f35493fd"></a>
-unsigned char *(*)&#160;</td><td class="memItemRight"><b>dlopen</b> (char *)</td></tr>
-<tr class="memitem:ab07ea7c0ad1728023242c816af545ef9" id="r_ab07ea7c0ad1728023242c816af545ef9"><td class="memItemLeft"><a id="ab07ea7c0ad1728023242c816af545ef9" name="ab07ea7c0ad1728023242c816af545ef9"></a>
-void *&#160;</td><td class="memItemRight"><b>unk_0x18</b></td></tr>
-<tr class="memitem:a2efc0f86d7ee526a418aee5bc8b180a1" id="r_a2efc0f86d7ee526a418aee5bc8b180a1"><td class="memItemLeft"><a id="a2efc0f86d7ee526a418aee5bc8b180a1" name="a2efc0f86d7ee526a418aee5bc8b180a1"></a>
-void *&#160;</td><td class="memItemRight"><b>dlsym</b></td></tr>
-<tr class="memitem:a22a880d28d9f7d14e6bd347a7e0ac55b" id="r_a22a880d28d9f7d14e6bd347a7e0ac55b"><td class="memItemLeft"><a id="a22a880d28d9f7d14e6bd347a7e0ac55b" name="a22a880d28d9f7d14e6bd347a7e0ac55b"></a>
-void *&#160;</td><td class="memItemRight"><b>unk_0x20</b></td></tr>
-<tr class="memitem:a333cb3b2969c337f6fbe005d7f0d0e28" id="r_a333cb3b2969c337f6fbe005d7f0d0e28"><td class="memItemLeft"><a id="a333cb3b2969c337f6fbe005d7f0d0e28" name="a333cb3b2969c337f6fbe005d7f0d0e28"></a>
-void *&#160;</td><td class="memItemRight"><b>unk_0x24</b></td></tr>
-<tr class="memitem:a39f10e75bc0289289c395a4beee50784" id="r_a39f10e75bc0289289c395a4beee50784"><td class="memItemLeft"><a id="a39f10e75bc0289289c395a4beee50784" name="a39f10e75bc0289289c395a4beee50784"></a>
-<a class="el" href="loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8">loader_resource_descriptor_t</a> *(*)&#160;</td><td class="memItemRight"><b>open_resource_descriptor</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *)</td></tr>
-<tr class="memitem:a1e655cf1a93496e12baaae3b04bc0c7c" id="r_a1e655cf1a93496e12baaae3b04bc0c7c"><td class="memItemLeft"><a id="a1e655cf1a93496e12baaae3b04bc0c7c" name="a1e655cf1a93496e12baaae3b04bc0c7c"></a>
-void(*)&#160;</td><td class="memItemRight"><b>close_resource_descriptor</b> (<a class="el" href="loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8">loader_resource_descriptor_t</a> *)</td></tr>
-<tr class="memitem:a70e6219e37db68051c5d17a320297658" id="r_a70e6219e37db68051c5d17a320297658"><td class="memItemLeft"><a id="a70e6219e37db68051c5d17a320297658" name="a70e6219e37db68051c5d17a320297658"></a>
-int(*)&#160;</td><td class="memItemRight"><b>get_resource</b> (<a class="el" href="loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8">loader_resource_descriptor_t</a> *, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *, <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *, <a class="el" href="loader_8h.html#a60398856a9baefcc4c1e54b6447efbb0">loader_resource_subfile_request_t</a> *)</td></tr>
-<tr class="memitem:a9e3f774204bc1c3f5f5696a9fe1b9864" id="r_a9e3f774204bc1c3f5f5696a9fe1b9864"><td class="memItemLeft"><a id="a9e3f774204bc1c3f5f5696a9fe1b9864" name="a9e3f774204bc1c3f5f5696a9fe1b9864"></a>
-int(*)&#160;</td><td class="memItemRight"><b>collect_image_info</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *, <a class="el" href="loader_8h.html#ad9d396ef2630eec25c9a1a29f79a190c">loader_image_info_t</a> *)</td></tr>
+<tr class="memitem:a6996389a726c674031456122d42d4d1e" id="r_a6996389a726c674031456122d42d4d1e"><td class="memItemLeft"><a id="a6996389a726c674031456122d42d4d1e" name="a6996389a726c674031456122d42d4d1e"></a>
+void *(*)&#160;</td><td class="memItemRight"><b>load</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd)</td></tr>
+<tr class="memdesc:a6996389a726c674031456122d42d4d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a module from <code class="param">ldrfd</code> . <br /></td></tr>
+<tr class="memitem:a5811606f733e6f1623a5867496c4e166" id="r_a5811606f733e6f1623a5867496c4e166"><td class="memItemLeft"><a id="a5811606f733e6f1623a5867496c4e166" name="a5811606f733e6f1623a5867496c4e166"></a>
+void *(*)&#160;</td><td class="memItemRight"><b>load_into</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd, void *load_address)</td></tr>
+<tr class="memdesc:a5811606f733e6f1623a5867496c4e166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a module from <code class="param">ldrfd</code> into <code class="param">load_address</code> . <br /></td></tr>
+<tr class="memitem:a1fdaaf4b4ece4ca9c258a12372cf86bd" id="r_a1fdaaf4b4ece4ca9c258a12372cf86bd"><td class="memItemLeft"><a id="a1fdaaf4b4ece4ca9c258a12372cf86bd" name="a1fdaaf4b4ece4ca9c258a12372cf86bd"></a>
+void(*)&#160;</td><td class="memItemRight"><b>unload</b> (void *module)</td></tr>
+<tr class="memdesc:a1fdaaf4b4ece4ca9c258a12372cf86bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a module. <br /></td></tr>
+<tr class="memitem:a67527006bb08111c4bd0b1967f79d237" id="r_a67527006bb08111c4bd0b1967f79d237"><td class="memItemLeft">int(*)&#160;</td><td class="memItemRight"><a class="el" href="#a67527006bb08111c4bd0b1967f79d237">exec</a> (void *module, int subroutine, void *arg1, void *arg2)</td></tr>
+<tr class="memdesc:a67527006bb08111c4bd0b1967f79d237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a registered subroutine in the module.  <br /></td></tr>
+<tr class="memitem:a4880c5a402063951e6e88e0327d937cb" id="r_a4880c5a402063951e6e88e0327d937cb"><td class="memItemLeft"><a id="a4880c5a402063951e6e88e0327d937cb" name="a4880c5a402063951e6e88e0327d937cb"></a>
+int(*)&#160;</td><td class="memItemRight"><b>probe</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd)</td></tr>
+<tr class="memdesc:a4880c5a402063951e6e88e0327d937cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Probe a <code class="param">ldrfd</code> for the. <br /></td></tr>
+<tr class="memitem:a64724c77881af48423d582031109f375" id="r_a64724c77881af48423d582031109f375"><td class="memItemLeft"><a id="a64724c77881af48423d582031109f375" name="a64724c77881af48423d582031109f375"></a>
+void *(*)&#160;</td><td class="memItemRight"><b>dlopen</b> (char *pathname)</td></tr>
+<tr class="memdesc:a64724c77881af48423d582031109f375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a shared module/DLL dynamically. <br /></td></tr>
+<tr class="memitem:aeb651f55935904759cc6c690efa49350" id="r_aeb651f55935904759cc6c690efa49350"><td class="memItemLeft"><a id="aeb651f55935904759cc6c690efa49350" name="aeb651f55935904759cc6c690efa49350"></a>
+void(*)&#160;</td><td class="memItemRight"><b>dlclose</b> (void *module)</td></tr>
+<tr class="memdesc:aeb651f55935904759cc6c690efa49350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a previously opened shared module/DLL. <br /></td></tr>
+<tr class="memitem:a84aec9e5f61baf74201cd078dd15bd8d" id="r_a84aec9e5f61baf74201cd078dd15bd8d"><td class="memItemLeft"><a id="a84aec9e5f61baf74201cd078dd15bd8d" name="a84aec9e5f61baf74201cd078dd15bd8d"></a>
+void *(*)&#160;</td><td class="memItemRight"><b>dlsym</b> (void *module, loader_symbol_id_t symbol_or_ordinal)</td></tr>
+<tr class="memdesc:a84aec9e5f61baf74201cd078dd15bd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the address of a symbol or ordinal. <br /></td></tr>
+<tr class="memitem:a8dc9592d01612ecc9e1f86e997d32e95" id="r_a8dc9592d01612ecc9e1f86e997d32e95"><td class="memItemLeft"><a id="a8dc9592d01612ecc9e1f86e997d32e95" name="a8dc9592d01612ecc9e1f86e997d32e95"></a>
+size_t(*)&#160;</td><td class="memItemRight"><b>get_module_filename</b> (void *module, char *out_filename, size_t size)</td></tr>
+<tr class="memdesc:a8dc9592d01612ecc9e1f86e997d32e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the filename of a loaded module. <br /></td></tr>
+<tr class="memitem:a35848490da6e3ab6815378501041e9fb" id="r_a35848490da6e3ab6815378501041e9fb"><td class="memItemLeft">void *(*)&#160;</td><td class="memItemRight"><a class="el" href="#a35848490da6e3ab6815378501041e9fb">get_module</a> (const char *pathname)</td></tr>
+<tr class="memdesc:a35848490da6e3ab6815378501041e9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve an already loaded module from the global module table.  <br /></td></tr>
+<tr class="memitem:ac277da0d65a7d96dcf00273b0a0bc483" id="r_ac277da0d65a7d96dcf00273b0a0bc483"><td class="memItemLeft"><a id="ac277da0d65a7d96dcf00273b0a0bc483" name="ac277da0d65a7d96dcf00273b0a0bc483"></a>
+<a class="el" href="loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8">loader_resource_descriptor_t</a> *(*)&#160;</td><td class="memItemRight"><b>open_resource_descriptor</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd)</td></tr>
+<tr class="memdesc:ac277da0d65a7d96dcf00273b0a0bc483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the resource section of a module (optional). <br /></td></tr>
+<tr class="memitem:a9bf19afc42361618e17d9331b1c7d180" id="r_a9bf19afc42361618e17d9331b1c7d180"><td class="memItemLeft"><a id="a9bf19afc42361618e17d9331b1c7d180" name="a9bf19afc42361618e17d9331b1c7d180"></a>
+void(*)&#160;</td><td class="memItemRight"><b>close_resource_descriptor</b> (<a class="el" href="loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8">loader_resource_descriptor_t</a> *res)</td></tr>
+<tr class="memdesc:a9bf19afc42361618e17d9331b1c7d180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the resource descriptor of a module (optional). <br /></td></tr>
+<tr class="memitem:a66059af0a4c5763c9bc3e1c8b1f344bf" id="r_a66059af0a4c5763c9bc3e1c8b1f344bf"><td class="memItemLeft"><a id="a66059af0a4c5763c9bc3e1c8b1f344bf" name="a66059af0a4c5763c9bc3e1c8b1f344bf"></a>
+int(*)&#160;</td><td class="memItemRight"><b>get_resource</b> (<a class="el" href="loader_8h.html#af4061fd52683dcdad8a3e7e344a025b8">loader_resource_descriptor_t</a> *res, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *res_type, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *res_name, <a class="el" href="loader_8h.html#a60398856a9baefcc4c1e54b6447efbb0">loader_resource_subfile_request_t</a> *out_subfile)</td></tr>
+<tr class="memdesc:a66059af0a4c5763c9bc3e1c8b1f344bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find resource entry (optional). <br /></td></tr>
+<tr class="memitem:a55e4c96a990b38fc8ee116af634a2e2f" id="r_a55e4c96a990b38fc8ee116af634a2e2f"><td class="memItemLeft"><a id="a55e4c96a990b38fc8ee116af634a2e2f" name="a55e4c96a990b38fc8ee116af634a2e2f"></a>
+int(*)&#160;</td><td class="memItemRight"><b>collect_image_info</b> (<a class="el" href="loader_8h.html#a184563acf3d4edda4e0df664c9f5b298">loader_file_descriptor_t</a> *ldrfd, <a class="el" href="loader_8h.html#ad9d396ef2630eec25c9a1a29f79a190c">loader_image_info_t</a> *info)</td></tr>
+<tr class="memdesc:a55e4c96a990b38fc8ee116af634a2e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect information from a module file opened as <code class="param">ldrfd</code> . <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Loader implementation vtable. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo</a></b></dt><dd>Add more details. </dd></dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<div class="textblock"><p>Loader implementation function table. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a67527006bb08111c4bd0b1967f79d237" name="a67527006bb08111c4bd0b1967f79d237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67527006bb08111c4bd0b1967f79d237">&#9670;&#160;</a></span>exec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(*) loader_impl_s::exec(void *module, int subroutine, void *arg1, void *arg2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute a registered subroutine in the module. </p>
+<p>This usually calls the applet entrypoint with the subroutine number and the optional arguments. </p>
+
+</div>
+</div>
+<a id="a35848490da6e3ab6815378501041e9fb" name="a35848490da6e3ab6815378501041e9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35848490da6e3ab6815378501041e9fb">&#9670;&#160;</a></span>get_module</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void *(*) loader_impl_s::get_module(const char *pathname)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve an already loaded module from the global module table. </p>
+<p>This will not attempt to open any module and instead will set the errno to BXC_ERRNO(
+::BXC_ERRNO_NS_EXEC, ::BXC_ERR_EXEC_MODULE_NOT_LOADED) and return <span class="tt">NULL</span> if the module is not already loaded. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/muteki/<a class="el" href="loader_8h_source.html">loader.h</a></li>
 </ul>
 </div><!-- contents -->

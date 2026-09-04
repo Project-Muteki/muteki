@@ -144,8 +144,9 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource descriptor subfile request.  <a href="structloader__resource__subfile__request__s.html#details">More...</a><br /></td></tr>
 <tr class="memitem:loader_5Fimage_5Finfo_5Fs" id="r_loader_5Fimage_5Finfo_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structloader__image__info__s.html">loader_image_info_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executable image info.  <a href="structloader__image__info__s.html#details">More...</a><br /></td></tr>
+<tr class="memitem:loader_5Fsymbol_5Fid_5Fu" id="r_loader_5Fsymbol_5Fid_5Fu"><td class="memItemLeft">union &#160;</td><td class="memItemRight"><a class="el" href="unionloader__symbol__id__u.html">loader_symbol_id_u</a></td></tr>
 <tr class="memitem:loader_5Fimpl_5Fs" id="r_loader_5Fimpl_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structloader__impl__s.html">loader_impl_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loader implementation vtable.  <a href="structloader__impl__s.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loader implementation function table.  <a href="structloader__impl__s.html#details">More...</a><br /></td></tr>
 <tr class="memitem:loader_5Floaded_5Fs" id="r_loader_5Floaded_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structloader__loaded__s.html">loader_loaded_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded applet executable.  <a href="structloader__loaded__s.html#details">More...</a><br /></td></tr>
 <tr class="memitem:loader_5Fapplet_5Finfo_5Fs" id="r_loader_5Fapplet_5Finfo_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structloader__applet__info__s.html">loader_applet_info_s</a></td></tr>
@@ -166,8 +167,11 @@ typedef struct <a class="el" href="structloader__file__descriptor__s.html">loade
 <tr class="memdesc:a60398856a9baefcc4c1e54b6447efbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resource descriptor subfile request.  <br /></td></tr>
 <tr class="memitem:ad9d396ef2630eec25c9a1a29f79a190c" id="r_ad9d396ef2630eec25c9a1a29f79a190c"><td class="memItemLeft">typedef struct <a class="el" href="structloader__image__info__s.html">loader_image_info_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad9d396ef2630eec25c9a1a29f79a190c">loader_image_info_t</a></td></tr>
 <tr class="memdesc:ad9d396ef2630eec25c9a1a29f79a190c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executable image info.  <br /></td></tr>
-<tr class="memitem:a0190db9a9ff71c083bc749ebcb65e091" id="r_a0190db9a9ff71c083bc749ebcb65e091"><td class="memItemLeft">typedef struct <a class="el" href="structloader__impl__s.html">loader_impl_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0190db9a9ff71c083bc749ebcb65e091">loader_impl_t</a></td></tr>
-<tr class="memdesc:a0190db9a9ff71c083bc749ebcb65e091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loader implementation vtable.  <br /></td></tr>
+<tr class="memitem:a93370c1538d512abf613605a6718a34e" id="r_a93370c1538d512abf613605a6718a34e"><td class="memItemLeft"><a id="a93370c1538d512abf613605a6718a34e" name="a93370c1538d512abf613605a6718a34e"></a>
+typedef union <a class="el" href="unionloader__symbol__id__u.html">loader_symbol_id_u</a>&#160;</td><td class="memItemRight"><b>loader_symbol_id_t</b></td></tr>
+<tr class="memitem:a0190db9a9ff71c083bc749ebcb65e091" id="r_a0190db9a9ff71c083bc749ebcb65e091"><td class="memItemLeft"><a id="a0190db9a9ff71c083bc749ebcb65e091" name="a0190db9a9ff71c083bc749ebcb65e091"></a>
+typedef struct <a class="el" href="structloader__impl__s.html">loader_impl_s</a>&#160;</td><td class="memItemRight"><b>loader_impl_t</b></td></tr>
+<tr class="memdesc:a0190db9a9ff71c083bc749ebcb65e091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loader implementation function table. <br /></td></tr>
 <tr class="memitem:a60bf1c38fe0f6c77ee48ad16faeee049" id="r_a60bf1c38fe0f6c77ee48ad16faeee049"><td class="memItemLeft"><a id="a60bf1c38fe0f6c77ee48ad16faeee049" name="a60bf1c38fe0f6c77ee48ad16faeee049"></a>
 typedef struct <a class="el" href="structloader__loaded__s.html">loader_loaded_s</a>&#160;</td><td class="memItemRight"><b>loader_loaded_t</b></td></tr>
 <tr class="memdesc:a60bf1c38fe0f6c77ee48ad16faeee049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loaded applet executable. <br /></td></tr>
@@ -207,8 +211,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5ca6aba1421aa133bad77031f74987b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an applet executable.  <br /></td></tr>
 <tr class="memitem:ab3102d5e62efa83e012747716c6185fd" id="r_ab3102d5e62efa83e012747716c6185fd"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab3102d5e62efa83e012747716c6185fd">FreeProgram</a> (<a class="el" href="#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *applet)</td></tr>
 <tr class="memdesc:ab3102d5e62efa83e012747716c6185fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a loaded applet.  <br /></td></tr>
-<tr class="memitem:ac9b5297597c2b56e8bd4002dafd53f05" id="r_ac9b5297597c2b56e8bd4002dafd53f05"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac9b5297597c2b56e8bd4002dafd53f05">ExecuteProgram</a> (<a class="el" href="#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *applet, int subroutine, const void *applet_arg1, const void *applet_arg2)</td></tr>
-<tr class="memdesc:ac9b5297597c2b56e8bd4002dafd53f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a specific subroutine of the loaded applet with arguments.  <br /></td></tr>
+<tr class="memitem:a98763ddc2f7f93b73109a38da205cd0c" id="r_a98763ddc2f7f93b73109a38da205cd0c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a98763ddc2f7f93b73109a38da205cd0c">ExecuteProgram</a> (<a class="el" href="#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *applet, int subroutine, void *applet_arg1, void *applet_arg2)</td></tr>
+<tr class="memdesc:a98763ddc2f7f93b73109a38da205cd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a specific subroutine of the loaded applet with arguments.  <br /></td></tr>
 <tr class="memitem:a4709e1754120dd47e1a5c6f5f36105fc" id="r_a4709e1754120dd47e1a5c6f5f36105fc"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a4709e1754120dd47e1a5c6f5f36105fc">GetCurrentPathA</a> (void)</td></tr>
 <tr class="memdesc:a4709e1754120dd47e1a5c6f5f36105fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the current running executable (argv[0]).  <br /></td></tr>
 <tr class="memitem:a49b3aae10043dbc221a7ae34a59d71b5" id="r_a49b3aae10043dbc221a7ae34a59d71b5"><td class="memItemLeft"><a class="el" href="#a60bf1c38fe0f6c77ee48ad16faeee049">loader_loaded_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a49b3aae10043dbc221a7ae34a59d71b5">ProgramIsRunningA</a> (const char *pathname)</td></tr>
@@ -262,7 +266,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Applet argument passing V4 struct. </p>
-<p>Mirrors the parameter set by the parent <a class="el" href="#ac9b5297597c2b56e8bd4002dafd53f05" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram()</a> call. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac9b5297597c2b56e8bd4002dafd53f05" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram</a> </dd></dl>
+<p>Mirrors the parameter set by the parent <a class="el" href="#a98763ddc2f7f93b73109a38da205cd0c" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram()</a> call. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a98763ddc2f7f93b73109a38da205cd0c" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram</a> </dd></dl>
 
 </div>
 </div>
@@ -297,23 +301,6 @@ Functions</h2></td></tr>
 
 <p>Executable image info. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo</a></b></dt><dd>Add more details. </dd></dl>
-
-</div>
-</div>
-<a id="a0190db9a9ff71c083bc749ebcb65e091" name="a0190db9a9ff71c083bc749ebcb65e091"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0190db9a9ff71c083bc749ebcb65e091">&#9670;&#160;</a></span>loader_impl_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structloader__impl__s.html">loader_impl_s</a> <a class="el" href="#a0190db9a9ff71c083bc749ebcb65e091">loader_impl_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Loader implementation vtable. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo</a></b></dt><dd>Add more details. </dd></dl>
 
 </div>
 </div>
@@ -363,7 +350,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Defines the default subroutine identifiers to be used with <a class="el" href="#ac9b5297597c2b56e8bd4002dafd53f05" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram()</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac9b5297597c2b56e8bd4002dafd53f05" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram</a> </dd></dl>
+<p>Defines the default subroutine identifiers to be used with <a class="el" href="#a98763ddc2f7f93b73109a38da205cd0c" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram()</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="#a98763ddc2f7f93b73109a38da205cd0c" title="Invoke a specific subroutine of the loaded applet with arguments.">ExecuteProgram</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d" name="ae8f0fca22a294128b8da4968844e3fd7af8b203b9e4563640ffe858ee8b69cb8d"></a>APPLET_SUBROUTINE_MAIN&#160;</td><td class="fielddoc"><p>Run the main subroutine. </p>
 </td></tr>
@@ -759,8 +746,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9b5297597c2b56e8bd4002dafd53f05" name="ac9b5297597c2b56e8bd4002dafd53f05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b5297597c2b56e8bd4002dafd53f05">&#9670;&#160;</a></span>ExecuteProgram()</h2>
+<a id="a98763ddc2f7f93b73109a38da205cd0c" name="a98763ddc2f7f93b73109a38da205cd0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98763ddc2f7f93b73109a38da205cd0c">&#9670;&#160;</a></span>ExecuteProgram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -781,12 +768,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>applet_arg1</em></span>, </td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>applet_arg1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>applet_arg2</em></span>&#160;)</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>applet_arg2</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
