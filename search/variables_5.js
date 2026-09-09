@@ -12,7 +12,7 @@ var searchData=
   ['flags_5flower_9',['flags_lower',['../structdevio__descriptor__t.html#aaea1952dee4fffe5d0243ccb7c5985dc',1,'devio_descriptor_t']]],
   ['flags_5fupper_10',['flags_upper',['../structdevio__descriptor__t.html#aa020c984f1c8860f127a3e5a158e2d65',1,'devio_descriptor_t']]],
   ['font_11',['font',['../structlcd__base__s.html#a14d2356660554039faf3c7a3c991f5e8',1,'lcd_base_s::font'],['../structlcd__thread__safe__s.html#a6b9700b7f90247a689d54dca1ab02fda',1,'lcd_thread_safe_s::font']]],
-  ['font_5ftype_12',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s']]],
+  ['font_5ftype_12',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s::font_type'],['../structui__booltextfield__s.html#ad1883b38e1ff844d3732fae5d3f78ba4',1,'ui_booltextfield_s::font_type']]],
   ['footprint_13',['footprint',['../structui__component__s.html#abbf53bd0db7ef98f916a1b4c122fd2dc',1,'ui_component_s']]],
   ['format_14',['format',['../structpcm__config__s.html#a3ba5313aaa2a0d8b9aa0e26409a4d4f4',1,'pcm_config_s']]],
   ['free_15',['free',['../structbxc__fs__stat__t.html#a5fbeb447c37ce3bcdf85ffb95f0ff1b5',1,'bxc_fs_stat_t']]],

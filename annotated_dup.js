@@ -44,6 +44,8 @@ var annotated_dup =
     [ "power_battery_status_t", "structpower__battery__status__t.html", "structpower__battery__status__t" ],
     [ "ui_appview_item_s", "structui__appview__item__s.html", "structui__appview__item__s" ],
     [ "ui_appview_s", "structui__appview__s.html", "structui__appview__s" ],
+    [ "ui_boolfield_s", "structui__boolfield__s.html", "structui__boolfield__s" ],
+    [ "ui_booltextfield_s", "structui__booltextfield__s.html", "structui__booltextfield__s" ],
     [ "ui_button_s", "structui__button__s.html", "structui__button__s" ],
     [ "ui_component_s", "structui__component__s.html", "structui__component__s" ],
     [ "ui_controlmenu_s", "structui__controlmenu__s.html", "structui__controlmenu__s" ],
