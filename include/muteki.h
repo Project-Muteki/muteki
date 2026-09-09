@@ -34,6 +34,7 @@
 #include "muteki/ui/modals/messagebox.h"
 #include "muteki/ui/views/deskbox.h"
 #include "muteki/ui/widgets/appview.h"
+#include "muteki/ui/widgets/boolfield.h"
 #include "muteki/ui/widgets/button.h"
 #include "muteki/ui/widgets/controlmenu.h"
 #include "muteki/ui/widgets/menufield.h"

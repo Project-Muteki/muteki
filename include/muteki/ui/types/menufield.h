@@ -49,7 +49,8 @@ struct ui_menufield_s {
      */
     ui_component_t component;
     /**
-     * @brief Not used. Likely used by the widget theming module.
+     * @brief Not used but set to 1. Likely used by the widget theming module.
+     * @todo Actually cross-check with the theme modules.
      */
     unsigned short theme_param;
     /**
