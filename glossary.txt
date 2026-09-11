@@ -10,10 +10,6 @@ Requires `-lkrnllib` when dynamically linking with the shims.
 Reserved. Should be set to 0.
 //! [sbz]
 
-//! [padding]
-Manual padding. Should not be set.
-//! [padding]
-
 //! [ok]
 The operation was completed successfully.
 //! [ok]
