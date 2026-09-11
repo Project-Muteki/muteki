@@ -40,5 +40,6 @@
 #include "muteki/ui/widgets/menufield.h"
 #include "muteki/ui/widgets/progressbar.h"
 #include "muteki/ui/widgets/slider.h"
+#include "muteki/ui/widgets/static.h"
 
 #endif  // __MUTEKI_H__
