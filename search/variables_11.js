@@ -43,10 +43,11 @@ var searchData=
   ['stroke_5fdash_40',['stroke_dash',['../structlcd__draw__s.html#a4a2216e9db418a31d193d0e28552aac4',1,'lcd_draw_s']]],
   ['stroke_5fdash_5fpattern_41',['stroke_dash_pattern',['../structlcd__draw__s.html#a0de69aad561b388d27e962e1d6bfccfb',1,'lcd_draw_s']]],
   ['stroke_5fsize_42',['stroke_size',['../structlcd__draw__s.html#a450646b42f111ecb03f724b41a163419',1,'lcd_draw_s']]],
-  ['subfile_5fbase_43',['subfile_base',['../structloader__file__descriptor__s.html#a9efa9b42d099aa319ba202be04ef0b0c',1,'loader_file_descriptor_s']]],
-  ['subfile_5foffset_44',['subfile_offset',['../structloader__file__descriptor__s.html#a773bb3cac196ae6f283c6aed4ae39cef',1,'loader_file_descriptor_s']]],
-  ['subroutine_45',['subroutine',['../structapplet__args__v4__s.html#aed89902e32144107f2c110e9c4d9ef07',1,'applet_args_v4_s']]],
-  ['suffix_46',['suffix',['../structbxc__fs__parts__lfn__s.html#a2c609e317b1261099e79a3037c24eb78',1,'bxc_fs_parts_lfn_s::suffix'],['../structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2',1,'bxc_fs_parts_dos_s::suffix']]],
-  ['surface_47',['surface',['../structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a',1,'lcd_base_s::surface'],['../structlcd__thread__safe__s.html#a13044bc39c21be2f0e91c788826363ac',1,'lcd_thread_safe_s::surface'],['../structui__imageclip__s.html#a54641ce19ed28d98955d5bf135ac7498',1,'ui_imageclip_s::surface']]],
-  ['surface_5fcolor_48',['surface_color',['../structui__deskbox__s.html#a757e119d212448deea4735a2a047c6de',1,'ui_deskbox_s']]]
+  ['style_5foptions_43',['style_options',['../structui__static__s.html#a3545ff075c4a93ed044645cb2a55f4c4',1,'ui_static_s']]],
+  ['subfile_5fbase_44',['subfile_base',['../structloader__file__descriptor__s.html#a9efa9b42d099aa319ba202be04ef0b0c',1,'loader_file_descriptor_s']]],
+  ['subfile_5foffset_45',['subfile_offset',['../structloader__file__descriptor__s.html#a773bb3cac196ae6f283c6aed4ae39cef',1,'loader_file_descriptor_s']]],
+  ['subroutine_46',['subroutine',['../structapplet__args__v4__s.html#aed89902e32144107f2c110e9c4d9ef07',1,'applet_args_v4_s']]],
+  ['suffix_47',['suffix',['../structbxc__fs__parts__lfn__s.html#a2c609e317b1261099e79a3037c24eb78',1,'bxc_fs_parts_lfn_s::suffix'],['../structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2',1,'bxc_fs_parts_dos_s::suffix']]],
+  ['surface_48',['surface',['../structlcd__base__s.html#aeb44786ce39347b44fa9f4fa6bdb270a',1,'lcd_base_s::surface'],['../structlcd__thread__safe__s.html#a13044bc39c21be2f0e91c788826363ac',1,'lcd_thread_safe_s::surface'],['../structui__imageclip__s.html#a54641ce19ed28d98955d5bf135ac7498',1,'ui_imageclip_s::surface']]],
+  ['surface_5fcolor_49',['surface_color',['../structui__deskbox__s.html#a757e119d212448deea4735a2a047c6de',1,'ui_deskbox_s']]]
 ];

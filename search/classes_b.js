@@ -21,5 +21,6 @@ var searchData=
   ['ui_5fmenufield_5fs_18',['ui_menufield_s',['../structui__menufield__s.html',1,'']]],
   ['ui_5fmultipress_5fevent_5fs_19',['ui_multipress_event_s',['../structui__multipress__event__s.html',1,'']]],
   ['ui_5fprogressbar_5fs_20',['ui_progressbar_s',['../structui__progressbar__s.html',1,'']]],
-  ['ui_5fslider_5fs_21',['ui_slider_s',['../structui__slider__s.html',1,'']]]
+  ['ui_5fslider_5fs_21',['ui_slider_s',['../structui__slider__s.html',1,'']]],
+  ['ui_5fstatic_5fs_22',['ui_static_s',['../structui__static__s.html',1,'']]]
 ];

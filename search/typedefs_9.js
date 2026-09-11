@@ -23,5 +23,6 @@ var searchData=
   ['ui_5fmultipress_5fevent_5ft_20',['ui_multipress_event_t',['../framework_8h.html#ab319ff33cb05ce60cb3e35af842e80b7',1,'framework.h']]],
   ['ui_5fprogressbar_5ft_21',['ui_progressbar_t',['../types_2progressbar_8h.html#ac5d0d1f028c3f8becf9ca865d0b9c95d',1,'progressbar.h']]],
   ['ui_5fslider_5ft_22',['ui_slider_t',['../types_2slider_8h.html#aa2af445de750e76af2441165edccedb7',1,'slider.h']]],
-  ['utf16_5fmb_5fencoding_5fe_23',['utf16_mb_encoding_e',['../utf16_8h.html#ac7e7c273b4855771f0d987c46523a54c',1,'utf16.h']]]
+  ['ui_5fstatic_5ft_23',['ui_static_t',['../types_2static_8h.html#a903fc75a9e7f38c0f99516a09468b623',1,'static.h']]],
+  ['utf16_5fmb_5fencoding_5fe_24',['utf16_mb_encoding_e',['../utf16_8h.html#ac7e7c273b4855771f0d987c46523a54c',1,'utf16.h']]]
 ];

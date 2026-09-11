@@ -26,7 +26,8 @@ var searchData=
   ['createmenufield_23',['CreateMenuField',['../widgets_2menufield_8h.html#a874a499326de31d96b141dbf46aedbf7',1,'menufield.h']]],
   ['createprogress_24',['CreateProgress',['../widgets_2progressbar_8h.html#a0592148d25f7953859f7f330790ace92',1,'progressbar.h']]],
   ['createslider_25',['CreateSlider',['../widgets_2slider_8h.html#ac83a1109c851a7b05699a1f6a6f6b2e7',1,'slider.h']]],
-  ['createvirtuallcd_26',['CreateVirtualLCD',['../lcd_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'lcd.h']]],
-  ['cursorlock_27',['CursorLock',['../lcd_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'lcd.h']]],
-  ['cursorunlock_28',['CursorUnlock',['../lcd_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'lcd.h']]]
+  ['createstatic_26',['CreateStatic',['../widgets_2static_8h.html#a81f5ba01f58d7334b8246ebb2e557601',1,'static.h']]],
+  ['createvirtuallcd_27',['CreateVirtualLCD',['../lcd_8h.html#ab3b6119a8df2456843fc8e1a41030011',1,'lcd.h']]],
+  ['cursorlock_28',['CursorLock',['../lcd_8h.html#abdef6294ce6e29fd85e1bd23e37d10a8',1,'lcd.h']]],
+  ['cursorunlock_29',['CursorUnlock',['../lcd_8h.html#aabe4d662b9f18f6758ff0f512fb90481',1,'lcd.h']]]
 ];

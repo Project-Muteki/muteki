@@ -24,7 +24,7 @@ var searchData=
   ['font_2eh_21',['font.h',['../font_8h.html',1,'(Global Namespace)'],['../types_2font_8h.html',1,'(Global Namespace)']]],
   ['font_5finfo_5fs_22',['font_info_s',['../structfont__info__s.html',1,'']]],
   ['font_5finfo_5ft_23',['font_info_t',['../types_2font_8h.html#a3f0002062951796ccd53b40d14545169',1,'font.h']]],
-  ['font_5ftype_24',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s::font_type'],['../structui__booltextfield__s.html#ad1883b38e1ff844d3732fae5d3f78ba4',1,'ui_booltextfield_s::font_type']]],
+  ['font_5ftype_24',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s::font_type'],['../structui__booltextfield__s.html#ad1883b38e1ff844d3732fae5d3f78ba4',1,'ui_booltextfield_s::font_type'],['../structui__static__s.html#af330ccff5fefd3a50f71bf58a7342c87',1,'ui_static_s::font_type']]],
   ['font_5ftype_5fe_25',['font_type_e',['../types_2font_8h.html#a626b23c6e6f587deeea5e3cc43b10171',1,'font.h']]],
   ['footprint_26',['footprint',['../structui__component__s.html#abbf53bd0db7ef98f916a1b4c122fd2dc',1,'ui_component_s']]],
   ['format_27',['format',['../structpcm__config__s.html#a3ba5313aaa2a0d8b9aa0e26409a4d4f4',1,'pcm_config_s']]],

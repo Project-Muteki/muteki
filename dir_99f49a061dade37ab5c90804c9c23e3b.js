@@ -12,5 +12,6 @@ var dir_99f49a061dade37ab5c90804c9c23e3b =
     [ "menufield.h", "types_2menufield_8h.html", "types_2menufield_8h" ],
     [ "progressbar.h", "types_2progressbar_8h.html", "types_2progressbar_8h" ],
     [ "slider.h", "types_2slider_8h.html", "types_2slider_8h" ],
+    [ "static.h", "types_2static_8h.html", "types_2static_8h" ],
     [ "text_layout.h", "text__layout_8h.html", "text__layout_8h" ]
 ];
