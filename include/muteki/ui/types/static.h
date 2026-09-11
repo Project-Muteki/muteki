@@ -21,7 +21,7 @@ extern "C" {
 /**
  * @brief Kinds of outer frame style.
  */
-enum ui_static_frame_type_e {
+enum ui_static_frame_kind_e {
     /**
      * @brief No frame.
      */
@@ -97,7 +97,7 @@ typedef struct ui_static_s {
  */
 static inline unsigned int ui_static_style_options(
     enum ui_text_layout_e layout,
-    enum ui_static_frame_type_e frame_type
+    enum ui_static_frame_kind_e frame_type
 ) {
     return ((layout & 0xf) << 22) | ((frame_type & 0xf) << 26);
 }
