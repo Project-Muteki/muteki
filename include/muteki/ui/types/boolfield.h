@@ -18,19 +18,9 @@ extern "C" {
 #endif
 
 /**
- * @brief Bool field (unlabeled checkbox) widget type.
- */
-typedef struct ui_boolfield_s ui_boolfield_t;
-
-/**
- * @brief Bool text field (labeled checkbox) widget type.
- */
-typedef struct ui_booltextfield_s ui_booltextfield_t;
-
-/**
  * @brief Bool field (unlabeled checkbox) widget struct.
  */
-struct ui_boolfield_s {
+typedef struct ui_boolfield_s {
     /**
      * @brief @x_term{superc}
      */
@@ -61,12 +51,12 @@ struct ui_boolfield_s {
      * @details Optional when used as ui_booltextfield_t::bf. Unused and uninitialized when used as ui_boolfield_t.
      */
     const UTF16 *label;
-};
+} ui_boolfield_t;
 
 /**
  * @brief Bool text field (labeled checkbox) widget struct.
  */
-struct ui_booltextfield_s {
+typedef struct ui_booltextfield_s {
     /**
      * @brief The inherited ui_boolfield_t struct.
      */
@@ -89,7 +79,7 @@ struct ui_booltextfield_s {
      * @brief @x_term{padding}
      */
     short unk_0x4a;
-};
+} ui_booltextfield_t;
 
 #ifdef __cplusplus
 } // extern "C"

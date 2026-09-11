@@ -35,7 +35,7 @@ extern "C" {
  * @param mask Bitmask used to toggle the bits in the value bitfield.
  * @return The created bool field widget object.
  */
-ui_boolfield_t *CreateBoolField(unsigned short tag, short x, short y, unsigned short *value, unsigned short mask);
+extern ui_boolfield_t *CreateBoolField(unsigned short tag, short x, short y, unsigned short *value, unsigned short mask);
 
 /**
  * @brief Create a bool text field (labeled checkbox) widget.
@@ -48,7 +48,7 @@ ui_boolfield_t *CreateBoolField(unsigned short tag, short x, short y, unsigned s
  * @param label Text label.
  * @return The created bool text field widget object.
  */
-ui_booltextfield_t *CreateBoolTextField(
+extern ui_booltextfield_t *CreateBoolTextField(
     unsigned short tag,
     short x,
     short y,
@@ -63,7 +63,7 @@ ui_booltextfield_t *CreateBoolTextField(
  * @param self The bool field object.
  * @x_void_return
  */
-void PBOOLFIELD_draw(ui_boolfield_t *self);
+extern void PBOOLFIELD_draw(ui_boolfield_t *self);
 
 #ifdef __cplusplus
 } // extern "C"
