@@ -156,6 +156,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:aef8d5e7a16a215e2b516bcf8b6551bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory and store the resulting pointer in a TLS slot of the current thread.  <br /></td></tr>
 <tr class="memitem:a77ba5a46bda69203c8f5d0e193fdf601" id="r_a77ba5a46bda69203c8f5d0e193fdf601"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a77ba5a46bda69203c8f5d0e193fdf601">osdep_ktls_free_self</a> (unsigned int key)</td></tr>
 <tr class="memdesc:a77ba5a46bda69203c8f5d0e193fdf601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free memory previously allocated by <a class="el" href="#ae2a537db70532fa100b6ff05accc704b" title="Allocate memory and store the resulting pointer in the TLS slot.">osdep_ktls_alloc()</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a500d2bfa51cd3b13c80f565c04d11d12" id="r_a500d2bfa51cd3b13c80f565c04d11d12"><td class="memItemLeft"><a id="a500d2bfa51cd3b13c80f565c04d11d12" name="a500d2bfa51cd3b13c80f565c04d11d12"></a>
+static const unsigned int&#160;</td><td class="memItemRight"><b>OSDEP_KTLS_KEY_MAX</b> = sizeof(((<a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a> *) NULL)-&gt;unk_0x34) / 4 - 1</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kernel TLS (KTLS) control. </p>

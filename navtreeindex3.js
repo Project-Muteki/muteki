@@ -1,5 +1,8 @@
 var NAVTREEINDEX3 =
 {
+"structbxc__thread__s.html#a1842b7c83e814efe71f40921b3c289e0":[5,0,11,8],
+"structbxc__thread__s.html#a1f7b276614bf67ca8fe12cd35caff9d1":[5,0,11,12],
+"structbxc__thread__s.html#a2de5a8aa1324b001cf012649d6444e0d":[5,0,11,17],
 "structbxc__thread__s.html#a339ad95901fc2720f474aba679c821fc":[5,0,11,6],
 "structbxc__thread__s.html#a3afabc40fbf319fe12396018d198a587":[5,0,11,1],
 "structbxc__thread__s.html#a6265d5ca179c99abe8f1e03d46f26cec":[5,0,11,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX3 =
 "structpower__battery__status__t.html#a55423abfce5a7828d00610f993104719":[5,0,41,4],
 "structpower__battery__status__t.html#a6d7284224186b7005e25b8ec4b4333a8":[5,0,41,3],
 "structpower__battery__status__t.html#a885a900a1c7b321291144149c0da481c":[5,0,41,1],
-"structpower__battery__status__t.html#ad1728ebce1011e7d352dcf90333580e1":[5,0,41,0],
-"structui__appview__item__s.html":[5,0,42],
-"structui__appview__item__s.html#a323323fffd24e90ff90e4120e1c71e85":[5,0,42,4],
-"structui__appview__item__s.html#a33e093b27cd23c76a6f9d720d0c36d7b":[5,0,42,2]
+"structpower__battery__status__t.html#ad1728ebce1011e7d352dcf90333580e1":[5,0,41,0]
 };

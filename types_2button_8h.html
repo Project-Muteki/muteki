@@ -149,6 +149,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf">UI_BUTTON_VS_UNCHANGED</a> = 10
  }</td></tr>
 <tr class="memdesc:ae8004bfe5c13384578c2557715250ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid button visual states.  <a href="#ae8004bfe5c13384578c2557715250ff9">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aafca709636e60b2023540b32b0d01580" id="r_aafca709636e60b2023540b32b0d01580"><td class="memItemLeft">static unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#aafca709636e60b2023540b32b0d01580">ui_button_layout_from_text_layout</a> (enum <a class="el" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9">ui_text_layout_e</a> text_layout)</td></tr>
+<tr class="memdesc:aafca709636e60b2023540b32b0d01580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a <a class="el" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9" title="Text layout types.">ui_text_layout_e</a> member to a <a class="el" href="structui__button__s.html#ace17945fd66d41a326c8ae332686c94f" title="Text layout of the button label.">ui_button_t::content_layout</a> value.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Button widget type definition. </p>
@@ -174,6 +179,41 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf" name="ae8004bfe5c13384578c2557715250ff9a0518babdc1751764bfb2246785c167bf"></a>UI_BUTTON_VS_UNCHANGED&#160;</td><td class="fielddoc"><p>Do nothing and keep the current on-screen state. </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="aafca709636e60b2023540b32b0d01580" name="aafca709636e60b2023540b32b0d01580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafca709636e60b2023540b32b0d01580">&#9670;&#160;</a></span>ui_button_layout_from_text_layout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ui_button_layout_from_text_layout </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9">ui_text_layout_e</a></td>          <td class="paramname"><span class="paramname"><em>text_layout</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert a <a class="el" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9" title="Text layout types.">ui_text_layout_e</a> member to a <a class="el" href="structui__button__s.html#ace17945fd66d41a326c8ae332686c94f" title="Text layout of the button label.">ui_button_t::content_layout</a> value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text_layout</td><td>A valid <a class="el" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9" title="Text layout types.">ui_text_layout_e</a> member. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value for <a class="el" href="structui__button__s.html#ace17945fd66d41a326c8ae332686c94f" title="Text layout of the button label.">ui_button_t::content_layout</a>. </dd></dl>
 
 </div>
 </div>

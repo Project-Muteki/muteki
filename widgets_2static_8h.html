@@ -134,6 +134,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('widgets_2stati
 Functions</h2></td></tr>
 <tr class="memitem:a81f5ba01f58d7334b8246ebb2e557601" id="r_a81f5ba01f58d7334b8246ebb2e557601"><td class="memItemLeft"><a class="el" href="types_2static_8h.html#a903fc75a9e7f38c0f99516a09468b623">ui_static_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a81f5ba01f58d7334b8246ebb2e557601">CreateStatic</a> (unsigned short tag, short x0, short y0, short x1, short y1, const <a class="el" href="common_8h.html#a11673b324737202065319b55ec126bec">UTF16</a> *text, unsigned short font_type, unsigned int text_color, unsigned int text_options, unsigned int style_options)</td></tr>
 <tr class="memdesc:a81f5ba01f58d7334b8246ebb2e557601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a static text field widget.  <br /></td></tr>
+<tr class="memitem:a28031cd19422f5392556e87a60848f67" id="r_a28031cd19422f5392556e87a60848f67"><td class="memItemLeft">static unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a28031cd19422f5392556e87a60848f67">ui_static_text_options</a> (unsigned short text_flags, short left_inset)</td></tr>
+<tr class="memdesc:a28031cd19422f5392556e87a60848f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the <span class="tt">text_options</span> parameter of the <a class="el" href="#a81f5ba01f58d7334b8246ebb2e557601" title="Create a static text field widget.">CreateStatic()</a> syscall.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Static text field (single-line label) widget constructor and methods. </p>
@@ -145,7 +147,7 @@ Functions</h2></td></tr>
 <div class="line">    SERIF_CJK,</div>
 <div class="line">    <a class="code hl_define" href="primitives_8h.html#a814ec1d39351b1a10d87359efbf16237">LCD_RGB_FROM_U8</a>(0x00, 0x00, 0x00),</div>
 <div class="line">    ui_static_text_options(<a class="code hl_enumvalue" href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a59fa30ef79d23c00a3f8b6ec3744094c">LCD_PRINT_NONE</a>, 0),</div>
-<div class="line">    ui_static_style_options(<a class="code hl_enumvalue" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a356692dd1d5e9c93aec764e7617ba2ee">UI_TEXT_LAYOUT_LEFT_CENTER</a>, <a class="code hl_enumvalue" href="types_2static_8h.html#a4d0d46f64e027bd4f916b9c1d453974ca2eed888932333feb429b922268d2558d">UI_STATIC_FRAME_KIND_OUTLINE</a>)</div>
+<div class="line">    <a class="code hl_function" href="types_2static_8h.html#a952cc570ed68b1b033ccdd5d267ce199">ui_static_style_options</a>(<a class="code hl_enumvalue" href="text__layout_8h.html#a04cd7e420f6db91709a517d4e09ceeb9a356692dd1d5e9c93aec764e7617ba2ee">UI_TEXT_LAYOUT_LEFT_CENTER</a>, <a class="code hl_enumvalue" href="types_2static_8h.html#a4d0d46f64e027bd4f916b9c1d453974ca2eed888932333feb429b922268d2558d">UI_STATIC_FRAME_KIND_OUTLINE</a>)</div>
 <div class="line">);</div>
 <div class="ttc" id="acommon_8h_html_a1f2319b35fdcf33e9544b53a14371156"><div class="ttname"><a href="common_8h.html#a1f2319b35fdcf33e9544b53a14371156">_BUL</a></div><div class="ttdeci">#define _BUL(x)</div><div class="ttdoc">Besta UTF-16 string literal.</div><div class="ttdef"><b>Definition</b> common.h:61</div></div>
 <div class="ttc" id="aprimitives_8h_html_a814ec1d39351b1a10d87359efbf16237"><div class="ttname"><a href="primitives_8h.html#a814ec1d39351b1a10d87359efbf16237">LCD_RGB_FROM_U8</a></div><div class="ttdeci">#define LCD_RGB_FROM_U8(r, g, b)</div><div class="ttdoc">Convert separate RGB values to integer RGB representation.</div><div class="ttdef"><b>Definition</b> primitives.h:46</div></div>
@@ -153,6 +155,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="atypes_2lcd_8h_html_a6de54c0929bad9fce9a3b35444aa10c5a59fa30ef79d23c00a3f8b6ec3744094c"><div class="ttname"><a href="types_2lcd_8h.html#a6de54c0929bad9fce9a3b35444aa10c5a59fa30ef79d23c00a3f8b6ec3744094c">LCD_PRINT_NONE</a></div><div class="ttdeci">@ LCD_PRINT_NONE</div><div class="ttdoc">No extra process.</div><div class="ttdef"><b>Definition</b> lcd.h:31</div></div>
 <div class="ttc" id="atypes_2static_8h_html_a4d0d46f64e027bd4f916b9c1d453974ca2eed888932333feb429b922268d2558d"><div class="ttname"><a href="types_2static_8h.html#a4d0d46f64e027bd4f916b9c1d453974ca2eed888932333feb429b922268d2558d">UI_STATIC_FRAME_KIND_OUTLINE</a></div><div class="ttdeci">@ UI_STATIC_FRAME_KIND_OUTLINE</div><div class="ttdoc">Draw the outline with the default outline color.</div><div class="ttdef"><b>Definition</b> static.h:33</div></div>
 <div class="ttc" id="atypes_2static_8h_html_a903fc75a9e7f38c0f99516a09468b623"><div class="ttname"><a href="types_2static_8h.html#a903fc75a9e7f38c0f99516a09468b623">ui_static_t</a></div><div class="ttdeci">struct ui_static_s ui_static_t</div><div class="ttdoc">Static text field widget struct.</div></div>
+<div class="ttc" id="atypes_2static_8h_html_a952cc570ed68b1b033ccdd5d267ce199"><div class="ttname"><a href="types_2static_8h.html#a952cc570ed68b1b033ccdd5d267ce199">ui_static_style_options</a></div><div class="ttdeci">static unsigned int ui_static_style_options(enum ui_text_layout_e layout, enum ui_static_frame_type_e frame_type)</div><div class="ttdoc">Format the ui_static_t::style_options value.</div><div class="ttdef"><b>Definition</b> static.h:101</div></div>
 <div class="ttc" id="awidgets_2static_8h_html_a81f5ba01f58d7334b8246ebb2e557601"><div class="ttname"><a href="#a81f5ba01f58d7334b8246ebb2e557601">CreateStatic</a></div><div class="ttdeci">ui_static_t * CreateStatic(unsigned short tag, short x0, short y0, short x1, short y1, const UTF16 *text, unsigned short font_type, unsigned int text_color, unsigned int text_options, unsigned int style_options)</div><div class="ttdoc">Create a static text field widget.</div></div>
 </div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>This widget assumes its parent is a deskbox type. Therefore it cannot be used with arbitrary generic group components. </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -247,7 +250,46 @@ Functions</h2></td></tr>
 <dd>
 ui_static_text_options Helper function to format <code class="param">text_options</code> . </dd>
 <dd>
-ui_static_style_options Helper function to format <code class="param">style_options</code> . </dd></dl>
+<a class="el" href="types_2static_8h.html#a952cc570ed68b1b033ccdd5d267ce199" title="Format the ui_static_t::style_options value.">ui_static_style_options</a> Helper function to format <code class="param">style_options</code> . </dd></dl>
+
+</div>
+</div>
+<a id="a28031cd19422f5392556e87a60848f67" name="a28031cd19422f5392556e87a60848f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28031cd19422f5392556e87a60848f67">&#9670;&#160;</a></span>ui_static_text_options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ui_static_text_options </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>text_flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>left_inset</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Format the <span class="tt">text_options</span> parameter of the <a class="el" href="#a81f5ba01f58d7334b8246ebb2e557601" title="Create a static text field widget.">CreateStatic()</a> syscall. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text_flags</td><td>Flags accepted by <a class="el" href="lcd_8h.html#aa411d0bb895097a6f63e5b897f7637a8" title="Draw a string s with specified alignment at (x, y) px.">WriteAlignString()</a>. </td></tr>
+    <tr><td class="paramname">left_inset</td><td>Extra left inset in number of pixels. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The formatted value. </dd></dl>
 
 </div>
 </div>

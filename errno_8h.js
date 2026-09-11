@@ -92,6 +92,9 @@ var errno_8h =
     ] ],
     [ "_GetLastError", "errno_8h.html#a4df69b26f4c2d2878151e50237367faf", null ],
     [ "_SetLastError", "errno_8h.html#ac38322f981a40c6d127065de600114e7", null ],
+    [ "BXC_ERRNO", "errno_8h.html#a9155a2017950a05e3dcfdd572707924a", null ],
+    [ "BXC_ERRNO_ERR", "errno_8h.html#ab53e225d9990a88430573115dcaecda7", null ],
+    [ "BXC_ERRNO_NS", "errno_8h.html#a12806e14bff93af9cf8cc5d6aea5eef7", null ],
     [ "FormatMessage", "errno_8h.html#adf9dcc5640b9f66851e35a5f7e3f4d03", null ],
     [ "OSGetLastError", "errno_8h.html#a8e366782f5c2f43da7318912951ad76e", null ],
     [ "OSSetLastError", "errno_8h.html#a37c336a3e8b717cb46ff29daf236de68", null ]

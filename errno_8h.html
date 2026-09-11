@@ -251,6 +251,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a12806e14bff93af9cf8cc5d6aea5eef7" id="r_a12806e14bff93af9cf8cc5d6aea5eef7"><td class="memItemLeft">static unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#a12806e14bff93af9cf8cc5d6aea5eef7">BXC_ERRNO_NS</a> (<a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a> kerrno)</td></tr>
+<tr class="memdesc:a12806e14bff93af9cf8cc5d6aea5eef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the namespace portion of raw kernel errno value.  <br /></td></tr>
+<tr class="memitem:ab53e225d9990a88430573115dcaecda7" id="r_ab53e225d9990a88430573115dcaecda7"><td class="memItemLeft">static unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#ab53e225d9990a88430573115dcaecda7">BXC_ERRNO_ERR</a> (<a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a> kerrno)</td></tr>
+<tr class="memdesc:ab53e225d9990a88430573115dcaecda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error code portion of raw kernel errno value.  <br /></td></tr>
+<tr class="memitem:a9155a2017950a05e3dcfdd572707924a" id="r_a9155a2017950a05e3dcfdd572707924a"><td class="memItemLeft">static <a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9155a2017950a05e3dcfdd572707924a">BXC_ERRNO</a> (unsigned short ns, unsigned short err)</td></tr>
+<tr class="memdesc:a9155a2017950a05e3dcfdd572707924a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function that builds an errno from namespace and error code.  <br /></td></tr>
 <tr class="memitem:adf9dcc5640b9f66851e35a5f7e3f4d03" id="r_adf9dcc5640b9f66851e35a5f7e3f4d03"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#adf9dcc5640b9f66851e35a5f7e3f4d03">FormatMessage</a> (unsigned int flags, int _sbz0, int _sbz1, int _sbz2, void *outbuf, size_t outlen)</td></tr>
 <tr class="memdesc:adf9dcc5640b9f66851e35a5f7e3f4d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch an error message.  <br /></td></tr>
 <tr class="memitem:a37c336a3e8b717cb46ff29daf236de68" id="r_a37c336a3e8b717cb46ff29daf236de68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a37c336a3e8b717cb46ff29daf236de68">OSSetLastError</a> (<a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a> err)</td></tr>
@@ -611,6 +617,117 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section user"><dt>Returns</dt><dd>None.   </dd></dl>
+
+</div>
+</div>
+<a id="a9155a2017950a05e3dcfdd572707924a" name="a9155a2017950a05e3dcfdd572707924a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9155a2017950a05e3dcfdd572707924a">&#9670;&#160;</a></span>BXC_ERRNO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a> BXC_ERRNO </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>ns</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper function that builds an errno from namespace and error code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ns</td><td>Namespace. </td></tr>
+    <tr><td class="paramname">err</td><td>Error code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The errno. </dd></dl>
+
+</div>
+</div>
+<a id="ab53e225d9990a88430573115dcaecda7" name="ab53e225d9990a88430573115dcaecda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab53e225d9990a88430573115dcaecda7">&#9670;&#160;</a></span>BXC_ERRNO_ERR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short BXC_ERRNO_ERR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a></td>          <td class="paramname"><span class="paramname"><em>kerrno</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the error code portion of raw kernel errno value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kerrno</td><td>Kernel errno value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The error code. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a5f306c4c3be2ce9c63105bd31fc37a2b" title="Error code for BXC_ERRNO_NS_EXEC.">bxc_errno_exec_e</a> </dd>
+<dd>
+<a class="el" href="#aae25a149e29bb16c0623b02b5a6801a0" title="Error code for BXC_ERRNO_NS_KERNEL.">bxc_errno_kernel_e</a> </dd></dl>
+
+</div>
+</div>
+<a id="a12806e14bff93af9cf8cc5d6aea5eef7" name="a12806e14bff93af9cf8cc5d6aea5eef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12806e14bff93af9cf8cc5d6aea5eef7">&#9670;&#160;</a></span>BXC_ERRNO_NS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short BXC_ERRNO_NS </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a></td>          <td class="paramname"><span class="paramname"><em>kerrno</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the namespace portion of raw kernel errno value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kerrno</td><td>Kernel errno value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The namespace. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a30cce4bb9dc7151d4ec02dfa4fd09405" title="Kernel errno namespace.">bxc_errno_ns_flag_e</a> </dd></dl>
 
 </div>
 </div>
