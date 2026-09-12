@@ -16,7 +16,7 @@ var structbxc__thread__s =
     [ "sp", "structbxc__thread__s.html#ae21e6ccebb4860b7e5e24153f9df256a", null ],
     [ "stack", "structbxc__thread__s.html#acfec2eac76edda59ca885f4f760790d5", null ],
     [ "thread_func", "structbxc__thread__s.html#a9b71ef3ac4a60d8b67842a096c0a8884", null ],
+    [ "timeout", "structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f", null ],
     [ "unk_0x14", "structbxc__thread__s.html#aaf248d0b0db59e9622099c345a67c0b3", null ],
-    [ "unk_0x1c", "structbxc__thread__s.html#a2de5a8aa1324b001cf012649d6444e0d", null ],
     [ "wait_reason", "structbxc__thread__s.html#ac990383b0315eef960a75f331e75b98a", null ]
 ];

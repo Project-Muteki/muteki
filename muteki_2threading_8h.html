@@ -212,8 +212,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae12d90e8f71733554afd3e4f691da1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force wake up a sleeping thread.  <br /></td></tr>
 <tr class="memitem:af11dbf56f12f0f049d6d1dc061bf7e83" id="r_af11dbf56f12f0f049d6d1dc061bf7e83"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af11dbf56f12f0f049d6d1dc061bf7e83">OSExitThread</a> (int exit_code)</td></tr>
 <tr class="memdesc:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate current thread.  <br /></td></tr>
-<tr class="memitem:aa6ebd195673c9f5c88b2c58bc5ee3573" id="r_aa6ebd195673c9f5c88b2c58bc5ee3573"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6ebd195673c9f5c88b2c58bc5ee3573">OSSleep</a> (short millis)</td></tr>
-<tr class="memdesc:aa6ebd195673c9f5c88b2c58bc5ee3573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for <span class="tt">millis</span> milliseconds.  <br /></td></tr>
+<tr class="memitem:a38cd8aa045ddfeee2321b7199d7b0e50" id="r_a38cd8aa045ddfeee2321b7199d7b0e50"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a38cd8aa045ddfeee2321b7199d7b0e50">OSSleep</a> (short ticks)</td></tr>
+<tr class="memdesc:a38cd8aa045ddfeee2321b7199d7b0e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for amount of <code class="param">ticks</code> .  <br /></td></tr>
 <tr class="memitem:a615941cc70bf151d0ce625c84311ecbb" id="r_a615941cc70bf151d0ce625c84311ecbb"><td class="memItemLeft"><a class="el" href="#aa26f97777c14615ae185184b44d39f33">bxc_semaphore_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a615941cc70bf151d0ce625c84311ecbb">OSCreateSemaphore</a> (short init_ctr)</td></tr>
 <tr class="memdesc:a615941cc70bf151d0ce625c84311ecbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an semaphore descriptor.  <br /></td></tr>
 <tr class="memitem:aa503a58023c7ba0d8bc8f8bc3533ce3e" id="r_aa503a58023c7ba0d8bc8f8bc3533ce3e"><td class="memItemLeft"><a class="el" href="#a4a0a2a564d40c24115c06a4207c9d82c">bxc_wait_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa503a58023c7ba0d8bc8f8bc3533ce3e">OSWaitForSemaphore</a> (<a class="el" href="#aa26f97777c14615ae185184b44d39f33">bxc_semaphore_t</a> *semaphore, short timeout)</td></tr>
@@ -1272,8 +1272,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa6ebd195673c9f5c88b2c58bc5ee3573" name="aa6ebd195673c9f5c88b2c58bc5ee3573"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6ebd195673c9f5c88b2c58bc5ee3573">&#9670;&#160;</a></span>OSSleep()</h2>
+<a id="a38cd8aa045ddfeee2321b7199d7b0e50" name="a38cd8aa045ddfeee2321b7199d7b0e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cd8aa045ddfeee2321b7199d7b0e50">&#9670;&#160;</a></span>OSSleep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1284,7 +1284,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void OSSleep </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>millis</em></span></td><td>)</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ticks</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1295,11 +1295,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sleep for <span class="tt">millis</span> milliseconds. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10008</span> </dd></dl>
+<p>Sleep for amount of <code class="param">ticks</code> . </p>
+<p>A tick is typically 1ms on Besta RTOS, but this could fluctuate in practice.</p>
+<p>If <code class="param">ticks</code> is 0, the current thread's <a class="el" href="structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f" title="Thread execution timeout in number of scheduler ticks.">bxc_thread_t::timeout</a> value will be set to 0, causing the current thread to immediately yield. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10008</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">millis</td><td>Time to sleep in milliseconds.</td></tr>
+    <tr><td class="paramname">ticks</td><td>Time to sleep in scheduler ticks.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1425,7 +1426,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>The event context. </td></tr>
-    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#aa6ebd195673c9f5c88b2c58bc5ee3573" title="Sleep for millis milliseconds.">OSSleep()</a> units. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#a38cd8aa045ddfeee2321b7199d7b0e50" title="Sleep for amount of ticks .">OSSleep()</a> units. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1465,7 +1466,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">semaphore</td><td>The semaphore context. </td></tr>
-    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#aa6ebd195673c9f5c88b2c58bc5ee3573" title="Sleep for millis milliseconds.">OSSleep()</a> units. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#a38cd8aa045ddfeee2321b7199d7b0e50" title="Sleep for amount of ticks .">OSSleep()</a> units. </td></tr>
   </table>
   </dd>
 </dl>

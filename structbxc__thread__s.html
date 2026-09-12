@@ -142,8 +142,10 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ad057a872f6c784d20e0e1b4e87ed89bb" id="r_ad057a872f6c784d20e0e1b4e87ed89bb"><td class="memItemLeft"><a class="el" href="errno_8h.html#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad057a872f6c784d20e0e1b4e87ed89bb">kerrno</a></td></tr>
 <tr class="memitem:aaf248d0b0db59e9622099c345a67c0b3" id="r_aaf248d0b0db59e9622099c345a67c0b3"><td class="memItemLeft">uintptr_t&#160;</td><td class="memItemRight"><a class="el" href="#aaf248d0b0db59e9622099c345a67c0b3">unk_0x14</a></td></tr>
 <tr class="memitem:a9b71ef3ac4a60d8b67842a096c0a8884" id="r_a9b71ef3ac4a60d8b67842a096c0a8884"><td class="memItemLeft"><a class="el" href="muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47">bxc_thread_func_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b71ef3ac4a60d8b67842a096c0a8884">thread_func</a></td></tr>
-<tr class="memitem:a2de5a8aa1324b001cf012649d6444e0d" id="r_a2de5a8aa1324b001cf012649d6444e0d"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#a2de5a8aa1324b001cf012649d6444e0d">unk_0x1c</a></td></tr>
+<tr class="memitem:ae25bb00952156a638871aaf3961e644f" id="r_ae25bb00952156a638871aaf3961e644f"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ae25bb00952156a638871aaf3961e644f">timeout</a></td></tr>
+<tr class="memdesc:ae25bb00952156a638871aaf3961e644f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread execution timeout in number of scheduler ticks.  <br /></td></tr>
 <tr class="memitem:ae881bd296e9589be684c0a80b6edd971" id="r_ae881bd296e9589be684c0a80b6edd971"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ae881bd296e9589be684c0a80b6edd971">sleep_counter</a></td></tr>
+<tr class="memdesc:ae881bd296e9589be684c0a80b6edd971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scheduler ticks left to sleep.  <br /></td></tr>
 <tr class="memitem:ac990383b0315eef960a75f331e75b98a" id="r_ac990383b0315eef960a75f331e75b98a"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ac990383b0315eef960a75f331e75b98a">wait_reason</a></td></tr>
 <tr class="memitem:a1842b7c83e814efe71f40921b3c289e0" id="r_a1842b7c83e814efe71f40921b3c289e0"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#a1842b7c83e814efe71f40921b3c289e0">slot</a></td></tr>
 <tr class="memitem:aecf67c08dbee2373077dd7d1f75632b6" id="r_aecf67c08dbee2373077dd7d1f75632b6"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#aecf67c08dbee2373077dd7d1f75632b6">slot_low3b</a></td></tr>
@@ -260,7 +262,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Milliseconds left to sleep. </p>
+
+<p>Scheduler ticks left to sleep. </p>
+<p>This value is populated by <a class="el" href="muteki_2threading_8h.html#a38cd8aa045ddfeee2321b7199d7b0e50" title="Sleep for amount of ticks .">OSSleep()</a> when the <span class="tt">ticks</span> parameter is bigger than 0. </p>
 
 </div>
 </div>
@@ -384,6 +388,23 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="ae25bb00952156a638871aaf3961e644f" name="ae25bb00952156a638871aaf3961e644f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25bb00952156a638871aaf3961e644f">&#9670;&#160;</a></span>timeout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short bxc_thread_s::timeout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread execution timeout in number of scheduler ticks. </p>
+<p>This value is initialized by the scheduler with a value that is inverse proportional to the slot number, meaning higher priority threads have longer timeouts. This value ticks down every scheduler tick that the thread is not spent sleeping. When the timeout reaches 0, the thread gets put into sleep (adding <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688">BXC_WAIT_ON_SLEEP</a> to <a class="el" href="#ac990383b0315eef960a75f331e75b98a">bxc_thread_t::wait_reason</a>) with the <a class="el" href="#ae881bd296e9589be684c0a80b6edd971" title="Scheduler ticks left to sleep.">bxc_thread_t::sleep_counter</a> value set to 0 (meaning that the thread is yielded, lower priority thread will be executed next, and the thread will be active again after the lower priority thread yields or finishes executing). In cases of a thread wake or when scheduler enters idle condition, this value may also be reset. </p>
+
+</div>
+</div>
 <a id="aaf248d0b0db59e9622099c345a67c0b3" name="aaf248d0b0db59e9622099c345a67c0b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf248d0b0db59e9622099c345a67c0b3">&#9670;&#160;</a></span>unk_0x14</h2>
 
@@ -396,21 +417,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Unknown. Initializes to 0x80000000. </p>
-
-</div>
-</div>
-<a id="a2de5a8aa1324b001cf012649d6444e0d" name="a2de5a8aa1324b001cf012649d6444e0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2de5a8aa1324b001cf012649d6444e0d">&#9670;&#160;</a></span>unk_0x1c</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short bxc_thread_s::unk_0x1c</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Unknown. </p>
 
 </div>
 </div>

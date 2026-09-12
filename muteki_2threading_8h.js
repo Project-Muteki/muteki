@@ -52,7 +52,7 @@ var muteki_2threading_8h =
     [ "OSSendMsgQue", "muteki_2threading_8h.html#ac8e39224f020db90833e0c698eade40e", null ],
     [ "OSSetEvent", "muteki_2threading_8h.html#a53decae74da8186477aec2dad10edfdf", null ],
     [ "OSSetThreadPriority", "muteki_2threading_8h.html#ab8d5a01a1939264bfcfabf10efb984aa", null ],
-    [ "OSSleep", "muteki_2threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573", null ],
+    [ "OSSleep", "muteki_2threading_8h.html#a38cd8aa045ddfeee2321b7199d7b0e50", null ],
     [ "OSSuspendThread", "muteki_2threading_8h.html#a10f8613f2303d93cd8ec7cd1ce624f31", null ],
     [ "OSTerminateThread", "muteki_2threading_8h.html#a2910f65aced79170e1e10a26c9052290", null ],
     [ "OSWaitForEvent", "muteki_2threading_8h.html#a96961b9f0c368568851a6f615b44e84b", null ],

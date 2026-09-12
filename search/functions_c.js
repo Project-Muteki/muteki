@@ -48,7 +48,7 @@ var searchData=
   ['ossetevent_45',['OSSetEvent',['../muteki_2threading_8h.html#a53decae74da8186477aec2dad10edfdf',1,'threading.h']]],
   ['ossetlasterror_46',['OSSetLastError',['../errno_8h.html#a37c336a3e8b717cb46ff29daf236de68',1,'errno.h']]],
   ['ossetthreadpriority_47',['OSSetThreadPriority',['../muteki_2threading_8h.html#ab8d5a01a1939264bfcfabf10efb984aa',1,'threading.h']]],
-  ['ossleep_48',['OSSleep',['../muteki_2threading_8h.html#aa6ebd195673c9f5c88b2c58bc5ee3573',1,'threading.h']]],
+  ['ossleep_48',['OSSleep',['../muteki_2threading_8h.html#a38cd8aa045ddfeee2321b7199d7b0e50',1,'threading.h']]],
   ['ossuspendthread_49',['OSSuspendThread',['../muteki_2threading_8h.html#a10f8613f2303d93cd8ec7cd1ce624f31',1,'threading.h']]],
   ['osterminatethread_50',['OSTerminateThread',['../muteki_2threading_8h.html#a2910f65aced79170e1e10a26c9052290',1,'threading.h']]],
   ['oswaitforevent_51',['OSWaitForEvent',['../muteki_2threading_8h.html#a96961b9f0c368568851a6f615b44e84b',1,'threading.h']]],
