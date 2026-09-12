@@ -129,9 +129,21 @@ struct bxc_thread_s {
     uintptr_t unk_0x14; // init to 0x80000000
     /** Thread function entrypoint. */
     bxc_thread_func_t thread_func;
-    /** Unknown. */
-    short unk_0x1c;
-    /** Milliseconds left to sleep. */
+    /**
+     * @brief Thread execution timeout in number of scheduler ticks.
+     * @details This value is initialized by the scheduler with a value that is inverse proportional to the slot
+     * number, meaning higher priority threads have longer timeouts. This value ticks down every scheduler tick
+     * that the thread is not spent sleeping. When the timeout reaches 0, the thread gets put into sleep
+     * (adding ::BXC_WAIT_ON_SLEEP to bxc_thread_t::wait_reason) with the bxc_thread_t::sleep_counter value set to 0
+     * (meaning that the thread is yielded, lower priority thread will be executed next, and the thread will be active
+     * again after the lower priority thread yields or finishes executing).
+     * In cases of a thread wake or when scheduler enters idle condition, this value may also be reset.
+     */
+    short timeout;
+    /** 
+     * @brief Scheduler ticks left to sleep.
+     * @details This value is populated by OSSleep() when the `ticks` parameter is bigger than 0.
+     */
     short sleep_counter;
     /**
      * Current wait reason of the thread.
@@ -314,12 +326,17 @@ extern bool OSWakeUpThread(bxc_thread_t *thr);
  extern int OSExitThread(int exit_code);
 
 /**
- * @brief Sleep for `millis` milliseconds.
+ * @brief Sleep for amount of @p ticks .
+ * @details
+ * A tick is typically 1ms on Besta RTOS, but this could fluctuate in practice.
+ *
+ * If @p ticks is 0, the current thread's bxc_thread_t::timeout value will be set to 0, causing the current
+ * thread to immediately yield.
  * @x_syscall_num{0x10008}
- * @param millis Time to sleep in milliseconds.
+ * @param ticks Time to sleep in scheduler ticks.
  * @x_void_return
  */
-extern void OSSleep(short millis);
+extern void OSSleep(short ticks);
 
 /**
  * @brief Create an semaphore descriptor.
