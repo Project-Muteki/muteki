@@ -83,18 +83,17 @@ typedef void (*pcm_codec_func_t)(device_service_pcm_t *pcm, pcm_decoder_buffer_t
  */
 struct pcm_config_s {
     /**
-     * @brief Unknown. Initializes to 0.
+     * @brief Number of transferred sample bytes.
      */
-    int unk_0x0;
-    /**
-     * @brief Unknown. Initializes to 0.
-     */
-    int unk_0x4;
+    unsigned long long SYS_DWORD trx_bytes;
     /**
      * @brief Current codec function in effect.
      */
     pcm_codec_func_t codec;
-    int unk_0xc; // initialized to 0
+    /**
+     * @brief Set to 1 when the codec is suspended.
+     */
+    int suspended; // initialized to 0
     /**
      * @brief Sample rate in Hz.
      * @details Defaults to 44100 on at least BA742.
@@ -116,13 +115,15 @@ struct pcm_config_s {
      */
     int current_direction;
     /**
-     * @brief Unknown. Initializes to 0.
+     * @brief Time stretcher (voice speed control) context.
+     * @todo Document its structure.
      */
-    int unk_0x20;
+    void *time_stretcher_ctx;
     /**
-     * @brief Unknown.
+     * @brief Sample peak limiter context.
+     * @todo Document its structure.
      */
-    void *unk_0x24;
+    void *peak_limiter_ctx;
 };
 
 /**
