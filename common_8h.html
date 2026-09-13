@@ -232,7 +232,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">__SYS_ALIGN(n)</div>
 </div><!-- fragment -->
 <p>Attribute for forcing alignment. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo</a></b></dt><dd>MSVC support </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd>MSVC support </dd></dl>
 
 </div>
 </div>
@@ -251,7 +251,7 @@ Macros</h2></td></tr>
 <p>Attribute for structure fields that are DWORD (64-bit), that are used by system calls. </p>
 <p>This will align the struct fields to 4 bytes so ldr/str can still work as normal while all 64-bit values are retrieved with 2 ldr/str instructions instead of 1 ldrd/strd instruction (when compiling the program for armv5 and up) or emulated counterpart (when compiling the program for armv4). This is needed because Besta RTOS uses 4-byte alignment for 64-bit fields by default and ldrd/strd will not work on those fields.</p>
 <p>For single variable this is not necessary since 8-byte aligned variables can be understood by code that uses 4-byte alignment.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo</a></b></dt><dd>MSVC support (is it possible?) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd>MSVC support (is it possible?) </dd></dl>
 
 </div>
 </div>
@@ -276,7 +276,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">__SYS_IS_PRINTF(arg_index_str, arg_index_fmt)</div>
 </div><!-- fragment -->
 <p>Attribute for opting a function in for printf static checking. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd>MSVC support (or simply bypass it). </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo</a></b></dt><dd>MSVC support (or simply bypass it). </dd></dl>
 
 </div>
 </div>
