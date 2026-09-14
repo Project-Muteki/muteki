@@ -129,9 +129,18 @@ struct bxc_thread_s {
     uintptr_t unk_0x14; // init to 0x80000000
     /** Thread function entrypoint. */
     bxc_thread_func_t thread_func;
-    /** Unknown. */
-    short unk_0x1c;
-    /** Milliseconds left to sleep. */
+    /**
+     * @brief Thread timeout value in ticks.
+     * @details
+     * The scheduler sets this member to a value that is inverse proportional to the slot number.
+     * The scheduler then ticks this value down on every tick the thread is not sleeping (::BXC_WAIT_ON_SLEEP bit is not present in
+     * bxc_thread_t::wait_reason). When it reaches 0, the thread is "timed out". This will allow the next highest priority
+     * active thread to be selected by the scheduler for execution.
+     */
+    short timeout;
+    /**
+     * @brief Number of scheduler ticks left to sleep.
+     */
     short sleep_counter;
     /**
      * Current wait reason of the thread.
@@ -314,12 +323,17 @@ extern bool OSWakeUpThread(bxc_thread_t *thr);
  extern int OSExitThread(int exit_code);
 
 /**
- * @brief Sleep for `millis` milliseconds.
+ * @brief Sleep for number of scheduler @p ticks .
+ * @details
+ * 1 tick normally takes 1 millisecond.
+ *
+ * When @p ticks is set to 0, the current thread will voluntarily put itself into the "timed out" state, and will
+ * resume execution after the scheduler goes to idle.
  * @x_syscall_num{0x10008}
- * @param millis Time to sleep in milliseconds.
+ * @param ticks Time to sleep in scheduler ticks.
  * @x_void_return
  */
-extern void OSSleep(short millis);
+extern void OSSleep(short ticks);
 
 /**
  * @brief Create an semaphore descriptor.
