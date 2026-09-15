@@ -22,31 +22,76 @@ extern "C" {
  * @brief Thread wait reason enum.
  */
 enum bxc_wait_reason_e {
-    /** Nothing */
+    /**
+     * @brief Nothing.
+     */
     BXC_WAIT_ON_NONE = 0x0,
-    /** Waiting on a semaphore. */
+    /**
+     * @brief Waiting on a semaphore.
+     */
     BXC_WAIT_ON_SEMAPHORE = 0x1,
-    /** Waiting on an event. */
+    /**
+     * @brief Waiting on an event.
+     */
     BXC_WAIT_ON_EVENT = 0x2,
-    /** Waiting for a message queue push. */
+    /**
+     * @brief Waiting for a message queue push.
+     */
     BXC_WAIT_ON_QUEUE = 0x4,
-    /** Waiting to be unsuspended by OSResumeThread(). */
+    /**
+     * @brief Waiting to be unsuspended by OSResumeThread().
+     */
     BXC_WAIT_ON_SUSPEND = 0x8,
-    /** Waiting for a critical section to be released. */
+    /**
+     * @brief Waiting for a critical section to be released.
+     */
     BXC_WAIT_ON_CRITICAL_SECTION = 0x10,
-    /** Waiting for sleep counter to expire. */
+    /**
+     * @brief Waiting on the sleep counter, or is on hold by the scheduler.
+     * @details This usually means the scheduler is waiting for the sleep counter of this thread to expire before
+     * resuming it. In some cases however it could also mean that the thread is temporarily on hold because it has
+     * timed out.
+     */
     BXC_WAIT_ON_SLEEP = 0x20,
 };
+
+/**
+ * @brief Runtime threading descriptor kind code.
+ */
+enum bxc_threading_kind_e {
+    /**
+     * @brief Thread.
+     */
+    BXC_THREADING_KIND_THREAD = 0x100,
+    /**
+     * @brief Semaphore.
+     */
+    BXC_THREADING_KIND_SEMAPHORE = 0x200,
+    /**
+     * @brief Event.
+     */
+    BXC_THREADING_KIND_EVENT = 0x201,
+    /**
+     * @brief Critical section or queue.
+     */
+    BXC_THREADING_KIND_CS_QUEUE = 0x202,
+}
 
 /**
  * @brief Result of waitables.
  */
 typedef enum bxc_wait_result_e {
-    /** Timeout before the event is set. */
+    /**
+     * @brief Timeout before the event is set.
+     */
     BXC_WAIT_RESULT_TIMEOUT = 0x82,
-    /** The event is set. */
+    /**
+     * @brief The event is set.
+     */
     BXC_WAIT_RESULT_RESOLVED,
-    /** An error occurred. */
+    /**
+     * @brief An error occurred.
+     */
     BXC_WAIT_RESULT_ERROR,
 } bxc_wait_result_t;
 
@@ -61,9 +106,14 @@ typedef int (*bxc_thread_func_t)(void *user_data);
  * Once requested, waitables are able to let a currently running thread to pause execution and wait for a specific event to happen. This is pretty much the same as event group and event table in uC/OS-II.
  */
 typedef struct {
-    /** Bitfield that indicates which waiting_by bytes are currently active. */
+    /**
+     * @brief Bitfield that indicates which waiting_by bytes are currently active.
+     */
     unsigned char active_bytes;
-    /** Bitfield that tracks threads that are waiting for this waitable. Indexed by `byte offset * 8 + bit offset` */
+    /**
+     * @brief Bitfield that tracks threads that are waiting for this waitable.
+     * @details Indexed by `byte offset * 8 + bit offset`
+     */
     unsigned char waiting_by[8];
 } bxc_waitable_t;
 
@@ -79,14 +129,25 @@ typedef char bxc_queue_message_t[16] SYS_ALIGN(4);
  * @details Simple ring-buffer-based FIFO queue data structure used internally by message queues.
  */
 typedef struct {
-    /** Message body. */
+    /**
+     * @brief Message body.
+     */
     bxc_queue_message_t *messages;
-    /** Number of chunks. */
+    /**
+     * @brief Number of chunks.
+     */
     unsigned short size;
-    /** Pop index. */
+    /**
+     * @brief Pop index.
+     */
     short pop_idx;
-    /** Push index. */
+    /**
+     * @brief Push index.
+     */
     short push_idx;
+    /**
+     * @brief @x_term{padding}
+     */
     short _padding_0xa;
 } bxc_queue_nonatomic_t;
 
@@ -115,62 +176,103 @@ typedef struct bxc_queue_s bxc_queue_t;
  * @brief Thread descriptor structure.
  */
 struct bxc_thread_s {
-    /** Magic. Always `0x100`. */
+    /**
+     * @brief Magic. Always `0x100`.
+     * @see bxc_threading_kind_e
+     */
     int magic; // always 0x100
-    /** Stack pointer. When the thread is suspended this will point to the CPU context saved on thread stack. */
+    /**
+     * @brief Stack pointer.
+     * @details When the thread is suspended this will point to the CPU context saved on thread stack.
+     */
     uintptr_t *sp;
-    /** Allocated stack memory. */
+    /**
+     * @brief Allocated stack memory.
+     */
     void *stack;
-    /** Exit code of the thread. Initializes to 0. */
+    /**
+     * @brief Exit code of the thread. Initializes to 0.
+     */
     int exit_code; // init to 0
-    /** Error code. */
+    /**
+     * @brief Error code.
+     */
     bxc_errno_t kerrno; // init to 0
-    /** Unknown. Initializes to 0x80000000. */
+    /**
+     * @brief Unknown. Initializes to 0x80000000.
+     */
     uintptr_t unk_0x14; // init to 0x80000000
-    /** Thread function entrypoint. */
+    /**
+     * @brief Thread function entrypoint.
+     */
     bxc_thread_func_t thread_func;
     /**
      * @brief Thread execution timeout in number of scheduler ticks.
      * @details This value is initialized by the scheduler with a value that is inverse proportional to the slot
      * number, meaning higher priority threads have longer timeouts. This value ticks down every scheduler tick
-     * that the thread is not spent sleeping. When the timeout reaches 0, the thread gets put into sleep
-     * (adding ::BXC_WAIT_ON_SLEEP to bxc_thread_t::wait_reason) with the bxc_thread_t::sleep_counter value set to 0
-     * (meaning that the thread is yielded, lower priority thread will be executed next, and the thread will be active
-     * again after the lower priority thread yields or finishes executing).
+     * that the thread is not spent sleeping. When the timeout reaches 0, the thread is "timed out" and gets put into
+     * sleep (adding ::BXC_WAIT_ON_SLEEP to bxc_thread_t::wait_reason) with the bxc_thread_t::sleep_counter value set
+     * to 0 (meaning that the thread is yielded, and lower priority thread will be executed next).
      * In cases of a thread wake or when scheduler enters idle condition, this value may also be reset.
      */
     short timeout;
-    /** 
-     * @brief Scheduler ticks left to sleep.
+    /**
+     * @brief Number of scheduler ticks left to sleep.
      * @details This value is populated by OSSleep() when the `ticks` parameter is bigger than 0.
      */
     short sleep_counter;
     /**
-     * Current wait reason of the thread.
+     * @brief Current wait reason of the thread.
      * @see bxc_wait_reason_e
      */
     short wait_reason; // 0x20
-    /** Slot number. For scheduler. */
+    /**
+     * @brief Slot number. For scheduler.
+     */
     short slot; // 0x22
-    /** Lower 3 bit of the slot number. For scheduler. */
+    /**
+     * @brief Lower 3 bit of the slot number. For scheduler.
+     */
     char slot_low3b;
-    /** Upper 3 bit of the slot number. For scheduler. */
+    /**
+     * @brief Upper 3 bit of the slot number. For scheduler.
+     */
     char slot_high3b;
-    /** Lower 3 bit bitmask of the slot number. For scheduler. */
+    /**
+     * @brief Lower 3 bit bitmask of the slot number. For scheduler.
+     */
     unsigned char slot_low3b_bit;
-    /** Upper 3 bit bitmask of the slot number. For scheduler. */
+    /**
+     * @brief Upper 3 bit bitmask of the slot number. For scheduler.
+     */
     unsigned char slot_high3b_bit;
-    /** Event descriptor that belongs to the event the thread is currently waiting for. */
+    /**
+     * @brief Event descriptor that the thread is waiting for.
+     */
     bxc_event_t *event;
-    /** Previous thread descriptor. */
+    /**
+     * @brief Previous thread descriptor.
+     */
     bxc_thread_t *prev;
-    /** Next thread descriptor. */
+    /**
+     * @brief Next thread descriptor.
+     */
     bxc_thread_t *next;
     union {
-        /** Unknown and seems to be uninitialized. */
+        /**
+         * @brief Old placeholder name.
+         * @deprecated Confirmed to be a name field and might contain data on certain builds.
+         */
         char unk_0x34[0x20];
-        /** Kernel TLS (reusing the seemingly unused unk_0x34 fields) */
+        /**
+         * @brief Kernel TLS (Muteki-specific).
+         * @deprecated Using this field is unsafe as it can be overwritten.
+         */
         uintptr_t ktls[8];
+        /**
+         * @brief Name of the thread. For debugging purposes.
+         */
+        char name[0x20];
     };
 };
 
@@ -178,15 +280,26 @@ struct bxc_thread_s {
  * @brief Semaphore descriptor structure.
  */
 struct bxc_semaphore_s {
-    /** Magic. Always `0x200`. */
+    /**
+     * @brief Magic. Always `0x200`.
+     * @see bxc_threading_kind_e
+     */
     int magic;
+    /**
+     * @brief @x_term{padding}
+     */
     int _padding_0x4;
-    /** Counter. */
+    /**
+     * @brief Counter.
+     */
     short ctr;
     /**
      * @brief Wait state of the current semaphore.
      */
     bxc_waitable_t wait_state;
+    /**
+     * @brief @x_term{padding}
+     */
     char _padding_0x13;
 };
 
@@ -194,17 +307,27 @@ struct bxc_semaphore_s {
  * @brief Event descriptor structure.
  */
 struct bxc_event_s {
-    /** Magic. Always `0x201`. */
+    /**
+     * @brief Magic. Always `0x201`.
+     * @see bxc_threading_kind_e
+     */
     int magic;
-    /** Flag value. 1 is set and 0 is clear. */
+    /**
+     * @brief Flag value. 1 is set and 0 is clear.
+     */
     int flag;
-    /** Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved. */
+    /**
+     * @brief Latch on after event wait.
+     * @details Set to non-0 will inhibit the event from getting cleared after a OSWaitForEvent() is resolved. */
     short latch_on;
     /**
      * @brief Wait state of the current event.
      * @see bxc_waitable_t
      */
     bxc_waitable_t wait_state;
+    /**
+     * @brief @x_term{padding}
+     */
     char _padding_0x13;
 };
 
@@ -212,17 +335,28 @@ struct bxc_event_s {
  * @brief Critical section descriptor structure.
  */
 struct bxc_cs_s {
-    /** Magic. Always `0x202`. Note that for some reason this is the same as ::message_queue_t. */
+    /**
+     * @brief Magic. Always `0x202`.
+     * @note For some reason this is the same as ::message_queue_t.
+     * @see bxc_threading_kind_e
+     */
     int magic; // 0x00000202
-    /** Thread descriptor for this thread. */
+    /**
+     * @brief Thread descriptor that currently holds the CS.
+     */
     bxc_thread_t *thr;
-    /** Reference counter. */
+    /**
+     * @brief Reference counter.
+     */
     unsigned short refcount;
     /**
      * @brief Wait state of the current critical section.
      * @see bxc_waitable_t
      */
     bxc_waitable_t wait_state;
+    /**
+     * @brief @x_term{padding}
+     */
     char _padding_0x13;
 }; // 0x14
 
@@ -230,16 +364,29 @@ struct bxc_cs_s {
  * @brief Message queue descriptor structure.
  */
 struct bxc_queue_s {
-    /** Magic. Always `0x202`. Note that for some reason this is the same as ::critical_section_t. */
+    /**
+     * @brief Magic. Always `0x202`.
+     * @details Note that for some reason this is the same as ::critical_section_t.
+     * @see bxc_threading_kind_e
+     */
     int magic;
-    /** Storage structure i.e. the actual queue part of the queue. */
+    /**
+     * @brief Storage structure.
+     * @details The actual queue part of the queue.
+     */
     bxc_queue_nonatomic_t *storage;
+    /**
+     * @brief @x_term{padding}
+     */
     short _padding_0x8;
     /**
      * @brief Wait state of the current event.
      * @see bxc_waitable_t
      */
     bxc_waitable_t wait_state;
+    /**
+     * @brief @x_term{padding}
+     */
     char _padding_0x13;
 };
 
@@ -326,12 +473,12 @@ extern bool OSWakeUpThread(bxc_thread_t *thr);
  extern int OSExitThread(int exit_code);
 
 /**
- * @brief Sleep for amount of @p ticks .
+ * @brief Sleep for number of scheduler @p ticks .
  * @details
  * A tick is typically 1ms on Besta RTOS, but this could fluctuate in practice.
  *
- * If @p ticks is 0, the current thread's bxc_thread_t::timeout value will be set to 0, causing the current
- * thread to immediately yield.
+ * When @p ticks is set to 0, the current thread will voluntarily put itself into the "timed out" state by clearin the
+ * bxc_thread_t::timeout value, and will resume execution after the scheduler goes to idle.
  * @x_syscall_num{0x10008}
  * @param ticks Time to sleep in scheduler ticks.
  * @x_void_return
