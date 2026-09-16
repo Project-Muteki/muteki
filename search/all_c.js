@@ -70,7 +70,7 @@ var searchData=
   ['ldrfd_67',['ldrfd',['../structloader__loaded__s.html#ab00163cefa0e2a8d2e3d8a21414c21b1',1,'loader_loaded_s']]],
   ['left_5finset_68',['left_inset',['../structui__static__s.html#a31d68c02877429addaadbfa3bd177bf1',1,'ui_static_s']]],
   ['level_69',['level',['../structpower__battery__status__t.html#ad1728ebce1011e7d352dcf90333580e1',1,'power_battery_status_t']]],
-  ['list_70',['Todo List',['../todo.html',1,'']]],
+  ['list_70',['List',['../deprecated.html',1,'Deprecated List'],['../todo.html',1,'Todo List']]],
   ['lmalloc_71',['lmalloc',['../memory_8h.html#a3aaeb9828173fa29b9788c7edeb490bb',1,'memory.h']]],
   ['load_72',['load',['../structloader__impl__s.html#a6996389a726c674031456122d42d4d1e',1,'loader_impl_s']]],
   ['load_5finto_73',['load_into',['../structloader__impl__s.html#a5811606f733e6f1623a5867496c4e166',1,'loader_impl_s']]],

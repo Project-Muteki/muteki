@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: bxc_queue_nonatomic_t Struct Reference</title>
+<title>Muteki: bxc_queue_nonatomic_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -131,74 +139,38 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structbxc__que
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a24e3eb2fe477061d5e3973e5e9e6a83f" id="r_a24e3eb2fe477061d5e3973e5e9e6a83f"><td class="memItemLeft"><a class="el" href="muteki_2threading_8h.html#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a24e3eb2fe477061d5e3973e5e9e6a83f">messages</a></td></tr>
-<tr class="memitem:a86cbf20ed7ea873883076ec17deb6eac" id="r_a86cbf20ed7ea873883076ec17deb6eac"><td class="memItemLeft">unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#a86cbf20ed7ea873883076ec17deb6eac">size</a></td></tr>
-<tr class="memitem:a497455f5b1b9373575ba860a7e2b749b" id="r_a497455f5b1b9373575ba860a7e2b749b"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#a497455f5b1b9373575ba860a7e2b749b">pop_idx</a></td></tr>
-<tr class="memitem:a80530bb4f3567fd67a584657fa130cf6" id="r_a80530bb4f3567fd67a584657fa130cf6"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#a80530bb4f3567fd67a584657fa130cf6">push_idx</a></td></tr>
-<tr class="memitem:a6f91c15cc9b9349addfbb23b572749ab" id="r_a6f91c15cc9b9349addfbb23b572749ab"><td class="memItemLeft"><a id="a6f91c15cc9b9349addfbb23b572749ab" name="a6f91c15cc9b9349addfbb23b572749ab"></a>
-short&#160;</td><td class="memItemRight"><b>_padding_0xa</b></td></tr>
+<tr class="memitem:a24e3eb2fe477061d5e3973e5e9e6a83f" id="r_a24e3eb2fe477061d5e3973e5e9e6a83f"><td class="memItemLeft"><a id="a24e3eb2fe477061d5e3973e5e9e6a83f" name="a24e3eb2fe477061d5e3973e5e9e6a83f"></a>
+<a class="el" href="muteki_2threading_8h.html#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *&#160;</td><td class="memItemRight"><b>messages</b></td></tr>
+<tr class="memdesc:a24e3eb2fe477061d5e3973e5e9e6a83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message body. <br /></td></tr>
+<tr class="memitem:a86cbf20ed7ea873883076ec17deb6eac" id="r_a86cbf20ed7ea873883076ec17deb6eac"><td class="memItemLeft"><a id="a86cbf20ed7ea873883076ec17deb6eac" name="a86cbf20ed7ea873883076ec17deb6eac"></a>
+unsigned short&#160;</td><td class="memItemRight"><b>size</b></td></tr>
+<tr class="memdesc:a86cbf20ed7ea873883076ec17deb6eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of chunks. <br /></td></tr>
+<tr class="memitem:a497455f5b1b9373575ba860a7e2b749b" id="r_a497455f5b1b9373575ba860a7e2b749b"><td class="memItemLeft"><a id="a497455f5b1b9373575ba860a7e2b749b" name="a497455f5b1b9373575ba860a7e2b749b"></a>
+short&#160;</td><td class="memItemRight"><b>pop_idx</b></td></tr>
+<tr class="memdesc:a497455f5b1b9373575ba860a7e2b749b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop index. <br /></td></tr>
+<tr class="memitem:a80530bb4f3567fd67a584657fa130cf6" id="r_a80530bb4f3567fd67a584657fa130cf6"><td class="memItemLeft"><a id="a80530bb4f3567fd67a584657fa130cf6" name="a80530bb4f3567fd67a584657fa130cf6"></a>
+short&#160;</td><td class="memItemRight"><b>push_idx</b></td></tr>
+<tr class="memdesc:a80530bb4f3567fd67a584657fa130cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push index. <br /></td></tr>
+<tr class="memitem:a6f91c15cc9b9349addfbb23b572749ab" id="r_a6f91c15cc9b9349addfbb23b572749ab"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#a6f91c15cc9b9349addfbb23b572749ab">_padding_0xa</a></td></tr>
+<tr class="memdesc:a6f91c15cc9b9349addfbb23b572749ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Probably padding bytes.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Nonatomic backend storage for message queues. </p>
 <p>Simple ring-buffer-based FIFO queue data structure used internally by message queues. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="a24e3eb2fe477061d5e3973e5e9e6a83f" name="a24e3eb2fe477061d5e3973e5e9e6a83f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24e3eb2fe477061d5e3973e5e9e6a83f">&#9670;&#160;</a></span>messages</h2>
+<a id="a6f91c15cc9b9349addfbb23b572749ab" name="a6f91c15cc9b9349addfbb23b572749ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f91c15cc9b9349addfbb23b572749ab">&#9670;&#160;</a></span>_padding_0xa</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="muteki_2threading_8h.html#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a>* bxc_queue_nonatomic_t::messages</td>
+          <td class="memname">short bxc_queue_nonatomic_t::_padding_0xa</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Message body. </p>
 
-</div>
-</div>
-<a id="a497455f5b1b9373575ba860a7e2b749b" name="a497455f5b1b9373575ba860a7e2b749b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a497455f5b1b9373575ba860a7e2b749b">&#9670;&#160;</a></span>pop_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short bxc_queue_nonatomic_t::pop_idx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pop index. </p>
-
-</div>
-</div>
-<a id="a80530bb4f3567fd67a584657fa130cf6" name="a80530bb4f3567fd67a584657fa130cf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80530bb4f3567fd67a584657fa130cf6">&#9670;&#160;</a></span>push_idx</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short bxc_queue_nonatomic_t::push_idx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Push index. </p>
-
-</div>
-</div>
-<a id="a86cbf20ed7ea873883076ec17deb6eac" name="a86cbf20ed7ea873883076ec17deb6eac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86cbf20ed7ea873883076ec17deb6eac">&#9670;&#160;</a></span>size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned short bxc_queue_nonatomic_t::size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Number of chunks. </p>
+<p>Unknown. Probably padding bytes. </p>
 
 </div>
 </div>

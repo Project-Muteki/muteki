@@ -15,6 +15,12 @@ var muteki_2threading_8h =
     [ "bxc_thread_func_t", "muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47", null ],
     [ "bxc_thread_t", "muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444", null ],
     [ "bxc_wait_result_t", "muteki_2threading_8h.html#a4a0a2a564d40c24115c06a4207c9d82c", null ],
+    [ "bxc_threading_kind_e", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9", [
+      [ "BXC_THREADING_KIND_THREAD", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9a58d7110ff176528c4f69702d0bb0feec", null ],
+      [ "BXC_THREADING_KIND_SEMAPHORE", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9a5a231062be324a68818b16fc66224be4", null ],
+      [ "BXC_THREADING_KIND_EVENT", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9a9eb77188a5ecbd83443dc1909a67b6db", null ],
+      [ "BXC_THREADING_KIND_CS_QUEUE", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9af5c316a7ce99bbaa5a7088e5f1d4a246", null ]
+    ] ],
     [ "bxc_wait_reason_e", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1ce", [
       [ "BXC_WAIT_ON_NONE", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea1e243e0a8252d2fd55afd3db97ed79dd", null ],
       [ "BXC_WAIT_ON_SEMAPHORE", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1ceab6965953d6a92836c4666c3a174f90b9", null ],
@@ -22,7 +28,8 @@ var muteki_2threading_8h =
       [ "BXC_WAIT_ON_QUEUE", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea8bd02804c2f4a6e51bd0767648aa1bfe", null ],
       [ "BXC_WAIT_ON_SUSPEND", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea1f3fcabf1ad78f340bca3c50a5c964db", null ],
       [ "BXC_WAIT_ON_CRITICAL_SECTION", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea977282163c1d6e436755f609c171c011", null ],
-      [ "BXC_WAIT_ON_SLEEP", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688", null ]
+      [ "BXC_WAIT_ON_SLEEP", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688", null ],
+      [ "BXC_WAIT_ON_YIELD", "muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364", null ]
     ] ],
     [ "bxc_wait_result_e", "muteki_2threading_8h.html#a127deb504a9a816dafcd229ad9eb9938", [
       [ "BXC_WAIT_RESULT_TIMEOUT", "muteki_2threading_8h.html#a127deb504a9a816dafcd229ad9eb9938a59715d80bfa50114e5d2f8c8f7cfbd94", null ],
@@ -52,7 +59,7 @@ var muteki_2threading_8h =
     [ "OSSendMsgQue", "muteki_2threading_8h.html#ac8e39224f020db90833e0c698eade40e", null ],
     [ "OSSetEvent", "muteki_2threading_8h.html#a53decae74da8186477aec2dad10edfdf", null ],
     [ "OSSetThreadPriority", "muteki_2threading_8h.html#ab8d5a01a1939264bfcfabf10efb984aa", null ],
-    [ "OSSleep", "muteki_2threading_8h.html#a38cd8aa045ddfeee2321b7199d7b0e50", null ],
+    [ "OSSleep", "muteki_2threading_8h.html#a48b1ee1c72f426c4c1544946f67ce47a", null ],
     [ "OSSuspendThread", "muteki_2threading_8h.html#a10f8613f2303d93cd8ec7cd1ce624f31", null ],
     [ "OSTerminateThread", "muteki_2threading_8h.html#a2910f65aced79170e1e10a26c9052290", null ],
     [ "OSWaitForEvent", "muteki_2threading_8h.html#a96961b9f0c368568851a6f615b44e84b", null ],

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: bxc_thread_s Struct Reference</title>
+<title>Muteki: bxc_thread_s Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -136,76 +144,60 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a6265d5ca179c99abe8f1e03d46f26cec" id="r_a6265d5ca179c99abe8f1e03d46f26cec"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6265d5ca179c99abe8f1e03d46f26cec">magic</a></td></tr>
+<tr class="memdesc:a6265d5ca179c99abe8f1e03d46f26cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic. Always <span class="tt">0x100</span>.  <br /></td></tr>
 <tr class="memitem:ae21e6ccebb4860b7e5e24153f9df256a" id="r_ae21e6ccebb4860b7e5e24153f9df256a"><td class="memItemLeft">uintptr_t *&#160;</td><td class="memItemRight"><a class="el" href="#ae21e6ccebb4860b7e5e24153f9df256a">sp</a></td></tr>
-<tr class="memitem:acfec2eac76edda59ca885f4f760790d5" id="r_acfec2eac76edda59ca885f4f760790d5"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#acfec2eac76edda59ca885f4f760790d5">stack</a></td></tr>
-<tr class="memitem:a74c6fb6d0e9d50e1840fdf8bae533509" id="r_a74c6fb6d0e9d50e1840fdf8bae533509"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a74c6fb6d0e9d50e1840fdf8bae533509">exit_code</a></td></tr>
-<tr class="memitem:ad057a872f6c784d20e0e1b4e87ed89bb" id="r_ad057a872f6c784d20e0e1b4e87ed89bb"><td class="memItemLeft"><a class="el" href="errno_8h.html#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad057a872f6c784d20e0e1b4e87ed89bb">kerrno</a></td></tr>
-<tr class="memitem:aaf248d0b0db59e9622099c345a67c0b3" id="r_aaf248d0b0db59e9622099c345a67c0b3"><td class="memItemLeft">uintptr_t&#160;</td><td class="memItemRight"><a class="el" href="#aaf248d0b0db59e9622099c345a67c0b3">unk_0x14</a></td></tr>
-<tr class="memitem:a9b71ef3ac4a60d8b67842a096c0a8884" id="r_a9b71ef3ac4a60d8b67842a096c0a8884"><td class="memItemLeft"><a class="el" href="muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47">bxc_thread_func_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b71ef3ac4a60d8b67842a096c0a8884">thread_func</a></td></tr>
+<tr class="memdesc:ae21e6ccebb4860b7e5e24153f9df256a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack pointer.  <br /></td></tr>
+<tr class="memitem:acfec2eac76edda59ca885f4f760790d5" id="r_acfec2eac76edda59ca885f4f760790d5"><td class="memItemLeft"><a id="acfec2eac76edda59ca885f4f760790d5" name="acfec2eac76edda59ca885f4f760790d5"></a>
+void *&#160;</td><td class="memItemRight"><b>stack</b></td></tr>
+<tr class="memdesc:acfec2eac76edda59ca885f4f760790d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated stack memory. <br /></td></tr>
+<tr class="memitem:a74c6fb6d0e9d50e1840fdf8bae533509" id="r_a74c6fb6d0e9d50e1840fdf8bae533509"><td class="memItemLeft"><a id="a74c6fb6d0e9d50e1840fdf8bae533509" name="a74c6fb6d0e9d50e1840fdf8bae533509"></a>
+int&#160;</td><td class="memItemRight"><b>exit_code</b></td></tr>
+<tr class="memdesc:a74c6fb6d0e9d50e1840fdf8bae533509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit code of the thread. Initializes to 0. <br /></td></tr>
+<tr class="memitem:ad057a872f6c784d20e0e1b4e87ed89bb" id="r_ad057a872f6c784d20e0e1b4e87ed89bb"><td class="memItemLeft"><a id="ad057a872f6c784d20e0e1b4e87ed89bb" name="ad057a872f6c784d20e0e1b4e87ed89bb"></a>
+<a class="el" href="errno_8h.html#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a>&#160;</td><td class="memItemRight"><b>kerrno</b></td></tr>
+<tr class="memdesc:ad057a872f6c784d20e0e1b4e87ed89bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code. <br /></td></tr>
+<tr class="memitem:aaf248d0b0db59e9622099c345a67c0b3" id="r_aaf248d0b0db59e9622099c345a67c0b3"><td class="memItemLeft"><a id="aaf248d0b0db59e9622099c345a67c0b3" name="aaf248d0b0db59e9622099c345a67c0b3"></a>
+uintptr_t&#160;</td><td class="memItemRight"><b>unk_0x14</b></td></tr>
+<tr class="memdesc:aaf248d0b0db59e9622099c345a67c0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Initializes to 0x80000000. <br /></td></tr>
+<tr class="memitem:a9b71ef3ac4a60d8b67842a096c0a8884" id="r_a9b71ef3ac4a60d8b67842a096c0a8884"><td class="memItemLeft"><a id="a9b71ef3ac4a60d8b67842a096c0a8884" name="a9b71ef3ac4a60d8b67842a096c0a8884"></a>
+<a class="el" href="muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47">bxc_thread_func_t</a>&#160;</td><td class="memItemRight"><b>thread_func</b></td></tr>
+<tr class="memdesc:a9b71ef3ac4a60d8b67842a096c0a8884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function entrypoint. <br /></td></tr>
 <tr class="memitem:ae25bb00952156a638871aaf3961e644f" id="r_ae25bb00952156a638871aaf3961e644f"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ae25bb00952156a638871aaf3961e644f">timeout</a></td></tr>
-<tr class="memdesc:ae25bb00952156a638871aaf3961e644f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread execution timeout in number of scheduler ticks.  <br /></td></tr>
+<tr class="memdesc:ae25bb00952156a638871aaf3961e644f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread execution timeout in number of scheduler <b>ticks</b>.  <br /></td></tr>
 <tr class="memitem:ae881bd296e9589be684c0a80b6edd971" id="r_ae881bd296e9589be684c0a80b6edd971"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ae881bd296e9589be684c0a80b6edd971">sleep_counter</a></td></tr>
-<tr class="memdesc:ae881bd296e9589be684c0a80b6edd971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scheduler ticks left to sleep.  <br /></td></tr>
+<tr class="memdesc:ae881bd296e9589be684c0a80b6edd971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of scheduler <b>time units</b> left to sleep.  <br /></td></tr>
 <tr class="memitem:ac990383b0315eef960a75f331e75b98a" id="r_ac990383b0315eef960a75f331e75b98a"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#ac990383b0315eef960a75f331e75b98a">wait_reason</a></td></tr>
-<tr class="memitem:a1842b7c83e814efe71f40921b3c289e0" id="r_a1842b7c83e814efe71f40921b3c289e0"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#a1842b7c83e814efe71f40921b3c289e0">slot</a></td></tr>
-<tr class="memitem:aecf67c08dbee2373077dd7d1f75632b6" id="r_aecf67c08dbee2373077dd7d1f75632b6"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#aecf67c08dbee2373077dd7d1f75632b6">slot_low3b</a></td></tr>
-<tr class="memitem:ab610f2c517b3500e67bd14f87c58a4c0" id="r_ab610f2c517b3500e67bd14f87c58a4c0"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#ab610f2c517b3500e67bd14f87c58a4c0">slot_high3b</a></td></tr>
-<tr class="memitem:a1f7b276614bf67ca8fe12cd35caff9d1" id="r_a1f7b276614bf67ca8fe12cd35caff9d1"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a1f7b276614bf67ca8fe12cd35caff9d1">slot_low3b_bit</a></td></tr>
-<tr class="memitem:ad3fd508427f328d56becccb59b38da59" id="r_ad3fd508427f328d56becccb59b38da59"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#ad3fd508427f328d56becccb59b38da59">slot_high3b_bit</a></td></tr>
-<tr class="memitem:a3afabc40fbf319fe12396018d198a587" id="r_a3afabc40fbf319fe12396018d198a587"><td class="memItemLeft"><a class="el" href="muteki_2threading_8h.html#a0bb8ff1a8a966ad59153f937cda6dccc">bxc_event_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3afabc40fbf319fe12396018d198a587">event</a></td></tr>
-<tr class="memitem:a339ad95901fc2720f474aba679c821fc" id="r_a339ad95901fc2720f474aba679c821fc"><td class="memItemLeft"><a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a339ad95901fc2720f474aba679c821fc">prev</a></td></tr>
-<tr class="memitem:a78b55b75f5310fbc49130ec5d6cdf14e" id="r_a78b55b75f5310fbc49130ec5d6cdf14e"><td class="memItemLeft"><a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a78b55b75f5310fbc49130ec5d6cdf14e">next</a></td></tr>
+<tr class="memdesc:ac990383b0315eef960a75f331e75b98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current wait reason of the thread.  <br /></td></tr>
+<tr class="memitem:a1842b7c83e814efe71f40921b3c289e0" id="r_a1842b7c83e814efe71f40921b3c289e0"><td class="memItemLeft"><a id="a1842b7c83e814efe71f40921b3c289e0" name="a1842b7c83e814efe71f40921b3c289e0"></a>
+short&#160;</td><td class="memItemRight"><b>slot</b></td></tr>
+<tr class="memdesc:a1842b7c83e814efe71f40921b3c289e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot number. For scheduler. <br /></td></tr>
+<tr class="memitem:aecf67c08dbee2373077dd7d1f75632b6" id="r_aecf67c08dbee2373077dd7d1f75632b6"><td class="memItemLeft"><a id="aecf67c08dbee2373077dd7d1f75632b6" name="aecf67c08dbee2373077dd7d1f75632b6"></a>
+char&#160;</td><td class="memItemRight"><b>slot_low3b</b></td></tr>
+<tr class="memdesc:aecf67c08dbee2373077dd7d1f75632b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower 3 bit of the slot number. For scheduler. <br /></td></tr>
+<tr class="memitem:ab610f2c517b3500e67bd14f87c58a4c0" id="r_ab610f2c517b3500e67bd14f87c58a4c0"><td class="memItemLeft"><a id="ab610f2c517b3500e67bd14f87c58a4c0" name="ab610f2c517b3500e67bd14f87c58a4c0"></a>
+char&#160;</td><td class="memItemRight"><b>slot_high3b</b></td></tr>
+<tr class="memdesc:ab610f2c517b3500e67bd14f87c58a4c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper 3 bit of the slot number. For scheduler. <br /></td></tr>
+<tr class="memitem:a1f7b276614bf67ca8fe12cd35caff9d1" id="r_a1f7b276614bf67ca8fe12cd35caff9d1"><td class="memItemLeft"><a id="a1f7b276614bf67ca8fe12cd35caff9d1" name="a1f7b276614bf67ca8fe12cd35caff9d1"></a>
+unsigned char&#160;</td><td class="memItemRight"><b>slot_low3b_bit</b></td></tr>
+<tr class="memdesc:a1f7b276614bf67ca8fe12cd35caff9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower 3 bit bitmask of the slot number. For scheduler. <br /></td></tr>
+<tr class="memitem:ad3fd508427f328d56becccb59b38da59" id="r_ad3fd508427f328d56becccb59b38da59"><td class="memItemLeft"><a id="ad3fd508427f328d56becccb59b38da59" name="ad3fd508427f328d56becccb59b38da59"></a>
+unsigned char&#160;</td><td class="memItemRight"><b>slot_high3b_bit</b></td></tr>
+<tr class="memdesc:ad3fd508427f328d56becccb59b38da59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper 3 bit bitmask of the slot number. For scheduler. <br /></td></tr>
+<tr class="memitem:a3afabc40fbf319fe12396018d198a587" id="r_a3afabc40fbf319fe12396018d198a587"><td class="memItemLeft"><a id="a3afabc40fbf319fe12396018d198a587" name="a3afabc40fbf319fe12396018d198a587"></a>
+<a class="el" href="muteki_2threading_8h.html#a0bb8ff1a8a966ad59153f937cda6dccc">bxc_event_t</a> *&#160;</td><td class="memItemRight"><b>event</b></td></tr>
+<tr class="memdesc:a3afabc40fbf319fe12396018d198a587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event descriptor that the thread is waiting for. <br /></td></tr>
+<tr class="memitem:a339ad95901fc2720f474aba679c821fc" id="r_a339ad95901fc2720f474aba679c821fc"><td class="memItemLeft"><a id="a339ad95901fc2720f474aba679c821fc" name="a339ad95901fc2720f474aba679c821fc"></a>
+<a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a> *&#160;</td><td class="memItemRight"><b>prev</b></td></tr>
+<tr class="memdesc:a339ad95901fc2720f474aba679c821fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Previous thread descriptor. <br /></td></tr>
+<tr class="memitem:a78b55b75f5310fbc49130ec5d6cdf14e" id="r_a78b55b75f5310fbc49130ec5d6cdf14e"><td class="memItemLeft"><a id="a78b55b75f5310fbc49130ec5d6cdf14e" name="a78b55b75f5310fbc49130ec5d6cdf14e"></a>
+<a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a> *&#160;</td><td class="memItemRight"><b>next</b></td></tr>
+<tr class="memdesc:a78b55b75f5310fbc49130ec5d6cdf14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next thread descriptor. <br /></td></tr>
 <tr class="memitem:"><td class="memItemLeft"><a id="ae841993562928d905f38fe86d940e3d2" name="ae841993562928d905f38fe86d940e3d2"></a>
 <a class="el" href="unionbxc__thread__s_1_1_0funion_0e_8____unnamed0____.html">union </a>&#160;</td><td class="memItemRight"></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thread descriptor structure. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="a3afabc40fbf319fe12396018d198a587" name="a3afabc40fbf319fe12396018d198a587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3afabc40fbf319fe12396018d198a587">&#9670;&#160;</a></span>event</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="muteki_2threading_8h.html#a0bb8ff1a8a966ad59153f937cda6dccc">bxc_event_t</a>* bxc_thread_s::event</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Event descriptor that belongs to the event the thread is currently waiting for. </p>
-
-</div>
-</div>
-<a id="a74c6fb6d0e9d50e1840fdf8bae533509" name="a74c6fb6d0e9d50e1840fdf8bae533509"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74c6fb6d0e9d50e1840fdf8bae533509">&#9670;&#160;</a></span>exit_code</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int bxc_thread_s::exit_code</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Exit code of the thread. Initializes to 0. </p>
-
-</div>
-</div>
-<a id="ad057a872f6c784d20e0e1b4e87ed89bb" name="ad057a872f6c784d20e0e1b4e87ed89bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad057a872f6c784d20e0e1b4e87ed89bb">&#9670;&#160;</a></span>kerrno</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="errno_8h.html#aaedc1536c3d6c7fc84d086d63bd3c35a">bxc_errno_t</a> bxc_thread_s::kerrno</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Error code. </p>
-
-</div>
-</div>
 <a id="a6265d5ca179c99abe8f1e03d46f26cec" name="a6265d5ca179c99abe8f1e03d46f26cec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6265d5ca179c99abe8f1e03d46f26cec">&#9670;&#160;</a></span>magic</h2>
 
@@ -217,37 +209,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Magic. Always <span class="tt">0x100</span>. </p>
-
-</div>
-</div>
-<a id="a78b55b75f5310fbc49130ec5d6cdf14e" name="a78b55b75f5310fbc49130ec5d6cdf14e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78b55b75f5310fbc49130ec5d6cdf14e">&#9670;&#160;</a></span>next</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a>* bxc_thread_s::next</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Next thread descriptor. </p>
-
-</div>
-</div>
-<a id="a339ad95901fc2720f474aba679c821fc" name="a339ad95901fc2720f474aba679c821fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a339ad95901fc2720f474aba679c821fc">&#9670;&#160;</a></span>prev</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444">bxc_thread_t</a>* bxc_thread_s::prev</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Previous thread descriptor. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9" title="Runtime threading descriptor kind code.">bxc_threading_kind_e</a> </dd></dl>
 
 </div>
 </div>
@@ -263,83 +227,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Scheduler ticks left to sleep. </p>
-<p>This value is populated by <a class="el" href="muteki_2threading_8h.html#a38cd8aa045ddfeee2321b7199d7b0e50" title="Sleep for amount of ticks .">OSSleep()</a> when the <span class="tt">ticks</span> parameter is bigger than 0. </p>
-
-</div>
-</div>
-<a id="a1842b7c83e814efe71f40921b3c289e0" name="a1842b7c83e814efe71f40921b3c289e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1842b7c83e814efe71f40921b3c289e0">&#9670;&#160;</a></span>slot</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short bxc_thread_s::slot</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Slot number. For scheduler. </p>
-
-</div>
-</div>
-<a id="ab610f2c517b3500e67bd14f87c58a4c0" name="ab610f2c517b3500e67bd14f87c58a4c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab610f2c517b3500e67bd14f87c58a4c0">&#9670;&#160;</a></span>slot_high3b</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char bxc_thread_s::slot_high3b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Upper 3 bit of the slot number. For scheduler. </p>
-
-</div>
-</div>
-<a id="ad3fd508427f328d56becccb59b38da59" name="ad3fd508427f328d56becccb59b38da59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3fd508427f328d56becccb59b38da59">&#9670;&#160;</a></span>slot_high3b_bit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char bxc_thread_s::slot_high3b_bit</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Upper 3 bit bitmask of the slot number. For scheduler. </p>
-
-</div>
-</div>
-<a id="aecf67c08dbee2373077dd7d1f75632b6" name="aecf67c08dbee2373077dd7d1f75632b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecf67c08dbee2373077dd7d1f75632b6">&#9670;&#160;</a></span>slot_low3b</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char bxc_thread_s::slot_low3b</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Lower 3 bit of the slot number. For scheduler. </p>
-
-</div>
-</div>
-<a id="a1f7b276614bf67ca8fe12cd35caff9d1" name="a1f7b276614bf67ca8fe12cd35caff9d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f7b276614bf67ca8fe12cd35caff9d1">&#9670;&#160;</a></span>slot_low3b_bit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char bxc_thread_s::slot_low3b_bit</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Lower 3 bit bitmask of the slot number. For scheduler. </p>
+<p>Number of scheduler <b>time units</b> left to sleep. </p>
+<p>This value is populated by <a class="el" href="muteki_2threading_8h.html#a48b1ee1c72f426c4c1544946f67ce47a" title="Sleep for number of scheduler time_units .">OSSleep()</a> when the <span class="tt">time_units</span> parameter is bigger than 0. </p>
 
 </div>
 </div>
@@ -354,37 +243,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stack pointer. When the thread is suspended this will point to the CPU context saved on thread stack. </p>
 
-</div>
-</div>
-<a id="acfec2eac76edda59ca885f4f760790d5" name="acfec2eac76edda59ca885f4f760790d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfec2eac76edda59ca885f4f760790d5">&#9670;&#160;</a></span>stack</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* bxc_thread_s::stack</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Allocated stack memory. </p>
-
-</div>
-</div>
-<a id="a9b71ef3ac4a60d8b67842a096c0a8884" name="a9b71ef3ac4a60d8b67842a096c0a8884"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b71ef3ac4a60d8b67842a096c0a8884">&#9670;&#160;</a></span>thread_func</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47">bxc_thread_func_t</a> bxc_thread_s::thread_func</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Thread function entrypoint. </p>
+<p>Stack pointer. </p>
+<p>When the thread is suspended this will point to the CPU context saved on thread stack. </p>
 
 </div>
 </div>
@@ -400,23 +261,8 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Thread execution timeout in number of scheduler ticks. </p>
-<p>This value is initialized by the scheduler with a value that is inverse proportional to the slot number, meaning higher priority threads have longer timeouts. This value ticks down every scheduler tick that the thread is not spent sleeping. When the timeout reaches 0, the thread gets put into sleep (adding <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688">BXC_WAIT_ON_SLEEP</a> to <a class="el" href="#ac990383b0315eef960a75f331e75b98a">bxc_thread_t::wait_reason</a>) with the <a class="el" href="#ae881bd296e9589be684c0a80b6edd971" title="Scheduler ticks left to sleep.">bxc_thread_t::sleep_counter</a> value set to 0 (meaning that the thread is yielded, lower priority thread will be executed next, and the thread will be active again after the lower priority thread yields or finishes executing). In cases of a thread wake or when scheduler enters idle condition, this value may also be reset. </p>
-
-</div>
-</div>
-<a id="aaf248d0b0db59e9622099c345a67c0b3" name="aaf248d0b0db59e9622099c345a67c0b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf248d0b0db59e9622099c345a67c0b3">&#9670;&#160;</a></span>unk_0x14</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uintptr_t bxc_thread_s::unk_0x14</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Unknown. Initializes to 0x80000000. </p>
+<p>Thread execution timeout in number of scheduler <b>ticks</b>. </p>
+<p>This value is initialized by the scheduler with a value that is inverse proportional to the slot number, meaning higher priority threads have longer timeouts. This value ticks down every scheduler tick that the thread is not spent sleeping. When the timeout reaches 0, the thread is "timed out" and gets put into sleep (adding <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688" title="Deprecated name of BXC_WAIT_ON_TIMEOUT.">BXC_WAIT_ON_SLEEP</a> to <a class="el" href="#ac990383b0315eef960a75f331e75b98a" title="Current wait reason of the thread.">bxc_thread_t::wait_reason</a>) with the <a class="el" href="#ae881bd296e9589be684c0a80b6edd971" title="Number of scheduler time units left to sleep.">bxc_thread_t::sleep_counter</a> value set to 0 (meaning that the thread is yielded, and lower priority thread will be executed next). In cases of a thread wake or when scheduler enters idle condition, this value may also be reset. </p>
 
 </div>
 </div>
@@ -431,7 +277,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Current wait reason of the thread. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1ce" title="Thread wait reason enum.">bxc_wait_reason_e</a> </dd></dl>
+
+<p>Current wait reason of the thread. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1ce" title="Thread wait reason enum.">bxc_wait_reason_e</a> </dd></dl>
 
 </div>
 </div>

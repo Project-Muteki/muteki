@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: include/muteki/threading.h File Reference</title>
+<title>Muteki: include/muteki/threading.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -185,9 +193,16 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#a11b9b432e00953d99375c193b5b7c1cea1f3fcabf1ad78f340bca3c50a5c964db">BXC_WAIT_ON_SUSPEND</a> = 0x8
 , <a class="el" href="#a11b9b432e00953d99375c193b5b7c1cea977282163c1d6e436755f609c171c011">BXC_WAIT_ON_CRITICAL_SECTION</a> = 0x10
 , <a class="el" href="#a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688">BXC_WAIT_ON_SLEEP</a> = 0x20
+, <a class="el" href="#a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364">BXC_WAIT_ON_YIELD</a> = 0x20
 <br />
  }</td></tr>
 <tr class="memdesc:a11b9b432e00953d99375c193b5b7c1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread wait reason enum.  <a href="#a11b9b432e00953d99375c193b5b7c1ce">More...</a><br /></td></tr>
+<tr class="memitem:a53bff2beb9a73ca176fed5c650606ea9" id="r_a53bff2beb9a73ca176fed5c650606ea9"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a53bff2beb9a73ca176fed5c650606ea9">bxc_threading_kind_e</a> { <a class="el" href="#a53bff2beb9a73ca176fed5c650606ea9a58d7110ff176528c4f69702d0bb0feec">BXC_THREADING_KIND_THREAD</a> = 0x100
+, <a class="el" href="#a53bff2beb9a73ca176fed5c650606ea9a5a231062be324a68818b16fc66224be4">BXC_THREADING_KIND_SEMAPHORE</a> = 0x200
+, <a class="el" href="#a53bff2beb9a73ca176fed5c650606ea9a9eb77188a5ecbd83443dc1909a67b6db">BXC_THREADING_KIND_EVENT</a> = 0x201
+, <a class="el" href="#a53bff2beb9a73ca176fed5c650606ea9af5c316a7ce99bbaa5a7088e5f1d4a246">BXC_THREADING_KIND_CS_QUEUE</a> = 0x202
+ }</td></tr>
+<tr class="memdesc:a53bff2beb9a73ca176fed5c650606ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime threading descriptor kind code.  <a href="#a53bff2beb9a73ca176fed5c650606ea9">More...</a><br /></td></tr>
 <tr class="memitem:a127deb504a9a816dafcd229ad9eb9938" id="r_a127deb504a9a816dafcd229ad9eb9938"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a127deb504a9a816dafcd229ad9eb9938">bxc_wait_result_e</a> { <a class="el" href="#a127deb504a9a816dafcd229ad9eb9938a59715d80bfa50114e5d2f8c8f7cfbd94">BXC_WAIT_RESULT_TIMEOUT</a> = 0x82
 , <a class="el" href="#a127deb504a9a816dafcd229ad9eb9938a67c612437f5b110f51b6f3c771bb4a32">BXC_WAIT_RESULT_RESOLVED</a>
 , <a class="el" href="#a127deb504a9a816dafcd229ad9eb9938a040e450cbccb9257a7f9764b6b4454de">BXC_WAIT_RESULT_ERROR</a>
@@ -212,8 +227,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae12d90e8f71733554afd3e4f691da1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force wake up a sleeping thread.  <br /></td></tr>
 <tr class="memitem:af11dbf56f12f0f049d6d1dc061bf7e83" id="r_af11dbf56f12f0f049d6d1dc061bf7e83"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#af11dbf56f12f0f049d6d1dc061bf7e83">OSExitThread</a> (int exit_code)</td></tr>
 <tr class="memdesc:af11dbf56f12f0f049d6d1dc061bf7e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate current thread.  <br /></td></tr>
-<tr class="memitem:a38cd8aa045ddfeee2321b7199d7b0e50" id="r_a38cd8aa045ddfeee2321b7199d7b0e50"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a38cd8aa045ddfeee2321b7199d7b0e50">OSSleep</a> (short ticks)</td></tr>
-<tr class="memdesc:a38cd8aa045ddfeee2321b7199d7b0e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for amount of <code class="param">ticks</code> .  <br /></td></tr>
+<tr class="memitem:a48b1ee1c72f426c4c1544946f67ce47a" id="r_a48b1ee1c72f426c4c1544946f67ce47a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a48b1ee1c72f426c4c1544946f67ce47a">OSSleep</a> (short time_units)</td></tr>
+<tr class="memdesc:a48b1ee1c72f426c4c1544946f67ce47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for number of scheduler <code class="param">time_units</code> .  <br /></td></tr>
 <tr class="memitem:a615941cc70bf151d0ce625c84311ecbb" id="r_a615941cc70bf151d0ce625c84311ecbb"><td class="memItemLeft"><a class="el" href="#aa26f97777c14615ae185184b44d39f33">bxc_semaphore_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a615941cc70bf151d0ce625c84311ecbb">OSCreateSemaphore</a> (short init_ctr)</td></tr>
 <tr class="memdesc:a615941cc70bf151d0ce625c84311ecbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an semaphore descriptor.  <br /></td></tr>
 <tr class="memitem:aa503a58023c7ba0d8bc8f8bc3533ce3e" id="r_aa503a58023c7ba0d8bc8f8bc3533ce3e"><td class="memItemLeft"><a class="el" href="#a4a0a2a564d40c24115c06a4207c9d82c">bxc_wait_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa503a58023c7ba0d8bc8f8bc3533ce3e">OSWaitForSemaphore</a> (<a class="el" href="#aa26f97777c14615ae185184b44d39f33">bxc_semaphore_t</a> *semaphore, short timeout)</td></tr>
@@ -276,6 +291,32 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a id="a53bff2beb9a73ca176fed5c650606ea9" name="a53bff2beb9a73ca176fed5c650606ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53bff2beb9a73ca176fed5c650606ea9">&#9670;&#160;</a></span>bxc_threading_kind_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a53bff2beb9a73ca176fed5c650606ea9">bxc_threading_kind_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runtime threading descriptor kind code. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a53bff2beb9a73ca176fed5c650606ea9a58d7110ff176528c4f69702d0bb0feec" name="a53bff2beb9a73ca176fed5c650606ea9a58d7110ff176528c4f69702d0bb0feec"></a>BXC_THREADING_KIND_THREAD&#160;</td><td class="fielddoc"><p>Thread. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a53bff2beb9a73ca176fed5c650606ea9a5a231062be324a68818b16fc66224be4" name="a53bff2beb9a73ca176fed5c650606ea9a5a231062be324a68818b16fc66224be4"></a>BXC_THREADING_KIND_SEMAPHORE&#160;</td><td class="fielddoc"><p>Semaphore. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a53bff2beb9a73ca176fed5c650606ea9a9eb77188a5ecbd83443dc1909a67b6db" name="a53bff2beb9a73ca176fed5c650606ea9a9eb77188a5ecbd83443dc1909a67b6db"></a>BXC_THREADING_KIND_EVENT&#160;</td><td class="fielddoc"><p>Event. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a53bff2beb9a73ca176fed5c650606ea9af5c316a7ce99bbaa5a7088e5f1d4a246" name="a53bff2beb9a73ca176fed5c650606ea9af5c316a7ce99bbaa5a7088e5f1d4a246"></a>BXC_THREADING_KIND_CS_QUEUE&#160;</td><td class="fielddoc"><p>Critical section or queue. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="a11b9b432e00953d99375c193b5b7c1ce" name="a11b9b432e00953d99375c193b5b7c1ce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11b9b432e00953d99375c193b5b7c1ce">&#9670;&#160;</a></span>bxc_wait_reason_e</h2>
 
@@ -290,7 +331,7 @@ Functions</h2></td></tr>
 
 <p>Thread wait reason enum. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1cea1e243e0a8252d2fd55afd3db97ed79dd" name="a11b9b432e00953d99375c193b5b7c1cea1e243e0a8252d2fd55afd3db97ed79dd"></a>BXC_WAIT_ON_NONE&#160;</td><td class="fielddoc"><p>Nothing </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1cea1e243e0a8252d2fd55afd3db97ed79dd" name="a11b9b432e00953d99375c193b5b7c1cea1e243e0a8252d2fd55afd3db97ed79dd"></a>BXC_WAIT_ON_NONE&#160;</td><td class="fielddoc"><p>Nothing. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1ceab6965953d6a92836c4666c3a174f90b9" name="a11b9b432e00953d99375c193b5b7c1ceab6965953d6a92836c4666c3a174f90b9"></a>BXC_WAIT_ON_SEMAPHORE&#160;</td><td class="fielddoc"><p>Waiting on a semaphore. </p>
 </td></tr>
@@ -302,7 +343,11 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1cea977282163c1d6e436755f609c171c011" name="a11b9b432e00953d99375c193b5b7c1cea977282163c1d6e436755f609c171c011"></a>BXC_WAIT_ON_CRITICAL_SECTION&#160;</td><td class="fielddoc"><p>Waiting for a critical section to be released. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688" name="a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688"></a>BXC_WAIT_ON_SLEEP&#160;</td><td class="fielddoc"><p>Waiting for sleep counter to expire. </p>
+<tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688" name="a11b9b432e00953d99375c193b5b7c1cea7fbe704312e2ffa7cd7ddb7dd712c688"></a>BXC_WAIT_ON_SLEEP&#160;</td><td class="fielddoc"><p>Deprecated name of ::BXC_WAIT_ON_TIMEOUT. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated</a></b></dt><dd></dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a id="a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364" name="a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364"></a>BXC_WAIT_ON_YIELD&#160;</td><td class="fielddoc"><p>Waiting to take back control after a yield/timeout. </p>
+<p>This can either mean the thread has yielded voluntarily by calling OSSleep(0) from itself, or that the thread execution is temporarily on hold because it has timed out. </p>
 </td></tr>
 </table>
 
@@ -1272,8 +1317,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a38cd8aa045ddfeee2321b7199d7b0e50" name="a38cd8aa045ddfeee2321b7199d7b0e50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38cd8aa045ddfeee2321b7199d7b0e50">&#9670;&#160;</a></span>OSSleep()</h2>
+<a id="a48b1ee1c72f426c4c1544946f67ce47a" name="a48b1ee1c72f426c4c1544946f67ce47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b1ee1c72f426c4c1544946f67ce47a">&#9670;&#160;</a></span>OSSleep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1284,7 +1329,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void OSSleep </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ticks</em></span></td><td>)</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>time_units</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1295,12 +1340,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sleep for amount of <code class="param">ticks</code> . </p>
-<p>A tick is typically 1ms on Besta RTOS, but this could fluctuate in practice.</p>
-<p>If <code class="param">ticks</code> is 0, the current thread's <a class="el" href="structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f" title="Thread execution timeout in number of scheduler ticks.">bxc_thread_t::timeout</a> value will be set to 0, causing the current thread to immediately yield. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10008</span> </dd></dl>
+<p>Sleep for number of scheduler <code class="param">time_units</code> . </p>
+<p>A time unit is typically around 1ms on Besta RTOS, but this could fluctuate in practice.</p>
+<p>When <code class="param">time_units</code> is set to 0, the current thread will yield (voluntarily put itself into the "timed out" state) by clearing the <a class="el" href="structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f" title="Thread execution timeout in number of scheduler ticks.">bxc_thread_t::timeout</a> value, and will resume execution after the scheduler goes to idle. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10008</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ticks</td><td>Time to sleep in scheduler ticks.</td></tr>
+    <tr><td class="paramname">time_units</td><td>Time to sleep in scheduler time units.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1426,7 +1471,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>The event context. </td></tr>
-    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#a38cd8aa045ddfeee2321b7199d7b0e50" title="Sleep for amount of ticks .">OSSleep()</a> units. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#a48b1ee1c72f426c4c1544946f67ce47a" title="Sleep for number of scheduler time_units .">OSSleep()</a> units. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1466,7 +1511,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">semaphore</td><td>The semaphore context. </td></tr>
-    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#a38cd8aa045ddfeee2321b7199d7b0e50" title="Sleep for amount of ticks .">OSSleep()</a> units. </td></tr>
+    <tr><td class="paramname">timeout</td><td>Timeout in <a class="el" href="#a48b1ee1c72f426c4c1544946f67ce47a" title="Sleep for number of scheduler time_units .">OSSleep()</a> units. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['syscall_20definitions_20into_20ghidra_0',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]]
+  ['of_20this_20project_0',['Goals of this project',['../md_docs_200-introduction.html#autotoc_md2',1,'']]]
 ];

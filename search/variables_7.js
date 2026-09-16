@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['height_0',['height',['../structfont__info__s.html#af702f86a05fdf06ca8db89922768e324',1,'font_info_s::height'],['../structlcd__base__s.html#ae7ab2f37151f08fe0dc3bd4e919e575b',1,'lcd_base_s::height'],['../structlcd__thread__safe__s.html#a9ee7ef65d19be1983d6596bca18e140a',1,'lcd_thread_safe_s::height'],['../structlcd__surface__s.html#a556c8787def54e4d2844adbf1ee21f5f',1,'lcd_surface_s::height']]],
-  ['help_5ftype_1',['help_type',['../structui__deskbox__s.html#ace36aac227c3a505fc7db971c142fd86',1,'ui_deskbox_s']]],
-  ['horizontal_5fgap_2',['horizontal_gap',['../structui__appview__s.html#a43f7737c775d367b0689a3bc412432b2',1,'ui_appview_s']]],
-  ['horizontal_5fpadding_3',['horizontal_padding',['../structui__button__s.html#ab038ec9fc4278258aa8db18182fe7821',1,'ui_button_s']]],
-  ['hour_4',['hour',['../structbxc__datetime__t.html#a0f86001200b1549f8d0971931fdb1194',1,'bxc_datetime_t']]]
+  ['get_5fmodule_0',['get_module',['../structloader__impl__s.html#a35848490da6e3ab6815378501041e9fb',1,'loader_impl_s']]],
+  ['get_5fmodule_5ffilename_1',['get_module_filename',['../structloader__impl__s.html#a8dc9592d01612ecc9e1f86e997d32e95',1,'loader_impl_s']]],
+  ['get_5fresource_2',['get_resource',['../structloader__impl__s.html#a66059af0a4c5763c9bc3e1c8b1f344bf',1,'loader_impl_s']]],
+  ['grab_5fcount_3',['grab_count',['../structlcd__cursor__s.html#add5ec584db82326ca5743de44f1037ed',1,'lcd_cursor_s']]],
+  ['group_4',['group',['../structui__deskbox__s.html#ada356bf326d2b9d4bce629549c532b12',1,'ui_deskbox_s']]]
 ];

@@ -1,8 +1,20 @@
 var searchData=
 [
-  ['get_5fmodule_0',['get_module',['../structloader__impl__s.html#a35848490da6e3ab6815378501041e9fb',1,'loader_impl_s']]],
-  ['get_5fmodule_5ffilename_1',['get_module_filename',['../structloader__impl__s.html#a8dc9592d01612ecc9e1f86e997d32e95',1,'loader_impl_s']]],
-  ['get_5fresource_2',['get_resource',['../structloader__impl__s.html#a66059af0a4c5763c9bc3e1c8b1f344bf',1,'loader_impl_s']]],
-  ['grab_5fcount_3',['grab_count',['../structlcd__cursor__s.html#add5ec584db82326ca5743de44f1037ed',1,'lcd_cursor_s']]],
-  ['group_4',['group',['../structui__deskbox__s.html#ada356bf326d2b9d4bce629549c532b12',1,'ui_deskbox_s']]]
+  ['feature_5fmasks_0',['feature_masks',['../structid__device__info__s.html#a6b086bff87d1a2548f3123a8988dd2be',1,'id_device_info_s']]],
+  ['fg_5fcolor_1',['fg_color',['../structlcd__draw__s.html#aac8283661770363d205bc9e128e87038',1,'lcd_draw_s']]],
+  ['filename_2',['filename',['../structbxc__find__context__t.html#a0128ee61398a5ebf7868967162a2c18c',1,'bxc_find_context_t']]],
+  ['filename2_5falt_3',['filename2_alt',['../structbxc__find__context__t.html#a0fa22ad2401574df3ab39d940b6cc403',1,'bxc_find_context_t']]],
+  ['filename_5flfn_4',['filename_lfn',['../structbxc__find__context__t.html#a344a877f3d30a0a51d80bf253707715b',1,'bxc_find_context_t']]],
+  ['finger_5fid_5',['finger_id',['../structui__multipress__event__s.html#a608d1ba644c45dfabf4c30f72718987d',1,'ui_multipress_event_s']]],
+  ['first_5fvisible_5fitem_6',['first_visible_item',['../structui__appview__s.html#a79a1d7cae46a4f8a820023fa5a9a5c8c',1,'ui_appview_s']]],
+  ['flag_7',['flag',['../structbxc__event__s.html#a7c4cafaabafce9354b81308b6df7e75e',1,'bxc_event_s']]],
+  ['flags_8',['flags',['../structui__filepicker__context__s.html#a4ba450e7c37329ab7d7c44da244ed980',1,'ui_filepicker_context_s::flags'],['../structui__component__s.html#a49d4083f78cb820481a88c55152f207d',1,'ui_component_s::flags']]],
+  ['flags_5flower_9',['flags_lower',['../structdevio__descriptor__t.html#aaea1952dee4fffe5d0243ccb7c5985dc',1,'devio_descriptor_t']]],
+  ['flags_5fupper_10',['flags_upper',['../structdevio__descriptor__t.html#aa020c984f1c8860f127a3e5a158e2d65',1,'devio_descriptor_t']]],
+  ['font_11',['font',['../structlcd__base__s.html#a14d2356660554039faf3c7a3c991f5e8',1,'lcd_base_s::font'],['../structlcd__thread__safe__s.html#a6b9700b7f90247a689d54dca1ab02fda',1,'lcd_thread_safe_s::font']]],
+  ['font_5ftype_12',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s::font_type'],['../structui__booltextfield__s.html#ad1883b38e1ff844d3732fae5d3f78ba4',1,'ui_booltextfield_s::font_type'],['../structui__static__s.html#af330ccff5fefd3a50f71bf58a7342c87',1,'ui_static_s::font_type']]],
+  ['footprint_13',['footprint',['../structui__component__s.html#abbf53bd0db7ef98f916a1b4c122fd2dc',1,'ui_component_s']]],
+  ['format_14',['format',['../structpcm__config__s.html#a3ba5313aaa2a0d8b9aa0e26409a4d4f4',1,'pcm_config_s']]],
+  ['free_15',['free',['../structbxc__fs__stat__t.html#a5fbeb447c37ce3bcdf85ffb95f0ff1b5',1,'bxc_fs_stat_t']]],
+  ['free_5fkb_16',['free_kb',['../structbxc__fs__stat__t.html#ae13e942f9ad61c3f66fe42acc9e028bd',1,'bxc_fs_stat_t']]]
 ];

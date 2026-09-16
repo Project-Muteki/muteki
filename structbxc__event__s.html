@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: bxc_event_s Struct Reference</title>
+<title>Muteki: bxc_event_s Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -132,28 +140,33 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structbxc__eve
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:abc981955d9b08cb1c454ba3983d03c85" id="r_abc981955d9b08cb1c454ba3983d03c85"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abc981955d9b08cb1c454ba3983d03c85">magic</a></td></tr>
-<tr class="memitem:a7c4cafaabafce9354b81308b6df7e75e" id="r_a7c4cafaabafce9354b81308b6df7e75e"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7c4cafaabafce9354b81308b6df7e75e">flag</a></td></tr>
+<tr class="memdesc:abc981955d9b08cb1c454ba3983d03c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic. Always <span class="tt">0x201</span>.  <br /></td></tr>
+<tr class="memitem:a7c4cafaabafce9354b81308b6df7e75e" id="r_a7c4cafaabafce9354b81308b6df7e75e"><td class="memItemLeft"><a id="a7c4cafaabafce9354b81308b6df7e75e" name="a7c4cafaabafce9354b81308b6df7e75e"></a>
+int&#160;</td><td class="memItemRight"><b>flag</b></td></tr>
+<tr class="memdesc:a7c4cafaabafce9354b81308b6df7e75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag value. 1 is set and 0 is clear. <br /></td></tr>
 <tr class="memitem:acb21f62b6a5fc7d3cc1e66c9b9b03f77" id="r_acb21f62b6a5fc7d3cc1e66c9b9b03f77"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#acb21f62b6a5fc7d3cc1e66c9b9b03f77">latch_on</a></td></tr>
+<tr class="memdesc:acb21f62b6a5fc7d3cc1e66c9b9b03f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Latch on after event wait.  <br /></td></tr>
 <tr class="memitem:aec9b29b63f2ff62b1bbb51d8bf306f99" id="r_aec9b29b63f2ff62b1bbb51d8bf306f99"><td class="memItemLeft"><a class="el" href="structbxc__waitable__t.html">bxc_waitable_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aec9b29b63f2ff62b1bbb51d8bf306f99">wait_state</a></td></tr>
 <tr class="memdesc:aec9b29b63f2ff62b1bbb51d8bf306f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait state of the current event.  <br /></td></tr>
-<tr class="memitem:a42972ab71583177f24ecba105f0031b8" id="r_a42972ab71583177f24ecba105f0031b8"><td class="memItemLeft"><a id="a42972ab71583177f24ecba105f0031b8" name="a42972ab71583177f24ecba105f0031b8"></a>
-char&#160;</td><td class="memItemRight"><b>_padding_0x13</b></td></tr>
+<tr class="memitem:a42972ab71583177f24ecba105f0031b8" id="r_a42972ab71583177f24ecba105f0031b8"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#a42972ab71583177f24ecba105f0031b8">_padding_0x13</a></td></tr>
+<tr class="memdesc:a42972ab71583177f24ecba105f0031b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Probably padding bytes.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Event descriptor structure. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="a7c4cafaabafce9354b81308b6df7e75e" name="a7c4cafaabafce9354b81308b6df7e75e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c4cafaabafce9354b81308b6df7e75e">&#9670;&#160;</a></span>flag</h2>
+<a id="a42972ab71583177f24ecba105f0031b8" name="a42972ab71583177f24ecba105f0031b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42972ab71583177f24ecba105f0031b8">&#9670;&#160;</a></span>_padding_0x13</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int bxc_event_s::flag</td>
+          <td class="memname">char bxc_event_s::_padding_0x13</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flag value. 1 is set and 0 is clear. </p>
+
+<p>Unknown. Probably padding bytes. </p>
 
 </div>
 </div>
@@ -168,6 +181,8 @@ char&#160;</td><td class="memItemRight"><b>_padding_0x13</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Latch on after event wait. </p>
 <p>Set to non-0 will inhibit the event from getting cleared after a <a class="el" href="muteki_2threading_8h.html#a96961b9f0c368568851a6f615b44e84b" title="Wait for an event.">OSWaitForEvent()</a> is resolved. </p>
 
 </div>
@@ -183,7 +198,9 @@ char&#160;</td><td class="memItemRight"><b>_padding_0x13</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>Magic. Always <span class="tt">0x201</span>. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9" title="Runtime threading descriptor kind code.">bxc_threading_kind_e</a> </dd></dl>
 
 </div>
 </div>

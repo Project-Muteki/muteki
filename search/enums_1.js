@@ -6,6 +6,7 @@ var searchData=
   ['bxc_5ferrno_5fuser_5fe_3',['bxc_errno_user_e',['../errno_8h.html#a751f85e790a366d867b818ab8f5ea2fd',1,'errno.h']]],
   ['bxc_5fmessage_5fflags_5fe_4',['bxc_message_flags_e',['../errno_8h.html#a89ea254f551e25be4a7d90f88b1c908c',1,'errno.h']]],
   ['bxc_5fseek_5fwhence_5fe_5',['bxc_seek_whence_e',['../file_8h.html#a4ac8f40c022d4ffdf795fd75e4606b13',1,'file.h']]],
-  ['bxc_5fwait_5freason_5fe_6',['bxc_wait_reason_e',['../muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1ce',1,'threading.h']]],
-  ['bxc_5fwait_5fresult_5fe_7',['bxc_wait_result_e',['../muteki_2threading_8h.html#a127deb504a9a816dafcd229ad9eb9938',1,'threading.h']]]
+  ['bxc_5fthreading_5fkind_5fe_6',['bxc_threading_kind_e',['../muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9',1,'threading.h']]],
+  ['bxc_5fwait_5freason_5fe_7',['bxc_wait_reason_e',['../muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1ce',1,'threading.h']]],
+  ['bxc_5fwait_5fresult_5fe_8',['bxc_wait_result_e',['../muteki_2threading_8h.html#a127deb504a9a816dafcd229ad9eb9938',1,'threading.h']]]
 ];

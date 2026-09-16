@@ -24,12 +24,22 @@
 */
 var NAVTREE =
 [
-  [ "muteki", "index.html", [
-    [ "Integrating muteki into a C compiler", "index.html#autotoc_md1", null ],
-    [ "Integrating muteki syscall definitions into Ghidra", "index.html#autotoc_md2", null ],
-    [ "Developing muteki using clangd", "index.html#autotoc_md3", null ],
-    [ "Pre-commit index header generation", "index.html#autotoc_md4", null ],
+  [ "Muteki", "index.html", [
+    [ "Introduction", "md_docs_200-introduction.html", [
+      [ "So what <em>is</em> Besta RTOS anyway?", "md_docs_200-introduction.html#autotoc_md1", null ],
+      [ "Goals of this project", "md_docs_200-introduction.html#autotoc_md2", null ]
+    ] ],
+    [ "The Besta RTOS kernel", "md_docs_210-kernel.html", [
+      [ "Introduction", "md_docs_210-kernel.html#autotoc_md4", null ],
+      [ "Scheduler and thread model", "md_docs_210-kernel.html#autotoc_md5", [
+        [ "Scheduler timing", "md_docs_210-kernel.html#autotoc_md6", null ],
+        [ "The idle task", "md_docs_210-kernel.html#autotoc_md7", null ],
+        [ "Thread timeout mechanism", "md_docs_210-kernel.html#autotoc_md8", null ]
+      ] ],
+      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md9", null ]
+    ] ],
     [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -56,12 +66,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abi_8h.html",
-"ftl_8h.html#a65b2c998ef7d819d0487b1be42a38615",
-"loader_8h.html#a92f0c2a2280ddd8209fbaffc7c3e187e",
-"structbxc__thread__s.html#a1842b7c83e814efe71f40921b3c289e0",
-"structui__appview__item__s.html",
-"system_8h.html#a1810c29cbd2e6d63a9c7f2c123dd2b30",
-"types_2surface_8h.html#ac8ad346137bfb59adac20e2fb680f76da07a8c73511b55fbeba3784617f888b79"
+"ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90",
+"loader_8h.html#a9398f49c049a2df8ffab792cc2b18006",
+"structbxc__fs__stat__t.html#ad668788e406e3926737573e04f0cfbda",
+"structpcm__config__s.html#a8b4cfb5fcb546bd0173243e70a490ceb",
+"structui__static__s.html",
+"types_2static_8h.html#a903fc75a9e7f38c0f99516a09468b623"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

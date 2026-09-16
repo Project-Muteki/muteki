@@ -15,7 +15,9 @@ var searchData=
   ['rom_5fversion_12',['rom_version',['../structid__device__info__s.html#a0d7fbdb8e7e57b5906485c3ae7698a4a',1,'id_device_info_s']]],
   ['rotate_13',['rotate',['../structlcd__base__s.html#a466b8361da90dc49d956ea84fa3e0c50',1,'lcd_base_s::rotate'],['../structlcd__thread__safe__s.html#ac256bc66d0758cac4d31347dd9407f22',1,'lcd_thread_safe_s::rotate']]],
   ['rotation_14',['rotation',['../structlcd__base__s.html#a06565f8b89d8ee2c5ab638a7748610e0',1,'lcd_base_s::rotation'],['../structlcd__thread__safe__s.html#a2ac14d9831a87a4af2556c379b7ad5e5',1,'lcd_thread_safe_s::rotation']]],
-  ['runapplicationa_15',['RunApplicationA',['../loader_8h.html#aef3be04b023364a3ea972c21ce96bebb',1,'loader.h']]],
-  ['runapplicationw_16',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]],
-  ['runtime_5ftype_17',['runtime_type',['../structui__component__s.html#a640e234a12ade3562e7493f5b509d45d',1,'ui_component_s']]]
+  ['rtos_20anyway_15',['So what &lt;em&gt;is&lt;/em&gt; Besta RTOS anyway?',['../md_docs_200-introduction.html#autotoc_md1',1,'']]],
+  ['rtos_20kernel_16',['The Besta RTOS kernel',['../md_docs_210-kernel.html',1,'']]],
+  ['runapplicationa_17',['RunApplicationA',['../loader_8h.html#aef3be04b023364a3ea972c21ce96bebb',1,'loader.h']]],
+  ['runapplicationw_18',['RunApplicationW',['../loader_8h.html#a5584725fc2dfe03172015d3f99751da5',1,'loader.h']]],
+  ['runtime_5ftype_19',['runtime_type',['../structui__component__s.html#a640e234a12ade3562e7493f5b509d45d',1,'ui_component_s']]]
 ];

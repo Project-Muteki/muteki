@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: bxc_queue_s Struct Reference</title>
+<title>Muteki: bxc_queue_s Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -132,17 +140,51 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structbxc__que
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a3be07cacfdd52213b688fb2bb13b67a8" id="r_a3be07cacfdd52213b688fb2bb13b67a8"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3be07cacfdd52213b688fb2bb13b67a8">magic</a></td></tr>
+<tr class="memdesc:a3be07cacfdd52213b688fb2bb13b67a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic. Always <span class="tt">0x202</span>.  <br /></td></tr>
 <tr class="memitem:aa2bddc327a63b7beb48f8682fb8118b2" id="r_aa2bddc327a63b7beb48f8682fb8118b2"><td class="memItemLeft"><a class="el" href="structbxc__queue__nonatomic__t.html">bxc_queue_nonatomic_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa2bddc327a63b7beb48f8682fb8118b2">storage</a></td></tr>
-<tr class="memitem:add350b0d6fb657f0480ca619cd469c14" id="r_add350b0d6fb657f0480ca619cd469c14"><td class="memItemLeft"><a id="add350b0d6fb657f0480ca619cd469c14" name="add350b0d6fb657f0480ca619cd469c14"></a>
-short&#160;</td><td class="memItemRight"><b>_padding_0x8</b></td></tr>
+<tr class="memdesc:aa2bddc327a63b7beb48f8682fb8118b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Storage structure.  <br /></td></tr>
+<tr class="memitem:add350b0d6fb657f0480ca619cd469c14" id="r_add350b0d6fb657f0480ca619cd469c14"><td class="memItemLeft">short&#160;</td><td class="memItemRight"><a class="el" href="#add350b0d6fb657f0480ca619cd469c14">_padding_0x8</a></td></tr>
+<tr class="memdesc:add350b0d6fb657f0480ca619cd469c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Probably padding bytes.  <br /></td></tr>
 <tr class="memitem:ae997bfb970d9ba616db843e16a853e39" id="r_ae997bfb970d9ba616db843e16a853e39"><td class="memItemLeft"><a class="el" href="structbxc__waitable__t.html">bxc_waitable_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae997bfb970d9ba616db843e16a853e39">wait_state</a></td></tr>
 <tr class="memdesc:ae997bfb970d9ba616db843e16a853e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait state of the current event.  <br /></td></tr>
-<tr class="memitem:a96cb0a645313a0048c3e962823b3707b" id="r_a96cb0a645313a0048c3e962823b3707b"><td class="memItemLeft"><a id="a96cb0a645313a0048c3e962823b3707b" name="a96cb0a645313a0048c3e962823b3707b"></a>
-char&#160;</td><td class="memItemRight"><b>_padding_0x13</b></td></tr>
+<tr class="memitem:a96cb0a645313a0048c3e962823b3707b" id="r_a96cb0a645313a0048c3e962823b3707b"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#a96cb0a645313a0048c3e962823b3707b">_padding_0x13</a></td></tr>
+<tr class="memdesc:a96cb0a645313a0048c3e962823b3707b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown. Probably padding bytes.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Message queue descriptor structure. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a96cb0a645313a0048c3e962823b3707b" name="a96cb0a645313a0048c3e962823b3707b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96cb0a645313a0048c3e962823b3707b">&#9670;&#160;</a></span>_padding_0x13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char bxc_queue_s::_padding_0x13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unknown. Probably padding bytes. </p>
+
+</div>
+</div>
+<a id="add350b0d6fb657f0480ca619cd469c14" name="add350b0d6fb657f0480ca619cd469c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add350b0d6fb657f0480ca619cd469c14">&#9670;&#160;</a></span>_padding_0x8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short bxc_queue_s::_padding_0x8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unknown. Probably padding bytes. </p>
+
+</div>
+</div>
 <a id="a3be07cacfdd52213b688fb2bb13b67a8" name="a3be07cacfdd52213b688fb2bb13b67a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3be07cacfdd52213b688fb2bb13b67a8">&#9670;&#160;</a></span>magic</h2>
 
@@ -154,7 +196,9 @@ char&#160;</td><td class="memItemRight"><b>_padding_0x13</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Magic. Always <span class="tt">0x202</span>. Note that for some reason this is the same as ::critical_section_t. </p>
+
+<p>Magic. Always <span class="tt">0x202</span>. </p>
+<p>Note that for some reason this is the same as ::critical_section_t. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9" title="Runtime threading descriptor kind code.">bxc_threading_kind_e</a> </dd></dl>
 
 </div>
 </div>
@@ -169,7 +213,9 @@ char&#160;</td><td class="memItemRight"><b>_padding_0x13</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Storage structure i.e. the actual queue part of the queue. </p>
+
+<p>Storage structure. </p>
+<p>The actual queue part of the queue. </p>
 
 </div>
 </div>

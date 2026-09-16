@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../structnand__params__t.html#a21407778ebd3e858c47443294ce5a6d7',1,'nand_params_t']]],
+  ['name_0',['name',['../structnand__params__t.html#a21407778ebd3e858c47443294ce5a6d7',1,'nand_params_t::name'],['../unionbxc__thread__s_1_1_0funion_0e_8____unnamed0____.html#a8d3b651ca77e6d2e92e6c819b69f7d59',1,'bxc_thread_s::[union].__unnamed0__::name']]],
   ['nand_5fget_5fparams_1',['nand_get_params',['../ftl_8h.html#afd4c3fb305847b79d0f97d61530ac579',1,'ftl.h']]],
   ['nand_5fid_2',['nand_id',['../structnand__params__t.html#a4a7c140fc3e2a8f707b6069ce96e250d',1,'nand_params_t']]],
   ['nand_5fid_5flength_3',['nand_id_length',['../structnand__params__t.html#a36880ad8a1ada4e2d921043e0a47a56d',1,'nand_params_t']]],

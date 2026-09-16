@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['wait_5freason_0',['wait_reason',['../structbxc__thread__s.html#ac990383b0315eef960a75f331e75b98a',1,'bxc_thread_s']]],
-  ['wait_5fstate_1',['wait_state',['../structbxc__semaphore__s.html#aacdd330d3ecd1e997b662a4e2652f77e',1,'bxc_semaphore_s::wait_state'],['../structbxc__event__s.html#aec9b29b63f2ff62b1bbb51d8bf306f99',1,'bxc_event_s::wait_state'],['../structbxc__cs__s.html#a89b188f65ea3ca43b4cbd0636d92cb2e',1,'bxc_cs_s::wait_state'],['../structbxc__queue__s.html#ae997bfb970d9ba616db843e16a853e39',1,'bxc_queue_s::wait_state']]],
-  ['waiting_5fby_2',['waiting_by',['../structbxc__waitable__t.html#aeb16b0735908235145012609c26058bd',1,'bxc_waitable_t']]],
-  ['weekday_3',['weekday',['../structbxc__datetime__t.html#ac8c8003e2917321b821c8d4b7ecba00a',1,'bxc_datetime_t']]],
-  ['width_4',['width',['../structlcd__base__s.html#aa6a49914dece316f4bdabae44badc83c',1,'lcd_base_s::width'],['../structlcd__thread__safe__s.html#ad26b5c69bfa15f2c72f4ea2a544a61c8',1,'lcd_thread_safe_s::width'],['../structlcd__surface__s.html#aa2b52d5992d38ee3ea4d8a2e97549159',1,'lcd_surface_s::width']]]
+  ['value_0',['value',['../structui__boolfield__s.html#a6f371d1a7f7438729573b04bfa897d71',1,'ui_boolfield_s::value'],['../unionui__event__sys__s_1_1_0funion_0e_8____unnamed0____.html#a10526af81aeb26bf600d84f1e7dad769',1,'ui_event_sys_s::[union].__unnamed0__::value']]],
+  ['vertical_5fgap_1',['vertical_gap',['../structui__appview__s.html#a1f3fe012548197d3eb0490e3d890b48d',1,'ui_appview_s']]],
+  ['voltage_2',['voltage',['../structpower__battery__status__t.html#a33fd5fc0835aa3927cf463e55ffaabac',1,'power_battery_status_t']]]
 ];

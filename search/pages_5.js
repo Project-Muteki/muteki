@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['index_20header_20generation_0',['Pre-commit index header generation',['../index.html#autotoc_md4',1,'']]],
-  ['integrating_20muteki_20into_20a_20c_20compiler_1',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['integrating_20muteki_20syscall_20definitions_20into_20ghidra_2',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]],
-  ['into_20a_20c_20compiler_3',['Integrating muteki into a C compiler',['../index.html#autotoc_md1',1,'']]],
-  ['into_20ghidra_4',['Integrating muteki syscall definitions into Ghidra',['../index.html#autotoc_md2',1,'']]]
+  ['idle_20task_0',['The idle task',['../md_docs_210-kernel.html#autotoc_md7',1,'']]],
+  ['introduction_1',['Introduction',['../md_docs_200-introduction.html',1,'Introduction'],['../md_docs_210-kernel.html#autotoc_md4',1,'Introduction']]],
+  ['is_20besta_20rtos_20anyway_2',['So what &lt;em&gt;is&lt;/em&gt; Besta RTOS anyway?',['../md_docs_200-introduction.html#autotoc_md1',1,'']]]
 ];

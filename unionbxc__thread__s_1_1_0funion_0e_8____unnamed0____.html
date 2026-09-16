@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: bxc_thread_s::[union].__unnamed0__ Union Reference</title>
+<title>Muteki: bxc_thread_s::[union].__unnamed0__ Union Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -127,7 +135,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('unionbxc__thre
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#af34aa1e18d0041732efbd65b2299ea23">unk_0x34</a> [0x20]</td></tr>
+<tr class="memdesc:af34aa1e18d0041732efbd65b2299ea23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Old placeholder name.  <br /></td></tr>
 <tr class="memitem:"><td class="memItemLeft">uintptr_t&#160;</td><td class="memItemRight"><a class="el" href="#a8e18795a298f846a98abcdfcf1a632a0">ktls</a> [8]</td></tr>
+<tr class="memdesc:a8e18795a298f846a98abcdfcf1a632a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel TLS (Muteki-specific).  <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft"><a id="a8d3b651ca77e6d2e92e6c819b69f7d59" name="a8d3b651ca77e6d2e92e6c819b69f7d59"></a>
+char&#160;</td><td class="memItemRight"><b>name</b> [0x20]</td></tr>
+<tr class="memdesc:a8d3b651ca77e6d2e92e6c819b69f7d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the thread. For debugging purposes. <br /></td></tr>
 </table>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a8e18795a298f846a98abcdfcf1a632a0" name="a8e18795a298f846a98abcdfcf1a632a0"></a>
@@ -141,7 +154,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Kernel TLS (reusing the seemingly unused unk_0x34 fields) </p>
+
+<p>Kernel TLS (Muteki-specific). </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated</a></b></dt><dd>Using this field is unsafe as it can be overwritten. </dd></dl>
 
 </div>
 </div>
@@ -156,7 +171,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unknown and seems to be uninitialized. </p>
+
+<p>Old placeholder name. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd>Confirmed to be a name field and might contain data on certain builds. </dd></dl>
 
 </div>
 </div>

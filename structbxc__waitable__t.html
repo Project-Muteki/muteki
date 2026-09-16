@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>muteki: bxc_waitable_t Struct Reference</title>
+<title>Muteki: bxc_waitable_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,6 +17,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -37,8 +44,9 @@ DoxygenAwesomeTabs.init()
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">muteki
+   <div id="projectname">Muteki
    </div>
+   <div id="projectbrief">EABI code execution on Besta® RTOS devices.</div>
   </td>
  </tr>
  </tbody>
@@ -131,28 +139,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structbxc__wai
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ade5206a06bc165e3275c8da1b0e93ada" id="r_ade5206a06bc165e3275c8da1b0e93ada"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#ade5206a06bc165e3275c8da1b0e93ada">active_bytes</a></td></tr>
+<tr class="memitem:ade5206a06bc165e3275c8da1b0e93ada" id="r_ade5206a06bc165e3275c8da1b0e93ada"><td class="memItemLeft"><a id="ade5206a06bc165e3275c8da1b0e93ada" name="ade5206a06bc165e3275c8da1b0e93ada"></a>
+unsigned char&#160;</td><td class="memItemRight"><b>active_bytes</b></td></tr>
+<tr class="memdesc:ade5206a06bc165e3275c8da1b0e93ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitfield that indicates which waiting_by bytes are currently active. <br /></td></tr>
 <tr class="memitem:aeb16b0735908235145012609c26058bd" id="r_aeb16b0735908235145012609c26058bd"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#aeb16b0735908235145012609c26058bd">waiting_by</a> [8]</td></tr>
+<tr class="memdesc:aeb16b0735908235145012609c26058bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitfield that tracks threads that are waiting for this waitable.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common data structure for waitables. </p>
 <p>Once requested, waitables are able to let a currently running thread to pause execution and wait for a specific event to happen. This is pretty much the same as event group and event table in uC/OS-II. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
-<a id="ade5206a06bc165e3275c8da1b0e93ada" name="ade5206a06bc165e3275c8da1b0e93ada"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade5206a06bc165e3275c8da1b0e93ada">&#9670;&#160;</a></span>active_bytes</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned char bxc_waitable_t::active_bytes</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Bitfield that indicates which waiting_by bytes are currently active. </p>
-
-</div>
-</div>
 <a id="aeb16b0735908235145012609c26058bd" name="aeb16b0735908235145012609c26058bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb16b0735908235145012609c26058bd">&#9670;&#160;</a></span>waiting_by</h2>
 
@@ -164,7 +160,9 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Bitfield that tracks threads that are waiting for this waitable. Indexed by <span class="tt">byte offset * 8 + bit offset</span> </p>
+
+<p>Bitfield that tracks threads that are waiting for this waitable. </p>
+<p>Indexed by <span class="tt">byte offset * 8 + bit offset</span> </p>
 
 </div>
 </div>

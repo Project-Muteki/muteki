@@ -1,20 +1,16 @@
 var searchData=
 [
-  ['feature_5fmasks_0',['feature_masks',['../structid__device__info__s.html#a6b086bff87d1a2548f3123a8988dd2be',1,'id_device_info_s']]],
-  ['fg_5fcolor_1',['fg_color',['../structlcd__draw__s.html#aac8283661770363d205bc9e128e87038',1,'lcd_draw_s']]],
-  ['filename_2',['filename',['../structbxc__find__context__t.html#a0128ee61398a5ebf7868967162a2c18c',1,'bxc_find_context_t']]],
-  ['filename2_5falt_3',['filename2_alt',['../structbxc__find__context__t.html#a0fa22ad2401574df3ab39d940b6cc403',1,'bxc_find_context_t']]],
-  ['filename_5flfn_4',['filename_lfn',['../structbxc__find__context__t.html#a344a877f3d30a0a51d80bf253707715b',1,'bxc_find_context_t']]],
-  ['finger_5fid_5',['finger_id',['../structui__multipress__event__s.html#a608d1ba644c45dfabf4c30f72718987d',1,'ui_multipress_event_s']]],
-  ['first_5fvisible_5fitem_6',['first_visible_item',['../structui__appview__s.html#a79a1d7cae46a4f8a820023fa5a9a5c8c',1,'ui_appview_s']]],
-  ['flag_7',['flag',['../structbxc__event__s.html#a7c4cafaabafce9354b81308b6df7e75e',1,'bxc_event_s']]],
-  ['flags_8',['flags',['../structui__filepicker__context__s.html#a4ba450e7c37329ab7d7c44da244ed980',1,'ui_filepicker_context_s::flags'],['../structui__component__s.html#a49d4083f78cb820481a88c55152f207d',1,'ui_component_s::flags']]],
-  ['flags_5flower_9',['flags_lower',['../structdevio__descriptor__t.html#aaea1952dee4fffe5d0243ccb7c5985dc',1,'devio_descriptor_t']]],
-  ['flags_5fupper_10',['flags_upper',['../structdevio__descriptor__t.html#aa020c984f1c8860f127a3e5a158e2d65',1,'devio_descriptor_t']]],
-  ['font_11',['font',['../structlcd__base__s.html#a14d2356660554039faf3c7a3c991f5e8',1,'lcd_base_s::font'],['../structlcd__thread__safe__s.html#a6b9700b7f90247a689d54dca1ab02fda',1,'lcd_thread_safe_s::font']]],
-  ['font_5ftype_12',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s::font_type'],['../structui__booltextfield__s.html#ad1883b38e1ff844d3732fae5d3f78ba4',1,'ui_booltextfield_s::font_type'],['../structui__static__s.html#af330ccff5fefd3a50f71bf58a7342c87',1,'ui_static_s::font_type']]],
-  ['footprint_13',['footprint',['../structui__component__s.html#abbf53bd0db7ef98f916a1b4c122fd2dc',1,'ui_component_s']]],
-  ['format_14',['format',['../structpcm__config__s.html#a3ba5313aaa2a0d8b9aa0e26409a4d4f4',1,'pcm_config_s']]],
-  ['free_15',['free',['../structbxc__fs__stat__t.html#a5fbeb447c37ce3bcdf85ffb95f0ff1b5',1,'bxc_fs_stat_t']]],
-  ['free_5fkb_16',['free_kb',['../structbxc__fs__stat__t.html#ae13e942f9ad61c3f66fe42acc9e028bd',1,'bxc_fs_stat_t']]]
+  ['encoding_0',['encoding',['../structlcd__surface__s.html#a9247241238c334b2fdc51df91c00bb71',1,'lcd_surface_s']]],
+  ['erase_5fsize_1',['erase_size',['../structnand__params__t.html#a9ee97c11a249356d434c26f590d0d1d4',1,'nand_params_t']]],
+  ['error_5ftext_2',['error_text',['../structui__filepicker__context__s.html#af083b97408c629e6bf2e0d8aa4fb3a79',1,'ui_filepicker_context_s']]],
+  ['event_3',['event',['../structbxc__thread__s.html#a3afabc40fbf319fe12396018d198a587',1,'bxc_thread_s::event'],['../structui__button__s.html#a30f5b2d31fab1d156efc4eab1c798b32',1,'ui_button_s::event'],['../structui__event__state__change__s.html#a54c3363fe35d6dd54678fd716e5c7175',1,'ui_event_state_change_s::event'],['../structui__menu__entry__s.html#abb3c5bf87317a5e58b221245cc209c3e',1,'ui_menu_entry_s::event']]],
+  ['event_5fsource_4',['event_source',['../structui__event__ext__s.html#add9d24286f91b4b875bbec69dfbe66a4',1,'ui_event_ext_s']]],
+  ['event_5ftype_5',['event_type',['../structui__event__sys__s.html#a089a790a65e36c04d82245ab11dd1838',1,'ui_event_sys_s']]],
+  ['exe_5fchecksum_6',['exe_checksum',['../structloader__applet__info__s.html#aa6640c9d79f0c50b324d5c60d5359025',1,'loader_applet_info_s']]],
+  ['exe_5fraw_5fsize_7',['exe_raw_size',['../structloader__applet__info__s.html#a5d69ff0b5f48bf076506c48451202f29',1,'loader_applet_info_s']]],
+  ['exec_8',['exec',['../structloader__impl__s.html#a67527006bb08111c4bd0b1967f79d237',1,'loader_impl_s']]],
+  ['execution_5fresult_9',['execution_result',['../structui__group__s.html#a228a0fa3c62c4857edd7921db0193f6e',1,'ui_group_s']]],
+  ['exit_5fcode_10',['exit_code',['../structbxc__thread__s.html#a74c6fb6d0e9d50e1840fdf8bae533509',1,'bxc_thread_s']]],
+  ['ext_11',['ext',['../structui__event__std__s.html#aa797f0d005b80291d5235a060df9f1b4',1,'ui_event_std_s::ext'],['../structui__event__prime__s.html#ab86f1096e3542ee464cdeb06580bfa5b',1,'ui_event_prime_s::ext']]],
+  ['ext_5fprime_12',['ext_prime',['../structui__event__prime__s.html#ad777d5f698ce6744ed12658cdd346ddd',1,'ui_event_prime_s']]]
 ];
