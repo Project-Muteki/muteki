@@ -47,12 +47,16 @@ enum bxc_wait_reason_e {
      */
     BXC_WAIT_ON_CRITICAL_SECTION = 0x10,
     /**
-     * @brief Waiting on the sleep counter, or is on hold by the scheduler.
-     * @details This usually means the scheduler is waiting for the sleep counter of this thread to expire before
-     * resuming it. In some cases however it could also mean that the thread is temporarily on hold because it has
-     * timed out.
+     * @brief Deprecated name of ::BXC_WAIT_ON_TIMEOUT
+     * @deprecated 
      */
     BXC_WAIT_ON_SLEEP = 0x20,
+    /**
+     * @brief Waiting to take back control after a yield/timeout.
+     * @details This can either mean the thread has yielded voluntarily by calling OSSleep(0) from itself, or
+     * that the thread execution is temporarily on hold because it has timed out.
+     */
+    BXC_WAIT_ON_YIELD = 0x20,
 };
 
 /**
@@ -75,7 +79,7 @@ enum bxc_threading_kind_e {
      * @brief Critical section or queue.
      */
     BXC_THREADING_KIND_CS_QUEUE = 0x202,
-}
+};
 
 /**
  * @brief Result of waitables.
@@ -207,7 +211,7 @@ struct bxc_thread_s {
      */
     bxc_thread_func_t thread_func;
     /**
-     * @brief Thread execution timeout in number of scheduler ticks.
+     * @brief Thread execution timeout in number of scheduler **ticks**.
      * @details This value is initialized by the scheduler with a value that is inverse proportional to the slot
      * number, meaning higher priority threads have longer timeouts. This value ticks down every scheduler tick
      * that the thread is not spent sleeping. When the timeout reaches 0, the thread is "timed out" and gets put into
@@ -217,8 +221,8 @@ struct bxc_thread_s {
      */
     short timeout;
     /**
-     * @brief Number of scheduler ticks left to sleep.
-     * @details This value is populated by OSSleep() when the `ticks` parameter is bigger than 0.
+     * @brief Number of scheduler **time units** left to sleep.
+     * @details This value is populated by OSSleep() when the `time_units` parameter is bigger than 0.
      */
     short sleep_counter;
     /**
@@ -473,17 +477,17 @@ extern bool OSWakeUpThread(bxc_thread_t *thr);
  extern int OSExitThread(int exit_code);
 
 /**
- * @brief Sleep for number of scheduler @p ticks .
+ * @brief Sleep for number of scheduler @p time_units .
  * @details
- * A tick is typically 1ms on Besta RTOS, but this could fluctuate in practice.
+ * A time unit is typically around 1ms on Besta RTOS, but this could fluctuate in practice.
  *
- * When @p ticks is set to 0, the current thread will voluntarily put itself into the "timed out" state by clearin the
- * bxc_thread_t::timeout value, and will resume execution after the scheduler goes to idle.
+ * When @p time_units is set to 0, the current thread will yield (voluntarily put itself into the "timed out" state) by
+ * clearing the bxc_thread_t::timeout value, and will resume execution after the scheduler goes to idle.
  * @x_syscall_num{0x10008}
- * @param ticks Time to sleep in scheduler ticks.
+ * @param time_units Time to sleep in scheduler time units.
  * @x_void_return
  */
-extern void OSSleep(short ticks);
+extern void OSSleep(short time_units);
 
 /**
  * @brief Create an semaphore descriptor.
