@@ -18,11 +18,89 @@ During scheduler initialization, a idle thread is automatically created using OS
 
 ### Thread timeout mechanism
 
-As mentioned in the intro, when picking the next thread to execute, the original uC/OS-II scheduler always chooses the highest priority active thread. On its intended platforms (i.e. small, self-contained, possibly microcontroller-based systems) this makes sense, as thread interactions are typically clearly defined on these systems to prevent possible starvation of the lower priority threads. On Besta RTOS however, the starvation could be a problem as Besta RTOS's use-case leans more towards a multi-program operating system focused on user interaction, rather than uC/OS-II's default tightly-integrated controller use-case, meaning a single bug in an external program could halt critical system tasks and/or causing sluggish UI response. Likely as a step to mitigate this problem, Besta RTOS introduced a timeout mechanism to its scheduler. When a thread is created, a timeout value (@ref bxc_thread_t.timeout, in number of scheduler ticks) that is inverse-proportional to its priority value is assigned to the thread. Let @f$ P_{thread} @f$ be the priority value of the thread, the formula that is used to determine the initial timeout value is @f$ T_{timeout} = \lfloor \frac{64 - P_{thread}}{16} \rfloor + 1 @f$. Behavior-wise, the timeout is 5 for priority 0, 4 for priority 1-16, 3 for 17-32, etc. The idle thread is excluded from this calculation, as it does not need a timeout by design.
+As mentioned in the intro, when picking the next thread to execute, the original uC/OS-II scheduler always chooses the highest priority active thread. On its intended platforms (i.e. small, self-contained, possibly microcontroller-based systems) this makes sense, as thread interactions are typically clearly defined on these systems to prevent possible starvation of the lower priority threads. On Besta RTOS however, the starvation could be a problem as Besta RTOS's use-case leans more towards a multi-program and multi-media operating system focused on user interaction, rather than uC/OS-II's default tightly-integrated controller use-case, meaning a single bug in an external program could halt critical system tasks and/or causing sluggish UI response or audio stutter. Likely as a step to mitigate this problem, Besta RTOS introduced a timeout mechanism to its scheduler. When a thread is created, a timeout value (@ref bxc_thread_t.timeout, in number of scheduler ticks) that is inverse-proportional to its priority value is assigned to the thread. Let @f$ P_{thread} @f$ be the priority value of the thread, the formula that is used to determine the initial timeout value is @f$ T_{timeout} = \lfloor \frac{64 - P_{thread}}{16} \rfloor + 1 @f$. Behavior-wise, the timeout is 5 for priority 0, 4 for priority 1-16, 3 for 17-32, etc. The idle thread is excluded from this calculation, as it does not need a timeout by design.
 
 The scheduler decrements the timeout value of the current active thread (that is **not** already timed out/yielded) on every scheduler tick. When the value reaches 0, the thread will be put into the "timed out" state (adding @ref BXC_WAIT_ON_YIELD to @ref bxc_thread_t.wait_reason), and the next active highest priority thread will then be picked to run. This process will repeat itself until no thread is active other than the idle thread. When that happens either during a scheduler tick or an explicit reschedule request, the scheduler enumerates the thread linked list and takes all threads that have the wait reason of @ref BXC_WAIT_ON_YIELD out of the timed out/yielded state@ref note_1 "<sup>1</sup>", and the execution resumes at the highest priority thread again after the context switch that follows the tick/reschedule.
 
 Sleeping may also change the behavior of the timeout value. When OSSleep() is called with a **non-zero time unit**, the thread goes into sleep without resetting its timeout value, so it can then go back to work after a sleep and until the timeout runs out, totalling approximately the same amount of work time as if it did not sleep at all. On the other hand, when OSSleep() is called with a **zero time unit**, the thread immediately yields by writing 0 to its timeout value and setting the @ref BXC_WAIT_ON_YIELD wait reason, resulting in a wait until all other threads time out.
+
+### Putting it all together
+
+The above behaviors, including the ones inherited from uC/OS-II and Besta RTOS-specific behavior, results in a state transition algorithm roughly illustrated below:
+
+```mermaid
+stateDiagram-v2
+    direction LR
+
+    state "Ready (T > 0)" as ReadyPositive
+
+    state "Timed out" as GroupTimedOut {
+        state "Ready, timeout expired (T == 0)" as ReadyZero
+        state "Timed-out (W == 0x20, T == 0)" as RoundDeferred
+    }
+    state "Explicitly Waiting" as GroupPaused {
+        state "Sleeping (D > 0, T == ANY)" as TimedWait
+        state "Suspended (W == 0x08, T == ANY)" as Suspended
+        state "Blocked (W & ~0x20 != 0, T == ANY)" as ObjectWait
+    }
+
+    state "Scheduler Idle" as GroupIdle {
+        state "Idle-only" as IdleOnly
+        state "Idling" as Idle
+    }
+
+    state "Terminated" as Terminated
+
+    [*] --> ReadyPositive: CreateThread (T = full(P))
+
+    ReadyPositive --> ReadyPositive: --T
+    ReadyPositive --> ReadyZero: --T == 0
+    ReadyZero --> RoundDeferred: W == 0, W = 0x20
+    ReadyPositive --> RoundDeferred: OSSleep(0)
+
+    RoundDeferred --> IdleOnly: next() == 63
+    IdleOnly --> ReadyPositive: W = 0, T = full(P)
+    IdleOnly --> Idle: no thread left to run immediately
+    Idle --> IdleOnly: some threads are eligible to run again
+
+    ReadyPositive --> TimedWait: OSSleep(n>0) or timed SP wait (D = n)
+    ReadyZero --> TimedWait: OSSleep(n>0) or timed SP wait (D = n)
+    TimedWait --> TimedWait: D -= step
+    TimedWait --> ReadyPositive: D -= step, D <= step
+    TimedWait --> ReadyZero: D -= step, D <= step, T == 0
+    TimedWait --> Suspended: OSSuspendThread (W |= 0x08)
+    Suspended --> Suspended: D > step, D -= step
+    Suspended --> Suspended: D <= step, D = 1
+
+    ReadyPositive --> ObjectWait: indefinite SP wait
+    ReadyZero --> ObjectWait: indefinite SP wait
+    ObjectWait --> ReadyPositive: resolved SP wait (T = full(P), W &= ~0x20)
+
+    ReadyPositive --> Suspended: OSSuspendThread (W |= 0x08)
+    ReadyZero --> Suspended: OSSuspendThread (W |= 0x08)
+    RoundDeferred --> Suspended: OSSuspendThread (W |= 0x08)
+    ObjectWait --> Suspended: OSSuspendThread (W |= 0x08)
+    Suspended --> ReadyPositive: OSResumeThread, no SP wait (T = full(P))
+    Suspended --> ObjectWait: OSResumeThread, has SP wait(s) (W &= ~0x08)
+
+    ReadyPositive --> Terminated: OSTerminateThread
+    ReadyZero --> Terminated: OSTerminateThread
+    RoundDeferred --> Terminated: OSTerminateThread
+    TimedWait --> Terminated: OSTerminateThread
+    Suspended --> Terminated: OSTerminateThread
+    ObjectWait --> Terminated: OSTerminateThread
+    Terminated --> [*]
+```
+
+Definitions:
+
+- `T`: the timeout value (@ref bxc_thread_t.timeout)
+- `W`: the wait reason (@ref bxc_thread_t.wait_reason)
+- `D`: the sleep counter (@ref bxc_thread_t.sleep_counter)
+- `P`: Current thread priority/slot number (@ref bxc_thread_t.slot)
+- `full(P)`: The function used to initialize the timeout value
+- `next()`: Priority of the next thread to be run
+- `SP`: Synchronization primitives
 
 ## Footnotes
 
