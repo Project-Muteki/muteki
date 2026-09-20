@@ -143,7 +143,7 @@ enum bxc_errno_user_e {
     BXC_ERR_THREADING_THREAD_NOT_SUSPENDED = 0x0065,
     /** Failed to allocate thread stack. */
     BXC_ERR_THREADING_STACK_MALLOC_FAILED = 0x0066,
-    /** Invalid thread descriptor magic. */
+    /** Invalid thread/synch. primitive descriptor magic. */
     BXC_ERR_THREADING_INVALID_DESCRIPTOR = 0x006e,
     /** Descriptor is busy. Seen on event descriptors when some threads are waiting on the event. */
     BXC_ERR_THREADING_DESCRIPTOR_BUSY = 0x008c,

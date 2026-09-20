@@ -22,7 +22,16 @@ As mentioned in the intro, when picking the next thread to execute, the original
 
 The scheduler decrements the timeout value of the current active thread (that is **not** already timed out/yielded) on every scheduler tick. When the value reaches 0, the thread will be put into the "timed out" state (adding @ref BXC_WAIT_ON_YIELD to @ref bxc_thread_t.wait_reason), and the next active highest priority thread will then be picked to run. This process will repeat itself until no thread is active other than the idle thread. When that happens either during a scheduler tick or an explicit reschedule request, the scheduler enumerates the thread linked list and takes all threads that have the wait reason of @ref BXC_WAIT_ON_YIELD out of the timed out/yielded state@ref note_1 "<sup>1</sup>", and the execution resumes at the highest priority thread again after the context switch that follows the tick/reschedule.
 
-Sleeping may also change the behavior of the timeout value. When OSSleep() is called with a **non-zero time unit**, the thread goes into sleep without resetting its timeout value, so it can then go back to work after a sleep and until the timeout runs out, totalling approximately the same amount of work time as if it did not sleep at all. On the other hand, when OSSleep() is called with a **zero time unit**, the thread immediately yields by writing 0 to its timeout value and setting the @ref BXC_WAIT_ON_YIELD wait reason, resulting in a wait until all other threads time out.
+Sleeping may also change the behavior of the timeout value. When OSSleep() is called with a **non-zero time unit**, the thread goes into sleep without resetting its timeout value, so it can then go back to work after a sleep and until the timeout runs out, totalling approximately the same amount of work time as if it did not sleep at all. On the other hand, when OSSleep() is called with a **zero time unit**, the thread immediately yields by writing 0 to its timeout value and setting the @ref BXC_WAIT_ON_YIELD wait reason, resulting in a wait until all other threads have timed out. To put it simply, `while (1) OSSleep(0);` should load the scheduler less than `while (1) OSSleep(1);` due to less CPU time being allocated to the thread calling the former, while the former also has **higher** latency between each OSSleep() call than the latter.
+
+### Synchronization primitive wait timeout
+
+Certain synchronization primitives (semaphore and event) can either wait indefinitely or up to a certain amount of time units. This reuses the same @ref bxc_thread_t.sleep_counter member and logic used by OSSleep() to keep track of time. In case of a timeout without resolution, the thread awaiting the synchronization primitive will be waken up with the result code of @ref BXC_WAIT_RESULT_TIMEOUT. If the @ref bxc_thread_t.sleep_counter is set to `-1`, it tells the scheduler that the thread has been blocked by an indefinite wait on a synchronization primitive, and the scheduler will leave it alone until a resolution has been made and the value being reset back to `0`.
+
+> [!NOTE]
+> This blocking behavior can apparently also be triggered by using OSSleep(). This basically results in a dead thread that cannot be waken up automatically other than by manually setting the counter back to `0` from another thread (with e.g. OSWakeUpThread()).
+
+Other synchronization that does not time out (critical section) blocks the thread indefinitely until they are resolved by another thread. They also write `-1` to @ref bxc_thread_t.sleep_counter for the reason mentioned above.
 
 ### Putting it all together
 
@@ -65,12 +74,12 @@ stateDiagram-v2
 
     ReadyPositive --> Sleeping: OSSleep(n>0) or timed SP wait (D = n)
     ReadyZero --> Sleeping: OSSleep(n>0) or timed SP wait (D = n)
-    Sleeping --> Sleeping: D -= step
-    Sleeping --> ReadyPositive: D -= step, D <= step
-    Sleeping --> ReadyZero: D -= step, D <= step, T == 0
+    Sleeping --> Sleeping: D != -1, D -= step
+    Sleeping --> ReadyPositive: D != -1, D -= step, D <= step
+    Sleeping --> ReadyZero: D != -1, D -= step, D <= step, T == 0
     Sleeping --> Suspended: OSSuspendThread (W |= 0x08)
-    Suspended --> Suspended: D > step, D -= step
-    Suspended --> Suspended: D <= step, D = 1
+    Suspended --> Suspended: D != -1, D > step, D -= step
+    Suspended --> Suspended: D != -1, D <= step, D = 1
 
     ReadyPositive --> WaitingOnSP: indefinite SP wait
     ReadyZero --> WaitingOnSP: indefinite SP wait
@@ -102,6 +111,7 @@ Definitions:
 - `full(P)`: The function used to initialize the timeout value
 - `nextP()`: Priority of the next thread to be run
 - `SP`: Synchronization primitives
+- `step`: @f$ U_{unit} @f$
 
 ## Footnotes
 
