@@ -8,5 +8,6 @@ var searchData=
   ['thread_20timeout_20mechanism_5',['Thread timeout mechanism',['../md_docs_210-kernel.html#autotoc_md8',1,'']]],
   ['timeout_20mechanism_6',['Thread timeout mechanism',['../md_docs_210-kernel.html#autotoc_md8',1,'']]],
   ['timing_7',['Scheduler timing',['../md_docs_210-kernel.html#autotoc_md6',1,'']]],
-  ['todo_20list_8',['Todo List',['../todo.html',1,'']]]
+  ['todo_20list_8',['Todo List',['../todo.html',1,'']]],
+  ['together_9',['Putting it all together',['../md_docs_210-kernel.html#autotoc_md9',1,'']]]
 ];

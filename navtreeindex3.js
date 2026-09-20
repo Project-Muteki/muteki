@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"structbxc__fs__stat__t.html#acb8fce21b4598e741c399957d7a4f506":[4,0,7,8],
 "structbxc__fs__stat__t.html#ad668788e406e3926737573e04f0cfbda":[4,0,7,2],
 "structbxc__fs__stat__t.html#ae13e942f9ad61c3f66fe42acc9e028bd":[4,0,7,1],
 "structbxc__fs__stat__t.html#ae75e99e980d4f8ba8df8dcf35a404777":[4,0,7,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "structpcm__config__s.html#a36e9fe4580be48d47caafcf3afa2313e":[4,0,37,1],
 "structpcm__config__s.html#a39c182c6264c759f3fd46d6f7a0039b1":[4,0,37,6],
 "structpcm__config__s.html#a3ba5313aaa2a0d8b9aa0e26409a4d4f4":[4,0,37,3],
-"structpcm__config__s.html#a57af4653f44f20892481886dcc74669e":[4,0,37,0],
-"structpcm__config__s.html#a5e382dc6717daa1cc99425752b7fa878":[4,0,37,5]
+"structpcm__config__s.html#a57af4653f44f20892481886dcc74669e":[4,0,37,0]
 };

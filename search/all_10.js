@@ -76,8 +76,9 @@ var searchData=
   ['puteventext_73',['PutEventExt',['../framework_2event_8h.html#a3a0a70f0744bc1fc712cea4050d40893',1,'event.h']]],
   ['putimage_74',['PutImage',['../lcd_8h.html#a00fcaab305a3c8429dea4f6ff1350c5b',1,'lcd.h']]],
   ['putsystemevent_75',['PutSystemEvent',['../framework_2event_8h.html#a429a689cf8a4d534f491775f454b3cb8',1,'event.h']]],
-  ['pview_5fdraw_76',['PVIEW_draw',['../component_8h.html#a22f0feec9098d47a63052e75bb26abf4',1,'component.h']]],
-  ['pview_5ferasebackground_77',['PVIEW_EraseBackGround',['../component_8h.html#a6c9f51175af33cebdd37fa9255189d5d',1,'component.h']]],
-  ['pview_5fhandleevent_78',['PVIEW_handleEvent',['../component_8h.html#ac85bd7426bac94ce46f80d82df373215',1,'component.h']]],
-  ['pview_5fsetstate_79',['PVIEW_setState',['../component_8h.html#a53c0497b77c76d36f8dfa134b1198783',1,'component.h']]]
+  ['putting_20it_20all_20together_76',['Putting it all together',['../md_docs_210-kernel.html#autotoc_md9',1,'']]],
+  ['pview_5fdraw_77',['PVIEW_draw',['../component_8h.html#a22f0feec9098d47a63052e75bb26abf4',1,'component.h']]],
+  ['pview_5ferasebackground_78',['PVIEW_EraseBackGround',['../component_8h.html#a6c9f51175af33cebdd37fa9255189d5d',1,'component.h']]],
+  ['pview_5fhandleevent_79',['PVIEW_handleEvent',['../component_8h.html#ac85bd7426bac94ce46f80d82df373215',1,'component.h']]],
+  ['pview_5fsetstate_80',['PVIEW_setState',['../component_8h.html#a53c0497b77c76d36f8dfa134b1198783',1,'component.h']]]
 ];

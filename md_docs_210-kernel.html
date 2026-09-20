@@ -1,4 +1,4 @@
-<!-- HTML header for doxygen 1.9.7-->
+<!-- HTML header for doxygen 1.18.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
@@ -8,8 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Muteki: The Besta RTOS kernel</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -24,6 +24,11 @@ MathJax.Hub.Config({
 });
 </script>
 <script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
@@ -146,10 +151,87 @@ The idle task</h2>
 <p>During scheduler initialization, a idle thread is automatically created using <a class="el" href="muteki_2threading_8h.html#a5b08310412019f7239a874a3d6f241af" title="Create a new thread.">OSCreateThread()</a> with an assigned priority value of 63. The scheduler also makes special handling.</p>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Thread timeout mechanism</h2>
-<p>As mentioned in the intro, when picking the next thread to execute, the original uC/OS-II scheduler always chooses the highest priority active thread. On its intended platforms (i.e. small, self-contained, possibly microcontroller-based systems) this makes sense, as thread interactions are typically clearly defined on these systems to prevent possible starvation of the lower priority threads. On Besta RTOS however, the starvation could be a problem as Besta RTOS's use-case leans more towards a multi-program operating system focused on user interaction, rather than uC/OS-II's default tightly-integrated controller use-case, meaning a single bug in an external program could halt critical system tasks and/or causing sluggish UI response. Likely as a step to mitigate this problem, Besta RTOS introduced a timeout mechanism to its scheduler. When a thread is created, a timeout value (<a class="el" href="structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f" title="bxc_thread_t::timeout">bxc_thread_t::timeout</a>, in number of scheduler ticks) that is inverse-proportional to its priority value is assigned to the thread. Let \( P_{thread} \) be the priority value of the thread, the formula that is used to determine the initial timeout value is \( T_{timeout} = \lfloor \frac{64 - P_{thread}}{16} \rfloor + 1 \). Behavior-wise, the timeout is 5 for priority 0, 4 for priority 1-16, 3 for 17-32, etc. The idle thread is excluded from this calculation, as it does not need a timeout by design.</p>
+<p>As mentioned in the intro, when picking the next thread to execute, the original uC/OS-II scheduler always chooses the highest priority active thread. On its intended platforms (i.e. small, self-contained, possibly microcontroller-based systems) this makes sense, as thread interactions are typically clearly defined on these systems to prevent possible starvation of the lower priority threads. On Besta RTOS however, the starvation could be a problem as Besta RTOS's use-case leans more towards a multi-program and multi-media operating system focused on user interaction, rather than uC/OS-II's default tightly-integrated controller use-case, meaning a single bug in an external program could halt critical system tasks and/or causing sluggish UI response or audio stutter. Likely as a step to mitigate this problem, Besta RTOS introduced a timeout mechanism to its scheduler. When a thread is created, a timeout value (<a class="el" href="structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f" title="bxc_thread_t::timeout">bxc_thread_t::timeout</a>, in number of scheduler ticks) that is inverse-proportional to its priority value is assigned to the thread. Let \( P_{thread} \) be the priority value of the thread, the formula that is used to determine the initial timeout value is \( T_{timeout} = \lfloor \frac{64 - P_{thread}}{16} \rfloor + 1 \). Behavior-wise, the timeout is 5 for priority 0, 4 for priority 1-16, 3 for 17-32, etc. The idle thread is excluded from this calculation, as it does not need a timeout by design.</p>
 <p>The scheduler decrements the timeout value of the current active thread (that is <b>not</b> already timed out/yielded) on every scheduler tick. When the value reaches 0, the thread will be put into the "timed out" state (adding <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364" title="BXC_WAIT_ON_YIELD">BXC_WAIT_ON_YIELD</a> to <a class="el" href="structbxc__thread__s.html#ac990383b0315eef960a75f331e75b98a" title="bxc_thread_t::wait_reason">bxc_thread_t::wait_reason</a>), and the next active highest priority thread will then be picked to run. This process will repeat itself until no thread is active other than the idle thread. When that happens either during a scheduler tick or an explicit reschedule request, the scheduler enumerates the thread linked list and takes all threads that have the wait reason of <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364" title="BXC_WAIT_ON_YIELD">BXC_WAIT_ON_YIELD</a> out of the timed out/yielded state<a class="el" href="#note_1" title="note_1"><sup>1</sup></a>, and the execution resumes at the highest priority thread again after the context switch that follows the tick/reschedule.</p>
 <p>Sleeping may also change the behavior of the timeout value. When <a class="el" href="muteki_2threading_8h.html#a48b1ee1c72f426c4c1544946f67ce47a" title="Sleep for number of scheduler time_units .">OSSleep()</a> is called with a <b>non-zero time unit</b>, the thread goes into sleep without resetting its timeout value, so it can then go back to work after a sleep and until the timeout runs out, totalling approximately the same amount of work time as if it did not sleep at all. On the other hand, when <a class="el" href="muteki_2threading_8h.html#a48b1ee1c72f426c4c1544946f67ce47a" title="Sleep for number of scheduler time_units .">OSSleep()</a> is called with a <b>zero time unit</b>, the thread immediately yields by writing 0 to its timeout value and setting the <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364" title="BXC_WAIT_ON_YIELD">BXC_WAIT_ON_YIELD</a> wait reason, resulting in a wait until all other threads time out.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Putting it all together</h2>
+<p>The above behaviors, including the ones inherited from uC/OS-II and Besta RTOS-specific behavior, results in a state transition algorithm roughly illustrated below:</p>
+<div class="mermaidgraph">
+<pre class="mermaid">
+stateDiagram-v2
+    direction LR
+
+    state &quot;Ready (T &gt; 0)&quot; as ReadyPositive
+
+    state &quot;Timed out&quot; as GroupTimedOut {
+        state &quot;Ready, timeout expired (T == 0)&quot; as ReadyZero
+        state &quot;Timed-out (W == 0x20, T == 0)&quot; as RoundDeferred
+    }
+    state &quot;Explicitly Waiting&quot; as GroupPaused {
+        state &quot;Sleeping (D &gt; 0, T == ANY)&quot; as TimedWait
+        state &quot;Suspended (W == 0x08, T == ANY)&quot; as Suspended
+        state &quot;Blocked (W &amp; ~0x20 != 0, T == ANY)&quot; as ObjectWait
+    }
+
+    state &quot;Scheduler Idle&quot; as GroupIdle {
+        state &quot;Idle-only&quot; as IdleOnly
+        state &quot;Idling&quot; as Idle
+    }
+
+    state &quot;Terminated&quot; as Terminated
+
+    [*] --&gt; ReadyPositive: CreateThread (T = full(P))
+
+    ReadyPositive --&gt; ReadyPositive: --T
+    ReadyPositive --&gt; ReadyZero: --T == 0
+    ReadyZero --&gt; RoundDeferred: W == 0, W = 0x20
+    ReadyPositive --&gt; RoundDeferred: OSSleep(0)
+
+    RoundDeferred --&gt; IdleOnly: next() == 63
+    IdleOnly --&gt; ReadyPositive: W = 0, T = full(P)
+    IdleOnly --&gt; Idle: no thread left to run immediately
+    Idle --&gt; IdleOnly: some threads are eligible to run again
+
+    ReadyPositive --&gt; TimedWait: OSSleep(n&gt;0) or timed SP wait (D = n)
+    ReadyZero --&gt; TimedWait: OSSleep(n&gt;0) or timed SP wait (D = n)
+    TimedWait --&gt; TimedWait: D -= step
+    TimedWait --&gt; ReadyPositive: D -= step, D &lt;= step
+    TimedWait --&gt; ReadyZero: D -= step, D &lt;= step, T == 0
+    TimedWait --&gt; Suspended: OSSuspendThread (W |= 0x08)
+    Suspended --&gt; Suspended: D &gt; step, D -= step
+    Suspended --&gt; Suspended: D &lt;= step, D = 1
+
+    ReadyPositive --&gt; ObjectWait: indefinite SP wait
+    ReadyZero --&gt; ObjectWait: indefinite SP wait
+    ObjectWait --&gt; ReadyPositive: resolved SP wait (T = full(P), W &amp;= ~0x20)
+
+    ReadyPositive --&gt; Suspended: OSSuspendThread (W |= 0x08)
+    ReadyZero --&gt; Suspended: OSSuspendThread (W |= 0x08)
+    RoundDeferred --&gt; Suspended: OSSuspendThread (W |= 0x08)
+    ObjectWait --&gt; Suspended: OSSuspendThread (W |= 0x08)
+    Suspended --&gt; ReadyPositive: OSResumeThread, no SP wait (T = full(P))
+    Suspended --&gt; ObjectWait: OSResumeThread, has SP wait(s) (W &amp;= ~0x08)
+
+    ReadyPositive --&gt; Terminated: OSTerminateThread
+    ReadyZero --&gt; Terminated: OSTerminateThread
+    RoundDeferred --&gt; Terminated: OSTerminateThread
+    TimedWait --&gt; Terminated: OSTerminateThread
+    Suspended --&gt; Terminated: OSTerminateThread
+    ObjectWait --&gt; Terminated: OSTerminateThread
+    Terminated --&gt; [*]</pre>
+</div>
+<p>Definitions:</p>
+<ul>
+<li><span class="tt">T</span>: the timeout value (<a class="el" href="structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f" title="bxc_thread_t::timeout">bxc_thread_t::timeout</a>)</li>
+<li><span class="tt">W</span>: the wait reason (<a class="el" href="structbxc__thread__s.html#ac990383b0315eef960a75f331e75b98a" title="bxc_thread_t::wait_reason">bxc_thread_t::wait_reason</a>)</li>
+<li><span class="tt">D</span>: the sleep counter (<a class="el" href="structbxc__thread__s.html#ae881bd296e9589be684c0a80b6edd971" title="bxc_thread_t::sleep_counter">bxc_thread_t::sleep_counter</a>)</li>
+<li><span class="tt">P</span>: Current thread priority/slot number (<a class="el" href="structbxc__thread__s.html#a1842b7c83e814efe71f40921b3c289e0" title="bxc_thread_t::slot">bxc_thread_t::slot</a>)</li>
+<li><span class="tt">full(P)</span>: The function used to initialize the timeout value</li>
+<li><span class="tt">next()</span>: Priority of the next thread to be run</li>
+<li><span class="tt">SP</span>: Synchronization primitives</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Footnotes</h1>
 <p><a class="anchor" id="note_1"></a>1. To be exact, in case of a scheduler tick, the scheduler actually takes out all the threads that are otherwise not waiting on anything other than <a class="el" href="muteki_2threading_8h.html#a11b9b432e00953d99375c193b5b7c1cea815778b1d0060bb0d1b7fd5c57bf6364" title="BXC_WAIT_ON_YIELD">BXC_WAIT_ON_YIELD</a>, meaning it does not matter whether or not that bit is actually set, at least in this specific case. </p>
 </div></div><!-- contents -->
