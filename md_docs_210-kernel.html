@@ -176,12 +176,7 @@ stateDiagram-v2
     state &quot;Explicitly Waiting&quot; as GroupPaused {
         state &quot;Sleeping (D &gt; 0, T == ANY)&quot; as Sleeping
         state &quot;Suspended (W == 0x08, T == ANY)&quot; as Suspended
-        state &quot;Blocked (W &amp; ~0x20 != 0, T == ANY)&quot; as WaitingOnSP
-    }
-
-    state &quot;Scheduler Idle&quot; as GroupIdle {
-        state &quot;Idle Detected&quot; as IdleOnly
-        state &quot;Idle Thread Running&quot; as Idle
+        state &quot;Blocked (W &amp; ~0x20 != 0 || D != 0, T == ANY)&quot; as WaitingOnSP
     }
 
     state &quot;Terminated&quot; as Terminated
@@ -192,31 +187,29 @@ stateDiagram-v2
     ReadyPositive --&gt; ReadyZero: --T == 0
     ReadyZero --&gt; TimedOut: W == 0, W = 0x20
     ReadyPositive --&gt; TimedOut: OSSleep(0)
+    ReadyPositive --&gt; WaitingOnSP: OSSleep(-1)
 
-    TimedOut --&gt; IdleOnly: nextP() == 63
-    IdleOnly --&gt; ReadyPositive: W = 0, T = full(P)
-    IdleOnly --&gt; Idle: no thread left to run immediately
-    Idle --&gt; IdleOnly: some threads are eligible to run again
+    TimedOut --&gt; ReadyPositive: nextP() == 63, W &amp; ~0x20 == 0, W = 0, T = full(P)
 
     ReadyPositive --&gt; Sleeping: OSSleep(n&gt;0) or timed SP wait (D = n)
     ReadyZero --&gt; Sleeping: OSSleep(n&gt;0) or timed SP wait (D = n)
     Sleeping --&gt; Sleeping: D != -1, D -= step
     Sleeping --&gt; ReadyPositive: D != -1, D -= step, D &lt;= step
     Sleeping --&gt; ReadyZero: D != -1, D -= step, D &lt;= step, T == 0
-    Sleeping --&gt; Suspended: OSSuspendThread (W |= 0x08)
-    Suspended --&gt; Suspended: D != -1, D &gt; step, D -= step
-    Suspended --&gt; Suspended: D != -1, D &lt;= step, D = 1
+    Sleeping --&gt; Suspended: OSSuspendThread
+    Suspended --&gt; Suspended: D != -1, D != 0, if D &gt; step then D -= step else D = 1
 
     ReadyPositive --&gt; WaitingOnSP: indefinite SP wait
     ReadyZero --&gt; WaitingOnSP: indefinite SP wait
     WaitingOnSP --&gt; ReadyPositive: resolved SP wait (T = full(P), W &amp;= ~0x20)
+    WaitingOnSP --&gt; TimedOut: resolved SP wait, W &amp; 0x20 != 0
 
-    ReadyPositive --&gt; Suspended: OSSuspendThread (W |= 0x08)
-    ReadyZero --&gt; Suspended: OSSuspendThread (W |= 0x08)
-    TimedOut --&gt; Suspended: OSSuspendThread (W |= 0x08)
-    WaitingOnSP --&gt; Suspended: OSSuspendThread (W |= 0x08)
+    ReadyPositive --&gt; Suspended: OSSuspendThread
+    ReadyZero --&gt; Suspended: OSSuspendThread
+    TimedOut --&gt; Suspended: OSSuspendThread
+    WaitingOnSP --&gt; Suspended: OSSuspendThread
     Suspended --&gt; ReadyPositive: OSResumeThread, no SP wait (T = full(P))
-    Suspended --&gt; WaitingOnSP: OSResumeThread, has SP wait(s) (W &amp;= ~0x08)
+    Suspended --&gt; WaitingOnSP: OSResumeThread, has SP wait(s)
 
     ReadyPositive --&gt; Terminated: OSTerminateThread
     ReadyZero --&gt; Terminated: OSTerminateThread
