@@ -91,9 +91,10 @@ var searchData=
   ['surface_2eh_88',['surface.h',['../surface_8h.html',1,'(Global Namespace)'],['../types_2surface_8h.html',1,'(Global Namespace)']]],
   ['surface_5fcolor_89',['surface_color',['../structui__deskbox__s.html#a757e119d212448deea4735a2a047c6de',1,'ui_deskbox_s']]],
   ['suspended_90',['suspended',['../structpcm__config__s.html#a39c182c6264c759f3fd46d6f7a0039b1',1,'pcm_config_s']]],
-  ['sys_5falign_91',['SYS_ALIGN',['../common_8h.html#a7cfbdd1a9e16d40f0f7c8ef00c18ae25',1,'common.h']]],
-  ['sys_5fdword_92',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],
-  ['sys_5fis_5fprintf_93',['SYS_IS_PRINTF',['../common_8h.html#aad78f1ddd0830141e8ad38443423b42a',1,'common.h']]],
-  ['syspoweroff_94',['SysPowerOff',['../system_8h.html#a1242f094041fc8b774ce94f3790d6c84',1,'system.h']]],
-  ['system_2eh_95',['system.h',['../system_8h.html',1,'']]]
+  ['synchronization_20primitive_20wait_20timeout_91',['Synchronization primitive wait timeout',['../md_docs_210-kernel.html#autotoc_md9',1,'']]],
+  ['sys_5falign_92',['SYS_ALIGN',['../common_8h.html#a7cfbdd1a9e16d40f0f7c8ef00c18ae25',1,'common.h']]],
+  ['sys_5fdword_93',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],
+  ['sys_5fis_5fprintf_94',['SYS_IS_PRINTF',['../common_8h.html#aad78f1ddd0830141e8ad38443423b42a',1,'common.h']]],
+  ['syspoweroff_95',['SysPowerOff',['../system_8h.html#a1242f094041fc8b774ce94f3790d6c84',1,'system.h']]],
+  ['system_2eh_96',['system.h',['../system_8h.html',1,'']]]
 ];

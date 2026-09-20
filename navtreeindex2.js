@@ -26,7 +26,8 @@ var NAVTREEINDEX2 =
 "md_docs_200-introduction.html#autotoc_md1":[0,0],
 "md_docs_200-introduction.html#autotoc_md2":[0,1],
 "md_docs_210-kernel.html":[1],
-"md_docs_210-kernel.html#autotoc_md10":[1,2],
+"md_docs_210-kernel.html#autotoc_md10":[1,1,4],
+"md_docs_210-kernel.html#autotoc_md11":[1,2],
 "md_docs_210-kernel.html#autotoc_md4":[1,0],
 "md_docs_210-kernel.html#autotoc_md5":[1,1],
 "md_docs_210-kernel.html#autotoc_md6":[1,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "structbxc__fs__stat__t.html#a5fbeb447c37ce3bcdf85ffb95f0ff1b5":[4,0,7,0],
 "structbxc__fs__stat__t.html#aa810d305b89c472aa4769b1430115ac8":[4,0,7,3],
 "structbxc__fs__stat__t.html#ab475939e211fea2ad0b3f0f6aedf9fd7":[4,0,7,5],
-"structbxc__fs__stat__t.html#ab936f5ce4327c7df3c0abafde6b25f9e":[4,0,7,4],
-"structbxc__fs__stat__t.html#ac28ec22ca17f9af2069b67984d2af154":[4,0,7,7]
+"structbxc__fs__stat__t.html#ab936f5ce4327c7df3c0abafde6b25f9e":[4,0,7,4]
 };

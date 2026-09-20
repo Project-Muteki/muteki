@@ -23,7 +23,7 @@ var searchData=
   ['inversesetarea_20',['InverseSetArea',['../lcd_8h.html#a5ab7d9158ebf7827aa1317d2d8379bb4',1,'lcd.h']]],
   ['is_20besta_20rtos_20anyway_21',['So what &lt;em&gt;is&lt;/em&gt; Besta RTOS anyway?',['../md_docs_200-introduction.html#autotoc_md1',1,'']]],
   ['is_5finitialized_22',['is_initialized',['../structosdep__utls__stats__s.html#a623f4e29dd0638e68479f3d78bf57b0c',1,'osdep_utls_stats_s']]],
-  ['it_20all_20together_23',['Putting it all together',['../md_docs_210-kernel.html#autotoc_md9',1,'']]],
+  ['it_20all_20together_23',['Putting it all together',['../md_docs_210-kernel.html#autotoc_md10',1,'']]],
   ['item_5fcount_24',['item_count',['../structui__appview__s.html#a165a39e18bf733885dcd15a37290c55a',1,'ui_appview_s']]],
   ['item_5fheight_25',['item_height',['../structui__appview__s.html#ab8ae7fb1375a3d20aab81a3633b9da99',1,'ui_appview_s']]],
   ['item_5fid_26',['item_id',['../structui__appview__item__s.html#aebb6363d6b62f0fa1ec4d1846c5b994f',1,'ui_appview_item_s']]],

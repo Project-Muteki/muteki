@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"structpcm__config__s.html#a57af4653f44f20892481886dcc74669e":[4,0,37,0],
 "structpcm__config__s.html#a5e382dc6717daa1cc99425752b7fa878":[4,0,37,5],
 "structpcm__config__s.html#a8b4cfb5fcb546bd0173243e70a490ceb":[4,0,37,2],
 "structpcm__config__s.html#ac1ae7143add6e933aaa047e81bfaa4c1":[4,0,37,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structui__slider__s.html#ad9d364ccb5be1b9f570ebb3ebcc8e071":[4,0,63,4],
 "structui__slider__s.html#adc9d040919611ba95dbc24dc019356fb":[4,0,63,6],
 "structui__slider__s.html#ae86e68b7b70303d50d184059fe8377c4":[4,0,63,8],
-"structui__slider__s.html#aec82d17f5f201e404dd598e731049462":[4,0,63,2],
-"structui__slider__s.html#af2e0554cf09d10a763cf8c09a9a933df":[4,0,63,14]
+"structui__slider__s.html#aec82d17f5f201e404dd598e731049462":[4,0,63,2]
 };
