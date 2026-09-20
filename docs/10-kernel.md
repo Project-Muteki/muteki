@@ -34,19 +34,19 @@ stateDiagram-v2
 
     state "Ready (T > 0)" as ReadyPositive
 
-    state "Timed out" as GroupTimedOut {
+    state "Implicitly Waiting (Timed-out)" as GroupTimedOut {
         state "Ready, timeout expired (T == 0)" as ReadyZero
-        state "Timed-out (W == 0x20, T == 0)" as RoundDeferred
+        state "Timed-out (W == 0x20, T == 0)" as TimedOut
     }
     state "Explicitly Waiting" as GroupPaused {
-        state "Sleeping (D > 0, T == ANY)" as TimedWait
+        state "Sleeping (D > 0, T == ANY)" as Sleeping
         state "Suspended (W == 0x08, T == ANY)" as Suspended
-        state "Blocked (W & ~0x20 != 0, T == ANY)" as ObjectWait
+        state "Blocked (W & ~0x20 != 0, T == ANY)" as WaitingOnSP
     }
 
     state "Scheduler Idle" as GroupIdle {
-        state "Idle-only" as IdleOnly
-        state "Idling" as Idle
+        state "Idle Detected" as IdleOnly
+        state "Idle Thread Running" as Idle
     }
 
     state "Terminated" as Terminated
@@ -55,40 +55,41 @@ stateDiagram-v2
 
     ReadyPositive --> ReadyPositive: --T
     ReadyPositive --> ReadyZero: --T == 0
-    ReadyZero --> RoundDeferred: W == 0, W = 0x20
-    ReadyPositive --> RoundDeferred: OSSleep(0)
+    ReadyZero --> TimedOut: W == 0, W = 0x20
+    ReadyPositive --> TimedOut: OSSleep(0)
 
-    RoundDeferred --> IdleOnly: next() == 63
+    TimedOut --> IdleOnly: nextP() == 63
     IdleOnly --> ReadyPositive: W = 0, T = full(P)
     IdleOnly --> Idle: no thread left to run immediately
     Idle --> IdleOnly: some threads are eligible to run again
 
-    ReadyPositive --> TimedWait: OSSleep(n>0) or timed SP wait (D = n)
-    ReadyZero --> TimedWait: OSSleep(n>0) or timed SP wait (D = n)
-    TimedWait --> TimedWait: D -= step
-    TimedWait --> ReadyPositive: D -= step, D <= step
-    TimedWait --> ReadyZero: D -= step, D <= step, T == 0
-    TimedWait --> Suspended: OSSuspendThread (W |= 0x08)
+    ReadyPositive --> Sleeping: OSSleep(n>0) or timed SP wait (D = n)
+    ReadyZero --> Sleeping: OSSleep(n>0) or timed SP wait (D = n)
+    Sleeping --> Sleeping: D -= step
+    Sleeping --> ReadyPositive: D -= step, D <= step
+    Sleeping --> ReadyZero: D -= step, D <= step, T == 0
+    Sleeping --> Suspended: OSSuspendThread (W |= 0x08)
     Suspended --> Suspended: D > step, D -= step
     Suspended --> Suspended: D <= step, D = 1
 
-    ReadyPositive --> ObjectWait: indefinite SP wait
-    ReadyZero --> ObjectWait: indefinite SP wait
-    ObjectWait --> ReadyPositive: resolved SP wait (T = full(P), W &= ~0x20)
+    ReadyPositive --> WaitingOnSP: indefinite SP wait
+    ReadyZero --> WaitingOnSP: indefinite SP wait
+    WaitingOnSP --> ReadyPositive: resolved SP wait (T = full(P), W &= ~0x20)
 
     ReadyPositive --> Suspended: OSSuspendThread (W |= 0x08)
     ReadyZero --> Suspended: OSSuspendThread (W |= 0x08)
-    RoundDeferred --> Suspended: OSSuspendThread (W |= 0x08)
-    ObjectWait --> Suspended: OSSuspendThread (W |= 0x08)
+    TimedOut --> Suspended: OSSuspendThread (W |= 0x08)
+    WaitingOnSP --> Suspended: OSSuspendThread (W |= 0x08)
     Suspended --> ReadyPositive: OSResumeThread, no SP wait (T = full(P))
-    Suspended --> ObjectWait: OSResumeThread, has SP wait(s) (W &= ~0x08)
+    Suspended --> WaitingOnSP: OSResumeThread, has SP wait(s) (W &= ~0x08)
 
     ReadyPositive --> Terminated: OSTerminateThread
     ReadyZero --> Terminated: OSTerminateThread
-    RoundDeferred --> Terminated: OSTerminateThread
-    TimedWait --> Terminated: OSTerminateThread
+    TimedOut --> Terminated: OSTerminateThread
+    Sleeping --> Terminated: OSTerminateThread
     Suspended --> Terminated: OSTerminateThread
-    ObjectWait --> Terminated: OSTerminateThread
+    WaitingOnSP --> Terminated: OSTerminateThread
+
     Terminated --> [*]
 ```
 
@@ -99,7 +100,7 @@ Definitions:
 - `D`: the sleep counter (@ref bxc_thread_t.sleep_counter)
 - `P`: Current thread priority/slot number (@ref bxc_thread_t.slot)
 - `full(P)`: The function used to initialize the timeout value
-- `next()`: Priority of the next thread to be run
+- `nextP()`: Priority of the next thread to be run
 - `SP`: Synchronization primitives
 
 ## Footnotes
