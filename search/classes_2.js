@@ -11,5 +11,6 @@ var searchData=
   ['bxc_5fqueue_5fs_8',['bxc_queue_s',['../structbxc__queue__s.html',1,'']]],
   ['bxc_5fsemaphore_5fs_9',['bxc_semaphore_s',['../structbxc__semaphore__s.html',1,'']]],
   ['bxc_5fthread_5fs_10',['bxc_thread_s',['../structbxc__thread__s.html',1,'']]],
-  ['bxc_5fwaitable_5ft_11',['bxc_waitable_t',['../structbxc__waitable__t.html',1,'']]]
+  ['bxc_5fwaitable_5fdesc_5fu_11',['bxc_waitable_desc_u',['../unionbxc__waitable__desc__u.html',1,'']]],
+  ['bxc_5fwaitable_5ft_12',['bxc_waitable_t',['../structbxc__waitable__t.html',1,'']]]
 ];

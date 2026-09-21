@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deprecated_20list_0',['Deprecated List',['../deprecated.html',1,'']]]
+  ['critical_20section_0',['Critical section',['../md_docs_210-kernel.html#autotoc_md13',1,'']]]
 ];

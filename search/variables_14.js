@@ -58,7 +58,9 @@ var searchData=
   ['used_55',['used',['../structbxc__fs__stat__t.html#acb8fce21b4598e741c399957d7a4f506',1,'bxc_fs_stat_t']]],
   ['used_5fkb_56',['used_kb',['../structbxc__fs__stat__t.html#ae75e99e980d4f8ba8df8dcf35a404777',1,'bxc_fs_stat_t']]],
   ['user_5fdata_57',['user_data',['../structui__button__s.html#a8f2e33eed6a02bf919ef471fe1c12892',1,'ui_button_s::user_data'],['../structui__deskbox__s.html#a22a0d6c97b91d81646c2eaaa0fd95c67',1,'ui_deskbox_s::user_data'],['../structui__component__s.html#ad1c7f870630648915d5bde12577e9d8e',1,'ui_component_s::user_data'],['../unionui__event__sys__s_1_1_0funion_0e_8____unnamed1____.html#a3fa9e44d6dd1cd4eb0affd4d81c9a7c9',1,'ui_event_sys_s::[union].__unnamed1__::user_data']]],
-  ['user_5fdata2_58',['user_data2',['../unionui__event__ext__s_1_1_0funion_0e_8____unnamed0____.html#abafe2b182964d35a2eab7b02d1c8d93d',1,'ui_event_ext_s::[union].__unnamed0__']]],
-  ['user_5fdata2_5fscalar_59',['user_data2_scalar',['../unionui__event__ext__s_1_1_0funion_0e_8____unnamed0____.html#a1ce79faad27faa6be3cfa5168181559b',1,'ui_event_ext_s::[union].__unnamed0__']]],
-  ['user_5fdata_5fscalar_60',['user_data_scalar',['../unionui__event__sys__s_1_1_0funion_0e_8____unnamed1____.html#a9b8ccc8a348f288874f28fbed6dd2da2',1,'ui_event_sys_s::[union].__unnamed1__']]]
+  ['user_5fdata0_58',['user_data0',['../structbxc__waitable__desc__u_1_1_0fstruct_0e_8____unnamed0____.html#af0312f64651e321ae3c6fcf9ceba5a11',1,'bxc_waitable_desc_u::[struct].__unnamed0__']]],
+  ['user_5fdata1_59',['user_data1',['../structbxc__waitable__desc__u_1_1_0fstruct_0e_8____unnamed0____.html#aa268393ba80eb9335325a4fc8146e615',1,'bxc_waitable_desc_u::[struct].__unnamed0__']]],
+  ['user_5fdata2_60',['user_data2',['../structbxc__waitable__desc__u_1_1_0fstruct_0e_8____unnamed0____.html#ace8dbb26f742786e182e86af1a05a711',1,'bxc_waitable_desc_u::[struct].__unnamed0__::user_data2'],['../unionui__event__ext__s_1_1_0funion_0e_8____unnamed0____.html#abafe2b182964d35a2eab7b02d1c8d93d',1,'ui_event_ext_s::[union].__unnamed0__::user_data2']]],
+  ['user_5fdata2_5fscalar_61',['user_data2_scalar',['../unionui__event__ext__s_1_1_0funion_0e_8____unnamed0____.html#a1ce79faad27faa6be3cfa5168181559b',1,'ui_event_ext_s::[union].__unnamed0__']]],
+  ['user_5fdata_5fscalar_62',['user_data_scalar',['../unionui__event__sys__s_1_1_0funion_0e_8____unnamed1____.html#a9b8ccc8a348f288874f28fbed6dd2da2',1,'ui_event_sys_s::[union].__unnamed1__']]]
 ];

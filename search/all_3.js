@@ -173,5 +173,7 @@ var searchData=
   ['bxc_5fwait_5fresult_5fresolved_170',['BXC_WAIT_RESULT_RESOLVED',['../muteki_2threading_8h.html#a127deb504a9a816dafcd229ad9eb9938a67c612437f5b110f51b6f3c771bb4a32',1,'threading.h']]],
   ['bxc_5fwait_5fresult_5ft_171',['bxc_wait_result_t',['../muteki_2threading_8h.html#a4a0a2a564d40c24115c06a4207c9d82c',1,'threading.h']]],
   ['bxc_5fwait_5fresult_5ftimeout_172',['BXC_WAIT_RESULT_TIMEOUT',['../muteki_2threading_8h.html#a127deb504a9a816dafcd229ad9eb9938a59715d80bfa50114e5d2f8c8f7cfbd94',1,'threading.h']]],
-  ['bxc_5fwaitable_5ft_173',['bxc_waitable_t',['../structbxc__waitable__t.html',1,'']]]
+  ['bxc_5fwaitable_5fdesc_5ft_173',['bxc_waitable_desc_t',['../muteki_2threading_8h.html#ad3ab3386011e9990c35eed06f1c51c82',1,'threading.h']]],
+  ['bxc_5fwaitable_5fdesc_5fu_174',['bxc_waitable_desc_u',['../unionbxc__waitable__desc__u.html',1,'']]],
+  ['bxc_5fwaitable_5ft_175',['bxc_waitable_t',['../structbxc__waitable__t.html',1,'']]]
 ];

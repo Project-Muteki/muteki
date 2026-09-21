@@ -1,7 +1,7 @@
 var structbxc__thread__s =
 [
     [ "[union].__unnamed0__", "unionbxc__thread__s_1_1_0funion_0e_8____unnamed0____.html", "unionbxc__thread__s_1_1_0funion_0e_8____unnamed0____" ],
-    [ "event", "structbxc__thread__s.html#a3afabc40fbf319fe12396018d198a587", null ],
+    [ "event", "structbxc__thread__s.html#a9296e12b3aaee9a3a347cb09b6771da3", null ],
     [ "exit_code", "structbxc__thread__s.html#a74c6fb6d0e9d50e1840fdf8bae533509", null ],
     [ "kerrno", "structbxc__thread__s.html#ad057a872f6c784d20e0e1b4e87ed89bb", null ],
     [ "magic", "structbxc__thread__s.html#a6265d5ca179c99abe8f1e03d46f26cec", null ],

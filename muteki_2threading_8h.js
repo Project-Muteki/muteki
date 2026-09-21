@@ -7,6 +7,7 @@ var muteki_2threading_8h =
     [ "bxc_event_s", "structbxc__event__s.html", "structbxc__event__s" ],
     [ "bxc_cs_s", "structbxc__cs__s.html", "structbxc__cs__s" ],
     [ "bxc_queue_s", "structbxc__queue__s.html", "structbxc__queue__s" ],
+    [ "bxc_waitable_desc_u", "unionbxc__waitable__desc__u.html", "unionbxc__waitable__desc__u" ],
     [ "bxc_cs_t", "muteki_2threading_8h.html#aee6b70143491b03577625038fc2756c9", null ],
     [ "bxc_event_t", "muteki_2threading_8h.html#a0bb8ff1a8a966ad59153f937cda6dccc", null ],
     [ "bxc_queue_message_t", "muteki_2threading_8h.html#aeb2727179d110bb5281fefe0d4cda5b5", null ],
@@ -15,6 +16,7 @@ var muteki_2threading_8h =
     [ "bxc_thread_func_t", "muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47", null ],
     [ "bxc_thread_t", "muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444", null ],
     [ "bxc_wait_result_t", "muteki_2threading_8h.html#a4a0a2a564d40c24115c06a4207c9d82c", null ],
+    [ "bxc_waitable_desc_t", "muteki_2threading_8h.html#ad3ab3386011e9990c35eed06f1c51c82", null ],
     [ "bxc_threading_kind_e", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9", [
       [ "BXC_THREADING_KIND_THREAD", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9a58d7110ff176528c4f69702d0bb0feec", null ],
       [ "BXC_THREADING_KIND_SEMAPHORE", "muteki_2threading_8h.html#a53bff2beb9a73ca176fed5c650606ea9a5a231062be324a68818b16fc66224be4", null ],

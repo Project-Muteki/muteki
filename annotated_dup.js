@@ -12,6 +12,7 @@ var annotated_dup =
     [ "bxc_queue_s", "structbxc__queue__s.html", "structbxc__queue__s" ],
     [ "bxc_semaphore_s", "structbxc__semaphore__s.html", "structbxc__semaphore__s" ],
     [ "bxc_thread_s", "structbxc__thread__s.html", "structbxc__thread__s" ],
+    [ "bxc_waitable_desc_u", "unionbxc__waitable__desc__u.html", "unionbxc__waitable__desc__u" ],
     [ "bxc_waitable_t", "structbxc__waitable__t.html", "structbxc__waitable__t" ],
     [ "device_service_pcm_s", "structdevice__service__pcm__s.html", null ],
     [ "devio_descriptor_t", "structdevio__descriptor__t.html", "structdevio__descriptor__t" ],

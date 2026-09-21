@@ -11,5 +11,6 @@ var searchData=
   ['bxc_5fsemaphore_5ft_8',['bxc_semaphore_t',['../muteki_2threading_8h.html#aa26f97777c14615ae185184b44d39f33',1,'threading.h']]],
   ['bxc_5fthread_5ffunc_5ft_9',['bxc_thread_func_t',['../muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47',1,'threading.h']]],
   ['bxc_5fthread_5ft_10',['bxc_thread_t',['../muteki_2threading_8h.html#a30f168be2bec4f3c60653ccbb9f61444',1,'threading.h']]],
-  ['bxc_5fwait_5fresult_5ft_11',['bxc_wait_result_t',['../muteki_2threading_8h.html#a4a0a2a564d40c24115c06a4207c9d82c',1,'threading.h']]]
+  ['bxc_5fwait_5fresult_5ft_11',['bxc_wait_result_t',['../muteki_2threading_8h.html#a4a0a2a564d40c24115c06a4207c9d82c',1,'threading.h']]],
+  ['bxc_5fwaitable_5fdesc_5ft_12',['bxc_waitable_desc_t',['../muteki_2threading_8h.html#ad3ab3386011e9990c35eed06f1c51c82',1,'threading.h']]]
 ];
