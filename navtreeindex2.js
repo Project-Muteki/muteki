@@ -43,7 +43,9 @@ var NAVTREEINDEX2 =
 "md_docs_210-kernel.html#autotoc_md18":[2,2],
 "md_docs_210-kernel.html#autotoc_md19":[2,2,0],
 "md_docs_210-kernel.html#autotoc_md20":[2,2,1],
-"md_docs_210-kernel.html#autotoc_md21":[2,3],
+"md_docs_210-kernel.html#autotoc_md21":[2,2,2],
+"md_docs_210-kernel.html#autotoc_md22":[2,2,3],
+"md_docs_210-kernel.html#autotoc_md23":[2,3],
 "memory_8h.html":[6,0,0,0,11],
 "memory_8h.html#a2e424db782d9834535c938da6b2d3890":[6,0,0,0,11,2],
 "memory_8h.html#a3aaeb9828173fa29b9788c7edeb490bb":[6,0,0,0,11,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "structbxc__fs__parts__dos__s.html#a60427741906fc55aaa0478812dd1a42f":[5,0,5,3],
 "structbxc__fs__parts__dos__s.html#a8c0915f14649680bcd0a07e7f8ff7026":[5,0,5,0],
 "structbxc__fs__parts__dos__s.html#acec5c8a4777e97d78f23f1c81f641c16":[5,0,5,2],
-"structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2":[5,0,5,4],
-"structbxc__fs__parts__dos__s.html#af6549ce02678c1d4e5c6f0876bb3aa3a":[5,0,5,1],
-"structbxc__fs__parts__lfn__s.html":[5,0,6]
+"structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2":[5,0,5,4]
 };
