@@ -171,8 +171,8 @@ typedef enum <a class="el" href="#a127deb504a9a816dafcd229ad9eb9938">bxc_wait_re
 <tr class="memitem:a902ee099cfb026f0ff9e68926bf11e47" id="r_a902ee099cfb026f0ff9e68926bf11e47"><td class="memItemLeft"><a id="a902ee099cfb026f0ff9e68926bf11e47" name="a902ee099cfb026f0ff9e68926bf11e47"></a>
 typedef int(*)&#160;</td><td class="memItemRight"><b>bxc_thread_func_t</b>(void *user_data)</td></tr>
 <tr class="memdesc:a902ee099cfb026f0ff9e68926bf11e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread function type. <br /></td></tr>
-<tr class="memitem:aeb2727179d110bb5281fefe0d4cda5b5" id="r_aeb2727179d110bb5281fefe0d4cda5b5"><td class="memItemLeft">typedef char&#160;</td><td class="memItemRight"><a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a>[16]</td></tr>
-<tr class="memdesc:aeb2727179d110bb5281fefe0d4cda5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message type for message queues.  <br /></td></tr>
+<tr class="memitem:afe938a33fc3231d7a0beb23b9efbbb4c" id="r_afe938a33fc3231d7a0beb23b9efbbb4c"><td class="memItemLeft">typedef unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a>[16]</td></tr>
+<tr class="memdesc:afe938a33fc3231d7a0beb23b9efbbb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message type for message queues.  <br /></td></tr>
 <tr class="memitem:a30f168be2bec4f3c60653ccbb9f61444" id="r_a30f168be2bec4f3c60653ccbb9f61444"><td class="memItemLeft"><a id="a30f168be2bec4f3c60653ccbb9f61444" name="a30f168be2bec4f3c60653ccbb9f61444"></a>
 typedef struct <a class="el" href="structbxc__thread__s.html">bxc_thread_s</a>&#160;</td><td class="memItemRight"><b>bxc_thread_t</b></td></tr>
 <tr class="memdesc:a30f168be2bec4f3c60653ccbb9f61444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread descriptor type. <br /></td></tr>
@@ -267,13 +267,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:a7e98794429f54eede7b84741498fe761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a critical section descriptor.  <br /></td></tr>
 <tr class="memitem:aec277c47416fbd31e75db6ae0770a5ff" id="r_aec277c47416fbd31e75db6ae0770a5ff"><td class="memItemLeft"><a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aec277c47416fbd31e75db6ae0770a5ff">OSCreateMsgQue</a> (unsigned short size)</td></tr>
 <tr class="memdesc:aec277c47416fbd31e75db6ae0770a5ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a message queue descriptor.  <br /></td></tr>
-<tr class="memitem:a9950450ccc99265fc73536bb708de0c7" id="r_a9950450ccc99265fc73536bb708de0c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9950450ccc99265fc73536bb708de0c7">OSPostMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, const <a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *message)</td></tr>
+<tr class="memitem:a9950450ccc99265fc73536bb708de0c7" id="r_a9950450ccc99265fc73536bb708de0c7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a9950450ccc99265fc73536bb708de0c7">OSPostMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, const <a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:a9950450ccc99265fc73536bb708de0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a message into the queue.  <br /></td></tr>
-<tr class="memitem:ac8e39224f020db90833e0c698eade40e" id="r_ac8e39224f020db90833e0c698eade40e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8e39224f020db90833e0c698eade40e">OSSendMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, const <a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *message)</td></tr>
+<tr class="memitem:ac8e39224f020db90833e0c698eade40e" id="r_ac8e39224f020db90833e0c698eade40e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac8e39224f020db90833e0c698eade40e">OSSendMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, const <a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:ac8e39224f020db90833e0c698eade40e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Push a message into the queue and reschedule immediately.  <br /></td></tr>
-<tr class="memitem:a33187f9f30974b2a12766e091018c6ef" id="r_a33187f9f30974b2a12766e091018c6ef"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a33187f9f30974b2a12766e091018c6ef">OSPeekMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, <a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *message)</td></tr>
-<tr class="memdesc:a33187f9f30974b2a12766e091018c6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peek the bottom of the queue without popping the message.  <br /></td></tr>
-<tr class="memitem:a2bcb3402098bb8d1b9ff4f37bedc1d73" id="r_a2bcb3402098bb8d1b9ff4f37bedc1d73"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2bcb3402098bb8d1b9ff4f37bedc1d73">OSGetMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, <a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *message)</td></tr>
+<tr class="memitem:a33187f9f30974b2a12766e091018c6ef" id="r_a33187f9f30974b2a12766e091018c6ef"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a33187f9f30974b2a12766e091018c6ef">OSPeekMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, <a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *message)</td></tr>
+<tr class="memdesc:a33187f9f30974b2a12766e091018c6ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop a message from the queue asynchronously.  <br /></td></tr>
+<tr class="memitem:a2bcb3402098bb8d1b9ff4f37bedc1d73" id="r_a2bcb3402098bb8d1b9ff4f37bedc1d73"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2bcb3402098bb8d1b9ff4f37bedc1d73">OSGetMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue, <a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *message)</td></tr>
 <tr class="memdesc:a2bcb3402098bb8d1b9ff4f37bedc1d73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop a message from the queue.  <br /></td></tr>
 <tr class="memitem:ab5ccc36f20ccd792d51c9b64d6d8d337" id="r_ab5ccc36f20ccd792d51c9b64d6d8d337"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab5ccc36f20ccd792d51c9b64d6d8d337">OSCloseMsgQue</a> (<a class="el" href="#a48a69c3ac5894ef921e3cf340ff08600">bxc_queue_t</a> *queue)</td></tr>
 <tr class="memdesc:ab5ccc36f20ccd792d51c9b64d6d8d337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a message queue descriptor.  <br /></td></tr>
@@ -283,14 +283,14 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Native threading API. </p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
-<a id="aeb2727179d110bb5281fefe0d4cda5b5" name="aeb2727179d110bb5281fefe0d4cda5b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb2727179d110bb5281fefe0d4cda5b5">&#9670;&#160;</a></span>bxc_queue_message_t</h2>
+<a id="afe938a33fc3231d7a0beb23b9efbbb4c" name="afe938a33fc3231d7a0beb23b9efbbb4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe938a33fc3231d7a0beb23b9efbbb4c">&#9670;&#160;</a></span>bxc_queue_message_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef char bxc_queue_message_t[16]</td>
+          <td class="memname">typedef unsigned char bxc_queue_message_t[16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -575,7 +575,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Create a message queue descriptor. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10018</span> </dd></dl>
+<p>Effective queue size will be <code class="param">size</code> - 1 due to how the internal ring buffer implementation tracks usage. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10018</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>Size of the queue in number of messages (will use <span class="tt">sizeof(</span>::message_queue_message_t<span class="tt">) * size</span> bytes of memory). </td></tr>
@@ -697,7 +697,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroy a critical section descriptor. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10015</span> </dd></dl>
+<p>This does not ensure that the critical section's users are properly notified. Therefore one must ensure that no thread is waiting on the critical section before attempting to call this function on it. </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x10015</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">cs</td><td>The critical section descriptor.</td></tr>
@@ -843,7 +843,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -994,7 +994,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1004,7 +1004,8 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Peek the bottom of the queue without popping the message. </p>
+<p>Pop a message from the queue asynchronously. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This is a destructive operation despite the name may suggest that it is not. </dd></dl>
 <dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1001b</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1040,7 +1041,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1209,7 +1210,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="#aeb2727179d110bb5281fefe0d4cda5b5">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="#afe938a33fc3231d7a0beb23b9efbbb4c">bxc_queue_message_t</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -1220,7 +1221,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Push a message into the queue and reschedule immediately. </p>
-<dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1001a</span> </dd></dl>
+<p>This results in the thread receiving a message </p><dl class="section user"><dt>Syscall Number</dt><dd><span class="tt">0x1001a</span> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">queue</td><td>The message queue descriptor. </td></tr>

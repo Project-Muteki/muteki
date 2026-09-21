@@ -10,7 +10,7 @@ var muteki_2threading_8h =
     [ "bxc_waitable_desc_u", "unionbxc__waitable__desc__u.html", "unionbxc__waitable__desc__u" ],
     [ "bxc_cs_t", "muteki_2threading_8h.html#aee6b70143491b03577625038fc2756c9", null ],
     [ "bxc_event_t", "muteki_2threading_8h.html#a0bb8ff1a8a966ad59153f937cda6dccc", null ],
-    [ "bxc_queue_message_t", "muteki_2threading_8h.html#aeb2727179d110bb5281fefe0d4cda5b5", null ],
+    [ "bxc_queue_message_t", "muteki_2threading_8h.html#afe938a33fc3231d7a0beb23b9efbbb4c", null ],
     [ "bxc_queue_t", "muteki_2threading_8h.html#a48a69c3ac5894ef921e3cf340ff08600", null ],
     [ "bxc_semaphore_t", "muteki_2threading_8h.html#aa26f97777c14615ae185184b44d39f33", null ],
     [ "bxc_thread_func_t", "muteki_2threading_8h.html#a902ee099cfb026f0ff9e68926bf11e47", null ],

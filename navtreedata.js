@@ -53,7 +53,7 @@ var NAVTREE =
         [ "Critical section", "md_docs_210-kernel.html#autotoc_md20", null ],
         [ "Semaphore", "md_docs_210-kernel.html#autotoc_md21", null ],
         [ "Event", "md_docs_210-kernel.html#autotoc_md22", null ],
-        [ "Queues", "md_docs_210-kernel.html#autotoc_md23", null ]
+        [ "Queue", "md_docs_210-kernel.html#autotoc_md23", null ]
       ] ],
       [ "Footnotes", "md_docs_210-kernel.html#autotoc_md24", null ]
     ] ],
