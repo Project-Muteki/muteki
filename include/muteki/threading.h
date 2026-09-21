@@ -175,6 +175,10 @@ typedef struct bxc_cs_s bxc_cs_t;
  * @brief Message queue descriptor type.
  */
 typedef struct bxc_queue_s bxc_queue_t;
+/**
+ * @brief Waitable object union used by ::bxc_thread_t.
+ */
+typedef union bxc_waitable_desc_u bxc_waitable_desc_t;
 
 /**
  * @brief Thread descriptor structure.
@@ -251,9 +255,9 @@ struct bxc_thread_s {
      */
     unsigned char slot_high3b_bit;
     /**
-     * @brief Event descriptor that the thread is waiting for.
+     * @brief Waitable object (excluding critical sections) that the thread is waiting for.
      */
-    bxc_event_t *event;
+    bxc_waitable_desc_t *event;
     /**
      * @brief Previous thread descriptor.
      */
@@ -392,6 +396,67 @@ struct bxc_queue_s {
      * @brief @x_term{padding}
      */
     char _padding_0x13;
+};
+
+/**
+ * @brief Generic waitable descriptor.
+ */
+union bxc_waitable_desc_u {
+    struct {
+        /**
+         * @brief Magic/runtime descriptor kind identifier.
+         * @see bxc_threading_kind_e
+         */
+        int magic;
+        /**
+         * @brief Defined by synchronization primitive.
+         */
+        intptr_t user_data0;
+        /**
+         * @brief Defined by synchronization primitive.
+         */
+        short user_data1;
+        /**
+         * @brief Wait state of the current descriptor.
+         * @see bxc_waitable_t
+         */
+        bxc_waitable_t wait_state;
+        /**
+         * @brief Defined by synchronization primitive.
+         */
+        char user_data2;
+    };
+
+    /**
+     * @brief Semaphore-specific reader.
+     * @details Applicable when bxc_waitable_desc_t::magic is BXC_THREADING_KIND_SEMAPHORE.
+     */
+    bxc_semaphore_t semaphore;
+    /**
+     * @brief Event-specific reader.
+     * @details Applicable when bxc_waitable_desc_t::magic is BXC_THREADING_KIND_EVENT.
+     */
+    bxc_event_t event;
+    /**
+     * @brief Critical section-specific reader.
+     * @details May be applicable when bxc_waitable_desc_t::magic is BXC_THREADING_KIND_CS_QUEUE.
+     * @warning Just bxc_waitable_desc_t::magic alone is not enough to differentiate between a critical section and a
+     * queue. In fact there is no logically sound way to do so. One can try to use bxc_waitable_desc_t::user_data0
+     * to probabilistically differentiate between the two by checking whether it is a `NULL` (meaning likely an unused
+     * critical section), or if not, dereferencing it as a pointer and check whether it points to a value of
+     * ::BXC_THREADING_KIND_THREAD. If one of these is true, the descriptor is likely a critical section.
+     */
+    bxc_cs_t cs;
+    /**
+     * @brief Queue-specific reader.
+     * @details May be applicable when bxc_waitable_desc_t::magic is BXC_THREADING_KIND_CS_QUEUE.
+     * @warning Just bxc_waitable_desc_t::magic alone is not enough to differentiate between a critical section and a
+     * queue. In fact there is no logically sound way to do so. One can try to use bxc_waitable_desc_t::user_data0
+     * to probabilistically differentiate between the two by checking whether it is a `NULL` (meaning likely an unused
+     * critical section), or if not, dereferencing it as a pointer and check whether it points to a value of
+     * ::BXC_THREADING_KIND_THREAD. If one of these is true, the descriptor is likely a critical section.
+     */
+    bxc_queue_t queue;
 };
 
 /**

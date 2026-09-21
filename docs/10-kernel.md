@@ -31,7 +31,7 @@ Certain synchronization primitives (semaphore and event) can either wait indefin
 > [!NOTE]
 > This blocking behavior can apparently also be triggered by using OSSleep(). This basically results in a dead thread that cannot be waken up automatically other than by manually setting the counter back to `0` from another thread (with e.g. OSWakeUpThread()).
 
-Other synchronization that does not time out (critical section) blocks the thread indefinitely until they are resolved by another thread. They also write `-1` to @ref bxc_thread_t.sleep_counter for the reason mentioned above.
+Other synchronization primitives that do not time out (critical section and queue) blocks the thread indefinitely until they are resolved by another thread. They also write `-1` to @ref bxc_thread_t.sleep_counter for the reason mentioned above.
 
 ### Putting it all together
 
@@ -105,6 +105,32 @@ Definitions:
 - `nextP()`: Priority of the next thread to be run
 - `SP`: Synchronization primitives
 - `step`: @f$ U_{unit} @f$
+
+## Synchronization primitives
+
+Besta RTOS provides four types of synchronization primitives: critical section, semaphore, event and queue.
+
+### General data structure
+
+Like their uC/OS-II counterpart Event Control Block (ECB), all synchronization primitives follow a common data layout, documented as @ref bxc_waitable_desc_u. The simplified version looks like this:
+
+```c
+typedef struct {
+    int magic;
+    intptr_t user_data0;
+    short user_data1;
+    bxc_waitable_t wait_state;
+    char user_data2;
+} bxc_synch_primitive_t;
+```
+
+The scheduler uses `magic` to differentiate among the synchronization primitives. Different types of synchronization primitives can also store their own data in `user_data*` members. `wait_state` holds the same data as the uC/OS-II's `OSEventGrp` and `OSEventTbl` members of the [ECB](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163893/Event+Control+Blocks#Use-of-Event-Control-Blocks) combined as one, and is also semantically the same as `OSEventGrp` + `OSEventTbl`.
+
+### Critical section
+
+Critical sections provide a way to synchronize between two threads in a mutually exclusive manner (i.e. one thread can ensure a block of code that accesses specific resources is executed without being interleaved by code from another thread that attempts to access the same resources). They are also known as [locks](https://en.wikipedia.org/wiki/Lock_(computer_science)) or mutexes on other operating systems.
+
+The Besta RTOS implementation of critical section shares similar idea from the uC/OS-II mutex: they both update a flag that is local to the synchronization primitive and only touches the thread when it needs to wait. The implementations however slightly differ. The Besta RTOS implementation supports recursive locking, and therefore it maintains a counter instead of a binary flag. Whenever a thread is trying to recursively acquire the critical section, the counter gets incremented by one. The reverse happens when the same thread tries to release it. When a different thread tries to get a hold on it however, that thread will be immediately told to wait, until the first thread releases it. If multiple threads are trying to wait on the same critical section, the highest priority thread wins.
 
 ## Footnotes
 
