@@ -18,11 +18,11 @@ TODO
 
 Muteki provides first tier support for the [Meson build system](https://mesonbuild.com/). Simply use or clone the [template repository](https://github.com/Project-Muteki/meson-project-template), as well as clone the [cross files](https://github.com/Project-Muteki/meson-cross) repository to get started.
 
-![template](./img/template.png)
+![Creating repository on GitHub from the official template](./img/template.png)
 
 Once you created your own repository, it may look something like this:
 
-![layout](./img/layout.png)
+![Sample project layout](./img/layout.png)
 
 The `src` folder will contains all the source code of your project and any applet metadata, and the `include` folder will contain any common headers. The `meson.build` file in the root directory defines how various build tools should be found, and the `meson.build` under the `src` folder defines how the applet should be built.
 
