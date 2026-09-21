@@ -144,10 +144,12 @@ Semaphore supports both definite and indefinite wait. In definite wait mode, the
 
 ### Event
 
-An event signals a its subscriber threads that something has happened. Unlike its name suggests, Besta RTOS's event implementation is closer related to uC/OS-II's [message mailbox](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163874/Message+Mailbox+Management), minus the ability to pass arbitrary messages, then the similarly named event flag groups. Instead of checking whether a message is available, Besta's event implementation simply checks for a numerical flag and either resolves when the flag is 1, or waits when the flag is 0.
+An event signals a its subscriber threads that something has happened. Unlike its name suggests, Besta RTOS's event implementation is closer related to uC/OS-II's [message mailbox](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163874/Message+Mailbox+Management), minus the ability to pass arbitrary messages@ref note_2 "<sup>2</sup>": Instead of checking whether a message is available, Besta's event implementation simply checks for a numerical flag and either resolves when the flag is 1, or waits when the flag is 0.
 
 Like semaphores, events also support both definite and indefinite wait.
 
 ## Footnotes
 
 @anchor note_1 1. To be exact, in case of a scheduler tick, the scheduler actually takes out all the threads that are otherwise not waiting on anything other than @ref BXC_WAIT_ON_YIELD, meaning it does not matter whether or not that bit is actually set, at least in this specific case.
+
+@anchor note_2 2. A similarly named synchronization primitive in uC/OS-II called an [event flag group](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163897/Event+Flag+Management) is both substantially more complex and less similar to a Besta RTOS event. The wait state bit (@ref BXC_WAIT_ON_EVENT) of Besta RTOS event also shares the same numeric value as the wait state bit of uC/OS-II mailbox (`OS_STAT_MBOX`, both are `0x02`). Therefore it is less plausible that the event flag group was the origin of Besta RTOS events, instead mailbox seems to be a more convincing candidate.
