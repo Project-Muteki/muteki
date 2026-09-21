@@ -126,7 +126,7 @@ typedef struct {
  * @details This needs to be 4 byte aligned since the inline memcpy in the internal FIFO queue routines use hardcoded
  * ldm/stm.
  */
-typedef char bxc_queue_message_t[16] SYS_ALIGN(4);
+typedef unsigned char bxc_queue_message_t[16] SYS_ALIGN(4);
 
 /**
  * @brief Nonatomic backend storage for message queues.
@@ -667,6 +667,8 @@ extern void OSLeaveCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Destroy a critical section descriptor.
+ * @details This does not ensure that the critical section's users are properly notified. Therefore one must ensure
+ * that no thread is waiting on the critical section before attempting to call this function on it.
  * @x_syscall_num{0x10015}
  * @param[in, out] cs The critical section descriptor.
  * @x_void_return
@@ -675,6 +677,7 @@ extern void OSDeleteCriticalSection(bxc_cs_t *cs);
 
 /**
  * @brief Create a message queue descriptor.
+ * @details Effective queue size will be @p size - 1 due to how the internal ring buffer implementation tracks usage.
  * @x_syscall_num{0x10018}
  * @param size Size of the queue in number of messages (will use `sizeof(`::message_queue_message_t`) * size` bytes of
  * memory).
@@ -694,6 +697,7 @@ extern bool OSPostMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message)
 
 /**
  * @brief Push a message into the queue and reschedule immediately.
+ * @details This results in the thread receiving a message 
  * @x_syscall_num{0x1001a}
  * @param queue The message queue descriptor.
  * @param message The message being pushed.
@@ -703,7 +707,8 @@ extern bool OSPostMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message)
 extern bool OSSendMsgQue(bxc_queue_t *queue, const bxc_queue_message_t *message);
 
 /**
- * @brief Peek the bottom of the queue without popping the message.
+ * @brief Pop a message from the queue asynchronously.
+ * @warning This is a destructive operation despite the name may suggest that it is not.
  * @x_syscall_num{0x1001b}
  * @param queue The message queue descriptor.
  * @param message The result message.

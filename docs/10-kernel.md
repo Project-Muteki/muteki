@@ -130,9 +130,9 @@ The scheduler uses `magic` to differentiate among the synchronization primitives
 
 Critical sections provide a way to synchronize between two threads in a mutually exclusive manner (i.e. one thread can ensure a block of code that accesses specific resources is executed without being interleaved by code from another thread that attempts to access the same resources). They are also known as [locks](https://en.wikipedia.org/wiki/Lock_(computer_science)) or mutexes on other operating systems.
 
-The Besta RTOS implementation of critical section shares similar idea with the [uC/OS-II mutex](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163896/Mutual+Exclusion+Semaphores): they both update a flag that is local to the synchronization primitive and only touch the thread when the thread needs to wait for them. The implementations however slightly differ. The Besta RTOS implementation supports recursive locking, and therefore it maintains a counter instead of a binary flag. Whenever a thread is trying to recursively acquire the critical section, the counter gets incremented by one. The reverse happens when the same thread tries to release it. When a different thread tries to get a hold on it however, that thread will be immediately told to wait, until the first thread releases it. If multiple threads are trying to wait on the same critical section, the highest priority thread wins.
+The Besta RTOS implementation of critical section shares similar idea with the [uC/OS-II mutex](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163896/Mutual+Exclusion+Semaphores): they both update a flag that is local to the synchronization primitive and only touch the thread when the thread needs to wait for them. The implementations however differ. The Besta RTOS implementation supports recursive locking, and therefore it maintains a counter instead of a binary flag. Whenever a thread is trying to recursively acquire the critical section, the counter gets incremented by one. The reverse happens when the same thread tries to release it. When a different thread tries to get a hold on it however, that thread will be immediately told to wait, until the first thread releases it. If multiple threads are trying to wait on the same critical section, the highest priority thread wins.
 
-Critical sections only support indefinite wait and has no concept of timeout, and the acquire operation against a critical section always succeeds.
+Critical sections only support indefinite wait and has no concept of timeout, and the acquire/release operation against a critical section always eventually succeeds. They also do not register with the thread when that thread owns it, unlike other Besta RTOS synchronization primitives, or even its uC/OS-II counterpart.
 
 ### Semaphore
 
@@ -148,9 +148,13 @@ An event signals its subscriber threads that something has happened. Unlike its 
 
 Like semaphores, events also support both definite and indefinite wait.
 
-### Queues
+### Queue
 
 A queue passes user messages between threads in a synchronous, first-in-first-out manner.
+
+The Besta RTOS implementation of the queue resembles the uC/OS-II [message queue](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163860/Message+Queue+Management): Both use a ring buffer with a waitable wrapper to implement the synchronization primitive. The implementations however are not exactly the same. The Besta RTOS implementation passes 16-byte data buffers as messages rather than pointers to data like its uC/OS-II counterpart. Various operations are also named similarly to uC/OS-II message queue operations, but do totally different things: OSGetMsgQue() is a variant of `OSQPend()` with only the indefinite wait option; OSPeekMsgQue() behaves like `OSQAccept()`, which is not a peek operation, but rather an asynchronous pop operation; and OSSendMsgQue() and OSPostMsgQue() behave like `OSQPost()`, but the former immediately reschedules, while the latter defers the scheduling to the scheduler tick. Due to how the internal ring buffer is implemented (same ring head and tail pointer is treated as a signal for an empty queue), the `size` parameter passed to OSCreateMsgQue() must also be 1 unit larger than the intended maximum queue capacity.
+
+As mentioned before, despite that the original uC/OS-II message queue has support for both definite and indefinite wait, the Besta RTOS queue only supports indefinite wait. The waiting thread's @ref bxc_thread_t.sleep_counter value is hardcoded to be set to `-1` when waiting for a queue.
 
 ## Footnotes
 
