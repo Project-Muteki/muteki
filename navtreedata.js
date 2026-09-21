@@ -52,9 +52,10 @@ var NAVTREE =
         [ "General data structure", "md_docs_210-kernel.html#autotoc_md19", null ],
         [ "Critical section", "md_docs_210-kernel.html#autotoc_md20", null ],
         [ "Semaphore", "md_docs_210-kernel.html#autotoc_md21", null ],
-        [ "Event", "md_docs_210-kernel.html#autotoc_md22", null ]
+        [ "Event", "md_docs_210-kernel.html#autotoc_md22", null ],
+        [ "Queues", "md_docs_210-kernel.html#autotoc_md23", null ]
       ] ],
-      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md23", null ]
+      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md24", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
@@ -86,10 +87,10 @@ var NAVTREEINDEX =
 "abi_8h.html",
 "ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90",
 "loader_8h.html#a9398f49c049a2df8ffab792cc2b18006",
-"structbxc__fs__parts__dos__s.html#af6549ce02678c1d4e5c6f0876bb3aa3a",
-"structnand__params__t.html#a36880ad8a1ada4e2d921043e0a47a56d",
-"structui__progressbar__s.html#a89da2d6af689bb5c386c7219280dedd2",
-"types_2progressbar_8h_source.html"
+"structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2",
+"structnand__params__t.html#a344d86c5f49785ee244fa2a7d001ca76",
+"structui__progressbar__s.html#a7fc049df33e7a319a5ad31ee97f41432",
+"types_2progressbar_8h.html#ac70b770016cf1c7f4f33765c44f33a12af2709beaaf57d627dac7129eee5cb6ab"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

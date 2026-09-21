@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2":[5,0,5,4],
 "structbxc__fs__parts__dos__s.html#af6549ce02678c1d4e5c6f0876bb3aa3a":[5,0,5,1],
 "structbxc__fs__parts__lfn__s.html":[5,0,6],
 "structbxc__fs__parts__lfn__s.html#a2c609e317b1261099e79a3037c24eb78":[5,0,6,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "structloader__resource__subfile__request__s.html":[5,0,33],
 "structnand__params__t.html":[5,0,35],
 "structnand__params__t.html#a099b79c523ffbd951af4ed326436d00f":[5,0,35,6],
-"structnand__params__t.html#a21407778ebd3e858c47443294ce5a6d7":[5,0,35,3],
-"structnand__params__t.html#a344d86c5f49785ee244fa2a7d001ca76":[5,0,35,0]
+"structnand__params__t.html#a21407778ebd3e858c47443294ce5a6d7":[5,0,35,3]
 };
