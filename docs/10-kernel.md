@@ -6,7 +6,7 @@ The Besta RTOS kernel is based on a modified [uC/OS-II](https://github.com/westo
 
 ## Scheduler and thread model
 
-The Besta RTOS scheduler algorithm is partially inherited from uC/OS-II. Both scheduler use an [8x8 ready table](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163854/Kernel+Structure#Ready-List) to mark active threads and to do @f$ \Theta(1) @f$ lookup of the next highest priority thread. As such, most of the members in the @ref bxc_thread_t structure have a counterpart in uC/OS-II's [Task Control Block](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163854/Kernel+Structure#Task-Control-Blocks-(OS_TCBs)) (TCB). For example, @ref bxc_thread_t.slot has the exact same purpose as `OSTCBPrio`. The exact behavior of the scheduler of the two kernels however are very different, as Besta RTOS implements a weighted round-robin scheduling scheme using the uC/OS-II machinery, instead of the simpler "highest priority thread always wins unless it yields voluntarily" scheme used by uC/OS-II. This means higher priority threads get more CPU time but all threads eventually yield at a point, whether voluntarily or by force, so lower priority threads can still run even when no voluntary OSSleep() call was made by the higher priority threads.
+The Besta RTOS scheduler algorithm and its thread model are partially inherited from uC/OS-II. Both scheduler use an [8x8 ready table](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163854/Kernel+Structure#Ready-List) to mark active threads and to do @f$ \Theta(1) @f$ lookup of the next highest priority thread. As such, most of the members in the @ref bxc_thread_t structure have a counterpart in uC/OS-II's [Task Control Block](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163854/Kernel+Structure#Task-Control-Blocks-(OS_TCBs)) (TCB). For example, @ref bxc_thread_t.slot has the exact same purpose as `OSTCBPrio`. The exact behavior of the scheduler of the two kernels however are very different, as Besta RTOS implements a weighted round-robin scheduling scheme using the uC/OS-II machinery, instead of the simpler "highest priority thread always wins unless it yields voluntarily" scheme used by uC/OS-II. This means higher priority threads get more CPU time but all threads eventually yield at a point, whether voluntarily or by force, so lower priority threads can still run even when no voluntary OSSleep() call was made by the higher priority threads.
 
 ### Scheduler timing
 
@@ -144,9 +144,13 @@ Semaphore supports both definite and indefinite wait. In definite wait mode, the
 
 ### Event
 
-An event signals a its subscriber threads that something has happened. Unlike its name suggests, Besta RTOS's event implementation is closer related to uC/OS-II's [message mailbox](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163874/Message+Mailbox+Management), minus the ability to pass arbitrary messages@ref note_2 "<sup>2</sup>": Instead of checking whether a message is available, Besta's event implementation simply checks for a numerical flag and either resolves when the flag is 1, or waits when the flag is 0.
+An event signals its subscriber threads that something has happened. Unlike its name suggests, Besta RTOS's event implementation is closer related to uC/OS-II's [message mailbox](https://micrium.atlassian.net/wiki/spaces/osiidoc/pages/163874/Message+Mailbox+Management), minus the ability to pass arbitrary messages@ref note_2 "<sup>2</sup>": Instead of checking whether a message is available, Besta's event implementation simply checks for a numerical flag and either resolves when the flag is 1, or waits when the flag is 0.
 
 Like semaphores, events also support both definite and indefinite wait.
+
+### Queues
+
+A queue passes user messages between threads in a synchronous, first-in-first-out manner.
 
 ## Footnotes
 
