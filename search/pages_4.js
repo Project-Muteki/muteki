@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['footnotes_0',['Footnotes',['../md_docs_210-kernel.html#autotoc_md14',1,'']]]
+  ['embedded_20visual_20c_0',['Embedded Visual C++',['../md_docs_201-getting__started.html#autotoc_md6',1,'']]]
 ];

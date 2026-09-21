@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Muteki: Related Pages</title>
+<title>Muteki: Getting started</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('pages.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('md_docs_201-getting__started.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -132,21 +132,51 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('pages.html',''
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Related Pages</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Getting started </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="md_docs_200-introduction.html" target="_self">Introduction</a></td><td class="desc"></td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="md_docs_201-getting__started.html" target="_self">Getting started</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="md_docs_210-kernel.html" target="_self">The Besta RTOS kernel</a></td><td class="desc"></td></tr>
-<tr id="row_3_" class="odd"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="todo.html" target="_self">Todo List</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span class="spacer">&#160;</span><a class="el" href="deprecated.html" target="_self">Deprecated List</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p><a class="anchor" id="autotoc_md3"></a></p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Setting up the toolchain</h1>
+<p>Currently Muteki only supports its own GCC flavor, the <span class="tt">arm-none-bestaeabi-gcc</span>. It is however also possible to use the Embedded Visual C++ toolchain to develop Besta RTOS homebrew, and we may support it to some extent in the future. Regardless, using Muteki's customized GCC is still recommended over Embedded Visual C++, as the former supports more up-to-date language features like C11/C17, and it is possible to have future updates that add or improve features (e.g. C++ exceptions), that are otherwise difficult or impossible to implement on Embedded Visual C++.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+GCC (<span class="tt">arm-none-bestaeabi</span>)</h2>
+<p>TODO</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Embedded Visual C++</h2>
+<p>TODO</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Creating your first project</h1>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Using Meson with GCC</h2>
+<p>Muteki provides first tier support for the <a href="https://mesonbuild.com/">Meson build system</a>. Simply use or clone the <a href="https://github.com/Project-Muteki/meson-project-template">template repository</a>, as well as clone the <a href="https://github.com/Project-Muteki/meson-cross">cross files</a> repository to get started.</p>
+<p><img src="./img/template.png" alt="template" class="inline"/></p>
+<p>Once you created your own repository, it may look something like this:</p>
+<p><img src="./img/layout.png" alt="layout" class="inline"/></p>
+<p>The <span class="tt">src</span> folder will contains all the source code of your project and any applet metadata, and the <span class="tt">include</span> folder will contain any common headers. The <span class="tt">meson.build</span> file in the root directory defines how various build tools should be found, and the <span class="tt">meson.build</span> under the <span class="tt">src</span> folder defines how the applet should be built.</p>
+<p>To build the project, simply do it the standard way (plus the cross file):</p>
+<div class="fragment"><div class="line">cd your-project-root</div>
+<div class="line"># Assuming meson-cross was cloned besides your-project-root</div>
+<div class="line">meson setup --buildtype=release --cross-file=../meson-cross/arm-none-bestaeabi.ini builddir</div>
+<div class="line">meson compile -Cbuild</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Change the branding and applet version</h2>
+<p>To change the name and/or version of the applet, one needs to change a few files.</p>
+<p>First, open <span class="tt">meson.build</span> and change <span class="tt">meson-applet-template</span> to a name of your choice. This name is for the Meson project. Similar for Meson project version number.</p>
+<p>Then you need to open the <span class="tt">src/meson.build</span> file and change any occurrences of <span class="tt">Applet</span> to a name of your choice. This changes the target name and the output file name.</p>
+<p>Finally, open the <span class="tt">src/romspec.toml</span> file, and change all <span class="tt">title</span>, <span class="tt">short-title</span> to names of your choice. It is also safe to delete entries for languages that you do not wish to support. You can also change the <span class="tt">category</span>, <span class="tt">copyright</span> or <span class="tt">version</span> to your liking. Beware that <span class="tt">copyright</span> and <span class="tt">version</span> may not show up anywhere on Arm ports of Besta RTOS.</p>
+<p>After you made all the changes, rebuild the project. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

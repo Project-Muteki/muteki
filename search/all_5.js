@@ -2,7 +2,7 @@ var searchData=
 [
   ['dash_5fcustom_0',['DASH_CUSTOM',['../types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cbad5681569f041faeabcc7ed90b924d8f9',1,'lcd.h']]],
   ['dash_5fnone_1',['DASH_NONE',['../types_2lcd_8h.html#a2a3ead8fb0194794e230be112a87d4cba61b600b90f66ce12e20c128b822e87d3',1,'lcd.h']]],
-  ['data_20structure_2',['General data structure',['../md_docs_210-kernel.html#autotoc_md12',1,'']]],
+  ['data_20structure_2',['General data structure',['../md_docs_210-kernel.html#autotoc_md19',1,'']]],
   ['data_5fencodings_3',['data_encodings',['../structid__device__info__s.html#ac587e3f27d234bf53bc4b785e9229918',1,'id_device_info_s']]],
   ['data_5fname_4',['data_name',['../structid__device__info__s.html#a78a6cf450c9fec5feb0a04f2536ad806',1,'id_device_info_s']]],
   ['data_5fpage_5fsize_5',['data_page_size',['../structnand__params__t.html#a344d86c5f49785ee244fa2a7d001ca76',1,'nand_params_t']]],

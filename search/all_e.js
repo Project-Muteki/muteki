@@ -8,5 +8,6 @@ var searchData=
   ['nand_5fread_5fpage_5',['nand_read_page',['../ftl_8h.html#a7d59bb98342f5b462320cd05a2b51127',1,'ftl.h']]],
   ['next_6',['next',['../structbxc__thread__s.html#a78b55b75f5310fbc49130ec5d6cdf14e',1,'bxc_thread_s::next'],['../structui__component__s.html#ad3ba772f21cf112205f5241b5940665b',1,'ui_component_s::next']]],
   ['next_5fvisual_5fstate_7',['next_visual_state',['../structui__button__s.html#a1a8cc4d4eb5dd3583dc58f9344526970',1,'ui_button_s']]],
-  ['npaths_8',['npaths',['../structui__filepicker__context__s.html#a9fa4e523c36b898b20c3fd4f4c3865e5',1,'ui_filepicker_context_s']]]
+  ['none_20bestaeabi_8',['GCC (&lt;span class=&quot;tt&quot;&gt;arm-none-bestaeabi&lt;/span&gt;)',['../md_docs_201-getting__started.html#autotoc_md5',1,'']]],
+  ['npaths_9',['npaths',['../structui__filepicker__context__s.html#a9fa4e523c36b898b20c3fd4f4c3865e5',1,'ui_filepicker_context_s']]]
 ];

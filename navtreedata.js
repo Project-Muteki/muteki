@@ -29,20 +29,30 @@ var NAVTREE =
       [ "So what <em>is</em> Besta RTOS anyway?", "md_docs_200-introduction.html#autotoc_md1", null ],
       [ "Goals of this project", "md_docs_200-introduction.html#autotoc_md2", null ]
     ] ],
+    [ "Getting started", "md_docs_201-getting__started.html", [
+      [ "Setting up the toolchain", "md_docs_201-getting__started.html#autotoc_md4", [
+        [ "GCC (<span class=\"tt\">arm-none-bestaeabi</span>)", "md_docs_201-getting__started.html#autotoc_md5", null ],
+        [ "Embedded Visual C++", "md_docs_201-getting__started.html#autotoc_md6", null ]
+      ] ],
+      [ "Creating your first project", "md_docs_201-getting__started.html#autotoc_md7", [
+        [ "Using Meson with GCC", "md_docs_201-getting__started.html#autotoc_md8", null ],
+        [ "Change the branding and applet version", "md_docs_201-getting__started.html#autotoc_md9", null ]
+      ] ]
+    ] ],
     [ "The Besta RTOS kernel", "md_docs_210-kernel.html", [
-      [ "Introduction", "md_docs_210-kernel.html#autotoc_md4", null ],
-      [ "Scheduler and thread model", "md_docs_210-kernel.html#autotoc_md5", [
-        [ "Scheduler timing", "md_docs_210-kernel.html#autotoc_md6", null ],
-        [ "The idle task", "md_docs_210-kernel.html#autotoc_md7", null ],
-        [ "Thread timeout mechanism", "md_docs_210-kernel.html#autotoc_md8", null ],
-        [ "Synchronization primitive wait timeout", "md_docs_210-kernel.html#autotoc_md9", null ],
-        [ "Putting it all together", "md_docs_210-kernel.html#autotoc_md10", null ]
+      [ "Introduction", "md_docs_210-kernel.html#autotoc_md11", null ],
+      [ "Scheduler and thread model", "md_docs_210-kernel.html#autotoc_md12", [
+        [ "Scheduler timing", "md_docs_210-kernel.html#autotoc_md13", null ],
+        [ "The idle task", "md_docs_210-kernel.html#autotoc_md14", null ],
+        [ "Thread timeout mechanism", "md_docs_210-kernel.html#autotoc_md15", null ],
+        [ "Synchronization primitive wait timeout", "md_docs_210-kernel.html#autotoc_md16", null ],
+        [ "Putting it all together", "md_docs_210-kernel.html#autotoc_md17", null ]
       ] ],
-      [ "Synchronization primitives", "md_docs_210-kernel.html#autotoc_md11", [
-        [ "General data structure", "md_docs_210-kernel.html#autotoc_md12", null ],
-        [ "Critical section", "md_docs_210-kernel.html#autotoc_md13", null ]
+      [ "Synchronization primitives", "md_docs_210-kernel.html#autotoc_md18", [
+        [ "General data structure", "md_docs_210-kernel.html#autotoc_md19", null ],
+        [ "Critical section", "md_docs_210-kernel.html#autotoc_md20", null ]
       ] ],
-      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md14", null ]
+      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md21", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
@@ -74,10 +84,10 @@ var NAVTREEINDEX =
 "abi_8h.html",
 "ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90",
 "loader_8h.html#a9398f49c049a2df8ffab792cc2b18006",
-"structbxc__fs__stat__t.html#a5fbeb447c37ce3bcdf85ffb95f0ff1b5",
-"structosdep__utls__stats__s.html#a623f4e29dd0638e68479f3d78bf57b0c",
-"structui__slider__s.html#a8703e6b95289a774573b3c0751e787be",
-"types_2slider_8h.html#a559a22e59734486bd106b69bd97465ddab847025ba845109d47698f8af7754f55"
+"structbxc__fs__parts__lfn__s.html#a2c609e317b1261099e79a3037c24eb78",
+"structnand__params__t.html#a4e6f91eef2fc70b44efa046aba414018",
+"structui__progressbar__s.html#abe2adc0c3111f14753d5113eb0a69aed",
+"types_2slider_8h.html#a559a22e59734486bd106b69bd97465dd"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';
