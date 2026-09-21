@@ -14,7 +14,7 @@ Fundamentally the scheduler keeps track of time using **scheduler ticks** (with 
 
 ### The idle task
 
-During scheduler initialization, a idle thread is automatically created using OSCreateThread() with an assigned priority value of 63. The scheduler also makes special handling.
+During the scheduler initialization, an idle thread that does practically nothing is automatically created using OSCreateThread() with an assigned priority value of 63. The scheduler also makes special handling for the situation when the only thread that is ready to be executed is the idle thread. Specifically the scheduler will wake up the threads that are "timed-out", which we will elaborate later.
 
 ### Thread timeout mechanism
 
