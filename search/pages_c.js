@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['of_20this_20project_0',['Goals of this project',['../md_docs_200-introduction.html#autotoc_md2',1,'']]]
+  ['none_20bestaeabi_0',['GCC (&lt;span class=&quot;tt&quot;&gt;arm-none-bestaeabi&lt;/span&gt;)',['../md_docs_201-getting__started.html#autotoc_md5',1,'']]]
 ];

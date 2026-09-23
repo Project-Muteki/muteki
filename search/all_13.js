@@ -97,7 +97,7 @@ var searchData=
   ['surface_2eh_94',['surface.h',['../surface_8h.html',1,'(Global Namespace)'],['../types_2surface_8h.html',1,'(Global Namespace)']]],
   ['surface_5fcolor_95',['surface_color',['../structui__deskbox__s.html#a757e119d212448deea4735a2a047c6de',1,'ui_deskbox_s']]],
   ['suspended_96',['suspended',['../structpcm__config__s.html#a39c182c6264c759f3fd46d6f7a0039b1',1,'pcm_config_s']]],
-  ['synchronization_20primitive_20wait_20timeout_97',['Synchronization primitive wait timeout',['../md_docs_210-kernel.html#autotoc_md16',1,'']]],
+  ['synchronization_20primitive_20wait_97',['Synchronization primitive wait',['../md_docs_210-kernel.html#autotoc_md16',1,'']]],
   ['synchronization_20primitives_98',['Synchronization primitives',['../md_docs_210-kernel.html#autotoc_md18',1,'']]],
   ['sys_5falign_99',['SYS_ALIGN',['../common_8h.html#a7cfbdd1a9e16d40f0f7c8ef00c18ae25',1,'common.h']]],
   ['sys_5fdword_100',['SYS_DWORD',['../common_8h.html#a88f7ac10e602e1a35668915d9edd1030',1,'common.h']]],

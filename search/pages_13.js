@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['version_0',['Change the branding and applet version',['../md_docs_201-getting__started.html#autotoc_md9',1,'']]],
-  ['visual_20c_1',['Embedded Visual C++',['../md_docs_201-getting__started.html#autotoc_md6',1,'']]]
+  ['up_20the_20toolchain_0',['Setting up the toolchain',['../md_docs_201-getting__started.html#autotoc_md4',1,'']]],
+  ['using_20meson_20with_20gcc_1',['Using Meson with GCC',['../md_docs_201-getting__started.html#autotoc_md8',1,'']]]
 ];

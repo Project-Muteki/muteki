@@ -45,7 +45,7 @@ var NAVTREE =
         [ "Scheduler timing", "md_docs_210-kernel.html#autotoc_md13", null ],
         [ "The idle task", "md_docs_210-kernel.html#autotoc_md14", null ],
         [ "Thread timeout mechanism", "md_docs_210-kernel.html#autotoc_md15", null ],
-        [ "Synchronization primitive wait timeout", "md_docs_210-kernel.html#autotoc_md16", null ],
+        [ "Synchronization primitive wait", "md_docs_210-kernel.html#autotoc_md16", null ],
         [ "Putting it all together", "md_docs_210-kernel.html#autotoc_md17", null ]
       ] ],
       [ "Synchronization primitives", "md_docs_210-kernel.html#autotoc_md18", [
@@ -55,7 +55,8 @@ var NAVTREE =
         [ "Event", "md_docs_210-kernel.html#autotoc_md22", null ],
         [ "Queue", "md_docs_210-kernel.html#autotoc_md23", null ]
       ] ],
-      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md24", null ]
+      [ "Interrupt handling", "md_docs_210-kernel.html#autotoc_md24", null ],
+      [ "Footnotes", "md_docs_210-kernel.html#autotoc_md25", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
@@ -87,10 +88,10 @@ var NAVTREEINDEX =
 "abi_8h.html",
 "ftl_8h.html#a16fb1f63c4e0d1e321cc1acfba680f90",
 "loader_8h.html#a9398f49c049a2df8ffab792cc2b18006",
-"structbxc__fs__parts__dos__s.html#adbfcbeca9c9d8a8b0744778f9ae616f2",
-"structnand__params__t.html#a344d86c5f49785ee244fa2a7d001ca76",
-"structui__progressbar__s.html#a7fc049df33e7a319a5ad31ee97f41432",
-"types_2progressbar_8h.html#ac70b770016cf1c7f4f33765c44f33a12af2709beaaf57d627dac7129eee5cb6ab"
+"structbxc__fs__parts__dos__s.html#acec5c8a4777e97d78f23f1c81f641c16",
+"structnand__params__t.html#a21407778ebd3e858c47443294ce5a6d7",
+"structui__progressbar__s.html#a424e709ecac6a7a4f92a03345a06f996",
+"types_2progressbar_8h.html#ac70b770016cf1c7f4f33765c44f33a12acc98ca129a12cc876f4b72d8bf0c7734"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

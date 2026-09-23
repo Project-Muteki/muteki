@@ -22,7 +22,7 @@ var searchData=
   ['thumb_5fbg_19',['thumb_bg',['../structui__slider__s.html#aa0410ac55a45b26d71bc1d1ed21167b2',1,'ui_slider_s']]],
   ['thumb_5fpressed_20',['thumb_pressed',['../structui__slider__s.html#a947c6294d937c4749009640442630e47',1,'ui_slider_s']]],
   ['time_5fstretcher_5fctx_21',['time_stretcher_ctx',['../structpcm__config__s.html#ac9da164520be2d5ee28df8ddd8489431',1,'pcm_config_s']]],
-  ['timeout_22',['timeout',['../md_docs_210-kernel.html#autotoc_md16',1,'Synchronization primitive wait timeout'],['../structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f',1,'bxc_thread_s::timeout']]],
+  ['timeout_22',['timeout',['../structbxc__thread__s.html#ae25bb00952156a638871aaf3961e644f',1,'bxc_thread_s']]],
   ['timeout_20mechanism_23',['Thread timeout mechanism',['../md_docs_210-kernel.html#autotoc_md15',1,'']]],
   ['timer1_5fcallback_5ft_24',['timer1_callback_t',['../system_8h.html#aa8a152285b8f49c34ada713089da0343',1,'system.h']]],
   ['timing_25',['Scheduler timing',['../md_docs_210-kernel.html#autotoc_md13',1,'']]],

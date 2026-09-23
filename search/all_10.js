@@ -59,7 +59,7 @@ var searchData=
   ['pprogressetpos_56',['PPROGRESSetPos',['../widgets_2progressbar_8h.html#a4c0fdde34f0e33ecfcdba4851f2f78c1',1,'progressbar.h']]],
   ['pprogressetrange_57',['PPROGRESSetRange',['../widgets_2progressbar_8h.html#a91a007e0916a5591cbd8430f3a6ac0c5',1,'progressbar.h']]],
   ['prev_58',['prev',['../structbxc__thread__s.html#a339ad95901fc2720f474aba679c821fc',1,'bxc_thread_s']]],
-  ['primitive_20wait_20timeout_59',['Synchronization primitive wait timeout',['../md_docs_210-kernel.html#autotoc_md16',1,'']]],
+  ['primitive_20wait_59',['Synchronization primitive wait',['../md_docs_210-kernel.html#autotoc_md16',1,'']]],
   ['primitives_60',['Synchronization primitives',['../md_docs_210-kernel.html#autotoc_md18',1,'']]],
   ['primitives_2eh_61',['primitives.h',['../primitives_8h.html',1,'']]],
   ['printf_62',['Printf',['../lcd_8h.html#a2a6f9f393e5e4765c4dda1837a6a69af',1,'lcd.h']]],

@@ -27,7 +27,7 @@ var searchData=
   ['font_5finfo_5ft_24',['font_info_t',['../types_2font_8h.html#a3f0002062951796ccd53b40d14545169',1,'font.h']]],
   ['font_5ftype_25',['font_type',['../structui__appview__s.html#a7a4a9344f91365aaf5f08010cbcc7dda',1,'ui_appview_s::font_type'],['../structui__booltextfield__s.html#ad1883b38e1ff844d3732fae5d3f78ba4',1,'ui_booltextfield_s::font_type'],['../structui__static__s.html#af330ccff5fefd3a50f71bf58a7342c87',1,'ui_static_s::font_type']]],
   ['font_5ftype_5fe_26',['font_type_e',['../types_2font_8h.html#a626b23c6e6f587deeea5e3cc43b10171',1,'font.h']]],
-  ['footnotes_27',['Footnotes',['../md_docs_210-kernel.html#autotoc_md24',1,'']]],
+  ['footnotes_27',['Footnotes',['../md_docs_210-kernel.html#autotoc_md25',1,'']]],
   ['footprint_28',['footprint',['../structui__component__s.html#abbf53bd0db7ef98f916a1b4c122fd2dc',1,'ui_component_s']]],
   ['format_29',['format',['../structpcm__config__s.html#a3ba5313aaa2a0d8b9aa0e26409a4d4f4',1,'pcm_config_s']]],
   ['format_5fauto_30',['FORMAT_AUTO',['../audio_8h.html#a9da83b49a219b0be41860d617caa6b6eadaf2c151dbaee3d86281f4bf8d278da3',1,'audio.h']]],
