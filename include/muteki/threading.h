@@ -255,7 +255,7 @@ struct bxc_thread_s {
      */
     unsigned char slot_high3b_bit;
     /**
-     * @brief Waitable object (excluding critical sections) that the thread is waiting for.
+     * @brief Waitable descriptor (excluding critical sections) that the thread is waiting for.
      */
     bxc_waitable_desc_t *event;
     /**
